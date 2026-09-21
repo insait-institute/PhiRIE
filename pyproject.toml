@@ -16,7 +16,7 @@ authors = [
   {name = "Ajad Chhatkuli"},
   {name = "Kunyu Peng"},
   {name = "Luc Van Gool"},
-  {name = "Danda Pani Paude"},
+  {name = "Danda Paudel"},
 ]
 requires-python = ">=3.10"
 license = { text = "MIT" }

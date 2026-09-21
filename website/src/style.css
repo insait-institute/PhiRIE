@@ -186,11 +186,16 @@ h3 {
   margin-left: 3px;
 }
 .hero h1 {
-  font-size: clamp(44px, 6.8vw, 88px);
-  line-height: 1.035;
-  letter-spacing: -4.9px;
+  font-size: clamp(42px, 5.3vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -3px;
   font-weight: 500;
-  margin-top: 26px;
+  margin: 26px auto 0;
+  max-width: 1100px;
+  text-wrap: balance;
+}
+.title-line {
+  display: block;
 }
 .hero h1 em {
   font-family: "DM Serif Display", Georgia, serif;
@@ -198,17 +203,51 @@ h3 {
   font-weight: 400;
   letter-spacing: -3px;
 }
-.hero-copy {
-  font-size: 17px;
-  color: var(--muted);
-  margin-top: 26px;
-  line-height: 1.7;
-}
 .hero-actions {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin: 27px 0 48px;
+  margin: 27px 0 36px;
+}
+.hero-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  max-width: 1050px;
+  margin: 0 auto 36px;
+  padding: 25px 30px;
+  border: 1px solid #cbd7bb;
+  border-left: 4px solid var(--green);
+  border-radius: 10px;
+  background: #edf2e5;
+  text-align: left;
+}
+.summary-label {
+  flex: 0 0 auto;
+  margin-top: 5px;
+  padding: 6px 9px;
+  border-radius: 5px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.8px;
+}
+.hero-summary h2 {
+  font-size: clamp(23px, 2.4vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+}
+.hero-summary h2 em {
+  font-family: "DM Serif Display", Georgia, serif;
+  color: var(--green);
+  font-weight: 400;
+}
+.hero-summary p {
+  margin-top: 9px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
 }
 .button {
   border: 1px solid transparent;
@@ -1209,17 +1248,27 @@ dialog > img {
     gap: 8px;
   }
   .hero h1 {
-    font-size: clamp(40px, 8vw, 58px);
-    letter-spacing: -2.4px;
+    font-size: clamp(32px, 6.7vw, 48px);
+    letter-spacing: -1.3px;
     margin-top: 22px;
+  }
+  .title-line {
+    display: inline;
   }
   .hero h1 em {
     letter-spacing: -1.5px;
   }
-  .hero-copy {
-    font-size: 14px;
-    padding: 0 10px;
-    margin-top: 23px;
+  .hero-summary {
+    flex-direction: column;
+    gap: 13px;
+    padding: 21px;
+    margin-bottom: 28px;
+  }
+  .summary-label {
+    margin-top: 0;
+  }
+  .hero-summary p {
+    font-size: 13px;
   }
   .hero-actions {
     margin-bottom: 34px;
@@ -1475,6 +1524,11 @@ dialog > img {
     font-size: 17px;
   }
 }
+@media (max-width: 380px) {
+  .site-header nav a[href="#method"] {
+    display: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1489,22 +1543,30 @@ dialog > img {
 
 .paper-authorship {
   margin: 28px auto 0;
-  max-width: 1000px;
+  max-width: 1240px;
 }
-.paper-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--green);
+.authors-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a4b58e transparent;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.authors-scroll:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
 }
 .authors {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 4px 18px;
-  margin: 15px 0 12px;
-  padding: 0;
+  gap: 18px;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  padding: 2px 0 8px;
   list-style: none;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .authors li {
@@ -1529,10 +1591,7 @@ dialog > img {
 @media (max-width: 760px) {
   .authors {
     font-size: 14px;
-    gap: 3px 14px;
-  }
-  .paper-title {
-    font-size: 13px;
+    gap: 16px;
   }
   .affiliations {
     font-size: 12px;

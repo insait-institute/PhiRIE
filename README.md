@@ -7,7 +7,7 @@ from posed RGB images and reconstructed scenes.
 > Previously developed as SimAny/PhiRoom. The `phiroom` Python package and CLI remain compatible.
 > 中文说明: [README_Chinese.md](README_Chinese.md).
 
-**Authors:** Runyi Yang<sup>1</sup>, Deheng Zhang<sup>1</sup>, Xiaoye Wang<sup>1</sup>, Kanzhi Wu<sup>2</sup>, Lei Sun<sup>1</sup>, Ajad Chhatkuli<sup>1</sup>, Kunyu Peng<sup>3,∗</sup>, Luc Van Gool<sup>1</sup>, Danda Pani Paude<sup>1</sup>
+**Authors:** Runyi Yang<sup>1</sup>, Deheng Zhang<sup>1</sup>, Xiaoye Wang<sup>1</sup>, Kanzhi Wu<sup>2</sup>, Lei Sun<sup>1</sup>, Ajad Chhatkuli<sup>1</sup>, Kunyu Peng<sup>3,∗</sup>, Luc Van Gool<sup>1</sup>, Danda Paudel<sup>1</sup>
 
 <sup>1</sup> INSAIT, Sofia University “St. Kliment Ohridski”.<br>
 <sup>2</sup> vivo Mobile Communication Co., Ltd.<br>
@@ -20,7 +20,7 @@ submodule checkout is required. See
 [PhiView setup](docs/PHIVIEW.md), [modular feature interfaces](docs/MODULES.md),
 [contribution workflow](CONTRIBUTING.md), and [release notes and readiness report](docs/releases/v2.0.1.md).
 
-**Project page:** [PhiRIE](https://redesigned-tribble-o8eej69.pages.github.io/) — paper figures,
+**Project page:** [PhiRIE](https://insait-institute.github.io/PhiRIE/) — paper figures,
 three interactive WebGPU demos, 45 visualization views, and six recorded videos.
 See [website source, provenance, and local setup](website/README.md).
 

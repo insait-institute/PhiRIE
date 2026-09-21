@@ -16,8 +16,8 @@ npm run preview -- --port 4173
 ```
 
 The default local build uses `/PhiRIE/`; the Pages workflow obtains the actual
-base path from GitHub, including private Pages domains. The current deployment is
-https://redesigned-tribble-o8eej69.pages.github.io/ (organization-only).
+base path from GitHub. The public project page is
+https://insait-institute.github.io/PhiRIE/.
 Open `http://127.0.0.1:4173/PhiRIE/` when using the preview command.
 Override the deployment path with `SITE_BASE=/another/path/ npm run build`.
 Serve the build over HTTPS (or localhost) with normal binary MIME types. There are no API keys, inference services, Python
