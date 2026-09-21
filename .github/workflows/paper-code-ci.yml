@@ -44,7 +44,8 @@ jobs:
         env:
           MUJOCO_GL: disable
         run: |
-          envs/control/.venv/bin/python -m pytest -q \
+          mkdir -p .tmp
+          envs/control/.venv/bin/python -m pytest -q --basetemp=.tmp/pytest-paper-code \
             tests/test_robot_restore.py \
             tests/test_harness_spec.py \
             tests/test_harness_validation.py \
