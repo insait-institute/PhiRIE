@@ -1,0 +1,66 @@
+schema_version: 1
+scope: predeclared_single_scene_common_view_diagnostic
+freeze_id: 20260906-0281856-v1
+declared_utc: '2026-09-06T03:44:41.333250+00:00'
+metric_outcomes_inspected: false
+original_planned_scenes:
+- 27dd4da69e
+- 40aec5fffa
+original_planned_objects: 17
+original_planned_views_per_method: 16
+support_rule: all views with both sealed raw and complete composite rendering, determined
+  before inspecting metric outcomes; no outcome filtering
+common_views:
+  27dd4da69e:
+  - DSC01477.JPG
+  - DSC01488.JPG
+  - DSC01490.JPG
+  - DSC01494.JPG
+  - DSC01495.JPG
+  - DSC01500.JPG
+  - DSC01504.JPG
+  - DSC01506.JPG
+  40aec5fffa: []
+source_scene_seals:
+  27dd4da69e:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/seal.json
+    bytes: 3903
+    sha256: ce4d915ab663fb27a763b22f9a1e3fb0bc47bf8556addbdf6dc823c64b3aeac1
+  40aec5fffa:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/40aec5fffa/seal.json
+    bytes: 1948
+    sha256: 31b20ecbb6c4281f4815db39e48bea532ef55219f299a0e6ccb76f2e23361b8a
+source_scene_results:
+  27dd4da69e:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/result.json
+    bytes: 66830
+    sha256: 5d39ad6891937a5490da36fea7e575e2019495b268cf80bda526d43dc841004e
+  40aec5fffa:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/40aec5fffa/result.json
+    bytes: 52549
+    sha256: 675356f555349025253a8a2b55931bf1459fe218f00d30a1d73097ca008da6f9
+metric_module:
+  path: /group/worldcept/code/SimAny/robo/eval/fidelity_metrics.py
+  bytes: 59566
+  sha256: dca41585f98ef1c3ec0b14075ec3e1a495a61c9ebb8400c15c6f3f12a91d14d3
+metric_source_commit: 402cda047b28ac17f50cb7406fe82fcdebacaaba
+methods:
+- Input scene Gaussian, reconstruction ceiling
+- Factorized composite, automatic discovery
+metrics:
+- PSNR
+- SSIM
+- LPIPS
+bootstrap_samples: 2000
+bootstrap_seed: 42
+qualitative_view:
+  scene_id: 27dd4da69e
+  view_id: DSC01477.JPG
+  selection_rule: first TEST camera in original frozen camera order, before inspecting
+    metric outcomes
+  raw_path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/raw_reuse/input_scene_gaussian/DSC01477.png
+  composite_path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/composite/factorized_auto_discovery/DSC01477.png
+  reference_path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/composite/reference/DSC01477.png
+scope_limit: one-scene descriptive paired diagnostic; no headline gain or scene-population
+  inference
+paper_ready: false

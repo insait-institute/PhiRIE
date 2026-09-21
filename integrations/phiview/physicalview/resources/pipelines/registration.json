@@ -1,0 +1,19 @@
+{
+  "id": "registration",
+  "branch": "block/registration",
+  "default_action": "register",
+  "description": "Align generated objects to measured scene geometry",
+  "implementation": [
+    "physicalview/pipeline.py"
+  ],
+  "tools": [
+    "Sim(3) yaw sweep ICP",
+    "signed source-up",
+    "alternative source-up"
+  ],
+  "commands": [
+    "uv run physicalview run registration --config configs/local.yaml --scene room --model yaw_sweep_icp --objects 0,1 --out outputs/scenes/room_factory"
+  ],
+  "inputs": "Generated candidates and scene geometry",
+  "outputs": "Alignment transforms and acceptance/rejection evidence; rejected geometry is not silently promoted."
+}

@@ -1,0 +1,87 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260906-0281856-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: public_factorized_config
+  path: /group/worldcept/code/SimAny-wt/e2-common-view-analysis/configs/experiments/icra2027/e2_common_view_analysis/evaluation.yaml
+  kind: experiment_config
+  required: true
+- id: fill_seal_27dd4da69e
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-4cf66bf-v1/fidelity/background_fill/27dd4da69e/seal.json
+  kind: source_manifest
+  required: true
+- id: source_readiness_27dd4da69e
+  path: /group/worldcept/code/SimAny-wt/e2-public-factorized-pilot/outputs/factorized-readiness/27dd4da69e.json
+  kind: source_manifest
+  required: true
+- id: fill_seal_40aec5fffa
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-4cf66bf-v1/fidelity/background_fill/40aec5fffa/seal.json
+  kind: source_manifest
+  required: true
+- id: source_readiness_40aec5fffa
+  path: /group/worldcept/code/SimAny-wt/e2-public-factorized-pilot/outputs/factorized-readiness/40aec5fffa.json
+  kind: source_manifest
+  required: true
+- id: raw_config
+  path: /group/worldcept/code/SimAny-wt/e2-camera-bank/configs/experiments/icra2027/e2_raw_recovery_full.yaml
+  kind: experiment_config
+  required: true
+- id: raw_E0
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-3ff95f4-v2/contract/freeze_manifest.json
+  kind: source_manifest
+  required: true
+- id: metric_module
+  path: /group/worldcept/code/SimAny/robo/eval/fidelity_metrics.py
+  kind: source_manifest
+  required: true
+- id: renderer_overlay
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  kind: large_directory
+  required: true
+- id: factorized_protocol
+  path: /group/worldcept/code/SimAny-wt/e2-public-factorized-metrics/run/icra2027/PUBLIC_FACTORIZED_PILOT.md
+  kind: source_manifest
+  required: true
+- id: render_config
+  path: /group/worldcept/code/SimAny-wt/e2-public-factorized-pilot/configs/experiments/icra2027/e2_public_factorized/evaluation.yaml
+  kind: source_manifest
+  required: true
+- id: render_E0
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/contract/freeze_manifest.json
+  kind: source_manifest
+  required: true
+- id: 27dd4da69e_render_seal
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/27dd4da69e/seal.json
+  kind: source_manifest
+  required: true
+- id: 40aec5fffa_render_seal
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-59df24a-v1/fidelity/public_factorized/scenes/40aec5fffa/seal.json
+  kind: source_manifest
+  required: true
+- id: predeclared_common_view_protocol
+  path: /group/worldcept/code/SimAny-wt/e2-common-view-analysis/configs/experiments/icra2027/e2_common_view_analysis/protocol.yaml
+  kind: experiment_config
+  required: true
+checkpoint_roots:
+- id: lpips_alexnet
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-render-compat/torch/hub/checkpoints/alexnet-owt-7be5be79.pth
+  kind: checkpoint
+  required: true
+hardware:
+  gpu_required: true
+  purpose: Predeclared one-scene common8-view paired descriptive analysis only; no
+    headline gain or population inference
+  cpus: 4
+  memory_gb: 32
+  gpus: 1
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

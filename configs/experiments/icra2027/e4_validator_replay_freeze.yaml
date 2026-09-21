@@ -1,0 +1,64 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260904-07e8b05-v19
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/PhiRIE/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: frozen_fields
+  path: configs/experiments/frozen_fields.yaml
+  kind: metadata
+  required: true
+- id: frozen_fields_lock
+  path: configs/experiments/.frozen_fields.lock.json
+  kind: metadata
+  required: true
+- id: agentic_jobs
+  path: configs/experiments/icra2027/agentic_jobs.yaml
+  kind: experiment_config
+  required: true
+- id: agentic_policies
+  path: configs/experiments/icra2027/agentic_policies.yaml
+  kind: experiment_config
+  required: true
+- id: e4_winner_smoke_preparer
+  path: robo/eval/e4_candidate_screen.py
+  kind: metadata
+  required: true
+- id: e4_robot_rig
+  path: robo/rigs/pi05_rig.py
+  kind: metadata
+  required: true
+- id: e4_reset_eligibility
+  path: robo/eval/e4_reset_eligibility.py
+  kind: metadata
+  required: true
+- id: canonical_harness_runner
+  path: robo/eval/harness_runner.py
+  kind: metadata
+  required: true
+- id: canonical_harness_validation
+  path: robo/eval/harness_validation.py
+  kind: metadata
+  required: true
+- id: immutable_v18_harness_ledger
+  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/harness_ledger.jsonl
+  kind: metadata
+  required: true
+- id: immutable_v18_harness_config
+  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_harness.yaml
+  kind: metadata
+  required: true
+checkpoint_roots: []
+hardware:
+  accelerator: cpu
+  gpu_required: false
+  purpose: CPU-only validation of immutable v18 ledger; no new simulations
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

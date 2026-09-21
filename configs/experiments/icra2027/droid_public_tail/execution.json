@@ -1,0 +1,68 @@
+{
+  "cpu_python": "/group/worldcept/code/SimAny/.venv/bin/python",
+  "cpu_runtime": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/runtime/cpu_runtime.json",
+    "sha256": "1aa21044529d3ed5b333a13cf2e1613232e6db830552ac0daf2d3a54d28c8ddf",
+    "size_bytes": 580679
+  },
+  "discovery_runtime": {
+    "path": "/group/worldcept/code/SimAny/outputs/e6-runtime-setup/public-grounding-runtime-v1.json",
+    "sha256": "549b0098d9b5fe19c13d84c68d0399a250b0324d7721cdaf3a33a38ca5d8d9b5",
+    "size_bytes": 8910
+  },
+  "evidence_root": "/group/worldcept/code/SimAny",
+  "freeze_id": "20260906-f68957d-v1",
+  "full_build": false,
+  "gaussian_source": {
+    "code_root": "/group/worldcept/code/SimAny-wt/e7-droid-gaussian-execution",
+    "commit": "f36f12ca0a2b9c71a04e766f706ea0fb2b4276b5",
+    "config": {
+      "path": "/group/worldcept/code/SimAny-wt/e7-droid-gaussian-execution/configs/experiments/icra2027/droid_gaussian_continuation/execution.json",
+      "sha256": "a20728d8b54d9578b6900a67c81c0f4de3219851b82b1191fae62d30992ffeb3",
+      "size_bytes": 11335
+    },
+    "contract": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1/contract/freeze_manifest.json",
+      "sha256": "988f0909356e70d4799b19f0dbc86279386988728888496729079e3a1be52e8a",
+      "size_bytes": 11209
+    },
+    "python": "/group/worldcept/code/SimAny/.venv/bin/python",
+    "stage_root": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1"
+  },
+  "generate_assets": false,
+  "paper_ready": false,
+  "pilot_workspace": "droid_iprl_thu_aug_24_21_29_53_2023",
+  "protocol": {
+    "alpha_min": 0.6,
+    "discovery_stride": 3,
+    "full_vocabulary": false,
+    "max_extent_m": 0.9,
+    "merge_iou": 0.25,
+    "min_bbox_reference_px": 48,
+    "min_frames_seen": 2,
+    "min_mask_reference_px": 400,
+    "min_voxels": 25,
+    "pixel_gate_reference_height": 1168,
+    "pixel_stride": 4,
+    "render_scale": 0.5,
+    "render_stride": 3,
+    "score_min": 0.45,
+    "sdf_trunc_m": 0.02,
+    "voxel_m": 0.005
+  },
+  "schema_version": 1,
+  "scope": "droid_public_gaussian_discovery_object_contracts",
+  "torch_extensions_root": "/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-torch-extensions-py310-pt241-cu124",
+  "workspace_ids": [
+    "droid_iprl_thu_aug_24_21_29_53_2023",
+    "droid_autolab_fri_jul_14_16_55_45_2023",
+    "droid_tri_thu_sep_21_17_26_41_2023",
+    "droid_rail_tue_oct_24_10_23_40_2023",
+    "droid_rpl_mon_jun__5_16_11_49_2023",
+    "droid_clvr_tue_may__9_02_08_20_2023",
+    "droid_iris_mon_apr_17_16_03_25_2023",
+    "droid_pennpal_sat_apr_29_20_28_46_2023",
+    "droid_real_wed_jun__7_11_50_12_2023",
+    "droid_iprl_sat_oct_14_20_58_47_2023"
+  ]
+}

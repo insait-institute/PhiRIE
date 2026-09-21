@@ -1,0 +1,56 @@
+name: simulation-submission
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'robo/roundtrip/mechanism_followup.py'
+      - 'robo/roundtrip/scorer_sensitivity.py'
+      - 'robo/roundtrip/object_fidelity.py'
+      - 'robo/roundtrip/spec.py'
+      - 'robo/roundtrip/local_policy_instance.py'
+      - 'robo/eval/native_scale_tables.py'
+      - 'tests/test_simulation_submission*.py'
+      - '.ci/bootstrap_simulation_submission.py'
+      - '.github/workflows/simulation-submission.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cpu-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU test dependencies only
+        run: python -m pip install pytest numpy scipy pillow pyyaml trimesh imageio pydantic matplotlib mujoco==3.3.1
+      - name: New tools and existing native table regressions
+        env:
+          PYTHONPATH: .
+          MUJOCO_GL: disable
+        run: |
+          python -m pytest -q tests/test_simulation_submission*.py tests/test_native_scale_tables.py --junitxml=/tmp/simulation-submission.xml
+          python -m compileall -q robo/roundtrip/mechanism_followup.py robo/roundtrip/scorer_sensitivity.py robo/roundtrip/object_fidelity.py
+          git diff --check
+          python -m robo.roundtrip.mechanism_followup --help
+          python -m robo.roundtrip.object_fidelity --help
+          python -m robo.roundtrip.scorer_sensitivity --help
+      - name: Print test counts and source
+        if: always()
+        run: |
+          git rev-parse HEAD
+          if [ -f /tmp/simulation-submission.xml ]; then
+            python - <<'PY'
+          import xml.etree.ElementTree as E
+          root=E.parse('/tmp/simulation-submission.xml').getroot()
+          for s in root.iter('testsuite'):
+              print({k:s.get(k) for k in ('name','tests','failures','errors','skipped','time')})
+          PY
+          fi

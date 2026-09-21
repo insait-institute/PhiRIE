@@ -1,0 +1,22 @@
+[
+ {
+  "index": 0,
+  "label": "mug",
+  "gt_object_id": 1,
+  "extent": [
+   0.08,
+   0.08,
+   0.1
+  ]
+ },
+ {
+  "index": 1,
+  "label": "bottle",
+  "gt_object_id": 2,
+  "extent": [
+   0.06,
+   0.06,
+   0.2
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+numpy>=1.26
+Pillow>=10.0
+PyYAML>=6.0
+pydantic>=2.7
+scipy>=1.11
+pytest>=8.0
+# Optional paper metrics / media:
+# torch>=2.4
+# torchmetrics>=1.4
+# lpips>=0.1.4
+# imageio[ffmpeg]>=2.34
+# trimesh>=4.4

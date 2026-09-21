@@ -1,0 +1,29 @@
+{
+  "id": "rendering",
+  "branch": "module/rendering-v2",
+  "description": "Composite rendering and observation harmonization",
+  "inputs": [
+    "Gaussian scene; object transforms; camera poses"
+  ],
+  "outputs": [
+    "rendered observations; image stream"
+  ],
+  "tools": [
+    "gsplat",
+    "harmonizer"
+  ],
+  "actions": {
+    "composite": {
+      "target": "agents.render.gsplat_sim_render",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    },
+    "harmonizer": {
+      "target": "integrations.harmonizer.server",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

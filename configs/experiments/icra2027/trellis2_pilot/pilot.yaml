@@ -1,0 +1,82 @@
+schema_version: 1
+paper_ready: false
+seed: 42
+source_pilot: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31
+source_summary_sha256: 6784e11f7529cb63f684daaa77b4549fa935a70d36db4ebe89c2edc88d406a2f
+source_output_hashes_sha256: 0822381957025b1fdfae1be1c365b073fa881ca7ce8bd167a3bc7315bd31792a
+source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
+source_discovery_hashes:
+  all_jobs_manifest.json: 7676610b5dc37a7b603de96de7ba268e2144790957dc1e5ef544279d6195365f
+  input_manifest.json: 156d5490e16c1f7bd4b51bd8f0246e7e03b6ab9754bbe4032454f00669c091a1
+  output_hashes.json: 0822381957025b1fdfae1be1c365b073fa881ca7ce8bd167a3bc7315bd31792a
+  pilot_summary.json: 6784e11f7529cb63f684daaa77b4549fa935a70d36db4ebe89c2edc88d406a2f
+  postrun_audit.json: f79106b4f3da7172d7f598074036ab11521fec3cc18d0656b6688826ee0b6906
+source_discovery_config:
+  path: /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
+  bytes: 9678
+  mtime_ns: 1788599841893682554
+  sha256: e470304281f03c0051af95ddb61975142be6b4fdb4ed9522aae69caa7f7b9081
+source_discovery_commit: 86613e37d7bdfcef5ad10eb5cf289051055cdec3
+source_discovery_contract:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
+  bytes: 10053
+  mtime_ns: 1788599945922128577
+  sha256: e7d5111806d7ca1521b1db878c1ddb002c8d3edb3505f375a147d6a512d9ebd5
+generator: trellis2
+native_gaussian: false
+study_scope: trellis2_mesh_engineering
+pipeline_type: '512'
+upstream_commit: 75fbf0183001ed9876c8dbb35de6b68552ee08bd
+upstream_model_revision: af44b45f2e35a493886929c6d786e563ec68364d
+dinov3_revision: ea8dc2863c51be0a264bab82070e3e8836b02d51
+freeze_id: 20260905-45e46f7-v2
+output_scene_id: 38d58a7a31
+python: /group/worldcept/code/SimAny/.venv-trellis2/bin/python
+models:
+  trellis2_source:
+    path: /group/worldcept/code/SimAny/third_party/TRELLIS2
+    tree_sha256: eb8725cc7db012ee0b523c69df5a9751ee41823804e179528239948fd2462fc9
+    file_count: 300
+  trellis2_snapshot:
+    path: /group/worldcept/code/SimAny/checkpoints/trellis2-4b
+    tree_sha256: 65723ef0b97cf54c7ce0255211ad3525382a1546d854d4f55a99c9ab172e2946
+    file_count: 45
+  dinov3_snapshot:
+    path: /group/worldcept/code/SimAny/checkpoints/dinov3-vitl16
+    tree_sha256: ba6b68983b5eea13d24c349acabd63b82a2a090f357b0372aa0cb6c102f069a1
+    file_count: 11
+  ss_decoder_config:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/trellis-image-large-25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/ss_dec_conv3d_16l8_fp16.json
+    bytes: 245
+    mtime_ns: 1776370584368061120
+    sha256: 646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5
+  ss_decoder_weight:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/trellis-image-large-25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/ss_dec_conv3d_16l8_fp16.safetensors
+    bytes: 147591972
+    mtime_ns: 1776370587158028047
+    sha256: 1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a
+runtime_sha256: 92b759254e8299438d3328f0a69005c610c0c598685d5062e68008824b7cff41
+gpu_environment_smoke:
+  path: /group/worldcept/code/SimAny/outputs/trellis2-setup/gpu_import_smoke.json
+  bytes: 2238
+  mtime_ns: 1788637920076342791
+  sha256: d90e2ac84df983ea425d7b4b0aaf882212802ffeb4ffd124c2f4baf896d0e970
+contract_resource_id: e3_trellis2_config
+observation_source:
+  manifest:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-33bd974-v1/agentic/observations/38d58a7a31/manifest.json
+    bytes: 17537
+    mtime_ns: 1788625420280484576
+    sha256: 39e388744710b782ab16f2b9e8234aa4dedb48b45cd855014ee16122d8cad642
+  seal:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-33bd974-v1/agentic/observations/38d58a7a31/seal.json
+    bytes: 1604
+    mtime_ns: 1788625420280484576
+    sha256: c65eca8dcfe645a78d29fcc33ff9f72e05b5c54b1d8e68eba119562d7dd16c1e
+  e0:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-33bd974-v1/contract/freeze_manifest.json
+    bytes: 11355
+    mtime_ns: 1788623440951796569
+    sha256: 102b5e8a88799736586d3863dbffa5b93e90f4792adf73da39afc4fc2e9904b7
+  source_code_commit: 0f6b7080de23e926bcab2f3072c84381573370df
+  source_freeze_id: 20260905-33bd974-v1

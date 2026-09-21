@@ -1,0 +1,59 @@
+schema_version: 1
+scope: automatic_materialization_engineering
+paper_ready: false
+freeze_id: 20260905-4d0787c-v4
+evidence_root: /group/worldcept/code/SimAny
+e3_root: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic
+e3_freeze_id: 20260904-07e8b05-v35
+e3_source_commit: 402cda047b28ac17f50cb7406fe82fcdebacaaba
+scene_id: 09c1414f1b
+planned_jobs_per_policy: 6
+policies:
+- A0
+- A4
+source_files:
+  freeze_manifest.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/contract/freeze_manifest.json
+    size_bytes: 9672
+    sha256: f270946b1b12071f4bafab25cc8259bc89e777e8166179c66ea1e5b8df5b717e
+  execution_bindings.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/execution_bindings.json
+    size_bytes: 7597
+    sha256: 9af955054b1d4630d128b1f6c512bee3efbe90fb5ed8c20937b0cf455c4ba853
+  artifact_hashes.sha256:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/artifact_hashes.sha256
+    size_bytes: 2430
+    sha256: 16374b84c2fb25164f11838a95e615fbf1260f081e1dafe3f1477f17bbac60b8
+  inventory_audit.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/inventory_audit.json
+    size_bytes: 2497
+    sha256: 4b43aa876b3833052eb6aae8a7fc17bfb301f45477a9a4d0773d51b5ba0219e2
+  resolved_jobs.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_jobs.json
+    size_bytes: 6190
+    sha256: 9d422c7a6dd555662d702983da5d1d6c0bd3c5022c287d3dedd2731aa3984ce5
+  resolved_proposals.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_proposals.json
+    size_bytes: 12194
+    sha256: 5e0d9130ba9f74091d548260b62401c4860e28cb651fc81c3e3fe98dcdaa41b7
+  seal.json:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/seal.json
+    size_bytes: 655
+    sha256: 669270abf39e28e87bdc46542e3fe793e6136f1f2372e657ce9d4120c8ffa25d
+automatic_scene_descriptor:
+  schema_version: 1
+  scene_id: 09c1414f1b
+  discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
+  discovery_hashes:
+    input_manifest.json: 7501b7deedf6a174c8064313020e014df8e7a4eb8f6e11409133527eeea0c923
+    output_hashes.json: 6f4f91d2282005ed20eec2fdf00a02f1e138b05aafff6b5d340cf3d4b2eac738
+    pilot_summary.json: 3818cffc464cd0cb76c27476185f540e499bf609d490c2addc7f3c1cd6dc4a51
+    postrun_audit.json: 509933833ccf301bf366fdd7994ad55f0c5845e2b3eaa1520fdb8372890c3e74
+slurm:
+  dependency: afterok:825013
+  node: sof1-h200-4
+  cpus: 2
+  memory: 8G
+  time: 00:20:00
+  gpu_requested: false
+python: /group/worldcept/code/SimAny/.venv/bin/python

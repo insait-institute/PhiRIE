@@ -1,0 +1,68 @@
+[
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B3_AGENT_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L0_target_only",
+    "success_per_planned": null
+  },
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B3_AGENT_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L1_target_destination",
+    "success_per_planned": null
+  },
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B3_AGENT_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L2_workspace",
+    "success_per_planned": null
+  },
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L0_target_only",
+    "success_per_planned": null
+  },
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L1_target_destination",
+    "success_per_planned": null
+  },
+  {
+    "absolute_replay_position_error_cm": null,
+    "executed": null,
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "planned": null,
+    "reconstructed_context": null,
+    "retained_context": null,
+    "rollout_coverage": null,
+    "scope": "L2_workspace",
+    "success_per_planned": null
+  }
+]

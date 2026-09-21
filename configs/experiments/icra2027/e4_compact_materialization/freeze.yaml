@@ -1,0 +1,27 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260905-e8277d2-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: e4_compact_materialization_config
+  path: configs/experiments/icra2027/e4_compact_materialization/execution.yaml
+  kind: experiment_config
+  required: true
+- id: materialization_python
+  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  kind: python_runtime
+  required: true
+checkpoint_roots: []
+hardware:
+  gpu_required: false
+  purpose: CPU-only A0/A4 materialization from sealed compact17-object construction
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

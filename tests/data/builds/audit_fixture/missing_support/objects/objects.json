@@ -1,0 +1,12 @@
+[
+ {
+  "index": 0,
+  "label": "plate",
+  "gt_object_id": null,
+  "extent": [
+   0.2,
+   0.2,
+   0.02
+  ]
+ }
+]

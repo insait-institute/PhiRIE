@@ -1,0 +1,20 @@
+{
+  "id": "discovery",
+  "branch": "block/discovery",
+  "default_action": "discover",
+  "description": "Object proposals and mask refinement",
+  "implementation": [
+    "physicalview/pipeline.py",
+    "physicalview/paper_sam3.py"
+  ],
+  "tools": [
+    "SAM3",
+    "GT segment adapter"
+  ],
+  "commands": [
+    "uv run physicalview run discovery --config configs/local.yaml --scene room --model sam3_auto --out outputs/scenes/room_factory",
+    "uv run physicalview plan discovery --config configs/local.yaml --scene room --model gt_segments"
+  ],
+  "inputs": "Scene images, geometry and optional GT annotations",
+  "outputs": "Object records, RGBA crops and masks. GT-assisted and model-predicted proposals must remain distinguishable."
+}

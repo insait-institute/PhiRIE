@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-09-15T02:29:24.355190+00:00",
+  "status": "PASS",
+  "job_ids": [
+    "901688"
+  ],
+  "covered_original_objects": 29,
+  "missing_input_original_objects": 3,
+  "seed": 0,
+  "one_proposal_per_object": true,
+  "native_auxiliary_checkpoint_bound": true,
+  "arrays": false
+}

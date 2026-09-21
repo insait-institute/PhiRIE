@@ -1,0 +1,36 @@
+{
+  "conditions": {
+    "Raw composite": {
+      "render_dir": "outputs/harmony_eval/raw/render",
+      "gt_dir": "outputs/harmony_eval/gt",
+      "target_reference_mask_dir": "outputs/harmony_eval/masks/target_reference",
+      "target_prediction_mask_dir": "outputs/harmony_eval/masks/raw_target",
+      "robot_reference_mask_dir": "outputs/harmony_eval/masks/robot_reference",
+      "robot_prediction_mask_dir": "outputs/harmony_eval/masks/raw_robot",
+      "temporal_reference_dir": "outputs/harmony_eval/temporal/reference",
+      "temporal_prediction_dir": "outputs/harmony_eval/temporal/raw",
+      "latency_records": "outputs/harness_runs/paper_main/harness_ledger.jsonl"
+    },
+    "Color-match baseline": {
+      "render_dir": "outputs/harmony_eval/color_match/render",
+      "gt_dir": "outputs/harmony_eval/gt",
+      "target_reference_mask_dir": "outputs/harmony_eval/masks/target_reference",
+      "target_prediction_mask_dir": "outputs/harmony_eval/masks/color_match_target",
+      "robot_reference_mask_dir": "outputs/harmony_eval/masks/robot_reference",
+      "robot_prediction_mask_dir": "outputs/harmony_eval/masks/color_match_robot",
+      "temporal_reference_dir": "outputs/harmony_eval/temporal/reference",
+      "temporal_prediction_dir": "outputs/harmony_eval/temporal/color_match"
+    },
+    "Harmonizer + robot restoration (C)": {
+      "render_dir": "outputs/harmony_eval/harmony_c/render",
+      "gt_dir": "outputs/harmony_eval/gt",
+      "target_reference_mask_dir": "outputs/harmony_eval/masks/target_reference",
+      "target_prediction_mask_dir": "outputs/harmony_eval/masks/harmony_c_target",
+      "robot_reference_mask_dir": "outputs/harmony_eval/masks/robot_reference",
+      "robot_prediction_mask_dir": "outputs/harmony_eval/masks/harmony_c_robot",
+      "temporal_reference_dir": "outputs/harmony_eval/temporal/reference",
+      "temporal_prediction_dir": "outputs/harmony_eval/temporal/harmony_c",
+      "latency_records": "outputs/harness_runs/paper_main/harness_ledger.jsonl"
+    }
+  }
+}

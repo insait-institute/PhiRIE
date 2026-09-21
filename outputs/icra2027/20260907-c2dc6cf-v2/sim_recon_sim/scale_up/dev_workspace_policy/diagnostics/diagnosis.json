@@ -1,0 +1,308 @@
+{
+  "kind": "DEV_partial_observed_workspace_actual_episode_diagnosis",
+  "source_commit": "7eace8100df0813c830168f757a6b9064beb2a26",
+  "source_script_sha256": "0f1292e00c4cab8dd8abd293a0953f85f45b8fffc663d4b4d26297b4abd39fca",
+  "job_id": "841163",
+  "scheduler_output": "841163|COMPLETED|00:07:07|0:0\n",
+  "planned_episodes": 3,
+  "rows": [
+    {
+      "label": "REF",
+      "result": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/result.json",
+      "result_sha256": "ea889401e0a93f89877a3ba861dbf7cbe40871b6106b6dd2d11db9c75fb427e1",
+      "trace": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/trace.json.gz",
+      "trace_sha256": "babf0e6bd941bca587f0ab9111566c8e955f29eb08d286839fdfebffc0d7ab50",
+      "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/continuous.mp4",
+      "video_sha256": "bb0300f59acdbda42ffc17189026e47b8cacdc507d00618cbfa43a302b6e7d54",
+      "success": true,
+      "ticks": 359,
+      "first_success_step": 359,
+      "error": null,
+      "engine_id": "scope-engine-60e94122728141b88f3ddf0ecb361fda",
+      "process_uuid": "1594d6fb-8cc0-4c20-b91b-36751c61e3e2",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "reset_id": "r0",
+      "reset_contract_sha256": "e508c2e3f38fba840afa3ab0f055e32167bf8a415dce64c691d55a87799b1014",
+      "policy_identity_sha256": "82de625e9a334de43a747ca60cc2d12ede902be87491106d25417c492a74c288",
+      "policy_rng_seed": 0,
+      "scope": "L0_target_only",
+      "final_native_predicates": {
+        "frame_status": "raw_native_body_origin",
+        "generated_scorer_correspondence": "NOT_ESTABLISHED",
+        "gripper_distance_m": 0.2543380617850274,
+        "gripper_far": true,
+        "gripper_threshold_m": 0.25,
+        "native_task_success": true,
+        "object_in_receptacle": true,
+        "receptacle_on_counter": true,
+        "whole_mesh_containment_certified": false
+      },
+      "max_target_height_increase_from_first_tick_m": 0.4198311015718763,
+      "max_target_displacement_from_first_tick_m": 0.7754002867203972,
+      "final_target_displacement_from_first_tick_m": 0.7238796798007434,
+      "minimum_recorded_gripper_distance_m": 0.008389541861120167,
+      "predicate_true_ticks": {
+        "native_task_success": 1,
+        "object_in_receptacle": 28,
+        "receptacle_on_counter": 359,
+        "gripper_far": 92
+      },
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "policy_time_strictly_monotonic": true,
+      "maximum_policy_time_increment_deviation_s": 2.771394225220547e-14,
+      "contact_audit": null
+    },
+    {
+      "label": "L0_B3",
+      "result": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/result.json",
+      "result_sha256": "e90c240f09840ebf68cd271a8b7a807f69bb939478a6923fae1264aff2e6fb83",
+      "trace": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/trace.json.gz",
+      "trace_sha256": "33636fa878ddd5fa5566b65fbb2fe010db36718c86c6b466d4555dd8bebdff4a",
+      "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/continuous.mp4",
+      "video_sha256": "21cf4c45f60f89e2d517495aa453fbc48165f06d4bce6bbb2b714ba589b99cce",
+      "success": true,
+      "ticks": 356,
+      "first_success_step": 356,
+      "error": null,
+      "engine_id": "scope-engine-60e94122728141b88f3ddf0ecb361fda",
+      "process_uuid": "1594d6fb-8cc0-4c20-b91b-36751c61e3e2",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "reset_id": "r0",
+      "reset_contract_sha256": "e508c2e3f38fba840afa3ab0f055e32167bf8a415dce64c691d55a87799b1014",
+      "policy_identity_sha256": "82de625e9a334de43a747ca60cc2d12ede902be87491106d25417c492a74c288",
+      "policy_rng_seed": 0,
+      "scope": "L0_target_only",
+      "final_native_predicates": {
+        "frame_status": "raw_native_body_origin",
+        "generated_scorer_correspondence": "NOT_ESTABLISHED",
+        "gripper_distance_m": 0.25262946733722147,
+        "gripper_far": true,
+        "gripper_threshold_m": 0.25,
+        "native_task_success": true,
+        "object_in_receptacle": true,
+        "receptacle_on_counter": true,
+        "whole_mesh_containment_certified": false
+      },
+      "max_target_height_increase_from_first_tick_m": 0.4087655940866497,
+      "max_target_displacement_from_first_tick_m": 0.7358956166828777,
+      "final_target_displacement_from_first_tick_m": 0.727546138415058,
+      "minimum_recorded_gripper_distance_m": 0.02344275309423854,
+      "predicate_true_ticks": {
+        "native_task_success": 1,
+        "object_in_receptacle": 34,
+        "receptacle_on_counter": 356,
+        "gripper_far": 87
+      },
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "policy_time_strictly_monotonic": true,
+      "maximum_policy_time_increment_deviation_s": 2.771394225220547e-14,
+      "contact_audit": null
+    },
+    {
+      "label": "DEV_PARTIAL_WORKSPACE",
+      "result": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/result.json",
+      "result_sha256": "7955f5e5dcaf125a7afb9ffb600e60db811b24806a9978fd89e37f4318ef1dae",
+      "trace": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/trace.json.gz",
+      "trace_sha256": "bd683b7ce06a60848772558d48382fd8ddb7e36ce3a69f235fdb1a55952fc7a1",
+      "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/continuous.mp4",
+      "video_sha256": "9bb3e9449e1c48a35518b3562f8e230a41a4935a2ff62b61648423426e55d06d",
+      "success": false,
+      "ticks": 900,
+      "first_success_step": null,
+      "error": null,
+      "engine_id": "scope-engine-60e94122728141b88f3ddf0ecb361fda",
+      "process_uuid": "1594d6fb-8cc0-4c20-b91b-36751c61e3e2",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "reset_id": "r0",
+      "reset_contract_sha256": "e508c2e3f38fba840afa3ab0f055e32167bf8a415dce64c691d55a87799b1014",
+      "policy_identity_sha256": "82de625e9a334de43a747ca60cc2d12ede902be87491106d25417c492a74c288",
+      "policy_rng_seed": 0,
+      "scope": "DEV_partial_observed_workspace",
+      "final_native_predicates": {
+        "frame_status": "raw_native_body_origin",
+        "generated_scorer_correspondence": "NOT_ESTABLISHED",
+        "gripper_distance_m": 0.6956263342864961,
+        "gripper_far": true,
+        "gripper_threshold_m": 0.25,
+        "native_task_success": false,
+        "object_in_receptacle": false,
+        "receptacle_on_counter": true,
+        "whole_mesh_containment_certified": false
+      },
+      "max_target_height_increase_from_first_tick_m": 0.009079846924246682,
+      "max_target_displacement_from_first_tick_m": 0.12925919048757706,
+      "final_target_displacement_from_first_tick_m": 0.12822601320609087,
+      "minimum_recorded_gripper_distance_m": 0.21244698148135302,
+      "predicate_true_ticks": {
+        "native_task_success": 0,
+        "object_in_receptacle": 0,
+        "receptacle_on_counter": 900,
+        "gripper_far": 754
+      },
+      "qpos_finite": true,
+      "qvel_finite": true,
+      "policy_time_strictly_monotonic": true,
+      "maximum_policy_time_increment_deviation_s": 6.110389971780705e-14,
+      "contact_audit": {
+        "native_physics_steps": 22500,
+        "contact_events": 1813930,
+        "outside_workspace_events": 180000,
+        "robot_target_contact_ticks": 0,
+        "robot_target_contact_identity": {
+          "target_ids": [
+            "target"
+          ],
+          "robot_rule": "robot or gripper in native geom name"
+        },
+        "maximum_penetration_event": {
+          "tick": 5,
+          "physics_step": 8,
+          "simulation_time_s": 0.7680000000000006,
+          "geom_names": [
+            "sink_1_main_group_g30",
+            "sink_1_main_group_main__roundtrip_geom_3"
+          ],
+          "object_ids": [
+            null,
+            "source_support"
+          ],
+          "geometry_classification": [
+            "retained_reference",
+            "reconstructed"
+          ],
+          "contact_position_world_m": [
+            2.521387366220617,
+            -0.1145601405228669,
+            0.8633104337760283
+          ],
+          "distance_m": -0.0719709781399604,
+          "normal_force_N": 11325.239839731543,
+          "contact_frame_force_torque": [
+            11325.239839731543,
+            -6.234327863552287,
+            -223.1133500857458,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "touches_retained_reference": true,
+          "outside_declared_workspace": false
+        },
+        "maximum_normal_force_event": {
+          "tick": 0,
+          "physics_step": 2,
+          "simulation_time_s": 0.5060000000000003,
+          "geom_names": [
+            "sink_1_main_group_g21",
+            "sink_1_main_group_main__roundtrip_geom_7"
+          ],
+          "object_ids": [
+            null,
+            "source_support"
+          ],
+          "geometry_classification": [
+            "retained_reference",
+            "reconstructed"
+          ],
+          "contact_position_world_m": [
+            2.622283522359578,
+            -0.43416125255745514,
+            0.9063712999780911
+          ],
+          "distance_m": -0.044683462033174706,
+          "normal_force_N": 37159.02598871946,
+          "contact_frame_force_torque": [
+            37159.02598871946,
+            -0.04604632181423858,
+            -74.2982679646142,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "touches_retained_reference": true,
+          "outside_declared_workspace": false
+        },
+        "most_frequent_pairs": [
+          {
+            "geom_names": [
+              "sink_1_main_group_g19",
+              "sink_1_main_group_main__roundtrip_geom_9"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "sink_1_main_group_g20",
+              "sink_1_main_group_main__roundtrip_geom_7"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "sink_1_main_group_g22",
+              "sink_1_main_group_main__roundtrip_geom_7"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "sink_1_main_group_g23",
+              "sink_1_main_group_main__roundtrip_geom_16"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "sink_1_main_group_g24",
+              "sink_1_main_group_main__roundtrip_geom_10"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "stack_2_island_group_2_back",
+              "stack_2_island_group_2_inner_right"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "stack_3_island_group_2_back",
+              "stack_3_island_group_2_inner_right"
+            ],
+            "events": 90000
+          },
+          {
+            "geom_names": [
+              "sink_1_main_group_g30",
+              "sink_1_main_group_main__roundtrip_geom_3"
+            ],
+            "events": 89598
+          },
+          {
+            "geom_names": [
+              "counter_1_main_group_main__roundtrip_geom_7",
+              "distr_counter_g4"
+            ],
+            "events": 86557
+          },
+          {
+            "geom_names": [
+              "gripper0_right_finger1_pad_collision",
+              "gripper0_right_finger2_pad_collision"
+            ],
+            "events": 48974
+          }
+        ],
+        "physics_time_monotonic": true,
+        "maximum_physics_time_increment_deviation_s": 2.444225377651321e-15
+      }
+    }
+  ],
+  "complete_L2": false,
+  "metric_boundary": "within-episode displacement from first post-action tick, no absolute native/generated pose correspondence, no inferred grasp/lift success label",
+  "warning_counter_boundary": "native warning counters and substep acceleration/position/velocity were not recorded",
+  "scope": "four constructed DEV roles; incomplete residual obstacle identities; retained native context explicit"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "datasets",
+  "branch": "block/datasets",
+  "default_action": "libero",
+  "description": "Native LIBERO and BEHAVIOR source adapters; ScanNet++ and DROID scene contracts",
+  "implementation": [
+    "physicalview/paper_libero.py",
+    "physicalview/paper_behavior.py",
+    "physicalview/scene_state.py"
+  ],
+  "tools": [
+    "MuJoCo",
+    "PointWorld-BEHAVIOR WDS"
+  ],
+  "commands": [
+    "uv run physicalview run datasets --action libero -- --roster examples/libero-roster.json --index 0 --root data/libero",
+    "uv run physicalview run datasets --action behavior -- --task 0002 --scene-name behavior_task0002 --root data/behavior --tasks-config /path/to/behavior-tasks.yaml"
+  ],
+  "inputs": "User-provided licensed simulator assets, native XML/state or WDS shards",
+  "outputs": "Posed RGB-D, calibration and provenance. LIBERO and BEHAVIOR state alignment are GT-assisted; WDS RGB may be 320x180."
+}

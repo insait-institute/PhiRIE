@@ -1,0 +1,116 @@
+schema_version: 1
+mode: draft
+freeze_id: 20260905-61d8ba4-v3
+source_root: /group/worldcept/code/SimAny
+resolution:
+- 960
+- 540
+fps: 15
+sources:
+- id: capture
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31/construction/objects/obj_00/rgba.png
+  sha256: 6b509a56d56f0af038745e4f7ff670f2934f65219a5ee9e9ae0da4836de26ab5
+  kind: image
+  freeze_id: 20260905-61d8ba4-v3
+  origin_freeze_id: 20260905-76c15d5-v1
+  source_type: training_only_prepared_object_observation
+- id: selection
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
+  sha256: 3980de3ee981ab6c2bc03ed4fd085062e7d9a973b52add68d1d9ef21b1ee073d
+  kind: selection
+  freeze_id: 20260905-61d8ba4-v3
+  origin_freeze_id: 20260905-33bd974-v1
+  evidence_comparison:
+    kind: initial_selection
+    records:
+    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A0/38d58a7a31/obj_1000.json
+      sha256: 67abca44c64a713b5a2ed55c82b82edced5154385a23dd52adc265d81a344759
+    - &id001
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
+      sha256: 3980de3ee981ab6c2bc03ed4fd085062e7d9a973b52add68d1d9ef21b1ee073d
+- id: retry
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
+  sha256: e09b1f692db34efb0d0eb7694beb0c8a9c5fe93a9e69de31104e99d618bc821e
+  kind: selection
+  freeze_id: 20260905-61d8ba4-v3
+  origin_freeze_id: 20260905-33bd974-v1
+  evidence_comparison:
+    kind: registration_retry
+    records:
+    - *id001
+    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
+      sha256: e09b1f692db34efb0d0eb7694beb0c8a9c5fe93a9e69de31104e99d618bc821e
+- id: missing
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v6/draft_assets/missing_manipulation.png
+  sha256: 9b336ef46ff6baec636649ca8e5df96c1edf60ebb2367d1d12fc1fe292ee07c6
+  kind: image
+  freeze_id: 20260905-61d8ba4-v3
+  origin_freeze_id: 20260904-07e8b05-v6
+  source_type: explicit_dependency_card
+shots:
+- shot_id: capture
+  source_id: capture
+  duration_s: 3
+  overlay_text:
+  - The original training-only object observation
+  scene_id: 38d58a7a31
+  object_ids:
+  - obj_1000
+  episode_id: null
+  metric_fields: []
+  manual_edits:
+  - letterbox
+  - caption
+  camera_path: null
+- shot_id: selection
+  source_id: selection
+  duration_s: 3
+  overlay_text:
+  - Evidence selects an unsupported proposal
+  scene_id: 38d58a7a31
+  object_ids:
+  - obj_1000
+  episode_id: null
+  metric_fields: []
+  manual_edits:
+  - letterbox
+  - caption
+  camera_path: null
+  decision: selection
+- shot_id: retry
+  source_id: retry
+  duration_s: 3
+  overlay_text:
+  - Genuine retry remains unsupported
+  scene_id: 38d58a7a31
+  object_ids:
+  - obj_1000
+  episode_id: null
+  metric_fields: []
+  manual_edits:
+  - letterbox
+  - caption
+  camera_path: null
+  decision: retry
+- shot_id: missing
+  source_id: missing
+  duration_s: 3
+  overlay_text:
+  - Manipulation footage remains unavailable
+  scene_id: null
+  object_ids: []
+  episode_id: null
+  metric_fields: []
+  manual_edits:
+  - letterbox
+  - caption
+  camera_path: null
+limitations:
+- Engineering evidence clips only; full hero, teaser and loop remain NOT_RUN.
+- Recorded selected and retried object remains unsupported by the full construction
+  gate.
+- Shared-camera mesh visualization is not a physical rollout.
+- No synchronized learned-policy episode, preservation-certified Option C footage
+  or final E9 claim freeze.
+- Artifact-level construction measurements come directly from E3; no paper result
+  metrics are displayed.

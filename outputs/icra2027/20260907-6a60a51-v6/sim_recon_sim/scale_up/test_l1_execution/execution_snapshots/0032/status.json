@@ -1,0 +1,40 @@
+{
+  "complete": false,
+  "groups": [
+    {
+      "controller_method": "B3_AGENT_NATIVE",
+      "executed": 24,
+      "executed_per_planned": 0.05,
+      "planned": 480,
+      "success_per_executed": 0.4583333333333333,
+      "success_per_planned": null,
+      "successes": 11,
+      "terminal": 224,
+      "unmeasured": 256
+    },
+    {
+      "controller_method": "B4_ROOM_REPAIR_NATIVE",
+      "executed": 0,
+      "executed_per_planned": 0.0,
+      "planned": 480,
+      "success_per_executed": null,
+      "success_per_planned": null,
+      "successes": 0,
+      "terminal": 400,
+      "unmeasured": 80
+    },
+    {
+      "controller_method": "REF_NATIVE",
+      "executed": 20,
+      "executed_per_planned": 0.08333333333333333,
+      "planned": 240,
+      "success_per_executed": 0.85,
+      "success_per_planned": null,
+      "successes": 17,
+      "terminal": 20,
+      "unmeasured": 220
+    }
+  ],
+  "planned": 1200,
+  "terminal": 644
+}

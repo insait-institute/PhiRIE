@@ -1,0 +1,24 @@
+{
+  "task_id": "gc32-reference-evaluation-retry1",
+  "task_sha256": "accef3e7984c94de2a17dd51dcf80085f411fea4a4a71e84ca73ebd090ae0311",
+  "source": {
+    "commit": "26912c1c072a14e8acee710176304c0fb4c46049",
+    "root": "/group/worldcept/code/SimAny/worktrees/generator-comparison-control-20260914"
+  },
+  "artifacts": {
+    "batch": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/batch.json",
+      "sha256": "7339f2953da0725f108191b88ba2113315a28648436bc8c97658a5b212efec98",
+      "bytes": 22286
+    },
+    "integration_receipt": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/outputs.json",
+      "sha256": "852cb55faa1f5f3ba9f28060392ee74c5c36fdafd8d85360af51b75fad17f18d",
+      "bytes": 307
+    }
+  },
+  "status": "COMPLETE",
+  "job_id": "900931",
+  "component_execution_only": true,
+  "wall_s": 5165.359702950984
+}

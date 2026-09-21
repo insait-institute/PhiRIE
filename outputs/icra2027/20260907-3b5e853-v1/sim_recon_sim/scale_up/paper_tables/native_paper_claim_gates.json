@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "preservation",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "SimAnyRoom preserves native manipulation capability.",
+    "required_gate": "A prospectively declared preservation/noninferiority criterion and admissible complete paired evidence; nonsignificance is insufficient."
+  },
+  {
+    "claim_id": "full_room",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "SimAnyRoom reconstructs complete rooms while preserving manipulation.",
+    "required_gate": "Complete declared room scope, retained-context disclosure and independent native outcomes; target-only or partial workspace evidence is insufficient."
+  },
+  {
+    "claim_id": "full_l2",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "Full workspace reconstruction retains task capability.",
+    "required_gate": "Complete declared L2 scope and independent same-method fresh paired controls; partial role imports are insufficient."
+  },
+  {
+    "claim_id": "gs_occlusion",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "Gaussian observations preserve correct robot occlusion.",
+    "required_gate": "Independent visibility validation and fresh native observer invariance; static/depth replay implementation checks are insufficient."
+  },
+  {
+    "claim_id": "feedback",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "Visual policy feedback compensates for reconstruction errors.",
+    "required_gate": "Complete predeclared same-action versus same-policy diagnostic with matched horizon/reset and declared feedback effect; selected episodes are insufficient."
+  },
+  {
+    "claim_id": "sim_real",
+    "scientific_gate": "NOT_RUN",
+    "enabled_sentence": "",
+    "disabled_sentence": "Native reconstruction transfers policy success to the physical world.",
+    "required_gate": "Genuine matched physical trials with frozen policy, reset specification, observation and rubric."
+  }
+]

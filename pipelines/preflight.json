@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "steps": [
+    {"module": "experiments", "action": "preflight"},
+    {"module": "experiments", "action": "finalize", "args": ["--help"]}
+  ]
+}

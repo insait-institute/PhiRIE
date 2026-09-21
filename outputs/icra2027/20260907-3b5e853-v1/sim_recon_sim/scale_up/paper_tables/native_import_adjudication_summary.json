@@ -1,0 +1,17 @@
+[
+  {
+    "affected_instances": 1,
+    "all_watertight_near_threshold_nonconvex": true,
+    "classified_units": 10,
+    "cohort_complete": true,
+    "cohort_id": "native_test_v2_48instances",
+    "geometry_repaired": false,
+    "method": "B0_FIXED_NATIVE",
+    "native_executed_instances": 31,
+    "native_success_values_changed": false,
+    "producer_accepted_objects": 32,
+    "scope": "L0_target_only",
+    "split": "test",
+    "threshold_changed": false
+  }
+]

@@ -1,0 +1,54 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260906-a0a1aa3-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: public_masks_27dd4da69e
+  path: configs/experiments/icra2027/e2_public_background_masks/27dd4da69e.yaml
+  kind: experiment_config
+  required: true
+- id: preparation_integrity_27dd4da69e
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v2/dispatch/preparation_integrity_27dd4da69e.json
+  kind: source_manifest
+  required: true
+- id: public_masks_40aec5fffa
+  path: configs/experiments/icra2027/e2_public_background_masks/40aec5fffa.yaml
+  kind: experiment_config
+  required: true
+- id: preparation_integrity_40aec5fffa
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v2/dispatch/preparation_integrity_40aec5fffa.json
+  kind: source_manifest
+  required: true
+- id: compact_masks_protocol
+  path: configs/experiments/icra2027/e2_public_background_masks/protocol.yaml
+  kind: experiment_config
+  required: true
+- id: sam3_python
+  path: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python3.11
+  kind: python_runtime
+  required: true
+- id: sam3_source
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  kind: large_directory
+  required: true
+checkpoint_roots:
+- id: sam3_checkpoint
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  kind: checkpoint
+  required: true
+hardware:
+  gpu_required: true
+  purpose: Compact fixed15-view SAM3 mask engineering pilot; no independent evaluation
+  cpus_per_scene: 4
+  memory_gb_per_scene: 32
+  gpus_per_scene: 1
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

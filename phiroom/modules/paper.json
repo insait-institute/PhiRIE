@@ -1,0 +1,59 @@
+{
+  "id": "paper",
+  "branch": "module/paper-v2",
+  "description": "Evidence-based paper capture, packaging and verification",
+  "inputs": [
+    "real pipeline artifacts; frozen evidence manifests"
+  ],
+  "outputs": [
+    "paper media packages; verified source bundles"
+  ],
+  "tools": [
+    "PhiView capture",
+    "paper bundle validator"
+  ],
+  "actions": {
+    "capture": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "paper",
+        "--action",
+        "capture"
+      ]
+    },
+    "pack": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": false,
+      "args": [
+        "run",
+        "paper",
+        "--action",
+        "pack"
+      ]
+    },
+    "zip": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": false,
+      "args": [
+        "run",
+        "paper",
+        "--action",
+        "zip"
+      ]
+    },
+    "verify": {
+      "target": "robo.eval.paper_bundle",
+      "runtime": "control",
+      "gpu": false,
+      "args": []
+    }
+  }
+}

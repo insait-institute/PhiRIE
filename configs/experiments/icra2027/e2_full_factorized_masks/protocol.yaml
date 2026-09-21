@@ -1,0 +1,22 @@
+schema_version: 1
+scope: full_e2_first_scene_mask_pilot
+freeze_id: 20260906-02e9d33-v1
+full_protocol:
+  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  bytes: 10979
+  sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
+preparation_gate:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/dispatch/independent_completion_gate.json
+  bytes: 1291
+  sha256: 3a5128df5b7132f58c6dcfb69c0f4b2e74f833fe0e1f9b793ceaca4f795eb0ac
+scene_id: 09c1414f1b
+planned_objects: 112
+accepted_objects: 9
+planned_views: 27
+policy_id: A4
+stage: sam3_masks
+paper_ready: false
+official_test_images_read: 0
+full_stage_admitted: false
+no_plane_policy: preserve_as_masked_but_not_fillable
+thresholds_changed: false

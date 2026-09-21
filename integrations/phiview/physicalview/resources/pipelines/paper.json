@@ -1,0 +1,25 @@
+{
+  "id": "paper",
+  "branch": "block/paper",
+  "default_action": "capture",
+  "description": "Capture, review and package reproducible scene-feature figures",
+  "implementation": [
+    "physicalview/paper_capture.py",
+    "physicalview/paper_campaign.py",
+    "physicalview/paper_pack.py",
+    "physicalview/paper_download_pack.py"
+  ],
+  "tools": [
+    "Lossless PNG",
+    "editable SVG",
+    "offline ZIP",
+    "execution receipts"
+  ],
+  "commands": [
+    "uv run physicalview run paper --action capture --config configs/local.yaml --scene room_factory --out outputs/paper/room",
+    "uv run physicalview run paper --action pack --root outputs/paper",
+    "uv run physicalview run paper --action zip --root outputs/paper --out outputs/downloads"
+  ],
+  "inputs": "Constructed scenes; campaign root for multi-scene reports",
+  "outputs": "14 feature groups per scene, sidecar hashes, panels and downloadable review packs. Captured, complete and publication-approved are separate states."
+}

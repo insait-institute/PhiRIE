@@ -1,0 +1,43 @@
+{
+  "id": "generation",
+  "branch": "module/generation-v2",
+  "description": "Interchangeable object generation backends",
+  "inputs": [
+    "object crops and object metadata"
+  ],
+  "outputs": [
+    "generated mesh and Gaussian asset candidates"
+  ],
+  "tools": [
+    "TRELLIS",
+    "TRELLIS2",
+    "SAM3D",
+    "ReconViaGen"
+  ],
+  "actions": {
+    "trellis": {
+      "target": "models.s4_trellis",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    },
+    "trellis2": {
+      "target": "models.s4_trellis2",
+      "runtime": "trellis2",
+      "gpu": true,
+      "args": []
+    },
+    "sam3d": {
+      "target": "models.s4_sam3d",
+      "runtime": "sam3d",
+      "gpu": true,
+      "args": []
+    },
+    "reconviagen": {
+      "target": "models.s4_reconviagen",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

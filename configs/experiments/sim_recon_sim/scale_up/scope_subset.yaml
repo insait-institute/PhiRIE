@@ -1,0 +1,22 @@
+schema_version: 1
+kind: native_scope_subset
+parent_cohort_id: native_test_v2_48instances
+parent_config: configs/experiments/sim_recon_sim/scale_up/test.yaml
+layout_ids:
+- 1
+- 2
+- 3
+- 4
+selection_rule: first four frozen TEST layout IDs, before any TEST outcomes
+controller_methods:
+- B3_AGENT_NATIVE
+- B4_ROOM_REPAIR_NATIVE
+replacement_scopes:
+- L1_target_destination
+- L2_task_workspace
+canonical_instances_planned: 24
+resets_per_instance: 10
+extra_units_planned: 960
+execution_ready: false
+blocker: requires separately admitted scope capture/import with declared reconstructed
+  destination/support; L0 capture does not qualify

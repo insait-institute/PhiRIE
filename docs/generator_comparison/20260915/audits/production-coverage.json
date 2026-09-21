@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "submitted_jobs": [
+    "901002",
+    "901003"
+  ],
+  "objects_per_job": [
+    25,
+    4
+  ],
+  "unique_original_cohort_objects": 29,
+  "seed": 0,
+  "every_available_object_covered_once": true,
+  "engineering_smoke_excluded": true,
+  "no_job_arrays": true
+}

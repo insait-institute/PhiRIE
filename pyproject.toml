@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phiroom"
+version = "2.0.1"
+description = "PhiRIE: from photorealistic reconstruction to interactive environments"
+readme = "README.md"
+authors = [
+  {name = "Runyi Yang"},
+  {name = "Deheng Zhang"},
+  {name = "Xiaoye Wang"},
+  {name = "Kanzhi Wu"},
+  {name = "Lei Sun"},
+  {name = "Ajad Chhatkuli"},
+  {name = "Kunyu Peng"},
+  {name = "Luc Van Gool"},
+  {name = "Danda Pani Paude"},
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+# Only the portable CLI dependency is installed here. GPU/model dependencies
+# remain in their separate environments (see docs/ENVIRONMENTS.md).
+dependencies = ["PyYAML>=6,<7"]
+
+[project.scripts]
+phiroom = "phiroom.cli:main"
+simfactory = "simfactory.runner:main"
+
+[project.urls]
+Repository = "https://github.com/insait-institute/PhiRIE"
+
+[tool.setuptools.packages.find]
+include = ["phiroom*", "simfactory*", "agents*", "models*", "robo*", "interface*", "capture*", "oracle*", "integrations.harmonizer*"]
+
+[tool.setuptools.package-data]
+"phiroom.modules" = ["*.json"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+  "E402",  # stage modules must mutate sys.path before importing vendored deps
+  "E501",  # long lines in docstrings that record exact run recipes
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Vendored-generator bridges import third-party packages that only resolve
+# after a sys.path insert; the guarded imports read as unused to the linter.
+"models/s4_reconviagen.py" = ["F401"]
+"models/s4_trellis.py" = ["F401"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

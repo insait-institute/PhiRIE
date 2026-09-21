@@ -1,0 +1,62 @@
+{
+  "checked_utc": "2026-09-15T02:24:56.066774+00:00",
+  "status": "COMPLETE_ON_AVAILABLE_THREE_BACKEND_SUPPORT",
+  "dataset": "ScanNet++ historically observed DEV",
+  "seed": 0,
+  "original_planned_four_backend_slots": 128,
+  "full_four_backend_comparison": "SAM smoke pending; no four-backend common support yet",
+  "common_independent_geometry_objects": [
+    "27dd4da69e-a1001",
+    "38d58a7a31-a1006",
+    "5942004064-a1010",
+    "5942004064-a1015",
+    "5942004064-a1034",
+    "5eb31827b7-a1005",
+    "5eb31827b7-a1012",
+    "7831862f02-a1034",
+    "c4c04e6d6c-a1007",
+    "fb5a96b1a2-a1020"
+  ],
+  "rows": [
+    {
+      "backend": "trellis",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 15,
+      "independent_common_support": 10,
+      "cd_cm": 7.19393113016398,
+      "f1_20": 0.30866496620628664,
+      "f1_40": 0.5310748872661295
+    },
+    {
+      "backend": "trellis2",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 10,
+      "independent_common_support": 10,
+      "cd_cm": 10.223725198385326,
+      "f1_20": 0.2305175267863862,
+      "f1_40": 0.4482130772292624
+    },
+    {
+      "backend": "reconviagen",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 14,
+      "independent_common_support": 10,
+      "cd_cm": 8.669366632406215,
+      "f1_20": 0.2882744376377194,
+      "f1_40": 0.5064277148898101
+    }
+  ],
+  "interpretation": "Execution completeness is separate from reconstruction quality and physical stability. No model is regenerated to improve a poor score."
+}

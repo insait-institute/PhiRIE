@@ -1,0 +1,108 @@
+{
+  "primary": {
+    "episode_ledger": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/episode_ledger.jsonl",
+      "sha256": "e1c83672234a7406791392f8d5ef38c6b69742f31ec8dc1bbcf386f229d265de"
+    },
+    "planned_units": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/planned_units.jsonl",
+      "sha256": "54afe88ea0bd9880db3708ae6c0ff5b72ab83257858ece2a59b83ea61d9ed8f3"
+    },
+    "status": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/status.json",
+      "sha256": "dc145fa74abee17e1e35f9cfc6cb80fc04eeaaffb1513b2472155ade3f060b23"
+    },
+    "planned": 2400,
+    "measured": 1654,
+    "unmeasured": 746,
+    "executed": 614,
+    "complete": false,
+    "kind": "EXPLICIT_PARTIAL_PRIMARY_SNAPSHOT"
+  },
+  "baseline_config": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+    "sha256": "ab8d674ce208bff28be47f28c8aa5f14e7fa85731bebdc8795aaf603641b8fa0"
+  },
+  "geometry_collection": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-da23b9d-v5/sim_recon_sim/scale_up/test_fidelity/collection.json",
+    "sha256": "73c7bb88baebcc142505a703f873185684ccd5165b1e8c06edf321ba46255709"
+  },
+  "appearance_methods": [
+    "B0_FIXED_NATIVE",
+    "B1_FIXED_PRIORITY",
+    "B2_EVIDENCE",
+    "B3_AGENT_NATIVE",
+    "B4_ROOM_REPAIR_NATIVE",
+    "BM_BUDGET_MATCHED_NATIVE"
+  ],
+  "appearance_method_declaration": "union of methods in frozen pre-render manifest; includes already-declared B4/BM",
+  "warm_collection": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/collection_snapshots/151/collection.json",
+    "sha256": "2e6278a31d556b747e2d9e43e77bbd6c0e5c97f4315ddde557108ad104dd66aa"
+  },
+  "warm_manifest": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/manifest.json",
+    "sha256": "44fdeb38f7516c85460274180011aaa1e7d275ebdde2f7c03af20300d4034232"
+  },
+  "warm_render_ready": 82,
+  "warm_metric_ready": 82,
+  "warm_render_failures": {
+    "slot-6c19079e3806eb6d2fcf/pool": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-6c19079e3806eb6d2fcf/pool_failure.json",
+      "sha256": "2d00c65059837806a94a32e988f7af58292f47f61995ef714f58a417fd85ef08",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-4cb8248fbd47bc306e29/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-4cb8248fbd47bc306e29/b0_failure.json",
+      "sha256": "7648bcf5e67944b52ee9e0b199f81a64229accca13cb08acb301ab76118068a1",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-6c19079e3806eb6d2fcf/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-6c19079e3806eb6d2fcf/b0_failure.json",
+      "sha256": "f3474a404e5821be29d20261f38f4ba03b5e176fda647311096361e4ba08d0c5",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-d55f3dd1cf4ce18c0efd/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-d55f3dd1cf4ce18c0efd/b0_failure.json",
+      "sha256": "9b7bb6ace91b8158df49ebf9757fcf4c0e2d3e4386bc8226bd649a8a629c3490",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    }
+  },
+  "warm_metric_failures": {},
+  "warm_unattempted": [],
+  "cold_appearance_included": false,
+  "scope_source": {
+    "expected_instances": 24,
+    "expected_resets_per_instance": 10,
+    "manifest": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/roster/scope_execution_manifest.json",
+    "manifest_sha256": "42a908b624fb9b62a2161ea24dfd07b37fb95109dfa793e052184d9935e8a99d",
+    "planned_units": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/roster/planned_units.jsonl",
+    "planned_units_sha256": "121819ef11e4ff4eb2bfe53b718c2a185aa3ad6e43a7e908fb4b9f3a5d2022ea",
+    "episode_ledger": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0045/episode_ledger.jsonl",
+    "episode_ledger_sha256": "7b1ab7ffdbaae2bf47eb33b8c1df7f861d1b1206c066fc2c7e56e5106adb81b2"
+  },
+  "scope_collection": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0045/collection.json",
+    "sha256": "dd93e27edba4165425198dbc7d4afa4e1f1291e35362d411acd35e480e1c8ba0"
+  },
+  "scope_status": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0045/status.json",
+    "sha256": "1ef72fbed4f8f23ccfd5e8ce4ff78c6f00ac5d6d2a4d89e9d2a2231619e30cef"
+  },
+  "scope_planned": 1200,
+  "scope_measured": 657,
+  "scope_unmeasured": 543,
+  "validation_implementation": {
+    "path": "/group/worldcept/code/SimAny-wt/n7-complete-appearance/robo/eval/native_final_release.py",
+    "sha256": "b7dcb552bfca2b69c255fcadeb98e2c2b03cd63ab0aad3da4ff3adceb8b3eadf"
+  },
+  "preparation_script": {
+    "path": "/group/worldcept/code/SimAny-wt/n7-complete-appearance/outputs/complete-appearance-release/prepare.py",
+    "sha256": "f8ac393beb1d79b8a4b58dc84c4807524f51cf0a8832349411f8efac2d102c26"
+  },
+  "interpretation": "Explicit partial primary snapshot010; complete available warm fidelity attempts; separate possibly partial full1200 scope roster. No population-rate promotion or paper transfer."
+}

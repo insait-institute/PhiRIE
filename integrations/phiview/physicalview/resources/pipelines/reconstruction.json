@@ -1,0 +1,19 @@
+{
+  "id": "reconstruction",
+  "branch": "block/reconstruction",
+  "default_action": "gsplat",
+  "description": "Train a Gaussian scene from posed RGB and an initial point cloud",
+  "implementation": [
+    "physicalview/native_demo.py",
+    "physicalview/pipeline.py"
+  ],
+  "tools": [
+    "SimAny agents.recon.gsplat_train",
+    "gsplat"
+  ],
+  "commands": [
+    "uv run physicalview run reconstruction --config configs/local.yaml --scene room --scene-dir data/scannetpp/data/room --out data/splats/room.ply -- --init-ply data/scannetpp/data/room/init_points.ply --iters 15000"
+  ],
+  "inputs": "Calibrated scene contract and initial colored point cloud",
+  "outputs": "Inria-format Gaussian PLY and training report. Holdout RGB metrics are separate from capture quality."
+}

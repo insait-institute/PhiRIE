@@ -1,0 +1,8 @@
+{
+  "reset_pass": true,
+  "pause_stable_step": 4,
+  "play_advanced_step": 8,
+  "final_state": "paused for user",
+  "http_status": 200,
+  "job_id": 856127
+}

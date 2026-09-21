@@ -1,0 +1,96 @@
+schema_version: 1
+scope: automatic_train_only_removal_masks
+freeze_id: 20260906-18984b8-v1
+scene_id: 7bc286c1b6
+preparation:
+  directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint
+  seal:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint/seal.json
+    bytes: 2664
+    sha256: 615f77162a898590c8fc92d509a32885239d7b599d40e425c72a3f86e7d5f593
+  context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7bc286c1b6.yaml
+    bytes: 718
+    sha256: d5e705fd7a52430d559f57becc13cfe6d7766f7e2c1ef01e16621f7fd6fde7f1
+  contract:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+    bytes: 85041
+    sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+  producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+sam3_source:
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  upstream_commit: 8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  tree_sha256: 73c418359155da5da839853613260e84f48e5bd8e3d494c6614ca9e561a187ae
+sam3_checkpoint:
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  sha256: 9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e
+  bytes: 3450062241
+python: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python
+runtime:
+  packages_sha256: c1dcd09b522dd85cf0da036521ded000dd307385adecfda42cb1f027faff64a1
+  targeted_bytes:
+    scope: targeted_executable_package_records_and_entrypoints
+    complete_raw_runtime_identity: false
+    files:
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python3.11
+      bytes: 25508680
+      mtime_ns: 1785998960440085517
+      sha256: e5b2d8cf4aab98e87720f2b6075f5d42a6d25fa6d7cd69c61845d0202da915cd
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/PIL/__init__.py
+      bytes: 2031
+      mtime_ns: 1786001145845532722
+      sha256: 43828e12947b4bf5ec8f7d1fbceb2f47de311295f8294b15794c1a54fd5f53cd
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/numpy-1.26.4.dist-info/RECORD
+      bytes: 115358
+      mtime_ns: 1786000145527941120
+      sha256: 5d05e618ce245ae5fcb4d03d3ed33579c170893fef9aaff778d1a0732ff10248
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/numpy/__init__.py
+      bytes: 17005
+      mtime_ns: 1786000141847979458
+      sha256: 22cd1535fa14d74ef6f457cca149ffdc80875f460be313b8f895273f78bc402e
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/open3d-0.18.0.dist-info/RECORD
+      bytes: 73626
+      mtime_ns: 1786000364455369104
+      sha256: cd9a97c90f05fa0379036654a015c821093fc9a2bcb5b3e387c30e6afac4c1b8
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/open3d/__init__.py
+      bytes: 8461
+      mtime_ns: 1786000357965448698
+      sha256: d2a8096be5afd6113abbe942fa6c05b3f72bd70fb0f9aa240f3c7bb3d69662d1
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/pillow-11.3.0.dist-info/RECORD
+      bytes: 15801
+      mtime_ns: 1786001146215527751
+      sha256: fb82ad54f637054c1cf21a91572a6d80f78b67826030d748ef5c276b22f34524
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/spconv/__init__.py
+      bytes: 765
+      mtime_ns: 1786000353765500208
+      sha256: c51232ea81b35f4a688c0cf9bc68d5b6478035ff95c86f4d94af1a51b31765a5
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch-2.5.1+cu121.dist-info/RECORD
+      bytes: 1282249
+      mtime_ns: 1786000271076615034
+      sha256: 5f509afefcbd0ee56653e3f2beb4e4d8d6018ccde5737efa0d548c0a9799ef45
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch/__init__.py
+      bytes: 95190
+      mtime_ns: 1786000247156873968
+      sha256: e1b5bf4151bd246a21e3ac5318f6edfcf2e6ef0fd4f233bfb77a264698ec1319
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/trimesh-5.0.0.dist-info/RECORD
+      bytes: 18318
+      mtime_ns: 1786000164167748440
+      sha256: bcbf1a64ed6d954453a9abcbdbea1e44a558d3e3225bde09fc8f42dd5929c7e0
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/trimesh/__init__.py
+      bytes: 2429
+      mtime_ns: 1786000163717753088
+      sha256: a50d8a9c4346fa0c5f6ca0c234effd12c548b1bee58197abb8106cb5e79d3360
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/xformers-0.0.28.post3.dist-info/RECORD
+      bytes: 30000
+      mtime_ns: 1786000276826547100
+      sha256: 948ea8a32479fd3bc7b91056d9f9965295486a829f98273c490e5459ad3af8f0
+    - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/xformers/__init__.py
+      bytes: 1710
+      mtime_ns: 1786000275786564047
+      sha256: 4ca0c0dbc80e010740cf056f53d204a465b3ebbed044a8151669eabe7800836c
+seed: 0
+algorithm:
+  min_iou: 0.15
+  dilate: 9
+  confidence: 0.4
+  resolution: 1008

@@ -1,0 +1,54 @@
+# Task 08. frozen_fields.yaml: `scripted_sinusoid`, checkpoint_path: null,
+# action_output: scripted_smoke_test_only. Deterministic env/scorer smoke
+# test (robo/policy/clients/scripted_client.py, ported verbatim from
+# robo/eval/pi05_eval.py::ScriptedPolicy) -- not a claim about any real
+# policy's behavior.
+#
+# status: verified. There is no external checkpoint or published score for
+# a scripted control policy to match against; its entire behavior is the
+# closed-form sinusoid formula in robo/policy/clients/scripted_client.py,
+# so "verified" here means "verified to match its own deterministic
+# specification" (see tests/test_control_contract.py's golden-trace test),
+# not "verified against a real-world checkpoint" -- the latter claim simply
+# doesn't apply to a checkpoint-free control policy.
+policies:
+  - id: scripted_sinusoid
+    status: verified
+    client_kind: scripted
+
+    checkpoint_uri: null
+    checkpoint_path: null
+    checkpoint_hash: null
+    training_config: null
+
+    model_action_convention: scripted_smoke_test_only
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    language_template: "{instruction}"
+
+    published_real_score_ref: null
+    notes: >-
+      Sinusoidal joint sway (fixed per-joint weights
+      [1.0, 0.5, 0.0, 0.4, 0.0, -0.4, 0.0], period 22 ticks) + gripper
+      toggle every 45 ticks; never reads the observation. Used as an
+      env/scorer smoke test only -- never present a scripted-policy number
+      as a benchmark result (frozen_fields.yaml's action_output name says
+      this explicitly: scripted_smoke_test_only). chunk_size/
+      temporal_aggregation/image_preprocessing fields are carried for
+      interface uniformity only; ScriptedPolicyClient ignores obs entirely,
+      so they have no behavioral effect on this policy.

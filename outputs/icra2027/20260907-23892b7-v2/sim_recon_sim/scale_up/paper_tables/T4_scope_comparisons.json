@@ -1,0 +1,82 @@
+[
+  {
+    "baseline_scope": "L0_target_only",
+    "ci95_pp": [
+      -24.16666666666667,
+      1.6666666666666667
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": -10.416666666666668,
+    "execution_protocol": "primary_native",
+    "measured_pairs": 240,
+    "method": "B3_AGENT_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 186,
+      "both_success": 11,
+      "ci95": [
+        -0.2416666666666667,
+        0.016666666666666666
+      ],
+      "delta": -0.10416666666666667,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 24,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 4,
+      "matched_resets": 240,
+      "method_only_success": 9,
+      "reference_only_success": 34,
+      "seed": 42
+    },
+    "paired_population_complete": true,
+    "planned_pairs": 240,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "renderer": "native",
+    "scope": "L1_target_destination",
+    "scope_benefit_claim": "NOT_RUN",
+    "scope_run_id": "native_test_L1_engine_v2_20260907-6a60a51-v6",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "baseline_scope": "L0_target_only",
+    "ci95_pp": [
+      -27.500000000000004,
+      -0.40625000000005684
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": -11.25,
+    "execution_protocol": "primary_native",
+    "measured_pairs": 240,
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 207,
+      "both_success": 4,
+      "ci95": [
+        -0.275,
+        -0.004062500000000568
+      ],
+      "delta": -0.1125,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 24,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 4,
+      "matched_resets": 240,
+      "method_only_success": 1,
+      "reference_only_success": 28,
+      "seed": 42
+    },
+    "paired_population_complete": true,
+    "planned_pairs": 240,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "renderer": "native",
+    "scope": "L1_target_destination",
+    "scope_benefit_claim": "NOT_RUN",
+    "scope_run_id": "native_test_L1_engine_v2_20260907-6a60a51-v6",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  }
+]

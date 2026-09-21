@@ -1,0 +1,43 @@
+{
+  "id": "datasets",
+  "branch": "module/datasets-v2",
+  "description": "Native dataset preparation",
+  "inputs": [
+    "DROID episode or BEHAVIOR task; dataset paths"
+  ],
+  "outputs": [
+    "posed scene directories; dataset inventories"
+  ],
+  "tools": [
+    "DROID",
+    "BEHAVIOR",
+    "LIBERO",
+    "ScanNet++"
+  ],
+  "actions": {
+    "droid": {
+      "target": "agents.recon.droid_extract",
+      "runtime": "h5",
+      "gpu": false,
+      "args": []
+    },
+    "behavior": {
+      "target": "agents.recon.behavior_extract",
+      "runtime": "h5",
+      "gpu": false,
+      "args": []
+    },
+    "libero": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "datasets",
+        "--action",
+        "libero"
+      ]
+    }
+  }
+}

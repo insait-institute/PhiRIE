@@ -1,0 +1,3 @@
+source,workspace_id,full_build,alignment_pass,translation_cm,rotation_deg,queries
+DROID robot workspaces,REPLACE_DROID_WORKSPACE,false,false,,,0
+Casual phone rooms,REPLACE_PHONE_ROOM,false,false,,,0

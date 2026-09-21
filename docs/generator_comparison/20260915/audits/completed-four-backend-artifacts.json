@@ -1,0 +1,1880 @@
+{
+  "checked_utc": "2026-09-15T06:11:32.517965+00:00",
+  "status": "PASS",
+  "verified_slots": 116,
+  "artifact_receipts_verified": 1613,
+  "unique_files_verified": 1380,
+  "checks": [
+    "original generation/evaluation/input/artifact SHA256 and byte receipts",
+    "finite native meshes and world surfaces, valid native face indices",
+    "registration isolated from evaluator and scale baked once",
+    "export and collision import records",
+    "seed 0 and single declared proposal",
+    "5-12 distinct conditioning images for all 29 multi-view ReconViaGen objects",
+    "29 SAM and 29 ReconViaGen production Gaussian files present",
+    "128 planned slots retained; 116 evaluated and 12 missing input",
+    "all task allocations terminal and cumulative GPU cost within allowance"
+  ],
+  "limitations": [
+    "Appearance quality is unmeasured; Gaussian files were not appearance-scored.",
+    "EVALUATED includes unstable and geometrically poor results."
+  ],
+  "records": [
+    {
+      "slot_id": "27dd4da69e-a1004-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-27dd4da69e-a1004-trellis-s0/generation_receipt.json",
+        "sha256": "a2748d49c159c0d9994b079dec31f4cd90e49fc522057684b702a4b9863e478a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1004-trellis/evaluation.json",
+        "sha256": "7bbd26759d186d654a8a86c1a143c9b40c13ac2a5f9ef379fa2f9899cad40b06",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1004-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-27dd4da69e-a1004-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "26adb9493d5956b8d44b06718c68e10aad03a4f0360a6651f5f8430aae9b5117"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1004-trellis2/evaluation.json",
+        "sha256": "cdeff16e5d601c2fbdb4e5e19cbe5e57e9b0b6d5ca77baac837bccec2ad47a2c",
+        "bytes": 2812
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1004-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1004-sam3d/generation.json",
+        "sha256": "69b226d53ec82a8a3e820a8aff323cc7a2e00347793dd00f64e6044102340440",
+        "bytes": 2937
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1004-sam3d/evaluation/evaluation.json",
+        "sha256": "19c81666db6d63821505cbc117574f6c43cf3d89da2511177de211f28db4acd0",
+        "bytes": 2782
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1004-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1004-reconviagen/generation.json",
+        "sha256": "f14215a7fe9e67ea3e036f45a64a5e48f5f5e7b3efc3aad210ddd68eefff2250",
+        "bytes": 7029
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "42f71631e5b26b09d466a75ede080d1e77230292954e024c2f2c4a870940e31b",
+        "bytes": 2941
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-27dd4da69e-a1001-trellis-s0/generation_receipt.json",
+        "sha256": "ca806df89415898ed5452f5247dcb8ed20e31cec23716f56eddc54bea7c4cac1"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1001-trellis/evaluation.json",
+        "sha256": "379581de784023618f0cb73ba2c3018d8c2f53fbe1e26fdc0049264d9879d266",
+        "bytes": 3639
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3014,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-full-dev-v1/results/p05-dev-27dd4da69e-a1001-trellis2-s0/generation_receipt.json",
+        "sha256": "4d6f9afae1de2f2e77a2a794d8d2ed17d07d3deedaac35c4e2e75ec1d4ca563f"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1001-trellis2/evaluation.json",
+        "sha256": "4d584685e7e3345d1bedc3124c9a802c80c79ecd3d983c6427a8107a115544eb",
+        "bytes": 3581
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1001-sam3d/generation.json",
+        "sha256": "34f8ede8b7f4d44cf8b48168818141e143cd98ffd3d028edcd72d44e683b1dbc",
+        "bytes": 2936
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1001-sam3d/evaluation/evaluation.json",
+        "sha256": "430d0c96617adff0d194b21e865f748f28d60c69393265f337183bbba86568db",
+        "bytes": 3195
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1001-reconviagen/generation.json",
+        "sha256": "e225a87c1c4cb9e5079d967c9bca6277aa7e2767fb22f0823fbd8e99d9f01be6",
+        "bytes": 6771
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1001-reconviagen/evaluation/evaluation.json",
+        "sha256": "7e14464d55e9568907999dca6869285f71e640602d190fda160579d7bb6b4cbf",
+        "bytes": 3213
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3778,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-27dd4da69e-a1002-trellis-s0/generation_receipt.json",
+        "sha256": "ca0119670255757d19ce72c024dff9050ef30645ae3c903cce60743c7a1e826d"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1002-trellis/evaluation.json",
+        "sha256": "702c27b13d5e07b799084526887410b01f5aeaba56913d11e1ebf8ab6e0ec284",
+        "bytes": 2774
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3014,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-full-dev-v1/results/p05-dev-27dd4da69e-a1002-trellis2-s0/generation_receipt.json",
+        "sha256": "8a7dc28d8e6f5c9b8f83581ed58e477ae40503a0bfde243ca448ff33be465490"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1002-trellis2/evaluation.json",
+        "sha256": "d0fae7e9fbd85be1ec69da988d2be8d204c22b710871633a9081e8fbe61ff440",
+        "bytes": 2787
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1002-sam3d/generation.json",
+        "sha256": "47df7b7d6dd425703f2dbadaf13737b1d530864d737db11aad2060e7f26f0093",
+        "bytes": 2939
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1002-sam3d/evaluation/evaluation.json",
+        "sha256": "26780cfd1d815c86cbee9932f1ac6c7553c5701b78462d10149478c3a7ef8085",
+        "bytes": 2781
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1002-reconviagen/generation.json",
+        "sha256": "ccac7e30cac355e8cdefc7bac178bc136b4c5a2a5e0e7ca2ab97d9bc0d56a0b0",
+        "bytes": 6516
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1002-reconviagen/evaluation/evaluation.json",
+        "sha256": "12d056f59c13f5b471b328410c01b648536995c15c7bf0354cebc67869bc0839",
+        "bytes": 2939
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-27dd4da69e-a1006-trellis-s0/generation_receipt.json",
+        "sha256": "f7f2e5ea2922b130b720d76e803b503f73ce51777ef3596968acae4733e11b17"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1006-trellis/evaluation.json",
+        "sha256": "24ef67d54aba25af626021aa5426b0ce0a34b9d594b3908ac8b30d74aab5988a",
+        "bytes": 2773
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-27dd4da69e-a1006-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "1c7a6349840e74df1713a9d6926781367849777fd70bef9d0fa5671089d64df4"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1006-trellis2/evaluation.json",
+        "sha256": "3ffaa37eefb1c80d08025ca42c9be41859a71884ad1921b29a62384617d8e73f",
+        "bytes": 2817
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1006-sam3d/generation.json",
+        "sha256": "2dc2f1a72ed35239f36b6db5126c2eaa18f222dcd109ff583e20f5cc93f13d65",
+        "bytes": 2938
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/27dd4da69e-a1006-sam3d/evaluation/evaluation.json",
+        "sha256": "34b60f830020b389181a3800602b0ca102b0a7f6d53d41b6c22c8f9f38cab512",
+        "bytes": 2855
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1006-reconviagen/generation.json",
+        "sha256": "e5e3fa16bd1610f114d29881035d25142fc8d7d47c002962b5f31a4d6084f4ef",
+        "bytes": 6259
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1006-reconviagen/evaluation/evaluation.json",
+        "sha256": "707da822eb19c49842f5099387506b03b15b7b94e5aa4b8e7bea831a9d7d89e3",
+        "bytes": 2888
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-38d58a7a31-a1004-trellis-s0/generation_receipt.json",
+        "sha256": "693e53abbd110bd33c88fdb3764c66d6517092e15b99f2addb90c40586271cab"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1004-trellis/evaluation.json",
+        "sha256": "214a9241a78a8f96a819b966e5c45e08271e2ce64ba1c2e01d3e25700d3ebb60",
+        "bytes": 2848
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3086,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-38d58a7a31-a1004-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "8b9ce361fc38b6bb9082c1e00f2ef4313be41c139e5f10359a60a029b9384e92"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1004-trellis2/evaluation.json",
+        "sha256": "4ccc61b4eeba3a056ac2a6e5347189e7188539bfb2846c28a4df9ded46e7f9cb",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1004-sam3d/generation.json",
+        "sha256": "e7c5b2710173fa5700d178a4fe7ecd4bd7f235f7287b161451765671d3325178",
+        "bytes": 2937
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1004-sam3d/evaluation/evaluation.json",
+        "sha256": "ea75a8563e74a1659c46291e84eed9fa538eab1c4e9fd00bbbb2eb8a9b031dcb",
+        "bytes": 2845
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1004-reconviagen/generation.json",
+        "sha256": "06c04e2aec02f2ee745013cf1176ac94e553a3702f64b1de29915aa019e897bd",
+        "bytes": 8059
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "392ffb6933933d16069da351a92bcc9b8b466d13d22ea27c1375c91ffc0a77de",
+        "bytes": 2933
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-38d58a7a31-a1006-trellis-s0/generation_receipt.json",
+        "sha256": "70fd93682b0f3f11b59acc23a5b46a5a51f645424c81038bc36a262964acb19c"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1006-trellis/evaluation.json",
+        "sha256": "9befff3e9d8b49e604e8ac255adcbada3867ab7a9631888b4344487069a884c1",
+        "bytes": 3566
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3089,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-38d58a7a31-a1006-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "bfa0acd63ab4c86550ac49aea7c64624ea25acb2d40dc24a62c8a00028031f54"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1006-trellis2/evaluation.json",
+        "sha256": "b098587fb4efa173d7c895a27aabb650e6346322a885bace61e43ed1095052f4",
+        "bytes": 3569
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1006-sam3d/generation.json",
+        "sha256": "c22d8388ae1f945f6496c9726427ec47d1ffc9cf6ecb7b35cf6ef9d3a66bd302",
+        "bytes": 2936
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1006-sam3d/evaluation/evaluation.json",
+        "sha256": "8a3c1b3aa0373cad0d3cd84ac811fcb2e119f88f093e366aebc45b159fea08e9",
+        "bytes": 3118
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1006-reconviagen/generation.json",
+        "sha256": "531df8b7d16b10caa4d4ca79dd0aa075df1a36fcdfe1892179c1562ab0b9c339",
+        "bytes": 8068
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1006-reconviagen/evaluation/evaluation.json",
+        "sha256": "78c8295a770bda863fc0388d42494c5daad2ec05717efb467cc2b991f07668f5",
+        "bytes": 3284
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-38d58a7a31-a1011-trellis-s0/generation_receipt.json",
+        "sha256": "d083b05b20412c3eabb8f2634ccd53306439f9058f9f907d449fbc1433ed5294"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1011-trellis/evaluation.json",
+        "sha256": "0b1b909cbffc70e05045a756ce6310c833cd81f9e11b41b8f119eef16e21945f",
+        "bytes": 2779
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3034,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-missing22-attempt3/results/p05-dev-38d58a7a31-a1011-trellis2-s0/generation_receipt.json",
+        "sha256": "aa9982b891fbd5cc5aaf67f64109f3d1dc3233a29487886c3778bbfc21809e16"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1011-trellis2/evaluation.json",
+        "sha256": "221240dd67c2f97974340de16bd2ccdaceb40a40971e4193ed2ff487234ead0b",
+        "bytes": 2853
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1011-sam3d/generation.json",
+        "sha256": "cfbe789f55a515f04549c48a89b226d1416ac83409b3d5ea3387e48a56b946e4",
+        "bytes": 2938
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1011-sam3d/evaluation/evaluation.json",
+        "sha256": "e176fb7e83b7dbb8baa423287660bb03cf0c63d8082958af5c05940c12164e0a",
+        "bytes": 2843
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1011-reconviagen/generation.json",
+        "sha256": "5e73a134cc0fe999a376f7979d4145f3d9312887f660fe7e28c355c2ba1c31ba",
+        "bytes": 8068
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1011-reconviagen/evaluation/evaluation.json",
+        "sha256": "d13ef35cbe14dd38e97c03ac2f0dc8d118dce071a01f72ffacbdafcb2250c15b",
+        "bytes": 2944
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3778,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-38d58a7a31-a1010-trellis-s0/generation_receipt.json",
+        "sha256": "2db1a382d6a929a374de66866f0a83e4679693761cc905ff49ba78985b0045f7"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1010-trellis/evaluation.json",
+        "sha256": "5fc07feb0c29c683ff2bea2992761d6f7498e7586c89b191b115ce9069c14d58",
+        "bytes": 2781
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3015,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-full-dev-v1/results/p05-dev-38d58a7a31-a1010-trellis2-s0/generation_receipt.json",
+        "sha256": "ac7693bf647315c64bdc3eda84e9963dafa7fe2cb00d77d20379fb73cbdcb27c"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1010-trellis2/evaluation.json",
+        "sha256": "569c82cd896ebde2741ac2a1fe47af51fcb130a5029723d993df7f02b6909334",
+        "bytes": 2788
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1010-sam3d/generation.json",
+        "sha256": "3e81f0594b4399b6ccdf96c2a9d24266b79a19b48d315394962a4e9f9d2576fa",
+        "bytes": 2937
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/38d58a7a31-a1010-sam3d/evaluation/evaluation.json",
+        "sha256": "468e56c0d2a7f88d765f7a8fd1232dbe7781c167695430183c0a08086eaf9920",
+        "bytes": 2850
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1010-reconviagen/generation.json",
+        "sha256": "1f44b7565ee0ee0377bdd795d10f968ddd124f9b81089dc29ef226efa5d17c7e",
+        "bytes": 8065
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1010-reconviagen/evaluation/evaluation.json",
+        "sha256": "ad3fa5003ac318c1377f278c932b9f11d144b443c13ab845cf037428f185f010",
+        "bytes": 2880
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1015-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3780,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5942004064-a1015-trellis-s0/generation_receipt.json",
+        "sha256": "4aa66db0c7059c0fbbf08fef5bd73feab3bc260104b16fb45d851939cb497488"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1015-trellis/evaluation.json",
+        "sha256": "ae58d313d68377259bb5a2b557fefbc28ca829cd6c6be39499fe9c7f0fe24e69",
+        "bytes": 3580
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1015-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 2966,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/todo-followup-20260912/generator-missing3/results/p05-dev-5942004064-a1015-trellis2-s0/generation_receipt.json",
+        "sha256": "a0b41316e5d780cf21c0e0ec403abec4b8ed4123943b0e464a174fe7b7ea8390"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1015-trellis2/evaluation.json",
+        "sha256": "f48becda2dc9f8399d4af1cbc96f27694de704dc1a6953c2d5742e3e2c833056",
+        "bytes": 3604
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1015-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1015-sam3d/generation.json",
+        "sha256": "0a4b34ee4ececcad3c9118afb74c607825ca9dc6e4dfaf8ee123c938ac48f1d8",
+        "bytes": 2941
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1015-sam3d/evaluation/evaluation.json",
+        "sha256": "6161d3216679e868ebf9e556a88c6f8198502f2778a09f905a1543fc92f79fc1",
+        "bytes": 3130
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1015-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1015-reconviagen/generation.json",
+        "sha256": "18898d92892b4e953d4f2c2148bdc0ff6264a3f3c8dcd908edca46aaf9928b5a",
+        "bytes": 8061
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1015-reconviagen/evaluation/evaluation.json",
+        "sha256": "bf8f18748a54db3b47799ba6f31cd8aa158335b505eeb40ff4ff9c68a01ce8e0",
+        "bytes": 3215
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5942004064-a1034-trellis-s0/generation_receipt.json",
+        "sha256": "206552a32191137c95946eb5d63a127844d92a161ca0d24c14e2bf6266ca441a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1034-trellis/evaluation.json",
+        "sha256": "473dddcd9bbf88566207948c68f478beb956ff085dcedec9bf645eeaec137da7",
+        "bytes": 3576
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 2966,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/todo-followup-20260912/generator-missing3/results/p05-dev-5942004064-a1034-trellis2-s0/generation_receipt.json",
+        "sha256": "0237d752c78959f66c2609d69f0d3a47da8b0b85fe8859d41fe63de5d9b63bdd"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1034-trellis2/evaluation.json",
+        "sha256": "abbb6806ca0428f38ade24b22e736725f8e9591b9c7f0d14308f785a2afa763a",
+        "bytes": 3594
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1034-sam3d/generation.json",
+        "sha256": "5f1e84765fa3dc068346517a3016ecc617775a8d26fd507f1d5e9f59e590e40f",
+        "bytes": 2943
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1034-sam3d/evaluation/evaluation.json",
+        "sha256": "ca701ca5051ac6485ce1c06c4fe3d605a2294581501646c2c573ea56f58308bd",
+        "bytes": 3129
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1034-reconviagen/generation.json",
+        "sha256": "6dc63f1af6e9338fc3e360e883ea1a14e4a9fde2e4304608b3609a4f1436eab6",
+        "bytes": 8063
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1034-reconviagen/evaluation/evaluation.json",
+        "sha256": "09cef35d9aa238e75b8b60eef2f8555cf38ee85c967e58c4999102e7f2b94a32",
+        "bytes": 3286
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1043-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5942004064-a1043-trellis-s0/generation_receipt.json",
+        "sha256": "78a086a436da575d1f906366d9a24aafd4f108b9125d18b9d7a97e9c94524d3f"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1043-trellis/evaluation.json",
+        "sha256": "88ef8a738b03c8663fa395cf8ac3caba6366b726b78363a858f5d0ef7bce0a47",
+        "bytes": 2779
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1043-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 2965,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/todo-followup-20260912/generator-missing3/results/p05-dev-5942004064-a1043-trellis2-s0/generation_receipt.json",
+        "sha256": "3880daff18db9b74810d0fd96afbf857fa60f035854bd6f6d99de6d2c495cf9c"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1043-trellis2/evaluation.json",
+        "sha256": "26f2438b2e9befd2272106a1b1ef090f097a846bccb42de4297a7588acc09172",
+        "bytes": 2838
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1043-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1043-sam3d/generation.json",
+        "sha256": "f5d2ecda24cb913b8985510a71da8cffc7f16ee6d3490ca1b04404ade8e77110",
+        "bytes": 2942
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1043-sam3d/evaluation/evaluation.json",
+        "sha256": "bcc1d8301684c444a7f2462b6298ad6f90e9fa5b2378cea2fb20fd09c8379aed",
+        "bytes": 2787
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1043-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1043-reconviagen/generation.json",
+        "sha256": "b0fb92703b30d34ec2739baa72afd107bb6ddc8bd3d777cb3303e62970a66e6c",
+        "bytes": 8059
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1043-reconviagen/evaluation/evaluation.json",
+        "sha256": "dbab74902d4c1f9e211b76be8f44d0ccdc50789f6dd015f24c9d9b6b421ca4a7",
+        "bytes": 2880
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1010-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3778,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5942004064-a1010-trellis-s0/generation_receipt.json",
+        "sha256": "e8f139545b0915d7bc55e50d9ca5023c14e56e6b6346f3689d08f85c833177b1"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1010-trellis/evaluation.json",
+        "sha256": "e3227de17093eda4273a644f60a812d6f0eccd4fe35881eb478c977a01deb146",
+        "bytes": 3640
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1010-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3034,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-missing22-attempt3/results/p05-dev-5942004064-a1010-trellis2-s0/generation_receipt.json",
+        "sha256": "d405354b545cfb1c9d2c9704b1c53125cf61b6a5393c27f3459a6e03b3b1948d"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1010-trellis2/evaluation.json",
+        "sha256": "0ab4e07268b0d793b4691c30b16ba59fc9d1ccd1b4a9beefcc8c9c6eb020ca47",
+        "bytes": 3615
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1010-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1010-sam3d/generation.json",
+        "sha256": "6ff336b9f7c570ff3a705bd1993853bf5f40d8452c4b5a2a7c2e371aa4f231b9",
+        "bytes": 2940
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5942004064-a1010-sam3d/evaluation/evaluation.json",
+        "sha256": "7f0ffb5b6eef882816b60f3145cac2d3487a3fbb39b69cd55a5b15b691d1689e",
+        "bytes": 3192
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1010-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1010-reconviagen/generation.json",
+        "sha256": "ad72269f2b8c66ea94faf5efc31f062e12d6ac8b615ecf7108bf03d40d3e5461",
+        "bytes": 7287
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1010-reconviagen/evaluation/evaluation.json",
+        "sha256": "d7037549784d3a378138ed4f4dc34229be11c564f9cc00ed73e726dcad39c986",
+        "bytes": 3286
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5eb31827b7-a1004-trellis-s0/generation_receipt.json",
+        "sha256": "924b965b57ebb06fc424219a0ef341f6131c44521195408d904706eda81eedde"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1004-trellis/evaluation.json",
+        "sha256": "415eabaa8dc6b403329857f8dc732d82b409f2c3215969e59d44c26a65dcc77d",
+        "bytes": 2777
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3087,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-5eb31827b7-a1004-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "57eccb49652a2c3723ae1c82e086a1cfdeddd1457327509c15e632d604956d7d"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1004-trellis2/evaluation.json",
+        "sha256": "8d391a669cc571252af43f9c87d3fe0f98813aef567b170caff347a5d138a57d",
+        "bytes": 2805
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1004-sam3d/generation.json",
+        "sha256": "7a853772ff798001305b015cf869b5fa1e8cdc859316ab78ef9aa8d9bf2c5c7d",
+        "bytes": 2940
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1004-sam3d/evaluation/evaluation.json",
+        "sha256": "733220d897130b60b1a6dc010a5ee7a6cbca48e2631656468606b6fc50194ae4",
+        "bytes": 2780
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1004-reconviagen/generation.json",
+        "sha256": "8d563e6bb84e8389d5d4fb53c9a03f3274cc70db94c8cd2c4bd43fdba2468680",
+        "bytes": 6517
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "9bd60869f07a1eac61c2dcf7675141be1565f1e80503919cae599ba6a37aa263",
+        "bytes": 2877
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5eb31827b7-a1005-trellis-s0/generation_receipt.json",
+        "sha256": "f886183f530a779471c188185b9c4712623c252b547dcbef2eb4eccf39f3a236"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1005-trellis/evaluation.json",
+        "sha256": "1e3420b44c465cfeecf19c80d54e99c3e1734b3ef9a1c498fc80006a617d1d96",
+        "bytes": 3638
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-5eb31827b7-a1005-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "344396fc772675c84c5a37cd12b574e0798059dcf300c62a2b3e2b2d9c8f7146"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1005-trellis2/evaluation.json",
+        "sha256": "93ca17081a06f7797698b4f92113214c782950b309d3ae0ebae7c8dc3c0be546",
+        "bytes": 3561
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1005-sam3d/generation.json",
+        "sha256": "83d5d9afaba2bf5031c551674318b2d1de38716f2257a746b38f3ceee9d1d0ff",
+        "bytes": 2939
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1005-sam3d/evaluation/evaluation.json",
+        "sha256": "ff715dd96dfab505702979c2f6eb8ee686da91b885e9e5b8e751ce0dd0ad935a",
+        "bytes": 3127
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1005-reconviagen/generation.json",
+        "sha256": "1ce9de7c44445805ec45d37f2da14078be23c50d062dc48745a7cd79370ad2b1",
+        "bytes": 7030
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1005-reconviagen/evaluation/evaluation.json",
+        "sha256": "4c2e81df9abd52fc32208cb5f5f834dc1a47c1ec3a2b45391883972eee188ce0",
+        "bytes": 3223
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3781,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5eb31827b7-a1012-trellis-s0/generation_receipt.json",
+        "sha256": "377b804067da1d36dab034cdfe4a84ee791513beacca687de801a5efde7b5630"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1012-trellis/evaluation.json",
+        "sha256": "5fa8ef9b3d824dce0c73f1c7f3dbb6f9040047e9fe1121462746724c2306eb0d",
+        "bytes": 3576
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-5eb31827b7-a1012-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "049fc8bd1b272b1f3323d5bcf8481e6ac97f119e3fab6fe95d2496e1edfe0b2f"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1012-trellis2/evaluation.json",
+        "sha256": "135ec96e0c5572f002c28d394d19fc24bd691a4398f7e1f7af5168acc6433fc1",
+        "bytes": 3572
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1012-sam3d/generation.json",
+        "sha256": "f2e27f0a78599cf42f4f7c3e1314d727803bdf23160602318b3f1036e519af7e",
+        "bytes": 2938
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5eb31827b7-a1012-sam3d/evaluation/evaluation.json",
+        "sha256": "919cd2f184707896ee0de2967f93b2eded3d43cffc5baec906d234581a622061",
+        "bytes": 3128
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1012-reconviagen/generation.json",
+        "sha256": "beca030647bbcc50228b22597f190f0d1c1e9368b013ea92f7b70ec72d1c73ab",
+        "bytes": 6264
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1012-reconviagen/evaluation/evaluation.json",
+        "sha256": "dfea9735b6bf5e319a6d4905126418eabbd5cda27f1a5a1e994f3796a2ba85b2",
+        "bytes": 3215
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5ee7c22ba0-a1036-trellis-s0/generation_receipt.json",
+        "sha256": "9fc45ca5ad5fabf60fdb2557a325aac6937b12a12034363fe1fba6e3f2983b5a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1036-trellis/evaluation.json",
+        "sha256": "cead0985bbdfcdec7853108f0ee6423b23350c23e6cc31a94ec904696648d36b",
+        "bytes": 2777
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-5ee7c22ba0-a1036-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "3e23d4dca432e67b8c7c6b9e512b1fdfa76c5858038c3ae4ce9faa3b2ab2dcb4"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1036-trellis2/evaluation.json",
+        "sha256": "0e70147c158bb11cb771df66d78e662624d17adc4f64bb74d023077e97ff8960",
+        "bytes": 2815
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5ee7c22ba0-a1036-sam3d/generation.json",
+        "sha256": "2a7b11ca837a8b00ac2362853bdc30ef18f60fbc9471d95170694907009d3a99",
+        "bytes": 2936
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5ee7c22ba0-a1036-sam3d/evaluation/evaluation.json",
+        "sha256": "1fbf96970f49f86c729d5488abc93e276c683bb276fe6dce2cfca2fa6454954e",
+        "bytes": 2845
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1036-reconviagen/generation.json",
+        "sha256": "a66472e2cfd7ce358e4f9f914ab0ff2dc7ba56f922ac0522c17c20565b93a68d",
+        "bytes": 8067
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1036-reconviagen/evaluation/evaluation.json",
+        "sha256": "3c22c6c3d5beb268c56b0c0df4c42359051696cef677c80cf3c08bea4c3ea44d",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-5ee7c22ba0-a1032-trellis-s0/generation_receipt.json",
+        "sha256": "a9827423bf4c0c9bb388513f03ef13bfd28c9bb661174421d7bf7edfc317d41d"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1032-trellis/evaluation.json",
+        "sha256": "56e9684069c69f2bc3c23144d43fe5254b5c2addcc07c99ec1115b744aa8a505",
+        "bytes": 2843
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-5ee7c22ba0-a1032-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "e02d9215a850e8d0ec9325460119c0884d05ccd9712de7d057ec8b67a19d6575"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1032-trellis2/evaluation.json",
+        "sha256": "f6db20ca9dcbd6b5a5b9a4d1d44e4334d489029f99569dd72e846c605729620b",
+        "bytes": 2820
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5ee7c22ba0-a1032-sam3d/generation.json",
+        "sha256": "d5ceea8446095df16fb361dac4197decd93e40a4c569f97e9e61964c45084ce7",
+        "bytes": 2928
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/5ee7c22ba0-a1032-sam3d/evaluation/evaluation.json",
+        "sha256": "9558f1cf91254571cfd26377adaf0889bc7cfa879b0100d7bd8ed5f72f7b0534",
+        "bytes": 2789
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1032-reconviagen/generation.json",
+        "sha256": "d50c5d565bb7a6af4f12303637b2f5a1a2506813c84c7ff1bf25dcefac134a3d",
+        "bytes": 8059
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1032-reconviagen/evaluation/evaluation.json",
+        "sha256": "37e6f9eab222c1c78e388c473f1898300568904c506359fe1c3deffcebd098d7",
+        "bytes": 2947
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3780,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-7831862f02-a1024-trellis-s0/generation_receipt.json",
+        "sha256": "313bbe15b8130c76ebd49e16813cd9b5b7ffccffccfad08ef4a25557476aa347"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1024-trellis/evaluation.json",
+        "sha256": "663b15488506e1fb8735f821a37ccf841bb2855d91403a3ae8235342dd7b1ad0",
+        "bytes": 2783
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-7831862f02-a1024-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "292cff07fda13af98e5e49cff2a9e3f25506d18eee75eda3e21077debd81159c"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1024-trellis2/evaluation.json",
+        "sha256": "31f314d11a7d34917e2e1c6acb153c821b26d9a9f00d1e98d3012efcd896bfe2",
+        "bytes": 2815
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1024-sam3d/generation.json",
+        "sha256": "7ba18f913a2fc43bb1273fc97767128f21a86d692ea4d3d1179c11c77717d944",
+        "bytes": 2940
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1024-sam3d/evaluation/evaluation.json",
+        "sha256": "fa4395b9414cfc139bffff61058b2d925642708b4d7bc93c09e8324c678b9135",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1024-reconviagen/generation.json",
+        "sha256": "81e674ed18c31fc7d9d32c200514b6de6281039f1acf99cbe28b7e2265f56d11",
+        "bytes": 8065
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1024-reconviagen/evaluation/evaluation.json",
+        "sha256": "90391a191a5b9be4cd2dc027f4af61ecca050e2ab6758f75dd20173a155b1e0f",
+        "bytes": 2947
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1034-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-7831862f02-a1034-trellis-s0/generation_receipt.json",
+        "sha256": "46535b6c77c3fe6046fec792355c10195a5805a928bd3a5118dcd8c8423639b0"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1034-trellis/evaluation.json",
+        "sha256": "5340c3de0a0a0fedfdd0ae721f268fe508f8a12219a179415077dcce656d914e",
+        "bytes": 3571
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1034-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-7831862f02-a1034-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "8337801ce036a3d912f509f0054864b5f611530b0b348ccbd8c357e68603082a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1034-trellis2/evaluation.json",
+        "sha256": "0fec23f489d465ec3bd23088a5bcc4041b851367cfc7a707a74fa3dd3a2e117d",
+        "bytes": 3565
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1034-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1034-sam3d/generation.json",
+        "sha256": "0fc5cebc7e2179c306f09ee3e904a5865d0b57b9bfd0ca8e3609951e03b14e0b",
+        "bytes": 2940
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1034-sam3d/evaluation/evaluation.json",
+        "sha256": "3925641d49a8c34df4bb86df1fa1a8e6d51e0dd73e87efd25cf525acb13be30e",
+        "bytes": 3185
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1034-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1034-reconviagen/generation.json",
+        "sha256": "6512545944dd6a3c9e809858ce21de9639b08bc9547ceffa6d4f4438ed7e3791",
+        "bytes": 8062
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1034-reconviagen/evaluation/evaluation.json",
+        "sha256": "aed50eae489059c8786fd03a0f65c0df0a4e9fbdfcf2fb07c6e0d0c280e8acd0",
+        "bytes": 3217
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1005-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3779,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-7831862f02-a1005-trellis-s0/generation_receipt.json",
+        "sha256": "4cbf85c30274e2a0129906bfbd8e84dd9750ac02ed3f1f15d2048d784b3873ba"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1005-trellis/evaluation.json",
+        "sha256": "038fb45361d401d5b35d376c0e697b22e5c99cca269644165e164f5c2d3447db",
+        "bytes": 2776
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1005-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3087,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-7831862f02-a1005-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "d26aed4e741ce90d02209868557abda427b9ab4f87fff3ec7d5b31a6e9dae681"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1005-trellis2/evaluation.json",
+        "sha256": "48e4b6418f70538fb0c28bfd8388af51e53c74e8348bf6c60c0ba2142d7b2bc3",
+        "bytes": 2813
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1005-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1005-sam3d/generation.json",
+        "sha256": "1113c74cfd63bd02bccb2b52ebb02c0c7fa56a5d1be15b9774ffab597f46cb76",
+        "bytes": 2938
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1005-sam3d/evaluation/evaluation.json",
+        "sha256": "8075f435bf077a9d0aef4236782d434730fd2ed71a81b1676f3ce5db16e86174",
+        "bytes": 2778
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1005-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1005-reconviagen/generation.json",
+        "sha256": "576800608a1fac22c0b3ed915c533ad9573118407d462390e55f5cfeba789edc",
+        "bytes": 8067
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1005-reconviagen/evaluation/evaluation.json",
+        "sha256": "640bebf3f25984b258cf81c38786da3d6a5bf61c88134b37ee4874aef39da6b6",
+        "bytes": 2938
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-7831862f02-a1027-trellis-s0/generation_receipt.json",
+        "sha256": "f656a4d03124902c45e446bf1afa9d38150d30321beb356c76eed2b412a78834"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1027-trellis/evaluation.json",
+        "sha256": "183c2440bf049ed75ba71b6a3c38cabb3eac668ec98d4603bd0255e912fc1978",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3089,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-7831862f02-a1027-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "54a03a1afb508fb701fe2097c51acb64c28be5f8c96a03b67892c1d658b6c86a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1027-trellis2/evaluation.json",
+        "sha256": "7466ff2f13687364cd97158e8f7a0731a1a743f7a752d0f5cd10a3470f9113bb",
+        "bytes": 2813
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1027-sam3d/generation.json",
+        "sha256": "810fea512ee02f4fffb3b68e629e67ad27a06b3df49825a393035f929164193a",
+        "bytes": 2939
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/7831862f02-a1027-sam3d/evaluation/evaluation.json",
+        "sha256": "3318e5f7d02f6730fbf27179c0cecc5b8b509813f6d85ddd676f6f9eebeea9a6",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1027-reconviagen/generation.json",
+        "sha256": "34d09b81e1519c0beb7f6f0079835ef4c3be23fd00d7fc62a5e5bb2b769294e0",
+        "bytes": 8068
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1027-reconviagen/evaluation/evaluation.json",
+        "sha256": "071582d3ea9388c2e51519781c25648b0791407e904511962f84d7af2ebffc59",
+        "bytes": 2876
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3778,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-c4c04e6d6c-a1023-trellis-s0/generation_receipt.json",
+        "sha256": "cbc1ba3d412f90e42884ce8b834d4f774c6bce2fa4e7be419a36e677841384f8"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1023-trellis/evaluation.json",
+        "sha256": "32977794e9c80eaeea6249d6c748673b3cc5a7a72cd387434d01b70bfe7a457d",
+        "bytes": 2842
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-c4c04e6d6c-a1023-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "992ec6f2ee61b019592e7de7fd657c3d0493ffe3365d2af5f736532785c3d30a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1023-trellis2/evaluation.json",
+        "sha256": "80b3731ac11b9d6c1a17990acb454604b46ccc2c471998fe846afbd005910534",
+        "bytes": 2880
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1023-sam3d/generation.json",
+        "sha256": "bb656f9feef2d41b7214ed491b84de1d4c87de80f0649711061fe3ec396fbdf8",
+        "bytes": 2937
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1023-sam3d/evaluation/evaluation.json",
+        "sha256": "3fc607f1abe9ddffa9a04fabab0042e8df8e2a0e2b37d1a5c4a75ed00af74b6c",
+        "bytes": 2846
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1023-reconviagen/generation.json",
+        "sha256": "996806c11aaea3f70c4e36db52d765fe55401773d5da8a6a07486fd34a8bbe7b",
+        "bytes": 8063
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1023-reconviagen/evaluation/evaluation.json",
+        "sha256": "0a8f81da07ac439ff14a5b9d5904dcbab175b92ec21f3e2f45884782f4f14346",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-c4c04e6d6c-a1007-trellis-s0/generation_receipt.json",
+        "sha256": "2438a0ebab455710ba5d38ca357d3acf2e19232795aef413f1e701fa07f56b89"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1007-trellis/evaluation.json",
+        "sha256": "f7c003b9f0ab3a3979c5bea5e5ea944fcc673c3777bac7f4825643332ead0592",
+        "bytes": 3613
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3086,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-c4c04e6d6c-a1007-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "6299999c23c09a9fcda5b1fdeade945780264ec56ea7db8a462165477226f9dd"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1007-trellis2/evaluation.json",
+        "sha256": "ca43901aa4aaf0d29399317249635f5be2128ee156cc3f2bcb6dc73682d14f52",
+        "bytes": 3568
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1007-sam3d/generation.json",
+        "sha256": "70261e0238e2f6ff1aa3ca6c30d244276bbf520116fd1a6872b52a65ac5dbb5c",
+        "bytes": 2938
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1007-sam3d/evaluation/evaluation.json",
+        "sha256": "024741c31fbdf877a2ff682f98a7136d91e5704dcc123df9946743da006332d1",
+        "bytes": 3127
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1007-reconviagen/generation.json",
+        "sha256": "52a4d256821c5864db9c77e671ee95b0d034fe79aca03147dca0037946e377c1",
+        "bytes": 8063
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1007-reconviagen/evaluation/evaluation.json",
+        "sha256": "383cdfa2716861093742f88dfcadd82ef470699af18f87eb4a19fe3bdce49345",
+        "bytes": 3222
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3778,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-c4c04e6d6c-a1015-trellis-s0/generation_receipt.json",
+        "sha256": "ed01be3bf25cbe2ca075cb431c4ad1e6deb1bf8cce9870b8ed8f25ef278908af"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1015-trellis/evaluation.json",
+        "sha256": "bf1d5c05eb6fff8267ba1e8dff78abd859c404daa2e007b5c468c3f09a54ac35",
+        "bytes": 2784
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-c4c04e6d6c-a1015-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "51d4f5ace81f037ed8a220dfd6be124286ea9855e4b7526e60573e88d87fddcf"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1015-trellis2/evaluation.json",
+        "sha256": "0223ff8cb4cc50a7c71d4f1b23c2d68ff3ae8a4c2b702503f9b66781eacb2ea6",
+        "bytes": 2872
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1015-sam3d/generation.json",
+        "sha256": "064fd4b9eb27d7677c16350bd9f8180ac467dd74dbd32c4e4a2227d4a3ae0132",
+        "bytes": 2934
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1015-sam3d/evaluation/evaluation.json",
+        "sha256": "03e454a911731fa7be6ae5cb265a374bcc8658c86803999043f229c1ede58cdc",
+        "bytes": 2846
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1015-reconviagen/generation.json",
+        "sha256": "d20be80d3b52be68230301f7cccb7ee3d86fb743324a4466c0d1174f70e94c78",
+        "bytes": 6778
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1015-reconviagen/evaluation/evaluation.json",
+        "sha256": "f78b589dda870dac1cf4b5da4cee7e6097c7105e4505726432b99a64d3943341",
+        "bytes": 2881
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-c4c04e6d6c-a1011-trellis-s0/generation_receipt.json",
+        "sha256": "d8cadc4ec43f35938aa18d2d412e2c3de66c17455a0c589087ba4a9e1c0ca3d2"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1011-trellis/evaluation.json",
+        "sha256": "cef1f015a22c8cd144636df1fc96be39f85da051786759e2bc5d2908ae3e9568",
+        "bytes": 2844
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3090,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-c4c04e6d6c-a1011-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "3ed0f32c7d498a8a5076cca970316edc0035a09b62bb41b73ed816e9d18d130a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1011-trellis2/evaluation.json",
+        "sha256": "0ed8a159dd65195a6ceba730bc2c9145d14ec69412d54cf7201d8dbc50ad4231",
+        "bytes": 2874
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1011-sam3d/generation.json",
+        "sha256": "940654eecafb633992bdf4d41231e067a674dee6c545c0b130dade668975d6c1",
+        "bytes": 2933
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/c4c04e6d6c-a1011-sam3d/evaluation/evaluation.json",
+        "sha256": "83ac8b0f6c537c65bb2bdc46516799be4373fb2a760fd37b048ee3e1b57f58d3",
+        "bytes": 2848
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1011-reconviagen/generation.json",
+        "sha256": "5137e5b1d5aad5cb4dd77a197192fde2eb7683d6c61ea9de096a891f7797a8de",
+        "bytes": 8061
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1011-reconviagen/evaluation/evaluation.json",
+        "sha256": "f2770f7b1db285fa5979619944f00823522c5064772fdb5b029ecdb4113af20c",
+        "bytes": 2940
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3780,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-fb5a96b1a2-a1024-trellis-s0/generation_receipt.json",
+        "sha256": "ca3606f200e06b26183d9f14e588917009588691a97e92746cfa5a1db405368a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1024-trellis/evaluation.json",
+        "sha256": "321d069c93e61de35f08c3b9ca84f9eac4da5669c4bcfe42b87c3eabeea6f1d5",
+        "bytes": 2844
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3090,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-fb5a96b1a2-a1024-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "f00145d408f8893a1254fe0a824404a7be7a2ecb14bcda2bd8ad3a0ff7e48b3a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1024-trellis2/evaluation.json",
+        "sha256": "00e7573fb0ab5f8818cc7fcfd724898b3cc4064aa645f2906fbb088375e8b6b0",
+        "bytes": 2805
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/fb5a96b1a2-a1024-sam3d/generation.json",
+        "sha256": "8c985e58fe414db65588488d76635c11f8049b44a136cab8932427ca5850d3d6",
+        "bytes": 2936
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/fb5a96b1a2-a1024-sam3d/evaluation/evaluation.json",
+        "sha256": "655ca5de2daa9f2360d9400609a3b20640f137f7d4a1999ba607ec5c31ec9c45",
+        "bytes": 2782
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1024-reconviagen/generation.json",
+        "sha256": "9bdca342ef63226cb117ee1b76e40a7f8c95d6c5ea1042099a0185b6aa1e60d4",
+        "bytes": 8070
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1024-reconviagen/evaluation/evaluation.json",
+        "sha256": "2cd450cb83ee4e33e9e61d05616c56c6346c2f938a4fd927ee00e95a12c11df7",
+        "bytes": 2871
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3777,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-fb5a96b1a2-a1000-trellis-s0/generation_receipt.json",
+        "sha256": "e7f18e3cfb3af8700fa5453945818f2a39545eaf5c0f9238e7ac0874925f1b66"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1000-trellis/evaluation.json",
+        "sha256": "2cb3355c38fa5357b758b7db5ecb6609d924032708441b69365600ad5494c27d",
+        "bytes": 2777
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-fb5a96b1a2-a1000-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "235ca65373cb887b8919610dbf869307eec7e0b95bba57e2bd7c18673b76bc40"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1000-trellis2/evaluation.json",
+        "sha256": "a510a593aed49f7e9b23dbf688d928ce84efac8e5ab6c0612d89702a5dea44aa",
+        "bytes": 2806
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/fb5a96b1a2-a1000-sam3d/generation.json",
+        "sha256": "4a2821daa53d48d6f95934b901fb37fa051b99ae339450a40f9634d6a5b8c35b",
+        "bytes": 2935
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/fb5a96b1a2-a1000-sam3d/evaluation/evaluation.json",
+        "sha256": "bd87cf61af9ac5cbc170b341b85a23066c44921b96d589c84ac40975c8fd47a6",
+        "bytes": 2776
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1000-reconviagen/generation.json",
+        "sha256": "fec1382d93f1928a80c58f75cddbbae7ae1ed6f377113a228496b76dbb2b0b89",
+        "bytes": 8070
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1000-reconviagen/evaluation/evaluation.json",
+        "sha256": "01d24f2df22b7a94319d4865dced3183efc0535fcb655ebdbb6992e7dbe4d216",
+        "bytes": 2876
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3776,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-fb5a96b1a2-a1020-trellis-s0/generation_receipt.json",
+        "sha256": "c28be162d6400202e205103c3d36a9d4a3c4fb3c4a02d11dbc90558d2535755f"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1020-trellis/evaluation.json",
+        "sha256": "4332b84f1c9839106ea1c3d1dceaadfb5421e0602187f052523c80cc6c932c65",
+        "bytes": 3678
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-fb5a96b1a2-a1020-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "6266b6e37bb4369dafb11aacd2ce1b97a59efcd28b4d4b1f32147e8bb91801e7"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1020-trellis2/evaluation.json",
+        "sha256": "3f7dacef3579b444e4f2901d320d3c7110ad5773ebd866ce8874a83b474d25a3",
+        "bytes": 3633
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-production-00/results/gc32-sam3d-production-00/component/fb5a96b1a2-a1020-sam3d/generation.json",
+        "sha256": "4ca31e4e9cf019748e0d69f0d4bc9a041441362c4286c05046b5aeffee9f77fb",
+        "bytes": 2937
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-tail-evaluation/results/gc32-sam3d-tail-evaluation/component/fb5a96b1a2-a1020-sam3d/evaluation.json",
+        "sha256": "fb8cedd3d886db6efd143fd2b1e33dfb9c3cfcb3ecd52de188a756981a2778ce",
+        "bytes": 3086
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1020-reconviagen/generation.json",
+        "sha256": "931f6354f0993c6d80dc5cc00fbf321c937cbc2d274abe6cc31dc65fd793d9ab",
+        "bytes": 7036
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1020-reconviagen/evaluation/evaluation.json",
+        "sha256": "c0816298e1b646a731ed82c13960cf63adfa65a7a861066eb2a69ba713ef81e2",
+        "bytes": 3216
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-trellis",
+      "backend": "trellis",
+      "generation": {
+        "bytes": 3775,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis-full-dev-v1/results/p05-dev-fb5a96b1a2-a1070-trellis-s0/generation_receipt.json",
+        "sha256": "d32e30c722cba001e2de9a1b4422a9353f796f3c121d1694b19850004b3616ff"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1070-trellis/evaluation.json",
+        "sha256": "97b785a196bbe5ee23afd3fd9d962a4aa8a518b560ad5360ca01c4fff18c1469",
+        "bytes": 2852
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-trellis2",
+      "backend": "trellis2",
+      "generation": {
+        "bytes": 3088,
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260908T222513Z-gaussian-system/p05-trellis2-generation-first97-v1/results/p05-dev-fb5a96b1a2-a1070-trellis2-s0-native-bank-v1/generation_receipt.json",
+        "sha256": "6f9c075350baaf5c91041a2a6211b11a0b77fdf3a7011d69594ff87bc364c76a"
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1070-trellis2/evaluation.json",
+        "sha256": "515b7bdccc6bd2e726a6c16946dba160f731dcfe2a5d487c04f5b90238d389dc",
+        "bytes": 2888
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-sam3d",
+      "backend": "sam3d",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-tail-generation/results/gc32-sam3d-tail-generation/component/fb5a96b1a2-a1070-sam3d/generation.json",
+        "sha256": "ce364bc82bd69cf71375e7bd3ac2594d3c3c8e36c45ce7e9ff22a6a02df3fd09",
+        "bytes": 2951
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-tail-generation/results/gc32-sam3d-tail-generation/component/fb5a96b1a2-a1070-sam3d/evaluation/evaluation.json",
+        "sha256": "648238f768bf7a31deb90c8d78f8b3199e7fd6bc63291e233abf04511cdc05f1",
+        "bytes": 2870
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-reconviagen",
+      "backend": "reconviagen",
+      "generation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1070-reconviagen/generation.json",
+        "sha256": "959d4c2f00ddf520b390b44e897fc04a8fa91d0904b482448f0446f51b7e19af",
+        "bytes": 8060
+      },
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1070-reconviagen/evaluation/evaluation.json",
+        "sha256": "8ce07b43fdf16011d70287f5c4a4f10bb69f510bcec1e725a8ecbaf060d10048",
+        "bytes": 2878
+      },
+      "stable": true,
+      "independent_metrics": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "runtimes": {
+    "main": ".venv/bin/python",
+    "sam3": ".envs/sam3/bin/python",
+    "gsplat": ".envs/gsplat/bin/python",
+    "sam3d": ".envs/sam3d-objects/bin/python",
+    "trellis2": ".envs/trellis2/bin/python",
+    "qwen": ".envs/qwen/bin/python",
+    "h5": ".envs/h5/bin/python"
+  },
+  "env": {
+    "SIMANY_SCENE": "your-scene-id",
+    "SIMANY_OUT": "/absolute/path/to/new-scene-output",
+    "SIMANY_SCANNETPP_ROOT": "/absolute/path/to/ScanNetpp",
+    "SIMANY_SPLATS_ROOT": "/absolute/path/to/splats",
+    "SIMANY_AUTO": "1"
+  }
+}

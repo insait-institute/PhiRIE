@@ -1,0 +1,32 @@
+[
+  {
+    "absolute_replay_position_error_cm": null,
+    "abstained": 0,
+    "build_failed": 0,
+    "cohort_id": "native_dev_v2_8instances",
+    "complete": true,
+    "executed": 1,
+    "execution_protocol": "primary_native",
+    "instance_macro_success": 1.0,
+    "instances": 1,
+    "layouts": 1,
+    "measured": 1,
+    "method": "REF_NATIVE",
+    "planned": 1,
+    "planned_instance_slots": 1,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "reconstructed_context": null,
+    "renderer": "native",
+    "retained_context": null,
+    "rollout_coverage_observed": 1.0,
+    "scope": "L0_target_only",
+    "scope_run_id": "20260907-94ff995-v2-worker-dev-lemon-r0",
+    "scorer_interpretation": "binding-specific native task predicate",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "development",
+    "success_per_executed": 1.0,
+    "success_per_planned": 1.0,
+    "successes_observed": 1,
+    "unmeasured": 0
+  }
+]

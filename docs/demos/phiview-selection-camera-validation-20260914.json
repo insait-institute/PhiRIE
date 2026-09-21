@@ -1,0 +1,128 @@
+{
+  "scene": "fb5a96b1a2_factory",
+  "implementation_commit": "27a6b47",
+  "phiview_main": "498cb8891436625b5f74950e50b2f820aaf4a74a",
+  "gpu_job": 898843,
+  "gpu": "NVIDIA RTX A6000",
+  "cpu": {
+    "passed": 128,
+    "skipped": 50
+  },
+  "focused_gpu": {
+    "passed": 31
+  },
+  "parent_module_tests": {
+    "passed": 17
+  },
+  "browser": {
+    "passed": true,
+    "click_selected": "obj_03",
+    "red_pixels": 996,
+    "bbox_new_object": "obj_10",
+    "hardware": [
+      "droid",
+      "panda"
+    ],
+    "policy_selected": "pi05_droid_jointpos",
+    "errors": [],
+    "request_paths": [
+      "/",
+      "/api/command",
+      "/api/status",
+      "/frame.jpg",
+      "blob:http://hala.slurm.insait.ai:8101/15dee6c0-1242-4bdd-835c-eae268bca576",
+      "blob:http://hala.slurm.insait.ai:8101/26fae845-1f66-4a47-804a-28538db95b7e",
+      "blob:http://hala.slurm.insait.ai:8101/3fb06350-2823-4b64-b7dc-cb95850b0f28",
+      "blob:http://hala.slurm.insait.ai:8101/4156674f-a79c-4a1e-8445-daecc5bd05c7",
+      "blob:http://hala.slurm.insait.ai:8101/419e943f-8415-43d9-93e0-19c2e25d6578",
+      "blob:http://hala.slurm.insait.ai:8101/45211677-a7f6-46ef-932e-9b55dc08faf3",
+      "blob:http://hala.slurm.insait.ai:8101/4d84cf19-a867-4fd6-8b95-6a2a99d85578",
+      "blob:http://hala.slurm.insait.ai:8101/54ae1572-74ca-4263-904b-f67e8c3bd2c8",
+      "blob:http://hala.slurm.insait.ai:8101/73910e4b-cfb7-4bbb-bc73-2ae3f1011d1f",
+      "blob:http://hala.slurm.insait.ai:8101/74827a1c-f348-4518-96f3-801439aeba1a",
+      "blob:http://hala.slurm.insait.ai:8101/7624c620-64c7-44d9-860c-a5b33a66b687",
+      "blob:http://hala.slurm.insait.ai:8101/84d1f0b7-924e-443a-a09c-94ccf5b4e541",
+      "blob:http://hala.slurm.insait.ai:8101/93172116-ca9d-4149-8188-1d09f10b6343",
+      "blob:http://hala.slurm.insait.ai:8101/97368059-258c-498a-8d6f-ceb71ae2d5e9",
+      "blob:http://hala.slurm.insait.ai:8101/99a7d13d-d02a-4931-864b-5bfbd3274926",
+      "blob:http://hala.slurm.insait.ai:8101/9dc7c422-7a84-4a1a-81c1-8b7e3c825257",
+      "blob:http://hala.slurm.insait.ai:8101/9fdb8455-c0fb-41d7-879e-96cc4dfd06ff",
+      "blob:http://hala.slurm.insait.ai:8101/aabc861e-8c93-4dec-adc5-c099da20422a",
+      "blob:http://hala.slurm.insait.ai:8101/ab9466e9-894d-43be-86d0-6b2c65c7b5e3",
+      "blob:http://hala.slurm.insait.ai:8101/b8b1c610-1699-40fb-afd4-ac901d56142e",
+      "blob:http://hala.slurm.insait.ai:8101/bad712f0-b72f-434f-a384-fcb3f4567167",
+      "blob:http://hala.slurm.insait.ai:8101/be72d442-ebdc-4329-bb62-413383806feb",
+      "blob:http://hala.slurm.insait.ai:8101/ca13cc37-b243-43f9-aaec-8147cf7b007f",
+      "blob:http://hala.slurm.insait.ai:8101/e0ae9547-3985-4314-9931-527ef07db5d1",
+      "blob:http://hala.slurm.insait.ai:8101/e2c2b0d1-1c72-4093-a199-ff0480874bfa",
+      "blob:http://hala.slurm.insait.ai:8101/ed48572c-fa7a-44dc-a51c-d0267b87c56f",
+      "blob:http://hala.slurm.insait.ai:8101/f474cc98-1e20-4168-abd7-eeb658444626",
+      "blob:http://hala.slurm.insait.ai:8101/f86e7ee7-c0be-40ee-a7f1-3df4ae6510f2"
+    ]
+  },
+  "pi05_base": {
+    "ticks": 30,
+    "observation_chunks": 2,
+    "simulation_seconds": 2,
+    "success": null
+  },
+  "pi05_sim_variant": {
+    "ticks": 15,
+    "implementation": "145e84a",
+    "success": null
+  },
+  "scene_restart": {
+    "passed": true,
+    "active_build": {
+      "out_dir": "/group/worldcept/code/SimAny/worktrees/release-v2.0.0/outputs/demo-fb5a96b1a2-redmask/live/session-click-v1/builds/1789407740080796976",
+      "scene_splat": "/data/ScanNetppv2_gsplat/splats/fb5a96b1a2.ply"
+    },
+    "objects": 16,
+    "legacy_proxy_collisions": 0,
+    "static_supports": [
+      "demo_gt_table",
+      "floor"
+    ],
+    "gpu": "NVIDIA RTX A6000"
+  },
+  "hosted_ci": {
+    "run": 34881367794,
+    "state": "failed before any test steps",
+    "passed": false
+  },
+  "evidence_root": "outputs/demo-fb5a96b1a2-redmask/live",
+  "policy_selector_only": {
+    "implementation_commit": "819e413468cd8d166367734ac896883a36336003",
+    "phiview_main": "d162bb432fdc8f07648494a281989f52953419b7",
+    "gpu_job": 899028,
+    "browser": {
+      "passed": true,
+      "objects": 16,
+      "red_pixels": 313,
+      "policy_default": "pi05_droid_jointpos",
+      "policy_selector_only": true,
+      "robot_hardware_fixed": "droid",
+      "frontend_override": false,
+      "camera_control_sync": true,
+      "errors": [],
+      "request_paths": [
+        "/",
+        "/api/command",
+        "/api/status",
+        "/frame.jpg",
+        "blob:http://hala.slurm.insait.ai:8101/086e8eb6-7250-46e5-95dc-0b094020aaaa",
+        "blob:http://hala.slurm.insait.ai:8101/1c4aceab-e7f2-480a-8205-2db29924c644",
+        "blob:http://hala.slurm.insait.ai:8101/267ad76c-3ff5-42b8-9c07-06c451eefc10",
+        "blob:http://hala.slurm.insait.ai:8101/39083c6b-5bb1-45c0-b486-42236edf6f13",
+        "blob:http://hala.slurm.insait.ai:8101/598acfbc-e154-44b8-a901-8fd429646924",
+        "blob:http://hala.slurm.insait.ai:8101/81123784-4f6c-4ea1-bd63-0cb81b487031",
+        "blob:http://hala.slurm.insait.ai:8101/90639691-2734-4c73-9834-68ee92ac2e97",
+        "blob:http://hala.slurm.insait.ai:8101/91eb874d-7ae3-40f1-a498-511e2c36631f",
+        "blob:http://hala.slurm.insait.ai:8101/bc330cfc-828c-4065-a755-d8f7ddf6e24d",
+        "blob:http://hala.slurm.insait.ai:8101/c2b23684-6302-4349-96e2-c8c881c0ee20"
+      ]
+    },
+    "evidence": "outputs/demo-fb5a96b1a2-redmask/live/selection-policy-only-preview/",
+    "note": "Actual GPU-served HTML; no frontend override. The earlier hardware-switching checks above describe the preceding implementation."
+  }
+}

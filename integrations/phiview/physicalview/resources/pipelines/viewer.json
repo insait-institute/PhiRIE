@@ -1,0 +1,23 @@
+{
+  "id": "viewer",
+  "branch": "block/viewer",
+  "default_action": "demo",
+  "description": "Server-rendered Gaussian scene viewer with image-only browser controls",
+  "implementation": [
+    "physicalview/phiview.py",
+    "physicalview/phiview_scene.py",
+    "physicalview/web/",
+    "physicalview/app.py"
+  ],
+  "tools": [
+    "gsplat",
+    "MuJoCo",
+    "viser"
+  ],
+  "commands": [
+    "uv run physicalview run viewer --config configs/local.yaml --scene room_factory --out outputs/viewer",
+    "uv run physicalview run viewer --action studio --config configs/local.yaml --scene room_factory"
+  ],
+  "inputs": "Registered scene assets and original Gaussian PLY",
+  "outputs": "Rendered frames, picking, navigation and scene interaction. Robot commands retain their measured limitations."
+}

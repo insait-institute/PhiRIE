@@ -1,0 +1,22 @@
+# Primary, most-evidenced fixture: named by the plan's fast-validation
+# command (plan/FAST_VALIDATION_MATRIX.md, Task 11 row). "food_bussing" is
+# just the example task family name from that command -- this fixture does
+# not reference a real dataset, it targets tests/data/scenes/task_graph_fixture.
+#
+# Exercises: rubric-label + language-match evidence agreeing, the
+# geometry-nearest-to-receptacle-anchor distractor tie-break (obj_01 beats
+# the same-label obj_02), the support edge (obj_01 rests_on obj_05), and the
+# swept-workspace obstacle (obj_08), all in one pass.
+task_id: food_bussing_demo
+
+language:
+  instruction: "pick up the mug and put it in the tray"
+
+rubric:
+  role_labels:
+    manipulated_object: mug
+    receptacle: tray
+
+roles: [manipulated_object, receptacle]
+capsule_radius_m: 0.12
+lift_m: 0.12

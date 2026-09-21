@@ -1,0 +1,10 @@
+{
+  "complete": false,
+  "episode_ledger_sha256": "80171ac18aa78dc0ff2a4c5ac74128a89e342e52ac3d7ed3a4d103cd4b2c0d75",
+  "executed": 72,
+  "planned_units_sha256": "121819ef11e4ff4eb2bfe53b718c2a185aa3ad6e43a7e908fb4b9f3a5d2022ea",
+  "scope_run_id": "native_test_L1_engine_v2_20260907-6a60a51-v6",
+  "source_commit": "e459a10f1674355154571448ad2d32fea5c9760c",
+  "terminal": 672,
+  "time": "2026-09-07T04:47:39.914010+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "robotics",
+  "branch": "block/robotics",
+  "default_action": "tasks",
+  "description": "Robot task construction, policy serving and viewer interaction",
+  "implementation": [
+    "physicalview/robot.py",
+    "physicalview/ik.py",
+    "physicalview/phiview_sim.py"
+  ],
+  "tools": [
+    "Franka IK",
+    "OpenPI client/server",
+    "MuJoCo"
+  ],
+  "commands": [
+    "uv run physicalview run robotics --action tasks --config configs/local.yaml --scene room --out outputs/scenes/room_factory",
+    "uv run physicalview run robotics --action policy-server --model pi05_droid_jointpos --config configs/local.yaml --where slurm --port 8000"
+  ],
+  "inputs": "Exported simulation, task targets and optional policy checkpoint",
+  "outputs": "Tasks, action traces and explicit outcomes. Scripted reach/IK motion is not evidence of reliable manipulation."
+}

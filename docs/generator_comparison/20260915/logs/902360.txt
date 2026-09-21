@@ -1,0 +1,191 @@
+[simany] scene=c50d2d1d42 out=/group/worldcept/code/SimAny/worktrees/generator-comparison-final-20260915/outputs/c50d2d1d42 auto=1 mesh_src=derived
+/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-09-15 06:02:32.010 | INFO     | sam3d_objects.pipeline.inference_pipeline:set_attention_backend:17 - GPU name is NVIDIA RTX A6000
+2026-09-15 06:02:39.669 | INFO     | sam3d_objects.model.backbone.tdfy_dit.modules.sparse:__from_env:39 - [SPARSE] Backend: spconv, Attention: flash_attn
+2026-09-15 06:02:51.980 | INFO     | sam3d_objects.model.backbone.tdfy_dit.modules.attention:__from_env:30 - [ATTENTION] Using backend: flash_attn
+2026-09-15 06:03:08.578 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+2026-09-15 06:03:08.578 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+2026-09-15 06:03:08.852 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/moge/model/v1.py:171: UserWarning: The following deprecated/invalid arguments are ignored: {'output_mask': True, 'split_head': True}
+  warnings.warn(f"The following deprecated/invalid arguments are ignored: {deprecated_kwargs}")
+2026-09-15 06:03:17.198 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+2026-09-15 06:03:17.200 | INFO     | sam3d_objects.pipeline.inference_pipeline:__init__:100 - self.device: cuda
+2026-09-15 06:03:17.200 | INFO     | sam3d_objects.pipeline.inference_pipeline:__init__:101 - CUDA_VISIBLE_DEVICES: GPU-53e224c9-2606-01fd-98ae-ac0c6b9085ea
+2026-09-15 06:03:17.200 | INFO     | sam3d_objects.pipeline.inference_pipeline:__init__:102 - Actually using GPU: 0
+2026-09-15 06:03:17.200 | INFO     | sam3d_objects.pipeline.inference_pipeline:init_pose_decoder:297 - Using pose decoder: ScaleShiftInvariant
+2026-09-15 06:03:17.200 | INFO     | sam3d_objects.pipeline.inference_pipeline:__init__:133 - Loading model weights...
+2026-09-15 06:03:18.398 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/ss_generator.ckpt
+2026-09-15 06:03:24.866 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/slat_generator.ckpt
+2026-09-15 06:03:28.881 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/ss_decoder.ckpt
+2026-09-15 06:03:29.150 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/slat_decoder_gs.ckpt
+2026-09-15 06:03:29.378 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/slat_decoder_gs_4.ckpt
+2026-09-15 06:03:29.639 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/slat_decoder_mesh.ckpt
+2026-09-15 06:03:29.890 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:31 - Loading DINO model: dinov2_vitl14_reg from facebookresearch/dinov2 (source: github)
+2026-09-15 06:03:31.587 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:44 - Loaded DINO model - type: <class 'dinov2.models.vision_transformer.DinoVisionTransformer'>, embed_dim: 1024, patch_size: (14, 14)
+2026-09-15 06:03:31.591 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:31 - Loading DINO model: dinov2_vitl14_reg from facebookresearch/dinov2 (source: github)
+2026-09-15 06:03:31.955 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:44 - Loaded DINO model - type: <class 'dinov2.models.vision_transformer.DinoVisionTransformer'>, embed_dim: 1024, patch_size: (14, 14)
+2026-09-15 06:03:31.972 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/ss_generator.ckpt
+2026-09-15 06:03:33.781 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:31 - Loading DINO model: dinov2_vitl14_reg from facebookresearch/dinov2 (source: github)
+2026-09-15 06:03:34.129 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:44 - Loaded DINO model - type: <class 'dinov2.models.vision_transformer.DinoVisionTransformer'>, embed_dim: 1024, patch_size: (14, 14)
+2026-09-15 06:03:34.133 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:31 - Loading DINO model: dinov2_vitl14_reg from facebookresearch/dinov2 (source: github)
+2026-09-15 06:03:34.476 | INFO     | sam3d_objects.model.backbone.dit.embedder.dino:__init__:44 - Loaded DINO model - type: <class 'dinov2.models.vision_transformer.DinoVisionTransformer'>, embed_dim: 1024, patch_size: (14, 14)
+2026-09-15 06:03:34.483 | INFO     | sam3d_objects.model.io:load_model_from_checkpoint:158 - Loading checkpoint from /group/worldcept/code/SimAny/third_party/sam-3d-objects/checkpoints/hf/slat_generator.ckpt
+2026-09-15 06:03:35.969 | INFO     | sam3d_objects.pipeline.inference_pipeline:override_ss_generator_cfg_config:438 - ss_generator parameters: inference_steps=25, cfg_strength=7, cfg_interval=[0, 500], rescale_t=3, cfg_strength_pm=0.0
+2026-09-15 06:03:35.969 | INFO     | sam3d_objects.pipeline.inference_pipeline:override_slat_generator_cfg_config:460 - slat_generator parameters: inference_steps=25, cfg_strength=1, cfg_interval=[0, 500], rescale_t=1
+2026-09-15 06:03:35.969 | INFO     | sam3d_objects.pipeline.inference_pipeline:__init__:198 - Loading model weights completed!
+2026-09-15 06:03:40.858 | INFO     | sam3d_objects.pipeline.inference_pipeline:sample_sparse_structure:664 - Sampling sparse structure: inference_steps=25, strength=7, interval=[0, 500], rescale_t=3, cfg_strength_pm=0.0
+2026-09-15 06:03:40.858 | INFO     | sam3d_objects.pipeline.inference_pipeline:get_condition_input:633 - Running condition embedder ...
+2026-09-15 06:03:41.033 | INFO     | sam3d_objects.pipeline.inference_pipeline:get_condition_input:637 - Condition embedder finishes!
+2026-09-15 06:03:47.842 | INFO     | sam3d_objects.pipeline.inference_pipeline:sample_sparse_structure:714 - Downsampled coords from 24766 to 21751
+2026-09-15 06:03:47.887 | INFO     | sam3d_objects.pipeline.inference_pipeline_pointmap:run:437 - Rescaling scale by 1 after downsampling
+2026-09-15 06:03:47.887 | INFO     | sam3d_objects.pipeline.inference_pipeline:sample_slat:744 - Sampling sparse latent: inference_steps=25, strength=1, interval=[0, 500], rescale_t=1
+2026-09-15 06:03:47.888 | INFO     | sam3d_objects.pipeline.inference_pipeline:get_condition_input:633 - Running condition embedder ...
+2026-09-15 06:03:47.977 | INFO     | sam3d_objects.pipeline.inference_pipeline:get_condition_input:637 - Condition embedder finishes!
+2026-09-15 06:03:54.677 | INFO     | sam3d_objects.pipeline.inference_pipeline:decode_slat:606 - Decoding sparse latent...
+2026-09-15 06:03:55.428 | INFO     | sam3d_objects.pipeline.inference_pipeline:postprocess_slat_output:540 - Postprocessing mesh with option with_mesh_postprocess False, with_texture_baking False...
+2026-09-15 06:03:55.440 | INFO     | sam3d_objects.pipeline.inference_pipeline_pointmap:run:502 - Finished!
+[simany] scene=c50d2d1d42 out=/group/worldcept/code/SimAny/worktrees/generator-comparison-final-20260915/outputs/c50d2d1d42 auto=1 mesh_src=derived
+pybullet build time: Jan 29 2025 23:17:20
+[2026-09-15 06:06:02.741] [CoACD] [info] threshold               0.05
+[2026-09-15 06:06:02.742] [CoACD] [info] max # convex hull       16
+[2026-09-15 06:06:02.742] [CoACD] [info] preprocess mode         auto
+[2026-09-15 06:06:02.742] [CoACD] [info] preprocess resolution   50
+[2026-09-15 06:06:02.742] [CoACD] [info] pca                     false
+[2026-09-15 06:06:02.742] [CoACD] [info] mcts max depth          3
+[2026-09-15 06:06:02.742] [CoACD] [info] mcts nodes              20
+[2026-09-15 06:06:02.742] [CoACD] [info] mcts iterations         150
+[2026-09-15 06:06:02.742] [CoACD] [info] merge                   true
+[2026-09-15 06:06:02.742] [CoACD] [info] decimate                false
+[2026-09-15 06:06:02.742] [CoACD] [info] max_ch_vertex           256
+[2026-09-15 06:06:02.742] [CoACD] [info] extrude                 false
+[2026-09-15 06:06:02.742] [CoACD] [info] extrude margin          0.01
+[2026-09-15 06:06:02.742] [CoACD] [info] approximate mode        ch
+[2026-09-15 06:06:02.742] [CoACD] [info] seed                    0
+[2026-09-15 06:06:02.743] [CoACD] [info]  - Manifold Check
+[2026-09-15 06:06:02.779] [CoACD] [info] [1/3] Edge check finish
+[2026-09-15 06:06:02.862] [CoACD] [info] [2/3] Self-intersection check finish
+[2026-09-15 06:06:02.863] [CoACD] [info] [3/3] Triangle orientation check finish. Reversed: false
+[2026-09-15 06:06:02.863] [CoACD] [info] Manifold Check Time: 0.121092s
+[2026-09-15 06:06:02.868] [CoACD] [info] Mesh Manifoldness: true
+[2026-09-15 06:06:02.868] [CoACD] [info] # Points: 20004
+[2026-09-15 06:06:02.868] [CoACD] [info] # Triangles: 40000
+[2026-09-15 06:06:02.868] [CoACD] [info]  - Decomposition (MCTS)
+[2026-09-15 06:06:02.868] [CoACD] [info] iter 0 ---- waiting pool: 1
+[2026-09-15 06:06:02.868] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:08.225] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:08.225] [CoACD] [info] iter 1 ---- waiting pool: 2
+[2026-09-15 06:06:08.225] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:08.225] [CoACD] [info] Processing [50.0%]
+[2026-09-15 06:06:11.534] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:11.534] [CoACD] [info] iter 2 ---- waiting pool: 4
+[2026-09-15 06:06:11.534] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:11.534] [CoACD] [info] Processing [25.0%]
+[2026-09-15 06:06:11.534] [CoACD] [info] Processing [50.0%]
+[2026-09-15 06:06:11.534] [CoACD] [info] Processing [75.0%]
+[2026-09-15 06:06:14.194] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:14.194] [CoACD] [info] iter 3 ---- waiting pool: 8
+[2026-09-15 06:06:14.197] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:14.197] [CoACD] [info] Processing [50.0%]
+[2026-09-15 06:06:14.197] [CoACD] [info] Processing [25.0%]
+[2026-09-15 06:06:14.197] [CoACD] [info] Processing [75.0%]
+[2026-09-15 06:06:15.382] [CoACD] [info] Processing [37.5%]
+[2026-09-15 06:06:15.443] [CoACD] [info] Processing [12.5%]
+[2026-09-15 06:06:15.724] [CoACD] [info] Processing [87.5%]
+[2026-09-15 06:06:15.912] [CoACD] [info] Processing [62.5%]
+[2026-09-15 06:06:17.952] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:17.952] [CoACD] [info] iter 4 ---- waiting pool: 16
+[2026-09-15 06:06:17.952] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:17.952] [CoACD] [info] Processing [75.0%]
+[2026-09-15 06:06:17.952] [CoACD] [info] Processing [25.0%]
+[2026-09-15 06:06:17.952] [CoACD] [info] Processing [50.0%]
+[2026-09-15 06:06:19.404] [CoACD] [info] Processing [62.5%]
+[2026-09-15 06:06:19.929] [CoACD] [info] Processing [87.5%]
+[2026-09-15 06:06:20.009] [CoACD] [info] Processing [12.5%]
+[2026-09-15 06:06:20.432] [CoACD] [info] Processing [37.5%]
+[2026-09-15 06:06:22.885] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:22.885] [CoACD] [info] iter 5 ---- waiting pool: 30
+[2026-09-15 06:06:22.887] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:22.887] [CoACD] [info] Processing [53.3%]
+[2026-09-15 06:06:22.887] [CoACD] [info] Processing [26.7%]
+[2026-09-15 06:06:23.806] [CoACD] [info] Processing [80.0%]
+[2026-09-15 06:06:24.631] [CoACD] [info] Processing [40.0%]
+[2026-09-15 06:06:24.697] [CoACD] [info] Processing [13.3%]
+[2026-09-15 06:06:25.513] [CoACD] [info] Processing [66.7%]
+[2026-09-15 06:06:25.612] [CoACD] [info] Processing [93.3%]
+[2026-09-15 06:06:27.943] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:27.943] [CoACD] [info] iter 6 ---- waiting pool: 44
+[2026-09-15 06:06:27.944] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:28.206] [CoACD] [info] Processing [56.8%]
+[2026-09-15 06:06:28.899] [CoACD] [info] Processing [34.1%]
+[2026-09-15 06:06:29.149] [CoACD] [info] Processing [68.2%]
+[2026-09-15 06:06:29.559] [CoACD] [info] Processing [11.4%]
+[2026-09-15 06:06:29.714] [CoACD] [info] Processing [45.5%]
+[2026-09-15 06:06:29.773] [CoACD] [info] Processing [79.5%]
+[2026-09-15 06:06:32.088] [CoACD] [info] Processing [22.7%]
+[2026-09-15 06:06:33.083] [CoACD] [info] Processing [90.9%]
+[2026-09-15 06:06:35.566] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:35.567] [CoACD] [info] iter 7 ---- waiting pool: 58
+[2026-09-15 06:06:35.567] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:35.567] [CoACD] [info] Processing [51.7%]
+[2026-09-15 06:06:35.597] [CoACD] [info] Processing [10.3%]
+[2026-09-15 06:06:36.634] [CoACD] [info] Processing [31.0%]
+[2026-09-15 06:06:37.293] [CoACD] [info] Processing [41.4%]
+[2026-09-15 06:06:37.399] [CoACD] [info] Processing [62.1%]
+[2026-09-15 06:06:37.708] [CoACD] [info] Processing [20.7%]
+[2026-09-15 06:06:37.828] [CoACD] [info] Processing [82.8%]
+[2026-09-15 06:06:39.364] [CoACD] [info] Processing [72.4%]
+[2026-09-15 06:06:39.889] [CoACD] [info] Processing [93.1%]
+[2026-09-15 06:06:41.165] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:41.165] [CoACD] [info] iter 8 ---- waiting pool: 58
+[2026-09-15 06:06:41.165] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:41.165] [CoACD] [info] Processing [51.7%]
+[2026-09-15 06:06:41.521] [CoACD] [info] Processing [82.8%]
+[2026-09-15 06:06:41.843] [CoACD] [info] Processing [10.3%]
+[2026-09-15 06:06:41.893] [CoACD] [info] Processing [31.0%]
+[2026-09-15 06:06:42.090] [CoACD] [info] Processing [93.1%]
+[2026-09-15 06:06:42.203] [CoACD] [info] Processing [20.7%]
+[2026-09-15 06:06:43.126] [CoACD] [info] Processing [62.1%]
+[2026-09-15 06:06:43.888] [CoACD] [info] Processing [41.4%]
+[2026-09-15 06:06:44.835] [CoACD] [info] Processing [72.4%]
+[2026-09-15 06:06:45.299] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:45.299] [CoACD] [info] iter 9 ---- waiting pool: 46
+[2026-09-15 06:06:45.300] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:45.300] [CoACD] [info] Processing [76.1%]
+[2026-09-15 06:06:45.309] [CoACD] [info] Processing [54.3%]
+[2026-09-15 06:06:45.558] [CoACD] [info] Processing [87.0%]
+[2026-09-15 06:06:45.581] [CoACD] [info] Processing [97.8%]
+[2026-09-15 06:06:45.619] [CoACD] [info] Processing [32.6%]
+[2026-09-15 06:06:45.865] [CoACD] [info] Processing [10.9%]
+[2026-09-15 06:06:45.893] [CoACD] [info] Processing [21.7%]
+[2026-09-15 06:06:45.957] [CoACD] [info] Processing [43.5%]
+[2026-09-15 06:06:46.011] [CoACD] [info] Processing [65.2%]
+[2026-09-15 06:06:46.521] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:46.521] [CoACD] [info] iter 10 ---- waiting pool: 18
+[2026-09-15 06:06:46.521] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:46.521] [CoACD] [info] Processing [77.8%]
+[2026-09-15 06:06:46.521] [CoACD] [info] Processing [55.6%]
+[2026-09-15 06:06:46.528] [CoACD] [info] Processing [33.3%]
+[2026-09-15 06:06:46.530] [CoACD] [info] Processing [11.1%]
+[2026-09-15 06:06:46.533] [CoACD] [info] Processing [66.7%]
+[2026-09-15 06:06:46.536] [CoACD] [info] Processing [44.4%]
+[2026-09-15 06:06:46.538] [CoACD] [info] Processing [22.2%]
+[2026-09-15 06:06:46.734] [CoACD] [info] Processing [88.9%]
+[2026-09-15 06:06:46.743] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:46.743] [CoACD] [info] iter 11 ---- waiting pool: 2
+[2026-09-15 06:06:46.744] [CoACD] [info] Processing [0.0%]
+[2026-09-15 06:06:46.744] [CoACD] [info] Processing [50.0%]
+[2026-09-15 06:06:46.750] [CoACD] [info] Processing [100.0%]
+[2026-09-15 06:06:46.750] [CoACD] [info]  - Merge Convex Hulls
+[2026-09-15 06:06:59.794] [CoACD] [warning] Max concavity 0.09928409870709295 exceeds the threshold 0.05 due to 16 convex hull limitation
+[2026-09-15 06:06:59.795] [CoACD] [info] Compute Time: 56.92653166898526s
+[2026-09-15 06:06:59.795] [CoACD] [info] # Convex Hulls: 16
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.2
+   Devices:
+     "cpu"      : "CPU"
+     "cuda:0"   : "NVIDIA RTX A6000" (44 GiB, sm_86, mempool enabled)
+   Kernel cache:
+     /group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/tmp/xdg/warp/1.16.0
+[SPARSE][CONV] spconv algo: native
+{"slot": "fb5a96b1a2-a1070-sam3d", "status": "GENERATION_COMPLETE"}

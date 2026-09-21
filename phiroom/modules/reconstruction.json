@@ -1,0 +1,54 @@
+{
+  "id": "reconstruction",
+  "branch": "module/reconstruction-v2",
+  "description": "Metric reconstruction and original Gaussian splats",
+  "inputs": [
+    "RGB frames; poses or video; initialization PLY"
+  ],
+  "outputs": [
+    "metric scene directory; full Gaussian PLY"
+  ],
+  "tools": [
+    "COLMAP",
+    "VGGT",
+    "gsplat"
+  ],
+  "actions": {
+    "frames": {
+      "target": "agents.recon.frames",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "poses": {
+      "target": "agents.recon.colmap_poses",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "feedforward": {
+      "target": "models.vggt_scene",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    },
+    "metricize": {
+      "target": "agents.recon.metricize",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    },
+    "scene": {
+      "target": "agents.recon.make_scene_dir",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "train": {
+      "target": "agents.recon.gsplat_train",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

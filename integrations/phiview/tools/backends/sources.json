@@ -1,0 +1,6 @@
+{
+  "simany": {"url": "git@github.com:RunyiYang/PhiRoom.git", "revision": "26f834ca3468e21c584abd5808082a0b2fdf4c66", "destination": "backends/simany", "access": "Requires GitHub access to the PhiRoom repository"},
+  "trellis": {"url": "https://github.com/microsoft/TRELLIS.git", "revision": "442aa1e1afb9014e80681d3bf604e8d728a86ee7", "destination": "backends/simany/third_party/TRELLIS"},
+  "menagerie": {"url": "https://github.com/google-deepmind/mujoco_menagerie.git", "revision": "71f066ad0be9cd271f7ed58c030243ef157af9f4", "destination": "backends/simany/third_party/mujoco_menagerie"},
+  "openpi": {"url": "https://github.com/xuningy/openpi.git", "revision": "aa6420561529593114160d05e5ad155792b272f3", "destination": "backends/openpi"}
+}

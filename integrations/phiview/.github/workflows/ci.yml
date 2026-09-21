@@ -1,0 +1,65 @@
+name: CI
+on:
+  push:
+    branches: [main, 'integration/**', 'block/**', 'feature/**']
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  cpu:
+    name: CPU and package (Python ${{ matrix.python }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    env:
+      MUJOCO_GL: egl
+      UV_HTTP_TIMEOUT: '180'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff
+        with:
+          version: '0.11.31'
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Install locked CPU environment
+        run: uv sync --locked
+      - name: CPU tests (backend and GPU checks have explicit prerequisites)
+        run: uv run --locked pytest -q --junitxml=outputs/ci/tests.xml
+      - name: Check all environment lockfiles
+        if: matrix.python == '3.11'
+        run: |
+          uv lock --check
+          uv lock --project envs/studio --check
+          uv lock --project envs/inference --check
+          uv lock --project envs/generation --check
+      - name: Build and inspect distributions
+        run: |
+          uv build
+          uv run --locked python tools/validation/check_release.py
+      - name: Install wheel outside the source package
+        run: |
+          uv venv outputs/ci/wheel-env
+          uv pip install --python outputs/ci/wheel-env/bin/python dist/*.whl
+          outputs/ci/wheel-env/bin/python -I -m physicalview.cli --version
+          outputs/ci/wheel-env/bin/python -I -m physicalview.cli blocks --json
+          outputs/ci/wheel-env/bin/python -I -m physicalview.cli doctor --profile cpu
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: matrix.python == '3.11'
+        with:
+          name: physicalview-dist
+          path: dist/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: cpu-results-${{ matrix.python }}
+          path: outputs/ci/tests.xml
+          if-no-files-found: warn

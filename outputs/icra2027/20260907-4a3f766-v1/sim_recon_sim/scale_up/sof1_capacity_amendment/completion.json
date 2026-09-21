@@ -1,0 +1,10 @@
+{
+  "state": "AMENDED",
+  "job_id": "840157",
+  "eligible_hardware": "any batch sof1 node with gpu:h200:1",
+  "new_jobs_submitted": 0,
+  "experiment_units_duplicated": 0,
+  "existing_id_preserved": true,
+  "immutable_inputs_unchanged": true,
+  "output_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-4a3f766-v1/sim_recon_sim/scale_up/sof1_capacity_amendment"
+}

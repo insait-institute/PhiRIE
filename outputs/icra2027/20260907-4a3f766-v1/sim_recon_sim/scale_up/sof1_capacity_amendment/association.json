@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "sacctmgr",
+    "-nP",
+    "show",
+    "association",
+    "where",
+    "user=runyi_yang",
+    "format=Cluster,Account,User,Partition,DefaultQOS,QOS,GrpTRES,MaxTRES"
+  ],
+  "returncode": 0,
+  "stdout": "cluster|runyi_yang|runyi_yang|||background,debug,invariant-bench,normal|gres/gpu:a6000=4|\n",
+  "stderr": ""
+}

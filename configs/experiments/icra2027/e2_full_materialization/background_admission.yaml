@@ -1,0 +1,26 @@
+schema_version: 1
+scope: full_e2_training_structural_background_admission
+selection_time: Before full TRAIN preparation outputs or new mask/fill/TEST outcomes
+original_full_protocol:
+  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  bytes: 10979
+  sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
+policy_id: A4
+all_planned_scenes: 50
+all_planned_objects: 1871
+all_planned_test_views: 400
+required_accepted_object_inputs:
+- support_plane_available
+- at_least_one_selected_training_view
+- primary_projected_mask_nonempty
+known_unfillable_scene_action: SKIP_EXPENSIVE_MASK_ERASE_FILL_RETAIN_EIGHT_MISSING_TEST_VIEWS
+zero_accepted_scene_action: NO_REMOVAL_BYTE_COPY_SOURCE_AND_REPORT_ZERO_OBJECT_COVERAGE
+mask_fill_pilot_rule: first_lexicographic_scene_with_at_least_one_accepted_object_and_all_required_inputs_available
+first_pilot_09c1414f1b: retained_negative_preparation_pilot_no_scene_replacement
+new_pilot_protocol_rule: Publish chosen input-admissible scene and authenticated preparation
+  seal in new config/E0 before mask or fill inference
+mask_or_erase_failure: retain_all_planned_objects_and_views_no_raw_fallback
+quality_comparison_support: all_common_available_raw_composite_views_with_complete_400_view_coverage_reported_first
+threshold_changes: false
+TEST_quality_used_for_admission: false
+paper_ready: false

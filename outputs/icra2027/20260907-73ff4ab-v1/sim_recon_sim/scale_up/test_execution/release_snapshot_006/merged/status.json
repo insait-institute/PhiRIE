@@ -1,0 +1,62 @@
+{
+  "complete": false,
+  "groups": [
+    {
+      "controller_method": "B0_FIXED_NATIVE",
+      "executed": 49,
+      "executed_per_planned": 0.10208333333333333,
+      "planned": 480,
+      "success_per_executed": 0.20408163265306123,
+      "success_per_planned": null,
+      "successes": 10,
+      "terminal": 209,
+      "unmeasured": 271
+    },
+    {
+      "controller_method": "B3_AGENT_NATIVE",
+      "executed": 40,
+      "executed_per_planned": 0.08333333333333333,
+      "planned": 480,
+      "success_per_executed": 0.35,
+      "success_per_planned": null,
+      "successes": 14,
+      "terminal": 200,
+      "unmeasured": 280
+    },
+    {
+      "controller_method": "B4_ROOM_REPAIR_NATIVE",
+      "executed": 29,
+      "executed_per_planned": 0.06041666666666667,
+      "planned": 480,
+      "success_per_executed": 0.6551724137931034,
+      "success_per_planned": null,
+      "successes": 19,
+      "terminal": 389,
+      "unmeasured": 91
+    },
+    {
+      "controller_method": "BM_BUDGET_MATCHED_NATIVE",
+      "executed": 20,
+      "executed_per_planned": 0.041666666666666664,
+      "planned": 480,
+      "success_per_executed": 0.95,
+      "success_per_planned": null,
+      "successes": 19,
+      "terminal": 380,
+      "unmeasured": 100
+    },
+    {
+      "controller_method": "REF_NATIVE",
+      "executed": 50,
+      "executed_per_planned": 0.10416666666666667,
+      "planned": 480,
+      "success_per_executed": 0.9,
+      "success_per_planned": null,
+      "successes": 45,
+      "terminal": 50,
+      "unmeasured": 430
+    }
+  ],
+  "planned": 2400,
+  "terminal": 1228
+}

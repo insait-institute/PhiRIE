@@ -1,0 +1,12 @@
+[PASS] gpu               0.0s
+[PASS] torch             9.8s
+gsplat: CUDA extension has been set up successfully in 71.19 seconds.
+[simany] scene=c50d2d1d42 out=/group/worldcept/code/SimAny-wt/studio/outputs/c50d2d1d42 auto=0 mesh_src=gt
+[PASS] gsplat           74.0s
+[PASS] mujoco            0.3s
+[PASS] viser             0.2s
+[PASS] openpi_client     0.0s
+[PASS] repo_modules      8.6s
+PASS  report -> outputs/release/gpu-896677.json
+.........s........                                                       [100%]
+17 passed, 1 skipped in 1.92s

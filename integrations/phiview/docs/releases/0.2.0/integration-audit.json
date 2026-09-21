@@ -1,0 +1,16 @@
+{
+  "original_heads_all_reachable": true,
+  "original_refs": {
+    "refs/heads/feature/native-reconstruction-demo": "49913b3e120f95f27813b3234ae7d7650a92ce9d",
+    "refs/heads/feature/phiview-demo": "b989a2ef7b2fab9f5cce78c98253bb9d135d9232",
+    "refs/heads/main": "4498eab9b215491448f5b8f45d1fa8301f9f7a9f",
+    "refs/heads/worktree-phiview-demo-behavior-droid": "f64b268fd8878d76ff899f98801bd61882518060",
+    "refs/remotes/origin/feature/native-reconstruction-demo": "49913b3e120f95f27813b3234ae7d7650a92ce9d",
+    "refs/remotes/origin/main": "4498eab9b215491448f5b8f45d1fa8301f9f7a9f",
+    "refs/remotes/origin/worktree-phiview-demo-behavior-droid": "f64b268fd8878d76ff899f98801bd61882518060"
+  },
+  "method": "Sequential no-ff merges in isolated release worktree; no branch deletion or force push.",
+  "backend_repo": "RunyiYang/PhiRoom",
+  "backend_revision": "26f834ca3468e21c584abd5808082a0b2fdf4c66",
+  "scope": "PhysicalView branches only. Backend research branches are independent."
+}

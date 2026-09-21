@@ -1,0 +1,291 @@
+freeze_id: 20260906-c2b7fa0-v1
+mode: preliminary_audit
+audited_artifacts:
+  construction:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
+    sha256: 46dced81824efb92c9dac2b57d970438715ee63ad22d157754243dc062d36d72
+  fidelity:
+    path: /group/worldcept/code/SimAny-wt/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
+    sha256: 12c2ede86faa7bb4d44c0be81eb275e722a94867829216517a7cd4e1e0a48871
+    completion_receipt:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
+      sha256: d9940fe16964a17f00430f0dad6ba0d4d393f8dc0c3b6f2a0f3e54dc0df9bdc8
+  agentic:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/agentic/agentic_ablation.json
+    sha256: 829eb6973fc9ebf834e2779b1a9bf5d002c6b319c142145f7e4984c18e286335
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
+      sha256: 68d6f8cc9d3b0a7bbd05c7243f9de0e1f1b3821f12b8cb428c20a6ba30b24ecb
+claim_decisions:
+  AGENTIC_TITLE_CLAIM:
+    required_experiment: E3
+    required_gate: admissible full fixed-cohort coverage/fidelity comparison
+    status: FAIL
+    decision: remove
+    observed_result: The complete automatic-discovery cohort passes integrity; strict A4 accepts a much smaller
+      population and does not establish population-wide or downstream superiority.
+    enabled_sentence: Strict acceptance exposes a substantial coverage cost; neither conditional quality nor
+      the acceptance-time physical probe establishes manipulation gains.
+    removed_sentence: Its legacy object population uses GT-assisted preparation and has incomplete generator
+      provenance; it does not establish automatic-construction or downstream manipulation gains.
+    paper_file: paper_sections/01_abstract_intro.tex
+  MANIPULATION_CLAIM:
+    required_experiment: E4
+    required_gate: complete paired treatment ledger
+    status: NOT_RUN
+    decision: remove
+    observed_result: Required task/treatment matrix is incomplete.
+    enabled_sentence: Construction, collision, and observation improvements are not claimed.
+  HARMONIZER_MAIN_CLAIM:
+    required_experiment: E5
+    required_gate: preservation and paired manipulation
+    status: NOT_RUN
+    decision: remove
+    observed_result: Real checkpoint access is gated; no complete visual/policy comparison.
+    enabled_sentence: Harmonizer likewise has no admissible full visual comparison in this report.
+  TASK_SUPPORT_CLAIM:
+    required_experiment: E6
+    required_gate: held-out selective risk
+    status: FAIL
+    decision: remove
+    observed_result: All 72 sealed queries are invalid under fixed missing-evidence requirements; all six train/test
+      folds have one class, so LOSO and predictive metrics remain NOT_RUN.
+    enabled_sentence: Missing robot frames and policy cameras invalidate every query under the frozen requirements;
+      every LOSO fold has one class, so predictive metrics remain unmeasured.
+    paper_file: paper_sections/04_results.tex
+  SIM_REAL_CLAIM:
+    required_experiment: E8
+    required_gate: matched autonomous physical trials
+    status: NOT_RUN
+    decision: remove
+    observed_result: No matched autonomous physical trial cohort is available.
+    enabled_sentence: No matched autonomous physical trial cohort is available, so physical success, sim--real
+      gap, and real-world predictivity are not reported.
+  RAW_ROOM_APPEARANCE_CLAIM:
+    required_experiment: E2
+    required_gate: authenticated complete raw-room held-out view roster
+    status: PASS
+    decision: narrow
+    observed_result: The completion receipt and coverage manifest bind the populated raw input-Gaussian row;
+      all other declared conditions remain unmeasured.
+    enabled_sentence: The held-out room table reports the raw input Gaussian only, with pinned metric implementations
+      and original render provenance.
+    removed_sentence: The three populated room conditions use identical scene and camera populations.
+    paper_file: paper_sections/04_results.tex
+  FACTORIZED_APPEARANCE_CLAIM:
+    required_experiment: E2
+    required_gate: matched complete factorized-composite comparison
+    status: NOT_RUN
+    decision: remove
+    observed_result: Full method matrix remains incomplete. A separate fixed common-view pilot has no observed
+      appearance improvement.
+    enabled_sentence: Factorized-composite and Harmonizer comparisons remain unmeasured in this source.
+    removed_sentence: The input Gaussian reconstruction remains stronger than either factorized composite;
+      automatic discovery has an additional appearance cost.
+    paper_file: paper_sections/04_results.tex
+  INDEPENDENT_OBJECT_GEOMETRY_SCOPE:
+    required_experiment: E2/E3
+    required_gate: preserve independent matched geometry denominators and unmeasured appearance scope
+    status: PASS
+    decision: narrow
+    observed_result: The E2 object appearance/method roster remains unmeasured; full E3 geometry uses independently
+      matched accepted jobs with unmatched geometry null.
+    enabled_sentence: The separate object-appearance and oracle-method roster remains unmeasured; the controller
+      cohort evaluates geometry only on independently matched jobs.
+    removed_sentence: Leak-free masked object views and registration-independent evaluation surfaces are not
+      yet available.
+    paper_file: paper_sections/04_results.tex
+  E3_MATCHED_CASE_STUDY:
+    required_experiment: E3
+    required_gate: authenticated full cohort, unchanged paired support, all predeclared contrasts
+    status: PASS
+    decision: narrow
+    observed_result: Full 50-scene/1871-job audit and all sixteen fixed scene-cluster contrasts pass; A4 conditional
+      geometry is not a population-wide comparison.
+    enabled_sentence: A4 changes the accepted geometry subset; its conditional mean must not be read as a paired
+      improvement over all planned jobs.
+    removed_sentence: A4 trades away coverage for stronger conditional quality.
+    paper_file: paper_sections/04_results.tex
+  E3_UPSTREAM_PROVENANCE:
+    required_experiment: E3
+    required_gate: authenticated initial-pool and construction/evaluation separation audit
+    status: PASS
+    decision: narrow
+    observed_result: The full initial-pool and controller audit authenticates TRAIN-only construction; independent
+      GT is opened only after controller outputs are sealed.
+    enabled_sentence: The full cohort uses automatic discovery and TRAIN-only construction; independent GT
+      is accessed only after controller outputs are frozen.
+    removed_sentence: This is a conditional study of legacy factory-selected objects. Their crops used GT-assisted
+      mask selection or projection, although the runtime controller is isolated from evaluation GT. Original
+      generator commits, checkpoints, and runtime manifests are missing, and thresholds retain preliminary
+      status.
+    paper_file: paper_sections/04_results.tex
+  E3_RUNTIME_CLAIM:
+    required_experiment: E3
+    required_gate: authenticated complete generation and canonical phase attribution with explicit exclusions
+    status: PASS
+    decision: narrow
+    observed_result: All five rows have complete attributed initial-generation process and canonical registration/physics/retry
+      timing, including failed and recovered generation; fleet and capture-to-sim time are out of scope.
+    enabled_sentence: Attributed runtime includes original generation processes, failures and recoveries, plus
+      canonical registration, physical probes, and retries; it is not capture-to-simulator or fleet elapsed
+      time.
+    removed_sentence: A3 improves full-coverage geometry and the physical probe relative to A2, with higher
+      runtime.
+    paper_file: paper_sections/04_results.tex
+  REAL_CAPTURE_CLAIM:
+    required_experiment: E7
+    required_gate: complete prospective construction cohort and independent alignment
+    status: NOT_RUN
+    decision: narrow
+    observed_result: The original ten-workspace CPU cohort is complete and independently authenticated; held-out
+      errors and unavailable constructions remain visible. Gaussian and complete simulator construction are
+      separate unfinished stages.
+    enabled_sentence: The prospective DROID cohort reports independent kinematic alignment after TRAIN-only
+      fitting; complete real-capture simulator construction remains unvalidated.
+    removed_sentence: Real-capture construction and independent alignment remain prospective experiments.
+    paper_file: paper_sections/04_results.tex
+  T2_MESH_PILOT_SCOPE:
+    required_experiment: E2/TRELLIS.2 engineering pilot
+    required_gate: 'PASS: authenticated sealed mesh-only geometry integrity with unchanged matched and planned
+      populations'
+    status: PASS
+    decision: narrow
+    observed_result: The sealed pilot and independent output audit pass integrity checks; unmatched jobs remain
+      null and native Gaussian/full-twin/headline flags remain false.
+    enabled_sentence: The separate mesh-only pilot retains unmatched jobs and does not establish an improvement
+      in geometry, appearance, or manipulation.
+    removed_sentence: ''
+    paper_file: paper_sections/04_results.tex
+  E4_COMPACT_APPLICABILITY:
+    required_experiment: E4 compact engineering matrix
+    required_gate: PASS planning applicability and an eligible policy rollout; observed applicability gate
+      is FAIL
+    status: FAIL
+    decision: narrow
+    observed_result: Coverage integrity passes; planning applicability fails, no fixed cell is eligible for
+      policy rollout, and policy execution remains NOT_RUN with null success.
+    enabled_sentence: The fixed compact manipulation matrix has no eligible policy rollout; prerequisite failures
+      remain in the planned denominator.
+    removed_sentence: ''
+    paper_file: paper_sections/04_results.tex
+  DROID_CPU_ALIGNMENT_SCOPE:
+    required_experiment: E7 prospective CPU alignment stage
+    required_gate: PASS original complete ten-workspace publication, TRAIN/reference separation and source
+      integrity
+    status: PASS
+    decision: narrow
+    observed_result: Complete CPU stage records preserve all fixed workspaces and the original held-out errors,
+      including catastrophic failures; CPU completion is not a full simulator build.
+    enabled_sentence: All declared workspaces remain in the CPU-stage table; errors are conditional on the
+      available held-out reference frames, and failed constructions retain missing measurements.
+    removed_sentence: ''
+    paper_file: paper_sections/04_results.tex
+  DROID_PUBLIC_STAGE_SCOPE:
+    required_experiment: E7 Gaussian and public construction stages
+    required_gate: Complete original ten-workspace stage audits and source integrity
+    status: PASS
+    decision: narrow
+    observed_result: All original workspaces remain; empty reconstructions, zero discoveries and unavailable
+      counts are retained. Prepared proposals are not accepted simulator assets.
+    enabled_sentence: The continuation reports Gaussian training and prepared automatic proposals, retaining
+      empty reconstruction and zero-discovery outcomes; it does not establish complete simulators.
+    removed_sentence: ''
+    paper_file: paper_sections/04_results.tex
+  COMMON_VIEW_DIAGNOSTIC:
+    required_experiment: E2
+    required_gate: authenticated predeclared common cameras with original coverage
+    status: PASS
+    decision: narrow
+    observed_result: Common-camera pilot completed; composite means are slightly worse on all three image metrics.
+      One scene cannot establish population improvement.
+    enabled_sentence: The separate fixed common-view diagnostic retains the original planned-view denominator
+      and uses identical TEST cameras for both quality rows; it does not establish a population-level improvement.
+    paper_file: paper_sections/04_results.tex
+  E3_EVIDENCE_SELECTION:
+    required_experiment: E3
+    required_gate: same initial pool and planned coverage; authenticated paired matched geometry
+    status: PASS
+    decision: narrow
+    observed_result: A2-A1 paired F1 and CD pointwise scene-cluster intervals exclude zero in the improving
+      direction; all predeclared contrasts remain reported.
+    enabled_sentence: Evidence selection improves matched geometry over fixed priority at unchanged coverage.
+    paper_file: paper_sections/04_results.tex
+  E3_BOUNDED_RETRY:
+    required_experiment: E3
+    required_gate: new proposal and transform; authenticated common-support geometry at unchanged coverage
+    status: PASS
+    decision: narrow
+    observed_result: A3-A2 paired F1 and CD intervals exclude zero in the improving direction; retries create
+      new proposal IDs and transforms without additional model generation.
+    enabled_sentence: Bounded registration retries further improve matched geometry at unchanged coverage,
+      with additional computation.
+    paper_file: paper_sections/04_results.tex
+  E3_DIVERSITY_PHYSICS_TRADEOFF:
+    required_experiment: E3
+    required_gate: paired common accepted construction-probe support
+    status: PASS
+    decision: narrow
+    observed_result: A1-A0 coverage/F1 increase while the paired stable-fraction difference is negative; this
+      is a construction-probe result, not independent physics.
+    enabled_sentence: Fixed-priority proposal diversity improves coverage and matched geometry but reduces
+      the construction-probe stable fraction.
+    paper_file: paper_sections/04_results.tex
+engineering_appendix:
+  trellis2_geometry:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
+    sha256: 91bc5a018b8440c1ce5f5dac0aee33b35d60b1bb28aebb96445ec2bba32717f8
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
+      sha256: 55332d82800a8ecfec2f193a33ab63e635858eea58e1f28333856ab49c64f645
+  e4_planning:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/planned_coverage/handoff.json
+    sha256: 3341ad40ef85b8b5991797dab684a06f35a89c6fe9d0089776b9ac8f07927246
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/independent_qa.json
+      sha256: 11e96900f23caf7fa1a84bf6afb4ec43921369502c4d033ce81fb9abcbe00b9a
+    publication_receipt:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/publication_receipt.json
+      sha256: 3724987584ada72fe1083ee09dbb8a0e752afb632658a95e3aec6de141a6f783
+  droid_cpu_alignment:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/workspaces.json
+    sha256: 72d85f62dcce638116af4aa94b4b1638d4a391189b79d7ab6b7d26c36ecaec4c
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_completion_audit.json
+      sha256: 545bf2bcdce90ff0a19967a089b7c3c5f2b52234e8ad5acd18db2b5e4a1cd536
+  droid_public_construction:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
+    sha256: 6f1aa64ae7b02aeb3e382f917759a03228685d41a2428d70fa471d287261fde6
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
+      sha256: 6f1aa64ae7b02aeb3e382f917759a03228685d41a2428d70fa471d287261fde6
+    gaussian_completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1/full_gaussian_completion_audit.json
+      sha256: 1f613e32f39a6ee1b0ac7ceaf149f0b5e25083237d6c1361fc000a2d2efcee1d
+  room_common_view:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0281856-v1/fidelity/public_factorized/metrics/table/fidelity_table.json
+    sha256: f8d1f8a4d696c8f17bc3d3248313090e8ba0057a2d0f0aadc61584a3c13ee032
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0281856-v1/fidelity/public_factorized/metrics/seal.json
+      sha256: 428d8738701e8f29e6c55c9463ae2462921821bcc091f507590baa1b40339e09
+    producer:
+      path: /group/worldcept/code/SimAny-wt/e2-common-view-analysis
+      commit: 11866350bf3a12160f922b89db2fda9bf3a06fe3
+      python: /group/worldcept/code/SimAny/.venv/bin/python
+    config:
+      path: /group/worldcept/code/SimAny-wt/e2-common-view-analysis/configs/experiments/icra2027/e2_common_view_analysis/evaluation.yaml
+      sha256: 7d4a2ce0d0d7bdb7995935d8e60b91a033bf9869136d70cdb26ee278309a6b0e
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0281856-v1/contract/freeze_manifest.json
+      sha256: ff53a420118200601edf865a21e72d59e897b75cab38be5bde4ace477b9b9882
+  task_support_closure:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
+    sha256: 4207c4ac08c97d06faebd69baa9b02c392b4b1b1c26df0ebb7af443e81fdad89
+    completion_audit:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
+      sha256: 4207c4ac08c97d06faebd69baa9b02c392b4b1b1c26df0ebb7af443e81fdad89
+omit_unmeasured_object_table: true
+agentic_paired_uncertainty:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/agentic/agentic_paired_uncertainty.json
+  sha256: f3919685496077ead6e300db5b4809f2fac62951c376a79647cd4d50a31cc8c8
+agentic_paired_uncertainty_figure: true

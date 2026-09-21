@@ -1,0 +1,77 @@
+{
+  "date_utc": "2026-09-14",
+  "environments": {
+    "uv": "0.11.31",
+    "installed_locked": [
+      "cpu",
+      "studio",
+      "inference",
+      "generation"
+    ],
+    "lock_packages": {
+      "cpu": 47,
+      "studio": 120,
+      "inference": 136,
+      "generation": 131
+    }
+  },
+  "tests": {
+    "cpu": {
+      "tests": 155,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 44,
+      "passed": 111
+    },
+    "backend": {
+      "tests": 155,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 15,
+      "passed": 140
+    },
+    "cpu_python312": {
+      "tests": 155,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 44,
+      "passed": 111
+    }
+  },
+  "gpu": {
+    "job_id": 896677,
+    "critical_groups_passed": 7,
+    "explicit_tests_passed": 17,
+    "explicit_tests_skipped": 1,
+    "source_commit": "6b555894cbcb7c7127ebb17af8b3012a911dda34"
+  },
+  "wheel_install": {
+    "fresh_env": true,
+    "isolated_python": true,
+    "version": "0.2.0",
+    "block_count": 10,
+    "tested_python_versions": [
+      "3.11.15",
+      "3.12.0"
+    ]
+  },
+  "renderer_source_sha256": {
+    "physicalview/phiview.py": "8e92f72ce5d42c63275fb1e9ce0336235e3598a7545dd75798ba0743ba54bf03",
+    "physicalview/render.py": "7acec046bba40c4b4b1a11ba966fb9e7fb8b729d1a9010af16f4d5680ae5d24b",
+    "physicalview/splats.py": "8d2b5583cbe2f3913d65b620b0929de3383706e25120287beceb9add72552cde",
+    "physicalview/robot.py": "8327d7a8a036bdf76266fc5dc6a826e2ec094cfa2b62964ccd6bf198d6e1bf3e"
+  },
+  "boundaries": [
+    "CPU tests do not validate GPU models.",
+    "H200 renderer checks do not establish robot task success or a new browser benchmark.",
+    "Inference and generation installation does not validate native TRELLIS kernels or checkpoint quality.",
+    "Paper campaign remains incomplete and has zero approved groups in the archived snapshot."
+  ],
+  "github_actions": {
+    "status": "blocked_before_execution",
+    "run_id": 34845525682,
+    "job_id": 103980414699,
+    "message": "The job was not started because an Actions budget is preventing further use.",
+    "alternative": "Local Python 3.11 and 3.12 tests, four lockfiles, distributions and isolated wheel validation; hosted CI is not passing."
+  }
+}

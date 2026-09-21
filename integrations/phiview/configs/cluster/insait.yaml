@@ -1,0 +1,90 @@
+# SimAny Studio configuration. Paths may be absolute or relative to the repo root.
+# Environment keys are referenced by physicalview/pipeline.py stage table.
+
+# SimAny checkout providing agents/, robo/, models/, third_party/ and the pipeline stage
+# scripts (needs the Studio stage flags: SimAny branch feature/studio-ui until merged).
+# $SIMANY_ROOT overrides. Interpreter paths below are relative to this root.
+simany_root: /group/worldcept/code/SimAny-wt/studio
+outputs_root: outputs
+scannetpp_root: /data/ScanNetpp
+splats_root: /data/ScanNetppv2_gsplat/splats
+studio_out: outputs/studio          # jobs/, snapshots/, selftest/
+
+interpreters:
+  main:   .venv/bin/python                                                 # torch 2.4.1+cu124
+  sam3:   /group/streetsplat/worldcept/.envs/sam3/bin/python              # torch 2.10+cu128
+  sam3d:  .envs/sam3d-objects/bin/python                                   # torch 2.5.1+cu121
+  gsplat: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python # torch 2.4.1+cu124 + gsplat wheel
+  studio: .envs/studio/bin/python                                          # torch cu128 (all GPUs)
+  openpi: /group/worldcept/code/openpi/.venv/bin/python
+
+# Compute capabilities each interpreter can run on (from torch/gsplat kernel builds).
+env_arch_support:
+  main:   ["8.0", "8.6", "8.9", "9.0"]
+  sam3:   ["8.0", "8.6", "8.9", "9.0", "12.0"]
+  sam3d:  ["8.0", "8.6", "8.9", "9.0"]
+  gsplat: ["8.0", "8.6", "9.0"]
+  studio: ["8.0", "8.6", "9.0", "12.0"]
+  openpi: ["8.0", "8.6", "9.0"]
+
+# Slurm targets per GPU type (used when a stage's env is incompatible with the local GPU
+# or when the user asks to run remotely).
+slurm:
+  account: null
+  gpu_types:
+    a6000:   {partition: debug,  gres: "gpu:a6000:1",   extra: [],                       compute_cap: "8.6", mem: 64G, time: "03:50:00"}
+    h200:    {partition: batch,  gres: "gpu:h200:1",    extra: ["--exclude=msp3-[0-7]"], compute_cap: "9.0", mem: 96G, time: "03:50:00"}
+    a100:    {partition: batch,  gres: "gpu:a100-80g:1", extra: [],                      compute_cap: "8.0", mem: 96G, time: "03:50:00"}
+    rtx6000: {partition: batch,  gres: "gpu:rtx6000:1", extra: [],                       compute_cap: "12.0", mem: 96G, time: "03:50:00"}
+  default_remote_gpu: a6000
+  env_exports:            # exported into every remote job before run/env.sh
+    HF_HOME: /group/worldcept/hf_cache
+    TORCH_HOME: /group/worldcept/torch_hub_cache
+    HF_HUB_OFFLINE: "1"
+    MUJOCO_GL: egl
+    PIP_CONFIG_FILE: /dev/null
+
+models:
+  discovery:
+    - {id: gt_segments, label: "GT segments (ScanNet++ annotations)", stage: discover_gt}
+    - {id: sam3_auto,   label: "SAM3 automatic discovery (no GT)",     stage: discover_auto}
+  generation:
+    - {id: trellis,     label: "TRELLIS (single best view)",     module: models.s4_trellis,           env: main}
+    - {id: reconviagen, label: "ReconViaGen (multi-view)",       module: models.s4_reconviagen,       env: main}
+    - {id: sam3d,       label: "SAM 3D Objects",                 module: models.s4_sam3d,             env: sam3d}
+    - {id: hybrid,      label: "Hybrid: evidence-gated TRELLIS/ReconViaGen", module: agents.assets.factory_hybrid, env: main}
+  registration:
+    - {id: yaw_sweep_icp,     label: "Sim(3) yaw sweep + ICP (default)",           module: agents.assets.factory_align, env: main, args: []}
+    - {id: signed_source_up,  label: "Sim(3) with signed source-up hypothesis",    module: agents.assets.factory_align, env: main, args: ["--source-up", "signed"]}
+    - {id: alt_source_up,     label: "Sim(3) with alternative source-up",          module: agents.assets.factory_align, env: main, args: ["--source-up", "alternative"]}
+  inpaint_backends:
+    - {id: qwen_image_edit, label: "Qwen-Image-Edit-2509 (prompted)", env: sam3, min_vram_gb: 40}
+    - {id: lama,            label: "LaMa (CPU, no prompt)",           env: main, min_vram_gb: 0}
+  collision_modes: [room, shim]
+  policies:                      # ids must exist in configs/policies/*.yaml
+    - pi05_droid_jointpos
+    - droid_pi05_jointpos_with_web_and_sim
+    - scripted_sinusoid
+
+policy_server:
+  script: run/pi05_serve.sh
+  default_port: 8000
+  gpu_types: [a6000, h200]        # JAX cu12 build verified only here
+
+viewer:
+  port: 8080
+  # Scene-tab display mode. "server": the GPU renders the browser camera's view with gsplat
+  # and streams JPEG frames as the viewer background, so the browser holds NO gaussian data
+  # (fixes laptop out-of-memory). "client": capped splat arrays are shipped to WebGL (old
+  # behaviour, high browser memory). Switchable at runtime in the Scene tab.
+  display_mode: server
+  stream:
+    max_width: 1280        # frame width cap (720p); the Scene tab offers 720p / 1080p / native
+    jpeg_quality: 80       # Scene tab slider 50-95
+    max_fps: 15
+    moving_scale: 0.5      # render scale while the camera moves; one full-res frame when it settles
+  # client-mode caps (browser memory); irrelevant in server mode
+  max_splats_background: 400000
+  max_splats_object: 40000
+  render_wh: [640, 360]
+  control_hz: 15

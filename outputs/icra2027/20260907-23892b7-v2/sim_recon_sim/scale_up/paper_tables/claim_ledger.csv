@@ -1,0 +1,9 @@
+claim_id,implementation_gate,scientific_gate,observed_result,enabled_sentence,required_gate
+feasibility,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+multi_instance_usability,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+agentic_benefit,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+beyond_compute,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+repair_beyond_rejection,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+closed_loop_compensation,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+scope_expansion,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate
+appearance_preservation,PASS,NOT_RUN,See measured counts; no automatic scientific promotion,,Independent measured evidence and declared claim-specific gate

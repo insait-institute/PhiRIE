@@ -1,0 +1,9 @@
+{
+ "index": 0,
+ "label": "mug",
+ "sym_chamfer_trellis_m": 0.005,
+ "sym_chamfer_rvg_m": 0.006,
+ "sym_chamfer_sam3d_m": null,
+ "winner": "trellis",
+ "canonical_source": "trellis"
+}

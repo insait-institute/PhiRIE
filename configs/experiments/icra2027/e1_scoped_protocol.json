@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "PROSPECTIVE_PROTOCOL_REVIEW",
+  "measurement_scope": {
+    "schema_version": 1,
+    "constructor_protocol": "simany_A4_FULL_shared_initial_pool_bounded_registration_retry_v1",
+    "acceptance": "verified_simulator_export_bodies",
+    "geometry": "independent_gt_matches_of_verified_exported_bodies",
+    "physical_protocol": "canonical_factory_report_drop_v1",
+    "collision_representation": "selected_frozen_E3_single_convex_hull_v1",
+    "runtime": "sum_declared_stage_seconds_not_parallel_wall_latency_v1"
+  },
+  "planned_scenes": [
+    "09c1414f1b",
+    "0d2ee665be",
+    "13c3e046d7",
+    "1ada7a0617",
+    "21d970d8de",
+    "25f3b7a318",
+    "27dd4da69e",
+    "286b55a2bf",
+    "31a2c91c43",
+    "3864514494",
+    "38d58a7a31",
+    "3db0a1c8f3",
+    "3e8bba0176",
+    "3f15a9266d",
+    "40aec5fffa",
+    "45b0dac5e3",
+    "5748ce6f01",
+    "578511c8a9",
+    "5942004064",
+    "5eb31827b7",
+    "5ee7c22ba0",
+    "5f99900f09",
+    "6115eddb86",
+    "7831862f02",
+    "7b6477cb95",
+    "7bc286c1b6",
+    "825d228aec",
+    "9071e139d9",
+    "99fa5c25e1",
+    "a24f64f7fb",
+    "a8bf42d646",
+    "a980334473",
+    "ac48a9b736",
+    "acd95847c5",
+    "b0a08200c9",
+    "bcd2436daf",
+    "bde1e479ad",
+    "c49a8c6cff",
+    "c4c04e6d6c",
+    "c50d2d1d42",
+    "c5439f4607",
+    "cc5237fd77",
+    "d755b3d9d8",
+    "e398684d27",
+    "e7af285f7d",
+    "f2dc06b1d2",
+    "f3685d06a9",
+    "f3d64c30f8",
+    "f9f95681fd",
+    "fb5a96b1a2"
+  ],
+  "regimes": [
+    "GT segments + scan mesh",
+    "Auto discovery + scan mesh",
+    "GT segments + splat-fused mesh",
+    "Auto discovery + splat-fused mesh",
+    "Single RGB + metric depth"
+  ],
+  "planned_scene_regime_cells": 250,
+  "common_constructor": {
+    "policy_id": "A4",
+    "vocabulary": "FULL",
+    "policies": {
+      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/configs/experiments/icra2027/agentic_automatic_policies.yaml",
+      "sha256": "0831349a0de6c7885bcec27ec412298add1c84907dd4536b55f5e30c5ef002da"
+    },
+    "initial_tools": [
+      "trellis",
+      "reconviagen"
+    ],
+    "additional_generation_on_retry": false,
+    "retry_action": "registration_signed_source_up_restart",
+    "all_discovered_jobs_retained": true
+  },
+  "physical_implementation": {
+    "call": "agents.eval.factory_report.drop_test",
+    "source": {
+      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/agents/eval/factory_report.py",
+      "sha256": "48f7ddbcaf710b959a749828e841c47882ad539e0ca424754b2410d19188f154"
+    },
+    "link_pose_source": {
+      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/robo/sim/s7_sim.py",
+      "sha256": "36c7043b4b96be512b52d6ed63479e5b5afce4bfc6afdd42f0af49af9d0ad4f6"
+    },
+    "input": "exact verified simulator-export URDF/collision assets",
+    "new_measurements_required": true,
+    "prior_E3_E4_stability_reuse": false
+  },
+  "runtime_components_seconds": {
+    "input_reconstruction": null,
+    "discovery_preparation": null,
+    "initial_generation": null,
+    "registration_decisions_retry": null,
+    "collision_simulator_export": null,
+    "construction_drop_verification": null
+  },
+  "pilot": {
+    "scene_ids": [
+      "09c1414f1b",
+      "0d2ee665be"
+    ],
+    "selection": "first_two_original_lexicographic_scenes",
+    "regime": "Auto discovery + splat-fused mesh",
+    "resources": "CPU only; no arrays",
+    "execution_allowed": false
+  },
+  "future_input_gates": {
+    "gt_segments_scan_mesh": "fresh source-bound GT input enumeration and independent evaluation-reference distinction",
+    "auto_discovery_scan_mesh": "fresh TRAIN-only automatic scan-mesh discovery using common FULL vocabulary",
+    "gt_segments_splat_fused_mesh": "new declared GT annotation-to-derived-surface transfer; no scan coordinates in registration",
+    "auto_discovery_splat_fused_mesh": "exact full E3 source reuse; finish all50 exports including9 no-query scenes",
+    "single_rgb_metric_depth": "fixed public-only first lex officialTRAIN frame, metric depth; GT-free s0/s3 adapter"
+  },
+  "paper_ready": false,
+  "metric_threshold_changes_after_results": false
+}

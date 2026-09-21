@@ -1,0 +1,20 @@
+schema_version: 1
+scope: full_e2_first_structurally_fillable_erasure_pilot
+freeze_id: 20260906-65c5a7e-v2
+scene_id: 0d2ee665be
+mask_integrity:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-75431a4-v1/dispatch/independent_completion_gate.json
+  bytes: 490
+  sha256: c3fa5345fdba797043d02e87c0c2e1524acd22e6a547885a1091dcb93e681b64
+prefix_protocol:
+  path: /group/worldcept/code/SimAny-wt/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_pilot/protocol.yaml
+  bytes: 1055
+  sha256: fce5305ed30d611eb946862a7a6880fbb9dc652a2f74cad94afae439d4bf1759
+planned_objects: 29
+accepted_objects: 2
+planned_train_views: 6
+backend: lama_cpu
+full_stage_admitted: false
+paper_ready: false
+official_test_images_read: 0
+thresholds_changed: false

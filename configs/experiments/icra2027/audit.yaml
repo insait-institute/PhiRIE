@@ -1,0 +1,29 @@
+schema_version: 2
+freeze_id: inherit
+paper_ready: false
+input_features: outputs/icra2027/{freeze_id}/audit/task_local_features_and_labels.csv
+output_dir: outputs/icra2027/{freeze_id}/audit
+label_definition: construction_validity
+tier: full
+source_kind: real
+scene_ids: [behavior_task0020, behavior_task0011, behavior_task0023, behavior_task0027, behavior_task0045, behavior_task0002]
+conditions: [clean, mild, severe]
+# Populate from a declared public task roster before inspecting validity labels.
+# Empty entries deliberately prevent using only successful existing builds.
+task_ids_by_scene:
+  behavior_task0020: []
+  behavior_task0011: []
+  behavior_task0023: []
+  behavior_task0027: []
+  behavior_task0045: []
+  behavior_task0002: []
+public_roots: []
+public_manifest: null
+# Hash audit_validity_protocol.yaml before feature construction; feature stage
+# uses only the hash string and never opens the protocol/GT files.
+label_protocol_sha256: edcb4ef7df21e59b4e545b39c481e1279312a0aaac02c5f4ce8bc99e3dbc40fe
+regularization_l2: 1.0
+missing_rows_are_failures: true
+forbidden_controller_inputs:
+  - evaluation_ground_truth_geometry
+  - held_out_success_labels

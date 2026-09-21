@@ -1,0 +1,45 @@
+name: Draft release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    uses: ./.github/workflows/ci.yml
+  draft:
+    needs: validate
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: physicalview-dist
+          path: dist
+      - name: Verify version and main ancestry
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python - <<'PYCODE'
+          import os, tomllib
+          from pathlib import Path
+          expected = 'v' + tomllib.loads(Path('pyproject.toml').read_text())['project']['version']
+          assert os.environ['RELEASE_TAG'] == expected, (os.environ['RELEASE_TAG'], expected)
+          PYCODE
+          git merge-base --is-ancestor HEAD origin/main
+      - name: Create checksums and draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          cd dist
+          sha256sum *.whl *.tar.gz > SHA256SUMS
+          cd ..
+          gh release create "$RELEASE_TAG" dist/* --verify-tag --draft --title "PhysicalView $RELEASE_TAG" --notes-file CHANGELOG.md

@@ -1,0 +1,7 @@
+[
+  {
+    "scene": "libero_example",
+    "native_xml": "/path/to/resolved-native-scene.xml",
+    "state_npz": "/path/to/recorded-initial-state.npz"
+  }
+]

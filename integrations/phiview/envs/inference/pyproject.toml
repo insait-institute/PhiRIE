@@ -1,0 +1,51 @@
+[project]
+name = "phiview-inference-env"
+version = "0.2.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "physicalview",
+  "torch==2.9.1+cu128",
+  "torchvision==0.24.1+cu128",
+  "gsplat==1.5.3",
+  "open3d==0.19.0",
+  "imageio-ffmpeg==0.6.0",
+  "ninja",
+  "setuptools",
+  "utils3d",
+  "einops",
+  "tqdm",
+  "pyopengl",
+  "diffusers==0.37.0",
+  "transformers==4.57.6",
+  "accelerate==1.12.0",
+  "sam3",
+  "hydra-core",
+  "pycocotools",
+  "decord",
+  "sentencepiece",
+  "safetensors",
+  "timm==1.0.29",
+  "omegaconf"
+]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+
+[tool.uv.sources]
+physicalview = { path = "../..", editable = true }
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+utils3d = { git = "https://github.com/EasternJournalist/utils3d.git", rev = "a29e9c13504cbb92c4489706c7f2a8e0bc4f7af8" }
+sam3 = { git = "https://github.com/facebookresearch/sam3.git", rev = "660a5e9e1b8b4c02c0ad97229b88a09a6e4ff5b7" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.extra-build-dependencies]
+gsplat = [{ requirement = "torch", match-runtime = true }]
+
+[tool.uv.extra-build-variables]
+gsplat = { BUILD_NO_CUDA = "1" }

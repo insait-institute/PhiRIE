@@ -1,0 +1,30 @@
+schema_version: 1
+kind: native_matrix_plan
+cohort_id: native_dev_v2_8instances
+split: development
+layout_ids: [11, 12]
+style_id: 11
+tasks:
+  PickPlaceCounterToSink: 600
+  PickPlaceSinkToCounter: 900
+instance_generation_seeds: [0, 1]
+reset_perturbations:
+  - {reset_id: r0, translation_world_m: [0, 0, 0], policy_rng_seed: 0}
+  - {reset_id: r1, translation_world_m: [0.01, 0, 0], policy_rng_seed: 1}
+  - {reset_id: r2, translation_world_m: [-0.01, 0, 0], policy_rng_seed: 2}
+  - {reset_id: r3, translation_world_m: [0, 0.01, 0], policy_rng_seed: 3}
+  - {reset_id: r4, translation_world_m: [0, -0.01, 0], policy_rng_seed: 4}
+controller_methods: [REF_NATIVE, B0_FIXED_NATIVE]
+scope: L0_target_only
+sensor_regime: ideal_rgbd_posed
+renderer: native
+execution_protocol: primary_native
+policy_id: pi05_pretrain_human300_75000_c484448
+checkpoint_receipt_sha256: e4ef1d5f325841510ae31a4078cbdc10d3669b140e6397afebed08fb45f381ac
+base_config: configs/experiments/sim_recon_sim/reference.yaml
+policy_training_overlap:
+  task_family_in_human300_pretrain: true
+  layout_overlap: unknown
+  exact_asset_overlap: unknown
+selection_rule: fixed layouts11/12, listed native rigid task families, first two generation slots; no outcome filtering
+execution_ready: false

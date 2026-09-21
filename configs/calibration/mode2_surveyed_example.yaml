@@ -1,0 +1,45 @@
+# Mode 2 (phone depth/AR odometry + surveyed robot-base points) example
+# config for agents/recon/robot_align.py. Same schema/solver as mode 1
+# (`_align_correspondences` under the hood); the only real difference is
+# semantic (this labels the report "surveyed_points") and that AR-odometry
+# `src` positions are often already close to metric, so allow_scale can be
+# left true (recover a small residual scale correction) or set false if
+# the AR SDK's own scale is trusted outright.
+#
+# Numbers below are illustrative placeholders, NOT a real capture.
+
+mode: surveyed
+scene_id: c50d2d1d42_ar_survey_example
+
+correspondences:
+  calib:
+    - src: [0.02, -0.01, 0.00]
+      dst: [0.00, 0.00, 0.00]
+      label: robot_base_origin
+    - src: [0.51, -0.02, 0.01]
+      dst: [0.50, 0.00, 0.00]
+      label: base_plate_corner_x
+    - src: [0.01, 0.49, 0.00]
+      dst: [0.00, 0.50, 0.00]
+      label: base_plate_corner_y
+    - src: [0.02, -0.01, 0.79]
+      dst: [0.00, 0.00, 0.80]
+      label: base_top_marker
+  held_out:
+    - src: [0.50, 0.49, 0.01]
+      dst: [0.50, 0.50, 0.00]
+      label: base_plate_far_corner_holdout
+
+solver:
+  allow_scale: true
+  robust: true
+  ransac: false            # small, hand-surveyed set: trust IRLS, skip RANSAC
+  huber_delta_m: 0.015
+  bootstrap_ci: true
+  n_boot: 200
+  rng: 0
+
+output:
+  dir: outputs/c50d2d1d42_ar_survey_example/calibration
+  report_json: outputs/c50d2d1d42_ar_survey_example/calibration/align_report.json
+  overlay_png: outputs/c50d2d1d42_ar_survey_example/calibration/align_overlay.png

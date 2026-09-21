@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:06,000
+Fixed public TRAIN capture
+
+2
+00:00:06,000 --> 00:00:14,000
+Shared proposals
+
+3
+00:00:14,000 --> 00:00:22,000
+Genuine bounded registration retry
+
+4
+00:00:22,000 --> 00:00:30,000
+Actual context repair
+
+5
+00:00:30,000 --> 00:01:00,000
+Continuous independent REF and B0 episodes
+
+6
+00:01:00,000 --> 00:01:13,300
+Continuous B4 repaired episode; 2x playback; entire episode
+
+7
+00:01:13,300 --> 00:01:30,000
+Complete TEST results; coverage losses retained

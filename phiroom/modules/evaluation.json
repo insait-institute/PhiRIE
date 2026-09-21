@@ -1,0 +1,41 @@
+{
+  "id": "evaluation",
+  "branch": "module/evaluation-v2",
+  "description": "Audited geometry and observation evaluation",
+  "inputs": [
+    "frozen outputs; evaluation references where declared"
+  ],
+  "outputs": [
+    "metrics; explicit audits and failure status"
+  ],
+  "tools": [
+    "geometry metrics",
+    "fidelity metrics"
+  ],
+  "actions": {
+    "report": {
+      "target": "agents.eval.factory_report",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "render": {
+      "target": "agents.eval.factory_eval_render",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    },
+    "audit": {
+      "target": "robo.eval.audit_metrics",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "fidelity": {
+      "target": "robo.eval.fidelity_metrics",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    }
+  }
+}

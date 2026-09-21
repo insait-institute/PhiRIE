@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="author"
+      content="Runyi Yang, Deheng Zhang, Xiaoye Wang, Kanzhi Wu, Lei Sun, Ajad Chhatkuli, Kunyu Peng, Luc Van Gool, Danda Pani Paude"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta
+      name="description"
+      content="PhiRIE turns captured rooms into editable, interactive environments. Explore paper figures, real reconstruction results, and three interactive WebGPU experiences."
+    />
+    <meta
+      property="og:title"
+      content="PhiRIE — From captured rooms to interactive worlds"
+    />
+    <meta
+      property="og:description"
+      content="Evidence-driven real-to-sim. Paper figures, reconstruction galleries, and three hands-on WebGPU demonstrations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/media/Q03_578511c8a9.webp" />
+    <title>PhiRIE · Interactive environments from the real world</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="PhiRIE home"
+        ><span class="brand-mark">Φ</span> PhiRIE<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#method">Method</a><a href="#playground">Playground</a
+        ><a href="#results">Results</a><a href="#paper">Paper</a>
+      </nav>
+      <a
+        class="repo-link"
+        href="https://github.com/insait-institute/PhiRIE"
+        target="_blank"
+        rel="noreferrer"
+        >Code <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="hero container">
+        <div class="eyebrow">
+          <span class="pulse-dot"></span> EVIDENCE-DRIVEN REAL-TO-SIM
+          <span class="release-pill">v2.0.1</span>
+        </div>
+        <h1>From captured rooms<br />to <em>interactive worlds.</em></h1>
+        <p class="hero-copy">
+          Reconstruct the scene. Give objects a physical presence.<br
+            class="desktop-break"
+          />
+          Explore what happens when the world starts to move.
+        </p>
+        <div class="paper-authorship" aria-label="Authors and affiliations">
+          <p class="paper-title">
+            PhiRIE: From Photorealistic Reconstruction to Interactive
+            Environments
+          </p>
+          <ul class="authors" aria-label="Authors">
+            <li>Runyi Yang<sup>1</sup></li>
+            <li>Deheng Zhang<sup>1</sup></li>
+            <li>Xiaoye Wang<sup>1</sup></li>
+            <li>Kanzhi Wu<sup>2</sup></li>
+            <li>Lei Sun<sup>1</sup></li>
+            <li>Ajad Chhatkuli<sup>1</sup></li>
+            <li>Kunyu Peng<sup>3,∗</sup></li>
+            <li>Luc Van Gool<sup>1</sup></li>
+            <li>Danda Pani Paude<sup>1</sup></li>
+          </ul>
+          <div class="affiliations">
+            <p><sup>1</sup> INSAIT, Sofia University “St. Kliment Ohridski”.</p>
+            <p><sup>2</sup> vivo Mobile Communication Co., Ltd.</p>
+            <p><sup>3</sup> Karlsruhe Institute of Technology</p>
+            <p class="corresponding">∗ Corresponding author: Kunyu Peng</p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#playground" class="button primary"
+            >Enter the playground <span aria-hidden="true">↗</span></a
+          ><a href="#paper" class="button secondary"
+            >Explore the paper <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="hero-visual" aria-label="Three real PhiRIE result views">
+          <figure>
+            <img
+              fetchpriority="high"
+              src="/media/Q01_27dd4da69e.webp"
+              alt="Gaussian reconstruction of a captured kitchen"
+              width="1440"
+              height="960"
+            />
+            <figcaption>
+              <span>01 / OBSERVE</span> Captured environments
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              fetchpriority="high"
+              src="/media/bottle-09.webp"
+              alt="Reconstructed bottle reassembled into a Gaussian office scene"
+              width="1600"
+              height="800"
+            />
+            <figcaption>
+              <span>02 / CONSTRUCT</span> Editable scene objects
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              fetchpriority="high"
+              src="/media/Q05_libero_living_room_scene5.webp"
+              alt="Recorded robot and reconstructed cup in a LIBERO tabletop scene"
+              width="1440"
+              height="960"
+            />
+            <figcaption>
+              <span>03 / INTERACT</span> Appearance meets motion
+            </figcaption>
+          </figure>
+          <span class="visual-note"
+            >Real project assets. Explore the details below.</span
+          >
+        </div>
+        <div class="hero-foot">
+          <span
+            >REAL SCANS <i>×</i> OBJECT RECONSTRUCTION
+            <i>×</i> INTERACTION</span
+          ><a href="#method"
+            >Scroll to explore <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+
+      <section id="method" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 — THE IDEA</p>
+            <h2>A room is more<br />than its appearance.</h2>
+          </div>
+          <p>
+            A simulator needs objects with metric geometry, contact surfaces,
+            and visual identities that stay connected during motion. PhiRIE
+            builds these pieces through evidence-guided construction.
+          </p>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span class="step">01</span>
+            <h3>Observe & propose</h3>
+            <p>
+              Start with captured views and metric observations. Specialized
+              generators propose complete object candidates.
+            </p>
+            <span class="method-tag">Images → candidates</span>
+          </article>
+          <article>
+            <span class="step">02</span>
+            <h3>Register & select</h3>
+            <p>
+              Compare proposals in a shared frame. Use alignment evidence to
+              select, retry, or retain a failed attempt.
+            </p>
+            <span class="method-tag">Evidence → decisions</span>
+          </article>
+          <article>
+            <span class="step">03</span>
+            <h3>Connect & interact</h3>
+            <p>
+              Link geometry, collision, and Gaussian appearance through object
+              identity. Inspect how they behave together.
+            </p>
+            <span class="method-tag">Objects → environments</span>
+          </article>
+        </div>
+        <figure class="paper-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-qualitative.webp"
+            data-title="Qualitative environments · paper figure collection"
+            aria-label="Enlarge qualitative paper figure"
+          >
+            <img
+              loading="lazy"
+              src="/media/paper-qualitative.webp"
+              alt="Six qualitative environments from the paper figure collection: four ScanNet++ rooms and two LIBERO workspaces"
+              width="2092"
+              height="2200"
+            />
+          </button>
+          <figcaption>
+            <span class="caption-label">FROM THE PAPER FIGURE COLLECTION</span
+            ><strong>Different rooms. A shared representation.</strong> Gaussian
+            environments across ScanNet++ and LIBERO. Includes original scene
+            fits, saved background completion, and a recorded robot state.
+            <a href="%BASE_URL%provenance.json">Asset provenance ↗</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="playground" class="playground section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 — HANDS ON</p>
+              <h2>Go beyond<br />the still image.</h2>
+            </div>
+            <p>
+              Three interactive experiences, rendered with WebGPU in your
+              browser. Load a demo, orbit the scene, and explore the controls.
+            </p>
+          </div>
+          <div
+            class="lab-tabs"
+            role="tablist"
+            aria-label="Interactive use cases"
+          >
+            <button
+              id="tab-scene"
+              role="tab"
+              aria-selected="true"
+              aria-controls="lab-panel"
+              data-demo="scene"
+            >
+              <span>01</span> Scene editing <small>Explore & rearrange</small>
+            </button>
+            <button
+              id="tab-physics"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lab-panel"
+              tabindex="-1"
+              data-demo="physics"
+            >
+              <span>02</span> Physics sandbox <small>Drop, throw & shoot</small>
+            </button>
+            <button
+              id="tab-robot"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lab-panel"
+              tabindex="-1"
+              data-demo="robot"
+            >
+              <span>03</span> Robot replay <small>Inspect every state</small>
+            </button>
+          </div>
+          <div
+            id="lab-panel"
+            role="tabpanel"
+            aria-labelledby="tab-scene"
+            class="lab-panel"
+          >
+            <div class="viewport-wrap">
+              <div id="viewport">
+                <img
+                  id="demo-poster"
+                  src="/media/bottle-09.webp"
+                  alt="Preview of the captured desk scene"
+                />
+                <div id="demo-overlay">
+                  <span class="viewport-icon" aria-hidden="true">◇</span>
+                  <h3 id="demo-intro">Make the scene your own.</h3>
+                  <p id="demo-intro-copy">
+                    Orbit a captured Gaussian desk and reposition its
+                    reconstructed bottle.
+                  </p>
+                  <button id="launch-demo" class="button primary">
+                    Launch WebGPU demo <span aria-hidden="true">↗</span>
+                  </button>
+                  <p class="download-note" id="download-note">
+                    3D assets load only when you launch.
+                  </p>
+                </div>
+              </div>
+              <div class="viewport-status">
+                <span id="gpu-status" role="status"
+                  ><span class="status-dot"></span> Ready to explore</span
+                ><span>Drag to orbit · scroll to zoom</span>
+              </div>
+            </div>
+            <aside
+              class="lab-controls"
+              id="lab-controls"
+              aria-label="Demo controls"
+            >
+              <p class="eyebrow">SCENE EDITING</p>
+              <h3>One room.<br />Many possibilities.</h3>
+              <p class="controls-intro">
+                Inspect the captured scene, remove the original target, and move
+                its reconstructed replacement.
+              </p>
+              <div id="control-fields"></div>
+              <p class="demo-scope" id="demo-scope">
+                An interactive preview of saved 3D Gaussian assets. Reduced
+                density and SH0 color for the web. GT-assisted registration.
+              </p>
+            </aside>
+          </div>
+          <p class="lab-footnote">
+            WebGPU needs a compatible browser and a secure connection. If it is
+            unavailable, the recorded results below remain accessible.
+          </p>
+        </div>
+      </section>
+
+      <section class="section container" id="motion">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 — IN MOTION</p>
+            <h2>See the interaction<br />from start to finish.</h2>
+          </div>
+          <p>
+            Six complete, recorded sequences show reconstructed headphones, a
+            cup, and a keyboard in their environments. Watch physical impacts
+            and scripted robot interactions.
+          </p>
+        </div>
+        <div class="video-layout">
+          <div class="video-main">
+            <video
+              id="result-video"
+              controls
+              playsinline
+              preload="none"
+              poster="/media/headphone-06_shooting_1.webp"
+              aria-label="Recorded headphone shooting sequence"
+            >
+              <source src="/media/headphone_shooting.mp4" type="video/mp4" />
+            </video>
+            <div class="video-caption">
+              <div>
+                <span class="caption-label" id="video-type"
+                  >RECORDED MUJOCO · 24 FPS</span
+                >
+                <h3 id="video-title">Headphones / two impacts</h3>
+              </div>
+              <span id="video-counter">01 / 06</span>
+            </div>
+            <p id="video-description">
+              Two scripted projectile launches with SAM3D collision geometry.
+              Estimated parameters; a qualitative physics demonstration.
+            </p>
+          </div>
+          <div class="video-picker" aria-label="Choose a recorded video"></div>
+        </div>
+      </section>
+
+      <section class="comparison-section section">
+        <div class="container compare-layout">
+          <div>
+            <p class="eyebrow">04 — APPEARANCE</p>
+            <h2>Same state.<br />A different finish.</h2>
+            <p>
+              Slide to compare saved views before and after appearance
+              harmonization. The camera and scene state stay matched.
+            </p>
+            <label class="select-label" for="compare-object"
+              >Choose a view</label
+            ><select id="compare-object">
+              <option value="cup">Cup workspace</option>
+              <option value="headphone">Headphone office</option>
+              <option value="keyboard">Keyboard office</option>
+              <option value="bowl_overview">Bowl · overview</option>
+              <option value="bowl_dsc01217">Bowl · second view</option>
+            </select>
+            <p class="small-note">
+              Harmonization is image postprocessing. These comparisons show
+              appearance, not a change in physics.
+            </p>
+          </div>
+          <div>
+            <div class="comparison" id="comparison">
+              <img
+                id="compare-after"
+                loading="lazy"
+                src="/media/harmony-cup-with.webp"
+                alt="Cup scene with harmonization"
+              /><img
+                id="compare-before"
+                loading="lazy"
+                src="/media/harmony-cup-without.webp"
+                alt="The same cup scene without harmonization"
+              /><span class="compare-label before">Without</span
+              ><span class="compare-label after">With harmonizer</span>
+              <div class="compare-line"><span>↔</span></div>
+              <input
+                id="compare-slider"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Reveal amount of view without harmonization"
+              />
+            </div>
+            <p class="image-hint">
+              Drag the divider to compare <span aria-hidden="true">↔</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 — VISUAL ATLAS</p>
+            <h2>A closer look<br />at the results.</h2>
+          </div>
+          <p>
+            Explore captured environments, reconstruction candidates, background
+            edits, and recorded interactions. Open any image for its full view
+            and source context.
+          </p>
+        </div>
+        <div class="gallery-toolbar">
+          <div class="filters" role="group" aria-label="Filter result category">
+            <button data-filter="All" aria-pressed="true">All results</button
+            ><button data-filter="Scenes" aria-pressed="false">Scenes</button
+            ><button data-filter="Construction" aria-pressed="false">
+              Construction</button
+            ><button data-filter="Objects" aria-pressed="false">Objects</button
+            ><button data-filter="Motion" aria-pressed="false">Motion</button
+            ><button data-filter="Appearance" aria-pressed="false">
+              Appearance
+            </button>
+          </div>
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              type="search"
+              id="gallery-search"
+              placeholder="Find a scene or object…"
+              aria-label="Search visualization results"
+          /></label>
+        </div>
+        <div class="gallery-count" id="gallery-count" role="status"></div>
+        <div id="gallery" class="gallery"></div>
+        <div class="load-more">
+          <button class="button secondary" id="load-more">
+            Show more results <span aria-hidden="true">+</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="paper" class="paper-section section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">06 — THE RESEARCH</p>
+              <h2>Making rooms<br />simulatable.</h2>
+            </div>
+            <div>
+              <p>
+                Evidence-driven real-to-sim connects candidate construction with
+                interaction evaluation. The manuscript separates construction
+                quality, coverage, and success under a declared reconstruction
+                scope.
+              </p>
+              <div class="paper-links">
+                <a
+                  class="button primary"
+                  href="%BASE_URL%media/manuscript-snapshot.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read manuscript snapshot ↗</a
+                ><a
+                  class="button secondary"
+                  href="https://github.com/insait-institute/PhiRIE/releases/tag/v2.0.1"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Get v2.0.1 ↗</a
+                >
+              </div>
+              <p class="small-note">
+                The supplied manuscript snapshot retains the earlier project
+                name, SimAnyRoom. The code repository requires access.
+              </p>
+            </div>
+          </div>
+          <div class="research-figures">
+            <figure>
+              <button
+                class="image-expand"
+                data-image="media/paper-uncertainty.webp"
+                data-title="Paired uncertainty · original manuscript figure"
+              >
+                <img
+                  loading="lazy"
+                  src="/media/paper-uncertainty.webp"
+                  alt="Original manuscript chart reporting paired uncertainty of agentic construction ablations"
+                />
+              </button>
+              <figcaption>
+                <span class="caption-label">ORIGINAL MANUSCRIPT FIGURE</span
+                >Paired comparisons and uncertainty. See the manuscript for
+                protocols and denominators.
+              </figcaption>
+            </figure>
+            <figure>
+              <button
+                class="image-expand"
+                data-image="media/paper-teaser.webp"
+                data-title="Appearance harmonization · paper figure collection"
+              >
+                <img
+                  loading="lazy"
+                  src="/media/paper-teaser.webp"
+                  alt="Matched appearance harmonization views from the paper figure collection"
+                />
+              </button>
+              <figcaption>
+                <span class="caption-label">PAPER FIGURE COLLECTION</span
+                >Matched harmonization views, preserved from the paper’s figure
+                collection.
+              </figcaption>
+            </figure>
+          </div>
+          <details class="evidence-note">
+            <summary>
+              How to read the demonstrations and results
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div>
+              <p>
+                The gallery uses existing research artifacts. Scene images
+                include training-view diagnostics and native synthetic LIBERO
+                observations. Some construction examples use GT assistance.
+                Coverage, held-out quality, and complete-room collision accuracy
+                are distinct questions.
+              </p>
+              <p>
+                The live physics sandbox uses reconstructed meshes with
+                browser-side Rapier dynamics and simplified convex colliders.
+                The robot demo replays recorded MuJoCo states from a scripted
+                cup push; it does not run a learned policy or establish grasp
+                success. Web previews use reduced geometry and color detail. See
+                <a href="%BASE_URL%provenance.json">the asset manifest</a> for
+                source identities, transformations, and checksums.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <a class="brand" href="#"
+        ><span class="brand-mark">Φ</span> PhiRIE<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <p>From observations to interaction.</p>
+      <div>
+        <a href="%BASE_URL%provenance.json">Provenance</a
+        ><a href="https://github.com/insait-institute/PhiRIE">GitHub ↗</a
+        ><a href="#">Back to top ↑</a>
+      </div>
+    </footer>
+    <dialog id="lightbox">
+      <button class="lightbox-close" aria-label="Close image">×</button
+      ><img id="lightbox-image" alt="" />
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+        <a href="%BASE_URL%provenance.json" target="_blank" rel="noreferrer"
+          >View source manifest ↗</a
+        >
+      </div>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

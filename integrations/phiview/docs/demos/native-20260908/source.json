@@ -1,0 +1,258 @@
+{
+  "argv": [
+    "/group/worldcept/code/SimAny-wt/sr0-native/.venv-native/bin/python",
+    "-m",
+    "robo.roundtrip.paired",
+    "--config",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/configs/unit-00af68df450a157280fb45c0e3c403d2.json",
+    "--canonical-reference",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/canonical",
+    "--canonical-manifest",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/canonical_instance.json",
+    "--reset-bank",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/reset_bank.json",
+    "--out",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "48407",
+    "--reference-episode",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-a097b19d00fd6fb585e8a39f74a7c78f/runner/episode",
+    "--object-dir",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02"
+  ],
+  "bundle_dir": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/canonical",
+  "canonical_instance_id": "native-00cd67d5f39a378d5a673bde2c808f8511f3af6279e679d08be1e0d8a4089cdd",
+  "canonical_manifest": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/canonical_instance.json",
+  "canonical_manifest_file_sha256": "b7a28520a12a4dbf48190f8230a60645b026da4cb47a15335b4a243e1b99f25a",
+  "canonical_manifest_sha256": "df6765fa53d524cb2c6d5805f02ac523e2d97564e0c9486cf096dee64e86d098",
+  "cohort_id": "native-mechanism-followup-20260907T212314Z-attempt2",
+  "config_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/configs/unit-00af68df450a157280fb45c0e3c403d2.json",
+  "config_sha256": "388c2e22dbc627f972cc8c42559053ba14a454ac0e5406f572ae3ab893bb9453",
+  "controller_method": "B3_AGENT_NATIVE",
+  "elapsed_s": 82.73129404895008,
+  "executed": true,
+  "execution_protocol": "primary_native",
+  "generation_seed": 1,
+  "instance_slot_id": "slot-fe2766d6ac82406e7f24",
+  "layout_id": 7,
+  "native_horizon": 750,
+  "plan_unit_id": "plan-00af68df450a157280fb45c0",
+  "planned_unit_sha256": "4c473f21ba9a685367049f6c8821a99d87b7764d9fd329fa02ce569fa5cb0520",
+  "policy_id": "pi05_pretrain_human300_75000_c484448",
+  "policy_rng_seed": 5,
+  "renderer": "native",
+  "reset_bank": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2cb7700-v1/sim_recon_sim/scale_up/test/instances/slot-fe2766d6ac82406e7f24/private/reset_bank.json",
+  "reset_bank_sha256": "b2317c3e9f82a64547e0e2c7612bea1bc7b8b981c3b2875bcfd89553aaad8f63",
+  "reset_contract_sha256": "034907b978de9ee02dadbca743a88986db15a4d23ef4e3382fa42fddc2e18a1d",
+  "reset_id": "r5",
+  "result": {
+    "actions_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner/episode/actions.json",
+    "actions_sha256": "9ff83172499394802a95985a0c32c1e8a1405519f979580f5c3005c34d3c12e4",
+    "benchmark": "robocasa_native",
+    "canonical_instance_id": "native-00cd67d5f39a378d5a673bde2c808f8511f3af6279e679d08be1e0d8a4089cdd",
+    "canonical_manifest_sha256": "df6765fa53d524cb2c6d5805f02ac523e2d97564e0c9486cf096dee64e86d098",
+    "canonical_reference": {
+      "asset_closure_sha256": "1f3b80425f29d000cf9713cca375431b84f39772c46336084bb0705d8a016bd2",
+      "canonical_instance_id": "native-00cd67d5f39a378d5a673bde2c808f8511f3af6279e679d08be1e0d8a4089cdd",
+      "canonical_manifest_sha256": "df6765fa53d524cb2c6d5805f02ac523e2d97564e0c9486cf096dee64e86d098",
+      "scene_xml_sha256": "77b8a32e97cf5b3f2e5cf221cd074e4b7282008f9ea58eaa3a0e26d7d5054986",
+      "state_sha256": "ae57ecbcf71f7bd29826e3b950c9c807a05dea947cee3ca1ada23cc06f78fd3d"
+    },
+    "cohort_id": "native-mechanism-followup-20260907T212314Z-attempt2",
+    "comparison_contract_sha256": "e3cd2609138b1f05236132521c418d08d3d7aa373444a32b8f74d06e01cfbd22",
+    "condition": "B3_AGENT_NATIVE",
+    "config_sha256": "388c2e22dbc627f972cc8c42559053ba14a454ac0e5406f572ae3ab893bb9453",
+    "controller_method": "B3_AGENT_NATIVE",
+    "episode_id": "native-v2-02da97c3aef349e1a137d12bb5367c36bba71c8fcb2a7d891f71c4e2a4884874",
+    "error": null,
+    "executed": true,
+    "execution_kind": "closed_loop_visual_policy",
+    "execution_protocol": "primary_native",
+    "first_success_step": null,
+    "full_horizon_completed": true,
+    "horizon": 750,
+    "imported_xml_sha256": "6c69f66f2528a529d42d3a3fbc10da5e181c446faf1257bcabf4385a176fd090",
+    "initial_state_sha256": "f64805d0f19719f711efd6d88b09ea31118be79fab27e3c0ce09ccc47ff1d68c",
+    "layout_id": 7,
+    "native_predicates": {
+      "containment_parameter_units": "upstream unnormalized dot-product formula",
+      "frame_status": "raw_native_body_origin",
+      "generated_scorer_correspondence": "NOT_ESTABLISHED",
+      "gripper_distance_m": 0.13842169736069684,
+      "gripper_far": false,
+      "gripper_threshold_m": 0.25,
+      "native_containment_parameter_th": 0.05,
+      "native_task_success": false,
+      "object_bbox_inside_cabinet": false,
+      "whole_mesh_containment_certified": false
+    },
+    "native_schema_version": 2,
+    "oracle_context": true,
+    "outcome": "task_failure",
+    "policy_engine": {
+      "canonical_instance_id": "native-00cd67d5f39a378d5a673bde2c808f8511f3af6279e679d08be1e0d8a4089cdd",
+      "engine_id": "canonical-engine-04e403a2c2a44720b4c4df3b042b9864",
+      "engine_protocol": "per_canonical_engine_v1",
+      "process_uuid": "8a5da746-f978-45f2-a6ea-a52360315f11",
+      "runtime": {
+        "devices": [
+          {
+            "id": 0,
+            "kind": "NVIDIA H200",
+            "platform": "gpu"
+          }
+        ],
+        "environment": {
+          "CUDA_HOME": "/opt/modules/nvidia-cuda-12.4.1",
+          "CUDA_PATH": "/opt/modules/nvidia-cuda-12.4.1",
+          "CUDA_VISIBLE_DEVICES": "0",
+          "LD_LIBRARY_PATH": "/group/worldcept/code/openpi/.venv/lib/python3.11/site-packages/cv2/../../lib64:/opt/modules/nvidia-cuda-12.4.1/lib64",
+          "MKL_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OPENBLAS_NUM_THREADS": "4",
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "packages": {
+          "flax": "0.10.2",
+          "jax": "0.5.3",
+          "jaxlib": "0.5.3",
+          "numpy": "2.2.5"
+        },
+        "python": "3.11.15",
+        "source_commit": "ffbb22466858e5aa32a64afd3506c7d71b173963",
+        "source_hashes": {
+          "robo/roundtrip/native_policy.py": "d4cd599943ba1eb80df85931520da8a81ef1f02724906d403fee5fe533e52788",
+          "robo/roundtrip/native_policy_server.py": "0940ddb82f8bfd68038c6cd0c58ac6f13275174e0228a10677e2927df0e56573",
+          "robo/roundtrip/policy_engine.py": "74752224a01ed5af0e9080b8fb3d4598348df3de1122f9313d2fca0ce8bc06e3"
+        }
+      },
+      "runtime_fingerprint": "435805deae8b8b8c27333cb874a1e1b7017fecbeb755ed664a3e8a9440da91d4"
+    },
+    "policy_engine_protocol": "per_canonical_engine_v1",
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "policy_identity": {
+      "action_dim": 12,
+      "checkpoint_receipt_sha256": "e4ef1d5f325841510ae31a4078cbdc10d3669b140e6397afebed08fb45f381ac",
+      "checkpoint_revision": "c484448aba1a9b60a04c9b0ca117241518ea69f3",
+      "checkpoint_total_bytes": 12440863932,
+      "model_action_dim": 32,
+      "model_action_horizon": 50,
+      "native_camera_resolution": [
+        256,
+        256
+      ],
+      "network_resolution": [
+        224,
+        224
+      ],
+      "normalization_sha256": "4aed1af411bd0e0f49d2b0e6d6832b11b8682917231a07173fbc30fd493bbdee",
+      "openpi_commit": "5a6beda9ff99da30b4e1b59320f6a32971d7c397",
+      "policy_camera_keys": {
+        "observation/image": "video.robot0_agentview_left",
+        "observation/right_image": "video.robot0_agentview_right",
+        "observation/wrist_image": "video.robot0_eye_in_hand"
+      },
+      "policy_config": "pi05_pretrain_human300",
+      "policy_engine": {
+        "canonical_instance_id": "native-00cd67d5f39a378d5a673bde2c808f8511f3af6279e679d08be1e0d8a4089cdd",
+        "engine_id": "canonical-engine-04e403a2c2a44720b4c4df3b042b9864",
+        "engine_protocol": "per_canonical_engine_v1",
+        "process_uuid": "8a5da746-f978-45f2-a6ea-a52360315f11",
+        "runtime": {
+          "devices": [
+            {
+              "id": 0,
+              "kind": "NVIDIA H200",
+              "platform": "gpu"
+            }
+          ],
+          "environment": {
+            "CUDA_HOME": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_PATH": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_VISIBLE_DEVICES": "0",
+            "LD_LIBRARY_PATH": "/group/worldcept/code/openpi/.venv/lib/python3.11/site-packages/cv2/../../lib64:/opt/modules/nvidia-cuda-12.4.1/lib64",
+            "MKL_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "OPENBLAS_NUM_THREADS": "4",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "packages": {
+            "flax": "0.10.2",
+            "jax": "0.5.3",
+            "jaxlib": "0.5.3",
+            "numpy": "2.2.5"
+          },
+          "python": "3.11.15",
+          "source_commit": "ffbb22466858e5aa32a64afd3506c7d71b173963",
+          "source_hashes": {
+            "robo/roundtrip/native_policy.py": "d4cd599943ba1eb80df85931520da8a81ef1f02724906d403fee5fe533e52788",
+            "robo/roundtrip/native_policy_server.py": "0940ddb82f8bfd68038c6cd0c58ac6f13275174e0228a10677e2927df0e56573",
+            "robo/roundtrip/policy_engine.py": "74752224a01ed5af0e9080b8fb3d4598348df3de1122f9313d2fca0ce8bc06e3"
+          }
+        },
+        "runtime_fingerprint": "435805deae8b8b8c27333cb874a1e1b7017fecbeb755ed664a3e8a9440da91d4"
+      },
+      "policy_state_keys": [
+        "state.end_effector_position_relative",
+        "state.end_effector_rotation_relative",
+        "state.base_position",
+        "state.base_rotation",
+        "state.gripper_qpos"
+      ],
+      "policy_type": "learned_visual_pi05_robocasa",
+      "replan_steps": 5,
+      "rng_protocol": "simany-sr0-policy-v1/per-chunk-jax-key",
+      "tokenizer_sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+    },
+    "policy_identity_sha256": "99b6e1f0d367c0f227e8a9324a116829e123be9c028c6498145080983241801e",
+    "policy_rng_seed": 5,
+    "post_success_rule": "native_primary_termination",
+    "renderer": "native",
+    "replacement_scope": "target_only",
+    "reset_contract_sha256": "034907b978de9ee02dadbca743a88986db15a4d23ef4e3382fa42fddc2e18a1d",
+    "reset_id": "r5",
+    "reset_seed": 5,
+    "reset_state_id": "r5",
+    "scene_id": "layout7_style11",
+    "schema_version": 3,
+    "scope": "L0_target_only",
+    "scorer_interpretation": "raw_native_predicate; generated correspondence not established",
+    "sensor_regime": "ideal_rgbd_posed",
+    "style_id": 11,
+    "success": false,
+    "success_at_horizon": false,
+    "success_ever": false,
+    "task_id": "PickPlaceCounterToCabinet",
+    "ticks": 750,
+    "timeseries_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner/episode/trace.json.gz",
+    "treatment_id": "B3_AGENT_NATIVE",
+    "video_error": null,
+    "video_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner/episode/continuous.mp4",
+    "wall_s": 42.12611761689186
+  },
+  "result_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner/episode/result.json",
+  "result_path_planned": "/group/worldcept/code/SimAny/outputs/icra2027/20260907T212314Z-simsub/simulation_submission/f1-attempt2/workers/unit-00af68df450a157280fb45c0e3c403d2/runner/episode/result.json",
+  "result_sha256": "12bb8c13dd131a4de6a333f92c6c891cb507cecb00e336dd242f50dd2c4c1f3f",
+  "returncode": 0,
+  "scope": "L0_target_only",
+  "sensor_regime": "ideal_rgbd_posed",
+  "slurm_job_id": "847411",
+  "source_code": {
+    "branch": "agent/simsub-native-python-symlink",
+    "commit": "ffbb22466858e5aa32a64afd3506c7d71b173963",
+    "dirty": false
+  },
+  "split": "test",
+  "style_id": 11,
+  "success": false,
+  "task_id": "PickPlaceCounterToCabinet",
+  "terminal_status": "RECORDED",
+  "translation_world_m": [
+    0.01,
+    0.01,
+    0
+  ],
+  "unit_id": "unit-00af68df450a157280fb45c0e3c403d2"
+}

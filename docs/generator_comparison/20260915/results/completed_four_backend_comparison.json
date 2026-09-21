@@ -1,0 +1,93 @@
+{
+  "checked_utc": "2026-09-15T06:11:32.517965+00:00",
+  "status": "COMPLETE_ON_AVAILABLE_COHORT",
+  "dataset": "ScanNet++ historically observed DEV follow-up",
+  "seed": 0,
+  "planned_slots": 128,
+  "evaluated_slots": 116,
+  "missing_input_slots": 12,
+  "missing_input_objects": [
+    "5eb31827b7-a1006",
+    "5ee7c22ba0-a1027",
+    "5ee7c22ba0-a1041"
+  ],
+  "pending_or_running_jobs": 0,
+  "unresolved_runnable_slots": 0,
+  "common_independent_geometry_objects": [
+    "27dd4da69e-a1001",
+    "38d58a7a31-a1006",
+    "5942004064-a1010",
+    "5942004064-a1015",
+    "5942004064-a1034",
+    "5eb31827b7-a1005",
+    "5eb31827b7-a1012",
+    "7831862f02-a1034",
+    "c4c04e6d6c-a1007",
+    "fb5a96b1a2-a1020"
+  ],
+  "rows": [
+    {
+      "backend": "trellis",
+      "display_name": "phi-RIE + TRELLIS",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "exported": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 15,
+      "common_support": 10,
+      "cd_cm": 7.19393113016398,
+      "f1_20": 0.3086649662062866,
+      "f1_40": 0.5310748872661296
+    },
+    {
+      "backend": "trellis2",
+      "display_name": "phi-RIE + TRELLIS.2",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "exported": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 10,
+      "common_support": 10,
+      "cd_cm": 10.223725198385324,
+      "f1_20": 0.2305175267863862,
+      "f1_40": 0.4482130772292624
+    },
+    {
+      "backend": "sam3d",
+      "display_name": "phi-RIE + SAM 3D Objects",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "exported": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 16,
+      "common_support": 10,
+      "cd_cm": 9.407879622286336,
+      "f1_20": 0.18471860413895033,
+      "f1_40": 0.37235141184588755
+    },
+    {
+      "backend": "reconviagen",
+      "display_name": "phi-RIE + ReconViaGen (multi-view)",
+      "planned": 32,
+      "generated": 29,
+      "registered": 29,
+      "exported": 29,
+      "collision_import_valid": 29,
+      "stability_tested": 29,
+      "stable": 14,
+      "common_support": 10,
+      "cd_cm": 8.669366632406213,
+      "f1_20": 0.2882744376377194,
+      "f1_40": 0.5064277148898101
+    }
+  ],
+  "gpu_hours_spent": 2.4125,
+  "gpu_hours_reserved": 0,
+  "interpretation": "Descriptive comparison on 10 independently matched objects. The other 19 generated objects per backend have no independent geometry match. Scientific failures are retained without quality-based reruns. Appearance is unmeasured; the full 32-object denominator remains partial because three original inputs are unavailable."
+}

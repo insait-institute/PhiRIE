@@ -1,0 +1,71 @@
+schema_version: 1
+freeze_id: 20260905-cda9efc-v2
+mode: pilot
+paper_ready: false
+dataset_root: /data/ScanNetpp
+planned_scenes: 1
+planned_jobs: 1
+protocol:
+  matcher: existing_mutual_nearest_neighbor_min_coverage
+  match_threshold: 0.25
+  overlap_tolerance_m: 0.02
+  overlap_points: 4000
+  gt_surface_samples: 20000
+  gt_surface_seed: 42
+  coordinate_frame: scannetpp_world
+  unit: metre
+  same_mesh: false
+  policy_independent: true
+  duplicate_rule: retain_and_diagnose
+  unmatched_rule: null_geometry_keep_planned_job
+pilot_execution_config:
+  path: /group/worldcept/code/SimAny-wt/e3-full-canonical/configs/experiments/icra2027/e3_full_canonical/agentic_fresh_execution.yaml
+  size_bytes: 26659
+  sha256: a85103c14e43c75664f4628c228e45f1d9bb23ebd19eed2a5c55ae19330ade04
+population_roster:
+  path: /group/worldcept/code/SimAny-wt/e3-full-canonical/configs/experiments/icra2027/construction_regimes.yaml
+  size_bytes: 2046
+  sha256: 3bf4da5aa0e6fbb3d044a9e9050174332438e82dcd96a30de86c2d497085517e
+scenes:
+- scene_id: 13c3e046d7
+  planned_jobs: 1
+  construction_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic
+  control_seal:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/13c3e046d7/seal.json
+    size_bytes: 1068
+    sha256: c8527eee14c43bf256a5e39f829bab26e367bceaa9ce816bb67aaf012fdd4f70
+  discovery:
+    source_pilot: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/13c3e046d7
+    source_summary_sha256: f403a022877e4ff253a0fe7c26465f441f6fe6dfa09b1ed0f7a6fe21ae54b353
+    source_output_hashes_sha256: df349642a6c60c9d7b013a26038e79d096fd53eec48f1db3779ab7f95d01c156
+    source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
+    source_discovery_hashes:
+      all_jobs_manifest.json: fc7714ea124d9b4e41ac87f257366170ef075048bde2a2cb69e976ca8ffa4bf9
+      input_manifest.json: 22347c9ff28f4a03f4a2e96d2aecd30bb941306929fded045a6e08fce5879553
+      output_hashes.json: df349642a6c60c9d7b013a26038e79d096fd53eec48f1db3779ab7f95d01c156
+      pilot_summary.json: f403a022877e4ff253a0fe7c26465f441f6fe6dfa09b1ed0f7a6fe21ae54b353
+      postrun_audit.json: 215ce5b75f5e4387dd40f45b734bdee28e3c0fa2b0710f23e1b80bd4004c4aa8
+    source_discovery_config:
+      path: /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
+      bytes: 9678
+      mtime_ns: 1788599841893682554
+      sha256: e470304281f03c0051af95ddb61975142be6b4fdb4ed9522aae69caa7f7b9081
+    source_discovery_commit: 86613e37d7bdfcef5ad10eb5cf289051055cdec3
+    source_discovery_contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
+      bytes: 10053
+      mtime_ns: 1788599945922128577
+      sha256: e7d5111806d7ca1521b1db878c1ddb002c8d3edb3505f375a147d6a512d9ebd5
+  gt_inputs:
+    mesh_aligned_0.05.ply:
+      path: /data/ScanNetpp/data/13c3e046d7/scans/mesh_aligned_0.05.ply
+      size_bytes: 69379950
+      sha256: 5a7d73c6fc0acf1e61e078601464a800267d70cac25dee8705e861bf907fc8bf
+    segments.json:
+      path: /data/ScanNetpp/data/13c3e046d7/scans/segments.json
+      size_bytes: 13925175
+      sha256: f67d4a66abe1ae7918e0ad208192ff3bd2aa51c271887f49082bc73caf3c5184
+    segments_anno.json:
+      path: /data/ScanNetpp/data/13c3e046d7/scans/segments_anno.json
+      size_bytes: 12599685
+      sha256: e2adaca75c34bc73a7790e7a6f65fcf53f80e297d8211b0fb59e887cc539f09a

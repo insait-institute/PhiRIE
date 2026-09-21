@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "freeze_id": "inherit",
+  "paper_table": "table_ii_fidelity",
+  "paper_ready": false,
+  "population": {
+    "dataset": "scannetpp_v2",
+    "split": "nvs_sem_val",
+    "planned_scenes": 50,
+    "preserve_failed_scenes": true,
+    "smoke_scene_ids": [
+      "38d58a7a31",
+      "5748ce6f01"
+    ],
+    "scene_ids": [
+      "09c1414f1b",
+      "0d2ee665be",
+      "13c3e046d7",
+      "1ada7a0617",
+      "21d970d8de",
+      "25f3b7a318",
+      "27dd4da69e",
+      "286b55a2bf",
+      "31a2c91c43",
+      "3864514494",
+      "38d58a7a31",
+      "3db0a1c8f3",
+      "3e8bba0176",
+      "3f15a9266d",
+      "40aec5fffa",
+      "45b0dac5e3",
+      "5748ce6f01",
+      "578511c8a9",
+      "5942004064",
+      "5eb31827b7",
+      "5ee7c22ba0",
+      "5f99900f09",
+      "6115eddb86",
+      "7831862f02",
+      "7b6477cb95",
+      "7bc286c1b6",
+      "825d228aec",
+      "9071e139d9",
+      "99fa5c25e1",
+      "a24f64f7fb",
+      "a8bf42d646",
+      "a980334473",
+      "ac48a9b736",
+      "acd95847c5",
+      "b0a08200c9",
+      "bcd2436daf",
+      "bde1e479ad",
+      "c49a8c6cff",
+      "c4c04e6d6c",
+      "c50d2d1d42",
+      "c5439f4607",
+      "cc5237fd77",
+      "d755b3d9d8",
+      "e398684d27",
+      "e7af285f7d",
+      "f2dc06b1d2",
+      "f3685d06a9",
+      "f3d64c30f8",
+      "f9f95681fd",
+      "fb5a96b1a2"
+    ]
+  },
+  "render_export": {
+    "room_runs": "outputs/icra2027/{freeze_id}/fidelity/room_runs",
+    "source_builds": {
+      "factory": "outputs/{scene_id}_factory",
+      "auto": "outputs/{scene_id}_auto"
+    },
+    "allow_legacy_metrics_as_measurements": false
+  },
+  "leakage_remediation": {
+    "schema_version": 1,
+    "official_split_artifact": "dslr/train_test_lists.json",
+    "output_root": "outputs/icra2027/{freeze_id}/fidelity/replacements",
+    "require_train_only_generation": true,
+    "require_accepted_alignment": true,
+    "model_inputs": {
+      "trellis_source": {
+        "path": ".cache/icra2027/e2-replacements/trellis-source-442aa1e1afb9014e80681d3bf604e8d728a86ee7",
+        "upstream_repository": "microsoft/TRELLIS",
+        "upstream_commit": "442aa1e1afb9014e80681d3bf604e8d728a86ee7",
+        "flexicubes_commit": "815e075a2a400d06c48d94c347674344ed6ae5c5",
+        "file_count": 223,
+        "tree_sha256": "df4059255d1a72a6d82a76f2b9c97f034e1c1fd9c06ddec782bd8282be3f8401"
+      },
+      "trellis_snapshot": {
+        "path": ".cache/icra2027/e2-replacements/trellis-image-large-25e0d31ffbebe4b5a97464dd851910efc3002d96",
+        "upstream_revision": "25e0d31ffbebe4b5a97464dd851910efc3002d96",
+        "file_count": 13,
+        "tree_sha256": "8daaba378d461e5ac0a7771c92d8ee70abfe7a95b0bb54149b44d3f12ea79d41"
+      },
+      "dinov2_source": {
+        "path": ".cache/icra2027/e2-replacements/torch/hub/facebookresearch_dinov2_main",
+        "upstream_repository": "facebookresearch/dinov2",
+        "upstream_commit": null,
+        "upstream_commit_reason": "torch.hub branch cache did not retain an upstream commit; the full 203-file source tree is content-addressed below",
+        "file_count": 203,
+        "tree_sha256": "bad25746e5bccefe9a039b7ebe5537c72765edc9be6654881699298f37f0cc4d"
+      },
+      "dinov2_checkpoint": {
+        "path": ".cache/icra2027/e2-replacements/torch/hub/checkpoints/dinov2_vitl14_reg4_pretrain.pth",
+        "size_bytes": 1217607321,
+        "sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51"
+      },
+      "sam3_source": {
+        "path": ".cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9",
+        "upstream_repository": "facebookresearch/sam3",
+        "upstream_commit": "8e451d5eb43c817b64ae7577fb7b9ae223db88a9",
+        "package_version": "0.1.0",
+        "file_count": 523,
+        "tree_sha256": "73c418359155da5da839853613260e84f48e5bd8e3d494c6614ca9e561a187ae"
+      },
+      "sam3_checkpoint": {
+        "path": ".cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt",
+        "upstream_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+        "size_bytes": 3450062241,
+        "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+      }
+    },
+    "bundles": [
+      {
+        "bundle_id": "0d2ee665be-auto",
+        "scene_id": "0d2ee665be",
+        "mode": "auto",
+        "legacy_source": "outputs/0d2ee665be_auto",
+        "targets": [
+          {
+            "legacy_index": 6,
+            "gt_object_id": 1007,
+            "label": "bottle",
+            "old_frame": "DSC00152.JPG"
+          },
+          {
+            "legacy_index": 26,
+            "gt_object_id": 1028,
+            "label": "bottle",
+            "old_frame": "DSC00155.JPG"
+          }
+        ]
+      },
+      {
+        "bundle_id": "0d2ee665be-factory",
+        "scene_id": "0d2ee665be",
+        "mode": "factory",
+        "legacy_source": "outputs/0d2ee665be_factory",
+        "targets": [
+          {
+            "legacy_index": 4,
+            "gt_object_id": 16,
+            "label": "mug",
+            "old_frame": "DSC00154.JPG"
+          }
+        ]
+      },
+      {
+        "bundle_id": "286b55a2bf-auto",
+        "scene_id": "286b55a2bf",
+        "mode": "auto",
+        "legacy_source": "outputs/286b55a2bf_auto",
+        "targets": [
+          {
+            "legacy_index": 2,
+            "gt_object_id": 1002,
+            "label": "bottle",
+            "old_frame": "DSC02539.JPG"
+          },
+          {
+            "legacy_index": 10,
+            "gt_object_id": 1010,
+            "label": "bottle",
+            "old_frame": "DSC02538.JPG"
+          },
+          {
+            "legacy_index": 27,
+            "gt_object_id": 1027,
+            "label": "bottle",
+            "old_frame": "DSC02542.JPG"
+          }
+        ]
+      },
+      {
+        "bundle_id": "286b55a2bf-factory",
+        "scene_id": "286b55a2bf",
+        "mode": "factory",
+        "legacy_source": "outputs/286b55a2bf_factory",
+        "targets": [
+          {
+            "legacy_index": 9,
+            "gt_object_id": 24,
+            "label": "bottle",
+            "old_frame": "DSC02539.JPG"
+          }
+        ]
+      },
+      {
+        "bundle_id": "3f15a9266d-factory",
+        "scene_id": "3f15a9266d",
+        "mode": "factory",
+        "legacy_source": "outputs/3f15a9266d_factory",
+        "targets": [
+          {
+            "legacy_index": 193,
+            "gt_object_id": 232,
+            "label": "book",
+            "old_frame": "DSC07489.JPG"
+          }
+        ]
+      }
+    ]
+  },
+  "room_split": {
+    "name": "official_dslr_test",
+    "unit": "held_out_view",
+    "views_per_scene": 8,
+    "require_official_test": true,
+    "require_paired_filenames": true
+  },
+  "object_split": {
+    "appearance_unit": "held_out_object_view",
+    "geometry_unit": "object",
+    "f1_threshold_mm": 20,
+    "catastrophic_collapse_below": 0.1,
+    "require_independent_registration_surface": true
+  },
+  "room_methods": {
+    "Input scene Gaussian, reconstruction ceiling": {
+      "source_id": "input_scene_gaussian",
+      "records": []
+    },
+    "Factorized composite, GT discovery": {
+      "source_id": "factorized_gt_discovery",
+      "records": []
+    },
+    "Factorized composite, automatic discovery": {
+      "source_id": "factorized_auto_discovery",
+      "records": []
+    },
+    "Composite + Harmonizer Option C": {
+      "source_id": "harmonizer_option_c",
+      "records": []
+    }
+  },
+  "object_methods": {
+    "TRELLIS, best single view": {
+      "source_id": "trellis_best_single_view",
+      "records": []
+    },
+    "ReconViaGen, multi-view": {
+      "source_id": "reconviagen_multi_view",
+      "records": []
+    },
+    "Evidence-selected proposal": {
+      "source_id": "evidence_selected_proposal",
+      "records": []
+    },
+    "Evaluation-only oracle candidate": {
+      "source_id": "evaluation_only_oracle_candidate",
+      "records": []
+    }
+  },
+  "coverage": {
+    "minimum_room_scenes_by_method": {
+      "input_scene_gaussian": 50,
+      "factorized_gt_discovery": 50,
+      "factorized_auto_discovery": 50,
+      "harmonizer_option_c": 0
+    },
+    "minimum_room_views_by_method": {
+      "input_scene_gaussian": 400,
+      "factorized_gt_discovery": 400,
+      "factorized_auto_discovery": 400,
+      "harmonizer_option_c": 0
+    },
+    "minimum_room_views_per_method": 0,
+    "minimum_objects_per_method": 0,
+    "missing_records_are_failures": true
+  },
+  "unavailable_rows": {
+    "harmonizer_option_c": "Depends on E5 and is not fabricated by E2.",
+    "object_fidelity": "Requires leak-free held-out masks and independent evaluation surfaces; legacy summary values are comparison-only."
+  }
+}

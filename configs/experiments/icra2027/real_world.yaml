@@ -1,0 +1,86 @@
+# Reconstructed historical launch roster, not a retrospective paper-ready freeze.
+# Ten attempts across nine labs; CLVR remains even though its alignment aborted.
+schema_version: 2
+freeze_id: inherit
+paper_ready: false
+output_dir: outputs/icra2027/{freeze_id}/real_world
+droid:
+  planned_workspaces: 10
+  roster_path: configs/droid/frozen_episodes.yaml
+  roster_sha256: a972e5c9f5a45d5fa53a483406a6185634b186f1403bb54396baf621b41bc4d9
+  batches:
+  - priority_batch_v1
+  - priority_batch_v2
+  launches:
+  - episode: IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023
+    workspace_id: droid_iprl_thu_aug_24_21_29_53_2023
+    scene_id: droid_iprl_thu_aug_24_21_29_53_2023
+    job_ids:
+    - 706918
+  - episode: AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023
+    workspace_id: droid_autolab_fri_jul_14_16_55_45_2023
+    scene_id: droid_autolab_fri_jul_14_16_55_45_2023
+    job_ids:
+    - 706928
+  - episode: TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023
+    workspace_id: droid_tri_thu_sep_21_17_26_41_2023
+    scene_id: droid_tri_thu_sep_21_17_26_41_2023
+    job_ids:
+    - 706929
+  - episode: RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023
+    workspace_id: droid_rail_tue_oct_24_10_23_40_2023
+    scene_id: droid_rail_tue_oct_24_10_23_40_2023
+    job_ids:
+    - 706930
+  - episode: RPL/success/2023-06-05/Mon_Jun__5_16:11:49_2023
+    workspace_id: droid_rpl_mon_jun__5_16_11_49_2023
+    scene_id: droid_rpl_mon_jun__5_16_11_49_2023
+    job_ids:
+    - 706931
+  - episode: CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023
+    workspace_id: droid_clvr_tue_may__9_02_08_20_2023
+    scene_id: droid_clvr_tue_may__9_02_08_20_2023
+    job_ids:
+    - 707064
+  - episode: IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023
+    workspace_id: droid_iris_mon_apr_17_16_03_25_2023
+    scene_id: droid_iris_mon_apr_17_16_03_25_2023
+    job_ids:
+    - 707065
+  - episode: PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023
+    workspace_id: droid_pennpal_sat_apr_29_20_28_46_2023
+    scene_id: droid_pennpal_sat_apr_29_20_28_46_2023
+    job_ids:
+    - 707066
+  - episode: REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023
+    workspace_id: droid_real_wed_jun__7_11_50_12_2023
+    scene_id: droid_real_wed_jun__7_11_50_12_2023
+    job_ids:
+    - 707067
+  - episode: IPRL/success/2023-10-14/Sat_Oct_14_20:58:47_2023
+    workspace_id: droid_iprl_sat_oct_14_20_58_47_2023
+    scene_id: droid_iprl_sat_oct_14_20_58_47_2023
+    job_ids:
+    - 707068
+phone:
+  minimum_rooms: 3
+  preferred_rooms: 5
+  captures:
+  - capture_id: pilot_a29cccc784
+    workspace_id: video_pilot_a29cccc784
+    scene_id: pilot_a29cccc784
+    video: videos/pilot_a29cccc784.mp4
+    job_ids:
+    - 676860
+    - 677080
+    - 677259
+alignment:
+  translation_unit: cm
+  rotation_unit: degrees
+  held_out_evidence_required: true
+coverage:
+  failures_are_terminal_rows: true
+  missing_rows_are_failures: true
+mode: legacy_audit
+artifact_root: /group/worldcept/PhiRIE/code/SimAny
+raw_root: /group/worldcept/PhiRIE/data/droid/raw

@@ -1,0 +1,1419 @@
+schema_version: 1
+scope: full_e2_sam3_masks
+freeze_id: 20260906-18984b8-v1
+full_protocol:
+  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  bytes: 10979
+  sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
+preparation_inventory:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/preparation_inventory/inventory.json
+  bytes: 71347
+  sha256: 8f0be6a052f55e085d04168ee98e7fc08b52b81f1e128669ed649b85488df214
+preparation_inventory_seal:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/preparation_inventory/seal.json
+  bytes: 135
+  sha256: 8442489b9a7c078344b2d55069d415a4b1c3f672c0e54571772347b17d4d99e0
+preparation_config:
+  path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/execution.yaml
+  bytes: 51968
+  sha256: f28c43d691e8b31d8a6f2c01e4b901255ff10f51c9ef52263e1110d7d6007597
+preparation_contract:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+  bytes: 82558
+  sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+mask_pilot_integrity:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-75431a4-v1/dispatch/independent_completion_gate.json
+  bytes: 490
+  sha256: c3fa5345fdba797043d02e87c0c2e1524acd22e6a547885a1091dcb93e681b64
+mask_pilot_seal: &id001
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-75431a4-v1/fidelity/removal_masks/0d2ee665be/seal.json
+  bytes: 708
+  sha256: c273b088339ce6775ad4cf9db62dbc6b34cfb8a568f87930de1c2ed41fde9363
+mask_pilot_source: 1747719befda5713124552c95f112acd55abc77e
+scene_ids:
+- 09c1414f1b
+- 0d2ee665be
+- 13c3e046d7
+- 1ada7a0617
+- 21d970d8de
+- 25f3b7a318
+- 27dd4da69e
+- 286b55a2bf
+- 31a2c91c43
+- '3864514494'
+- 38d58a7a31
+- 3db0a1c8f3
+- 3e8bba0176
+- 3f15a9266d
+- 40aec5fffa
+- 45b0dac5e3
+- 5748ce6f01
+- 578511c8a9
+- '5942004064'
+- 5eb31827b7
+- 5ee7c22ba0
+- 5f99900f09
+- 6115eddb86
+- 7831862f02
+- 7b6477cb95
+- 7bc286c1b6
+- 825d228aec
+- 9071e139d9
+- 99fa5c25e1
+- a24f64f7fb
+- a8bf42d646
+- a980334473
+- ac48a9b736
+- acd95847c5
+- b0a08200c9
+- bcd2436daf
+- bde1e479ad
+- c49a8c6cff
+- c4c04e6d6c
+- c50d2d1d42
+- c5439f4607
+- cc5237fd77
+- d755b3d9d8
+- e398684d27
+- e7af285f7d
+- f2dc06b1d2
+- f3685d06a9
+- f3d64c30f8
+- f9f95681fd
+- fb5a96b1a2
+planned_objects: 1871
+accepted_objects: 399
+planned_test_views: 400
+rows:
+- scene_id: 09c1414f1b
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 112
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint/seal.json
+      bytes: 3736
+      sha256: 49b963966a6639edfaae5906613ba9913e4b7cdbe325d09a110ecad32b5a638c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/preparation_pilot.yaml
+      bytes: 783
+      sha256: 8358258e148ed16a86abee6bb2f252d2da3444d5caa388b2ab03af65e15c6c1c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/contract/freeze_manifest.json
+      bytes: 14481
+      sha256: 223c4d6eb0b54930ae9fea3900dd9110973d251487389c6e29c660f9edb2aeca
+    producer_commit: 776d37c045fe63647e10b246d0c4ea512ab90a67
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 0d2ee665be
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 29
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/0d2ee665be/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/0d2ee665be/inpaint/seal.json
+      bytes: 1108
+      sha256: f49762d435f4e6467a3ebd65dbb3644cde667cca86e29047e2aff91429cc0cb7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/0d2ee665be.yaml
+      bytes: 718
+      sha256: 7839c3c853f936e5664235aa8f6cce74f00dc890637a73825bbb487ad46f2838
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: REUSE_PILOT
+  mask_context: null
+  mask_seal: *id001
+- scene_id: 13c3e046d7
+  status: NO_ACCEPTED_OBJECTS
+  planned_objects: 1
+  accepted_objects: 0
+  planned_training_views: 0
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/13c3e046d7/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/13c3e046d7/inpaint/seal.json
+      bytes: 330
+      sha256: 41deb74c302f8057274406a4fd78d2f1931a17462474ee52fcfd186f43bf63d6
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/13c3e046d7.yaml
+      bytes: 718
+      sha256: dceeb0084f13025c66c59c9ad917dac8dd98dadf357343e7a6fa2cca9a7d8d69
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: CPU_NO_OP_ZERO_ACCEPTED
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/13c3e046d7.yaml
+    bytes: 5356
+    sha256: 19b877b0289bf153c4300ed4cf710462014f604bb984f5978f607b52fa358fb2
+- scene_id: 1ada7a0617
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 25
+  accepted_objects: 8
+  planned_training_views: 24
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/1ada7a0617/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/1ada7a0617/inpaint/seal.json
+      bytes: 3442
+      sha256: 3e989158daa939b8d3f92f1a91624cc4fce7a77bc5ddc24e3539505784e4c51f
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/1ada7a0617.yaml
+      bytes: 719
+      sha256: b6e382f845c1e50b56f20b7689506e8b558671b5d7224245ba2c5f0365e27692
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/1ada7a0617.yaml
+    bytes: 5357
+    sha256: c49184244c7ab2bb2ab5a75af8b2872f364747b88e8c72a0a3a584a2a792e076
+- scene_id: 21d970d8de
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 22
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/21d970d8de/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/21d970d8de/inpaint/seal.json
+      bytes: 1013
+      sha256: c892f24cff6228dfa7eb372b4087b8d2e8fc4896bbda226c38e8a55d0e79f48c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/21d970d8de.yaml
+      bytes: 719
+      sha256: a9d098f2a3b63848c3fab3f0ccfdf2f71682fedd74c8e3ab3eb58b57e31e2de0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 25f3b7a318
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 51
+  accepted_objects: 11
+  planned_training_views: 33
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/25f3b7a318/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/25f3b7a318/inpaint/seal.json
+      bytes: 4609
+      sha256: ac15d78505075191022506517f7300ed709e92d90fea83dbdc063f8d9bfc9782
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/25f3b7a318.yaml
+      bytes: 718
+      sha256: fd52c767684b194d350d9cf73d255c056e39d4b3a1421c6817ae249deb34a9df
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/25f3b7a318.yaml
+    bytes: 5357
+    sha256: dc1d8a20a5969c200c3342507c7fc86b1b8caf7e5fb7ab31b981444a9001c67b
+- scene_id: 27dd4da69e
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 7
+  accepted_objects: 1
+  planned_training_views: 3
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/27dd4da69e/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/27dd4da69e/inpaint/seal.json
+      bytes: 719
+      sha256: c19cd04045d1daad2b4e5656639c1379a24f2c848c0d6e9bf5a977bb3453c14c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/27dd4da69e.yaml
+      bytes: 718
+      sha256: 1d3505b2408fda1e0225833768440f64654a95466679db841279039002937ebc
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/27dd4da69e.yaml
+    bytes: 5356
+    sha256: ecc5c0eab0ab3f1b128519ba482097a99646403102dd1a498c960c5805b9e98b
+- scene_id: 286b55a2bf
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 34
+  accepted_objects: 10
+  planned_training_views: 30
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/286b55a2bf/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/286b55a2bf/inpaint/seal.json
+      bytes: 4220
+      sha256: d3ba6d1672f125f829c54afd8272a981a24d553fbbf95106b74a44cb793b357c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/286b55a2bf.yaml
+      bytes: 718
+      sha256: b3a2be1dafc16a35c25c353755ca97ba57a595153bcb1d6d6dd7e6e75508b1d4
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/286b55a2bf.yaml
+    bytes: 5357
+    sha256: df8b3c4619d03e4c2e25a92b928f1d1a1ac659da8987016b267b938f62313975
+- scene_id: 31a2c91c43
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 3
+  accepted_objects: 1
+  planned_training_views: 3
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/31a2c91c43/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/31a2c91c43/inpaint/seal.json
+      bytes: 719
+      sha256: b9d3dcb901b25d8757c8f3db9355bf9552476ef2937b9b34ab70fdc2fc780c2c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/31a2c91c43.yaml
+      bytes: 717
+      sha256: d5d7d2675d52680e1d9c6f9531634420ae358b8f5fbb187e8ee8bec6d0c4ae86
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/31a2c91c43.yaml
+    bytes: 5356
+    sha256: 20a5045f368c74b72dd4f7d9401a26e26add8b4e638f4820bb107a912cec23b4
+- scene_id: '3864514494'
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 22
+  accepted_objects: 7
+  planned_training_views: 21
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3864514494/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3864514494/inpaint/seal.json
+      bytes: 3053
+      sha256: 2af05c6c9818c68d18f9f4387cda98f095bda79f5e0ec5f2f39e20e4f1d80b49
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3864514494.yaml
+      bytes: 720
+      sha256: 8a9af59e37447b63ef81b155176124e31a23dd09a83537facfabacf16078a29a
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/3864514494.yaml
+    bytes: 5359
+    sha256: 0422c7005e41184a3d8a974af077373635a001095717704370002d0f8a66b9d0
+- scene_id: 38d58a7a31
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 15
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/38d58a7a31/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/38d58a7a31/inpaint/seal.json
+      bytes: 1108
+      sha256: c2036af6b452f6fc4f7c482c5129b553dab3ef90de27670300dd2d35aaf6b127
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/38d58a7a31.yaml
+      bytes: 719
+      sha256: 2a70c88322f6b09046287503af6d964188976136828c6642b5d3bab41b28ea5b
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/38d58a7a31.yaml
+    bytes: 5357
+    sha256: 4f7a5c3faf2f7596be7ff3810981b0033fbce2398532789de1100ec94dd0928d
+- scene_id: 3db0a1c8f3
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 54
+  accepted_objects: 5
+  planned_training_views: 15
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3db0a1c8f3/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3db0a1c8f3/inpaint/seal.json
+      bytes: 2275
+      sha256: 4c86bd5e1d8dc7688bdeaf03ccf66fe9599bbf57d715e54988283899647def99
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3db0a1c8f3.yaml
+      bytes: 718
+      sha256: 5a0c0c15ad25658f9fd74967bf120c4890ac4f79a88caec3000023dd1df2d3c0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/3db0a1c8f3.yaml
+    bytes: 5357
+    sha256: 7ff97559843e59afc4748e4a60c8b4184c9e40ae6a7bd5069ae0889333c627c4
+- scene_id: 3e8bba0176
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 51
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3e8bba0176/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3e8bba0176/inpaint/seal.json
+      bytes: 3736
+      sha256: 4e6eed3474884516d823c69cce61bfcf772ab5ab6f14e08c14599832d9c94e28
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3e8bba0176.yaml
+      bytes: 718
+      sha256: f54a1bd4ee8691aea950d627ee57671193ba2117afe00fc4dd49974674bbf270
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 3f15a9266d
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 108
+  accepted_objects: 21
+  planned_training_views: 63
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3f15a9266d/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3f15a9266d/inpaint/seal.json
+      bytes: 8404
+      sha256: cf11f6081fca3291f60ff4d4af5ca19180eb3f0c064f8dc0efa748411b3b3224
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3f15a9266d.yaml
+      bytes: 719
+      sha256: 4d740b7671c55a1b9f2410df27d8dca80bcefbc937da6cd9243a29217f71a970
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 40aec5fffa
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 10
+  accepted_objects: 4
+  planned_training_views: 12
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/40aec5fffa/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/40aec5fffa/inpaint/seal.json
+      bytes: 1791
+      sha256: 4f8e1bd099abd37a1f4a08e508c5f3156f60232aebedc9d37469eadca9794ccd
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/40aec5fffa.yaml
+      bytes: 718
+      sha256: 4c539a835f0d1826abe27ee524fd718cb63fabdfcf95056426afeae5f04460e7
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 45b0dac5e3
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 9
+  accepted_objects: 3
+  planned_training_views: 9
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/45b0dac5e3/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/45b0dac5e3/inpaint/seal.json
+      bytes: 1497
+      sha256: 7ce0b84319ad91390f497f46cc5b9030ce55784851e8bc9569716f14a06f0a13
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/45b0dac5e3.yaml
+      bytes: 718
+      sha256: 6e04ae3676993bf9e11696884e2f765dd5a248dc2723cc22b633cbb294972376
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/45b0dac5e3.yaml
+    bytes: 5357
+    sha256: 7d366f8f3d944404d6a6f35e539608b9b0a20f0a66447ffc9011b8aa9605b7ea
+- scene_id: 5748ce6f01
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 17
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5748ce6f01/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5748ce6f01/inpaint/seal.json
+      bytes: 1108
+      sha256: 6c55b256c1e2cec3c5b53a8422c130a966c4e589575427fffc5e58e4c1ecc545
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5748ce6f01.yaml
+      bytes: 719
+      sha256: 880dcdc56f0605288dedd9f4060e1913e49d2e3b6ce400df96ae71f02e40c08a
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/5748ce6f01.yaml
+    bytes: 5357
+    sha256: 72ce5cd99aadabe17d32a0d66a9ac9cce92e6c3abe4019706937dcdaa8e18150
+- scene_id: 578511c8a9
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 11
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/578511c8a9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/578511c8a9/inpaint/seal.json
+      bytes: 1108
+      sha256: 20f76d7f50c8ed70b1ead9a8b512c6ac2aca0be1cc435566d8f59e391eee6844
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/578511c8a9.yaml
+      bytes: 718
+      sha256: 21ba8ffc09f825533cb5dba694670ba5ff781a8853fcc7fa06e1fbd6a61a9afd
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/578511c8a9.yaml
+    bytes: 5357
+    sha256: d6705e82d213590dbfafc9091eadab3b7441d85f5cd681aafd6ea732656d2a58
+- scene_id: '5942004064'
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 48
+  accepted_objects: 11
+  planned_training_views: 33
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5942004064/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5942004064/inpaint/seal.json
+      bytes: 4609
+      sha256: 807d368416cb661288bfb93d366c6ad03173c52de34d7503b675a7c4e7d1a477
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5942004064.yaml
+      bytes: 720
+      sha256: c7e11503cf07715299b638c8190ef61982f06f89b232d819b0db89a117cf5ecb
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/5942004064.yaml
+    bytes: 5359
+    sha256: dbad36bbe647879229cf46beca3b114089f8ee09aa5e1d63ee8d5d24c7cc7436
+- scene_id: 5eb31827b7
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 15
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5eb31827b7/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5eb31827b7/inpaint/seal.json
+      bytes: 1108
+      sha256: f14dcbb0edcf2c46d423d0bf138b26b3ff55d24332a029e3c6fad60507858451
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5eb31827b7.yaml
+      bytes: 718
+      sha256: e5aa200cdeeee23edf252b9469cb3f8419474849407d7a4a66e02defcb8e87d0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/5eb31827b7.yaml
+    bytes: 5357
+    sha256: 0c1ecbbed84e8da26545365f75b147ec838052378b3a21e82adb84127091ca54
+- scene_id: 5ee7c22ba0
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 46
+  accepted_objects: 6
+  planned_training_views: 18
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5ee7c22ba0/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5ee7c22ba0/inpaint/seal.json
+      bytes: 2664
+      sha256: ef5ba0077e7f05ce9e26c433bf8b918aae9e410acfaad9514f106492a701e3e2
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5ee7c22ba0.yaml
+      bytes: 718
+      sha256: 15a42c9ec797b16d6c7d5edfff4240f82b8a89380fd1e80e94fbe9565fe488a3
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/5ee7c22ba0.yaml
+    bytes: 5357
+    sha256: 21d99139edc1320e35bdb1e01fda9fac28aaa9642e491212cf14cf54d9b2e50f
+- scene_id: 5f99900f09
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 81
+  accepted_objects: 17
+  planned_training_views: 51
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5f99900f09/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5f99900f09/inpaint/seal.json
+      bytes: 6563
+      sha256: cda02c8a5927e5d171d6e6a92407b7eb3c5627ec5723e5be106b092417f5f1d0
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5f99900f09.yaml
+      bytes: 718
+      sha256: 5b3c82efbac490486d4ae5bd0fc83e624b55f7fa0c573714de70294f9644b76c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 6115eddb86
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 21
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/6115eddb86/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/6115eddb86/inpaint/seal.json
+      bytes: 3831
+      sha256: 01062368015222664a3f759cd7c1c49f29b1bf92db13e444e3fb989ff4889d11
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/6115eddb86.yaml
+      bytes: 718
+      sha256: f3d7ad413445d8d5a8ed221c85e42c11d223f13e0a8880ca553d01af40b197b6
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/6115eddb86.yaml
+    bytes: 5357
+    sha256: 2b779e91639c1aa21e555fe8c103179b970faf698c304f75747f0c4af0f6a0c8
+- scene_id: 7831862f02
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 35
+  accepted_objects: 6
+  planned_training_views: 18
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7831862f02/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7831862f02/inpaint/seal.json
+      bytes: 2664
+      sha256: b6f2ae8df61539cacf57e2283052d9eb3aa52be17ffcee1bbc29c3b74a460a7a
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7831862f02.yaml
+      bytes: 718
+      sha256: f279e58a6e909457dcdbe99e0bbfb670d7d6e30d8dee94a2d6e696ecde742915
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/7831862f02.yaml
+    bytes: 5357
+    sha256: d628dfbb3b5f48ab02348d7eeeac5ec4ecd95034f4cd36a06a5b90354f990518
+- scene_id: 7b6477cb95
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 31
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7b6477cb95/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7b6477cb95/inpaint/seal.json
+      bytes: 3736
+      sha256: 5ff3dac76c90b97086bd09fd0af275c23aad1edae0e0113b91b49d1009017c94
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7b6477cb95.yaml
+      bytes: 718
+      sha256: a00ea02c6d5a3f13b1d03276c99515f202aea78b0c1157cd3b01547b5ed060a8
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 7bc286c1b6
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 12
+  accepted_objects: 6
+  planned_training_views: 18
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint/seal.json
+      bytes: 2664
+      sha256: 615f77162a898590c8fc92d509a32885239d7b599d40e425c72a3f86e7d5f593
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7bc286c1b6.yaml
+      bytes: 718
+      sha256: d5e705fd7a52430d559f57becc13cfe6d7766f7e2c1ef01e16621f7fd6fde7f1
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/7bc286c1b6.yaml
+    bytes: 5357
+    sha256: a5a82fc947557a61ed87f4b4ace88f09c2a7bcdef1667eea97d7fef3155bcd7c
+- scene_id: 825d228aec
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 18
+  accepted_objects: 3
+  planned_training_views: 9
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/825d228aec/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/825d228aec/inpaint/seal.json
+      bytes: 1497
+      sha256: db5f3c49b8bade2f73c84c60253ba5b33aa89429aa9f2f98ec08a0fa0e097ff7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/825d228aec.yaml
+      bytes: 718
+      sha256: c0e8afb460d75f1081c977730493574fd4f65fc169061ed3b8d2ba5a1ed41104
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/825d228aec.yaml
+    bytes: 5357
+    sha256: 8e0b3cd4ccaeca5a4f00714ee5cfb69c894f0c9b71ac47aa7fca48828441ac2f
+- scene_id: 9071e139d9
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 208
+  accepted_objects: 63
+  planned_training_views: 189
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/9071e139d9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/9071e139d9/inpaint/seal.json
+      bytes: 24647
+      sha256: 79ea26d390833c635db642fce242027f4d1ee73d850efc602eab47ba8bf05118
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/9071e139d9.yaml
+      bytes: 719
+      sha256: 187cb72f571762b0982fe64976eeaf32dfd5da2bdc868406a3cb1bb2d2241ef6
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: 99fa5c25e1
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 36
+  accepted_objects: 5
+  planned_training_views: 15
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/99fa5c25e1/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/99fa5c25e1/inpaint/seal.json
+      bytes: 2275
+      sha256: 02c9ce2d04c3f0d034fa872b8896c13b405cb2d6bb08275e2b457c3c11c2c9df
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/99fa5c25e1.yaml
+      bytes: 718
+      sha256: 5d3dbfbf4583e56473b065b71ab8a629f65d34a08f2904028ef64e8efa774d42
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/99fa5c25e1.yaml
+    bytes: 5357
+    sha256: f738e1e77e5cd6b4003aeb196c5d95a34a7d3f86b1ff0c93190e4bcc3cc2378d
+- scene_id: a24f64f7fb
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 15
+  accepted_objects: 4
+  planned_training_views: 12
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a24f64f7fb/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a24f64f7fb/inpaint/seal.json
+      bytes: 1886
+      sha256: eeb16134cec7aedebbe45833a05e4b4591418d94562532e6497f309de0bfd894
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a24f64f7fb.yaml
+      bytes: 718
+      sha256: 6638a858472a17db7d9be0eda948a6207304ee60675a442e2a3d1d28bb77999c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/a24f64f7fb.yaml
+    bytes: 5357
+    sha256: 9945410c848d6e104b62cf56451b1a6ad122607c41d4db8290f083579fb45393
+- scene_id: a8bf42d646
+  status: NO_ACCEPTED_OBJECTS
+  planned_objects: 2
+  accepted_objects: 0
+  planned_training_views: 0
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a8bf42d646/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a8bf42d646/inpaint/seal.json
+      bytes: 330
+      sha256: fe1e4e8df861c6d009d6ae1b9670c067cc1db0c7e87ba9e2a700b176d505cbd3
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a8bf42d646.yaml
+      bytes: 718
+      sha256: 6be324941b08e0c5d8766231b2f0428e7cf056ce49968ca857ee2fe8dcbd0439
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: CPU_NO_OP_ZERO_ACCEPTED
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/a8bf42d646.yaml
+    bytes: 5356
+    sha256: 7fdd70bb3344c7771d2f6548fb05440c4d7bdaf5d803f9aa44a851b75bbbd076
+- scene_id: a980334473
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 22
+  accepted_objects: 10
+  planned_training_views: 30
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a980334473/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a980334473/inpaint/seal.json
+      bytes: 4220
+      sha256: d23af746c720d5077e3a089415ce8b44439f9344f75ad522f5706f542833934c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a980334473.yaml
+      bytes: 718
+      sha256: b461ac6709eccb92b623b0b69bb871f932cea298a86bbb3ebf5256fd81cfecb8
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/a980334473.yaml
+    bytes: 5357
+    sha256: 8d57b76d49d99f24c8ccdac8b1a3e3d5ec6293182d9330a13026209b3439e17a
+- scene_id: ac48a9b736
+  status: NO_ACCEPTED_OBJECTS
+  planned_objects: 1
+  accepted_objects: 0
+  planned_training_views: 0
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/ac48a9b736/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/ac48a9b736/inpaint/seal.json
+      bytes: 330
+      sha256: f236e28d91fde2b74810bee51003565cfda4db0c9443a732607044a7e34694d7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/ac48a9b736.yaml
+      bytes: 718
+      sha256: 418bd8fc82a375c771c509e2699136fc243a9e549fd7d39e6a5973c25338f021
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: CPU_NO_OP_ZERO_ACCEPTED
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/ac48a9b736.yaml
+    bytes: 5356
+    sha256: 4f5e59aa4e24115032e67720c541b9df5155f222c90f5da75738b46c0df55646
+- scene_id: acd95847c5
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 96
+  accepted_objects: 19
+  planned_training_views: 57
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/acd95847c5/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/acd95847c5/inpaint/seal.json
+      bytes: 7531
+      sha256: cd1611aecd39953f271e22bd4079ef1481b245e631b70347a2df8c1484187a4f
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/acd95847c5.yaml
+      bytes: 719
+      sha256: 95c3bde757ec3b587d19e26b7a422ac7135ff70f5bc61a221ab3db78ae72b859
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+- scene_id: b0a08200c9
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 22
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/b0a08200c9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/b0a08200c9/inpaint/seal.json
+      bytes: 3831
+      sha256: a6ac39c33c629a4136d9f8a7e32c6b7d00fec8ce5311609a5ecdb5f890d0deb9
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/b0a08200c9.yaml
+      bytes: 718
+      sha256: 38c12944339f70cb4dd358b1be068908cbc4f4cc92e87acdf9f7c2d76aed4d62
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/b0a08200c9.yaml
+    bytes: 5357
+    sha256: e5684bdd6e2e51a324d0f7b3eaba300884d911759256640ced8d53e4f427e3ac
+- scene_id: bcd2436daf
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 10
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/bcd2436daf/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/bcd2436daf/inpaint/seal.json
+      bytes: 1108
+      sha256: 90bec3624f667f2a14e799e7c3e03d052ff5567d041985cf8c27a1bd171f4ad7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/bcd2436daf.yaml
+      bytes: 718
+      sha256: f80fb3dd2e06bc6ce0a09bd3ccb73b2cd0db00960db37dc9b547945e4780b60b
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/bcd2436daf.yaml
+    bytes: 5359
+    sha256: d20b6b39161136834ce0927716600c6f61d8c5701f79f3b42d37bb429c141aac
+- scene_id: bde1e479ad
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 30
+  accepted_objects: 3
+  planned_training_views: 9
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/bde1e479ad/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/bde1e479ad/inpaint/seal.json
+      bytes: 1497
+      sha256: 7e7c8e3208d773b061e0e9db287defe695e7025dcabb8dcd0c4d2bc445b719e9
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/bde1e479ad.yaml
+      bytes: 719
+      sha256: 80260f1bb62e6ac1e1b28a5945b6f84d969640c7b3ef0b2b9a123eed104674a5
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/bde1e479ad.yaml
+    bytes: 5357
+    sha256: 927350646fae81560c8d34552495e0665abb9975898d972fb3c4822c80995ac5
+- scene_id: c49a8c6cff
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 46
+  accepted_objects: 10
+  planned_training_views: 30
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c49a8c6cff/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c49a8c6cff/inpaint/seal.json
+      bytes: 4220
+      sha256: daec37bfe08417a0f9d36fdd19f0e8c543b59b80ac27446a924a448bc47ef752
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c49a8c6cff.yaml
+      bytes: 718
+      sha256: e06e0e42269518c66f68e205134bda91c66b219dfc5dfe271d25baf42f8b8c3e
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/c49a8c6cff.yaml
+    bytes: 5359
+    sha256: 7e135a6f2725ac539dcca52a3d963768bf7e8daba1b4def68d1d814eb86e6788
+- scene_id: c4c04e6d6c
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 25
+  accepted_objects: 2
+  planned_training_views: 6
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/c4c04e6d6c/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/c4c04e6d6c/inpaint/seal.json
+      bytes: 1108
+      sha256: 54d416792c675761e12461bf826891fad64b42b7bb21fde183219a6b86af8045
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/c4c04e6d6c.yaml
+      bytes: 719
+      sha256: ad9b574315aa800e199a2ea3ca88d6d34910766bf70b51bcfeeb185746791918
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/c4c04e6d6c.yaml
+    bytes: 5357
+    sha256: 7bdb3e24f5dfade42d47ed9307e893105ca5d098b4cb8b525d9e618c688ab0e7
+- scene_id: c50d2d1d42
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 37
+  accepted_objects: 10
+  planned_training_views: 30
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c50d2d1d42/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c50d2d1d42/inpaint/seal.json
+      bytes: 4220
+      sha256: 0222f7870a62fb07a476034772ea170b10f793bd5ef5a66f9414e085e3e71fe3
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c50d2d1d42.yaml
+      bytes: 718
+      sha256: 563c1da0e3990974cf8a7fd7b6c1bcf6a595aaeb8c7bb25a42125a099935d41c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/c50d2d1d42.yaml
+    bytes: 5359
+    sha256: d96938f81a650cd132f635d635909eaaed02afe8869b3dc77830071516480f31
+- scene_id: c5439f4607
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 36
+  accepted_objects: 9
+  planned_training_views: 27
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c5439f4607/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/c5439f4607/inpaint/seal.json
+      bytes: 3831
+      sha256: 0e7e575ad59831bf4cb9f3a8b384bfd31e1d17f64bea53639769ab35cc6959c0
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c5439f4607.yaml
+      bytes: 718
+      sha256: 96cdec333e3d7e949c0fe572e6b276ec4bebf8b38932b81c3584f5745bf89acd
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/c5439f4607.yaml
+    bytes: 5359
+    sha256: de02f2fdfb8a93386b3258d24ae56fa1ed13685e113ffc36f8c1f9b48ec9de63
+- scene_id: cc5237fd77
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 67
+  accepted_objects: 27
+  planned_training_views: 81
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/cc5237fd77/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/cc5237fd77/inpaint/seal.json
+      bytes: 10833
+      sha256: 54fbf7ecd421bdc8515fbeaaa715db14592819ebd1a9f2aeb364f73fb9fb301c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/cc5237fd77.yaml
+      bytes: 718
+      sha256: 357bcef6e5d03b8011afbe7d53c02f6778d34ea2c4523fa6e2146e278d03afd7
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/cc5237fd77.yaml
+    bytes: 5360
+    sha256: 339d23e3b8cbbeda144c67df0cbdd973ad9ab62aba54b84a3585cbf973898122
+- scene_id: d755b3d9d8
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 91
+  accepted_objects: 20
+  planned_training_views: 60
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/d755b3d9d8/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/d755b3d9d8/inpaint/seal.json
+      bytes: 8110
+      sha256: dccc78bef585295b8499e90f14a30e27aea1447d41bbafe47bbef40e0b712faa
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/d755b3d9d8.yaml
+      bytes: 719
+      sha256: 223450a8b4d1472d393a2ac0aafec75272a023671c357bbd8125cb7f3a71a4d4
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/d755b3d9d8.yaml
+    bytes: 5359
+    sha256: f92bc35ae1779daaeaf9cb8c668bd1b30a587e61c533e03d3ef03e3fe3de7530
+- scene_id: e398684d27
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 37
+  accepted_objects: 6
+  planned_training_views: 18
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/e398684d27/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/e398684d27/inpaint/seal.json
+      bytes: 2664
+      sha256: 453e075bca62ccfbb97185b297a21933686c9e6a9b1d4976ff57d2d3249b60c6
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/e398684d27.yaml
+      bytes: 718
+      sha256: d5dab2e6bbe60400e30ca3d3846e919739348ae91398564e6c779d70170d785f
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/e398684d27.yaml
+    bytes: 5359
+    sha256: 3a388a01a6e24b67ad7db9bfe9383e0f99133d736927d1069f8655fe8c0bd3c8
+- scene_id: e7af285f7d
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 28
+  accepted_objects: 3
+  planned_training_views: 9
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/e7af285f7d/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/e7af285f7d/inpaint/seal.json
+      bytes: 1497
+      sha256: fde53fcc4465f875d4ecf8fce28790653da33da9506133b14383f013ab4b4187
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/e7af285f7d.yaml
+      bytes: 718
+      sha256: 2b83075bc72bc00884ee56481f8d14876b87a2cbb18e3476898ab8ee8b2708cb
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/e7af285f7d.yaml
+    bytes: 5357
+    sha256: 8c21e199bb61ac9dbaa66e163b3937886267f49a2c2dde4f816bd4dc0e068b32
+- scene_id: f2dc06b1d2
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 17
+  accepted_objects: 4
+  planned_training_views: 12
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f2dc06b1d2/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f2dc06b1d2/inpaint/seal.json
+      bytes: 1886
+      sha256: abb4aaddf04c6ec4c35f75cf87499d5a8c41374bcb9e1a0e97b3abbe8a1764e7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f2dc06b1d2.yaml
+      bytes: 718
+      sha256: fea522fe7831e6195f43a30007ec0ca6228d2b8a62cb04b7f63e6c82deac935c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/f2dc06b1d2.yaml
+    bytes: 5359
+    sha256: fbe6e7530cfe15cbadec544ed2e235219b6911e091e3c6dfe4b7e6cf73294f53
+- scene_id: f3685d06a9
+  status: NO_ACCEPTED_OBJECTS
+  planned_objects: 1
+  accepted_objects: 0
+  planned_training_views: 0
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/f3685d06a9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/f3685d06a9/inpaint/seal.json
+      bytes: 330
+      sha256: cb8b65d0108fc5d7de007b81dba816fd20e15adb3c6865b3c5582587a292a641
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/f3685d06a9.yaml
+      bytes: 717
+      sha256: 7eb23340e734f7bc9f6bd29855587b3fc254507990f6a3bb8beddd302bfba5a1
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: CPU_NO_OP_ZERO_ACCEPTED
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/f3685d06a9.yaml
+    bytes: 5356
+    sha256: 4e0301662732da077303f3cb1df544e8342b7a63f79ae8544c55ccecfd9e4c3b
+- scene_id: f3d64c30f8
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 36
+  accepted_objects: 5
+  planned_training_views: 15
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f3d64c30f8/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f3d64c30f8/inpaint/seal.json
+      bytes: 2275
+      sha256: bb0f7b9480979ec7bb0d264f1cc943414374a18c4ee9eb0bdd566e5767ea4212
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f3d64c30f8.yaml
+      bytes: 718
+      sha256: bdbbc5a6b1995745e5e39e305153b94cdb090c77bcf4a2d6bc4a7e3a3c7b7da4
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/f3d64c30f8.yaml
+    bytes: 5359
+    sha256: e9e2c181a6c71704b1a5651a4d00e8c61cda1c50d1413769f5438789a278fa4d
+- scene_id: f9f95681fd
+  status: STRUCTURALLY_FILLABLE
+  planned_objects: 31
+  accepted_objects: 4
+  planned_training_views: 12
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f9f95681fd/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/fidelity/removal/f9f95681fd/inpaint/seal.json
+      bytes: 1886
+      sha256: 57648ca24559948f1e6b2e415cb76eb3b88280f8ee13939fdd6c92ab0795743e
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f9f95681fd.yaml
+      bytes: 718
+      sha256: 35b89c592ae1d55011e969f3e8444e1d9f543c5fa199ff3fc7685be3e39bb9cc
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v1/contract/freeze_manifest.json
+      bytes: 82558
+      sha256: cc0f037dde1fd72da1f5fa07c5226dc2731f58fedd87a29bf141dc14606a7994
+    producer_commit: 59c823d4f117c5203753f504a2dc7efb36c93456
+  planned_test_views: 8
+  paper_ready: false
+  action: RUN_SAM3
+  mask_context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-background-models/configs/experiments/icra2027/e2_full_masks/f9f95681fd.yaml
+    bytes: 5359
+    sha256: f51c96c5e15de3ad9723756c2d1ccb76fb600570a31864500961795a9e8b33cb
+- scene_id: fb5a96b1a2
+  status: BLOCKED_UNFILLABLE_ACCEPTED
+  planned_objects: 89
+  accepted_objects: 16
+  planned_training_views: 48
+  preparation:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/fb5a96b1a2/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/fb5a96b1a2/inpaint/seal.json
+      bytes: 6269
+      sha256: 4f627e0728e4c3429697f538da74386cc1de96f7e51ff62c907716b92c6843eb
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/fb5a96b1a2.yaml
+      bytes: 718
+      sha256: e71ffeb452d634319d5fb3b597a425a13bf41789fab6eaa99cd582ff4b3ee6ba
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  planned_test_views: 8
+  paper_ready: false
+  action: NOT_RUN_STRUCTURALLY_BLOCKED
+  mask_context: null
+  missing_test_views: 8
+paper_ready: false
+official_test_images_read: 0
+thresholds_changed: false
+zero_accepted_is_successful_construction: false

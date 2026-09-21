@@ -1,0 +1,26 @@
+{
+ "n_instances": 1,
+ "tier_A": 0,
+ "tier_B": 1,
+ "tier_C_rejected": 0,
+ "sim_stable": 1,
+ "yield_AB": 1.0,
+ "mean_f1_20_AB": 0.6,
+ "objects": [
+  {
+   "index": 0,
+   "label": "glass bottle",
+   "gt_object_id": 1,
+   "tier": "B",
+   "f1_20": 0.6,
+   "f1_40": 0.8,
+   "chamfer_mm": 5.0,
+   "rejected": null,
+   "drop_test": {
+    "drift_m": 0.005,
+    "sunk": false,
+    "stable": true
+   }
+  }
+ ]
+}

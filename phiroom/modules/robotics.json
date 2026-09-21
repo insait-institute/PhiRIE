@@ -1,0 +1,37 @@
+{
+  "id": "robotics",
+  "branch": "module/robotics-v2",
+  "description": "Robot task construction and policy evaluation",
+  "inputs": [
+    "simulation scene; task targets; policy checkpoint when evaluating"
+  ],
+  "outputs": [
+    "task definitions; recorded action traces and outcomes"
+  ],
+  "tools": [
+    "MuJoCo",
+    "OpenPI",
+    "scripted IK"
+  ],
+  "actions": {
+    "tasks": {
+      "target": "robo.tasks.pi05_tasks",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "evaluate": {
+      "target": "robo.eval.pi05_eval",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    },
+    "policy-server": {
+      "kind": "shell",
+      "target": "run/pi05_serve.sh",
+      "runtime": "control",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

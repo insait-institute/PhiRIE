@@ -1,0 +1,102 @@
+{
+  "observed_utc": "2026-09-07T10:29:22.927497+00:00",
+  "job_id": "840315",
+  "classification": "construction/import collision validity failure; existing generic ledger classification CODE_FAILED preserved",
+  "error": "ValueError: collision part is not a closed convex volume: part_04.obj",
+  "affected_resets": 10,
+  "evidence": [
+    {
+      "unit_id": "unit-f356c2b8db08dbcb41bc036ebf5c84a5",
+      "reset_id": "r0",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-f356c2b8db08dbcb41bc036ebf5c84a5/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-1c5ebbc49d559bc626ef12cc5beeb8a7",
+      "reset_id": "r1",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-1c5ebbc49d559bc626ef12cc5beeb8a7/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-e172791528f90caa6d89eed2c6fc6894",
+      "reset_id": "r2",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-e172791528f90caa6d89eed2c6fc6894/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-22b5ae0c9f38e097a54a75c31f1a8be4",
+      "reset_id": "r3",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-22b5ae0c9f38e097a54a75c31f1a8be4/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-558143cdf381fe70b5f66e15fe1b2615",
+      "reset_id": "r4",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-558143cdf381fe70b5f66e15fe1b2615/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-5172521ee96160688782c608965ddd3e",
+      "reset_id": "r5",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-5172521ee96160688782c608965ddd3e/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-769c76920a2f105b46e6f29a29395eca",
+      "reset_id": "r6",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-769c76920a2f105b46e6f29a29395eca/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-037b901eb83b766cafff137a624deded",
+      "reset_id": "r7",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-037b901eb83b766cafff137a624deded/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-c153b11116e4e03df7b0a6dea2504ba9",
+      "reset_id": "r8",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-c153b11116e4e03df7b0a6dea2504ba9/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    },
+    {
+      "unit_id": "unit-d9a8b3882e38991f9713710ccb61915e",
+      "reset_id": "r9",
+      "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+      "worker_log": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-d9a8b3882e38991f9713710ccb61915e/worker.log",
+      "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb",
+      "executed": false,
+      "success": null
+    }
+  ],
+  "reclassified_or_repaired": false,
+  "publication_complete_gate": false,
+  "next_action": "Audit immutable collision asset and upstream acceptance; use explicit provenance-preserving classification/correction, never relax convexity or invent policy failures."
+}

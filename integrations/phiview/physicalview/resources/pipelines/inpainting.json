@@ -1,0 +1,22 @@
+{
+  "id": "inpainting",
+  "branch": "block/inpainting",
+  "default_action": "inpaint",
+  "description": "Prompted object removal and fitted Gaussian background completion",
+  "implementation": [
+    "physicalview/phiview_inpaint.py",
+    "physicalview/phiview_inpaint_guard.py",
+    "physicalview/inpaint_surface_fill.py",
+    "physicalview/inpaint_surface_seeds.py"
+  ],
+  "tools": [
+    "Qwen Image Edit 2511",
+    "LaMa",
+    "Gaussian fitting"
+  ],
+  "commands": [
+    "uv run physicalview run inpainting --config configs/local.yaml --scene room --objects 0 --out outputs/scenes/room_factory --prompt \"Remove the mug and restore the desk.\" --iters 1000"
+  ],
+  "inputs": "Selected object IDs, masks, original scene and prompt",
+  "outputs": "Edited views, model receipts and clean background Gaussian PLY. Surface refinement modules are experiments; current removal artifacts are documented."
+}

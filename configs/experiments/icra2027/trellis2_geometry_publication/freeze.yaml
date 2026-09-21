@@ -1,0 +1,24 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260905-a8ab431-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: trellis2_geometry_config
+  path: configs/experiments/icra2027/trellis2_geometry_publication/evaluation.json
+  kind: experiment_config
+  required: true
+checkpoint_roots: []
+hardware:
+  gpu_required: false
+  purpose: CPU-only TRELLIS.2 sealed mesh geometry engineering pilot;15planned/3matched/12null;
+    no construction or appearance
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

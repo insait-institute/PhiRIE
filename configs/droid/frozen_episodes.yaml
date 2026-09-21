@@ -1,0 +1,140 @@
+# DROID reconstruction track (plan Task 16 / contract track `droid_replay`) —
+# frozen, stratified episode list.
+#
+# Frozen: 2026-08-16. Source pool: /group/worldcept/PhiRIE/data/droid/raw (raw DROID
+# release, fetched by run/fetch_droid_raw.py from the episodes referenced in
+# the local droid_100 RLDS shards). Re-generate the pool summary with:
+#   .venv/bin/python -c "
+#   import json,glob
+#   from pathlib import Path
+#   for mp in sorted(Path('/group/worldcept/PhiRIE/data/droid/raw').glob('*/*/*/*/metadata_*.json')):
+#       print(json.loads(mp.read_text())['uuid'])"
+#
+# WHY freeze this list at all (rather than pick episodes ad hoc per run):
+# the contract (docs/ICRA_RESEARCH_CONTRACT.md, track `droid_replay`) commits
+# to reporting replay/coverage evidence honestly, which requires the episode
+# set to be chosen BEFORE looking at how well each one reconstructs — no
+# survivorship bias from silently dropping the ones that give ugly splats.
+#
+# ---------------------------------------------------------------------------
+# POOL SUMMARY (all locally-fetched raw episodes, audited 2026-08-16)
+# ---------------------------------------------------------------------------
+pool:
+  n_episodes: 47
+  labs: [AUTOLab, CLVR, IPRL, IRIS, PennPAL, RAIL, REAL, RPL, TRI]
+  n_by_lab: {AUTOLab: 7, CLVR: 3, IPRL: 5, IRIS: 4, PennPAL: 3, RAIL: 5,
+             REAL: 2, RPL: 4, TRI: 14}
+  # KNOWN GAP: every locally-fetched episode has success=true. This is a
+  # fetch-time artifact, not a DROID property: run/fetch_droid_raw.py's
+  # episode_paths() regex is anchored on the literal "success/" path
+  # component because that is what the local droid_100 RLDS shards (the
+  # seed list fetch_droid_raw.py walks) happen to reference. The raw DROID
+  # release also has failure/contact-only episodes under other lab
+  # directories; none are fetched yet. Until some are, this track cannot
+  # stratify by success/failure at all - flagged here rather than silently
+  # treating "success" as a property of the reconstruction pipeline.
+  success_failure: "47/47 success=true (fetch-time gap, see note above); 0 failure episodes available locally"
+  trajectory_length_frames: {min: 93, median: 214, max: 1140}
+  camera_quality:
+    hd_1280x720: 46      # standard DROID wrist-cam MP4 resolution
+    sd_672x376: 1         # IRIS/2023-03-07 only - lower-res wrist cam that day
+    wrist_mp4_missing: 1  # PennPAL/2023-10-18 - metadata present, MP4 absent;
+                           # excluded below, needs re-fetch via run/gcs_fetch.py
+  task_families:          # bucketed from metadata current_task (free text
+                           # for AUTOLab, a fixed rubric string for the rest)
+    - "move object into/out of container"
+    - "move/reorient object"
+    - "fold/spread/clump cloth"
+    - "cover/uncover with cloth"
+    - "open/close slidable (drawer/toaster/curtain)"
+    - "turn twistable (faucet/knob)"
+    - "move lid on/off container"
+    - "hang/unhang object"
+    - "ad hoc short imperative (AUTOLab free-text, e.g. 'put duck in pot')"
+    - "multi-step / compound (RPL, TRI 'do any N tasks')"
+
+# ---------------------------------------------------------------------------
+# STRATIFICATION CRITERIA (documented for scaling to the 3-lab/10-workspace
+# acceptance bar and beyond - this pass only reconstructs `priority_batch_v1`)
+# ---------------------------------------------------------------------------
+stratification_axes:
+  - lab: "9 available; cross-site generalization is the whole point of this
+      track, so no lab should be over-represented in what actually gets
+      reconstructed and reported."
+  - task_family: "listed above; avoid freezing 10 workspaces that are all
+      the same manipulation primitive."
+  - trajectory_length_tier: "short <150 frames, medium 150-400, long >400 -
+      proxy for episode complexity/duration; long episodes cost more
+      COLMAP+gsplat compute and are more likely to have large joint-velocity
+      stretches that starve droid_extract's static-frame filter ladder
+      (agents/recon/droid_extract.py FILTER_LADDER)."
+  - camera_quality_tier: "hd (1280x720) vs sd (672x376) - a real image-
+      quality axis found in this pool (IRIS/2023-03-07); reconstructions
+      should be evaluated separately by tier, not pooled, since COLMAP
+      registration rate and splat PSNR both depend on source resolution."
+  - success_failure: "not currently satisfiable (see pool.success_failure
+      gap above); revisit once failure episodes are fetched."
+
+# ---------------------------------------------------------------------------
+# FROZEN SELECTION - stratified across all 9 labs, all 3 length tiers, and
+# both camera-quality tiers. This is the list to draw future reconstruction
+# batches from; entries are not reordered or replaced based on how well they
+# reconstruct.
+# ---------------------------------------------------------------------------
+frozen_episodes:
+  - {lab: AUTOLab, episode: "AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023", uuid: "AUTOLab+84bd5053+2023-07-14-16h-55m-45s", task: "put duck in pot", traj_len: 93, tier: short, camera_quality: hd}
+  - {lab: AUTOLab, episode: "AUTOLab/success/2023-08-12/Sat_Aug_12_18:56:12_2023", uuid: "AUTOLab+t3d58310+2023-08-12-18h-56m-12s", task: "Move object into or out of container", traj_len: 1121, tier: long, camera_quality: hd}
+  - {lab: AUTOLab, episode: "AUTOLab/success/2023-10-15/Sun_Oct_15_19:57:21_2023", uuid: "AUTOLab+5d05c5aa+2023-10-15-19h-57m-21s", task: "put a cable into a cable storage box", traj_len: 120, tier: short, camera_quality: hd}
+  - {lab: CLVR, episode: "CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023", uuid: "CLVR+236539bc+2023-05-09-02h-08m-20s", task: "Move object to a new position and orientation", traj_len: 168, tier: medium, camera_quality: hd}
+  - {lab: CLVR, episode: "CLVR/success/2023-08-06/Sun_Aug__6_20:23:48_2023", uuid: "CLVR+236539bc+2023-08-06-20h-23m-48s", task: "Use cloth to clean something", traj_len: 211, tier: medium, camera_quality: hd}
+  - {lab: IPRL, episode: "IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023", uuid: "IPRL+2fe9715d+2023-08-24-21h-29m-53s", task: "Move object to a new position and orientation", traj_len: 402, tier: long, camera_quality: hd, note: "pilot episode - first end-to-end success, see docs/DROID_PROTOCOL.md"}
+  - {lab: IPRL, episode: "IPRL/success/2023-10-14/Sat_Oct_14_20:58:47_2023", uuid: "IPRL+5085c3ce+2023-10-14-20h-58m-47s", task: "Cover or uncover object with cloth", traj_len: 298, tier: medium, camera_quality: hd}
+  - {lab: IRIS, episode: "IRIS/success/2023-03-07/Tue_Mar__7_17_59_19_2023", uuid: "IRIS+ef107c48+2023-03-07-17h-59m-19s", task: "Move object to a new position and orientation", traj_len: 127, tier: short, camera_quality: sd, note: "only sd (672x376) wrist camera in the pool"}
+  - {lab: IRIS, episode: "IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023", uuid: "IRIS+7dfa2da3+2023-04-17-16h-03m-25s", task: "Move object into or out of container", traj_len: 338, tier: medium, camera_quality: hd}
+  - {lab: PennPAL, episode: "PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023", uuid: "PennPAL+06b0ffa5+2023-04-29-20h-28m-46s", task: "Open or close slidable objects", traj_len: 101, tier: short, camera_quality: hd}
+  - {lab: PennPAL, episode: "PennPAL/success/2023-07-15/Sat_Jul_15_22:24:58_2023", uuid: "PennPAL+acda9df3+2023-07-15-22h-24m-58s", task: "Turn twistable object", traj_len: 305, tier: medium, camera_quality: hd}
+  - {lab: RAIL, episode: "RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023", uuid: "RAIL+d027f2ae+2023-10-24-10h-23m-40s", task: "Move object to a new position and orientation", traj_len: 101, tier: short, camera_quality: hd}
+  - {lab: RAIL, episode: "RAIL/success/2023-06-29/Thu_Jun_29_13:20:45_2023", uuid: "RAIL+80edfcb1+2023-06-29-13h-20m-45s", task: "Move lid on or off of container", traj_len: 177, tier: medium, camera_quality: hd}
+  - {lab: REAL, episode: "REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023", uuid: "REAL+4dbb5646+2023-06-07-11h-50m-12s", task: "Move lid on or off of container", traj_len: 212, tier: medium, camera_quality: hd}
+  - {lab: REAL, episode: "REAL/success/2023-06-19/Mon_Jun_19_16:49:25_2023", uuid: "REAL+de601749+2023-06-19-16h-49m-25s", task: "Move lid on or off of container", traj_len: 215, tier: medium, camera_quality: hd}
+  - {lab: RPL, episode: "RPL/success/2023-06-05/Mon_Jun__5_16:11:49_2023", uuid: "RPL+cb4f6842+2023-06-05-16h-11m-49s", task: "pnp-table-to-sink-chips", traj_len: 206, tier: medium, camera_quality: hd}
+  - {lab: RPL, episode: "RPL/success/2023-12-04/Mon_Dec__4_18:30:04_2023", uuid: "RPL+32cba90c+2023-12-04-18h-30m-04s", task: "open-drawer-place-bars", traj_len: 1140, tier: long, camera_quality: hd, note: "longest episode in the pool"}
+  - {lab: TRI, episode: "TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023", uuid: "TRI+22cb038f+2023-09-21-17h-26m-41s", task: "Move object into or out of container", traj_len: 214, tier: medium, camera_quality: hd}
+  - {lab: TRI, episode: "TRI/success/2023-10-18/Wed_Oct_18_15:39:19_2023", uuid: "TRI+52ca9b6a+2023-10-18-15h-39m-19s", task: "Do any three tasks consecutively", traj_len: 143, tier: short, camera_quality: hd}
+  - {lab: TRI, episode: "TRI/success/2023-11-07/Tue_Nov__7_15:11:45_2023", uuid: "TRI+52ca9b6a+2023-11-07-15h-11m-45s", task: "Fold, spread out, or clump object", traj_len: 197, tier: medium, camera_quality: hd}
+
+excluded_from_pool:
+  - {lab: PennPAL, episode: "PennPAL/success/2023-10-18/Thu_Oct_19_00:13:07_2023", reason: "wrist-camera MP4 absent locally (metadata present); re-fetch via run/gcs_fetch.py before use"}
+
+# ---------------------------------------------------------------------------
+# PRIORITY BATCH v1 - the subset actually launched this pass (2026-08-16),
+# chosen from frozen_episodes above without cherry-picking on quality: 5
+# episodes across 5 different labs, spanning short/medium/long tiers, all
+# hd camera quality (the only sd episode is left for a later batch since a
+# resolution-driven COLMAP/gsplat failure mode should be diagnosed on its
+# own, not mixed into the first multi-lab proof run). Run via:
+#   sbatch --export=ALL,EPISODE=<episode>,RESUME=1 run/slurm/droid_recon.sbatch
+priority_batch_v1:
+  - "IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023"      # long,   job 706918
+  - "AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023"   # short
+  - "TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023"       # medium
+  - "RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023"      # short
+  - "RPL/success/2023-06-05/Mon_Jun__5_16:11:49_2023"       # medium
+
+# Remaining toward the plan's 3-lab/10-workspace acceptance bar: batch v1
+# reached 5 labs / 5 workspaces, ALL completed end-to-end (see
+# docs/DROID_PROTOCOL.md sec 4). Scale by walking frozen_episodes (20
+# entries across all 9 labs) through the same sbatch command.
+
+# PRIORITY BATCH v2 - launched same pass (2026-08-16), while batch v1's
+# completions were still being written up: the 4 labs batch v1 didn't touch
+# (CLVR, IRIS, PennPAL, REAL) plus a second IPRL episode for a same-lab
+# cross-check. Combined with batch v1 this reaches all 9 labs and 10 total
+# workspaces queued - the plan's acceptance bar - pending these 5
+# completing (job IDs 707064-707068, see docs/DROID_PROTOCOL.md).
+priority_batch_v2:
+  - "CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023"      # medium, job 707064
+  - "IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023"      # medium, job 707065
+  - "PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023"   # short,  job 707066
+  - "REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023"      # medium, job 707067
+  - "IPRL/success/2023-10-14/Sat_Oct_14_20:58:47_2023"      # medium, job 707068

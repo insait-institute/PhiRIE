@@ -1,0 +1,50 @@
+schema: simanyroom-final-experiments-v1
+study_id: simanyroom-final-system-v1
+selection_seed: 20270911
+policy_seed_base: 202700
+layouts: 6
+instances_per_task: 2
+resets: 10
+tasks: [PickPlaceCounterToSink, PickPlaceSinkToCounter]
+sensor: rgb_video_public_marker_v1
+max_active_jobs: 4
+# Source-only selection BEFORE running methods. Amendment creates a new study ID.
+# 24 independent instances, 6 layouts, 2 tasks; no more datasets or training.
+suites:
+  - id: system
+    membership: all
+    vary: construction
+    arms:
+      - {id: REF_NATIVE, controller_method: REF_NATIVE, renderer: native, scope: L0_target_only}
+      - {id: SIMFOUNDRY_ADAPTED, controller_method: SIMFOUNDRY_ADAPTED, renderer: native, scope: L0_target_only}
+      - {id: POLARIS_ADAPTED, controller_method: POLARIS_ADAPTED, renderer: native, scope: L0_target_only}
+      - {id: SIMANYROOM_NATIVE, controller_method: SIMANYROOM_NATIVE, renderer: native, scope: L0_target_only}
+    contrasts:
+      - [REF_NATIVE, SIMANYROOM_NATIVE]
+      - [SIMFOUNDRY_ADAPTED, SIMANYROOM_NATIVE]
+      - [POLARIS_ADAPTED, SIMANYROOM_NATIVE]
+  - id: observation
+    membership: one_per_layout_task
+    vary: observation
+    arms:
+      - {id: REF_NATIVE, controller_method: REF_NATIVE, renderer: native, scope: L0_target_only}
+      - {id: SIMANYROOM_NATIVE, controller_method: SIMANYROOM_NATIVE, renderer: native, scope: L0_target_only}
+      - {id: SIMANYROOM_GS, controller_method: SIMANYROOM_GS, renderer: gaussian, scope: L0_target_only}
+      - {id: OFFICIAL_H, controller_method: OFFICIAL_H, renderer: gaussian_official_h, scope: L0_target_only}
+      - {id: ROBOT_RESTORE_H, controller_method: ROBOT_RESTORE_H, renderer: gaussian_robot_restore_h, scope: L0_target_only}
+      - {id: STATE_H, controller_method: STATE_H, renderer: gaussian_state_h, scope: L0_target_only}
+    contrasts:
+      - [SIMANYROOM_NATIVE, SIMANYROOM_GS]
+      - [SIMANYROOM_GS, OFFICIAL_H]
+      - [OFFICIAL_H, ROBOT_RESTORE_H]
+      - [ROBOT_RESTORE_H, STATE_H]
+      - [SIMANYROOM_GS, STATE_H]
+  - id: scope
+    membership: one_per_layout_task
+    vary: scope
+    arms:
+      - {id: REF_NATIVE, controller_method: REF_NATIVE, renderer: native, scope: L0_target_only}
+      - {id: SIMANYROOM_L0, controller_method: SIMANYROOM_L0, renderer: native, scope: L0_target_only}
+      - {id: SIMANYROOM_L1, controller_method: SIMANYROOM_L1, renderer: native, scope: L1_target_destination}
+    contrasts:
+      - [SIMANYROOM_L0, SIMANYROOM_L1]

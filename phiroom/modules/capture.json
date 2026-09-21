@@ -1,0 +1,30 @@
+{
+  "id": "capture",
+  "branch": "module/capture-v2",
+  "description": "Video metadata and capture quality",
+  "inputs": [
+    "video file",
+    "capture configuration"
+  ],
+  "outputs": [
+    "metadata JSON",
+    "validation report"
+  ],
+  "tools": [
+    "ffprobe"
+  ],
+  "actions": {
+    "metadata": {
+      "target": "capture.extract_metadata",
+      "runtime": "control",
+      "gpu": false,
+      "args": []
+    },
+    "validate": {
+      "target": "capture.validate_video",
+      "runtime": "control",
+      "gpu": false,
+      "args": []
+    }
+  }
+}

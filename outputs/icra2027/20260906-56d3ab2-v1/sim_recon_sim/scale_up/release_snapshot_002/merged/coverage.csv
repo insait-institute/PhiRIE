@@ -1,0 +1,6 @@
+controller_method,planned,terminal,unmeasured,executed,successes,success_per_planned,executed_per_planned,success_per_executed
+B0_FIXED_NATIVE,40,40,0,25,3,0.075,0.625,0.12
+B3_AGENT_NATIVE,40,40,0,25,7,0.175,0.625,0.28
+B4_ROOM_REPAIR_NATIVE,40,40,0,10,4,0.1,0.25,0.4
+BM_BUDGET_MATCHED_NATIVE,40,40,0,5,2,0.05,0.125,0.4
+REF_NATIVE,40,40,0,40,34,0.85,1.0,0.85

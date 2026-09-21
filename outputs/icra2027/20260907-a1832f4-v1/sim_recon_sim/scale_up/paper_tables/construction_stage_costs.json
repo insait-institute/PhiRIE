@@ -1,0 +1,145 @@
+[
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 46.05070304000401,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 32,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 1473.6224972801283,
+    "required_by_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "B0_align_wrapper",
+    "timing_coverage": 0.6666666666666666,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 43.93730326928198,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 32,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 1405.9937046170235,
+    "required_by_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "B0_generate_wrapper",
+    "timing_coverage": 0.6666666666666666,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 20.50107309599116,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 16,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 48,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 984.0515086075757,
+    "required_by_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "B0_segment_wrapper",
+    "timing_coverage": 1.0,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": null,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 0,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": null,
+    "required_by_methods": [
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "separate_CoACD",
+    "timing_coverage": 0.0,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 12.837810263037682,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 32,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 410.8099284172058,
+    "required_by_methods": [
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "shared_RVG_inference_nested",
+    "timing_coverage": 0.6666666666666666,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 62.05028979280178,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 32,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 1985.6092733696569,
+    "required_by_methods": [
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "shared_RVG_wrapper",
+    "timing_coverage": 0.6666666666666666,
+    "whole_method_seconds": null
+  },
+  {
+    "accounting_basis": "original producer wall time; reused B0 prerequisites remain charged to B3/B4/BM",
+    "conditional_seconds_per_timed_instance": 173.0032047134664,
+    "exclusions": "capture, failures without bound timing receipts, scheduler waiting; separate CoACD/selection unmeasured unless explicitly timed; RVG inference nested within wrapper, never add twice",
+    "failed_builds_with_timing": 0,
+    "incremental_construction_compute_for_table_release_seconds": 0.0,
+    "instances_planned": 48,
+    "instances_timed": 32,
+    "instances_with_build_receipt": 48,
+    "measured_seconds_sum": 5536.102550830925,
+    "required_by_methods": [
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "reuse_discount_applied": false,
+    "stage": "shared_selection",
+    "timing_coverage": 0.6666666666666666,
+    "whole_method_seconds": null
+  }
+]

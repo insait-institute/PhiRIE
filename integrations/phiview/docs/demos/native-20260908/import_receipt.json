@@ -1,0 +1,187 @@
+{
+  "object_id": "target",
+  "body_name": "obj_main",
+  "scope": "target_only",
+  "role": "target",
+  "quaternion_convention": "wxyz",
+  "units": "meters",
+  "body_semantics": "free",
+  "free_joint_name": "obj_joint0",
+  "parent_world_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "body_local_position_m": [
+    4.844724161900076,
+    -0.3113270009661258,
+    0.9955622028425923
+  ],
+  "body_local_quaternion_wxyz": [
+    0.17070175018169248,
+    0.6861930577358729,
+    0.17070175018169248,
+    -0.6861930577358729
+  ],
+  "canonical_frame": "factory mesh vertices; no recentering",
+  "scale_applications": 1,
+  "scale": 0.1540025629638765,
+  "position_m": [
+    4.844724161900076,
+    -0.3113270009661258,
+    0.9955622028425923
+  ],
+  "quaternion_wxyz": [
+    0.17070175018169248,
+    0.6861930577358729,
+    0.17070175018169248,
+    -0.6861930577358729
+  ],
+  "bounds_local_m": [
+    [
+      -0.07630295532015292,
+      -0.07554956708200548,
+      -0.006300047727571594
+    ],
+    [
+      0.07656513698347077,
+      0.07703695925570009,
+      0.005939501547237455
+    ]
+  ],
+  "com_local_m": [
+    0.00013109083165892266,
+    0.0007436960868473022,
+    -0.00018027309016706945
+  ],
+  "mass_kg": 0.3,
+  "inertia_kg_m2": [
+    0.000585811364656445,
+    0.0005879615052749922,
+    0.0011662825416089134
+  ],
+  "inertia_prior": "s6_uniform_box_on_reconstructed_bounds",
+  "physics_prior": {
+    "friction": 0.5,
+    "mass_kg": 0.3,
+    "restitution": 0.1,
+    "source": "e3_category_independent_constant_v1"
+  },
+  "contact_prior": {
+    "solref": [
+      0.02,
+      1.0
+    ],
+    "solimp": [
+      0.9,
+      0.95,
+      0.001
+    ],
+    "torsional_friction": 0.005,
+    "rolling_friction": 0.0001,
+    "margin_m": 0.0,
+    "minimum_thickness_m": 0.0
+  },
+  "geometry_inflation_m": 0.0,
+  "visual_geoms": [
+    "obj_main__roundtrip_geom_0"
+  ],
+  "contact_geoms": [
+    "obj_main__roundtrip_geom_1",
+    "obj_main__roundtrip_geom_2",
+    "obj_main__roundtrip_geom_3",
+    "obj_main__roundtrip_geom_4",
+    "obj_main__roundtrip_geom_5",
+    "obj_main__roundtrip_geom_6",
+    "obj_main__roundtrip_geom_7",
+    "obj_main__roundtrip_geom_8",
+    "obj_main__roundtrip_geom_9",
+    "obj_main__roundtrip_geom_10",
+    "obj_main__roundtrip_geom_11",
+    "obj_main__roundtrip_geom_12",
+    "obj_main__roundtrip_geom_13"
+  ],
+  "removed_original_geoms": [
+    "obj_g0",
+    "obj_g1",
+    "obj_reg_bbox"
+  ],
+  "removed_original_sites": [
+    "obj_default_site"
+  ],
+  "retained_native_context": "all entities except this receipt's removed subtree; scope inventory required",
+  "native_fixture_metadata": "not rebound by XML import; caller must bind native role handles",
+  "appearance": "uniform_color_diagnostic",
+  "source_hashes": {
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/aligned.json": "7bc9f350ef57df60024e94c9977cee76999a3e3a855947e2bb00f71d864d17ac",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/mesh_sim.obj": "10c50d9811ec921b4a6b30ade562c1f2f1c16734d889c09a3311ae9f0b4b465e",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_00.obj": "f128a432ff8e95923c7cb54e39f66d7b35c4bb25ece822b33a9fe71045a4e7f4",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_01.obj": "df6ccbacabdcb7ddb4efb366901d85b0c5711dd57b57cb6a7ffc23428f5f6352",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_02.obj": "d25652204cc455f912e86e3f798a0764fc73056a4238233d4547b46df456f920",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_03.obj": "b61e85ff28d0972bed149856cb43afc4182cb98b35b2cad07ba47435672c09c1",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_04.obj": "738235b7272999334834037ac30ff3a5bc660d5b7255d8625dbed6131f5926ce",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_05.obj": "e20188514cf9423629c9ba2ccc13bea883846aa3f49f955c7a958559479340c8",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_06.obj": "2b8be46a35d36191e41d7873a046f694652298e42b5d620348f3feb34fc05b02",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_07.obj": "2ce64b4065c8d06b3f0d3638dcb43676fb88f9ab7c3a30947db23489458157c2",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_08.obj": "bac20d042015b8f77aa99911f7c63422b7bb003f304468958d29e5c575fcad3b",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_09.obj": "0eb1830bb57eeaaa233a51a3f7db2616aa02ac32e9f46fba67494135d5a1dbb1",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_10.obj": "9ea7609012fb8811fc1fed9303e90eae9eefd12f6b26c52e2161ad6b6aac4b40",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_11.obj": "4b5c313b618e896607188f6452333432049bfb7869d5f44866c099d3bec74628",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-bbc61c4-v2/sim_recon_sim/scale_up/selection_stage/slot-fe2766d6ac82406e7f24/selection/selected_02/collision/part_12.obj": "21b585af57443f8a309b4893bfb8bad1d3ec0a15e4d1dd018b98760f902f55ca"
+  },
+  "source_xml_sha256": "77b8a32e97cf5b3f2e5cf221cd074e4b7282008f9ea58eaa3a0e26d7d5054986",
+  "imported_xml_sha256": "6c69f66f2528a529d42d3a3fbc10da5e181c446faf1257bcabf4385a176fd090",
+  "native_scorer_binding": "PENDING",
+  "scorer_frame_correspondence": "NOT_ESTABLISHED; generated geometry has no inferred native-origin correspondence",
+  "opening_preservation": "NOT_APPLICABLE",
+  "binding": {
+    "object_name": "obj",
+    "native_scorer_binding": "BOUND",
+    "target_bounds_source": "reconstructed_mesh",
+    "native_class": "MJCFObject",
+    "contact_geoms": [
+      "obj_main__roundtrip_geom_1",
+      "obj_main__roundtrip_geom_2",
+      "obj_main__roundtrip_geom_3",
+      "obj_main__roundtrip_geom_4",
+      "obj_main__roundtrip_geom_5",
+      "obj_main__roundtrip_geom_6",
+      "obj_main__roundtrip_geom_7",
+      "obj_main__roundtrip_geom_8",
+      "obj_main__roundtrip_geom_9",
+      "obj_main__roundtrip_geom_10",
+      "obj_main__roundtrip_geom_11",
+      "obj_main__roundtrip_geom_12",
+      "obj_main__roundtrip_geom_13"
+    ],
+    "role": "target",
+    "bounds_and_radius_source": "reconstructed_mesh_bounds",
+    "absolute_scorer_correspondence": "NOT_ESTABLISHED",
+    "retained_fixture_metadata": "oracle room context"
+  },
+  "canonical": {
+    "reset_seed": 1
+  }
+}

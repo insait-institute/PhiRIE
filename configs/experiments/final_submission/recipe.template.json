@@ -1,0 +1,13 @@
+{
+  "frozen_before_outcomes": false,
+  "test_tuning": false,
+  "generator": "RESOLVE_FROM_EXISTING_DEV_COMPARISON",
+  "segmentation": "RESOLVE_FROM_EXISTING_DEV_COMPARISON",
+  "inpainting": "RESOLVE_FROM_EXISTING_DEV_COMPARISON",
+  "harmonizer": "official_base_with_fixed_state_correction_no_new_training",
+  "calibration": "declared_public_marker_or_known_robot_not_hidden_GT",
+  "policy": "reuse_pinned_compatible_RoboCasa_policy",
+  "model_lock": null,
+  "dev_selection": null,
+  "policy_contract": null
+}

@@ -1,0 +1,49 @@
+{
+  "implementation_commit": "7f09eaca86d467faae44edf8d31a55ba6d6af1a2",
+  "scene": "fb5a96b1a2_factory",
+  "gpu_job": 899235,
+  "gpu": "NVIDIA RTX A6000",
+  "cpu": {
+    "passed": 134,
+    "skipped": 50
+  },
+  "focused_gpu": {
+    "passed": 37
+  },
+  "browser": {
+    "passed": true,
+    "object": "obj_19",
+    "objects": 18,
+    "automatic_green_bottle": true,
+    "selected_red_pixels": 7123,
+    "deselected_red_pixels": 0,
+    "deselect_button": true,
+    "escape": true,
+    "click_reselect": true,
+    "repeat_preset_no_duplicate": true,
+    "fall_sim_time": 0.45000000000000034,
+    "physics_preserved_on_deselect": true,
+    "errors": []
+  },
+  "restart": {
+    "passed": true,
+    "selected": "obj_19",
+    "objects": 18,
+    "segmentation_runs": 1,
+    "old_click_receipts_preserved": true,
+    "code_commit": "7f09eaca86d467faae44edf8d31a55ba6d6af1a2"
+  },
+  "evidence_root": "outputs/demo-fb5a96b1a2-redmask/live/green-demo-browser",
+  "physics_scope": "Convex proxy of observed Gaussian centers; mass and friction unmeasured defaults",
+  "original_factory_start": {
+    "preparation": {
+      "available": true,
+      "state": "ready",
+      "message": "Green bottle ready. Choose Fall, Throw, or Place robot.",
+      "object": "obj_10"
+    },
+    "selected": "obj_10",
+    "objects": 11
+  },
+  "phiview_main": "b30cfaaac48a9908fb078ba393fc831015160c3d"
+}

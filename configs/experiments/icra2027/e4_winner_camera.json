@@ -1,0 +1,74 @@
+{
+  "factory_closure_sha256": {
+    "A0": "af9e20da9c9560d5d7b4af84447177144755dba8181e7a2e446e9f02d9f414ab",
+    "A4": "c02c406a62a15d6adbdaea3fa29943c211a3749182a550b7085b33b6ad3b600c"
+  },
+  "freeze_id": "20260904-07e8b05-v27",
+  "gpu_profile": {
+    "compute_capability": "8.6",
+    "gres": "a6000:1",
+    "name": "NVIDIA RTX A6000",
+    "node": "hala"
+  },
+  "inputs": {
+    "cpu_gate": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/winner_smoke/gate.json",
+      "sha256": "a303886f3d50958e5e757335eec982f9ae89d56453f535e1f30c70ecfc03dcfc",
+      "size_bytes": 300267
+    },
+    "episode_manifest_0": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/episodes/a4_raster__d755b3d9d8__obj_05_to_region__seed0__ep0/manifest.json",
+      "sha256": "52a2078fe1bec7d8259486fd358dea595723021513882cd5432ca4a10d20cce0",
+      "size_bytes": 19564
+    },
+    "episode_manifest_1": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/episodes/a4_raster__d755b3d9d8__obj_05_to_region__seed0__ep1/manifest.json",
+      "sha256": "10738fa7d705340f49908e8e7df6da1f18bf93634b980478c682f11d3e6cd2cf",
+      "size_bytes": 19563
+    },
+    "episode_manifest_2": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/episodes/a4_raster__d755b3d9d8__obj_05_to_region__seed0__ep2/manifest.json",
+      "sha256": "4aa2f8ba12972dafd7007b48349a86a20d8f0898cddb2492d9d9682b1379ccec",
+      "size_bytes": 19562
+    },
+    "episode_manifest_3": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/episodes/a4_raster__d755b3d9d8__obj_05_to_region__seed0__ep3/manifest.json",
+      "sha256": "bf92ccc0082ded5ef89e31bb78af5e08bdf82ad1c1ad90298b2ace4d54501071",
+      "size_bytes": 19570
+    },
+    "episode_manifest_4": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/episodes/a4_raster__d755b3d9d8__obj_05_to_region__seed0__ep4/manifest.json",
+      "sha256": "e0c973f1ba3f7f8905c4a048d9ad5d982062822021e993390c8bbeaa1c29ba8f",
+      "size_bytes": 19562
+    },
+    "harness_config": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_harness.yaml",
+      "sha256": "62ec43adecbf2d26f9af880f3fe1c13af9d95fd5ae5ac329285c2237cdcdfb11",
+      "size_bytes": 3200
+    },
+    "ledger": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/harness_ledger.jsonl",
+      "sha256": "8df6f6dbff2a44eea3b5c244937551dfc337dfd80eec16715f8e1d87c810864d",
+      "size_bytes": 79218
+    },
+    "task_manifest": {
+      "path": "outputs/icra2027/20260904-07e8b05-v18/harness/winner_task_freeze/manifest.json",
+      "sha256": "995ad62717d238419bf2bda2aee083c4d53ea08032e605f4d3b6c07c2f85ebbd",
+      "size_bytes": 3186
+    }
+  },
+  "menagerie_root": "/group/worldcept/code/SimAny-wt/e4-winner-smoke/third_party/mujoco_menagerie",
+  "openpi_resize_identity": {
+    "commit": "2f51088169d2e2b480ce54faa737be9b0279eed4",
+    "dirty": false,
+    "image_tools": {
+      "path": "/group/worldcept/code/openpi-wt/e4-policy-server/packages/openpi-client/src/openpi_client/image_tools.py",
+      "sha256": "d48b4bd7f44e79fe6db8a8e07c9161144fa250be686e1245014a8b47e6171977",
+      "size_bytes": 2426
+    },
+    "root": "/group/worldcept/code/openpi-wt/e4-policy-server"
+  },
+  "paper_ready": false,
+  "producer_commit": "3d3781712bdc36f2199426b766869ecda4b51c71",
+  "study_scope": "one_target_engineering_smoke"
+}

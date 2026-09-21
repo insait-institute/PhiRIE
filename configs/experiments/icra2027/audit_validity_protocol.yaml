@@ -1,0 +1,24 @@
+schema_version: 1
+label_definition: construction_validity
+threshold_source: robo.eval.audit_labels.ValidityThresholds
+threshold_source_commit: b8c2f186d40e0beee59a34a1d56a777e71b08963
+label_producer_sha256: 8fcfb2206b691aa6b6ca37e2e125ae7128c7bb5e6cf57de1b5edebf426a7d5ff
+# Existing producer defaults, pinned before any hidden label inspection.
+thresholds:
+  translation_cm: 5.0
+  rotation_deg: 15.0
+  scale_error_pct: 15.0
+  penetration_cm: 1.0
+measurement_scope: all_required_task_invariants
+required_booleans:
+  - object_recovered
+  - support_correct
+  - collision_valid
+  - required_visible
+  - robot_alignment_correct
+# Boolean alignment must come from the declared capture/alignment protocol.
+# Missing alignment evidence is invalid, never assigned an invented tolerance.
+missing_evidence: invalid
+build_failure: invalid
+baseline_stage: evaluation_only_after_feature_seal
+evaluation_baseline_columns: [global_psnr_db, global_f1_score]

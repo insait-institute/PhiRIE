@@ -1,0 +1,475 @@
+{
+  "kind": "declared_role_binding_assessment",
+  "source_artifact_admission": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/artifact_admission.json",
+  "source_artifact_admission_sha256": "01ffbbdf2a675cbc004442edf8283b525121fed840b90cdee9bef73dde197d00",
+  "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+  "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+  "known_role_bindings": [
+    {
+      "object_id": "target",
+      "role": "target",
+      "native_body_name": "obj_main",
+      "component_kind": null,
+      "contract_source": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-5cf76bd-v2/sim_recon_sim/scale_up/observed_workspace_native/dispatch/config.json",
+      "contract_sha256": "c234ff289b8855459ada0050e40fa5517eb631689e161354c5005b7a90add2aa",
+      "native_geometry_read": false
+    },
+    {
+      "object_id": "destination",
+      "role": "receptacle",
+      "native_body_name": "container_main",
+      "component_kind": null,
+      "contract_source": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-5cf76bd-v2/sim_recon_sim/scale_up/observed_workspace_native/dispatch/config.json",
+      "contract_sha256": "c234ff289b8855459ada0050e40fa5517eb631689e161354c5005b7a90add2aa",
+      "native_geometry_read": false
+    },
+    {
+      "object_id": "source_support",
+      "role": "support",
+      "native_body_name": "sink_1_main_group_main",
+      "component_kind": "sink_basin",
+      "contract_source": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-5cf76bd-v2/sim_recon_sim/scale_up/observed_workspace_native/dispatch/config.json",
+      "contract_sha256": "c234ff289b8855459ada0050e40fa5517eb631689e161354c5005b7a90add2aa",
+      "native_geometry_read": false
+    },
+    {
+      "object_id": "destination_support",
+      "role": "support",
+      "native_body_name": "counter_1_main_group_main",
+      "component_kind": "counter_top",
+      "contract_source": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-5cf76bd-v2/sim_recon_sim/scale_up/observed_workspace_native/dispatch/config.json",
+      "contract_sha256": "c234ff289b8855459ada0050e40fa5517eb631689e161354c5005b7a90add2aa",
+      "native_geometry_read": false
+    }
+  ],
+  "residual_candidates": [
+    {
+      "cluster_id": "residual-000001",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000002",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000003",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000004",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000005",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000006",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000007",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000008",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000009",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000010",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000011",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000012",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000013",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000014",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000015",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000016",
+      "construction_status": "BUILD_FAILED",
+      "static_asset_admission": "NOT_RUN",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000017",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000018",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000019",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000020",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000021",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000022",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000023",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000024",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000025",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000026",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000027",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000028",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000029",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000030",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000031",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000032",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000033",
+      "construction_status": "BUILD_FAILED",
+      "static_asset_admission": "NOT_RUN",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000034",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000035",
+      "construction_status": "BUILT",
+      "static_asset_admission": "FAIL",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000036",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000037",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000038",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000039",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000040",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000041",
+      "construction_status": "BUILD_FAILED",
+      "static_asset_admission": "NOT_RUN",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000042",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000043",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000044",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000045",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    },
+    {
+      "cluster_id": "residual-000046",
+      "construction_status": "BUILT",
+      "static_asset_admission": "PASS",
+      "semantic_identity": "UNCLASSIFIED",
+      "native_body_name": null,
+      "native_body_semantics": null,
+      "can_remove_native_geometry": false
+    }
+  ],
+  "resolved_existing_roles": 4,
+  "resolved_residual_native_bindings": 0,
+  "source_coverage_unknown_samples": 14535,
+  "unknown_voxels_are_not_a_B3_rollout_veto": true,
+  "L2_READY": false,
+  "remaining_required_construction_contract": [
+    "TRAIN-only semantic instance association for anonymous residual components; split/merged surface fragments cannot be assumed to be whole obstacles",
+    "declared one-to-one obstacle identity and static/free body semantics before removing native collision",
+    "explicit relevant obstacle inventory and retained/reconstructed context boundary"
+  ],
+  "gt_assisted_asset_selection": false,
+  "native_geometry_access": false,
+  "duplicate_native_collision_introduced": false,
+  "script_sha256": "8eda657c94bc28b736a560f3134a9f24972b91c3ef55feabc2de76e5f2fd42cd"
+}

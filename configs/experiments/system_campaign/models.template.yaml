@@ -1,0 +1,154 @@
+video:
+  enabled: false # Enable after one real COLMAP/GS smoke; TRAIN video only.
+  environment: gaussian
+  params:
+    source_root: /RESOLVE/gaussian-splatting
+    source_commit: RESOLVE_40_HEX
+    colmap: /RESOLVE/pinned-colmap/bin/colmap
+    capture_role: train_only
+    camera_source: estimated
+    fps: 3
+    max_frames: 180
+    iterations: 30000
+    timeout_s: 14400
+# Video output is initially in SfM gauge. Attach measured scale/calibration before physics.
+# Resolve exact source/checkpoint revisions before preparing tasks. Never use latest.
+# /RESOLVE paths intentionally fail preflight. No pretrained model is downloaded here.
+generators:
+  trellis:
+    enabled: true
+    environment: trellis
+    params:
+      backend: trellis
+      source_root: /RESOLVE/TRELLIS
+      source_commit: RESOLVE_40_HEX
+      checkpoint: /RESOLVE/TRELLIS-image-large
+      checkpoint_manifest: /RESOLVE/trellis-files.json
+      seed: 42
+      pbr_export: true
+      texture_size: 2048
+  trellis2:
+    enabled: true
+    environment: trellis2
+    params:
+      backend: trellis2
+      source_root: /RESOLVE/TRELLIS.2
+      source_commit: RESOLVE_40_HEX
+      checkpoint: /RESOLVE/TRELLIS.2-4B
+      checkpoint_manifest: /RESOLVE/trellis2-files.json
+      seed: 42
+      pbr_export: true
+      texture_size: 2048
+      inference: {}
+  reconviagen:
+    enabled: true
+    environment: reconviagen
+    params:
+      backend: reconviagen
+      source_root: /RESOLVE/ReconViaGen-v0.2
+      source_commit: RESOLVE_40_HEX
+      checkpoint: /RESOLVE/ReconViaGen-v0.2-model
+      checkpoint_manifest: /RESOLVE/rvg-files.json
+      seed: 42
+      pbr_export: true
+      texture_size: 2048
+      inference: {mode: multidiffusion}
+# RVG-v0.5 is a distinct TRELLIS.2-based method, NOT an alias of v0.2.
+# Add it as a separately versioned command adapter only after its native smoke.
+inpainters:
+  telea:
+    enabled: true
+    environment: native
+    params: {backend: telea, radius: 3}
+  sdxl:
+    enabled: true
+    environment: image_edit
+    params:
+      backend: sdxl_inpaint
+      checkpoint: /RESOLVE/sdxl-inpaint-snapshot
+      checkpoint_manifest: /RESOLVE/sdxl-files.json
+      seed: 42
+      steps: 40
+  qwen2511:
+    enabled: true
+    environment: image_edit
+    params:
+      backend: qwen_edit
+      checkpoint: /RESOLVE/Qwen-Image-Edit-2511
+      checkpoint_manifest: /RESOLVE/qwen-files.json
+      seed: 42
+      steps: 40
+      true_cfg_scale: 4.0
+      resize_policy: declared_bilinear
+  nano_banana:
+    enabled: false # Requires explicit cost AND scene-level upload authorization.
+    environment: api
+    params:
+      backend: gemini
+      model_id: gemini-2.5-flash-image
+      approval_file: /RESOLVE/api-approval.json
+      api_key_env: GEMINI_API_KEY
+      resize_policy: declared_bilinear
+  nano_banana2:
+    enabled: false
+    environment: api
+    params:
+      backend: gemini
+      model_id: gemini-3.1-flash-image
+      approval_file: /RESOLVE/api-approval.json
+      api_key_env: GEMINI_API_KEY
+      resize_policy: declared_bilinear
+chorus:
+  enabled: true
+  environment: chorus
+  params:
+    source_root: /RESOLVE/Chorus
+    source_commit: RESOLVE_40_HEX
+    checkpoint: /RESOLVE/chorus.pth
+    checkpoint_manifest: /RESOLVE/chorus-files.json
+    text_space: siglip2-checkpoint-identity-RESOLVE
+    pretraining_overlap: UNKNOWN
+harmonizers:
+  official_temporal:
+    enabled: true
+    environment: harmonizer
+    params:
+      source_root: /RESOLVE/harmonizer
+      source_commit: RESOLVE_40_HEX
+      checkpoint: /RESOLVE/diffusion_harmonizer.pkl
+      checkpoint_manifest: /RESOLVE/harmonizer-files.json
+      temporal: true
+      state_conditioned: false
+      resolution: 1024
+  state_conditioned:
+    enabled: true
+    environment: harmonizer
+    params:
+      source_root: /RESOLVE/harmonizer
+      source_commit: RESOLVE_40_HEX
+      checkpoint: /RESOLVE/diffusion_harmonizer.pkl
+      checkpoint_manifest: /RESOLVE/harmonizer-files.json
+      temporal: true
+      state_conditioned: true
+      resolution: 1024
+      correction:
+        edge_radius: 1
+        warp: {depth_atol: 0.005, depth_rtol: 0.01}
+        compose: {strength: 0.5, max_residual: 32, temporal_weight: 0.25}
+official:
+  simfoundry:
+    enabled: false
+    environment: simfoundry
+    params:
+      source_root: /RESOLVE/SimFoundry
+      source_commit: RESOLVE_40_HEX
+      approval_file: /RESOLVE/simfoundry-approval.json
+      acquisition: single_rgb_video
+      manual_minutes: 0
+      timeout_s: 7200
+  polaris:
+    enabled: true
+    environment: polaris
+    params:
+      source_root: /RESOLVE/polaris
+      source_commit: RESOLVE_40_HEX

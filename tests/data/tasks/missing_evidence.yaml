@@ -1,0 +1,14 @@
+# No rubric evidence at all, and language that the small pattern-matcher
+# cannot parse into either phrase ("do the task" matches neither the
+# manipulated-object nor destination patterns). Both manipulated_object and
+# receptacle should come back "ambiguous" -- multiple weakly-differentiated
+# hypotheses -- rather than the resolver confidently (and arbitrarily)
+# picking the object that happens to sit nearest some tie-break anchor.
+task_id: missing_evidence_demo
+
+language:
+  instruction: "do the task"
+
+rubric: {}
+
+roles: [manipulated_object, receptacle]

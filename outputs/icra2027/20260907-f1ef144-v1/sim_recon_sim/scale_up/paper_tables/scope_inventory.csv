@@ -1,0 +1,2 @@
+cohort_id,policy_id,scope,sensor_regime,renderer,execution_protocol,split,planned
+native_dev_v2_8instances,pi05_pretrain_human300_75000_c484448,L0_target_only,ideal_rgbd_posed,native,primary_native,development,200

@@ -1,0 +1,24 @@
+{
+  "task_id": "gc32-reconviagen-production-00",
+  "task_sha256": "b3ef5d648fe068a975b29d46602da2cd696fdf94562299b9367b7889b415960e",
+  "source": {
+    "commit": "d42922b4527eeaa8fc47a280ab51815bc5b3f9c9",
+    "root": "/group/worldcept/code/SimAny/worktrees/generator-comparison-results-20260915"
+  },
+  "artifacts": {
+    "batch": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/batch.json",
+      "sha256": "25662fb035b0349f2a8d3a3d13cedaaa8db830fb989b308c9dda674e0082170b",
+      "bytes": 198203
+    },
+    "integration_receipt": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/outputs.json",
+      "sha256": "8d33d6e9d2f58416125ed863a9929c40fd4d3da5b23cc8a262f17ac66040f334",
+      "bytes": 304
+    }
+  },
+  "status": "COMPLETE",
+  "job_id": "901002",
+  "component_execution_only": true,
+  "wall_s": 3607.2322933347896
+}

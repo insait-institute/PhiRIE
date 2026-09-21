@@ -1,0 +1,975 @@
+{
+  "checked_utc": "2026-09-15T02:22:51.235408+00:00",
+  "status": "PASS",
+  "verified_slots": 87,
+  "artifact_receipts_verified": 725,
+  "checks": [
+    "original generation and evaluation hashes",
+    "all retained generation artifact hashes",
+    "render/URDF/world-surface hashes",
+    "finite world points",
+    "collision import and independent registration flags",
+    "single seed0",
+    "distinct ReconViaGen source views",
+    "all29 production Gaussian files present"
+  ],
+  "records": [
+    {
+      "slot_id": "27dd4da69e-a1004-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1004-trellis/evaluation.json",
+        "sha256": "7bbd26759d186d654a8a86c1a143c9b40c13ac2a5f9ef379fa2f9899cad40b06",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1004-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1004-trellis2/evaluation.json",
+        "sha256": "cdeff16e5d601c2fbdb4e5e19cbe5e57e9b0b6d5ca77baac837bccec2ad47a2c",
+        "bytes": 2812
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1004-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "42f71631e5b26b09d466a75ede080d1e77230292954e024c2f2c4a870940e31b",
+        "bytes": 2941
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1001-trellis/evaluation.json",
+        "sha256": "379581de784023618f0cb73ba2c3018d8c2f53fbe1e26fdc0049264d9879d266",
+        "bytes": 3639
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1001-trellis2/evaluation.json",
+        "sha256": "4d584685e7e3345d1bedc3124c9a802c80c79ecd3d983c6427a8107a115544eb",
+        "bytes": 3581
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1001-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1001-reconviagen/evaluation/evaluation.json",
+        "sha256": "7e14464d55e9568907999dca6869285f71e640602d190fda160579d7bb6b4cbf",
+        "bytes": 3213
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1002-trellis/evaluation.json",
+        "sha256": "702c27b13d5e07b799084526887410b01f5aeaba56913d11e1ebf8ab6e0ec284",
+        "bytes": 2774
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1002-trellis2/evaluation.json",
+        "sha256": "d0fae7e9fbd85be1ec69da988d2be8d204c22b710871633a9081e8fbe61ff440",
+        "bytes": 2787
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1002-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1002-reconviagen/evaluation/evaluation.json",
+        "sha256": "12d056f59c13f5b471b328410c01b648536995c15c7bf0354cebc67869bc0839",
+        "bytes": 2939
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1006-trellis/evaluation.json",
+        "sha256": "24ef67d54aba25af626021aa5426b0ce0a34b9d594b3908ac8b30d74aab5988a",
+        "bytes": 2773
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1006-trellis2/evaluation.json",
+        "sha256": "3ffaa37eefb1c80d08025ca42c9be41859a71884ad1921b29a62384617d8e73f",
+        "bytes": 2817
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "27dd4da69e-a1006-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/27dd4da69e-a1006-reconviagen/evaluation/evaluation.json",
+        "sha256": "707da822eb19c49842f5099387506b03b15b7b94e5aa4b8e7bea831a9d7d89e3",
+        "bytes": 2888
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1004-trellis/evaluation.json",
+        "sha256": "214a9241a78a8f96a819b966e5c45e08271e2ce64ba1c2e01d3e25700d3ebb60",
+        "bytes": 2848
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1004-trellis2/evaluation.json",
+        "sha256": "4ccc61b4eeba3a056ac2a6e5347189e7188539bfb2846c28a4df9ded46e7f9cb",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1004-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "392ffb6933933d16069da351a92bcc9b8b466d13d22ea27c1375c91ffc0a77de",
+        "bytes": 2933
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1006-trellis/evaluation.json",
+        "sha256": "9befff3e9d8b49e604e8ac255adcbada3867ab7a9631888b4344487069a884c1",
+        "bytes": 3566
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1006-trellis2/evaluation.json",
+        "sha256": "b098587fb4efa173d7c895a27aabb650e6346322a885bace61e43ed1095052f4",
+        "bytes": 3569
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1006-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1006-reconviagen/evaluation/evaluation.json",
+        "sha256": "78c8295a770bda863fc0388d42494c5daad2ec05717efb467cc2b991f07668f5",
+        "bytes": 3284
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1011-trellis/evaluation.json",
+        "sha256": "0b1b909cbffc70e05045a756ce6310c833cd81f9e11b41b8f119eef16e21945f",
+        "bytes": 2779
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1011-trellis2/evaluation.json",
+        "sha256": "221240dd67c2f97974340de16bd2ccdaceb40a40971e4193ed2ff487234ead0b",
+        "bytes": 2853
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1011-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1011-reconviagen/evaluation/evaluation.json",
+        "sha256": "d13ef35cbe14dd38e97c03ac2f0dc8d118dce071a01f72ffacbdafcb2250c15b",
+        "bytes": 2944
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1010-trellis/evaluation.json",
+        "sha256": "5fc07feb0c29c683ff2bea2992761d6f7498e7586c89b191b115ce9069c14d58",
+        "bytes": 2781
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/38d58a7a31-a1010-trellis2/evaluation.json",
+        "sha256": "569c82cd896ebde2741ac2a1fe47af51fcb130a5029723d993df7f02b6909334",
+        "bytes": 2788
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "38d58a7a31-a1010-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/38d58a7a31-a1010-reconviagen/evaluation/evaluation.json",
+        "sha256": "ad3fa5003ac318c1377f278c932b9f11d144b443c13ab845cf037428f185f010",
+        "bytes": 2880
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1015-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1015-trellis/evaluation.json",
+        "sha256": "ae58d313d68377259bb5a2b557fefbc28ca829cd6c6be39499fe9c7f0fe24e69",
+        "bytes": 3580
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1015-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1015-trellis2/evaluation.json",
+        "sha256": "f48becda2dc9f8399d4af1cbc96f27694de704dc1a6953c2d5742e3e2c833056",
+        "bytes": 3604
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1015-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1015-reconviagen/evaluation/evaluation.json",
+        "sha256": "bf8f18748a54db3b47799ba6f31cd8aa158335b505eeb40ff4ff9c68a01ce8e0",
+        "bytes": 3215
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1034-trellis/evaluation.json",
+        "sha256": "473dddcd9bbf88566207948c68f478beb956ff085dcedec9bf645eeaec137da7",
+        "bytes": 3576
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1034-trellis2/evaluation.json",
+        "sha256": "abbb6806ca0428f38ade24b22e736725f8e9591b9c7f0d14308f785a2afa763a",
+        "bytes": 3594
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1034-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1034-reconviagen/evaluation/evaluation.json",
+        "sha256": "09cef35d9aa238e75b8b60eef2f8555cf38ee85c967e58c4999102e7f2b94a32",
+        "bytes": 3286
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1043-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1043-trellis/evaluation.json",
+        "sha256": "88ef8a738b03c8663fa395cf8ac3caba6366b726b78363a858f5d0ef7bce0a47",
+        "bytes": 2779
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1043-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1043-trellis2/evaluation.json",
+        "sha256": "26f2438b2e9befd2272106a1b1ef090f097a846bccb42de4297a7588acc09172",
+        "bytes": 2838
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1043-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1043-reconviagen/evaluation/evaluation.json",
+        "sha256": "dbab74902d4c1f9e211b76be8f44d0ccdc50789f6dd015f24c9d9b6b421ca4a7",
+        "bytes": 2880
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5942004064-a1010-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1010-trellis/evaluation.json",
+        "sha256": "e3227de17093eda4273a644f60a812d6f0eccd4fe35881eb478c977a01deb146",
+        "bytes": 3640
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1010-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5942004064-a1010-trellis2/evaluation.json",
+        "sha256": "0ab4e07268b0d793b4691c30b16ba59fc9d1ccd1b4a9beefcc8c9c6eb020ca47",
+        "bytes": 3615
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5942004064-a1010-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5942004064-a1010-reconviagen/evaluation/evaluation.json",
+        "sha256": "d7037549784d3a378138ed4f4dc34229be11c564f9cc00ed73e726dcad39c986",
+        "bytes": 3286
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1004-trellis/evaluation.json",
+        "sha256": "415eabaa8dc6b403329857f8dc732d82b409f2c3215969e59d44c26a65dcc77d",
+        "bytes": 2777
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1004-trellis2/evaluation.json",
+        "sha256": "8d391a669cc571252af43f9c87d3fe0f98813aef567b170caff347a5d138a57d",
+        "bytes": 2805
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1004-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1004-reconviagen/evaluation/evaluation.json",
+        "sha256": "9bd60869f07a1eac61c2dcf7675141be1565f1e80503919cae599ba6a37aa263",
+        "bytes": 2877
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1005-trellis/evaluation.json",
+        "sha256": "1e3420b44c465cfeecf19c80d54e99c3e1734b3ef9a1c498fc80006a617d1d96",
+        "bytes": 3638
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1005-trellis2/evaluation.json",
+        "sha256": "93ca17081a06f7797698b4f92113214c782950b309d3ae0ebae7c8dc3c0be546",
+        "bytes": 3561
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1005-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1005-reconviagen/evaluation/evaluation.json",
+        "sha256": "4c2e81df9abd52fc32208cb5f5f834dc1a47c1ec3a2b45391883972eee188ce0",
+        "bytes": 3223
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1012-trellis/evaluation.json",
+        "sha256": "5fa8ef9b3d824dce0c73f1c7f3dbb6f9040047e9fe1121462746724c2306eb0d",
+        "bytes": 3576
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5eb31827b7-a1012-trellis2/evaluation.json",
+        "sha256": "135ec96e0c5572f002c28d394d19fc24bd691a4398f7e1f7af5168acc6433fc1",
+        "bytes": 3572
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5eb31827b7-a1012-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5eb31827b7-a1012-reconviagen/evaluation/evaluation.json",
+        "sha256": "dfea9735b6bf5e319a6d4905126418eabbd5cda27f1a5a1e994f3796a2ba85b2",
+        "bytes": 3215
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1036-trellis/evaluation.json",
+        "sha256": "cead0985bbdfcdec7853108f0ee6423b23350c23e6cc31a94ec904696648d36b",
+        "bytes": 2777
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1036-trellis2/evaluation.json",
+        "sha256": "0e70147c158bb11cb771df66d78e662624d17adc4f64bb74d023077e97ff8960",
+        "bytes": 2815
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1036-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1036-reconviagen/evaluation/evaluation.json",
+        "sha256": "3c22c6c3d5beb268c56b0c0df4c42359051696cef677c80cf3c08bea4c3ea44d",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1032-trellis/evaluation.json",
+        "sha256": "56e9684069c69f2bc3c23144d43fe5254b5c2addcc07c99ec1115b744aa8a505",
+        "bytes": 2843
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/5ee7c22ba0-a1032-trellis2/evaluation.json",
+        "sha256": "f6db20ca9dcbd6b5a5b9a4d1d44e4334d489029f99569dd72e846c605729620b",
+        "bytes": 2820
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "5ee7c22ba0-a1032-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/5ee7c22ba0-a1032-reconviagen/evaluation/evaluation.json",
+        "sha256": "37e6f9eab222c1c78e388c473f1898300568904c506359fe1c3deffcebd098d7",
+        "bytes": 2947
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1024-trellis/evaluation.json",
+        "sha256": "663b15488506e1fb8735f821a37ccf841bb2855d91403a3ae8235342dd7b1ad0",
+        "bytes": 2783
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1024-trellis2/evaluation.json",
+        "sha256": "31f314d11a7d34917e2e1c6acb153c821b26d9a9f00d1e98d3012efcd896bfe2",
+        "bytes": 2815
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1024-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1024-reconviagen/evaluation/evaluation.json",
+        "sha256": "90391a191a5b9be4cd2dc027f4af61ecca050e2ab6758f75dd20173a155b1e0f",
+        "bytes": 2947
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1034-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1034-trellis/evaluation.json",
+        "sha256": "5340c3de0a0a0fedfdd0ae721f268fe508f8a12219a179415077dcce656d914e",
+        "bytes": 3571
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1034-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1034-trellis2/evaluation.json",
+        "sha256": "0fec23f489d465ec3bd23088a5bcc4041b851367cfc7a707a74fa3dd3a2e117d",
+        "bytes": 3565
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1034-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1034-reconviagen/evaluation/evaluation.json",
+        "sha256": "aed50eae489059c8786fd03a0f65c0df0a4e9fbdfcf2fb07c6e0d0c280e8acd0",
+        "bytes": 3217
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "7831862f02-a1005-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1005-trellis/evaluation.json",
+        "sha256": "038fb45361d401d5b35d376c0e697b22e5c99cca269644165e164f5c2d3447db",
+        "bytes": 2776
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1005-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1005-trellis2/evaluation.json",
+        "sha256": "48e4b6418f70538fb0c28bfd8388af51e53c74e8348bf6c60c0ba2142d7b2bc3",
+        "bytes": 2813
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1005-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1005-reconviagen/evaluation/evaluation.json",
+        "sha256": "640bebf3f25984b258cf81c38786da3d6a5bf61c88134b37ee4874aef39da6b6",
+        "bytes": 2938
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1027-trellis/evaluation.json",
+        "sha256": "183c2440bf049ed75ba71b6a3c38cabb3eac668ec98d4603bd0255e912fc1978",
+        "bytes": 2780
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/7831862f02-a1027-trellis2/evaluation.json",
+        "sha256": "7466ff2f13687364cd97158e8f7a0731a1a743f7a752d0f5cd10a3470f9113bb",
+        "bytes": 2813
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "7831862f02-a1027-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/7831862f02-a1027-reconviagen/evaluation/evaluation.json",
+        "sha256": "071582d3ea9388c2e51519781c25648b0791407e904511962f84d7af2ebffc59",
+        "bytes": 2876
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1023-trellis/evaluation.json",
+        "sha256": "32977794e9c80eaeea6249d6c748673b3cc5a7a72cd387434d01b70bfe7a457d",
+        "bytes": 2842
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1023-trellis2/evaluation.json",
+        "sha256": "80b3731ac11b9d6c1a17990acb454604b46ccc2c471998fe846afbd005910534",
+        "bytes": 2880
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1023-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1023-reconviagen/evaluation/evaluation.json",
+        "sha256": "0a8f81da07ac439ff14a5b9d5904dcbab175b92ec21f3e2f45884782f4f14346",
+        "bytes": 2877
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1007-trellis/evaluation.json",
+        "sha256": "f7c003b9f0ab3a3979c5bea5e5ea944fcc673c3777bac7f4825643332ead0592",
+        "bytes": 3613
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1007-trellis2/evaluation.json",
+        "sha256": "ca43901aa4aaf0d29399317249635f5be2128ee156cc3f2bcb6dc73682d14f52",
+        "bytes": 3568
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1007-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1007-reconviagen/evaluation/evaluation.json",
+        "sha256": "383cdfa2716861093742f88dfcadd82ef470699af18f87eb4a19fe3bdce49345",
+        "bytes": 3222
+      },
+      "stable": true,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1015-trellis/evaluation.json",
+        "sha256": "bf1d5c05eb6fff8267ba1e8dff78abd859c404daa2e007b5c468c3f09a54ac35",
+        "bytes": 2784
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1015-trellis2/evaluation.json",
+        "sha256": "0223ff8cb4cc50a7c71d4f1b23c2d68ff3ae8a4c2b702503f9b66781eacb2ea6",
+        "bytes": 2872
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1015-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1015-reconviagen/evaluation/evaluation.json",
+        "sha256": "f78b589dda870dac1cf4b5da4cee7e6097c7105e4505726432b99a64d3943341",
+        "bytes": 2881
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1011-trellis/evaluation.json",
+        "sha256": "cef1f015a22c8cd144636df1fc96be39f85da051786759e2bc5d2908ae3e9568",
+        "bytes": 2844
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/c4c04e6d6c-a1011-trellis2/evaluation.json",
+        "sha256": "0ed8a159dd65195a6ceba730bc2c9145d14ec69412d54cf7201d8dbc50ad4231",
+        "bytes": 2874
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "c4c04e6d6c-a1011-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-00/results/gc32-reconviagen-production-00/component/c4c04e6d6c-a1011-reconviagen/evaluation/evaluation.json",
+        "sha256": "f2770f7b1db285fa5979619944f00823522c5064772fdb5b029ecdb4113af20c",
+        "bytes": 2940
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1024-trellis/evaluation.json",
+        "sha256": "321d069c93e61de35f08c3b9ca84f9eac4da5669c4bcfe42b87c3eabeea6f1d5",
+        "bytes": 2844
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1024-trellis2/evaluation.json",
+        "sha256": "00e7573fb0ab5f8818cc7fcfd724898b3cc4064aa645f2906fbb088375e8b6b0",
+        "bytes": 2805
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1024-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1024-reconviagen/evaluation/evaluation.json",
+        "sha256": "2cd450cb83ee4e33e9e61d05616c56c6346c2f938a4fd927ee00e95a12c11df7",
+        "bytes": 2871
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1000-trellis/evaluation.json",
+        "sha256": "2cb3355c38fa5357b758b7db5ecb6609d924032708441b69365600ad5494c27d",
+        "bytes": 2777
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1000-trellis2/evaluation.json",
+        "sha256": "a510a593aed49f7e9b23dbf688d928ce84efac8e5ab6c0612d89702a5dea44aa",
+        "bytes": 2806
+      },
+      "stable": false,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1000-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1000-reconviagen/evaluation/evaluation.json",
+        "sha256": "01d24f2df22b7a94319d4865dced3183efc0535fcb655ebdbb6992e7dbe4d216",
+        "bytes": 2876
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1020-trellis/evaluation.json",
+        "sha256": "4332b84f1c9839106ea1c3d1dceaadfb5421e0602187f052523c80cc6c932c65",
+        "bytes": 3678
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1020-trellis2/evaluation.json",
+        "sha256": "3f7dacef3579b444e4f2901d320d3c7110ad5773ebd866ce8874a83b474d25a3",
+        "bytes": 3633
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1020-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1020-reconviagen/evaluation/evaluation.json",
+        "sha256": "c0816298e1b646a731ed82c13960cf63adfa65a7a861066eb2a69ba713ef81e2",
+        "bytes": 3216
+      },
+      "stable": false,
+      "independent_metrics": true
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-trellis",
+      "backend": "trellis",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1070-trellis/evaluation.json",
+        "sha256": "97b785a196bbe5ee23afd3fd9d962a4aa8a518b560ad5360ca01c4fff18c1469",
+        "bytes": 2852
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-trellis2",
+      "backend": "trellis2",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/fb5a96b1a2-a1070-trellis2/evaluation.json",
+        "sha256": "515b7bdccc6bd2e726a6c16946dba160f731dcfe2a5d487c04f5b90238d389dc",
+        "bytes": 2888
+      },
+      "stable": true,
+      "independent_metrics": false
+    },
+    {
+      "slot_id": "fb5a96b1a2-a1070-reconviagen",
+      "backend": "reconviagen",
+      "evaluation": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-production-01/results/gc32-reconviagen-production-01/component/fb5a96b1a2-a1070-reconviagen/evaluation/evaluation.json",
+        "sha256": "8ce07b43fdf16011d70287f5c4a4f10bb69f510bcec1e725a8ecbaf060d10048",
+        "bytes": 2878
+      },
+      "stable": true,
+      "independent_metrics": false
+    }
+  ]
+}

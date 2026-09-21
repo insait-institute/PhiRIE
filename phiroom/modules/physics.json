@@ -1,0 +1,23 @@
+{
+  "id": "physics",
+  "branch": "module/physics-v2",
+  "description": "Physical annotation and collision geometry",
+  "inputs": [
+    "registered object assets"
+  ],
+  "outputs": [
+    "physical parameters; collision geometry; URDF"
+  ],
+  "tools": [
+    "CoACD",
+    "physical annotation"
+  ],
+  "actions": {
+    "annotate": {
+      "target": "agents.assets.s6_physics",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    }
+  }
+}

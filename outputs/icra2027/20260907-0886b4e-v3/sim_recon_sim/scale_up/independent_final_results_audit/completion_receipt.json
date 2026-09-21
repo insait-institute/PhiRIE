@@ -1,0 +1,24 @@
+{
+  "audit_complete": true,
+  "all_required_scopes_checked": true,
+  "source_edits": false,
+  "scheduler_touched": false,
+  "new_metric_pipeline": false,
+  "primary_missing_units": 0,
+  "primary_duplicate_units": 0,
+  "scope_missing_units": 0,
+  "scope_duplicate_units": 0,
+  "strict_collision_guard_independently_reexecuted": true,
+  "files": {
+    "admissible_conclusions.json": "d48612320e5ffe898b98ea93a1b99fec8d77d2dcf028bc56bdf6d6fe58f7eaac",
+    "audit.json": "097e1e304b3907972ef68b68618a59ae0dbac28cd1fe8b306237843f9ba86544",
+    "primary_comparisons.json": "2fb3adfb5d9a537dc5150a16b7a394057a8394555103675449c9abd73f52cecf",
+    "primary_native_control_instances.json": "217a536e04a63078433aeaa02ae5e15edafdd9ca8f859864395925e919d817dd",
+    "primary_per_task.json": "7cff5c770f085af01cdd3bc84f62db9b3c513afa1bf8bde02b0b79edd1e1367d",
+    "primary_tables.json": "bbd52533611ee7b42cd24c242a58e87c47d37515b351afd806e90f41f6df9242",
+    "scope_native_control_instances.json": "06bdeebaaad56ebda7b3fbb9bd642784f98cde3309b22bc518f70812ad990629",
+    "scope_tables.json": "d5c9a4ea0e4824e6729d6892da1afd32bb0207cf538ede83cc582f046351d384",
+    "scope_validated_lineage.json": "a234f924f3718d23cfc20e2d73ed0e67b37d15156826c8471f84cc177b1a49c0",
+    "strict_adjudication_revalidation.json": "72da9d38a5966a9901c1f28e3cd09f6baf63b752e8008b3280e400d7953b2c96"
+  }
+}

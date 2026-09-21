@@ -1,0 +1,41 @@
+# System config for robo/certification/task_graph.py (Task 11): grounding
+# evidence weights and the eligibility-gate / swept-workspace geometry
+# defaults. Optional -- `python -m robo.certification.task_graph` runs with
+# these exact values hardcoded as module constants even without --config;
+# this file exists so a real deployment can retune them per robot/benchmark
+# without editing source, and is loaded via:
+#
+#   python -m robo.certification.task_graph --config configs/task_graph/default_thresholds.yaml \
+#       --task <task.yaml> --scene <scene_dir>
+#
+# Every value here matches grounding.py's/task_graph.py's hardcoded
+# defaults at freeze time (2026-08-16) -- this file is the editable copy,
+# not a divergent one.
+
+grounding_weights:
+  # Evidence weights (unbounded additive scores, see grounding.finalize_hypotheses).
+  W_BENCHMARK_MAPPING: 0.97   # explicit rubric role_refs lookup (not eval-result leakage)
+  W_RUBRIC_LABEL: 0.55        # rubric.role_labels label match
+  W_LANGUAGE: 0.42            # parsed-instruction phrase match
+  W_CATEGORY_PRIOR: 0.15      # object label in grounding.ROLE_LABEL_PRIORS[role]
+  W_GEOMETRY_BONUS: 0.30      # nearest-to-anchor / spatial-qualifier tie-break, max bonus
+  W_SUPPORT_EDGE: 0.90        # 'support' role confidence scale from the raw contact-overlap fraction
+  W_OBSTACLE_BASE: 0.55       # 'obstacle' role: floor confidence for any positive-margin capsule hit
+  W_OBSTACLE_MARGIN: 0.35     # 'obstacle' role: additional confidence for the deepest capsule penetration
+
+  # Status thresholds (plan/11: "missing/ambiguous roles must propagate
+  # uncertainty rather than being picked arbitrarily").
+  AMBIGUITY_MARGIN: 0.12      # top-vs-runner-up raw-confidence gap below this -> "ambiguous"
+  CONFIDENT_FLOOR: 0.35       # a lone top hypothesis below this raw score is still "ambiguous"
+
+robot_defaults:
+  # Eligibility-gate envelope (task_graph.eligible_object_ids): generous on
+  # purpose -- this decides graph *membership*, not final manipulability.
+  reach_envelope_m: 0.80
+  reach_min_m: 0.15
+  front_cone_deg: 75.0
+
+capsule_defaults:
+  # Swept-workspace capsule (grounding.swept_workspace_segment/_hits).
+  capsule_radius_m: 0.12
+  lift_m: 0.12

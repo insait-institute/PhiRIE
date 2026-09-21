@@ -1,0 +1,3 @@
+source,subset,scene_id,task_id,policy_id,reset_id,sim_success,real_success,audit_accept
+Phone-room paired trials,all,REPLACE_SCENE,REPLACE_TASK,REPLACE_POLICY,REPLACE_RESET,0,0,false
+Phone-room paired trials,audit accepted,REPLACE_SCENE,REPLACE_TASK,REPLACE_POLICY,REPLACE_RESET,0,0,true

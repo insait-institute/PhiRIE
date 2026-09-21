@@ -1,0 +1,50 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260906-02e9d33-v2
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: materialization_config
+  path: /group/worldcept/code/SimAny-wt/e2-full-materialization/configs/experiments/icra2027/e2_full_materialization/execution.yaml
+  kind: experiment_config
+  required: true
+- id: full_e2_protocol
+  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  kind: experiment_config
+  required: true
+- id: factory_execution
+  path: /group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json
+  kind: source_manifest
+  required: true
+- id: full_control_gate
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json
+  kind: source_manifest
+  required: true
+- id: resolved_jobs
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json
+  kind: source_manifest
+  required: true
+- id: materialization_python
+  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  kind: python_runtime
+  required: true
+- id: background_admission_protocol
+  path: configs/experiments/icra2027/e2_full_materialization/background_admission.yaml
+  kind: experiment_config
+  required: true
+checkpoint_roots: []
+hardware:
+  gpu_required: false
+  purpose: Materialize E2 nine missing A4 factories using existing sealed canonical
+    source; no new generation
+  cpus_per_scene: 4
+  memory_gb_per_scene: 32
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

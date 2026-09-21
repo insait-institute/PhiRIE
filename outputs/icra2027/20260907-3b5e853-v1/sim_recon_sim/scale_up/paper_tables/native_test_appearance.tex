@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\small
+\caption{Native held-out full-frame appearance on common supported TEST instances ($n/N$); B1 is fixed priority and B2 evidence-only selection. Retained native background dominates image area; this is not object-only or Gaussian appearance.}
+\label{tab:native-test-appearance}
+\begin{tabular}{lrrrr}
+\toprule
+Method & $n/N$ & PSNR & SSIM & LPIPS \\
+\midrule
+B0: fixed & 12/48 & $\infty$ & 0.9808 & 0.0287 \\
+B1: priority & 12/48 & $\infty$ & 0.9985 & 0.0033 \\
+B2: evidence & 12/48 & $\infty$ & 0.9972 & 0.0048 \\
+B3: agent & 12/48 & $\infty$ & 0.9972 & 0.0048 \\
+B4: repair & 12/48 & $\infty$ & 0.9972 & 0.0048 \\
+BM: fixed order & 12/48 & $\infty$ & 0.9972 & 0.0048 \\
+\bottomrule
+\end{tabular}
+\end{table}

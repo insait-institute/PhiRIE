@@ -1,0 +1,234 @@
+# baselines/release_status.yaml
+#
+# One row per named construction baseline in
+# plan/15_CONSTRUCTION_BASELINES.md's "Baselines" list plus the two rows
+# already implemented in agents/baselines/ that the task's own README
+# points at. `status` is the load-bearing field for the paper's
+# construction-baseline table:
+#
+#   implemented      -- official released code (or, for our own ablations,
+#                        our own code) actually run in this repo; numeric
+#                        cells are backed by a real report.
+#   partial          -- either (a) a faithful reimplementation of a
+#                        *described* method with no official code release
+#                        (SimFoundry-reproduction), or (b) official code IS
+#                        vendored/available but no in-repo adapter produces
+#                        a numeric row under our protocol yet
+#                        (PolaRiS-manual-construction). See each row's
+#                        `notes` for exactly what is/isn't backed by a
+#                        number.
+#   literature_only  -- real, citable paper; no public runnable code found.
+#   unavailable      -- no matching, verifiable release OR (for
+#                        ReplicateAnyScene) no matching paper/system
+#                        identified at all in this project's baseline audit.
+#
+# tests/test_baseline_release_status.py enforces: every row has all fields
+# below, `status` is one of `allowed_status`, and every row with
+# `literature_only`/`unavailable` has NO numeric-producing adapter file
+# under baselines/ that could be invoked to fabricate a result (the two
+# `*_adapter.py` stubs raise NotImplementedError unconditionally; RoboSnap
+# and PolaRiS-manual-construction have no adapter file at all).
+#
+# Sources consulted for every fact below (audited 2026-08-16):
+#   docs/BASELINES.md            -- tiered survey of external systems
+#   agents/baselines/README.md   -- what's already implemented + run
+#   third_party/<repo>           -- `git log -1`, `git remote -v`, LICENSE
+#   docs/ICRA_RESEARCH_CONTRACT.md, docs/ROBOT.md -- PolaRiS scope decision
+# Guessed facts are never written here; anything not verifiable is left
+# explicit ("N/A -- ...") in the relevant field with the reason stated in
+# `notes`, per plan/15's own acceptance criterion: "Mark unsupported cells
+# N/A, never zero."
+
+schema_version: 1
+
+allowed_status:
+  - implemented
+  - partial
+  - literature_only
+  - unavailable
+
+baselines:
+  - name: MaskClustering
+    status: implemented
+    commit_or_version: "eb2d41c2267cde21966f4340c37b8cf94b05c23c (github.com/PKU-EPIC/MaskClustering, committed 2024-04-25)"
+    license: "No LICENSE file present in the vendored checkout (third_party/MaskClustering) as of this audit -- treat as all-rights-reserved research code pending author clarification, do not redistribute"
+    release_date: "2024 (CVPR 2024; arXiv:2401.07745)"
+    notes: >
+      Official CVPR 2024 code cloned to third_party/MaskClustering and run
+      end to end on OUR inputs: our posed DSLR frames, our scan mesh
+      (ray-cast for MaskClustering's expected render_depth, since ScanNet++
+      DSLR has no native depth), and our SAM3 masks substituting their
+      Cropformer step (agents/baselines/mc_masks.py) because Cropformer
+      needs an unbuildable CUDA op (detectron2 + Entity CropFormer +
+      MSDeformAttn) on this cluster -- documented, not hidden, in
+      agents/baselines/maskclustering.py's module docstring. Adapter:
+      agents/baselines/maskclustering.py (prepare/srun/convert subcommands)
+      + agents/baselines/mc_masks.py. Matched to the same 28-frame budget as
+      our own auto_segment.py. Result (docs/BASELINES.md section 1):
+      F1@0.25 0.605 vs our 0.571; F1@0.5 0.419 vs our 0.286. Caveat carried
+      from the paper into ours: single-pilot-scene comparison.
+
+  - name: FlashSplat
+    status: implemented
+    commit_or_version: "3e3b14786333bf0163ba1b8541e86a3765112d7 (github.com/florinshen/FlashSplat, committed 2024-09-13)"
+    license: "Gaussian-Splatting License (Inria / Max Planck Institut for Informatik) -- research/evaluation use only, no commercial use, per third_party/FlashSplat/LICENSE.md"
+    release_date: "2024 (ECCV 2024; arXiv:2409.08270)"
+    notes: >
+      Caveat that matters: agents/baselines/flashsplat.py is NOT their
+      official CUDA rasterizer -- submodules/flashsplat-rasterization has no
+      prebuilt wheel and needs a source CUDA build unavailable on this
+      cluster (system gcc 14, no compatible nvcc/g++). It is instead a
+      from-scratch reimplementation of their exact published algorithm
+      (their multi_instance_opt label solver ported verbatim; their
+      used_count accumulation reproduced via an autograd-gradient identity
+      on gsplat, proven equivalent to a float64 reference renderer to
+      1e-9 -- run `python -m agents.baselines.flashsplat --selftest`,
+      CPU-only, no scene data needed). Run on our own trained splat + our
+      own per-object masks. Result (docs/BASELINES.md section 1): union IoU
+      0.649 vs our final removal set (recall 0.87). Because the rasterizer
+      itself is a verified reimplementation rather than their shipped
+      binary, treat any FUTURE claim that compares against a different
+      FlashSplat rasterizer build as non-comparable to this row.
+
+  - name: SimFoundry-reproduction
+    status: partial
+    commit_or_version: "CORRECTED 2026-08-31 -- an official release now exists: github.com/NVlabs/SimFoundry (created 2026-07-15, Apache-2.0, V0 pushed 2026-08-14, examples added 2026-08-26). Still `partial` here because this row's actual runnable adapter (below) has NOT yet been re-pointed at the official code -- it remains our own paper-faithful reimplementation of the DESCRIBED method (docs/BASELINES.md section 2.1 has the full correction, resource requirements, and what the release does/doesn't include -- e.g. sim-to-real policy training is explicitly NOT released). Integrating the real code is a scoped decision, not yet made -- see docs/ICRA_RESEARCH_CONTRACT.md."
+    license: "N/A -- original code, this repository's license"
+    release_date: "2026-06 (arXiv:2606.28276, submitted Jun 2026)"
+    notes: >
+      Glue-only ablation with no dedicated code file by design
+      (agents/baselines/README.md): run/run_simfoundry.sh composes this
+      project's OWN pipeline stages (s0_select_frame -> s1_segment ->
+      s2_depth -> s3_lift -> s4_trellis -> s5_align -> s6_physics -> s7_sim
+      -> s8_render) restricted to one representative frame + monocular
+      metric depth + single-view TRELLIS + no GT, matching the paper's
+      described ablation row D (one frame, no multi-view generation, no
+      hybrid slot). This reproduces the DESCRIBED METHOD, not the AUTHORS'
+      CODE (none exists) and not their exact numbers: docs/BASELINES.md
+      section 0(2) -- their reported F1 is @10mm on 12 staged YCB tabletop
+      scenes scored against FoundationPose quasi-GT; ours is @20mm on
+      ScanNet++ instance submeshes. Different threshold, different scenes,
+      different reference -- never place the two F1 numbers in one table
+      cell (already flagged as a corrected error in docs/BASELINES.md).
+      Marked `partial` rather than `implemented` specifically because there
+      is no official code to audit our glue against.
+
+      2026-08-30 addition: `baselines/simfoundry_repro.py` makes this SAME
+      degenerate configuration callable programmatically, not just via the
+      ScanNet++-only `run/run_simfoundry.sh` shell script. No stage logic
+      changed -- still glue over the same shared pipeline modules, still
+      `partial` for the same reason. Admissible in
+      `configs/experiments/icra_contract_v1.yaml`'s `mujoco_paired` protocol
+      (ScanNet++ scenes -- genuinely compatible). NOT admissible in
+      `oracle_causal`: two of the shared stages this glue calls
+      (s0_select_frame, s5_align) hard-depend on ScanNet++-only GT-instance
+      files, so on BEHAVIOR scenes this either crashes or risks leaking
+      hidden oracle GT -- caught before any cluster run, see
+      docs/ICRA_RESEARCH_CONTRACT.md correction #9.
+
+  - name: raw_reconstruction
+    status: implemented
+    commit_or_version: "this repository, baselines/raw_reconstruction.py (new, Task 15, 2026-08-16)"
+    license: "N/A -- original code, this repository's license"
+    release_date: "2026-08-16"
+    notes: >
+      Our own no-factorization ablation, not a third-party baseline, so
+      there is no external release to pin: it takes EXACTLY the upstream
+      capture + reconstruction outputs already produced elsewhere in this
+      pipeline (COLMAP-posed frames -> trained 3DGS splat, plus either the
+      ScanNet++ dataset scan mesh or a splat-derived TSDF mesh from
+      agents/discover/derive_mesh_from_splat.py) and uses them AS-IS: zero
+      per-object stages applied. Verified runnable against a real ScanNet++
+      scene (mesh + splat + GT instances all present, e.g. c50d2d1d42) and
+      against this repo's own data/recon_scenes/data/<scene> layout (splat
+      present, no dataset mesh -- correctly falls back to an explicit
+      mesh-dependent N/A rather than fabricating collision/geometry stats).
+      All 7 oracle-table metric cells are reported not_applicable by
+      construction with an explicit reason each; an optional --render-eval
+      flag adds one GPU-only self-consistency PSNR that is explicitly
+      labelled as a different, narrower protocol than the main pipeline's
+      held-out DSLR-test-split render numbers, so it can never be
+      mis-read as the same metric.
+
+  - name: SimRecon
+    status: literature_only
+    commit_or_version: "N/A -- no public code repository found as of this audit"
+    license: "N/A -- not released"
+    release_date: "2026-03 (arXiv:2603.02133, CVPR 2026)"
+    notes: >
+      docs/BASELINES.md section 2 ("A. Real-to-sim scene generation"):
+      "Closest new competitor. Compositional real-video -> SimReady assets,
+      and it already reports ScanNet numbers. Watch for code; if released,
+      a Tier-1 head-to-head." Its own Tier-2 worklist (section 4) lists
+      "SimRecon (until code lands)" under "cite and contrast, do not run" --
+      i.e. explicitly not runnable as of that audit. No public code
+      repository was found repeating this check. baselines/simrecon_adapter.py
+      is an inert stub (raises NotImplementedError unconditionally on every
+      call) so nothing can silently fabricate a SimRecon number. RE-CHECK
+      before final paper submission in case a release has landed.
+
+  - name: ReplicateAnyScene
+    status: unavailable
+    commit_or_version: "N/A -- no matching paper or repository identified"
+    license: "N/A"
+    release_date: "N/A"
+    notes: >
+      This exact name appears ONLY in plan/15_CONSTRUCTION_BASELINES.md's
+      baseline list. It does not appear anywhere in docs/BASELINES.md's
+      tiered survey (sections 1-5, all sub-problems A-G) or in
+      agents/baselines/README.md, and a repo-wide case-insensitive grep for
+      "replicateanyscene" / "replicate any scene" / "replicate.any.scene"
+      finds only the plan file itself. Rather than guess which of the
+      surveyed sub-problem-A systems (SimRecon, Image2Sim, EmbodiedGen V2,
+      SimuScene, Video2Game, MetaScenes, ...) this informal name might
+      refer to, this row is marked unavailable pending literature
+      identification -- inventing a paper ID here would be exactly the
+      fabrication this task's acceptance criteria forbid.
+      baselines/replicate_adapter.py is an inert stub (raises
+      NotImplementedError unconditionally on every call).
+
+  - name: RoboSnap
+    status: literature_only
+    commit_or_version: "N/A -- no public code repository found as of this audit"
+    license: "N/A -- not released"
+    release_date: "2026-07 (arXiv:2607.06699)"
+    notes: >
+      docs/BASELINES.md section 3.G: "Single RGB -> collision-aware assets +
+      3DGS visual layer, fully automated. Strongest 2026 single-image
+      comparison, and evaluable without a robot" -- but listed under Tier 2
+      ("cite and contrast, do not run") in the same document's worklist,
+      i.e. no runnable release as of that audit. plan/15's own instruction
+      is explicitly conditional: "RoboSnap only if an official runnable
+      release supports the frozen protocol." No adapter file is written for
+      it; if a release appears later, add baselines/robosnap_adapter.py and
+      update this row to `implemented`/`partial` with a real commit/license.
+
+  - name: PolaRiS-manual-construction
+    status: partial
+    commit_or_version: "129abc45f680559a7da62b9280fdb127b02b7275 (github.com/arhanjain/PolaRiS, vendored to third_party/PolaRiS on 2026-08-14)"
+    license: "MIT (third_party/PolaRiS/LICENSE)"
+    release_date: "2025-12 (arXiv:2512.16881, per docs/ROBOT.md)"
+    notes: >
+      DISCREPANCY FOUND DURING THIS AUDIT (2026-08-16), flagged here rather
+      than silently resolved because it is outside baselines/'s ownership:
+      official PolaRiS code IS vendored in this repo
+      (third_party/PolaRiS, MIT-licensed, cloned 2026-08-14) even though
+      docs/ICRA_RESEARCH_CONTRACT.md's "Decision 1" (frozen 2026-08-16, the
+      SAME date as this audit) states a "PolaRiS/Isaac Lab integration
+      (does not exist anywhere in this codebase -- verified by repo-wide
+      grep, 2026-08-16)" and deliberately scopes the paper's "official vs.
+      reconstructed environment" comparison to a hand-built MuJoCo reference
+      inside robo/envs instead (plan Tasks 07-08 descoped). As of this
+      audit, robo/polaris/* (plan Task 07's adapter) does NOT exist, so
+      nothing in this repo runs PolaRiS end to end under our frozen
+      protocol yet, and no numeric row can be honestly produced today for
+      "official PolaRiS manual construction as a human-effort reference"
+      (plan/15's own phrasing). Marked `partial` rather than
+      `literature_only` because runnable official code is genuinely
+      present, and NOT `implemented` because no in-repo adapter produces a
+      number. No adapter file is written here for the same reason as
+      SimRecon/RoboSnap/ReplicateAnyScene: nothing must be able to
+      fabricate a "PolaRiS" cell. Do NOT treat any robo/envs hand-built
+      reference variant as a PolaRiS number -- that would misattribute a
+      stand-in as the official benchmark. This discrepancy should be raised
+      with whoever owns Task 07 / ICRA_RESEARCH_CONTRACT.md maintenance.

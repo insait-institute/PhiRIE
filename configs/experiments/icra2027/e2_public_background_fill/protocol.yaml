@@ -1,0 +1,53 @@
+schema_version: 1
+scope: compact_engineering_background_pilot
+freeze_id: 20260906-4cf66bf-v1
+population_selection: Exact original compact canonical pair selected by TRAIN discovery
+  counts before controller/qualification outcomes; no replacements
+scene_ids:
+- 27dd4da69e
+- 40aec5fffa
+planned_objects:
+  27dd4da69e: 7
+  40aec5fffa: 10
+total_planned_objects: 17
+policy_id: A4
+source_construction_freeze: 20260905-61d8ba4-v1
+source_factory_freeze: 20260905-cda9efc-v1
+stages:
+- preparation
+- sam3_masks
+- lama_cpu_erasure
+- gaussian_fill
+stage_contract_rule: Separate new context/source/E0/freeze after predecessor is sealed
+thresholds_changed: false
+official_test_images_read: 0
+paper_ready: false
+failure_rule: Keep all planned slots/views; preserve NO_PLANE/NO_VIEW; no accepted-scene
+  substitution or raw-background fallback
+full50_authorized: false
+stage: gaussian_fill
+preparation_freeze: 20260906-dba8e6b-v2
+planned_views:
+  27dd4da69e: 3
+  40aec5fffa: 12
+no_plane_preservation: 40aec5fffa/obj_1007 remains in planned population and produces
+  typed BLOCKED_UNFILLABLE_ACCEPTED without a substitute background
+mask_freeze: 20260906-a0a1aa3-v1
+model_invocation: Existing 1500-step primary TRAIN view Gaussian fill only if all
+  accepted objects satisfy existing fill contract
+erasure_freeze: 20260906-472a6d7-v1
+diagnostics_scope: TRAIN erasure-target diagnostics only; secondary TRAIN views are
+  not official TEST
+scheduler_by_scene:
+  27dd4da69e:
+    gpus: 1
+    reason: Invoke existing differentiable Gaussian renderer
+  40aec5fffa:
+    gpus: 0
+    reason: Existing predeclared no-plane gate closes before GPU work
+runtime_env:
+  SIMANY_FILL_DEPENDENCY_OVERLAY: /group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  PYTHONPATH: <exact executing checkout>:/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  PYTHONNOUSERSITE: '1'
+  PYTHONDONTWRITEBYTECODE: '1'
+supersedes_failed_readiness_freeze: 20260906-f203ef7-v1

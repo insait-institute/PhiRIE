@@ -1,0 +1,25 @@
+{
+  "updated_utc": "2026-09-14T03:26:48Z",
+  "requested_groups": 420,
+  "datasets": {
+    "scannetpp": {
+      "captured_groups": 140,
+      "feature_pngs": 609,
+      "approved_groups": 0,
+      "complete_scenes": 10
+    },
+    "libero": {
+      "captured_groups": 98,
+      "feature_pngs": 420,
+      "approved_groups": 0,
+      "complete_scenes": 7
+    },
+    "behavior": {
+      "captured_groups": 0,
+      "feature_pngs": 0,
+      "approved_groups": 0,
+      "complete_scenes": 0
+    }
+  },
+  "quality_status": "Capture and publication review are separate; pending/needs_work groups are not paper-approved."
+}

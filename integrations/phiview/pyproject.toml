@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physicalview"
+version = "0.2.0"
+description = "PhysicalView: interactive GPU-backed viser studio for the SimAny real-to-sim pipeline (scene, generation, registration, inpainting, robot policies)."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Runyi Yang" }]
+dependencies = [
+  "viser>=1.1.0",
+  "mujoco>=3.10",
+  "numpy>=1.26,<2",
+  "scipy",
+  "trimesh",
+  "plyfile",
+  "pillow",
+  "pyyaml",
+  "imageio",
+  "opencv-python-headless",
+]
+
+[project.urls]
+Repository = "https://github.com/RunyiYang/PhysicalView"
+Issues = "https://github.com/RunyiYang/PhysicalView/issues"
+
+[project.scripts]
+physicalview = "physicalview.cli:main"
+phiview = "physicalview.phiview:main"
+
+[tool.setuptools.package-data]
+physicalview = ["web/*.html", "web/*.js", "resources/*.yaml", "resources/pipelines/*.json"]
+# GPU dependencies have independent, locked uv projects in envs/.
+
+[tool.setuptools.packages.find]
+include = ["physicalview*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest==9.0.2", "build>=1.2", "torch==2.9.1"]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform != 'darwin'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

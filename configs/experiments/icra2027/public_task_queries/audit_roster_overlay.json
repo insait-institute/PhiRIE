@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "paper_ready": false,
+  "scene_ids": [
+    "behavior_task0020",
+    "behavior_task0011",
+    "behavior_task0023",
+    "behavior_task0027",
+    "behavior_task0045",
+    "behavior_task0002"
+  ],
+  "conditions": [
+    "clean",
+    "mild",
+    "severe"
+  ],
+  "task_ids_by_scene": {
+    "behavior_task0020": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ],
+    "behavior_task0011": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ],
+    "behavior_task0023": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ],
+    "behavior_task0027": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ],
+    "behavior_task0045": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ],
+    "behavior_task0002": [
+      "e6_public_q01",
+      "e6_public_q02",
+      "e6_public_q03",
+      "e6_public_q04"
+    ]
+  },
+  "public_query_annotations": "configs/experiments/icra2027/public_task_queries/queries.json",
+  "public_query_conditions": "configs/experiments/icra2027/public_task_queries/condition_expansion.json",
+  "note": "Roster-only integration proposal. This is not the construction public_manifest schema and must not be passed to the feature builder as a scene manifest."
+}

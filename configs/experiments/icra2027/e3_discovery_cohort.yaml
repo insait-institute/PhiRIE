@@ -1,0 +1,186 @@
+schema_version: 1
+freeze_id: 20260905-ea7cc7f-v2
+scope: gt_isolated_full_cohort_discovery_crops
+paper_ready: false
+generate_assets: false
+scene_roster: configs/experiments/icra2027/construction_regimes.yaml
+max_train_frames: null
+render_stride: 3
+discovery_stride: 12
+dataset_root: /data/ScanNetpp
+source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
+sam3_source:
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  upstream_commit: 8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  tree_sha256: 73c418359155da5da839853613260e84f48e5bd8e3d494c6614ca9e561a187ae
+sam3_checkpoint:
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  sha256: 9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e
+  bytes: 3450062241
+hf_home: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface
+sam3_python: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python
+render_python: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python
+unchanged_producer_files:
+  agents/core/common.py: b98e753b195bce0a9119accce958df23ce6e666301a469ebef5712fe6da81e79
+  agents/discover/derive_mesh_from_splat.py: 24239842cbd410011337dc5691b22cb918bdc027d5af64e030e05b036d398fc8
+  agents/discover/auto_segment.py: 03cf6c0a2d5f5f42062f9e8dcf2edae4c9251ab0d718e387f1e727709d47310d
+  agents/discover/factory_prepare.py: 214479c3c4d9bbae9d0cd1b2ac02bdcd9ca916798b502c841dda485d2df0cc37
+  agents/discover/factory_refine_masks.py: f9e30467be56144c6568b557c10c408591d17e9dffbc1dee9f1b4111a3e5f4c2
+  agents/discover/training_views.py: 9b71f81d9613affe4bb48f379a3254c0df19578f9d63fefd22e3d46f13cdccce
+component_rng_protocol: 'unchanged v21 producer defaults: projection RandomState(0),
+  surface sampling seed42, SAM3 eval inference'
+full_vocabulary: 1
+planned_scenes: 50
+construction_roster:
+  path: configs/experiments/icra2027/construction_regimes.yaml
+  sha256: 3bf4da5aa0e6fbb3d044a9e9050174332438e82dcd96a30de86c2d497085517e
+fidelity_roster:
+  path: configs/experiments/icra2027/fidelity_manifest.json
+  sha256: 222b31d52c5fbbd7d69fd9bdb4e9fc2d3540f1ba12d87b5949c05072eafb61fc
+gaussian_cohort:
+  freeze_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-9ef4ab1-v1
+  producer_commit: 9ef4ab158ccebf41403c393ac1cc186d03fd1704
+  contract:
+    sha256: 17d17d627bdc978b9cdb29ec0e402e49b80af3b39dc4827ed5ed00fca00ff2bb
+    size_bytes: 9508
+  config_sha256: e0edca72989ebb5992ad2bde15893ee016ec68d56bdab38bf4c1c25a5c1b8d9a
+discovery_prompts:
+- bottle
+- mug
+- computer mouse
+- keyboard
+- headphones
+- telephone
+- box
+- book
+- laptop
+- backpack
+- shoe
+- bowl
+- plate
+- kettle
+- plant pot
+- speaker
+- table
+- chair
+- office chair
+- sofa
+- monitor
+- shelf
+- cabinet
+- trash can
+- lamp
+- whiteboard
+- printer
+- fan
+- pillow
+- suitcase
+renderer_dependency_root: /group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+runtime:
+  render:
+    packages_sha256: c7b680c10fe3b4947905862aceddef32494b455ea544a9ba8818af2330059304
+    targeted_bytes:
+      scope: targeted_executable_package_records_and_entrypoints
+      complete_raw_runtime_identity: false
+      files:
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python3.10
+        bytes: 17331920
+        mtime_ns: 1783115415305703639
+        sha256: 1876a4311f96e069fa3cb5370e29b827c26dec8e112f575497a19ecdbaf6f2a6
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/PIL/__init__.py
+        bytes: 2035
+        mtime_ns: 1783115507484126808
+        sha256: 7361b6ad3878589affe5956e4a4da24d71398b0891fd3a8c15e9362217b4ca01
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/numpy-2.2.6.dist-info/RECORD
+        bytes: 123872
+        mtime_ns: 1783115514913999432
+        sha256: e5b8cae94f4103f2647f2f53a188693a7edc60ef730838612971c05f095ce730
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/numpy/__init__.py
+        bytes: 22147
+        mtime_ns: 1783115513214028576
+        sha256: 6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/pillow-12.3.0.dist-info/RECORD
+        bytes: 16324
+        mtime_ns: 1783115507724122691
+        sha256: d178cdf25e90513ac168a18762712b6737d467e49909b8145e9a7fa194fbbb72
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/torch-2.4.1+cu124.dist-info/RECORD
+        bytes: 1262186
+        mtime_ns: 1783115549913399408
+        sha256: c52352db3964599f871ddf65bd754b6da1c85dcbc4027b7e862a15a679ba76a7
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/torch/__init__.py
+        bytes: 89184
+        mtime_ns: 1783115534963655705
+        sha256: 34fd26c3046775a70a6a654df60afb362b2f2e98b2f9b8e713c8763b7a80ff83
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/trimesh-4.12.2.dist-info/RECORD
+        bytes: 18322
+        mtime_ns: 1783115519673917828
+        sha256: 22ebd303ea2e54e28f83d28257eaec71b66f619e6fafa5152a6b4f425602e0da
+      - path: /group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/trimesh/__init__.py
+        bytes: 2433
+        mtime_ns: 1783115519443921772
+        sha256: 82ab0c6786671b7a6c0ea1d6ffda96f9df6330b72cf890ac4fc4cdce500a6b4b
+  sam3:
+    packages_sha256: c1dcd09b522dd85cf0da036521ded000dd307385adecfda42cb1f027faff64a1
+    targeted_bytes:
+      scope: targeted_executable_package_records_and_entrypoints
+      complete_raw_runtime_identity: false
+      files:
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python3.11
+        bytes: 25508680
+        mtime_ns: 1785998960440085517
+        sha256: e5b2d8cf4aab98e87720f2b6075f5d42a6d25fa6d7cd69c61845d0202da915cd
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/PIL/__init__.py
+        bytes: 2031
+        mtime_ns: 1786001145845532722
+        sha256: 43828e12947b4bf5ec8f7d1fbceb2f47de311295f8294b15794c1a54fd5f53cd
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/numpy-1.26.4.dist-info/RECORD
+        bytes: 115358
+        mtime_ns: 1786000145527941120
+        sha256: 5d05e618ce245ae5fcb4d03d3ed33579c170893fef9aaff778d1a0732ff10248
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/numpy/__init__.py
+        bytes: 17005
+        mtime_ns: 1786000141847979458
+        sha256: 22cd1535fa14d74ef6f457cca149ffdc80875f460be313b8f895273f78bc402e
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/open3d-0.18.0.dist-info/RECORD
+        bytes: 73626
+        mtime_ns: 1786000364455369104
+        sha256: cd9a97c90f05fa0379036654a015c821093fc9a2bcb5b3e387c30e6afac4c1b8
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/open3d/__init__.py
+        bytes: 8461
+        mtime_ns: 1786000357965448698
+        sha256: d2a8096be5afd6113abbe942fa6c05b3f72bd70fb0f9aa240f3c7bb3d69662d1
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/pillow-11.3.0.dist-info/RECORD
+        bytes: 15801
+        mtime_ns: 1786001146215527751
+        sha256: fb82ad54f637054c1cf21a91572a6d80f78b67826030d748ef5c276b22f34524
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/spconv/__init__.py
+        bytes: 765
+        mtime_ns: 1786000353765500208
+        sha256: c51232ea81b35f4a688c0cf9bc68d5b6478035ff95c86f4d94af1a51b31765a5
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch-2.5.1+cu121.dist-info/RECORD
+        bytes: 1282249
+        mtime_ns: 1786000271076615034
+        sha256: 5f509afefcbd0ee56653e3f2beb4e4d8d6018ccde5737efa0d548c0a9799ef45
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch/__init__.py
+        bytes: 95190
+        mtime_ns: 1786000247156873968
+        sha256: e1b5bf4151bd246a21e3ac5318f6edfcf2e6ef0fd4f233bfb77a264698ec1319
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/trimesh-5.0.0.dist-info/RECORD
+        bytes: 18318
+        mtime_ns: 1786000164167748440
+        sha256: bcbf1a64ed6d954453a9abcbdbea1e44a558d3e3225bde09fc8f42dd5929c7e0
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/trimesh/__init__.py
+        bytes: 2429
+        mtime_ns: 1786000163717753088
+        sha256: a50d8a9c4346fa0c5f6ca0c234effd12c548b1bee58197abb8106cb5e79d3360
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/xformers-0.0.28.post3.dist-info/RECORD
+        bytes: 30000
+        mtime_ns: 1786000276826547100
+        sha256: 948ea8a32479fd3bc7b91056d9f9965295486a829f98273c490e5459ad3af8f0
+      - path: /group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/xformers/__init__.py
+        bytes: 1710
+        mtime_ns: 1786000275786564047
+        sha256: 4ca0c0dbc80e010740cf056f53d204a465b3ebbed044a8151669eabe7800836c
+scope_note: Full room vocabulary and all official TRAIN precede unchanged render3/discovery12
+  strides; legacy first48 small-object pilot is a distinct scope, not a paired treatment.
+renderer_dependency_tree_sha256: f66ea760abbfd054bf376261b6c6f2bba121eace56f1ca34984707c0f0006516

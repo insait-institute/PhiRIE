@@ -1,0 +1,332 @@
+# E3 controller-GT-isolated conditional construction population.
+#
+# This file freezes membership from the pre-existing GT-factory reports in an
+# inventory step that runs before the controller.  The controller receives only
+# opaque job IDs, raw proposal identities, and newly produced construction-time
+# evidence.  It must never receive the report rows or the legacy alignment /
+# hybrid scores used to define and audit this conditional population.
+schema_version: 1
+freeze_id: inherit
+study_scope: conditional_fixed_gt_factory_jobs
+paper_ready: false
+paper_ready_reason: >-
+  Development/preliminary E3 contract. Population membership is conditioned on
+  the legacy GT-factory accepted set, the legacy crop masks are not GT-free,
+  and the cached proposal pool lacks original generator/checkpoint/runtime
+  provenance. A provenance-complete proposal pool and paper-mode E0 contract
+  are still required before a title claim.
+
+output_dir: outputs/icra2027/{freeze_id}/agentic
+
+population:
+  dataset: scannetpp_v2
+  split: nvs_sem_val
+  scene_roster_config: configs/experiments/icra2027/construction_regimes.yaml
+  scene_roster_config_file_sha256: 3bf4da5aa0e6fbb3d044a9e9050174332438e82dcd96a30de86c2d497085517e
+  scene_roster_sha256: 7002a3dd0263ff6fb6895f8a4d424a790c3f6fc125fc682517c328cbee723913
+  scene_roster_hash_method:
+    normalize_each_scene_id_to_string: true
+    sort: utf8_ascending
+    serialization: newline_delimited
+    final_newline: true
+    encoding: utf-8
+  planned_scenes: 50
+  planned_jobs_per_policy: 457
+  policy_ids: [A0, A1, A2, A3, A4]
+  planned_policy_object_rows: 2285
+  preserve_empty_scenes: true
+  preserve_failed_jobs: true
+  membership:
+    authority: factory_report_json
+    report_path_template: outputs/{scene_id}_factory/report.json
+    object_rows_path: objects
+    object_index_field: index
+    inventory_only_fields: [index, gt_object_id, label, tier, rejected]
+    include_when:
+      tier_in: [A, B]
+      rejected_is_null: true
+    sort_by: [scene_id_utf8, object_index_integer]
+    job_id_format: "{scene_id}/obj_{object_index:02d}"
+    resolved_roster_sha256: 80da773ab053f6277cd228553840234c82dc18906d547786c290c6cadbe7c786
+    resolved_roster_canonicalization:
+      encoding: utf-8
+      serialization: json
+      sort_keys: true
+      separators: [",", ":"]
+      ensure_ascii: false
+      row_fields: [scene_id, object_index, gt_object_id, label, rvg_complete]
+      row_order: [scene_id_utf8, object_index_integer]
+    forbidden_membership_sources:
+      - outputs/{scene_id}_factory/objects/hybrid_all.json
+      - directory_glob
+      - successful_jobs_only
+    controller_receives_report_fields: false
+
+  # This is a strict inventory cross-check, never a controller input.  The file
+  # is a top-level list with one row per original object, keyed by `index`.
+  prehybrid_cross_check:
+    path_template: outputs/{scene_id}_factory/objects/aligned_all_prehybrid.json
+    root_type: list
+    index_field: index
+    expected_rows_all_scenes: 789
+    controller_access: forbidden
+
+  # Each report hash freezes the exact source used by the membership resolver.
+  # accepted_jobs and reconviagen_available must sum to 457 and 453.
+  scene_snapshots:
+    - {scene_id: "09c1414f1b", report_sha256: "24a0cb64c531d42e72d83d61bb2365c9bf0f8c68428243dfb8ef0be0269b32a7", accepted_jobs: 27, reconviagen_available: 27}
+    - {scene_id: "0d2ee665be", report_sha256: "f9596dc88d5e636d38b7cdbe1e959a65775cf602f4fdd829b1cfe0255d84e571", accepted_jobs: 19, reconviagen_available: 19}
+    - {scene_id: "13c3e046d7", report_sha256: "c2bfe243f5624a96b699d106958d077c293e45ccf8333fd7fb3ab919a0f38818", accepted_jobs: 0, reconviagen_available: 0}
+    - {scene_id: "1ada7a0617", report_sha256: "d0a755293bcc27ee150a4d403d108cc8a8ef75470cc8af8019029672986a4f3c", accepted_jobs: 10, reconviagen_available: 10}
+    - {scene_id: "21d970d8de", report_sha256: "fdfe1114fbb174096865422c33a6d828cfca1fcfff571ab33df159767577d8fc", accepted_jobs: 2, reconviagen_available: 2}
+    - {scene_id: "25f3b7a318", report_sha256: "7aa2f911299890ab023fbd85a1cdf6a6828f605bbc9e4afe9e13778b36e4f4ff", accepted_jobs: 20, reconviagen_available: 20}
+    - {scene_id: "27dd4da69e", report_sha256: "3709d8db2f92f901a0254a7d5ce2f420815e0c022a2b8cc9a8626c5c1ff2c71a", accepted_jobs: 12, reconviagen_available: 11}
+    - {scene_id: "286b55a2bf", report_sha256: "1139778933c5eee6fdddf70abc5069d14fcfc41b039d2d16b264aef2f930d4a3", accepted_jobs: 4, reconviagen_available: 4}
+    - {scene_id: "31a2c91c43", report_sha256: "c2bfe243f5624a96b699d106958d077c293e45ccf8333fd7fb3ab919a0f38818", accepted_jobs: 0, reconviagen_available: 0}
+    - {scene_id: "3864514494", report_sha256: "bc079053c42400f5ccb01032fcd7124268cf2937f800b088d2c5647a50959100", accepted_jobs: 3, reconviagen_available: 3}
+    - {scene_id: "38d58a7a31", report_sha256: "779eb7a5f8c195714e88215030c3eb6bff3f61312e639f102c21c9786e4ff239", accepted_jobs: 2, reconviagen_available: 2}
+    - {scene_id: "3db0a1c8f3", report_sha256: "875f720bb9af70173f911ac7ce7ba255d17d6bb9d513599ff80a14273820f02e", accepted_jobs: 32, reconviagen_available: 30}
+    - {scene_id: "3e8bba0176", report_sha256: "a2a4b6083dfcbceb61c44abb624f05c24d63aedcd24bff0213e1a90990a7cf40", accepted_jobs: 5, reconviagen_available: 5}
+    - {scene_id: "3f15a9266d", report_sha256: "827bef65fc5a23b8548aa45f7538b7142324da79869243b7b7fdd7cd8660f780", accepted_jobs: 23, reconviagen_available: 23}
+    - {scene_id: "40aec5fffa", report_sha256: "82d810b0e5805cc7fe660c76d5cfb479aabc8af8f5d72e333cc0812c7c59ff4f", accepted_jobs: 2, reconviagen_available: 2}
+    - {scene_id: "45b0dac5e3", report_sha256: "9fc67a527cd29ab36493739018d22b283d41d1843fa30fb840c6b068f3303dc3", accepted_jobs: 6, reconviagen_available: 6}
+    - {scene_id: "5748ce6f01", report_sha256: "6cab8666fbf4cf0a6bc69e150a0cd6e479010b64a52a93767d7501fb1b7c4108", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "578511c8a9", report_sha256: "ad748a2bac0e8d10250b7e46389d9cdc98f529e26f819db08f0cb032fcee4675", accepted_jobs: 21, reconviagen_available: 21}
+    - {scene_id: "5942004064", report_sha256: "05d3aed10d9f14d219ca5cf81205106c32f9273f1ff7937a7384b75d31ffc909", accepted_jobs: 13, reconviagen_available: 13}
+    - {scene_id: "5eb31827b7", report_sha256: "9e3fbae3db99d5c4654ccebbcd6535a86ec1f2ba023f177650c1f01b445bfe47", accepted_jobs: 6, reconviagen_available: 6}
+    - {scene_id: "5ee7c22ba0", report_sha256: "dda4109e77144299d7d2d7ea1cbc772bf1846f0382aca8367288b3918a4ce0cb", accepted_jobs: 5, reconviagen_available: 5}
+    - {scene_id: "5f99900f09", report_sha256: "8b0ee2f06ad415c003401a44081422c06ff04190cbf03bbfe114fc6b66e97d4e", accepted_jobs: 16, reconviagen_available: 16}
+    - {scene_id: "6115eddb86", report_sha256: "f7e48d1d49e8390195909501ec3949d9da22182e844af4a8d8f1460c2470eb01", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "7831862f02", report_sha256: "308b45c0b993da8f47597cae5d879b22ab541f8f9c4b2d078e0d0b23406984da", accepted_jobs: 5, reconviagen_available: 5}
+    - {scene_id: "7b6477cb95", report_sha256: "87f65300d52a86fd0b59e5698af7871a54be1b08d9ebccccc212f8443f4c8791", accepted_jobs: 13, reconviagen_available: 13}
+    - {scene_id: "7bc286c1b6", report_sha256: "7d0c65e314872d8af44b977b74be1ffcd680614396d296289117ebd6ea320149", accepted_jobs: 0, reconviagen_available: 0}
+    - {scene_id: "825d228aec", report_sha256: "080b66e1a2f8026c9e95be60edc82de640710afbb50828855ae4568be7998e71", accepted_jobs: 8, reconviagen_available: 8}
+    - {scene_id: "9071e139d9", report_sha256: "7727280adaf161100c22f699b60a98edd728f040ca602b732a237d36770e088e", accepted_jobs: 29, reconviagen_available: 29}
+    - {scene_id: "99fa5c25e1", report_sha256: "bcc3afc15721065cd7e921c600939419490fc0d0069f5c4f7a7a7272288bcf7b", accepted_jobs: 6, reconviagen_available: 6}
+    - {scene_id: "a24f64f7fb", report_sha256: "5df3b837cde6a7d85b2b4749b9cbd5365482102344763ab601b748c9368c8ccb", accepted_jobs: 2, reconviagen_available: 2}
+    - {scene_id: "a8bf42d646", report_sha256: "6d5ae8b80ec9f6cef002e3f65ca9876212c639d5a9692153f671d34b4906e5b5", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "a980334473", report_sha256: "35717e4aeee225397a38879584a2c5837565635f831997333888655691ca98d3", accepted_jobs: 3, reconviagen_available: 3}
+    - {scene_id: "ac48a9b736", report_sha256: "1f9aea8c6cbcf86b04b18b4050b891a31af917b284632aadc3176234e1d4fa5d", accepted_jobs: 9, reconviagen_available: 8}
+    - {scene_id: "acd95847c5", report_sha256: "893ceea963fcbecb3f52c0af51abeae63402fa736020ffec7b7ff52065212c61", accepted_jobs: 20, reconviagen_available: 20}
+    - {scene_id: "b0a08200c9", report_sha256: "57dc82174dea14bf8e46d0be659fa4e6f9cdb80760b8478bda03821bf5fb5a55", accepted_jobs: 5, reconviagen_available: 5}
+    - {scene_id: "bcd2436daf", report_sha256: "f689dc1c3b9df4ceca9c1f8a5f3d4f140b9f782f25959e4bcda522a82674a620", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "bde1e479ad", report_sha256: "9a98b915a5e8a2d05bb70be716b54943f5197ef30feba9fb661567f55807cf88", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "c49a8c6cff", report_sha256: "82e7c6910a2398de510e5db43b856fabe87f87a302e4260692f27956ff5ec117", accepted_jobs: 11, reconviagen_available: 11}
+    - {scene_id: "c4c04e6d6c", report_sha256: "a222e138b882f2b22fa27869a92b3c94aada9c808672ccb2d6455a8a4ff648ee", accepted_jobs: 1, reconviagen_available: 1}
+    - {scene_id: "c50d2d1d42", report_sha256: "fa971cfd9d5f19529098c55c5592b70ec1826a270edd7008c85c1d43da6ece0e", accepted_jobs: 16, reconviagen_available: 16}
+    - {scene_id: "c5439f4607", report_sha256: "181b2c05781025405b103ce2d0ede7fbc67845de14494e5c77dd031a03971ffa", accepted_jobs: 6, reconviagen_available: 6}
+    - {scene_id: "cc5237fd77", report_sha256: "28097dfbfef4c11b790a1c013b0a1fb11f353f6186529812ce2464f1fc0751e2", accepted_jobs: 9, reconviagen_available: 9}
+    - {scene_id: "d755b3d9d8", report_sha256: "8507d337709dc0d9e00367405f8d5ff08b8deba4dab4ea7e590d49230b4898ef", accepted_jobs: 27, reconviagen_available: 27}
+    - {scene_id: "e398684d27", report_sha256: "b43263b2e001c3b570756ca7bef1d3fef10a3d573f6d36c5f955566b01f396de", accepted_jobs: 18, reconviagen_available: 18}
+    - {scene_id: "e7af285f7d", report_sha256: "a8804a4f65385067a7dc6f8b47aff90fade7c5efeaf68b3dac2a966367a53726", accepted_jobs: 0, reconviagen_available: 0}
+    - {scene_id: "f2dc06b1d2", report_sha256: "40c37ee48a1b3bdd9e0e03dbe2573d2ab3e5fd7e3f593ed9e2de17409bf8d052", accepted_jobs: 5, reconviagen_available: 5}
+    - {scene_id: "f3685d06a9", report_sha256: "c2bfe243f5624a96b699d106958d077c293e45ccf8333fd7fb3ab919a0f38818", accepted_jobs: 0, reconviagen_available: 0}
+    - {scene_id: "f3d64c30f8", report_sha256: "75040a3b8096df3d0ecce9b69123378af24dfbd7e6ebd0352cd36a9a0b24b692", accepted_jobs: 19, reconviagen_available: 19}
+    - {scene_id: "f9f95681fd", report_sha256: "4cafc6e38baeea637bf0cffaa27e27cf0e305ffad70b2a22e32f98bd18f9bd28", accepted_jobs: 4, reconviagen_available: 4}
+    - {scene_id: "fb5a96b1a2", report_sha256: "93e53bd6637bf1fd90216a9790deb7eedd3710d784f9a3a7155abdc2f16d3ae1", accepted_jobs: 8, reconviagen_available: 8}
+
+proposal_pool:
+  membership_source: population.membership
+  legacy_generation_provenance:
+    artifact_bytes_hash_frozen: true
+    original_generator_commits_recorded: false
+    original_checkpoint_identities_recorded: false
+    original_runtime_manifests_recorded: false
+    generator_commit: null
+    current_controller_commit_may_backfill_generator_commit: false
+    claim_status: preliminary_only
+  initial_registration:
+    implementation: agents.assets.s5_align.align_object
+    source_up_hypothesis: "+z"
+    same_code_all_policies: true
+  object_dir_template: outputs/{scene_id}_factory/objects/obj_{object_index:02d}
+  proposals:
+    trellis:
+      tool_id: trellis
+      expected_available: 457
+      raw_mesh_path_template: outputs/{scene_id}_factory/objects/obj_{object_index:02d}/trellis/trellis_mesh.ply
+      raw_gaussian_path_template: outputs/{scene_id}_factory/objects/obj_{object_index:02d}/trellis/trellis_gs.ply
+    reconviagen:
+      tool_id: reconviagen
+      expected_available: 453
+      expected_typed_unavailable: 4
+      raw_mesh_path_template: outputs/{scene_id}_factory/objects/obj_{object_index:02d}/rvg/rvg_mesh.ply
+      raw_gaussian_path_template: outputs/{scene_id}_factory/objects/obj_{object_index:02d}/rvg/rvg_gs.ply
+      typed_unavailable_job_ids:
+        - 27dd4da69e/obj_12
+        - 3db0a1c8f3/obj_12
+        - 3db0a1c8f3/obj_16
+        - ac48a9b736/obj_02
+  required_resolved_identity_fields: [path, size_bytes, sha256]
+  raw_mesh_manifest_canonicalization:
+    encoding: utf-8
+    serialization: json
+    document_shape: array
+    sort_keys: true
+    separators: [",", ":"]
+    ensure_ascii: false
+    terminal_newline: false
+    one_manifest_per_tool: true
+    path_base: repository_root
+    path_style: relative_posix
+    file_hash: sha256_raw_file_bytes
+    file_size: stat_size_bytes
+    tool_field_values: {trellis: trellis, reconviagen: reconviagen}
+    row_fields: [job_id, tool, path, size_bytes, sha256]
+    row_order: [job_id_utf8, tool_utf8]
+  raw_mesh_snapshots:
+    trellis:
+      rows: 457
+      total_size_bytes: 1744518721
+      manifest_sha256: 433d4e60d0137840a64b4e999e7044d267f16dcfc597b122d7ca6aa1783c9f3c
+    reconviagen:
+      rows: 453
+      total_size_bytes: 2395975348
+      manifest_sha256: 2b501c1dec9242e08475023c28519f48edf56292999ff5dc5489d894f8c11965
+  missing_initial_proposal_policy:
+    emit_typed_unavailable_record: true
+    keep_job_in_every_policy_denominator: true
+    do_not_substitute_canonical_winner: true
+
+# E2 already froze the source scene Gaussian and camera identities for all 50
+# rooms.  E3 may read only these three identities from the manifests; this is
+# not permission to read E2 evaluation images or scores.
+observation_source:
+  kind: e2_source_scene_and_camera_identity_manifest
+  e2_freeze_id: icra2027-contract-v1-e2-2c7ed67df534-full
+  manifest_path_template: outputs/icra2027/icra2027-contract-v1-e2-2c7ed67df534-full/fidelity/room_runs/{scene_id}/manifest.json
+  manifest_fields:
+    source_scene_gaussian: source_scene_gaussian
+    camera_intrinsics: camera_artifacts.intrinsics
+    camera_poses: camera_artifacts.poses
+  expected_scenes: 50
+  canonical_identity_fields:
+    - scene_id
+    - source_scene_gaussian.path
+    - source_scene_gaussian.size_bytes
+    - source_scene_gaussian.sha256
+    - camera_intrinsics.path
+    - camera_intrinsics.size_bytes
+    - camera_intrinsics.sha256
+    - camera_poses.path
+    - camera_poses.size_bytes
+    - camera_poses.sha256
+  canonicalization:
+    encoding: utf-8
+    serialization: json
+    sort_keys: true
+    separators: [",", ":"]
+    ensure_ascii: false
+    row_order: [scene_id_utf8]
+  canonical_identity_manifest_sha256: 43ec6446eb52951f7d73fab4600ea33e72b5a0e9713530863ad07a881d7ed9b7
+  component_manifest_sha256:
+    source_scene_gaussian: 4b92802c1a094ce2b25e0a06591265b8a71853c34a91e20837576ddae1f5cb8b
+    camera_intrinsics: df7b1fc1cb0550752985eb8a6beff13ec2b63e686861d4c61c07dcdc79c8a10a
+    camera_poses: 5e5759ebb0241e528e45a1d1af81672e101ca8ad04692bb1d1bdc92891f8bd7b
+  controller_receives:
+    representation: nested_under_resolved_jobs_scenes
+    scene_source_keys: [scene_id, source_scene_gaussian, camera_artifacts]
+    source_scene_gaussian_identity_keys: [path, size_bytes, sha256]
+    camera_artifacts_keys: [intrinsics, poses]
+    camera_identity_keys: [path, size_bytes, sha256]
+  controller_forbidden_manifest_fields: [gt, source_images, eval_frames, methods]
+
+observation_protocol:
+  render_mode: RGB+ED
+  rendered_rgb: discarded
+  rendered_channels_used: [expected_depth, gaussian_alpha]
+  crop_channel_used: rgba_alpha_only
+  rgba_alpha_threshold_inclusive_uint8: 128
+  gaussian_alpha_threshold_inclusive: 0.60
+  depth_range_m_inclusive: [0.05, 8.0]
+  pixel_center_offset: 0.5
+  camera_pose_input_convention: colmap_world_to_camera
+  camera_to_world_conversion: matrix_inverse
+  output_coordinate_frame: world
+  output_dtype: float32
+  output_unit: metre
+  forbidden_render_inputs: [rendered_rgb, evaluation_image, evaluation_mask, evaluation_geometry]
+
+controller_input_boundary:
+  sanitized_job_manifest: outputs/icra2027/{freeze_id}/agentic/input_inventory/resolved_jobs.json
+  sanitized_proposal_manifest: outputs/icra2027/{freeze_id}/agentic/input_inventory/resolved_proposals.json
+  exact_sanitized_schemas:
+    resolved_jobs:
+      top_level_keys: [schema_version, freeze_id, study_scope, counts, source_contract, observation_protocol, scenes]
+      counts_keys: [scenes, jobs, policy_object_rows]
+      source_contract_keys: [jobs_sha256, jobs_hash_method, contract_sha256, contract_hash_method, contract_freeze_id, code_commit]
+      scene_keys: [scene_id, source_scene_gaussian, camera_artifacts, jobs]
+      source_identity_keys: [path, size_bytes, sha256]
+      camera_artifacts_keys: [intrinsics, poses]
+      camera_identity_keys: [path, size_bytes, sha256]
+      job_keys: [freeze_id, job_id, scene_id, object_slot, artifact_paths, artifact_hashes, construction_evidence]
+      job_artifact_paths_keys: [rgba]
+      job_artifact_hashes_keys: [rgba]
+      job_construction_evidence_keys: [source_frame, bbox_px, legacy_mask_provenance]
+    resolved_proposals:
+      top_level_keys: [schema_version, freeze_id, counts, proposals]
+      counts_keys: [jobs, trellis_available, reconviagen_available, reconviagen_typed_unavailable]
+      proposal_keys: [freeze_id, job_id, scene_id, object_slot, proposal_id, tool_id, availability, artifact_paths, artifact_hashes, artifact_sizes, construction_evidence, raw_generator_provenance]
+      available_artifact_paths_keys: [raw_mesh, raw_gaussian]
+      available_artifact_hashes_keys: [raw_mesh, raw_gaussian]
+      available_artifact_sizes_keys: [raw_mesh, raw_gaussian]
+      available_construction_evidence_keys: []
+      typed_unavailable_artifact_paths_keys: []
+      typed_unavailable_artifact_hashes_keys: []
+      typed_unavailable_artifact_sizes_keys: []
+      typed_unavailable_construction_evidence_keys: [typed_failure, missing_artifacts]
+      raw_generator_provenance_keys: [artifact_bytes_hash_frozen, generator_commit, checkpoint_identity_recorded, runtime_manifest_recorded, claim_status]
+  reject_unknown_keys: true
+  forbidden_paths_or_patterns:
+    - "**/gt_points.ply"
+    - "**/report.json"
+    - "**/aligned.json"
+    - "**/aligned_all*.json"
+    - "**/rvg_eval.json"
+    - "**/hybrid.json"
+    - "**/hybrid_all.json"
+    - "**/eval_vs_gt.json"
+  forbidden_fields:
+    - gt_object_id
+    - evaluation_ground_truth_geometry
+    - eval
+    - f1
+    - f1_20
+    - f1_40
+    - chamfer_med_m
+    - tier
+    - rejected
+    - winner
+    - canonical_source
+  fail_on_forbidden_path_or_field: true
+
+legacy_crop_provenance:
+  total_jobs: 457
+  sam3_masks_selected_by_overlap_with_gt_projection: 386
+  gt_projected_mask_fallbacks: 71
+  sum_must_equal_total: true
+  claim_scope: controller_gt_isolated_not_gt_free_discovery
+  controller_may_read_mask_source: false
+
+smoke:
+  artifact_mode: cached_or_synthetic
+  maximum_runtime_seconds: 300
+  object_scenarios:
+    - {id: both_initial_valid, expected_actions_include: [accept]}
+    - {id: multiview_collapse, expected_actions_include: [accept]}
+    - {id: retry_abstains, expected_actions_include: [accept, retry, abstain]}
+  contract_scenarios:
+    - {id: hard_export_impossible, initial_proposal_pool: empty, expected_actions_include: [reject, abstain]}
+  require_actions_observed: [accept, retry, reject, abstain]
+
+required_outputs:
+  - job_ledger.jsonl
+  - selected_assets/{policy_id}/{scene_id}/{object_slot}.json
+  - agentic_ablation.csv
+  - agentic_ablation.json
+  - coverage_fidelity_curve.csv
+  - retry_breakdown.csv
+  - failure_transitions.csv
+  - input_inventory/resolved_jobs.json
+  - input_inventory/resolved_proposals.json
+  - input_inventory/artifact_hashes.sha256

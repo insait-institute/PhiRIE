@@ -1,0 +1,62 @@
+[
+  {
+    "label": "REF",
+    "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/continuous.mp4",
+    "sha256": "bb0300f59acdbda42ffc17189026e47b8cacdc507d00618cbfa43a302b6e7d54",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 256,
+          "nb_frames": "360"
+        }
+      ],
+      "format": {
+        "duration": "18.000000"
+      }
+    }
+  },
+  {
+    "label": "L0_B3",
+    "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/continuous.mp4",
+    "sha256": "21cf4c45f60f89e2d517495aa453fbc48165f06d4bce6bbb2b714ba589b99cce",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 256,
+          "nb_frames": "357"
+        }
+      ],
+      "format": {
+        "duration": "17.850000"
+      }
+    }
+  },
+  {
+    "label": "DEV_PARTIAL_WORKSPACE",
+    "video": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/continuous.mp4",
+    "sha256": "9bb3e9449e1c48a35518b3562f8e230a41a4935a2ff62b61648423426e55d06d",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 256,
+          "nb_frames": "901"
+        }
+      ],
+      "format": {
+        "duration": "45.050000"
+      }
+    }
+  }
+]

@@ -1,0 +1,49 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260906-f68957d-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: e7_tail_config
+  path: /group/worldcept/code/SimAny-wt/e7-droid-tail-execution/configs/experiments/icra2027/droid_public_tail/execution.json
+  kind: experiment_config
+  required: true
+- id: e7_tail_runtime
+  path: /group/worldcept/code/SimAny/outputs/e6-runtime-setup/public-grounding-runtime-v1.json
+  kind: scoped_renderer_sam3_runtime
+  required: true
+- id: e7_tail_cpu_runtime
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/runtime/cpu_runtime.json
+  kind: cpu_source_record_native_bytes
+  required: true
+- id: e7_original_gs_e0
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1/contract/freeze_manifest.json
+  kind: original_gaussian_contract
+  required: true
+checkpoint_roots:
+- id: sam3_checkpoint
+  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  kind: sam3
+  required: true
+hardware:
+  gpu_required: true
+  gpus_per_gpu_phase: 1
+  gpus_per_cpu_phase: 0
+  cpu_threads: 8
+  host_memory_gib: 32
+  allowed_nodes:
+  - hala
+  - Hala
+  - gcp*
+  - sof1*
+  purpose: 'Original ten DROID slots: separated CPU plan/GPU render/CPU TSDF/GPU SAM3/CPU
+    object contracts; fixed first IPRL pilot'
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

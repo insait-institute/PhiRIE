@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tier": "DEV",
+  "scope": "L1_target_destination",
+  "max_calls_per_dependency": 2,
+  "settle_seconds": 0.5,
+  "max_drift_m": 0.02,
+  "max_rotation_deg": 15.0,
+  "max_penetration_m": 0.005,
+  "bm_order": [
+    "reselect_candidate",
+    "regenerate_collision"
+  ],
+  "regeneration": "per_part_convex_hull_no_whole_object_hull_v1",
+  "action_arguments": "current_destination_artifact; other initial generator relative to original B3 lineage"
+}

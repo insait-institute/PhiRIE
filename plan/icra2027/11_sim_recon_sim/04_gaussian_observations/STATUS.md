@@ -1,0 +1,13 @@
+# SR4 status — current 2026-09-07
+
+Owner: /root/e4_planning. Branch: agent/icra-n6-gaussian. State: PILOT_PASSED for bounded first-DEV source-GS construction/evaluation and TRAIN removal preparation/erasure. Full GS policy observations remain NOT_RUN.
+
+Current authoritative commands, sources, config/checkpoint hashes, artifacts, smoke results and limitations are in [N6 STATUS](../09_scale_up/06_gaussian_observations/STATUS.md). Completed ordinary jobs: 840575 source fit (67ca89a), 840682 original two-view heldout evaluation (8edaed0), 840752 observed removal preparation (f9cca65), 840801 real LaMa erasure (b13fcec). Original frozen source Gaussian is unchanged; independent heldout PSNR/SSIM/LPIPS are machine-generated in the N6 evaluator output, with 2/2 coverage.
+
+Clean background pilot 840849/source 21e058f is COMPLETE; existing fixed one-view-supervised fill and its three TRAIN diagnostics are bound in N6 STATUS. Recorded object-body GS render replay840928, known robot-only capsule840948, six public TRAIN visibility masks840976, and strict robot erasure/observed Gaussian carve841074 are COMPLETE. Live move-and-reveal/robot occlusion, robot-hole completion, policy observation intervention and Harmonizer remain NOT_RUN; no geometry/physics/policy benefit claim is enabled. Robot-erased original TRAIN still contains the native target, so future background supervision must remain restricted to the robot hole or compose prior target-erasure masks. Full current receipts and limitations are in N6 STATUS.
+
+Historical milestone, 2026-09-06 18:26 UTC: initial native comparison source 85051d4 had no Gaussian intervention and no GS outputs. Service 837413 was stopped after that native milestone. This historical NOT_RUN status is superseded only for the bounded components completed above, not for full policy integration.
+
+N6 update: robot-hole GS fill841118 completed1m09s, sourcecd349a3, exact receipt at20260907-5cf76bd-v3/sim_recon_sim/scale_up/robot_background_dev/constructor/fill/robot_background.json. One fixed TRAIN view masked supervision; one observed plane only, visual defects preserved. Source9e7ffe6 recorded-state CompositeObs integration11testsPASS, CPU extraction841162 submitted; fresh native GS observation/policy gate remains NOT_RUN.
+
+N6 actual depth replay841176 COMPLETE1m07s:12frames, implementation byte/capsule-state invariancePASS, public-depth static visibility diagnosis FAIL/limited (2,187/2,157 public-occluded robot pixels incorrectly pasted). Full evidence and12-frame visual strip at20260907-c2dc6cf-v4/sim_recon_sim/scale_up/gs_depth_replay_dev/renderer/observations. Fixed opacity.95 unchanged; no policy/full-matrix promotion, fresh native observer NOT_RUN.

@@ -1,0 +1,38 @@
+{
+  "id": "simulation",
+  "branch": "module/simulation-v2",
+  "description": "Simulation scene export and dynamics",
+  "inputs": [
+    "accepted assets and physical metadata"
+  ],
+  "outputs": [
+    "MJCF or simulator assets; dynamics traces"
+  ],
+  "tools": [
+    "MuJoCo",
+    "PyBullet",
+    "OmniGibson"
+  ],
+  "actions": {
+    "mujoco": {
+      "target": "robo.sim.export_mjcf",
+      "runtime": "main",
+      "gpu": false,
+      "args": [
+        "--test"
+      ]
+    },
+    "pybullet": {
+      "target": "robo.sim.s7_sim",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "omnigibson": {
+      "target": "robo.sim.export_omnigibson",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

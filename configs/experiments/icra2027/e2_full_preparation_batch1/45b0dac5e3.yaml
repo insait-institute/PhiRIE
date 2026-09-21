@@ -1,0 +1,19 @@
+schema_version: 1
+scope: automatic_train_only_removal_preparation
+freeze_id: 20260906-e7c60da-v2
+scene_id: 45b0dac5e3
+policy_id: A4
+materialization_manifest:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/45b0dac5e3/materialized/A4/materialization_manifest.json
+  bytes: 15814
+  sha256: bb12bc81e8b349637154606711afb562bf0e0897ece15a3561f58a2fe4518ccc
+generation_config:
+  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/45b0dac5e3.yaml
+  bytes: 3132
+  sha256: c4311be409cd302184978918c91cbb42295f6e9f4ed06ebcd08ecf7e715bf00b
+seed: 0
+algorithm:
+  radius_m: 0.03
+  top_k_views: 3
+  ring_m: 0.1
+  asset_samples: 5000

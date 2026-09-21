@@ -1,0 +1,266 @@
+{
+  "recovery.json": {
+    "bytes": 303800,
+    "sha256": "0dfdbe361323e66ec8c4cf9e223171a147a9b10805149596814f83c74591caed"
+  },
+  "cohort.json": {
+    "bytes": 69141,
+    "sha256": "60060839fc575eb38c2512ec89b2e2549f7a1e8c38122c265b55312b22062ed7"
+  },
+  "accounting.json": {
+    "bytes": 8663,
+    "sha256": "92fd9e49bc8e6466bbf7d554fba3bab065713bb4161190845ae74d327b9e0a92"
+  },
+  "continue.sh": {
+    "bytes": 776,
+    "sha256": "f1c4e64f93b7bb14d7d583b179c8ee3780d007c0195c236dcfefe68b59b620e6"
+  },
+  "repair-001.json": {
+    "bytes": 804,
+    "sha256": "5da7bdafbcc34a1fe012f3a7d7ca1c4cf941254ca39c6929b9a783e4bf39945b"
+  },
+  "repair-002.json": {
+    "bytes": 812,
+    "sha256": "c120144849dd5e97441378fb34c80d4a693090b7825dd38e115aa387bcacc9d5"
+  },
+  "cpu-time-limit-correction.json": {
+    "bytes": 2519,
+    "sha256": "78493acf65a2cff4ee7e57cd993e7e47af9cb653c6715d29a43722b9d2a0765d"
+  },
+  "HANDOFF.md": {
+    "bytes": 9743,
+    "sha256": "0a4ceb33515562f6f896dd49987d6d730094c9565808b98de180cb2ceea7f615"
+  },
+  "jobs.json": {
+    "bytes": 35419,
+    "sha256": "24e3b739acb52d15d9cc74b713bfded7fcb5464ef910cdb83ded825da652313a"
+  },
+  "scripts/audit_final.py": {
+    "bytes": 7472,
+    "sha256": "7e2a4ef31c26a665a3a800b268c305dab19972e1212466e4332cccc3f4f25ff5"
+  },
+  "logs/901678-slurm.txt": {
+    "bytes": 1061,
+    "sha256": "9bf0f70c477699bb5ad5b19ebfd21130f2f4f34760d6ffb6ddb873d30fb5bb6f"
+  },
+  "logs/900980.txt": {
+    "bytes": 7199,
+    "sha256": "ac27ca80dfbcd23406322df7ba6e742bdefe449bee9b4495b15de37d18c18a17"
+  },
+  "logs/900911.txt": {
+    "bytes": 8716,
+    "sha256": "2cb5431394aeb7a800e3faeaaf82ef231ff42b9888229b00e4e3e041dfcecc3c"
+  },
+  "logs/901678.txt": {
+    "bytes": 15116,
+    "sha256": "be1ea566377b79e417297cb4f2af0c02a955a4dbc8ba9c9279e51a0afaf1dde9"
+  },
+  "logs/901003-slurm.txt": {
+    "bytes": 1095,
+    "sha256": "62b95a33d7086dc550cf7bb8b5dd4b5336406b9beb2771d73037af72e20f7e6c"
+  },
+  "logs/900930-slurm.txt": {
+    "bytes": 965,
+    "sha256": "90e9ad0118b60288ae8b951db609309aa5f1b6e7589ea91f0091255e0d416604"
+  },
+  "logs/900930.txt": {
+    "bytes": 5048,
+    "sha256": "412115a5f25fdeb32cafba1c845f71709f841bdfa0fe713400765ce2f60af3b0"
+  },
+  "logs/902360.txt": {
+    "bytes": 17060,
+    "sha256": "43bd9b86b5c73e7f5d42f976ee6d3f8550e90f7b50f204da6f9493f616212448"
+  },
+  "logs/900931.txt": {
+    "bytes": 18000,
+    "sha256": "11fc4699b57d6551a53db942b49bc6eeb156ed8bc59b65d7a6912a42abee357c"
+  },
+  "logs/900913-slurm.txt": {
+    "bytes": 967,
+    "sha256": "f98eacc9bb60d24ced20fb6f231efcc19945043f27d0a670f5e43e832b7d2399"
+  },
+  "logs/902359.txt": {
+    "bytes": 8228,
+    "sha256": "b493705ffeaecd599a0dfb8d9946b2755e6014400ffba588a61ce2e437dc279c"
+  },
+  "logs/900913.txt": {
+    "bytes": 9239,
+    "sha256": "cf8255643a1a19f1f4056fe5f0080a37cb2f761e4b9e4759519daaf1cc899145"
+  },
+  "logs/900945.txt": {
+    "bytes": 7961,
+    "sha256": "be6389e3b05753b3d1a7700a48b8984ef5e12342263e2cd3673056e25d8e650c"
+  },
+  "logs/902360-slurm.txt": {
+    "bytes": 1073,
+    "sha256": "343cc0d9d17d8a75212df118343c2a2a457d91883af0f45e93e77be2fef7f225"
+  },
+  "logs/901688-slurm.txt": {
+    "bytes": 125,
+    "sha256": "ebe8893786906e3e18f69e1e36adfca588be860d578e3b12422b35c2168054ca"
+  },
+  "logs/900980-slurm.txt": {
+    "bytes": 1104,
+    "sha256": "55d3ebce5fa1c5beae5ade5b78991d3e236b3e64b80fad8ee5a2fb5f2d101916"
+  },
+  "logs/901002-slurm.txt": {
+    "bytes": 1097,
+    "sha256": "0408331f54d770c4f245f4696d9c6ef65ffdc8d016392df8f4a2c692c586813a"
+  },
+  "logs/900945-slurm.txt": {
+    "bytes": 964,
+    "sha256": "e0936fc44cb3b7406ad976893ad8cd1f317b31bc5229e240d4b20313f25ddf29"
+  },
+  "logs/901688.txt": {
+    "bytes": 18000,
+    "sha256": "5b853393335164f3cc20c22cb027e3f5f417c5b5d29396c5dc5c9712d0899390"
+  },
+  "logs/900931-slurm.txt": {
+    "bytes": 1105,
+    "sha256": "ceee5720920b863e2887280f325fdf88f64c74472909a6523e57b512b91598b6"
+  },
+  "logs/901002.txt": {
+    "bytes": 18822,
+    "sha256": "c41cf1b191b260794c26ffe7c626a8e7acda37b3f9c39050f3a18fe8c3a961a3"
+  },
+  "logs/902359-slurm.txt": {
+    "bytes": 1072,
+    "sha256": "8a5d4c93c92042701277c8a116692602e8ba852f59ac6cbc16137d3fc4eb1dfc"
+  },
+  "logs/901003.txt": {
+    "bytes": 18798,
+    "sha256": "1a510d06a7a182ef0d8e9190e3024d3eea7f8f1574e2fc8e25c0c74bd1ae2d43"
+  },
+  "logs/900911-slurm.txt": {
+    "bytes": 958,
+    "sha256": "af757a57054a88a1079182353e5bc62c14a93ced17a65b3c7a333a9c485b6525"
+  },
+  "logs/900912.txt": {
+    "bytes": 1460,
+    "sha256": "dd476de17f31eb33940bf6082c7c01ffba41b753d64731cea125984a2239225a"
+  },
+  "logs/900912-slurm.txt": {
+    "bytes": 995,
+    "sha256": "f3531c0673a8d7f55f7fff4feee652f97486a914dec14406cdc7b52fb5f7b00f"
+  },
+  "admissions/reconviagen.json": {
+    "bytes": 1081,
+    "sha256": "2769e920fe7fcf6280c1021c6f7b63fab39f70740834dec49616090d4c750066"
+  },
+  "admissions/sam3d.json": {
+    "bytes": 1027,
+    "sha256": "b3ad4048e0493f72d7437dcd9cd0ec8113ca0910b830109346fcea4b6cd1c3fc"
+  },
+  "authorizations/sam3d-resubmit-20260915.json": {
+    "bytes": 1077,
+    "sha256": "7aaffdbdbde5bed4b9b5da4ccee8b665db7b4f56d9f36a857a4c600048600d7d"
+  },
+  "results/generator_comparison.tex": {
+    "bytes": 356,
+    "sha256": "3ca1c55df616aaf85ece9c342c3c02763a4b2f13f5c2f4e925f37d040079aa2c"
+  },
+  "results/completed_three_backend_comparison.json": {
+    "bytes": 1799,
+    "sha256": "3857f825198e967605e4b8f5fbca6aa947b5cda09881687eba266246b95d8e90"
+  },
+  "results/completed_four_backend_comparison.csv": {
+    "bytes": 594,
+    "sha256": "c7a1a39c40fee5460e878da7e920a6e8fa3d32776414e957aa30d471eca33cf0"
+  },
+  "results/completed_three_backend_comparison.csv": {
+    "bytes": 390,
+    "sha256": "5024e653e920190c0833c4c0684321c0583b2d0860906e6b05bd76f47978181f"
+  },
+  "results/summary.json": {
+    "bytes": 426304,
+    "sha256": "cc0b7489f004799c09f99e2a2d35d7d8c24ce4b1e8f9cfd901d65a2306b6baba"
+  },
+  "results/completed_four_backend_comparison.json": {
+    "bytes": 2724,
+    "sha256": "03d6b270ea1ba814e6a2e033f42a3393f6e5158bad0157981ee6c2baa64edc5c"
+  },
+  "results/per_object.csv": {
+    "bytes": 21942,
+    "sha256": "c5eb43c96950240e7ab35028a3bba4a16958cbc58016672ed2ea2cca6456c195"
+  },
+  "results/failure_reconciliation.json": {
+    "bytes": 1826,
+    "sha256": "ffa918a7c8edb0a5e4619e04c7c17086f8501315cbff29575c3a74bfe2a24a71"
+  },
+  "inputs/sam3d-tail-resumption.json": {
+    "bytes": 2349,
+    "sha256": "cbfd6da439a4f7e89afa1a90b79431ded406694c030d81b4c3e40fe1c61c46b5"
+  },
+  "inputs/sam3d-tail-evaluation.json": {
+    "bytes": 3887,
+    "sha256": "5e8642cec9423180d42ec79cef73e8271edf0fa7c2f82fc7396bb99b918ac48e"
+  },
+  "inputs/sam3d-tail-generation.json": {
+    "bytes": 5065,
+    "sha256": "f48fb99572ad10c6a64c69d61706b9a568123059567fd56fe05a142c0e668456"
+  },
+  "blockers/sam3d.json": {
+    "bytes": 918,
+    "sha256": "d3b60d93e6054439b42aa3dc0087333de99724d7105d4531936a8e0ef0176177"
+  },
+  "audits/tests-renewed-sam.json": {
+    "bytes": 421,
+    "sha256": "5507190c1bacb364f90069ed922ab2d5de1346068ad0d03579e5e7a35d620249"
+  },
+  "audits/sam3d-production-visual-review.json": {
+    "bytes": 10734,
+    "sha256": "d136b0de5aeaf22f85aec08b9d1d3d7fc91867da570943d02dabcb31f9896f75"
+  },
+  "audits/sam3d-production-coverage.json": {
+    "bytes": 294,
+    "sha256": "3f727a2288a233067765c543dcdd971bfc2dbafc74b01eae543caed127e2c814"
+  },
+  "audits/nodes.txt": {
+    "bytes": 10831,
+    "sha256": "9f4fb1179d5ba05695981524438bd0ef3337f874c8e4458a15b9af63ef67e0d0"
+  },
+  "audits/sam3d-smoke-review.json": {
+    "bytes": 790,
+    "sha256": "4fac44dd2202a85b15901b28eba0974ec5bb8c624622674a2b641d46df2a5f0c"
+  },
+  "audits/sacct.txt": {
+    "bytes": 1617,
+    "sha256": "bb61511f17ea34ecc5d552ff00fece5471f91d4d9ed2b7dbea1573b6938945f8"
+  },
+  "audits/actual-physics.json": {
+    "bytes": 512,
+    "sha256": "f6b0daa001eb947d4ce10cf0503b88068163bdb04bf2c78f0d3521d04d6ab430"
+  },
+  "audits/completed-four-backend-artifacts.json": {
+    "bytes": 101402,
+    "sha256": "a23e3b5e1a9b49e16688282b62fce75cd3a000d84a46f4d9c7b66af72b30dbae"
+  },
+  "audits/multiview-validation.json": {
+    "bytes": 2370,
+    "sha256": "b6b6577df1c4d5d74d6720b88f0fbc17e48856e433c7842e4ee950edc1ebbb5b"
+  },
+  "audits/production-coverage.json": {
+    "bytes": 282,
+    "sha256": "ceb0c56d76210944cda5f38fdaf7d2fe5f8a3ccec506c4e073629f336e588bf8"
+  },
+  "audits/tests.json": {
+    "bytes": 392,
+    "sha256": "bcbc41bb33d5df16e0afd8a148dd1b41e5e391ccce95da71feecbb5f2c0c471f"
+  },
+  "audits/completed-three-backend-artifacts.json": {
+    "bytes": 45791,
+    "sha256": "cd5af82b2c761bbed99da1c6f4fef1d8f036cd4bb2762c6ab9a22041bffc8578"
+  },
+  "audits/multiview-visual-review.json": {
+    "bytes": 510,
+    "sha256": "653e456fa3ebae8b4e2439e9f73c5fe10f052cb458c433813ed8b75e65362931"
+  },
+  "audits/recovered-smoke-review.json": {
+    "bytes": 1084,
+    "sha256": "3e8a14c509ab90a63f5257f3ec0a57e66bcdb28a4c8d9de3b2bd325a561d0813"
+  },
+  "audits/reconviagen-production-visual-review.json": {
+    "bytes": 552,
+    "sha256": "2bfca76a4d096ea05f9223f803a88584b4b1ef36d01f2c8f50d284ccebc76842"
+  }
+}

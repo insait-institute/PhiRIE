@@ -1,0 +1,60 @@
+# Mode 3 (known robot/table dimensions as scale constraints) example
+# config for agents/recon/robot_align.py.
+#
+# `dimension_constraints.calib`: pairs of points in the SCAN frame whose
+# real-world distance is independently known (measured with a tape/ruler,
+# or from the robot/table's published spec sheet) - e.g. a table's long
+# edge. `reference_correspondences` (optional) are a handful of ordinary
+# point correspondences (same schema as mode 1/2) used ONLY to fit
+# rotation+translation once scale is already pinned down by the
+# dimensions (see agents/recon/robot_align.py:align_dimensions); omit them
+# to get a scale-only result (R=I, t=0).
+#
+# Numbers below are illustrative placeholders, NOT a real capture.
+
+mode: dimensions
+scene_id: c50d2d1d42_table_dims_example
+
+dimension_constraints:
+  calib:
+    - p1: [0.10, 0.05, 0.75]
+      p2: [1.30, 0.05, 0.75]
+      known_length_m: 1.20        # table long edge
+      label: table_long_edge
+    - p1: [0.10, 0.05, 0.75]
+      p2: [0.10, 0.80, 0.75]
+      known_length_m: 0.70        # table short edge
+      label: table_short_edge
+    - p1: [0.10, 0.05, 0.00]
+      p2: [0.10, 0.05, 0.75]
+      known_length_m: 0.72        # table height (leg to top)
+      label: table_height
+  held_out:
+    - p1: [1.30, 0.05, 0.75]
+      p2: [0.10, 0.80, 0.75]
+      known_length_m: 1.39        # table diagonal, independent check
+      label: table_diagonal_holdout
+
+reference_correspondences:
+  calib:
+    - src: [0.10, 0.05, 0.75]
+      dst: [0.00, 0.00, 0.72]
+      label: table_corner_00
+    - src: [1.30, 0.05, 0.75]
+      dst: [1.20, 0.00, 0.72]
+      label: table_corner_01
+    - src: [0.10, 0.80, 0.75]
+      dst: [0.00, 0.70, 0.72]
+      label: table_corner_02
+    - src: [0.10, 0.05, 0.00]
+      dst: [0.00, 0.00, 0.00]
+      label: table_leg_bottom_00   # off the tabletop plane: breaks coplanarity
+
+solver:
+  robust: true
+  huber_delta_pct: 3.0
+  min_constraints: 2
+
+output:
+  dir: outputs/c50d2d1d42_table_dims_example/calibration
+  report_json: outputs/c50d2d1d42_table_dims_example/calibration/align_report.json

@@ -1,0 +1,29 @@
+{
+  "id": "registration",
+  "branch": "module/registration-v2",
+  "description": "Metric asset alignment and candidate selection",
+  "inputs": [
+    "generated assets; observed object geometry"
+  ],
+  "outputs": [
+    "registration transforms; candidate selection metadata"
+  ],
+  "tools": [
+    "Sim(3)",
+    "ICP"
+  ],
+  "actions": {
+    "align": {
+      "target": "agents.assets.factory_align",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "select": {
+      "target": "agents.assets.factory_hybrid",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    }
+  }
+}

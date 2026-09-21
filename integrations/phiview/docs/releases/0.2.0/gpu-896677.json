@@ -1,0 +1,131 @@
+{
+  "host": "sof1-h200-3",
+  "slurm_job": "896677",
+  "python": "3.11.15",
+  "executable": "/group/worldcept/code/PhysicalView-release/envs/studio/.venv/bin/python",
+  "repo_root": "/group/worldcept/code/PhysicalView-release",
+  "env": {
+    "CUDA_HOME": "/opt/modules/nvidia-cuda-12.8.1",
+    "TORCH_CUDA_ARCH_LIST": "9.0",
+    "TORCH_EXTENSIONS_DIR": "/group/worldcept/code/PhysicalView-release/outputs/release/torch-extensions",
+    "MUJOCO_GL": "egl",
+    "PYOPENGL_PLATFORM": "egl",
+    "PYTHONPATH": null,
+    "HF_HUB_OFFLINE": null
+  },
+  "started": "2026-09-14T12:31:26",
+  "checks": {
+    "gpu": {
+      "ok": true,
+      "name": "NVIDIA H200",
+      "compute_capability": "9.0",
+      "driver": "595.71.05",
+      "memory_total": "143771 MiB",
+      "wall_s": 0.02
+    },
+    "torch": {
+      "ok": true,
+      "version": "2.9.1+cu128",
+      "cuda": "12.8",
+      "cudnn": 91002,
+      "arch_list": [
+        "sm_70",
+        "sm_75",
+        "sm_80",
+        "sm_86",
+        "sm_90",
+        "sm_100",
+        "sm_120"
+      ],
+      "cuda_available": true,
+      "device": "NVIDIA H200",
+      "device_capability": "9.0",
+      "matmul_1024_ms": 0.148,
+      "matmul_max_abs_err": 0.000213623046875,
+      "wall_s": 9.76
+    },
+    "gsplat": {
+      "ok": true,
+      "import_s": 71.78,
+      "version": "1.5.3",
+      "backend_so": "/group/worldcept/code/PhysicalView-release/outputs/release/torch-extensions/gsplat_cuda/gsplat_cuda.so",
+      "backend_kind": "installed csrc",
+      "so_archs": [
+        "sm_90"
+      ],
+      "load_s": 1.88,
+      "n_gaussians": 1499998,
+      "sh_degree": 3,
+      "render_640x360_ms": 1.45,
+      "rgb_mean": 0.6641176342964172,
+      "rgb_std": 0.059305790811777115,
+      "alpha_mean": 0.9993582963943481,
+      "nonblack_frac": 1.0,
+      "image_not_black": true,
+      "wall_s": 73.97
+    },
+    "mujoco": {
+      "ok": true,
+      "MUJOCO_GL": "egl",
+      "MUJOCO_EGL_DEVICE_ID": null,
+      "version": "3.13.0",
+      "renderer_init_ms": 123.1,
+      "render_320x240_ms": 9.46,
+      "img_shape": [
+        240,
+        320,
+        3
+      ],
+      "img_mean": 122.68322048611111,
+      "img_not_black": true,
+      "wall_s": 0.34
+    },
+    "viser": {
+      "ok": true,
+      "import_s": 0.18,
+      "version": "1.1.0",
+      "wall_s": 0.18
+    },
+    "openpi_client": {
+      "ok": true,
+      "import_s": 0.0,
+      "version": "0.1.0",
+      "wall_s": 0.0
+    },
+    "repo_modules": {
+      "ok": true,
+      "modules": {
+        "agents.core.common": {
+          "ok": true,
+          "import_s": 0.0
+        },
+        "robo.envs.pi05_env": {
+          "ok": true,
+          "import_s": 0.01
+        },
+        "robo.policy.clients.pi05_client": {
+          "ok": true,
+          "import_s": 8.56
+        },
+        "robo.rendering.pi05_render": {
+          "ok": true,
+          "import_s": 0.0
+        },
+        "interface.mujoco_live_viewer": {
+          "ok": true,
+          "import_s": 0.0
+        },
+        "robo.rigs.pi05_rig": {
+          "ok": true,
+          "menagerie": "/group/worldcept/code/SimAny-wt/studio/third_party/mujoco_menagerie",
+          "menagerie_present": true
+        }
+      },
+      "failed": [],
+      "wall_s": 8.58
+    }
+  },
+  "total_s": 92.9,
+  "failed_critical": [],
+  "pass": true
+}

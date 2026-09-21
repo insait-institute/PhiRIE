@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "scope": "droid_sealed_train_fit_gaussian_continuation",
+  "freeze_id": "20260906-dba8e6b-v1",
+  "paper_ready": false,
+  "iters": 30000,
+  "smoke_iters": 16,
+  "seed": 0,
+  "holdout_every": 10,
+  "full_build": "NOT_RUN",
+  "independent_image_fidelity": false,
+  "workspace_ids": [
+    "droid_iprl_thu_aug_24_21_29_53_2023",
+    "droid_autolab_fri_jul_14_16_55_45_2023",
+    "droid_tri_thu_sep_21_17_26_41_2023",
+    "droid_rail_tue_oct_24_10_23_40_2023",
+    "droid_rpl_mon_jun__5_16_11_49_2023",
+    "droid_clvr_tue_may__9_02_08_20_2023",
+    "droid_iris_mon_apr_17_16_03_25_2023",
+    "droid_pennpal_sat_apr_29_20_28_46_2023",
+    "droid_real_wed_jun__7_11_50_12_2023",
+    "droid_iprl_sat_oct_14_20_58_47_2023"
+  ],
+  "pilot_workspace": "droid_iprl_thu_aug_24_21_29_53_2023",
+  "evidence_root": "/group/worldcept/code/SimAny",
+  "cpu_source": {
+    "code_root": "/group/worldcept/code/SimAny-wt/e7-cpu-recovery",
+    "commit": "a150028269423434998856c4957b5de99a180664",
+    "stage_root": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1",
+    "python": "/group/worldcept/code/SimAny/.venv/bin/python",
+    "validation_host": "sof1-h200-3",
+    "config": {
+      "path": "/group/worldcept/code/SimAny-wt/e7-cpu-recovery/configs/experiments/icra2027/droid_cpu_recovery/execution.json",
+      "sha256": "e4cf21a4ac1aa0d3832791089597b6af62e7ea39934dda459fefc5cc1b4fb031",
+      "size_bytes": 298106
+    },
+    "contract": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/contract/freeze_manifest.json",
+      "sha256": "ec24ebfef58249ed7981c460277c57cc88ca18d8003b26901219cda10dd774f8",
+      "size_bytes": 17069
+    }
+  },
+  "continuation_rule": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/gs_continuation_preregistration.json",
+    "sha256": "6d5387fa6884a9280882367f75d1cd780bbb4a2ca60e16c4ef9bc6f98b81489b",
+    "size_bytes": 1889
+  },
+  "cpu_submissions": {
+    "droid_iprl_thu_aug_24_21_29_53_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission.json",
+      "sha256": "1ecaaff7af5c0464fb7c0d15a0233f9b117b1e1a07d2bf2db74989f874859a6b",
+      "size_bytes": 2873
+    },
+    "droid_autolab_fri_jul_14_16_55_45_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_autolab_fri_jul_14_16_55_45_2023.json",
+      "sha256": "6ea0097fae98c29ad97e158f8027c8bd2623ac9c81224ecfd5d5c6ff7a885b26",
+      "size_bytes": 1139
+    },
+    "droid_tri_thu_sep_21_17_26_41_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_tri_thu_sep_21_17_26_41_2023.json",
+      "sha256": "9d356ab139095e15c213e0b418b1c7124eba368ccecc23647537ac3e10d1fdc8",
+      "size_bytes": 1121
+    },
+    "droid_rail_tue_oct_24_10_23_40_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_rail_tue_oct_24_10_23_40_2023.json",
+      "sha256": "4f71346d9ea0a8f684da922c87d9d35c450b91e78c344ab9efe34bea27aa6ae7",
+      "size_bytes": 1126
+    },
+    "droid_rpl_mon_jun__5_16_11_49_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_rpl_mon_jun__5_16_11_49_2023.json",
+      "sha256": "27365f688b64ee929d607dd5ecc1f59adb7594050abf0b6184380d44a27abf1d",
+      "size_bytes": 1121
+    },
+    "droid_clvr_tue_may__9_02_08_20_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_clvr_tue_may__9_02_08_20_2023.json",
+      "sha256": "7963d548f528a787a9bb33c267d0dda160df9ff8377941c30109045825954986",
+      "size_bytes": 1126
+    },
+    "droid_iris_mon_apr_17_16_03_25_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_iris_mon_apr_17_16_03_25_2023.json",
+      "sha256": "fc980509764353229496aedf2afa88737eb397d7206f58a6be199b38083e2bbb",
+      "size_bytes": 1126
+    },
+    "droid_pennpal_sat_apr_29_20_28_46_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_pennpal_sat_apr_29_20_28_46_2023.json",
+      "sha256": "056c2e9702a083239a5f37f9cd6cc1b66c0de402cb2c79a66dbfc00fe94cfb66",
+      "size_bytes": 1139
+    },
+    "droid_real_wed_jun__7_11_50_12_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_real_wed_jun__7_11_50_12_2023.json",
+      "sha256": "a9253fd950f92ceb8e0a4cf7a3417c5a2978dc56f682d91a0c69866e7b62a665",
+      "size_bytes": 1126
+    },
+    "droid_iprl_sat_oct_14_20_58_47_2023": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/dispatch/submission-droid_iprl_sat_oct_14_20_58_47_2023.json",
+      "sha256": "1871a01b42b34d08a0265f7eeb09c717748bbd3982609a9db4dd9be537a81249",
+      "size_bytes": 1126
+    }
+  },
+  "training_python": "/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python",
+  "training_dependency_root": "/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4",
+  "torch_extensions_root": "/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-torch-extensions-py310-pt241-cu124",
+  "training_dependency_tree_sha256": "e90ed2556d7f6a0c7ec46f2cf189d8cb49466843c9b2d9e188d055269a5fd400",
+  "training_runtime_identity": {
+    "iters": 15000,
+    "modules": {
+      "PIL": {
+        "entrypoint_content": {
+          "sha256": "7361b6ad3878589affe5956e4a4da24d71398b0891fd3a8c15e9362217b4ca01",
+          "size_bytes": 2035
+        },
+        "installed_tree_stat_fingerprint": "dcce6cc2737d616a23813e97071dcf66ef515e91fbc3fc289d4df672139a7e30",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/PIL/__init__.py",
+        "record_content": {
+          "sha256": "d178cdf25e90513ac168a18762712b6737d467e49909b8145e9a7fa194fbbb72",
+          "size_bytes": 16324
+        },
+        "version": "12.3.0"
+      },
+      "gsplat": {
+        "entrypoint_content": {
+          "sha256": "29de62a4e2de6223f65743ad8f53cdcf75069f523de868c555978ad521193192",
+          "size_bytes": 1633
+        },
+        "installed_tree_stat_fingerprint": "7d99b57673590bea31c30688fea5420a58c98438cc9a97162f75a57bab239aee",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/gsplat/__init__.py",
+        "record_content": {
+          "sha256": "5279cad872fa7885b512a1ea2cbf16ca805452610cf3b74c6fa72ebc80bfb3b5",
+          "size_bytes": 200545
+        },
+        "version": "1.5.3+pt24cu124"
+      },
+      "numpy": {
+        "entrypoint_content": {
+          "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+          "size_bytes": 22147
+        },
+        "installed_tree_stat_fingerprint": "54c3f5dec3192a51c0f732816a87fe43eefe753522b1a3d11e3a7a5abecc3c43",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/numpy/__init__.py",
+        "record_content": {
+          "sha256": "e5b8cae94f4103f2647f2f53a188693a7edc60ef730838612971c05f095ce730",
+          "size_bytes": 123872
+        },
+        "version": "2.2.6"
+      },
+      "plyfile": {
+        "entrypoint_content": {
+          "sha256": "b8ac8908306945b4313a53d84665d7affcd467e5be7d03c82bec986220166f45",
+          "size_bytes": 42979
+        },
+        "installed_tree_stat_fingerprint": "7f65f84f6fbf1904f9f70366aa88e22b2243dad6ccb37d82add792853bd14a09",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/plyfile.py",
+        "record_content": {
+          "sha256": "ee03c4d24d014b74f505c62480dd84361af9c407e5a70b08f5269bda80a58c53",
+          "size_bytes": 689
+        },
+        "version": "1.1.4"
+      },
+      "pydantic": {
+        "entrypoint_content": {
+          "sha256": "e62127278c07bf5384cdd2903f368a69929f3b8a524000bae4e0eb608ebf4bc6",
+          "size_bytes": 15812
+        },
+        "installed_tree_stat_fingerprint": "222d5ae0b5fcc463cbe015686920501e90af0604cb2413ca96478573221e3f15",
+        "path": "/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4/pydantic/__init__.py",
+        "record_content": {
+          "sha256": "d45505ba6ed4a7728ebd211845b2a953672382093b38efe885c80a995bad80b8",
+          "size_bytes": 15546
+        },
+        "version": "2.13.4"
+      },
+      "pydantic_core": {
+        "entrypoint_content": {
+          "sha256": "9cad6292b75254af606a970aae9bff6e5ae9f0b08089cd63acafa391b60794d2",
+          "size_bytes": 5115
+        },
+        "installed_tree_stat_fingerprint": "2dd838e768c634a57cc5b25ad0a49261bb2001b447a46f1061e8edef29909803",
+        "path": "/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4/pydantic_core/__init__.py",
+        "record_content": {
+          "sha256": "e36bbc7a44fd2a4db2c236ac8e715048caceff89ca58ef04485f2bb8f46dca35",
+          "size_bytes": 1127
+        },
+        "version": "2.46.4"
+      },
+      "scipy": {
+        "entrypoint_content": {
+          "sha256": "185913aa107512fafd5cf89dfd452a8719b45a6eba833e2dcee2cbfd18b4bbe5",
+          "size_bytes": 4153
+        },
+        "installed_tree_stat_fingerprint": "6fbcc6a06677cc16d3fb84fe4e35e5d088b31c1aa7cc6ec53e1ed6a2a0f5a812",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/scipy/__init__.py",
+        "record_content": {
+          "sha256": "e5372c6fe03595e9d3dd6960d3fa23f0db13dfd6c26713f99e1c03ccb7fa1e68",
+          "size_bytes": 193586
+        },
+        "version": "1.15.3"
+      },
+      "torch": {
+        "entrypoint_content": {
+          "sha256": "34fd26c3046775a70a6a654df60afb362b2f2e98b2f9b8e713c8763b7a80ff83",
+          "size_bytes": 89184
+        },
+        "installed_tree_stat_fingerprint": "b4240387aba1f37c0ba05f1704d1ba23927e8ebba7b635676b2c85382b4b8d36",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/torch/__init__.py",
+        "record_content": {
+          "sha256": "c52352db3964599f871ddf65bd754b6da1c85dcbc4027b7e862a15a679ba76a7",
+          "size_bytes": 1262186
+        },
+        "version": "2.4.1+cu124"
+      },
+      "yaml": {
+        "entrypoint_content": {
+          "sha256": "b19dfcc333d6a75dfd73073901164507252f271b41d3b5f7d85510033a0547a7",
+          "size_bytes": 12311
+        },
+        "installed_tree_stat_fingerprint": "deebed030e2791f15db4698f4a758c699c93344d1ebef666000f18ee1c65a499",
+        "path": "/group/worldcept/code/affordancept/.envs/mini-viewer/lib/python3.10/site-packages/yaml/__init__.py",
+        "record_content": {
+          "sha256": "f9f18009052f05eae33a77c4766fcace611680e986e38257178ec348ed7fab04",
+          "size_bytes": 2793
+        },
+        "version": "6.0.3"
+      }
+    },
+    "python": "/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python3.10",
+    "python_content": {
+      "sha256": "1876a4311f96e069fa3cb5370e29b827c26dec8e112f575497a19ecdbaf6f2a6",
+      "size_bytes": 17331920
+    },
+    "python_version": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+    "user_site_enabled": false
+  }
+}

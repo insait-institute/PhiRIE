@@ -1,0 +1,262 @@
+{
+  "kind": "first_predeclared_scope_r0_diagnostic",
+  "canonical_instance_id": "native-bc62c163118295cb959755287ab4eaf5b5c8208e9987a8e3ea4bc03631fb21fb",
+  "rows": [
+    {
+      "label": "L0_B3",
+      "result_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-9ccb80695aee05d7304f76869acc0bd6/runner/episode/result.json",
+      "result_sha256": "b823caf532dafe11d48cfd392c3fa2c1d21da889f89c29526b72e2deaa8f0948",
+      "trace_sha256": "529bd36182d7d44a21cde9c3dea9b520e668095374c114e104f8a11046e90b4e",
+      "video_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-9ccb80695aee05d7304f76869acc0bd6/runner/episode/continuous.mp4",
+      "engine": {
+        "canonical_instance_id": "native-bc62c163118295cb959755287ab4eaf5b5c8208e9987a8e3ea4bc03631fb21fb",
+        "engine_id": "canonical-engine-d2dddcace8f240b3ab0ac941ee818e8b",
+        "engine_protocol": "per_canonical_engine_v1",
+        "process_uuid": "5edc70c9-2fe6-4bdf-b0af-d75119058865",
+        "runtime": {
+          "devices": [
+            {
+              "id": 0,
+              "kind": "NVIDIA RTX A6000",
+              "platform": "gpu"
+            }
+          ],
+          "environment": {
+            "CUDA_HOME": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_PATH": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_VISIBLE_DEVICES": "0",
+            "LD_LIBRARY_PATH": "/group/worldcept/code/openpi/.venv/lib/python3.11/site-packages/cv2/../../lib64:/opt/modules/nvidia-cuda-12.4.1/lib64",
+            "MKL_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "OPENBLAS_NUM_THREADS": "4",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "packages": {
+            "flax": "0.10.2",
+            "jax": "0.5.3",
+            "jaxlib": "0.5.3",
+            "numpy": "2.2.5"
+          },
+          "python": "3.11.15",
+          "source_commit": "e459a10f1674355154571448ad2d32fea5c9760c",
+          "source_hashes": {
+            "robo/roundtrip/native_policy.py": "d4cd599943ba1eb80df85931520da8a81ef1f02724906d403fee5fe533e52788",
+            "robo/roundtrip/native_policy_server.py": "0940ddb82f8bfd68038c6cd0c58ac6f13275174e0228a10677e2927df0e56573",
+            "robo/roundtrip/policy_engine.py": "74752224a01ed5af0e9080b8fb3d4598348df3de1122f9313d2fca0ce8bc06e3"
+          }
+        },
+        "runtime_fingerprint": "e26c62a3e394571f41861f2476f914ef6af185d100fbfa61e5a3f999ed64d834"
+      },
+      "reset_state_id": "r0",
+      "ticks": 420,
+      "success": true,
+      "first_success_step": 420,
+      "error": null,
+      "initial_state_sha256": "08b65b9b9e88cb30656a9e5b4d02f01f66b35a33226e3578b554c27bd064f86d",
+      "first_post_action_target_xyz": [
+        1.8444082778635151,
+        -0.5525384807991465,
+        0.9770918535998327
+      ],
+      "last_target_xyz": [
+        1.2315569323058757,
+        -0.3427249521786964,
+        0.7193036325185013
+      ],
+      "target_min_z_m": 0.7135907997504858,
+      "target_max_z_m": 1.1162712309914187,
+      "target_height_increase_from_first_post_action_m": 0.13917937739158592,
+      "maximum_displacement_from_first_post_action_m": 0.6995667082119049,
+      "final_displacement_from_first_post_action_m": 0.6971823688765021,
+      "native_inside_sink_ticks": 68,
+      "minimum_gripper_distance_m": 0.00447086950438721,
+      "robot_target_contact_ticks": null,
+      "finger_target_contact_ticks": null,
+      "max_penetration_contact": null,
+      "grasp_label": "NOT_INFERRED",
+      "comparison_frame": "same body displacement from its own first post-action frame; no cross-origin absolute error"
+    },
+    {
+      "label": "L1_B3",
+      "result_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-b83893a15e99d5886d20e4f0cffd3e25/runner/episode/result.json",
+      "result_sha256": "6e28fac6e17d0cc3592283a26a97dee987b956636048d9d551abda92e2397d0a",
+      "trace_sha256": "486e20262fdff3fb3026a110aea40c0aa60d8d1d5a652bf1411b9f45dcb5cf37",
+      "video_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-b83893a15e99d5886d20e4f0cffd3e25/runner/episode/continuous.mp4",
+      "engine": {
+        "canonical_instance_id": "native-bc62c163118295cb959755287ab4eaf5b5c8208e9987a8e3ea4bc03631fb21fb",
+        "engine_id": "canonical-engine-d2dddcace8f240b3ab0ac941ee818e8b",
+        "engine_protocol": "per_canonical_engine_v1",
+        "process_uuid": "5edc70c9-2fe6-4bdf-b0af-d75119058865",
+        "runtime": {
+          "devices": [
+            {
+              "id": 0,
+              "kind": "NVIDIA RTX A6000",
+              "platform": "gpu"
+            }
+          ],
+          "environment": {
+            "CUDA_HOME": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_PATH": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_VISIBLE_DEVICES": "0",
+            "LD_LIBRARY_PATH": "/group/worldcept/code/openpi/.venv/lib/python3.11/site-packages/cv2/../../lib64:/opt/modules/nvidia-cuda-12.4.1/lib64",
+            "MKL_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "OPENBLAS_NUM_THREADS": "4",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "packages": {
+            "flax": "0.10.2",
+            "jax": "0.5.3",
+            "jaxlib": "0.5.3",
+            "numpy": "2.2.5"
+          },
+          "python": "3.11.15",
+          "source_commit": "e459a10f1674355154571448ad2d32fea5c9760c",
+          "source_hashes": {
+            "robo/roundtrip/native_policy.py": "d4cd599943ba1eb80df85931520da8a81ef1f02724906d403fee5fe533e52788",
+            "robo/roundtrip/native_policy_server.py": "0940ddb82f8bfd68038c6cd0c58ac6f13275174e0228a10677e2927df0e56573",
+            "robo/roundtrip/policy_engine.py": "74752224a01ed5af0e9080b8fb3d4598348df3de1122f9313d2fca0ce8bc06e3"
+          }
+        },
+        "runtime_fingerprint": "e26c62a3e394571f41861f2476f914ef6af185d100fbfa61e5a3f999ed64d834"
+      },
+      "reset_state_id": "r0",
+      "ticks": 600,
+      "success": false,
+      "first_success_step": null,
+      "error": null,
+      "initial_state_sha256": "08b65b9b9e88cb30656a9e5b4d02f01f66b35a33226e3578b554c27bd064f86d",
+      "first_post_action_target_xyz": [
+        1.8444082778635151,
+        -0.5525384807991465,
+        0.9770918535998327
+      ],
+      "last_target_xyz": [
+        1.8522737286839195,
+        -0.5365300859562455,
+        0.9474855283809199
+      ],
+      "target_min_z_m": 0.9467331530634135,
+      "target_max_z_m": 0.9770918535998327,
+      "target_height_increase_from_first_post_action_m": 0.0,
+      "maximum_displacement_from_first_post_action_m": 0.03590619409488789,
+      "final_displacement_from_first_post_action_m": 0.03456397712970038,
+      "native_inside_sink_ticks": 0,
+      "minimum_gripper_distance_m": 0.6591045082382238,
+      "robot_target_contact_ticks": 0,
+      "finger_target_contact_ticks": 0,
+      "max_penetration_contact": {
+        "tick": 4,
+        "physics_step": 4,
+        "geom_names": [
+          "robot0_link1_collision",
+          "sink_main_group_main__roundtrip_geom_12"
+        ],
+        "object_ids": [
+          null,
+          "destination"
+        ],
+        "geometry_classification": [
+          "retained_reference",
+          "reconstructed"
+        ],
+        "contact_position_world_m": [
+          1.25395913414628,
+          -0.7442104330383859,
+          0.8869355811519295
+        ],
+        "distance_m": -0.06470070886198447,
+        "normal_force_N": 142253.52495381728,
+        "contact_frame_force_torque": [
+          142253.52495381728,
+          7582.578857907901,
+          8725.14659613305,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "touches_retained_reference": true,
+        "outside_declared_workspace": null
+      },
+      "grasp_label": "NOT_INFERRED",
+      "comparison_frame": "same body displacement from its own first post-action frame; no cross-origin absolute error"
+    },
+    {
+      "label": "REF",
+      "result_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-9a82a06f187ae9ddb1cd844cf4302f0b/runner/episode/result.json",
+      "result_sha256": "c0027c186e0e2e41611ca2718c3f0c4fe6ed5631659cd0e85a15b0989b4e2f1c",
+      "trace_sha256": "fe1edeb8fc79d3f4e2b8698100f5cdb46cbb8a8f6c0f4d3e97879e54f8356093",
+      "video_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/workers/unit-9a82a06f187ae9ddb1cd844cf4302f0b/runner/episode/continuous.mp4",
+      "engine": {
+        "canonical_instance_id": "native-bc62c163118295cb959755287ab4eaf5b5c8208e9987a8e3ea4bc03631fb21fb",
+        "engine_id": "canonical-engine-d2dddcace8f240b3ab0ac941ee818e8b",
+        "engine_protocol": "per_canonical_engine_v1",
+        "process_uuid": "5edc70c9-2fe6-4bdf-b0af-d75119058865",
+        "runtime": {
+          "devices": [
+            {
+              "id": 0,
+              "kind": "NVIDIA RTX A6000",
+              "platform": "gpu"
+            }
+          ],
+          "environment": {
+            "CUDA_HOME": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_PATH": "/opt/modules/nvidia-cuda-12.4.1",
+            "CUDA_VISIBLE_DEVICES": "0",
+            "LD_LIBRARY_PATH": "/group/worldcept/code/openpi/.venv/lib/python3.11/site-packages/cv2/../../lib64:/opt/modules/nvidia-cuda-12.4.1/lib64",
+            "MKL_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "OPENBLAS_NUM_THREADS": "4",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "packages": {
+            "flax": "0.10.2",
+            "jax": "0.5.3",
+            "jaxlib": "0.5.3",
+            "numpy": "2.2.5"
+          },
+          "python": "3.11.15",
+          "source_commit": "e459a10f1674355154571448ad2d32fea5c9760c",
+          "source_hashes": {
+            "robo/roundtrip/native_policy.py": "d4cd599943ba1eb80df85931520da8a81ef1f02724906d403fee5fe533e52788",
+            "robo/roundtrip/native_policy_server.py": "0940ddb82f8bfd68038c6cd0c58ac6f13275174e0228a10677e2927df0e56573",
+            "robo/roundtrip/policy_engine.py": "74752224a01ed5af0e9080b8fb3d4598348df3de1122f9313d2fca0ce8bc06e3"
+          }
+        },
+        "runtime_fingerprint": "e26c62a3e394571f41861f2476f914ef6af185d100fbfa61e5a3f999ed64d834"
+      },
+      "reset_state_id": "r0",
+      "ticks": 327,
+      "success": true,
+      "first_success_step": 327,
+      "error": null,
+      "initial_state_sha256": "d2bca336f8d9d7233a56683ed123655430e77d835c385ba5627c8381d0526b46",
+      "first_post_action_target_xyz": [
+        1.8495246674509358,
+        -0.5450359394895772,
+        0.9754490585432516
+      ],
+      "last_target_xyz": [
+        1.1465202719635157,
+        -0.41553408278863424,
+        0.7472245566560447
+      ],
+      "target_min_z_m": 0.7470012815707731,
+      "target_max_z_m": 1.0971799853932391,
+      "target_height_increase_from_first_post_action_m": 0.12173092684998754,
+      "maximum_displacement_from_first_post_action_m": 0.7521599515235107,
+      "final_displacement_from_first_post_action_m": 0.7503814591428071,
+      "native_inside_sink_ticks": 18,
+      "minimum_gripper_distance_m": 0.024323442790156812,
+      "robot_target_contact_ticks": null,
+      "finger_target_contact_ticks": null,
+      "max_penetration_contact": null,
+      "grasp_label": "NOT_INFERRED",
+      "comparison_frame": "same body displacement from its own first post-action frame; no cross-origin absolute error"
+    }
+  ],
+  "script_sha256": "3865a98876ddccc1e420b3d9ec081dd83f19c74f803c1f9589ebe543d924f334",
+  "planned_selection": "first canonical scope job, fixed r0; all outcomes retained"
+}

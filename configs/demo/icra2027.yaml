@@ -1,0 +1,20 @@
+schema_version: 1
+mode: draft
+freeze_id: UNASSIGNED
+source_root: ../..
+resolution: [960, 540]
+fps: 15
+# Resolve to immutable source paths/hashes after the source commit is frozen.
+# No placeholder source may pass preflight. A source record requires:
+# id, path, sha256, freeze_id, kind (image/video/selection), and optional
+# origin_freeze_id for explicitly preliminary imported E3 decisions.
+sources: []
+# Four 3-second shots: capture, real selection, real retry, dependency card.
+# Each shot needs shot_id, source_id, duration_s, overlay_text, scene_id,
+# object_ids, episode_id, frame_range, camera_path, metric_fields, manual_edits.
+shots: []
+limitations:
+  - Engineering draft only; not the complete D0 smoke storyboard.
+  - No synchronized physics and photoreal policy episode is available yet.
+  - No E5 preservation-certified frames or E9 final result cards.
+  - No 90-second hero, 30-second teaser, seamless loop, or presentation QA.

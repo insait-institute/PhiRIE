@@ -1,0 +1,31 @@
+# Mode 4 (DROID FK trajectory vs. reconstructed wrist-camera centers)
+# example config for agents/recon/robot_align.py.
+#
+# This mode dispatches to agents/recon/align_to_traj.py (unmodified,
+# actively maintained elsewhere - see robot_align.align_droid_fk's
+# docstring) as a subprocess against its documented CLI contract:
+#   python -m agents.recon.align_to_traj --recon RECON --traj TRAJ --out OUT
+# recon_npz/traj_json/out_npz below are exactly its --recon/--traj/--out.
+#
+# NOTE: align_to_traj.py fits ALL available FK-vs-SfM frame
+# correspondences and does not itself hold out an evaluation subset, so
+# this mode's report always has held_out_available=false and its
+# "fit" residual (fk_center_rms_m) is gated at align_to_traj.py's own
+# --max-rms-m level rather than against an independent held-out set - see
+# alignment_report.py's mode=="droid_fk" note.
+
+mode: droid_fk
+scene_id: droid_iprl_thu_aug_24_21_29_53_2023
+
+recon_npz: data/recon_scenes/data/droid_iprl_0824/recon.npz
+traj_json: data/recon_scenes/data/droid_iprl_0824/gt/droid_traj.json
+out_npz: outputs/droid_iprl_0824/calibration/recon_base.npz
+
+solver:
+  max_offset: 2
+  max_rms_m: 0.10
+  min_trajectory_baseline_m: 0.15
+
+output:
+  dir: outputs/droid_iprl_0824/calibration
+  report_json: outputs/droid_iprl_0824/calibration/align_report.json

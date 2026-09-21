@@ -1,0 +1,13 @@
+900911|sar-gc32-sam3d-smoke|FAILED|1:0|47|00:30:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-4
+900912|sar-gc32-views|COMPLETED|0:0|791|02:00:00|billing=8,cpu=8,mem=64G,node=1|gcp-eu1-rtx6000-g8sr
+900913|sar-gc32-reference-evaluation|FAILED|1:0|123|02:00:00|billing=8,cpu=8,mem=64G,node=1|gcp-eu1-rtx6000-g8sr
+900930|sar-gc32-sam3d-smoke-retry1|FAILED|1:0|45|00:30:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-3
+900931|sar-gc32-reference-evaluation-retry1|COMPLETED|0:0|5217|02:00:00|billing=8,cpu=8,mem=64G,node=1|gcp-eu1-rtx6000-g8sr
+900945|sar-gc32-reconviagen-smoke|FAILED|1:0|95|00:30:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-5
+900980|sar-gc32-reconviagen-smoke-recovery1|COMPLETED|0:0|187|00:30:00|billing=8,cpu=8,mem=64G,node=1|gcp-eu1-rtx6000-g8sr
+901002|sar-gc32-reconviagen-production-00|COMPLETED|0:0|3608|01:58:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-0
+901003|sar-gc32-reconviagen-production-01|COMPLETED|0:0|590|00:21:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-7
+901678|sar-gc32-sam3d-smoke-retry2|COMPLETED|0:0|176|00:30:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-5
+901688|sar-gc32-sam3d-production-00|CANCELLED by 0|0:0|3763|01:58:00|billing=8,cpu=8,gres/gpu:h200=1,gres/gpu=1,mem=64G,node=1|sof1-h200-5
+902359|sar-gc32-sam3d-tail-evaluation|COMPLETED|0:0|173|00:15:00|billing=8,cpu=8,mem=64G,node=1|hala
+902360|sar-gc32-sam3d-tail-generation|COMPLETED|0:0|361|00:15:00|billing=8,cpu=8,gres/gpu:a6000=1,gres/gpu=1,mem=64G,node=1|hala

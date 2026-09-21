@@ -1,0 +1,18 @@
+include LICENSE README.md CHANGELOG.md CONTRIBUTING.md pyproject.toml uv.lock .python-version
+include configs/default.yaml configs/cluster/insait.yaml
+include envs/README.md
+include envs/studio/pyproject.toml envs/studio/uv.lock envs/studio/.python-version
+include envs/inference/pyproject.toml envs/inference/uv.lock envs/inference/.python-version
+include envs/generation/pyproject.toml envs/generation/uv.lock envs/generation/.python-version
+recursive-include pipelines *.md
+recursive-include tools *.py *.sh *.json *.md
+recursive-include tests *.py
+recursive-include examples *.json *.md
+recursive-include docs *.md *.png *.jpg *.json *.txt *.log *.xml
+recursive-include run *.py *.sh *.sbatch
+recursive-include .github *.yml *.md
+global-exclude *.pyc
+prune outputs
+prune backends
+prune data
+prune weights

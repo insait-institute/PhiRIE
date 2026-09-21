@@ -1,0 +1,21 @@
+schema_version: 1
+scope: fresh_canonical_engineering
+paper_ready: false
+freeze_id: 20260905-4d0787c-v3
+scene_id: 09c1414f1b
+planned_jobs: 5
+planned_policy_object_rows: 25
+jobs_config: configs/experiments/icra2027/agentic_fresh_jobs.yaml
+policies_config: configs/experiments/icra2027/agentic_automatic_policies.yaml
+policies_sha256: 0831349a0de6c7885bcec27ec412298add1c84907dd4536b55f5e30c5ef002da
+observation_runtime_config: configs/experiments/icra2027/e3_gaussian_train_only.yaml
+observation_runtime_config_sha256: 5a737cbd1c374d8e35a93300fdd0f09554396b382594aa2f23457d503535e5a7
+observation_python: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python
+control_python: /group/worldcept/code/SimAny/.venv/bin/python
+control_runtime_sha256: 008d45bf3f4bb0ed651affd239e0d9b75d054b2dc170747f4d9b69033d54604f
+object_slots:
+- obj_1000
+- obj_1001
+- obj_1002
+- obj_1003
+- obj_1004

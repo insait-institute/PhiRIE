@@ -1,0 +1,23 @@
+frozen_view_replay:
+  mode: exact_frozen_cpu_views_v1
+  producer_commit: 3ff95f4ec7dee0a46d8259c8fabbd16b1704bfcf
+  source_config:
+    path: /group/worldcept/code/SimAny-wt/e3-rvg-cohort-launch/configs/experiments/icra2027/rvg_cohort/3f15a9266d.yaml
+    bytes: 4601
+    mtime_ns: 1788622091842784112
+    sha256: de9296184cff258166c5563518668104c171ef19c9a8accbcc9705637b78842e
+  source_contract:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/contract/freeze_manifest.json
+    bytes: 37278
+    mtime_ns: 1788622396117874678
+    sha256: 336ec2afe232aaccf4a713abcb33a39463703bd65a3a3ae5d91468ed57ad8f61
+  view_manifest:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/rvg_initial/3f15a9266d/view_manifest.json
+    bytes: 1053156
+    mtime_ns: 1788622799892980548
+    sha256: a92a7827bf89a18bd0fee044797cd9ef143c5bdd158de11b54c830e8570540cd
+  views_receipt:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/rvg_initial/3f15a9266d/views_receipt.json
+    bytes: 2024
+    mtime_ns: 1788622800372977254
+    sha256: b53ec424b305baa1b018a2b67cf7ed400c3528ab025c42c76629ede9e08969a5

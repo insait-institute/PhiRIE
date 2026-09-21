@@ -1,0 +1,122 @@
+schema_version: 1
+scope: e4_compact_materialization_engineering
+paper_ready: false
+freeze_id: 20260905-e8277d2-v1
+python: /group/worldcept/code/SimAny/.venv/bin/python3.11
+e3_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic
+source:
+  e3_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic
+  source_e0:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/contract/freeze_manifest.json
+    size_bytes: 12005
+    sha256: 8aa2d7709c51edf1d8f6b36e4aa6fea6b36d3a17fb7338bfa8fbeb54c476788d
+  protocol:
+    path: /group/worldcept/code/SimAny-wt/e4-compact-canonical/configs/experiments/icra2027/e4_compact_canonical/protocol.yaml
+    size_bytes: 39143
+    sha256: cb43b5e1f501fe013b09b68d74c5047e50bca4d64404fb65f4142f6f2cb84e43
+  jobs_config:
+    path: /group/worldcept/code/SimAny-wt/e4-compact-canonical/configs/experiments/icra2027/e4_compact_canonical/agentic_fresh_jobs.yaml
+    size_bytes: 9381
+    sha256: 0b728d55e33acc5d9d164748f9bfb52ebc308af5959547dffc169f5b79306af9
+  inventory:
+    inventory_seal:
+      path: outputs/icra2027/20260905-61d8ba4-v1/agentic/input_inventory/seal.json
+      size_bytes: 655
+      sha256: ea9461cfcf65d734704cb6f4cc97ada6e15ac7f75343c299ff3f4ccb9c947751
+    resolved_jobs:
+      path: outputs/icra2027/20260905-61d8ba4-v1/agentic/input_inventory/resolved_jobs.json
+      size_bytes: 17298
+      sha256: 5714b4b92509d5e681736deca5e56c009b90fa83467b4d57ba748879509578ad
+    resolved_proposals:
+      path: outputs/icra2027/20260905-61d8ba4-v1/agentic/input_inventory/resolved_proposals.json
+      size_bytes: 40206
+      sha256: 5b565cd94e0f26984b9200b2847f84b6fb87eeceb7173b48f69812983bbb8759
+    inventory_audit:
+      path: outputs/icra2027/20260905-61d8ba4-v1/agentic/input_inventory/inventory_audit.json
+      size_bytes: 7969
+      sha256: 974f572fd5b16ad453fb527632c5caa198ba07abf78d7e305acf493ee14ed9fa
+  scenes:
+    27dd4da69e:
+      descriptor:
+        schema_version: 1
+        scene_id: 27dd4da69e
+        discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/27dd4da69e
+        discovery_hashes:
+          all_jobs_manifest.json: bf08f6f304b486172f4a19e25b8de8cf540f3904da9f084d44654c6f7abf93d1
+          input_manifest.json: 949e1d0e75316726d41b3212ee6d0b96f092e3518c817a5cd507c47272dd3b25
+          output_hashes.json: 0b051ea1c65f10a9f6f33db4222ce5e974d9f66533c5c21d5e2814ae362cb5a3
+          pilot_summary.json: 12be7c09f37896b354e399803e0af8aa5316ad1f33e922e9a84ae37b26fe155c
+          postrun_audit.json: 4cbeb7348043abc2c887574d8a1c891ae1e3444b97ed741f41c99f9623f9b323
+      control_seal:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/control/27dd4da69e/seal.json
+        size_bytes: 5683
+        sha256: 0c6655e4d84a02b3f5a826020a906f8bb674bd846c43f7ed860c001071e500e1
+      execution_receipts:
+        observe:
+          start:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/27dd4da69e/observe_execution_start.json
+            size_bytes: 7060
+            sha256: 6858040428381c55b69e6fb5fec861542c3c9f330f78979631f6e6bdd4cee2c4
+          result:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/27dd4da69e/observe_execution_result.json
+            size_bytes: 96
+            sha256: bbe4b1d007f190971941a51dfb241b3bcd65d81c752bc392cd45ffb32ea9a111
+        control:
+          start:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/27dd4da69e/control_execution_start.json
+            size_bytes: 1111
+            sha256: a5bf6be3b149aab5e5b7943eeafd426c0108a0a01a223b2d0c5032fe670398f6
+          result:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/27dd4da69e/control_execution_result.json
+            size_bytes: 95
+            sha256: 05c98ee6409bf9db87a57a4ef6fe371f4ef59747bf5d34d758ed0b8bcbd117a1
+      observation_seal:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/observations/27dd4da69e/seal.json
+        size_bytes: 900
+        sha256: 7d4565e1833598478b51e2a10d8da9906ebf0423f16b360b73f77bd151e6b804
+      observation_manifest:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/observations/27dd4da69e/manifest.json
+        size_bytes: 9303
+        sha256: 92674dffa282f560edc381f8c2e99d6a935f9efe293ccadf48924aa3c5a0246f
+    40aec5fffa:
+      descriptor:
+        schema_version: 1
+        scene_id: 40aec5fffa
+        discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/40aec5fffa
+        discovery_hashes:
+          all_jobs_manifest.json: 4f9e0645a313f45c3a281e141a85103c3396ee66597fc9b6a3df689169b3ff72
+          input_manifest.json: b7fea0651bc6e6156dcda81d593b1325e8f7d24c02c5720ef13a7b3937b3dd65
+          output_hashes.json: be3e94c01d1c060283a5c2c53a688210bfb1829b9dbf8aa811edc65e528eb282
+          pilot_summary.json: d9f7cf6a92a3689905fdc0620ebb8ac7e29b8b49da5588a6b53fbcfd67f57b44
+          postrun_audit.json: a7157edf06a6ec8b5af3257da90af4d599ce822cc369a71003de0da524e2e7bd
+      control_seal:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/control/40aec5fffa/seal.json
+        size_bytes: 7990
+        sha256: 07ed47d5c37a6c95729c54814a9b4d341f85c81d1ff4ec70c9d35434575730d8
+      execution_receipts:
+        observe:
+          start:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/40aec5fffa/observe_execution_start.json
+            size_bytes: 7061
+            sha256: 6a4e686684305ee7264d2332276dd65632443464a01ad16013d3be05fe74fae2
+          result:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/40aec5fffa/observe_execution_result.json
+            size_bytes: 96
+            sha256: 9e001c7ce1c28db3057809043573f74f9d20fe2ea744ce1f096be34c3876be7c
+        control:
+          start:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/40aec5fffa/control_execution_start.json
+            size_bytes: 1112
+            sha256: 4cb4676db4bc4202333fe699921bcf74ea39e266164bbf56193d75c980ab8897
+          result:
+            path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/execution_receipts/40aec5fffa/control_execution_result.json
+            size_bytes: 95
+            sha256: 90e61832d5664b710f6c528064194587e5345310c70738b4f522180a9f65d29a
+      observation_seal:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/observations/40aec5fffa/seal.json
+        size_bytes: 1164
+        sha256: 33baa3e34bfa7cf2181c16ef29296a612545a4209ac6b7949e40c80e3a95136f
+      observation_manifest:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-61d8ba4-v1/agentic/observations/40aec5fffa/manifest.json
+        size_bytes: 12426
+        sha256: a82231f7832154707aca7f85e849e16d5504c8fc629075aac328429d6badc5fd

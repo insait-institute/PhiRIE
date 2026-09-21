@@ -1,0 +1,22 @@
+{
+  "id": "simulation",
+  "branch": "block/simulation",
+  "default_action": "export",
+  "description": "Physical annotation and collision-scene export",
+  "implementation": [
+    "physicalview/phiview_sim.py",
+    "physicalview/paper_libero.py",
+    "physicalview/pipeline.py"
+  ],
+  "tools": [
+    "MuJoCo",
+    "CoACD",
+    "physical parameter estimation"
+  ],
+  "commands": [
+    "uv run physicalview run simulation --action annotate --config configs/local.yaml --scene room --out outputs/scenes/room_factory",
+    "uv run physicalview run simulation --action export --collision room --config configs/local.yaml --scene room --out outputs/scenes/room_factory"
+  ],
+  "inputs": "Accepted object assets and physical metadata",
+  "outputs": "MJCF and physical parameters. The viewer exposes fall, friction, throw and projectile interactions."
+}

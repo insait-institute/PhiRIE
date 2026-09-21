@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "decoded_all_hero_frames": true,
+  "frames": 2700,
+  "duration_s": 90,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "loop_seam_exact": true,
+  "full_demo_ready": false,
+  "native_track_demo_ready": true
+}

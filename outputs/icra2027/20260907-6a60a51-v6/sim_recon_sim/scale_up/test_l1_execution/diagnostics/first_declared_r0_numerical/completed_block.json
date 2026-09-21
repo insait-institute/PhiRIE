@@ -1,0 +1,70 @@
+{
+  "kind": "first_complete_predeclared_scope_block",
+  "canonical_instance_id": "native-bc62c163118295cb959755287ab4eaf5b5c8208e9987a8e3ea4bc03631fb21fb",
+  "scope_run_id": "native_test_L1_engine_v2_20260907-6a60a51-v6",
+  "slurm_job_id": "840963",
+  "scheduler_state": "COMPLETED",
+  "elapsed": "00:31:41",
+  "ledger_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0018/episode_ledger.jsonl",
+  "ledger_sha256": "746899cafea90ada422bb29ba90991bf230ed83344069ee4d09603284fa4686b",
+  "planned_cells": 50,
+  "groups": [
+    {
+      "method": "B3_AGENT_NATIVE",
+      "scope": "L0_target_only",
+      "planned": 10,
+      "terminal": 10,
+      "executed": 10,
+      "success": 8,
+      "statuses": {
+        "RECORDED": 10
+      }
+    },
+    {
+      "method": "B3_AGENT_NATIVE",
+      "scope": "L1_target_destination",
+      "planned": 10,
+      "terminal": 10,
+      "executed": 10,
+      "success": 0,
+      "statuses": {
+        "RECORDED": 10
+      }
+    },
+    {
+      "method": "B4_ROOM_REPAIR_NATIVE",
+      "scope": "L0_target_only",
+      "planned": 10,
+      "terminal": 10,
+      "executed": 0,
+      "success": 0,
+      "statuses": {
+        "ABSTAINED": 10
+      }
+    },
+    {
+      "method": "B4_ROOM_REPAIR_NATIVE",
+      "scope": "L1_target_destination",
+      "planned": 10,
+      "terminal": 10,
+      "executed": 0,
+      "success": 0,
+      "statuses": {
+        "ABSTAINED": 10
+      }
+    },
+    {
+      "method": "REF_NATIVE",
+      "scope": "L0_target_only",
+      "planned": 10,
+      "terminal": 10,
+      "executed": 10,
+      "success": 10,
+      "statuses": {
+        "RECORDED": 10
+      }
+    }
+  ],
+  "selection": "first submitted actual L1 canonical, all10resets retained; no outcome-based selection",
+  "population_claim": false
+}

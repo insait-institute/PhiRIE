@@ -1,0 +1,26 @@
+{
+  "room_methods": {
+    "Raw scene Gaussian reconstruction": {
+      "render_dir": "outputs/fidelity/raw_scene/render",
+      "gt_dir": "outputs/fidelity/gt"
+    },
+    "Clean background after object removal": {
+      "render_dir": "outputs/fidelity/clean_background/render",
+      "gt_dir": "outputs/fidelity/gt"
+    },
+    "Factorized SimAny composite": {
+      "render_dir": "outputs/fidelity/simany_composite/render",
+      "gt_dir": "outputs/fidelity/gt"
+    },
+    "Composite + Harmonizer Option C": {
+      "render_dir": "outputs/fidelity/harmony_c/render",
+      "gt_dir": "outputs/fidelity/gt"
+    }
+  },
+  "object_methods": {
+    "TRELLIS, best single view": [],
+    "ReconViaGen, multi-view": [],
+    "Residual-gated hybrid": [],
+    "Oracle candidate choice": []
+  }
+}

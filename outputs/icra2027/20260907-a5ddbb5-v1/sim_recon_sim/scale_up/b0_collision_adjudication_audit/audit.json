@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "kind": "independent_original_collision_import_audit",
+  "observed_utc": "2026-09-07T16:37:26.752555+00:00",
+  "source_commit": "73ff4ab0a6e53c847960b03385f0c4f040d5e4a0",
+  "source_dirty": false,
+  "python": "/group/worldcept/code/SimAny-wt/sr0-native/.venv-native/bin/python",
+  "numpy_version": "2.2.5",
+  "trimesh_version": "5.1.0",
+  "trimesh_convex_source": {
+    "path": "/group/worldcept/code/SimAny-wt/sr0-native/.venv-native/lib/python3.11/site-packages/trimesh/convex.py",
+    "sha256": "d01b5151c290b3dadfa844945e0e0bb49ba265304baebb35a36642d26d89aa6a"
+  },
+  "importer_source": {
+    "path": "/group/worldcept/code/SimAny-wt/n1-test-execution-73ff4ab/robo/roundtrip/importers/robocasa.py",
+    "sha256": "e69b2067e4b7d04e87666a13b103b9ce8014c7517fb0ba65b03af12d65e73b4c"
+  },
+  "script": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.py",
+    "sha256": "66239d9c554290e308b8aef764c3ca42db5dfc59c1b96dbde080cd1946ec1cf7"
+  },
+  "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+  "original_job_id": "840315",
+  "scheduler_output": "840315|COMPLETED|00:19:42|0:0\n",
+  "original_ledger": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_final_001/merged/episode_ledger.jsonl",
+    "sha256": "26565171338861ca16346502996bc45a3c9b759d1a77d316635ac32105a42660"
+  },
+  "original_build_binding": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-4f5c745-v2/sim_recon_sim/scale_up/test_dispatch/build_readiness_snapshot_004/build_bindings.jsonl",
+    "sha256": "f2bce69eda0840d842994a01ad42ac7eac200f2e186cd2da53cef3136ed17c00"
+  },
+  "build_binding": {
+    "accepted": true,
+    "binding_source": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-4f5c745-v2/sim_recon_sim/scale_up/test_dispatch/instances/native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe/build_bindings.jsonl",
+    "binding_source_sha256": "b4bdcdefa992d6c7233b71f69a1d7171f4a2522e94dabbd3f509b2e816a065ae",
+    "build_manifest": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/build_manifest.json",
+    "build_manifest_sha256": "fbe7955ba0cf9f34bda95566dd071e720239f82c2068a3e21b95b4b22892195b",
+    "canonical_instance_id": "native-c1d6ffb137352ef5f4f2625c933fa3a98d5801448076dc097c84c3682347eafe",
+    "controller_method": "B0_FIXED_NATIVE",
+    "object_dir": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00",
+    "terminal_status": "BUILT"
+  },
+  "build_manifest": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/build_manifest.json",
+    "sha256": "fbe7955ba0cf9f34bda95566dd071e720239f82c2068a3e21b95b4b22892195b"
+  },
+  "constructor_config": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/build_config.json",
+    "sha256": "fbaa052913868da6f09e7cc44186c6aaed92d3ca954bf7f4078bb68bf3272c79"
+  },
+  "constructor_config_canonical_sha256": "8dd1d6a794f8f82ccd672edc74bc5d611e531cb70dd4f51a13176712c713546b",
+  "object_dir": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00",
+  "collision_part": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_04.obj",
+    "sha256": "7948d9c997e58ed7d6dbd764b87f39291c6f02bb00dad2ba7a55f0da8fc30fb6"
+  },
+  "part_properties": {
+    "vertices": 441,
+    "faces": 878,
+    "is_watertight": true,
+    "is_convex": false,
+    "is_winding_consistent": true,
+    "volume_local": 0.001155312517813351,
+    "body_count": 1,
+    "vertices_finite": true,
+    "edge_incidence_histogram": {
+      "2": 1317
+    },
+    "duplicate_vertex_coordinates": 0,
+    "mesh_scale": 0.31379584571401037,
+    "planar_tolerance": 1e-05,
+    "convexity_threshold": 3.1379584571401037e-06,
+    "maximum_adjacent_projection": 4.154479951354404e-06,
+    "violating_adjacencies": 1,
+    "geometry_units": "unscaled reconstructed local mesh; not a native fidelity error"
+  },
+  "all_parts": [
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_00.obj",
+        "sha256": "02913c4b5e3274f7fac72474df32d670d80d4c4b78b6503ae0234d36e798a3da"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_01.obj",
+        "sha256": "d961df79b471279dc4866b12c6a91086fe63c926627dccebe931aeb05219db07"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_02.obj",
+        "sha256": "f26f93867ed4524a58dbf9c6d8f0f6db7db5939593518f7a11a3e60dd7f7d982"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_03.obj",
+        "sha256": "e6796eac634a4b0f85dea0766425794cf16f08dd8f998b261d0cac93a873226c"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_04.obj",
+        "sha256": "7948d9c997e58ed7d6dbd764b87f39291c6f02bb00dad2ba7a55f0da8fc30fb6"
+      },
+      "watertight": true,
+      "convex": false,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_05.obj",
+        "sha256": "d9939be4c84d078c91ba9545f0eca0ba2d31baf5b91e24a168402a9069ff76c9"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_06.obj",
+        "sha256": "572252489455d17bc2747caaee44371929d13abd0b096dd80941a0efaa6d06df"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_07.obj",
+        "sha256": "a39609654ec38bbc0aa972dd284d1c1e249910ef81ae2963a1a29b3dda02d00e"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_08.obj",
+        "sha256": "2af79f006e18aaaeaa2fa772918a08917b21a533a023f045499a9e097c970eee"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_09.obj",
+        "sha256": "71beb142c8bde26393eaa04c0dd52d76162bb73fc840db79dd0ae8be40f55922"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_10.obj",
+        "sha256": "ea964753dcaac741488b46e9d2374fefa9f1ddf321de48364ceec6419ffe531f"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_11.obj",
+        "sha256": "890dbd369f2d19cbc346e6eb2e5b104e5bff4c0743ad3448cf1131a157bc52e5"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_12.obj",
+        "sha256": "cac6541c21d1c3dc06af3915cff89d0f74ebbbc3ead7b20928e221db4a1e88fc"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_13.obj",
+        "sha256": "fb93b8b560fae6c56904696c7e331e0dad3eafbf0cbe82137d6444f207b81344"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_14.obj",
+        "sha256": "4534645523cf808ef59921b170d624588fdfceaecede63aefb9a1d1f6e6568c6"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    },
+    {
+      "file": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_15.obj",
+        "sha256": "bd64d2e2f009187ba209f406cb0e731aadf21167b74359b72cd7a8fa1ea47311"
+      },
+      "watertight": true,
+      "convex": true,
+      "positive_volume": true
+    }
+  ],
+  "construction_source_hashes_verified": {
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/align.log": "2d12bed12d80c3c684f5aeddf4c132d84d07e0051dc4f98706845145f011f993",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/build_config.json": "fbaa052913868da6f09e7cc44186c6aaed92d3ca954bf7f4078bb68bf3272c79",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/aligned.json": "29e28eacf3b3c6100414335041bf614ab1b9354cf4c5ce6401ffca64683b3fa4",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_00.obj": "02913c4b5e3274f7fac72474df32d670d80d4c4b78b6503ae0234d36e798a3da",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_01.obj": "d961df79b471279dc4866b12c6a91086fe63c926627dccebe931aeb05219db07",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_02.obj": "f26f93867ed4524a58dbf9c6d8f0f6db7db5939593518f7a11a3e60dd7f7d982",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_03.obj": "e6796eac634a4b0f85dea0766425794cf16f08dd8f998b261d0cac93a873226c",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_04.obj": "7948d9c997e58ed7d6dbd764b87f39291c6f02bb00dad2ba7a55f0da8fc30fb6",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_05.obj": "d9939be4c84d078c91ba9545f0eca0ba2d31baf5b91e24a168402a9069ff76c9",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_06.obj": "572252489455d17bc2747caaee44371929d13abd0b096dd80941a0efaa6d06df",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_07.obj": "a39609654ec38bbc0aa972dd284d1c1e249910ef81ae2963a1a29b3dda02d00e",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_08.obj": "2af79f006e18aaaeaa2fa772918a08917b21a533a023f045499a9e097c970eee",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_09.obj": "71beb142c8bde26393eaa04c0dd52d76162bb73fc840db79dd0ae8be40f55922",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_10.obj": "ea964753dcaac741488b46e9d2374fefa9f1ddf321de48364ceec6419ffe531f",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_11.obj": "890dbd369f2d19cbc346e6eb2e5b104e5bff4c0743ad3448cf1131a157bc52e5",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_12.obj": "cac6541c21d1c3dc06af3915cff89d0f74ebbbc3ead7b20928e221db4a1e88fc",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_13.obj": "fb93b8b560fae6c56904696c7e331e0dad3eafbf0cbe82137d6444f207b81344",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_14.obj": "4534645523cf808ef59921b170d624588fdfceaecede63aefb9a1d1f6e6568c6",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/collision/part_15.obj": "bd64d2e2f009187ba209f406cb0e731aadf21167b74359b72cd7a8fa1ea47311",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/mesh_sim.obj": "095949bd67d6066ad03a5198dfa0f661b164c1c28c79d190f66b51a0461bce40",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/mesh_sim.ply": "e3b7ddcacb89fd99be5c0fdf47ba6ea2226f6505a0b8e4f4eaac7b1db5b6fa9e",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/rgba.png": "41bb3aeed9b688664d5993c024b14126252122a726d8dafe3e050416f2fceb16",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/trellis_gs.ply": "82454e2508ecc52dd1cb4eeafdc5fe08ba182a787a2465e4f5f91be2a2f7b427",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/obj_00/trellis_mesh.ply": "c8d589208b003de1436dd8bfd11915492362df681ecd322478dd5fadc5f2a056",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/construction/objects/objects.json": "470ee746c81ca788770c94855a2cc6e43a5df2ba9da5a40e0d7be822a843a1b7",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/candidates.json": "576ae98543a1b9f14c4f5a092528193e404e66403f7761da749e5a864acd96e7",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/discovery_manifest.json": "dff38c92a53e3d53aaf58790e36ba43a2ca45e82e24724de425ee2eef54f6a9a",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000000-m0000.png": "25373f3fc933bb1d2672076c78ee54ae2db0e26711b718bf5796d70accfb9711",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000000-m0001.png": "2980e60b62662357a66f8e6e7863fe258ebdcf0308e15f98df633d4ffa54a5a9",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000001-m0000.png": "0250d2db59826148c0a78dc41693fbf8aa76a069eb4f8e46dceed0d59b5008b8",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000001-m0001.png": "55b575ab6e7999fa5779ab5ba160e82bc6ade1ad7662244460758281b09f7382",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000002-m0000.png": "3a746fd574b428d7fed3fe91372d7c647a75b8bf15c5c5c1df34d2fc6cfc6d78",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000002-m0001.png": "b23aa1d4bf8f5e1aa02e33974f1515d9180b393772523f4a6a63a2c12dd27a6b",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000003-m0000.png": "10832d2bc25be88a8c788fefc6b1f65001cdcdcef4d882db8ae5821f2a6b855d",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000004-m0000.png": "5ca8c70d36e5fa62857d06d56aa2cdbb5a501158f87d375575cc4aa5601108d9",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000004-m0001.png": "594e3361839b52ca10798b9fc8477ed3390ab92e0323af8eebdf3d5278bc5dc0",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000005-m0000.png": "b60d4247c3af303a2d98c52d6f2a16df15a3ac33cc14c8be345dc0e9940e3027",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/f000005-m0001.png": "52f9f41dbd36af4e1ab284a669cbfc07cebd1a274d9519aeab68a9fdbd231296",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/discovery/observation_points.npy": "c173ffe2e5a0c3e51b1ce03a9141e6729dfc1ad43806f4ea20eb2b4c5c212377",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/generate.log": "b31bda2e7086f391eb3f05da5541fd5c92a9ef97246da2b5949101b3af396742",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/generate_runtime.json": "8cc76e740b47ad1f395ab95a9db4e25390cc2d2d91c43b4a30346047181ee130",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/producer_records/object_00.json": "a8a79c300c44b6e3fd355e5f0656cbac36512c5e3aa2d0b7f53b9cc97bff364f",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/evidence.json": "94f7b3736b631d10ad751c0af28e5a72085be69ffa37a6a4cc05d37ebda7c32e",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/physical/collision/part_00.obj": "c56d1d78b6ee4a69acb7e25e5450b3c50728a2a1f42074b20669d6611d6df455",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/physical/mesh_sim.obj": "c56d1d78b6ee4a69acb7e25e5450b3c50728a2a1f42074b20669d6611d6df455",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/physical/object.urdf": "083456164d92ec8563c1193cf01179e5dce2f1c427980cef7f1adf6ab3cd041e",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/physical/physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/physical/probe.json": "38df6c8b8896d86fbe47169b7210374f052a0fe6177c76198648ec633c5e46e1",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/registration/registration.json": "83da737df84c555f89649d77498924fdc8f7f906942080595b6901891d7366cf",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/segment.log": "793604b1acd8709b286de2ff6f00cf9c40066ebc08b962082567636182d412e8",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-2c197a2-v3/sim_recon_sim/scale_up/test_builds/builds/slot-d55f3dd1cf4ce18c0efd/segment_runtime.json": "081e493fb0988630af3fd05dd6fc4faa4c4f738dbd607ae972ffeb9357352b29"
+  },
+  "exact_importer_exception": "ValueError: collision part is not a closed convex volume: part_04.obj",
+  "reproduction_scope": "same frozen importer and native Python; neutral synthetic XML body; no native scene, GT geometry, policy or physics execution",
+  "units": [
+    {
+      "unit_id": "unit-f356c2b8db08dbcb41bc036ebf5c84a5",
+      "reset_id": "r0",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-f356c2b8db08dbcb41bc036ebf5c84a5/terminal.json",
+        "sha256": "071b16e79c944807f4a5fc60eb408379e96fde48f2681823651a6045da38a3ae"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-f356c2b8db08dbcb41bc036ebf5c84a5/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-f356c2b8db08dbcb41bc036ebf5c84a5/runner/pair_receipt.json",
+        "sha256": "8d81a72f538db49dc794cc43a4e83b275e3d770532fb6f6aa9d0377fc29c3f95"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-f356c2b8db08dbcb41bc036ebf5c84a5/planned_unit.json",
+        "sha256": "363527fb314abae0e2e3fa5a5a1d605d36d769c7ac1fcf6597c0d1eb6ed43def"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-f356c2b8db08dbcb41bc036ebf5c84a5.json",
+        "sha256": "093196ebf8507850d0e5eb0d4c08e6462241dc91a4bcdef50bdeb3738f4d8544"
+      },
+      "config_canonical_sha256": "3c3611fc42807adb5a43681619606332567f85b864bc95701f459d6fef09c922",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-1c5ebbc49d559bc626ef12cc5beeb8a7",
+      "reset_id": "r1",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-1c5ebbc49d559bc626ef12cc5beeb8a7/terminal.json",
+        "sha256": "ea965909b765162f4e5f64d0b63fcc057f69c010ef91406bba6c29b7728fb1ec"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-1c5ebbc49d559bc626ef12cc5beeb8a7/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-1c5ebbc49d559bc626ef12cc5beeb8a7/runner/pair_receipt.json",
+        "sha256": "c2bef8a77d2dbedf890950f41037bccfd1ef9d178500970d788f7376235f4456"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-1c5ebbc49d559bc626ef12cc5beeb8a7/planned_unit.json",
+        "sha256": "e4bc1cf4452083cb6557381725ccd848d0ce8c3419cdca79c88c0910e3095040"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-1c5ebbc49d559bc626ef12cc5beeb8a7.json",
+        "sha256": "d89eb2a32979d9421d8da370810a6d862c52c197321728108ccc4ca397b11cef"
+      },
+      "config_canonical_sha256": "b8c486c8da22eade8ee1ab67779359238b339000c3fa444e3b51d61325695c57",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-e172791528f90caa6d89eed2c6fc6894",
+      "reset_id": "r2",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-e172791528f90caa6d89eed2c6fc6894/terminal.json",
+        "sha256": "8e81472b67c6e1a48709986bbdc8345cf9a887824e50175b1d9a30e5e1b679bd"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-e172791528f90caa6d89eed2c6fc6894/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-e172791528f90caa6d89eed2c6fc6894/runner/pair_receipt.json",
+        "sha256": "4128efe94ae659bfc04405f2b5490640afd8d150368623d296878e041d14fca5"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-e172791528f90caa6d89eed2c6fc6894/planned_unit.json",
+        "sha256": "c89649b757e4824cb82f6bc83b3003141a303d99705072cbab3c07e8fed9fcab"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-e172791528f90caa6d89eed2c6fc6894.json",
+        "sha256": "8f12cff5295197c9688fa3f2e75cb49698075107fa0a7d1005846d3909e4a413"
+      },
+      "config_canonical_sha256": "48a099e711a31223761a176b0c80d07c999d81da4f0163b8ad7d660f345e300e",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-22b5ae0c9f38e097a54a75c31f1a8be4",
+      "reset_id": "r3",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-22b5ae0c9f38e097a54a75c31f1a8be4/terminal.json",
+        "sha256": "0c70d0f1403585ce469a98f4e94192c5013c5bc5f747012b52bc439c259ef9aa"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-22b5ae0c9f38e097a54a75c31f1a8be4/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-22b5ae0c9f38e097a54a75c31f1a8be4/runner/pair_receipt.json",
+        "sha256": "a50fd1c3a32b640d215504887ab5c4a67af7280c98ae04e3a969fb3f95454f06"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-22b5ae0c9f38e097a54a75c31f1a8be4/planned_unit.json",
+        "sha256": "30ce7e1e11f7b8c9d863b6190ada5c0462e61af3dd946f4d4136081e2f056e83"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-22b5ae0c9f38e097a54a75c31f1a8be4.json",
+        "sha256": "1f0cfd0072b916fa0ef746d0a6ed8ca954c4edac90525933fbe0535949c285f3"
+      },
+      "config_canonical_sha256": "58d3c72adffc31abdd0f7588204eac06ec643253af8631f7a36a10090b93870a",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-558143cdf381fe70b5f66e15fe1b2615",
+      "reset_id": "r4",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-558143cdf381fe70b5f66e15fe1b2615/terminal.json",
+        "sha256": "2007b884ca0ebd5232575635e9ff625da38ddb1a2bfb947fd2bc983eba89c5aa"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-558143cdf381fe70b5f66e15fe1b2615/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-558143cdf381fe70b5f66e15fe1b2615/runner/pair_receipt.json",
+        "sha256": "91a3787526ccb0745045ba973d82637cd1f7dc3d0de536c73118f6fdd514b5ed"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-558143cdf381fe70b5f66e15fe1b2615/planned_unit.json",
+        "sha256": "1490aac492cb7303b4ecd8b19c26dce05e67417286b124ee234a04aba4bb32de"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-558143cdf381fe70b5f66e15fe1b2615.json",
+        "sha256": "9e6f70e8abb68828a1d965d868a8a12a5b64fbc63ff02c465444ab6d978aab97"
+      },
+      "config_canonical_sha256": "7b06be56a60b124fc1d34739937b0c27b5e89ab0ae56ad698213126b9da01dcf",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-5172521ee96160688782c608965ddd3e",
+      "reset_id": "r5",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-5172521ee96160688782c608965ddd3e/terminal.json",
+        "sha256": "d21270517762d51849b0ea393d56bcd45228485fb18c1a3d2f67928901afd38e"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-5172521ee96160688782c608965ddd3e/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-5172521ee96160688782c608965ddd3e/runner/pair_receipt.json",
+        "sha256": "a30149cfa0eb52b8f1e089ed12f9c2ea501d9c7d3e5e980f7ae4861bfd95fe66"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-5172521ee96160688782c608965ddd3e/planned_unit.json",
+        "sha256": "4a15c7d1e91a356d6bb7e11f6cb2bedd42b7fd8742ba0d51b6735ffad61858cb"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-5172521ee96160688782c608965ddd3e.json",
+        "sha256": "a8904a8007e988eed5e2f0368442632f4cce903d4eab769eb1fafe89d97986d6"
+      },
+      "config_canonical_sha256": "23b53c6deca91c02fef5611e18a60659fa93834b1ea526ef5316d9fa47feae8b",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-769c76920a2f105b46e6f29a29395eca",
+      "reset_id": "r6",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-769c76920a2f105b46e6f29a29395eca/terminal.json",
+        "sha256": "2ff10eb53959318018e03605f364b52147be3dde3de7fd8fed12337e28608809"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-769c76920a2f105b46e6f29a29395eca/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-769c76920a2f105b46e6f29a29395eca/runner/pair_receipt.json",
+        "sha256": "e29721969d81bed78394e9368d49d2ba5946cb8b7eb9709ddf4c0f6cce3dc7e0"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-769c76920a2f105b46e6f29a29395eca/planned_unit.json",
+        "sha256": "5a854d0e5bdf2179b98c07ecce6d9a30670d23571896ae151cf558ed7beb0cc0"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-769c76920a2f105b46e6f29a29395eca.json",
+        "sha256": "1e979a856d21a08b09c8d712b6ed04465ff6e82db6c668fbf3659b12fe3d99c6"
+      },
+      "config_canonical_sha256": "8f6236ee3609e86989955f8caf91fae968a7eb26777236bf2a950627a19722d4",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-037b901eb83b766cafff137a624deded",
+      "reset_id": "r7",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-037b901eb83b766cafff137a624deded/terminal.json",
+        "sha256": "688342e01d21063ce391607b7190003a591669eb43f8e67fe46472a566985118"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-037b901eb83b766cafff137a624deded/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-037b901eb83b766cafff137a624deded/runner/pair_receipt.json",
+        "sha256": "8aa3405834cc0893de067a10443d4a025f7aee2ecfe18df52bf9e13e19aafbf4"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-037b901eb83b766cafff137a624deded/planned_unit.json",
+        "sha256": "5dd03c17c23537f9dfe64f8cb24edba4bae564a9d1bbc4de6deed1f727870d46"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-037b901eb83b766cafff137a624deded.json",
+        "sha256": "14e40a65b188a3189606d1f8a31e6ad659d408217abe22cd8f4ffaf53df7dafd"
+      },
+      "config_canonical_sha256": "d99663ec11235f929c4533f13401c7b0003bb92531eb3fe2d43a6a0b61dfe958",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-c153b11116e4e03df7b0a6dea2504ba9",
+      "reset_id": "r8",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-c153b11116e4e03df7b0a6dea2504ba9/terminal.json",
+        "sha256": "81e85e34468dff0f64656c78c40e8d65dc5c92106fa69fa498bdcd83d1c90957"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-c153b11116e4e03df7b0a6dea2504ba9/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-c153b11116e4e03df7b0a6dea2504ba9/runner/pair_receipt.json",
+        "sha256": "5b7f96e463a652be59d17e0a32ca792d7612c53f38a3ce7ec47578638b02d8f5"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-c153b11116e4e03df7b0a6dea2504ba9/planned_unit.json",
+        "sha256": "b96976cd9a4938a5bb7be2b01ed404cc63d779018406e704c48efd46123e495a"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-c153b11116e4e03df7b0a6dea2504ba9.json",
+        "sha256": "d1c5113f15fd9ecff2f9ba39b44a0538fff4199b959607df53cd489a67f29744"
+      },
+      "config_canonical_sha256": "fa76cf8c54febbaa1a9bce1433db35c6a8123936202ab9956e5b298e14d22fc4",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    },
+    {
+      "unit_id": "unit-d9a8b3882e38991f9713710ccb61915e",
+      "reset_id": "r9",
+      "original_status": "CODE_FAILED",
+      "terminal": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-d9a8b3882e38991f9713710ccb61915e/terminal.json",
+        "sha256": "949f14ac16ee2b85ace423e6288a2898604a1fb15bf6234b20a397e2f531df55"
+      },
+      "worker_log": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-d9a8b3882e38991f9713710ccb61915e/worker.log",
+        "sha256": "97e5032cb81f7722cc9cbe67c7ada3e3dcc492cfecc728c63d3a66dc711983eb"
+      },
+      "pair_receipt": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-d9a8b3882e38991f9713710ccb61915e/runner/pair_receipt.json",
+        "sha256": "78f74c341d5ada5d82eaa69f9c119cfe349815fbd3553e4f8c0be0f793b3569f"
+      },
+      "planned_unit": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/workers/unit-d9a8b3882e38991f9713710ccb61915e/planned_unit.json",
+        "sha256": "67675064a94d4f79b807c43a3a3cdeae7f560f35c6877e2486f9dcf686c27249"
+      },
+      "config": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/configs/unit-d9a8b3882e38991f9713710ccb61915e.json",
+        "sha256": "d2c11c8889db55a0a39e4d3650d5e0530268c790fa8d41862992dc89ed040800"
+      },
+      "config_canonical_sha256": "f85a0d029064bf457611fd4034b83fca55b764b5107219eabd58d946eac17ebb",
+      "executed": false,
+      "success": null,
+      "proposed_status": "BUILD_FAILED"
+    }
+  ],
+  "plan_sources": [
+    {
+      "path": "/group/worldcept/code/SimAny-wt/n1-test-execution-73ff4ab/plan/icra2027/11_sim_recon_sim/PROTOCOL.md",
+      "sha256": "dfe7d88688fd1d850383f07b7e70f8345d29e5e0d59fbb47fd0acee5dc45e47e"
+    },
+    {
+      "path": "/group/worldcept/code/SimAny-wt/n1-test-execution-73ff4ab/plan/icra2027/11_sim_recon_sim/09_scale_up/EXPERIMENT_MATRIX.md",
+      "sha256": "e32cff22b80b8a11516bda4712c74cfa7adc302402a885ebc50816bf7c644391"
+    }
+  ],
+  "classification": "METHOD_CONSTRUCTION_IMPORT_VALIDITY_FAILURE",
+  "adjudication_supported": true,
+  "proposed_status": "BUILD_FAILED",
+  "proposed_executed": false,
+  "proposed_success": null,
+  "preserve_original_CODE_FAILED": true,
+  "adjudication_must_be_separate_and_source_bound": true,
+  "geometry_repaired": false,
+  "threshold_changed": false,
+  "new_policy_outcomes": 0,
+  "limitations": [
+    "Near-threshold local nonconvexity: do not describe this part as open, negative-volume, or grossly malformed.",
+    "Original builder BUILT marks artifact production; manifest explicitly records native_import NOT_RUN and its isolated probe used a single hull, not this16part collision.",
+    "The generic runner terminal classification was broad CODE_FAILED; diagnostic reproduction supports a typed construction/import failure, not a completed task failure.",
+    "No claim that MuJoCo itself cannot auto-convexify the asset: the frozen explicit importer rejects it before compilation, and bypassing that gate would change the declared treatment."
+  ]
+}

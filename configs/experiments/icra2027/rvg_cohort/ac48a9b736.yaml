@@ -1,0 +1,70 @@
+schema_version: 1
+paper_ready: false
+seed: 42
+source_pilot: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/ac48a9b736
+source_summary_sha256: 3fc02547b8664580dd58aadb6455265b20041aaba488616a49352da9eb9ab0be
+source_output_hashes_sha256: 55f78db31be7f4ea1ad7eb80e24e0b729207f1df237c1e10349025939a0b0664
+python: /group/worldcept/code/SimAny/.venv/bin/python
+models:
+  dinov2_source:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/torch/hub/facebookresearch_dinov2_main
+    upstream_repository: facebookresearch/dinov2
+    upstream_commit: null
+    upstream_commit_reason: torch.hub branch cache did not retain an upstream commit;
+      the full 203-file source tree is content-addressed below
+    file_count: 203
+    tree_sha256: bad25746e5bccefe9a039b7ebe5537c72765edc9be6654881699298f37f0cc4d
+  dinov2_checkpoint:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/torch/hub/checkpoints/dinov2_vitl14_reg4_pretrain.pth
+    size_bytes: 1217607321
+    sha256: 36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51
+  rvg_snapshot:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/Stable-X--trellis-vggt-v0-2-647659a5ad5fbf67e22793e7b5e2cee4b30c5d13
+    tree_sha256: 0dce14d3c6617a40124a9717bfd9db90b46fb57e264423ebbf033b013a6b1a63
+    upstream_revision: 647659a5ad5fbf67e22793e7b5e2cee4b30c5d13
+    acquisition_receipt: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/Stable-X--trellis-vggt-v0-2-647659a5ad5fbf67e22793e7b5e2cee4b30c5d13.json
+    receipt_sha256: f9285cd023e1337c151ef135dba4f2e7b2a5b68cd02c079f685e39b8fedab5fb
+  vggt_snapshot:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/Stable-X--vggt-object-v0-1-aac569c280b52ccda1c84a81cd0e27e947bc2cf5
+    tree_sha256: f22ba803d973c004c6bb41d9c1ece981a766b236f5af386c0f9d7c81df58dd62
+    upstream_revision: aac569c280b52ccda1c84a81cd0e27e947bc2cf5
+    acquisition_receipt: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/Stable-X--vggt-object-v0-1-aac569c280b52ccda1c84a81cd0e27e947bc2cf5.json
+    receipt_sha256: d19a0c2a1cf6c4355e6d1a247b7782827f92cc44658c502165a90907bd375034
+  birefnet_snapshot:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/ZhengPeng7--BiRefNet-e2bf8e4460fc8fa32bba5ea4d94b3233d367b0e4
+    tree_sha256: efc02e054c2f02ceea72df97975e31af418b968335acef6aeca4369eefb8b586
+    upstream_revision: e2bf8e4460fc8fa32bba5ea4d94b3233d367b0e4
+    acquisition_receipt: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/ZhengPeng7--BiRefNet-e2bf8e4460fc8fa32bba5ea4d94b3233d367b0e4.json
+    receipt_sha256: 59fd4beaa8d40b8c2e4bbad41e17586f2e4609c0234b4d992d28435e1a91a52b
+  rvg_source:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-source-f6720923260927333e22761fa722144d214733d9
+    tree_sha256: 8568cd5d42962bf5336893336cc9627dbfafd21fbab4ae89f617e6303dea1379
+    file_count: 358
+  dreamsim:
+    path: /group/worldcept/code/SimAny/.cache/icra2027/e3-rvg-acquisition/dreamsim-dino-vitb16-pinned
+    tree_sha256: 78991c73adcd8e8fe78ca722b0e5603073ee4c0360e912eb53abdbaf3d62de2c
+    file_count: 22
+runtime_sha256: 008d45bf3f4bb0ed651affd239e0d9b75d054b2dc170747f4d9b69033d54604f
+contract_resource_id: e3_rvg_config_ac48a9b736
+source_input_manifest_sha256: 05181cc0384b80b43ae78756adcf0a9727bc1d33d975bff87d38bbd43b751168
+scene_id: ac48a9b736
+source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
+source_discovery_hashes:
+  all_jobs_manifest.json: 8da0ebc105eb09a268a73fa0f0cf07c766fd7f5ac3b2fcb160105384d8553d6e
+  input_manifest.json: 05181cc0384b80b43ae78756adcf0a9727bc1d33d975bff87d38bbd43b751168
+  output_hashes.json: 55f78db31be7f4ea1ad7eb80e24e0b729207f1df237c1e10349025939a0b0664
+  pilot_summary.json: 3fc02547b8664580dd58aadb6455265b20041aaba488616a49352da9eb9ab0be
+  postrun_audit.json: 9dba53837e82943dac47876fba494f584b27e36d5e6ac74443d6552d41cd6f7b
+source_discovery_config:
+  path: /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
+  bytes: 9678
+  mtime_ns: 1788599841893682554
+  sha256: e470304281f03c0051af95ddb61975142be6b4fdb4ed9522aae69caa7f7b9081
+source_discovery_commit: 86613e37d7bdfcef5ad10eb5cf289051055cdec3
+source_discovery_contract:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
+  bytes: 10053
+  mtime_ns: 1788599945922128577
+  sha256: e7d5111806d7ca1521b1db878c1ddb002c8d3edb3505f375a147d6a512d9ebd5
+output_scene_id: ac48a9b736
+freeze_id: 20260905-d1e8e21-v1

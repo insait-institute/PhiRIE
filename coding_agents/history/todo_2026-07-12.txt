@@ -1,0 +1,39 @@
+感谢！I would like to do something more. 
+
+0. archive the codebase to git@github.com:RunyiYang/PhiRoom.git, remember to add .gitignore to ignore all big files
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:RunyiYang/PhiRoom.git
+git push -u origin main
+
+
+1. Do it on the full validation scene on ScanNetpp
+2. Calculate the scene time, computing (等于多少 H200 hour)
+3. give a full table of 
+    (1). PSNR, SSIM, LPIPS vs SceneSplat on ScanNetpp
+    (2). Physical Plausiblity
+    (3). efficiency
+    (4). Needed resources (RGB image only could work)
+
+These are some preliminary results you should have. 
+
+4. Improve the viser based viewer, make it support multiple results, I want to have switch scene feature. 
+
+And after all these, git push to the repo.
+
+Now, below you should have one more contribution
+一、Inpainting
+1. For each objects, after using the generated one, you should remove the original part of Gaussian
+2. After object removal, there should be a hole at the original object location. You should do inpainting. 
+(1) find the related images about this object,
+(2) inpaint the related image (use Qwen Image)
+(3) Use Normal to 补洞，因为被remove的object应该在一个平面上，所以应该在对应的normal的平面上加上一些颜色和周围相似的gaussians
+(4) For added Gaussians, you should use inpainted image to refine. 
+3. 这样，我们再把object 放在上面的时候，就可以实现一个桌面没有原物体或者有一个洞的情况了
+
+如果这个也能做的效果不错的话，我们就可以开始写论文了
+
+你要自己想一下还有什么baseline需要比较，生成的/重建的/物理仿真的，然后我们就要开始大规模run了
+

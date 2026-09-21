@@ -1,0 +1,1941 @@
+{
+  "budget_exclusions": 5886,
+  "freeze_id": "20260906-0e7579a-v1",
+  "input_semantic_queries": 6155,
+  "menagerie": {
+    "access_mode": "read_only_input; gate performs no writes",
+    "closure_sha256": "a275b73fb3d0b5fc52abbeb1cd58577c01a447c13ff5ba8d3f51199f27e7e46f",
+    "file_count": 94,
+    "root": "/group/worldcept/code/SimAny-wt/e4-full-execution/third_party/mujoco_menagerie",
+    "size_bytes": 40901071,
+    "source_commit": "71f066ad0be9cd271f7ed58c030243ef157af9f4",
+    "source_root": "/group/worldcept/code/SimAny/third_party/mujoco_menagerie"
+  },
+  "menagerie_root": "/group/worldcept/code/SimAny-wt/e4-full-execution/third_party/mujoco_menagerie",
+  "openpi_resize_identity": {
+    "commit": "2f51088169d2e2b480ce54faa737be9b0279eed4",
+    "dirty": false,
+    "image_tools": {
+      "path": "/group/worldcept/code/openpi-wt/e4-policy-server/packages/openpi-client/src/openpi_client/image_tools.py",
+      "sha256": "d48b4bd7f44e79fe6db8a8e07c9161144fa250be686e1245014a8b47e6171977",
+      "size_bytes": 2426
+    },
+    "root": "/group/worldcept/code/openpi-wt/e4-policy-server"
+  },
+  "paper_ready": false,
+  "pilot_scene": "09c1414f1b",
+  "planned_objects": 1871,
+  "planned_qualification_cells": 2690,
+  "planned_scenes": 50,
+  "planned_semantic_queries": 269,
+  "python": "/group/worldcept/code/SimAny/.venv/bin/python3.11",
+  "schema_version": 1,
+  "scope": "e4_full_discovery_budget_qualification",
+  "source": {
+    "control_audit": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json",
+      "sha256": "2a5c0285bf734d20dc803c21d2bd10920ebe118e0404fd1efde0730f64d21252",
+      "size_bytes": 22799
+    },
+    "control_driver": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/audit_full50_controls.py",
+      "sha256": "bad63f1c6bf3b4e28db96390eeb51ee4ceb4c2491080ae53eff35dc5f9e4bb4b",
+      "size_bytes": 5786
+    },
+    "e0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/contract/freeze_manifest.json",
+      "sha256": "4e2524f90320fb180f02c48c8d62288fed679723e6e579a37650ab8ede31cedf",
+      "size_bytes": 11892
+    },
+    "e3_root": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic",
+    "inventory": {
+      "inventory_audit": {
+        "path": "outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/inventory_audit.json",
+        "sha256": "81aedf7d66f8669ebab4bf561eeca539c6513c4a44fe25d54a883174c20c178d",
+        "size_bytes": 469721
+      },
+      "inventory_seal": {
+        "path": "outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/seal.json",
+        "sha256": "a6c23913be8f4303c08b277cd304a4c3bacda39bdcfd471a396c0ddc5e3ab37d",
+        "size_bytes": 655
+      },
+      "resolved_jobs": {
+        "path": "outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json",
+        "sha256": "266b37a3319b63b3fe69133ad2c7e93c0cda2497a0ef83d38b0b9ca3ac1006cb",
+        "size_bytes": 1576788
+      },
+      "resolved_proposals": {
+        "path": "outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_proposals.json",
+        "sha256": "4bbbd0140bd93aa9b49d8c0851a6697716faa39b7f413351e19158748a8a4c51",
+        "size_bytes": 4401080
+      }
+    },
+    "jobs_config": {
+      "path": "/group/worldcept/code/SimAny-wt/e3-full-canonical/configs/experiments/icra2027/e3_full_canonical/agentic_fresh_jobs.yaml",
+      "sha256": "a2e7e49c7e5625157676e3bcd3c2369618f9b0e337d9768eb54e914f56b7f803",
+      "size_bytes": 203971
+    },
+    "observation_audit": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_observation_integrity_gate.json",
+      "sha256": "68984c22300c55ed275bbbc21caf0f8d0faf4e6bda2f29560c89a2da797ba52d",
+      "size_bytes": 14149
+    },
+    "protocol": {
+      "path": "/group/worldcept/code/SimAny/outputs/e4-budget-input-check-20260906T031533Z/protocol.yaml",
+      "sha256": "3ae063fc844d582396271322122c977abcc12ef54af296f76e3436fe3ceea639",
+      "size_bytes": 987378
+    },
+    "scenes": {
+      "09c1414f1b": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/09c1414f1b",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "a1d3373068e01e139cf4957473389aa954488953b3c8b8b7fc3040a53b63132d",
+            "input_manifest.json": "9909094683fa29772f9595a30fa049959f9dce4b38581dd964f788235018d970",
+            "output_hashes.json": "9a0f225a9e18fdcb0ab5a00d165d3ef1cec134c2577ab9d43df9cd146c28702d",
+            "pilot_summary.json": "747c8bccbbaedb6b75f60b02a401bf105c42159bf443885ea158e2c38030757c",
+            "postrun_audit.json": "efe7c3565e51868f5052a7f1d26c92cc382e80b7452533000b2faac5ab3bfb0a"
+          },
+          "scene_id": "09c1414f1b",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/09c1414f1b/seal.json",
+            "sha256": "ec98e5039f86a96abcd757522f38fb77e6b7e0df1c36af831d8d28bb322fa654",
+            "size_bytes": 86328
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/09c1414f1b/controller_shard.json",
+            "sha256": "e2eae9a74d86926e921e5ffc207f984b5d9f14aa0b477e8a0d2ebe9050da34b1",
+            "size_bytes": 1183722
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/09c1414f1b/job_ledger.jsonl",
+            "sha256": "582dc69369946d1af8482c9c3ab519572dd2b88b69a161d021de4325297ffda6",
+            "size_bytes": 314897
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/09c1414f1b/seal.json",
+            "sha256": "58fd07a248b01783604154ff05dbfbd3abdb01c2831cc3e42a8e01552cae42b5",
+            "size_bytes": 9876
+          }
+        },
+        "planned_objects": 112
+      },
+      "0d2ee665be": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/0d2ee665be",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "19603a88bce5e3786878260e721e5d4a045e3f06f88a3bd9aafb13b3f7d057fc",
+            "input_manifest.json": "103f64fa788f576ab41d8cff60d378b8f1ae1691b603684a78ebb3572454f7f3",
+            "output_hashes.json": "8da7b6dcb7fcd3569b183b413e73eb48fe74fd702e5021af0c0edb973bb13ba4",
+            "pilot_summary.json": "aec0f3969ce640876e9bd1cae2fbccfd5337b5003abf3058cd4b88b936880d99",
+            "postrun_audit.json": "290aa3d8ebdb762296331a666760e70de1ab4508398308cd72125982bb64faf9"
+          },
+          "scene_id": "0d2ee665be",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/0d2ee665be/seal.json",
+            "sha256": "5804b2dfb9ad3098250301263435bdd7ba00e6378277c1761ce0d0488691b8f0",
+            "size_bytes": 22598
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/0d2ee665be/controller_shard.json",
+            "sha256": "0b4fcd4a84a1814f87f259b5e4130c2811c177829a511e5eb18bf995b869b1f3",
+            "size_bytes": 408713
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/0d2ee665be/job_ledger.jsonl",
+            "sha256": "57b1f26fb075e104980c9a1b25e1b467cdde1ee426b73289db0e98c92a39287a",
+            "size_bytes": 81905
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/0d2ee665be/seal.json",
+            "sha256": "114ead02edf8b2aa1672b0b4f13e45932a3b0c3f66ec8fcf433d4a27a160c3fe",
+            "size_bytes": 2748
+          }
+        },
+        "planned_objects": 29
+      },
+      "13c3e046d7": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/13c3e046d7",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "fc7714ea124d9b4e41ac87f257366170ef075048bde2a2cb69e976ca8ffa4bf9",
+            "input_manifest.json": "22347c9ff28f4a03f4a2e96d2aecd30bb941306929fded045a6e08fce5879553",
+            "output_hashes.json": "df349642a6c60c9d7b013a26038e79d096fd53eec48f1db3779ab7f95d01c156",
+            "pilot_summary.json": "f403a022877e4ff253a0fe7c26465f441f6fe6dfa09b1ed0f7a6fe21ae54b353",
+            "postrun_audit.json": "215ce5b75f5e4387dd40f45b734bdee28e3c0fa2b0710f23e1b80bd4004c4aa8"
+          },
+          "scene_id": "13c3e046d7",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/13c3e046d7/seal.json",
+            "sha256": "c8527eee14c43bf256a5e39f829bab26e367bceaa9ce816bb67aaf012fdd4f70",
+            "size_bytes": 1068
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/13c3e046d7/controller_shard.json",
+            "sha256": "660c402f3172875a84f9030e3d41200e73d31fd90c852abaa01374a017584794",
+            "size_bytes": 15478
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/13c3e046d7/job_ledger.jsonl",
+            "sha256": "57b3ea02d00c7ae52e08a621a3ac35ac7c50e2729ade1fbd226ce193c1b28234",
+            "size_bytes": 3057
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/13c3e046d7/seal.json",
+            "sha256": "447ef574bcbb00abe8150d4ac89b6bd5a35d1de70e76c94d2640908b5280633e",
+            "size_bytes": 372
+          }
+        },
+        "planned_objects": 1
+      },
+      "1ada7a0617": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/1ada7a0617",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "ee2be65b1345b092a798bb097a78d883c3a1a51901047125280f0609a6ce6bcf",
+            "input_manifest.json": "9111274c2d54541af340fd02cdd23590c21b0403579f2fc8f00ec139a6aa4370",
+            "output_hashes.json": "d5d75fc09faa5cd01dd6ab5bb1dd7a69c1a38dbada34940b43039a632038482c",
+            "pilot_summary.json": "21b63054170a246cfeffdb208c947a3cab9e9710172415105bb7834f01ecc547",
+            "postrun_audit.json": "2579aaf25386296655bcc7f4663de176b4b3a79c10cede3d701d6e493a6c66dc"
+          },
+          "scene_id": "1ada7a0617",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/1ada7a0617/seal.json",
+            "sha256": "b3d18a70172946813fa66097cec1ac15aed7f52b9edf145fa77b6cff5e21ac04",
+            "size_bytes": 19530
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/1ada7a0617/controller_shard.json",
+            "sha256": "4bec8424a063f1082c1ff2b566f5feab3f726b73b94d683fc91bf494022b4560",
+            "size_bytes": 323808
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/1ada7a0617/job_ledger.jsonl",
+            "sha256": "b97ddd25b2fafdafee9b126766b829900db9b72ec8c01ea643f236e08c381178",
+            "size_bytes": 68878
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/1ada7a0617/seal.json",
+            "sha256": "9f97ec4ae87975e24ca81947d46ebdb41f7078068c1bce2ffd81895fec994182",
+            "size_bytes": 2484
+          }
+        },
+        "planned_objects": 25
+      },
+      "21d970d8de": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/21d970d8de",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "7e88a5be898654f88845ab5332d0981b32fc4e75ac595a17a06919827834fb3d",
+            "input_manifest.json": "252476017a0fc494bcfdbc5dc666583d6ab9adeb6ea32170f300e14e2f30a214",
+            "output_hashes.json": "e7958db6f610d61a6da9696a7ee2e37b5e3ef83f397cfb07be2b5d4cc828dd6f",
+            "pilot_summary.json": "94c15acbb45abfe6336f102bebf92bac9adf1c30ac44abd3b4771e906d446f3b",
+            "postrun_audit.json": "7c3233ce514d350d8f0c43bd9ab28a5ec676ebd1d971ec5454f86932b7f2004d"
+          },
+          "scene_id": "21d970d8de",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/21d970d8de/seal.json",
+            "sha256": "620c8be048a6b561da5514914cb331a683196a5513ed64b3858a5812270ecd4b",
+            "size_bytes": 17214
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/21d970d8de/controller_shard.json",
+            "sha256": "29b54f55f7619b984f515bf40e37b621c1eece8c4bb123d6653b1a7a532eedea",
+            "size_bytes": 300124
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/21d970d8de/job_ledger.jsonl",
+            "sha256": "953460b514aa709754e8f4c906f0ae07eb7f00922565979758d296884a1558f8",
+            "size_bytes": 63988
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/21d970d8de/seal.json",
+            "sha256": "392d80407ba07bf0e0f99fe530227f9c3772fcc94e1744fd1f97dfcff610b313",
+            "size_bytes": 2132
+          }
+        },
+        "planned_objects": 22
+      },
+      "25f3b7a318": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/25f3b7a318",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "a45b8784963a54b3b5d819809be226ff65a4ef3be2979d199cb1c211f04a260f",
+            "input_manifest.json": "8dd2351e47a11887934785003be16b79275f0a3e7a5f70c7f87d7da85d7c7b66",
+            "output_hashes.json": "4752dbca0522d8a097bc08f9067cd3e51953d24f082eec0be2129f538ba2494e",
+            "pilot_summary.json": "e30d412ee74081385b2f078411252f7273295957f729a58229de76509947a845",
+            "postrun_audit.json": "347159e00a641986cf323c231c44005f45b5d1cdc21d78f04f5756779ab851a4"
+          },
+          "scene_id": "25f3b7a318",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/25f3b7a318/seal.json",
+            "sha256": "b352255cc23ab42e4f55c0fface09d572e27a41699e412b76711c342a0000b81",
+            "size_bytes": 39501
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/25f3b7a318/controller_shard.json",
+            "sha256": "0a6adee6aef3b1eb8228bd4f37b2491b4772f667d533d93d615c2bb3f3534b01",
+            "size_bytes": 613511
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/25f3b7a318/job_ledger.jsonl",
+            "sha256": "6a1f9bed7082792e220341f3e8df5eb9a8d6a8225f17b01650f6e7cbc1132e6d",
+            "size_bytes": 140705
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/25f3b7a318/seal.json",
+            "sha256": "d090743ac3cf6f71e680a32622c45e0ed34c226941d3d889ae196859bb11d086",
+            "size_bytes": 4156
+          }
+        },
+        "planned_objects": 51
+      },
+      "27dd4da69e": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/27dd4da69e",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "bf08f6f304b486172f4a19e25b8de8cf540f3904da9f084d44654c6f7abf93d1",
+            "input_manifest.json": "949e1d0e75316726d41b3212ee6d0b96f092e3518c817a5cd507c47272dd3b25",
+            "output_hashes.json": "0b051ea1c65f10a9f6f33db4222ce5e974d9f66533c5c21d5e2814ae362cb5a3",
+            "pilot_summary.json": "12be7c09f37896b354e399803e0af8aa5316ad1f33e922e9a84ae37b26fe155c",
+            "postrun_audit.json": "4cbeb7348043abc2c887574d8a1c891ae1e3444b97ed741f41c99f9623f9b323"
+          },
+          "scene_id": "27dd4da69e",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/27dd4da69e/seal.json",
+            "sha256": "1863ec66d0acadfd00fcc625c59f4379c4e60ce1d6e31bb45fcb9006cb301335",
+            "size_bytes": 5683
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/27dd4da69e/controller_shard.json",
+            "sha256": "99c527768b183d9549c2adf3a3c21ed9df229de0ec5625cb603e36e0afb1f45f",
+            "size_bytes": 99780
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/27dd4da69e/job_ledger.jsonl",
+            "sha256": "a03b27927de7ee438e9ad2cffee12edc84dfca95b6739ff159455b0ad4800ba8",
+            "size_bytes": 19373
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/27dd4da69e/seal.json",
+            "sha256": "556da8ca59981c7276a810c0c956517f5c4bd6d73dc9727425ac44a8aeb4bd1e",
+            "size_bytes": 900
+          }
+        },
+        "planned_objects": 7
+      },
+      "286b55a2bf": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/286b55a2bf",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "ffda4559d9d77e6fc926ba03e19a5f4f715dce8a3c71e802f7b350655f2c4b43",
+            "input_manifest.json": "fd15a9ad833ea9848c6ba2e70a2ee45e4ff02b265634521414afa847318f5d90",
+            "output_hashes.json": "2dde2cb1849c2567d956dbef1a3063835cd26e7a0c48dd1a2e7e58d036437f41",
+            "pilot_summary.json": "f10d15d72f40c6c2e31440231a686a4d29928f8a0311f12d6ec0ba737fa4de4c",
+            "postrun_audit.json": "795b905b19ff8ce2336d6adb2defe0d5f7a1c53e44decd9d94c74b0b8f097064"
+          },
+          "scene_id": "286b55a2bf",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/286b55a2bf/seal.json",
+            "sha256": "372990b56e3ede77c6c5edf9eae86156b49dd60bbc74f04aeb467f48e6603a58",
+            "size_bytes": 26455
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/286b55a2bf/controller_shard.json",
+            "sha256": "1f4ce4386899bfdeb346e02758f853269e1679f7f288c1a6bc3313b75554b8ca",
+            "size_bytes": 461704
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/286b55a2bf/job_ledger.jsonl",
+            "sha256": "523257ee627c7079f0f0aef3cd6b7425363101563c8385d06767a85140dde034",
+            "size_bytes": 94546
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/286b55a2bf/seal.json",
+            "sha256": "18d0b3e535b0563f6ded7883ebfdccda8460e3ac09c5883277ff4130dfa1a653",
+            "size_bytes": 3276
+          }
+        },
+        "planned_objects": 34
+      },
+      "31a2c91c43": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/31a2c91c43",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "ea2cf21e6fa2b6be803c66a0837b3afddff49ed009f71a12de691a1436c01311",
+            "input_manifest.json": "326a52f98189b9f280743d5904b769f649e524e5512c4f74bc8be1911cb74088",
+            "output_hashes.json": "547b56e23588c25e2fcc8c5b1bd9a1f968fe5afa96a4d14b8143d24ee2054a58",
+            "pilot_summary.json": "ef597f49ac5290ea26e48956ca4b93036b6b8effb31f7b1b1854e68d1817bcd4",
+            "postrun_audit.json": "505f7bb0d9032943ecb8fabf087d1f4c582e6bd7cce46f02f0cef2e7bbf7cc4f"
+          },
+          "scene_id": "31a2c91c43",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/31a2c91c43/seal.json",
+            "sha256": "20a7fd8de5696b80fcc9ecddd96c58c24855ef39d591ea4551e63db4fd7b39db",
+            "size_bytes": 2607
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/31a2c91c43/controller_shard.json",
+            "sha256": "fa9f5098cf0ce4ea6d6170a5f7b5695150b3d2f2fa199d1c9a57a27f0b968a10",
+            "size_bytes": 40186
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/31a2c91c43/job_ledger.jsonl",
+            "sha256": "bcd8aafe2ded5230214cccecd9fde010e56c9720ded75b8f1f05967118867157",
+            "size_bytes": 8643
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/31a2c91c43/seal.json",
+            "sha256": "81287590c681d74816fea0a790350034d1ec7782158b9c95979683469840f2b0",
+            "size_bytes": 548
+          }
+        },
+        "planned_objects": 3
+      },
+      "3864514494": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/3864514494",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "6b5f62e82055df58469c20a47aa4a78ec6306d43c210e48aba574f98c8f48f6d",
+            "input_manifest.json": "e447748c944c0a4db5263a0b53785cf5e9a8643d2245212d865326eaa5089c1e",
+            "output_hashes.json": "1e2d656f52a13092593fab7d37bc6957f407df450c86e23d73d16c26fd061075",
+            "pilot_summary.json": "86c1da21a6028cb390ed088e97cb783db500107b88fda3554bab14ebc1656afd",
+            "postrun_audit.json": "1ee7f0331914b36c499111fbd6ef448a90f6591e17d7b15d0577dedbd14dfcce"
+          },
+          "scene_id": "3864514494",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3864514494/seal.json",
+            "sha256": "d920d3c832135fe3a7b6db52c2475f94196634d6dd07b7e562f821dc3e90dc7a",
+            "size_bytes": 17224
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3864514494/controller_shard.json",
+            "sha256": "0d578405f9980829b33d8584725266e0f2abcfde7a487330ab7b52840ccb2a41",
+            "size_bytes": 297809
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3864514494/job_ledger.jsonl",
+            "sha256": "ad0e24b15105537b7ddb1656826926d2cc998ab24fad5fcdea4c87e71c6bfe28",
+            "size_bytes": 60712
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/3864514494/seal.json",
+            "sha256": "02919a0cbbe7765d763008dd553cd82b1ee54d014b1d8c9b4f0b08240a6f737b",
+            "size_bytes": 2220
+          }
+        },
+        "planned_objects": 22
+      },
+      "38d58a7a31": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "7676610b5dc37a7b603de96de7ba268e2144790957dc1e5ef544279d6195365f",
+            "input_manifest.json": "156d5490e16c1f7bd4b51bd8f0246e7e03b6ab9754bbe4032454f00669c091a1",
+            "output_hashes.json": "0822381957025b1fdfae1be1c365b073fa881ca7ce8bd167a3bc7315bd31792a",
+            "pilot_summary.json": "6784e11f7529cb63f684daaa77b4549fa935a70d36db4ebe89c2edc88d406a2f",
+            "postrun_audit.json": "f79106b4f3da7172d7f598074036ab11521fec3cc18d0656b6688826ee0b6906"
+          },
+          "scene_id": "38d58a7a31",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/38d58a7a31/seal.json",
+            "sha256": "b0cd86de23c598170d5ca51b38cbb8367b542e20d6bdfdea5a1af3f9d3621923",
+            "size_bytes": 11836
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/38d58a7a31/controller_shard.json",
+            "sha256": "35fb13f376e4ebd4169e4bb8d2d07d8b024c63765d32ad6fec21549da1d9dd72",
+            "size_bytes": 209562
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/38d58a7a31/job_ledger.jsonl",
+            "sha256": "3dfe5716c802466ea552c9eb21bfce125e24fa0d620789cf26effc31b8a3dddc",
+            "size_bytes": 43418
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/38d58a7a31/seal.json",
+            "sha256": "aecbd208da0e6d7875c4c6fd0ab54f4ca0575528f9ca45abcbe1801ba43a23be",
+            "size_bytes": 1604
+          }
+        },
+        "planned_objects": 15
+      },
+      "3db0a1c8f3": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/3db0a1c8f3",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "fdabb5a3b3fc495b9d4ea890a30722ff5cd860cd1934554af89750ceec8ea7fe",
+            "input_manifest.json": "5d71f1cabba97775e30d4e9e7c3baf9c476119ba27da8ebbf570998a4a5a72f4",
+            "output_hashes.json": "268c61ec6aabbf7310bca2b95214a2e14cdd2860bde756834c96a86696979d5c",
+            "pilot_summary.json": "ca38f871af4d9116ca505328430d0e10dbbe1781264da84cf25a72c64cabba4a",
+            "postrun_audit.json": "198db3138267e84f485f336f4c8da67ee724b99ad3a4472c5608388ae06c501e"
+          },
+          "scene_id": "3db0a1c8f3",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3db0a1c8f3/seal.json",
+            "sha256": "fda051d7ab67090c49fd6e3a643b71426c6dae0463e7a581dc45fdfc098327bc",
+            "size_bytes": 41799
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3db0a1c8f3/controller_shard.json",
+            "sha256": "2801cfd539718aeff598ab355154e338105dba3e7dea5219c0f229bf5f9fa5db",
+            "size_bytes": 658506
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3db0a1c8f3/job_ledger.jsonl",
+            "sha256": "2c8ae5430865f7031690ba84061d5830115ac23a0954e85797c52bf8b90bef55",
+            "size_bytes": 154610
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/3db0a1c8f3/seal.json",
+            "sha256": "cd5138cbc2876e80ad46cc1159b5479f29eb303bc3782d91705696cb869a3c37",
+            "size_bytes": 4772
+          }
+        },
+        "planned_objects": 54
+      },
+      "3e8bba0176": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/3e8bba0176",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "2a17c5b6f9f9bf86b33ae705eb173fbeba4921a89b7be00bbb62e3861313a355",
+            "input_manifest.json": "d4ae3c26f2054350c36143c9666c94c407726537b0cbf989c1b1680d12673d19",
+            "output_hashes.json": "2de52b76e601e5ee685976bace76de28704480f7c6016be60b64cc21bb16ced0",
+            "pilot_summary.json": "fd7958d49adeb2c1ea4474f6c9494ad8957fc7f2c4dfae96b74743323b794ece",
+            "postrun_audit.json": "c9d76c4989b4f007968eabcb97ff2b4ca2f7355d1409d6fbdfd7e06fe1343f22"
+          },
+          "scene_id": "3e8bba0176",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3e8bba0176/seal.json",
+            "sha256": "e6f5400263cc18a3c815f150d439aee4c3fd1a225af270e4d290d05481e9e14f",
+            "size_bytes": 39523
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3e8bba0176/controller_shard.json",
+            "sha256": "3a0240cf385e8c77a1a1726cdefd04a3ef3a16061dda2dc3c5cabc4a7a780869",
+            "size_bytes": 706082
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3e8bba0176/job_ledger.jsonl",
+            "sha256": "cc97f2021768e06aea2b7a8cdb41d44af4ed861065f5aecbd4c6b7ece57d20db",
+            "size_bytes": 142868
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/3e8bba0176/seal.json",
+            "sha256": "c12e9c26329dfc17c3cd241cb0d3f54b7300e58137882ddb8a6bdd03db9117f6",
+            "size_bytes": 4684
+          }
+        },
+        "planned_objects": 51
+      },
+      "3f15a9266d": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/3f15a9266d",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "664670e4108736095157e662bc797dac569aebf53fe4ec36e4a1f193b4292c72",
+            "input_manifest.json": "1f9e6d171bd141c9d5cb24de3b38ed20c389fd1a7c78876c8952efde8f948b92",
+            "output_hashes.json": "8665525b75ccdd3831f85c2e54a3ca8dac1e7008ea066cbe8a36a20644c14b61",
+            "pilot_summary.json": "c71e740eb99e31b7cc681cca51e4df358f013fa0b09851b5a7902b7e0e06adf0",
+            "postrun_audit.json": "d8c8b504071a8275c115bce6072bf88013d28b7d05f1012cf0e6aa1859f9f8fe"
+          },
+          "scene_id": "3f15a9266d",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3f15a9266d/seal.json",
+            "sha256": "307fd01f7d58af3bf2ee8bc514a441cbc070edd61f4f5bd0baea7ec9a76669ca",
+            "size_bytes": 83365
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3f15a9266d/controller_shard.json",
+            "sha256": "07cbf79aabee3db3650eccf2e1bc5671ec6f2112541e7f8180a276f9170dc77a",
+            "size_bytes": 1493361
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/3f15a9266d/job_ledger.jsonl",
+            "sha256": "1aeb98fc6f6b5ea0392150b93991c3ed8b5a042b2b4752493309ceab119c4f78",
+            "size_bytes": 310626
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/3f15a9266d/seal.json",
+            "sha256": "d63dcae4cca510a6bd7b60a0435b016c095f18c767e4c799352b189f1d7bd3cd",
+            "size_bytes": 9788
+          }
+        },
+        "planned_objects": 108
+      },
+      "40aec5fffa": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/40aec5fffa",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "4f9e0645a313f45c3a281e141a85103c3396ee66597fc9b6a3df689169b3ff72",
+            "input_manifest.json": "b7fea0651bc6e6156dcda81d593b1325e8f7d24c02c5720ef13a7b3937b3dd65",
+            "output_hashes.json": "be3e94c01d1c060283a5c2c53a688210bfb1829b9dbf8aa811edc65e528eb282",
+            "pilot_summary.json": "d9f7cf6a92a3689905fdc0620ebb8ac7e29b8b49da5588a6b53fbcfd67f57b44",
+            "postrun_audit.json": "a7157edf06a6ec8b5af3257da90af4d599ce822cc369a71003de0da524e2e7bd"
+          },
+          "scene_id": "40aec5fffa",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/40aec5fffa/seal.json",
+            "sha256": "9c85bd0229ab811f269d0fbe03f1efcbc9f7e1091e7457490cfa5e2014c9be19",
+            "size_bytes": 7990
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/40aec5fffa/controller_shard.json",
+            "sha256": "da08b22280762d918ac2a441f86befd7f8fde6c1ea997a6b858578e6c239fed3",
+            "size_bytes": 126539
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/40aec5fffa/job_ledger.jsonl",
+            "sha256": "1c77952606d7429d9d88a0c203c556a51a62a0bbb41624daddf9249b7d2634c9",
+            "size_bytes": 28201
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/40aec5fffa/seal.json",
+            "sha256": "5962641d6831cf357dfc181cfbe93aef444371c96905f0ca1378587f88b7e9ae",
+            "size_bytes": 1164
+          }
+        },
+        "planned_objects": 10
+      },
+      "45b0dac5e3": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/45b0dac5e3",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "7591418eb7e0ee531f1345c50cf032bbc80f6f3948b2cae5d3e2637c9416a606",
+            "input_manifest.json": "3cff29e50024e1cde3ae01dec96031f17ff708cf56a1e8809c75d40717314e14",
+            "output_hashes.json": "3d5bc3ad1d7da334a2378e444c0f422c5b9619aab71fd8e3715dcfe3e4a8fbcb",
+            "pilot_summary.json": "624bc643d31d3eaa2134d206168452820bc7e39bb86bbc064f26536935ae6796",
+            "postrun_audit.json": "f60b8a2ff5257bb71447ef4d46057bfbb514be36780ccd836ff1e76805108063"
+          },
+          "scene_id": "45b0dac5e3",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/45b0dac5e3/seal.json",
+            "sha256": "616e619932baaa6a3204b3343e41893a2469693818cea7b5a0a9ef08363edf7d",
+            "size_bytes": 7222
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/45b0dac5e3/controller_shard.json",
+            "sha256": "f3d8ec74acd3af5c2993d0723088e516f4d89d7e3690f367362f321306731b74",
+            "size_bytes": 120196
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/45b0dac5e3/job_ledger.jsonl",
+            "sha256": "5787217e7d52a37b127db8d4ca399d3afd2a0a9f766a08f5ef071615d5da45a1",
+            "size_bytes": 24963
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/45b0dac5e3/seal.json",
+            "sha256": "d8fa7e972d3993f451eb6270582710b26662519daf6676a59c0c003d8241a745",
+            "size_bytes": 1076
+          }
+        },
+        "planned_objects": 9
+      },
+      "5748ce6f01": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5748ce6f01",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "066792cd9fd25982622aafc94bbf1e9dcc55e100785fa9c9997a10f84b198a6b",
+            "input_manifest.json": "b059ceab204e18f1bc633cfc671ac2349ebc23be08ffa8a76b12a8f79b0acd67",
+            "output_hashes.json": "c27f66bef4b3dc8f6dd85e89b7a71c0da0c20dacf131a04ecea4ad65ea820e53",
+            "pilot_summary.json": "ccc35e7bc3a5c7814fde82b7eb82e94a2c76fcd87ed34dac366c2ffb72e5c5df",
+            "postrun_audit.json": "01698bd474a9ca991b4e72357105e0cccaaeb811fe19165c29cbf9baab0c11df"
+          },
+          "scene_id": "5748ce6f01",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5748ce6f01/seal.json",
+            "sha256": "d09118c832d2e26f141e10718e73a08b66dc5066bb15439a4eaf7b0878b3cfe7",
+            "size_bytes": 13370
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5748ce6f01/controller_shard.json",
+            "sha256": "36c7bb4a54b16420f5f5ebd7f42730d59b24ce24613f8a2fb18f76e62046b74b",
+            "size_bytes": 229933
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5748ce6f01/job_ledger.jsonl",
+            "sha256": "12a4b811d3c7164a55f558d7f7ce8eb7baedfb4f49fd221faaeaf6aae5839bbd",
+            "size_bytes": 49108
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/5748ce6f01/seal.json",
+            "sha256": "6e5a4a8fbb04c65fc9a1bafa7862a05275c8753647494952163d7c612488b71c",
+            "size_bytes": 1692
+          }
+        },
+        "planned_objects": 17
+      },
+      "578511c8a9": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/578511c8a9",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "6f304f488d9770a3bd372268c0c84b37bf36d68a24b58d7a802169fd126f4101",
+            "input_manifest.json": "4f1ee584a003f3abdc755c994e0b093ca57cb998b50de4da3ca10e4b1f85e80f",
+            "output_hashes.json": "29d96bd82afff9f074eaf153969c41bd5c9daf83c831a1ba0706c8e0abbfed8f",
+            "pilot_summary.json": "fb84a1854d82c020796766f5851638272312ed1bfa1ac16ec445cedb335b0a23",
+            "postrun_audit.json": "62787a39c4fffe08ffaeeee07f146e76567ea405889f19acaf6e71fcb3639369"
+          },
+          "scene_id": "578511c8a9",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/578511c8a9/seal.json",
+            "sha256": "0af3c57ddb90480ca68a5d1d21af76e4a8262a785f82d13e0a4e165d2c04d007",
+            "size_bytes": 8760
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/578511c8a9/controller_shard.json",
+            "sha256": "0d0fe214b6426cb9bd4ae146965aa320fd3300d41648665b1f62461c0d40ed2b",
+            "size_bytes": 149961
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/578511c8a9/job_ledger.jsonl",
+            "sha256": "e5623364789f4b7079b07852da9fa274bda46d2792dd4f5ff1eeb459cabc54bb",
+            "size_bytes": 31130
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/578511c8a9/seal.json",
+            "sha256": "7ad80fa91d14c005e91dbefe236f0ad5fca26deeb3ac161174b8a7582fd7b7fb",
+            "size_bytes": 1252
+          }
+        },
+        "planned_objects": 11
+      },
+      "5942004064": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5942004064",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "f9208b3a2505f0d54fd88fa93896872d7f11fd40c2f80c445c696bf0f5fdaf44",
+            "input_manifest.json": "26fc77ee9654ed0689115fd36cc9bbe91e5b13d1a83bda01bc44c971a8abb6af",
+            "output_hashes.json": "0acdc8b76f639d138329ee9342ef29da2e86c23de45beb2aec9ee3bcb0dca516",
+            "pilot_summary.json": "8311e7dbb1c5763f881290a32beba71d8e74edc1109a1ab97cdb7c2b58d2df1c",
+            "postrun_audit.json": "615c776bf211522c607e73e9cfc86c88299c74e8cfb17ed82ebf8ce9d55f1e68"
+          },
+          "scene_id": "5942004064",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5942004064/seal.json",
+            "sha256": "ae06e1211511a473a53f460e31791b2916c917ae907779c71d4532adbe464c4e",
+            "size_bytes": 37222
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5942004064/controller_shard.json",
+            "sha256": "faab20b38246b9caa764536d98957119f151b2169cd810c6b93077c9174d5e75",
+            "size_bytes": 664832
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5942004064/job_ledger.jsonl",
+            "sha256": "72d8da83ec6fb8564aa3b667e44b210b13631e16268092ca7b9efcfcbee47768",
+            "size_bytes": 135034
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/5942004064/seal.json",
+            "sha256": "9b8cdbdb5e7f8017b1959ed99eb034431ca5845901eaf9a6efd8c1fbd386a70e",
+            "size_bytes": 4508
+          }
+        },
+        "planned_objects": 48
+      },
+      "5eb31827b7": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5eb31827b7",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "e4bf899c75c6ed2ccb44137e50a061a716e5f2403dd253be93bb10bc9c33467d",
+            "input_manifest.json": "b133aa242273e2a2001d78e30f7d4602f3fb09922225746f43c22a28a87ef378",
+            "output_hashes.json": "d377bf1d93ad4d6502a7f3099a25737856bcc03365e357ce104ed999da166bfd",
+            "pilot_summary.json": "77915d7c3c6be536304fbf48419eb66eef9c12283183f3597cd4a603c3091fcb",
+            "postrun_audit.json": "eacbec03a7cb8859a9509dbf31999ebfeacdc1fc1a7d1ee610906b2e4c37002f"
+          },
+          "scene_id": "5eb31827b7",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5eb31827b7/seal.json",
+            "sha256": "9239d998468c6f88b9687776b9c6e18963c1ab468430bb83a99e78d30a64052a",
+            "size_bytes": 11832
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5eb31827b7/controller_shard.json",
+            "sha256": "8c652c405ef21491a4f9e3efa3a2a273e60eda933b7d2abbe23cc475ff088f64",
+            "size_bytes": 205166
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5eb31827b7/job_ledger.jsonl",
+            "sha256": "a6b616797c8b867aaba9144f012540ec63c6715655896e49a49a71a9a2bf46d1",
+            "size_bytes": 43120
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/5eb31827b7/seal.json",
+            "sha256": "373c76139437d4defbe77eaf4846992c0f6cc74ee2327eb1ee9053b9248ba335",
+            "size_bytes": 1516
+          }
+        },
+        "planned_objects": 15
+      },
+      "5ee7c22ba0": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5ee7c22ba0",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "1518d4c5848db2e3f9aa2a5f8fbb6a8aa34396c64cf58b5e041be488dc2b6881",
+            "input_manifest.json": "baa8f8e121b7a029bab93b37e963aa5b513438fbed659c54527ae4e9aee9959c",
+            "output_hashes.json": "a2c233bf32ce27902d4ac004a596f7ca3b60d2ae298a51228475558dba65d842",
+            "pilot_summary.json": "6407f35bb772a693cf9c91e63e55afde719cecc8a14c96104c328953e93f921b",
+            "postrun_audit.json": "13c2239fa687fd0a53ba0500e46797c2237634aafce5637da97cfb61056e2cb0"
+          },
+          "scene_id": "5ee7c22ba0",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5ee7c22ba0/seal.json",
+            "sha256": "b4819b4a19fe299eedc3a8935220e5a73f7a0dc8668994e8599548731bdbb665",
+            "size_bytes": 35649
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5ee7c22ba0/controller_shard.json",
+            "sha256": "5cca55e6162930d172853b1a407f79ebccd32c0f8276a9e0786b719903e945ac",
+            "size_bytes": 550848
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5ee7c22ba0/job_ledger.jsonl",
+            "sha256": "bb62fadfd4db01717a85a3032c38f58ef752bba5e04f48e60379783e02c47132",
+            "size_bytes": 127694
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/5ee7c22ba0/seal.json",
+            "sha256": "aed507d4074888a522c22f7736252d93a1ded858e5156c96f444bed910ad659b",
+            "size_bytes": 3716
+          }
+        },
+        "planned_objects": 46
+      },
+      "5f99900f09": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5f99900f09",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "c0594353560212a4f95fcc549b3232ab0bb1a4ff27a120802b08e410e68c1e46",
+            "input_manifest.json": "e5c8bd3fc8f4b80d3f1b052aee063005497b896ec8d8a0c52c7d6a7ab297fe23",
+            "output_hashes.json": "92fe0c9f9b33b303d70b785f51c486e42d607dfb8dfa10f71b0110693f57db35",
+            "pilot_summary.json": "3a0115b96b0b2851a1429e75917e758727069f8c235ec62eed0ba594af37a5c3",
+            "postrun_audit.json": "17561c0c12a3c6250a1e8d6df556fa2e844aadd2ce618bf7a4bcbb81ff1a4ef2"
+          },
+          "scene_id": "5f99900f09",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5f99900f09/seal.json",
+            "sha256": "004cf998b5110a95aff6655892991954cf923262d7618864caef9197525fcf37",
+            "size_bytes": 62596
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5f99900f09/controller_shard.json",
+            "sha256": "320c51ba525f032923d9be48679ea8983836539338121f92816ea0963493282f",
+            "size_bytes": 1081432
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/5f99900f09/job_ledger.jsonl",
+            "sha256": "f10b6b2db6c7b4947ef627bb790d1f1f7e2a18e44bae25568515b896f6d0ef52",
+            "size_bytes": 226545
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/5f99900f09/seal.json",
+            "sha256": "aca9a3989dd2a80cb8e04d54f01fdea3289a0d5420e94f38f5f44e39a28da475",
+            "size_bytes": 7236
+          }
+        },
+        "planned_objects": 81
+      },
+      "6115eddb86": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/6115eddb86",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "0cbec699f25d15266ffd82696ed9a527dc4b59c0a9bb375f9a1006ee2a0ba492",
+            "input_manifest.json": "967c308a394c05f94db5dce7d5c6ca4cfc427af371e204007a6ef6a464cab6ff",
+            "output_hashes.json": "61d1948f72b02e4c194fd450d86f9cfdf46f5bc99bb8f75846f53f0f8bd70082",
+            "pilot_summary.json": "fdabf4f58a90bacae2b479333db231814f934838281baaf32053d8c6b67a6602",
+            "postrun_audit.json": "d625ec68d88d28ba983c74b9a55468ca18cbb910c36cdb5c8bccc372800924ee"
+          },
+          "scene_id": "6115eddb86",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/6115eddb86/seal.json",
+            "sha256": "b4a3da9ee45f187465b3f8dd66a834b50a81cb8a0eb330b4e2cb97be4b413069",
+            "size_bytes": 16457
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/6115eddb86/controller_shard.json",
+            "sha256": "191d8f61aeabe914b136020d9a7f1177e4c2abe2039f1347719878f3ed95c966",
+            "size_bytes": 231214
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/6115eddb86/job_ledger.jsonl",
+            "sha256": "ae89835d04ce17d9f501a15e99f3484be3603d73f5dac694f71532856fb741df",
+            "size_bytes": 58404
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/6115eddb86/seal.json",
+            "sha256": "d15cdbcd91ec43599b763deb49f4e02e08d0f414f475ffb2ff3914e7f780a6e2",
+            "size_bytes": 2132
+          }
+        },
+        "planned_objects": 21
+      },
+      "7831862f02": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/7831862f02",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "7dd4b0245c9bac1743d6d91a75c1f0fe5dc15b288fe8e46ab51a88773c5e8772",
+            "input_manifest.json": "7ff5452c6ff795b0715a20ff0f8bd8aa7b8456c33cd349c2f9f27ac358ac9a67",
+            "output_hashes.json": "44ed6d828d0002fda6b6d9647042116ad048824aeee0395df9d06fcb5da0347d",
+            "pilot_summary.json": "a9dfcd71a53fe4f28c96d6e8680fb9a18d245758db6a931f09f597751f0bf679",
+            "postrun_audit.json": "96ca9b6df04be4db18fe788fcd32cf3d0133f80ed23d8ad5246a793ddaa5a5e9"
+          },
+          "scene_id": "7831862f02",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7831862f02/seal.json",
+            "sha256": "6efcd4819844668ea24c856cf40928b27d00289e750f11920dc977aa3be9f976",
+            "size_bytes": 27219
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7831862f02/controller_shard.json",
+            "sha256": "d6888f4bfaae413fc7e6a883fe3786b9bb94ac9c056eb0b31c3c6f85b5f0fa5e",
+            "size_bytes": 492365
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7831862f02/job_ledger.jsonl",
+            "sha256": "38f0ef3b5887ccbacb41ddd9729458383d34acf85b98c9ffb237351a35f2dc5c",
+            "size_bytes": 100319
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/7831862f02/seal.json",
+            "sha256": "1554c012db0663d2136238566485963b743f78cb38d7a01f094a3c2ac89ed38a",
+            "size_bytes": 3364
+          }
+        },
+        "planned_objects": 35
+      },
+      "7b6477cb95": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/7b6477cb95",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "25d5416480171d4552a612e7409e75b1918dd8837f56104c721f9535224eaa9e",
+            "input_manifest.json": "de941af38776800d9f097d62d126713b7baf6ce2e332ffc3847e044bb0bf8c45",
+            "output_hashes.json": "68471a977ab95d5b5842346e5bad06f65ab388e0aa5fd523a27fbe0298a86a5c",
+            "pilot_summary.json": "403ece6bfc9c29781713442fd1e82d94eb75e01fcce66827dc3448492d287b24",
+            "postrun_audit.json": "7bfb86e544c83f2f05fa2008aa33ba9a5852d8dc87e9590dc0528c31bee77a18"
+          },
+          "scene_id": "7b6477cb95",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7b6477cb95/seal.json",
+            "sha256": "22a9612ed677235d6f1790dad36929ba7fbdac93e986a503ae6ffd1d47e402b6",
+            "size_bytes": 24147
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7b6477cb95/controller_shard.json",
+            "sha256": "8aa3a4653f8f725ed692ad659350f4f13e31b8235bd0fe25f24bb5db09406695",
+            "size_bytes": 421886
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7b6477cb95/job_ledger.jsonl",
+            "sha256": "779f0c52b5e991735734fe1e6f3397339d7e0130f8ecdf9b647b4e14127b46f4",
+            "size_bytes": 85229
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/7b6477cb95/seal.json",
+            "sha256": "f362f15ab58825f133ddb16fde147c33b54cf8c9e8cb8dcc44e5cc90b4881d94",
+            "size_bytes": 3012
+          }
+        },
+        "planned_objects": 31
+      },
+      "7bc286c1b6": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/7bc286c1b6",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "7b93c8f045593874d6a9727511e27fc5038b470696fcb4642e2cd7909236823f",
+            "input_manifest.json": "21f9c64520c6de1c85b8c2b18bd213884fcd186c38bbcaa749e8308cad4728d7",
+            "output_hashes.json": "8853faf39ed5c6ed3ea118327c64e862dd75936f55720a0354294f0bcc9b7e58",
+            "pilot_summary.json": "e4862945d2e7a0475121d4bba6b209ccbd3a6528ce1253ebf82331f9d0f3852d",
+            "postrun_audit.json": "1f988d3e5d4a73c0d8978b372441be729174d6a0f981719cfe70a91aa61ea1e5"
+          },
+          "scene_id": "7bc286c1b6",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7bc286c1b6/seal.json",
+            "sha256": "65a4f0caa346707d46a9d049f18bbef0d75ee4edf240f97d498952bedcc0bdb2",
+            "size_bytes": 9533
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7bc286c1b6/controller_shard.json",
+            "sha256": "8fb49e6ba639eb8bbd787bf045ba76bc9411a684041b8001932223737658af78",
+            "size_bytes": 154005
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/7bc286c1b6/job_ledger.jsonl",
+            "sha256": "0ff4ef785e77d93f27240e4f13da2533d409afa8a8d57af1f7bb457ec66acb21",
+            "size_bytes": 31701
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/7bc286c1b6/seal.json",
+            "sha256": "3d76306df17bdf43f0a5d330206315956119bd642a508d4ccbf78af8f18182ee",
+            "size_bytes": 1340
+          }
+        },
+        "planned_objects": 12
+      },
+      "825d228aec": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/825d228aec",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "2f864aab6000323347bd9a284450bce68a6dbd607430ee18d2d68de5862f5f11",
+            "input_manifest.json": "52eafe4240687d83d6e90b3a77ce647222afe7164bc970e317d4369fc488770a",
+            "output_hashes.json": "07ed1a42cfecb8731ac6578e4d932689cbd7b70f5931e0fb87fba4cf4a359b96",
+            "pilot_summary.json": "bd0ba2f12eb5f0d35c9327246f81445ab217177bd746e7b3725f9214f46a3ee1",
+            "postrun_audit.json": "e295404388136eb957f54203f0c14a6ab37482277ff2fb94901b5729b7c39ea1"
+          },
+          "scene_id": "825d228aec",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/825d228aec/seal.json",
+            "sha256": "148c392d4ab38070ef76d0d2a4555fe8741309d14cbb06e38e2a188885c484bc",
+            "size_bytes": 14139
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/825d228aec/controller_shard.json",
+            "sha256": "7b48092308cf2c7fef863e595a6ee25e0f861c16e20cab566e38c6d6400678fa",
+            "size_bytes": 235414
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/825d228aec/job_ledger.jsonl",
+            "sha256": "9be210397e70947c70924b8f439653468478c95c786b687387d03efe15b6fb86",
+            "size_bytes": 50239
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/825d228aec/seal.json",
+            "sha256": "bfd7ec4ee42a134931f2c3d06e8528eb2178a0b76ebc84c781542adf987143d2",
+            "size_bytes": 1780
+          }
+        },
+        "planned_objects": 18
+      },
+      "9071e139d9": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/9071e139d9",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "bdc93b00d729c08d5c7ef7a90a870b26d21b8bca76fb692f9f0a913522bbff9e",
+            "input_manifest.json": "cce959da0cdb5f0c0a12174f0e61d6e1e5a99f2140c45ee658a2f5dad70675c5",
+            "output_hashes.json": "2e83ec9fe1f4bafa67022d32592892b8e9cff2b24a82bd71cced5ad01b55cfca",
+            "pilot_summary.json": "c6221e3d3facc7f6872ff072360363dc3ac93c551eda43a892e53ddc49237ba4",
+            "postrun_audit.json": "633734009d299a246b63be3ffedc9bf530367df4a3f1bc17a1038650741a1c81"
+          },
+          "scene_id": "9071e139d9",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/9071e139d9/seal.json",
+            "sha256": "b00f3f233009867ec554092a9d22db776331684705d151380318f13f64f91899",
+            "size_bytes": 160209
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/9071e139d9/controller_shard.json",
+            "sha256": "435e41aa978133c4a1bd16cd3cfbe762e38005424da955f89574862c403cf4d0",
+            "size_bytes": 2453917
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/9071e139d9/job_ledger.jsonl",
+            "sha256": "168cd492418ff6e324ccf652b4b78bbedc23221017cc71efeaf7e1232a6af624",
+            "size_bytes": 557815
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/9071e139d9/seal.json",
+            "sha256": "661df28349691542a018c1bc88a6bc09b1cd8fed371be9aa44e4c5d6379f6713",
+            "size_bytes": 16300
+          }
+        },
+        "planned_objects": 208
+      },
+      "99fa5c25e1": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/99fa5c25e1",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "197203ceaf6f85de52c04edb4df7a74e5920a0aa7ab72c8ec7e09e8eb9767d5f",
+            "input_manifest.json": "2381f6cc031499e54ad5f0eeb403c8a0abb376d1c3a747b3b15975b3d00fdb05",
+            "output_hashes.json": "56dd9df4d2663181e91affd6af7e4f53d000d77e1f8dadb26282f12cc95f8c32",
+            "pilot_summary.json": "f4c2199b89005d4c744d1d66ce0d2590294df30ffdcf0e58b9259464884ca17d",
+            "postrun_audit.json": "db937f8448728d84b20e34ac041ac42d6a015de72db4903133a591d000598df4"
+          },
+          "scene_id": "99fa5c25e1",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/99fa5c25e1/seal.json",
+            "sha256": "385d9526376bd1b09799df1485e6743d25781db81d7483ed0673c71c811c1299",
+            "size_bytes": 27982
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/99fa5c25e1/controller_shard.json",
+            "sha256": "4de22ed080036196c2b072c83c4434df5be88ad31b4dc2b813f4574e9bee8fc0",
+            "size_bytes": 489190
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/99fa5c25e1/job_ledger.jsonl",
+            "sha256": "97401197ca49060dbc2591c5a86c6f689f652b9cc1abbe8fa852ee005de7de69",
+            "size_bytes": 99777
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/99fa5c25e1/seal.json",
+            "sha256": "f6aa2f721b49fe1e8186b23eb95dbec533209a9f5a6980a0723aa0ce1d2c2ebc",
+            "size_bytes": 3364
+          }
+        },
+        "planned_objects": 36
+      },
+      "a24f64f7fb": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/a24f64f7fb",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "5523c23d0af3957466fa374c1aa971403aed4187d751a56ee04b3beb39635f40",
+            "input_manifest.json": "6d1d1455c66a5bed6e5bb571f7aa9c8e90043bde06c7c22caf885532f26714f8",
+            "output_hashes.json": "1124d78bea27c015e96a0502df8ae744d3549731a10b7dd66db9cdb975919985",
+            "pilot_summary.json": "269a12ad04ffb9304db2a744543581c3864257486573df26366825d709b56147",
+            "postrun_audit.json": "8f332fbfe9c8c63b108505d1e15cba8d974bfe810c57b4bfa3f5d49c3a40877e"
+          },
+          "scene_id": "a24f64f7fb",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a24f64f7fb/seal.json",
+            "sha256": "8dcde19682719a0746222744ef04593423b371ac0de85d40c039ca2dd6cbd98e",
+            "size_bytes": 11834
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a24f64f7fb/controller_shard.json",
+            "sha256": "2b7e22ae806472dee7334d0e0fbd8a68026095bac7d9a27fdb1594d9e4a9ac41",
+            "size_bytes": 139723
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a24f64f7fb/job_ledger.jsonl",
+            "sha256": "ecc76c3f0cab2761a65d07993f54f914bbc7046ac9028b06853eebe416d746d2",
+            "size_bytes": 40510
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/a24f64f7fb/seal.json",
+            "sha256": "ab06356b00256065bf8f87c8ab7cdcb92c8f85edb344882b68a522ee89721037",
+            "size_bytes": 1516
+          }
+        },
+        "planned_objects": 15
+      },
+      "a8bf42d646": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/a8bf42d646",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "e42847ac16d60c8af2d0b9390512b88f6487a8313cdffa0bf4eda282ece70e89",
+            "input_manifest.json": "a2172b28d4a38b171b24b15663fd5ae89cff25b3ada6c16d78cf17c2870c3462",
+            "output_hashes.json": "e81bc03313f10c0378e57597267e91eaf2638f3d9a117aae30d5b1a363e716c1",
+            "pilot_summary.json": "b88cc20b5001326ded1595ff75ec9b15c34153859f4a7dbb91fcd84c91cca588",
+            "postrun_audit.json": "ce91a688b2a7beef255f7f202a37baab688c44e98c7627e22a7c278a91cd87f1"
+          },
+          "scene_id": "a8bf42d646",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a8bf42d646/seal.json",
+            "sha256": "400892e8c10961dfe79817fa1204f4a59b09b3dff9cab4322a091c281b03ea97",
+            "size_bytes": 1837
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a8bf42d646/controller_shard.json",
+            "sha256": "f4a89de045a2f88b28177e9af3667b368bb477f05c1aef9e8b99298e73cfc6af",
+            "size_bytes": 30382
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a8bf42d646/job_ledger.jsonl",
+            "sha256": "8d9838ebdece2e093a0683c4958b7ae3daeee3787d87aa0c4d554d7fc8ac8f38",
+            "size_bytes": 5788
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/a8bf42d646/seal.json",
+            "sha256": "f463c958f9e4c56093ec143c13ca41da0ec1b8fff041baa0d66c62e9a69f81f3",
+            "size_bytes": 460
+          }
+        },
+        "planned_objects": 2
+      },
+      "a980334473": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/a980334473",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "be9ef463751ff7d36e4c18dbaef846f8295138012f5f4f27ca2f67715774df8b",
+            "input_manifest.json": "dc46f1d025184e158e3f65ddd6e3629b5361be4bc95fc25480a8e19da877f3ac",
+            "output_hashes.json": "55ca606424f96db4029efd9102b323d3582d3276b97830a2d3e6662de2850ec4",
+            "pilot_summary.json": "790bf63f6cea81d569a617189bead48aa442630f4211abb216c2e8b52021a0b6",
+            "postrun_audit.json": "1efa9f97f532227b3c234cec98bbab4b69303bde30aa57d3ba44417ca6e7344c"
+          },
+          "scene_id": "a980334473",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a980334473/seal.json",
+            "sha256": "b41beaaae1fd32cf60eb43e2bfc10c0b0b14802843917994cb7e74fc241cf3f4",
+            "size_bytes": 17226
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a980334473/controller_shard.json",
+            "sha256": "85539a7df89b677197d3cc94fdbfae3b9bd783d963fc999a0aa18d6580f7a24e",
+            "size_bytes": 273304
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/a980334473/job_ledger.jsonl",
+            "sha256": "1af490e9abb8927101e6972b43ab64ae1490cbcfe69b31e601351e1a53bee00e",
+            "size_bytes": 57637
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/a980334473/seal.json",
+            "sha256": "972a1082dd4f7ccc979dd61cacc5ff058712f523e4dc5886bdfc97f0aaabc5fa",
+            "size_bytes": 2220
+          }
+        },
+        "planned_objects": 22
+      },
+      "ac48a9b736": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/ac48a9b736",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "8da0ebc105eb09a268a73fa0f0cf07c766fd7f5ac3b2fcb160105384d8553d6e",
+            "input_manifest.json": "05181cc0384b80b43ae78756adcf0a9727bc1d33d975bff87d38bbd43b751168",
+            "output_hashes.json": "55f78db31be7f4ea1ad7eb80e24e0b729207f1df237c1e10349025939a0b0664",
+            "pilot_summary.json": "3fc02547b8664580dd58aadb6455265b20041aaba488616a49352da9eb9ab0be",
+            "postrun_audit.json": "9dba53837e82943dac47876fba494f584b27e36d5e6ac74443d6552d41cd6f7b"
+          },
+          "scene_id": "ac48a9b736",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/ac48a9b736/seal.json",
+            "sha256": "75fb407f53fad8ac3507d0a4f41d53466c2adb9ba2c7e5f2a01a1772478006b0",
+            "size_bytes": 1068
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/ac48a9b736/controller_shard.json",
+            "sha256": "c8a9240ef0791be367dfa0a191b08856914efe8e8422d272a3a08ed60f1d1f88",
+            "size_bytes": 15479
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/ac48a9b736/job_ledger.jsonl",
+            "sha256": "fd14e96e83e1f9e5ca954723bcba5df80cc054f06f9536fae69584276dfdcf36",
+            "size_bytes": 3019
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/ac48a9b736/seal.json",
+            "sha256": "44cc1db0faf2f58cb8cf49c0ccc8a536654e554549c0f2c3eab03f6450d2800c",
+            "size_bytes": 372
+          }
+        },
+        "planned_objects": 1
+      },
+      "acd95847c5": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/acd95847c5",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "4f486cbc0bdafe7b065a3f862b356bfd18243d709a220891d25b2dc5ce358c80",
+            "input_manifest.json": "d64b438402f4b022da3763a11696411f5aafdf3dccd6260e2bc4f56332f1586a",
+            "output_hashes.json": "34f69333537ac843c36d3203bc6ed83c4bde78e422e5ffd477b662b1790efa26",
+            "pilot_summary.json": "a8f0534064dd1bbde24074ddfd8e46d42a7dfaa9dc85fe4d1d9d713c1bdae6b2",
+            "postrun_audit.json": "1b252ffa66678a1e1bbb8aff708d73515c5d31473e4c6f9248c8f90e609a6e40"
+          },
+          "scene_id": "acd95847c5",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/acd95847c5/seal.json",
+            "sha256": "e37e0865cf6d981d988aa8883f6f28f654d7f424c668a0befb7a800dc3cf0de3",
+            "size_bytes": 74128
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/acd95847c5/controller_shard.json",
+            "sha256": "2af9e5013197bd2f4e5fa35c0516102359abaf0e37221576b987d7f82ce6fb93",
+            "size_bytes": 1305678
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/acd95847c5/job_ledger.jsonl",
+            "sha256": "5e6e499d181d2594db58292d87139ddffd102073253757296d4b67fc6da904d3",
+            "size_bytes": 269425
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/acd95847c5/seal.json",
+            "sha256": "9d7eb66ac8a4c96270cc72183dd60d99c3545c1117338cf2d1ab511b20f1c654",
+            "size_bytes": 8468
+          }
+        },
+        "planned_objects": 96
+      },
+      "b0a08200c9": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/b0a08200c9",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "45a7e349c2b08199b3682adbf80e3369229235e86b7deea136c3099204b0f39f",
+            "input_manifest.json": "28f174c49d75bb95754cd0ecba09f05592ca9653289b06ac9c40d7bd4c93def3",
+            "output_hashes.json": "a6a7e9de1344fcd5f980acaaa5d3b18875f9c915299193ba6f612bcdc3daa568",
+            "pilot_summary.json": "93b3667d9d80d9aa1783c600de98779ba3479a17c1e83c10053e20c66096543e",
+            "postrun_audit.json": "8b32e7c4fe0df9aad6806b638e259d6b91216006fc79febca02452c1ec80076d"
+          },
+          "scene_id": "b0a08200c9",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/b0a08200c9/seal.json",
+            "sha256": "117177e0bb3352514543f47363ead082e9213f1b232dcd87e5826b0376a001f1",
+            "size_bytes": 17226
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/b0a08200c9/controller_shard.json",
+            "sha256": "578953bd1d3cee1bd173d9d5283fb6ecf60af92437f783e4023f117ce8da1cd1",
+            "size_bytes": 287761
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/b0a08200c9/job_ledger.jsonl",
+            "sha256": "f89d462d004e7f62a37ff97ca63f7b5b44e392d8e665d8edbfc809b80f4812e2",
+            "size_bytes": 59742
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/b0a08200c9/seal.json",
+            "sha256": "7538bf05cc41d142329c40e758488611af6f0595f3f6bdcf4191cdbaa110c727",
+            "size_bytes": 2220
+          }
+        },
+        "planned_objects": 22
+      },
+      "bcd2436daf": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/bcd2436daf",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "0290c4ced786c5a678a932e34753a5f19c0959683ec4a321d9b2d7c6c58e9b4a",
+            "input_manifest.json": "dfff7ddd1353c55589bad08cdd694b2d67c3d1eca3d57d4d6e9559d0f36dcf57",
+            "output_hashes.json": "8cf839222448cd8639ba9d61dd8b16fd0843b25f81057f568acf5426c6245109",
+            "pilot_summary.json": "e2875a3c6703f11950fcd079102b2ddcdfff19ca68d5ea6e7bc5e2e1bcf5562b",
+            "postrun_audit.json": "b8efeec4e3d8b6d8762d35ed17edf6d561e95777efaa6f58cea9986d023b078d"
+          },
+          "scene_id": "bcd2436daf",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bcd2436daf/seal.json",
+            "sha256": "5434d0b769825ed06e94510a970937c063bcd1dc998697138274941186f4b670",
+            "size_bytes": 7991
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bcd2436daf/controller_shard.json",
+            "sha256": "523b1f5fc871545b3a8e91f817f329ecd9620b66f2210c391e123d61cacf2d37",
+            "size_bytes": 139468
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bcd2436daf/job_ledger.jsonl",
+            "sha256": "f96f7e8987e94c78864ae619e5dd738a098a22e0b2fc31342f6df569f4d3e661",
+            "size_bytes": 27335
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/bcd2436daf/seal.json",
+            "sha256": "8c5de1ec91560f4eaf99056994b9840a5c4a4946e8b17e26faab33d8e904b68f",
+            "size_bytes": 1164
+          }
+        },
+        "planned_objects": 10
+      },
+      "bde1e479ad": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/bde1e479ad",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "a6ada817aab8cefa86ef804149ae533dab0acbd39ccc91b4f1dd301eacc3fed1",
+            "input_manifest.json": "2a3c8b06db59c063c5f7d59aab3190da122260dfd397b41b669734e9eda2a7fc",
+            "output_hashes.json": "4b656a5505b3eb0589875eb117150076c36e2a514e6303e43b1ab61b69cb4801",
+            "pilot_summary.json": "c833e15e6fb0d5b612e6fd1b8c868918d2a0c394db823974fb2db99aa9560faf",
+            "postrun_audit.json": "e48ae9fcdaaca5306d20ada8684b9454934782d49f098d1b5f1c6b5e9f4ca63c"
+          },
+          "scene_id": "bde1e479ad",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bde1e479ad/seal.json",
+            "sha256": "cc2742fa97e0b2b9175a4472256709170a63f860ffef515a9961b9286cb04f14",
+            "size_bytes": 23372
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bde1e479ad/controller_shard.json",
+            "sha256": "64871f83375a5330b085551201ea23564ad2515e8d8551d5bfaeefe90ce7c11b",
+            "size_bytes": 432217
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/bde1e479ad/job_ledger.jsonl",
+            "sha256": "a02e09998edb151c9d401f93d04aa292edf26f05c3f57bbfb41cbc0270634a5d",
+            "size_bytes": 85494
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/bde1e479ad/seal.json",
+            "sha256": "f64353b1d94d2f37ab07ee8c96cc5e0f0ad0f5729a4aaefb0c74af62f38ce5de",
+            "size_bytes": 2924
+          }
+        },
+        "planned_objects": 30
+      },
+      "c49a8c6cff": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c49a8c6cff",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "2d36c827c414fb9bc428fb6e09796cb10fce3968d4e8d3dac3520b3f1f399263",
+            "input_manifest.json": "0ed723f457cf0ec085191b936e78f5d0dba21dd5ab408ce0b6b3b47ff2058c96",
+            "output_hashes.json": "dba7d87d5a1f8e8d665bb7142cc4b285fb0a883306471269848d28ca5cf69489",
+            "pilot_summary.json": "86e00875e66cf8c1d0693c22a478329a522a4dd6bbaada2b5720d957e5a7bc68",
+            "postrun_audit.json": "b0deb3fc3f60394aad6b66a402fb78747ae9dbae283fb26ac95ce612b413ac70"
+          },
+          "scene_id": "c49a8c6cff",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c49a8c6cff/seal.json",
+            "sha256": "ac53c1d5b50657fba6c2fdc8af741b84145cb3cd3ec6998058f034b60889d91e",
+            "size_bytes": 35678
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c49a8c6cff/controller_shard.json",
+            "sha256": "6d7cda7d11ecbdf3c5b75c0d0e0c24f19ac47b62a92f323259e6494c1a97ddb2",
+            "size_bytes": 622153
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c49a8c6cff/job_ledger.jsonl",
+            "sha256": "b13ed4ccf40f720cf3dffb8223828994a32cc6c22ce27fffb6dadf80f1308132",
+            "size_bytes": 126762
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/c49a8c6cff/seal.json",
+            "sha256": "400db2f54d15851df9a87754ea793ad118090d7ff41279aa52b8523db4113385",
+            "size_bytes": 4244
+          }
+        },
+        "planned_objects": 46
+      },
+      "c4c04e6d6c": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c4c04e6d6c",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "df7c08c7314d32580c7f5509c964ef28f9f7aeae2eaa0980f568d57e6c33dda5",
+            "input_manifest.json": "24550c56ba62e3abc2ab285e5dae99850f72d9694d3e81bf7fbcc2c9604d9f9d",
+            "output_hashes.json": "f7bbb4114cff01ec7f69d5bbbf831f14172acbe27de126e65861659fe62cc7ce",
+            "pilot_summary.json": "c705de3add6eb452835d85cf82586538f81b7bdfa9f86bccf0563d8278a3d645",
+            "postrun_audit.json": "bff95b586f008a279dcc9f18984f59a4e9624f388a22912f8196c14e604f1407"
+          },
+          "scene_id": "c4c04e6d6c",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c4c04e6d6c/seal.json",
+            "sha256": "be63c4461700e83101f0c2f0688c1970c334253eb251eda4b4d951c0b49ce4bb",
+            "size_bytes": 19521
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c4c04e6d6c/controller_shard.json",
+            "sha256": "a4b598b9c4c9e2584454eaa44021f44cbae83b7b1dc243c442c873c4ac1c174a",
+            "size_bytes": 349828
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c4c04e6d6c/job_ledger.jsonl",
+            "sha256": "1cd358dab2e8fef8b292b58e88b3d60b780e8bdd4f6b97f44be0d377b773885f",
+            "size_bytes": 71986
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/c4c04e6d6c/seal.json",
+            "sha256": "ce5be6ba6447ffccabe450a259faafb5381f9fea9a302ef37274f98f0dd43ebd",
+            "size_bytes": 2396
+          }
+        },
+        "planned_objects": 25
+      },
+      "c50d2d1d42": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c50d2d1d42",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "1a7b67fc2cdf06a16b8e0b6ea26b252abbce2211b046d8892b3c720b4b97b1a0",
+            "input_manifest.json": "8fe23caf3573c0b82f447eaccd4f2248fb64fb580fa977abf1b3e4d39b2f94c2",
+            "output_hashes.json": "5d7395c009e19b6a8c27b5da279fbec636f276e7eb0459f3eff3a9c72ecfcc36",
+            "pilot_summary.json": "53be82572e1cd27b660cf9915d59466592de2c291dc53d6bf36380d506b2f67c",
+            "postrun_audit.json": "d94aae177fb4d67395039520acc55f739cde97ce126ce40e4319ad610547ea03"
+          },
+          "scene_id": "c50d2d1d42",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c50d2d1d42/seal.json",
+            "sha256": "50800a0cbcd6309d134ac9e1df237919f4fb3b453dd6dd05db0bbccd9be789ec",
+            "size_bytes": 28760
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c50d2d1d42/controller_shard.json",
+            "sha256": "286e59b3adbceaf3a4c04d98e4166441513d1d97fecaf55ad475b0763fade7e0",
+            "size_bytes": 497548
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c50d2d1d42/job_ledger.jsonl",
+            "sha256": "4b28b9b859705043f752f94cc69013a8110e669307a70c7289e5c60ec3bc78d4",
+            "size_bytes": 103317
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/c50d2d1d42/seal.json",
+            "sha256": "90d5fe283dedbd39ec8fb61d5eda111b54ab074ce5e0a6cc3238f46638acaf59",
+            "size_bytes": 3540
+          }
+        },
+        "planned_objects": 37
+      },
+      "c5439f4607": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c5439f4607",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "fbe4afc2b62fe714f1c8f32777a30bf8be3580f4f47617d99b01c198b1430146",
+            "input_manifest.json": "493d33f455390f8242868aa3db5698e53be27eca2e4ffb7f0b29d56d54cf50bd",
+            "output_hashes.json": "a6214d36f9733e5906d1dd96f87c7383dbe8d25c6c2ceab5e6203c8658470052",
+            "pilot_summary.json": "bfa2001a8399bc33c2395ec2c347356fc46e59fe90771e1e0314ab47f51b8f05",
+            "postrun_audit.json": "bc8ee08021b591e13e11406c80f527378edf7bb8c4fc2202d06d167e8efcab54"
+          },
+          "scene_id": "c5439f4607",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c5439f4607/seal.json",
+            "sha256": "490e0af85b775b7de3eab8cfafb2a233304430a35ae49a98860c80a0c6e783dd",
+            "size_bytes": 27990
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c5439f4607/controller_shard.json",
+            "sha256": "f9aa7df52b96f1c0d7b207fe1ff9869d93f7374e3d49f0bb8e43c5454bc84642",
+            "size_bytes": 488392
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/c5439f4607/job_ledger.jsonl",
+            "sha256": "b672139c68f85aae272b7ecb5b0df4b9cd2cfca6cca2a42a15985400efca5477",
+            "size_bytes": 100620
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/c5439f4607/seal.json",
+            "sha256": "08d0792e9af4a8ab95926a2bec804814c3c65398fa5a8f3d7fac80066ed08dc8",
+            "size_bytes": 3452
+          }
+        },
+        "planned_objects": 36
+      },
+      "cc5237fd77": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/cc5237fd77",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "96641ba7949fdaa1e937349f385184cded8c6890b28470bdbbdfaf21c8ce02f0",
+            "input_manifest.json": "a06b4da58583bd0299b64b1dc9b4fbdc394ecc4bb68384d0bcceb219801c1e78",
+            "output_hashes.json": "c30200db5f66d95dff81393a8f1794c0979e59ea357170a763d7e2754917592c",
+            "pilot_summary.json": "b3d918ebe2773bacb51f109ba70c652bbdfe869b1565051521cfcd3806e368f9",
+            "postrun_audit.json": "422c45ed2ab8243df41ba5521cf115f3361d20386517bb986e32a1b6a2e83aee"
+          },
+          "scene_id": "cc5237fd77",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/cc5237fd77/seal.json",
+            "sha256": "22bb3832c8002b06d53ab053969d8cfd5fcef330bfb794f9939d31d067c486a2",
+            "size_bytes": 51849
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/cc5237fd77/controller_shard.json",
+            "sha256": "073bd9c45d888927c27e39b723857cd9ac3fa2084cf5a04ae304d568edab5364",
+            "size_bytes": 892105
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/cc5237fd77/job_ledger.jsonl",
+            "sha256": "74e1c4aa54e086751a4e313ebbb189e33f514de70ccfb6eb1cdefcf0b39bc09f",
+            "size_bytes": 185739
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/cc5237fd77/seal.json",
+            "sha256": "63e236423ca74e52a73f2a8f0c92a6b3e811eca94ba5badd616c425a24780179",
+            "size_bytes": 6180
+          }
+        },
+        "planned_objects": 67
+      },
+      "d755b3d9d8": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/d755b3d9d8",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "cf2195b2ed8c6bf01491cd6f35f638925c953b5ea0e4750c0f3a23102cb34fd6",
+            "input_manifest.json": "de6956dee23f0291a270b90b4f3ce0f423fc6abd44e6fddffc99071c1dd776ad",
+            "output_hashes.json": "7cf73d71c9f960eafd2d8c3e70752151cefd95f6eef9b6ba4652b857251320cb",
+            "pilot_summary.json": "e0e8e2b33c0b60ba7310671a0bb4d71d884326ce7180946c37644c7db74ee885",
+            "postrun_audit.json": "de047144dec2ec989552bbad5cb78a13cfd305bc64dfbde13b09853517c58d91"
+          },
+          "scene_id": "d755b3d9d8",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/d755b3d9d8/seal.json",
+            "sha256": "656e3a5bb13852db168c7334cbc38f741157ef0cd8799b04141dc7c7b424f1c3",
+            "size_bytes": 70287
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/d755b3d9d8/controller_shard.json",
+            "sha256": "eb21eba534472c94df54310304111d8a6525420f742f14c285712f3dd637f52d",
+            "size_bytes": 1229732
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/d755b3d9d8/job_ledger.jsonl",
+            "sha256": "45c2b1e6fed43e10fd3c51c32802c51759060c2d6e580b6669957187ee2ec2cd",
+            "size_bytes": 252920
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/d755b3d9d8/seal.json",
+            "sha256": "184634407e897a9555964a93b30d3d26f62cb6188f547722602de65f1dbc13e0",
+            "size_bytes": 8116
+          }
+        },
+        "planned_objects": 91
+      },
+      "e398684d27": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/e398684d27",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "abc86fdcfb151d16e1eb0990da0568cbcc1d6d605144054a0097dc1be7fd1248",
+            "input_manifest.json": "ac01a790b936aad5553ce9654a07c6917560d2f5a8bab66710f79515b405935b",
+            "output_hashes.json": "4839509cb15bbf171025fe28745ec6374b43b1081479280ac8c436cb9b39c950",
+            "pilot_summary.json": "6c273bd0ab5c3fa692ffe2a16bb8d2b6804cd1195783fef8d92abfec08078940",
+            "postrun_audit.json": "c3174f27599fcc4d2acf28fb9d7135d6a5161b15ff761df40892bf09319d259b"
+          },
+          "scene_id": "e398684d27",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e398684d27/seal.json",
+            "sha256": "1db876b891986b377f850b10bb0205aad003b538677187225d3e3e8e6a00c5e2",
+            "size_bytes": 28758
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e398684d27/controller_shard.json",
+            "sha256": "ba3aab6d316ea39777473d339fbb62defb198cc51d2e173f0963111f0b4133de",
+            "size_bytes": 517069
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e398684d27/job_ledger.jsonl",
+            "sha256": "ee216366d16a1671ffc2ae62352df562c929c709444100e86906918200c964e1",
+            "size_bytes": 104041
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/e398684d27/seal.json",
+            "sha256": "ba33de6692bf7dbf48f9f9360d323b74282438483dfb1f44e264b8d816b3b67e",
+            "size_bytes": 3540
+          }
+        },
+        "planned_objects": 37
+      },
+      "e7af285f7d": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/e7af285f7d",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "8e7bbdc6b1219fd6d53fd9cccc45ad6d221bfd96135f1c888538d7ad04515a43",
+            "input_manifest.json": "aa6edb5cfc84ae89f1d6300b954513997138906e5768edb88d6b53ab05861e07",
+            "output_hashes.json": "14a9da9fe09a25983a8cf044f585b5855ce63ab242e73d19b4cb0875d9d8af58",
+            "pilot_summary.json": "b00c4f15e8caef8763af93a60791616e4a22ace6d6c89becf7bf572bd5694f53",
+            "postrun_audit.json": "50c03c553565a6088d970413bdd7680222aeca4a78c74da3b0d310d009b19c9b"
+          },
+          "scene_id": "e7af285f7d",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e7af285f7d/seal.json",
+            "sha256": "64f4c9b7b786f6d29fd758a8f0787d190786072012e247b738ad81cf49ee1d2f",
+            "size_bytes": 21826
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e7af285f7d/controller_shard.json",
+            "sha256": "ab5727238d057c31b7f240620f0c71cd788d3368c10cae9be0ca25dd564ab5bf",
+            "size_bytes": 380275
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/e7af285f7d/job_ledger.jsonl",
+            "sha256": "0c5d2bf7d1849af3f407ef3a01f3eb09621883d35d1c03d6bff066b06081d214",
+            "size_bytes": 80532
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/e7af285f7d/seal.json",
+            "sha256": "348ab4874fcc5b5dc867af6c292b799ebd44786b9142e7263f8b5afbd209c373",
+            "size_bytes": 2572
+          }
+        },
+        "planned_objects": 28
+      },
+      "f2dc06b1d2": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f2dc06b1d2",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "25f6bb952d0a9d7a8c5b1afdc8d28be0c31ea0544548f578439d82f68a894895",
+            "input_manifest.json": "99fbaf784691664349b942c297fc27b505b8912ed95add51f97ec8d60fb6a6a6",
+            "output_hashes.json": "5697e21f2e466419a1eeabebfff79a0e40f67526a150ab22fc29dc32b0a29e32",
+            "pilot_summary.json": "aaae2da8a36652cb23638721bdabda172ed74a04bb00fdf587e359dfe2a9efb5",
+            "postrun_audit.json": "211f30e178aa83ec678daec66ea7b05e02a671ebb9b38c8207b15842b6cdd8f2"
+          },
+          "scene_id": "f2dc06b1d2",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f2dc06b1d2/seal.json",
+            "sha256": "0a5ead9505814e3d922e9141ef1874a837393239b8b6ad7128ef97c1b3013495",
+            "size_bytes": 13376
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f2dc06b1d2/controller_shard.json",
+            "sha256": "dfcf6363cd92debcf18f615a7fc868dde4b287d06d9f550329145dd41c0a677e",
+            "size_bytes": 233538
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f2dc06b1d2/job_ledger.jsonl",
+            "sha256": "b19c00c89ddb22ab25e5b8ca0ae23452f63636b0f426c6e0768b65b3d640405c",
+            "size_bytes": 46938
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/f2dc06b1d2/seal.json",
+            "sha256": "6b2c43f2f7d98f356181279ee79865507bfdcb5844e5e7136095fb80efe747e9",
+            "size_bytes": 1780
+          }
+        },
+        "planned_objects": 17
+      },
+      "f3685d06a9": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f3685d06a9",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "87202668d9ed471e12a217350470f261b2eda14d836830546c233be8dd55caf7",
+            "input_manifest.json": "a5f8b9cd7b10a606a05aa178b1db0387552bb0db34cc82f3e94aa5903274effa",
+            "output_hashes.json": "9d1b4c8d8a020df6024471c221ee7b86d9452ebf98b580b7b006aa8ab066322d",
+            "pilot_summary.json": "ab1b3407423a764becb68303a97284d700f8df61fdfd76719e9b245072824902",
+            "postrun_audit.json": "843f7849eafed5b9b0f94eb350eff84250b979fb47a6b547e79f314bb019361e"
+          },
+          "scene_id": "f3685d06a9",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3685d06a9/seal.json",
+            "sha256": "a79110d304faf5e2b94575a1ea9520be7669b5656da3f7857c9c582b89868f11",
+            "size_bytes": 1068
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3685d06a9/controller_shard.json",
+            "sha256": "61f5a63b11755f9b4b5bc18e4c091158ccaaadcefab319a5056500bf7503ad61",
+            "size_bytes": 15473
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3685d06a9/job_ledger.jsonl",
+            "sha256": "377818551cff98176fa895c2e75bf918162f50676d5aae8b6f842b2dcaea7a0a",
+            "size_bytes": 2870
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/f3685d06a9/seal.json",
+            "sha256": "e1fc1bbef07df1558d00a60e5ba70bc7001ba90058cf39c058d03b1d8618d73e",
+            "size_bytes": 372
+          }
+        },
+        "planned_objects": 1
+      },
+      "f3d64c30f8": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f3d64c30f8",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "6396e2a64ccef5784ded97f08e797bf308e5c5ffca8f2fcdf4e2731706774b3a",
+            "input_manifest.json": "aa987d0ef30248bfc7cd8eea6a9e312c7ce6b301fce8494de3ad649720474512",
+            "output_hashes.json": "2e6e74e3447cfd469c917788763c6923fbd2d9d039804e0dc640b61b577d916b",
+            "pilot_summary.json": "0464c1e739e223dcf32a3bd3987841ab70b506dea50a86988f9314c0f9dc0373",
+            "postrun_audit.json": "f0455f1f10ea84e98d588084edc1227da2f600d8106a54ee8da22a1c44b13196"
+          },
+          "scene_id": "f3d64c30f8",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3d64c30f8/seal.json",
+            "sha256": "e1671fc2f9250a816bc79cb0128e081143056fceade87265fb60d5c1f261d362",
+            "size_bytes": 27987
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3d64c30f8/controller_shard.json",
+            "sha256": "ca9f4a1db7018fae37e27bc32d1b9409fd920748bba759e3b69ec7f443efb9cf",
+            "size_bytes": 512230
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f3d64c30f8/job_ledger.jsonl",
+            "sha256": "e73c252f483351d0551517af1adbb9ef8279e317ab8325b1672f4f8daf3b9aee",
+            "size_bytes": 102260
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/f3d64c30f8/seal.json",
+            "sha256": "483f415ad8568921216b6c949080a921f2e8dc2270822da148bb5cb148f45b68",
+            "size_bytes": 3452
+          }
+        },
+        "planned_objects": 36
+      },
+      "f9f95681fd": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f9f95681fd",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "ecc4493965f6b02fa6b5a3a1bf1c917ca5e40af6b4d01c4dbcd3fcde63a9f352",
+            "input_manifest.json": "4fb58652b2e19aaf26572241895142675010130d9a9fb94f554d17a905a50fb9",
+            "output_hashes.json": "673ec1177590a7616e3eebb792a94416fdabf5f78126ae99fb2b8c0016806e81",
+            "pilot_summary.json": "781261271b6a2094fc4180ba3b06f33dc7bdd1cdc59daab05e921d203ed92a50",
+            "postrun_audit.json": "542ede871ad06b80076e95926e1fa9ab240557ca193326b7337e5992ee4ef0a5"
+          },
+          "scene_id": "f9f95681fd",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f9f95681fd/seal.json",
+            "sha256": "b66638adb655fa5aec9a7780510c6ab73fc3aade93b74637d126d5c53154c581",
+            "size_bytes": 24128
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f9f95681fd/controller_shard.json",
+            "sha256": "4bdc1363fd834aaaa062d256d6ee72d7b791c1343c2efe9a57ad141479b71766",
+            "size_bytes": 387076
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/f9f95681fd/job_ledger.jsonl",
+            "sha256": "11ab617282b4feb9f1c79d1f8ec3e68f3130d67cc9e990bd723b2d6f22bf84de",
+            "size_bytes": 84946
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/f9f95681fd/seal.json",
+            "sha256": "80cb6aadfdc87d51feec1fd55629590c05a6a872f04a7be457482f3a6575cb3c",
+            "size_bytes": 3012
+          }
+        },
+        "planned_objects": 31
+      },
+      "fb5a96b1a2": {
+        "descriptor": {
+          "discovery_directory": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/fb5a96b1a2",
+          "discovery_hashes": {
+            "all_jobs_manifest.json": "f7e2a6691d0cb393ea9f5402ddd5ffc2878843b9829d106e1becd4219e960f93",
+            "input_manifest.json": "a4c21bff8d1b17683ac4ef175c942222cc7d307e772e290c9972e0643a601d3d",
+            "output_hashes.json": "6425a4ccbb0af910e5547106e546c360c492f6c81aabc660191872fefc839b7c",
+            "pilot_summary.json": "e858d62a07252e925c04bcb2886e02520aeb298dfb944bf34647a01493800808",
+            "postrun_audit.json": "5a660ce95ad846d484713d51ebaf2c123e526868c13c017dd375282c37e60492"
+          },
+          "scene_id": "fb5a96b1a2",
+          "schema_version": 1
+        },
+        "identities": {
+          "control_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/fb5a96b1a2/seal.json",
+            "sha256": "af44f4b153fb14f69e17431b676ad84aee947d99ff4c508e70442c6847d7431e",
+            "size_bytes": 68736
+          },
+          "controller_shard": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/fb5a96b1a2/controller_shard.json",
+            "sha256": "d9cbf536de1470db0670eb2311cc42c91a2a108e9ebdb8c055e64c7ebfa04cfe",
+            "size_bytes": 1202275
+          },
+          "ledger": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/control/fb5a96b1a2/job_ledger.jsonl",
+            "sha256": "2b2771e4cb97e8ad72ab43c1bfa7314236bcfabacd87ff7838a81313b07f2e94",
+            "size_bytes": 250038
+          },
+          "observation_seal": {
+            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/observations/fb5a96b1a2/seal.json",
+            "sha256": "4f556470099f28b91ab74e425731bd2015821d4133642c6210c234c40d21665f",
+            "size_bytes": 7676
+          }
+        },
+        "planned_objects": 89
+      }
+    }
+  }
+}

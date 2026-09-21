@@ -1,0 +1,90 @@
+# Synthetic ground-truth fixture for tests/test_robot_alignment_synthetic.py.
+#
+# All noisy correspondence/trajectory observations used by the tests are
+# DERIVED at test time from `seed` + `ground_truth` + the point layouts
+# below (not baked in here as pre-computed noisy numbers), so this file
+# records the fixture's RECIPE - deterministic and auditable - rather than
+# a large noisy numeric blob.
+#
+# Ground-truth convention (matches agents/recon/robot_align.py exactly):
+#   x_dst = scale * R(rotation_euler_xyz_deg) @ x_src + translation_m
+# where R is built via scipy.spatial.transform.Rotation.from_euler('xyz',
+# rotation_euler_xyz_deg, degrees=True) (extrinsic xyz, scipy default).
+
+seed: 20260816
+
+ground_truth:
+  scale: 1.075                                # 7.5% scan-scale drift (plausible SfM)
+  rotation_euler_xyz_deg: [4.0, -7.5, 33.0]
+  translation_m: [0.42, -0.18, 0.05]
+
+# Marker layout in the SCAN frame (src side): a ChArUco-like flat group
+# (z=0) plus five off-board survey points at increasing height, spanning a
+# realistic ~0.6x0.6x0.44m robot-workspace aperture (not a tabletop-sized
+# board alone) - non-collinear AND non-coplanar (spans all 3 axes), and
+# wide enough that 3mm marker-detection noise still resolves rotation well
+# under the 0.5deg bar (rotation precision scales with noise/aperture; a
+# too-compact board alone leaves rotation under-observed even though
+# scale/translation still recover fine - see plan/04_METRIC_SCALE_ROBOT_
+# ALIGNMENT.md's tolerances). Last 2 entries are held out by the recovery
+# test (never used to fit).
+markers_src:
+  - [0.10, 0.05, 0.00]
+  - [0.70, 0.05, 0.00]
+  - [0.10, 0.65, 0.00]
+  - [0.70, 0.65, 0.00]
+  - [0.40, 0.35, 0.00]
+  - [0.20, 0.15, 0.22]
+  - [0.60, 0.50, 0.34]
+  - [0.55, 0.15, 0.28]
+  - [0.30, 0.55, 0.44]
+  - [0.15, 0.45, 0.38]
+
+noise:
+  correspondence_sigma_m: 0.003    # 3mm marker-detection noise (nominal)
+  outlier_frac: 0.20                # for the robust-solver outlier test
+  outlier_offset_sigma_m: 0.50      # gross random offset injected on outliers
+
+# All points on one line -> AlignmentDegeneracyError expected (rank 1).
+degenerate_collinear_src:
+  - [0.00, 0.00, 0.00]
+  - [0.10, 0.00, 0.00]
+  - [0.20, 0.00, 0.00]
+  - [0.30, 0.00, 0.00]
+  - [0.40, 0.00, 0.00]
+  - [0.50, 0.00, 0.00]
+
+# Trajectory confined to a ~3mm box -> AlignmentDegeneracyError expected
+# (insufficient camera/end-effector motion baseline).
+degenerate_short_baseline_traj:
+  - [0.0010, 0.0000, 0.0000]
+  - [0.0000, 0.0020, 0.0010]
+  - [-0.0010, 0.0010, 0.0000]
+  - [0.0020, -0.0010, 0.0010]
+  - [0.0000, 0.0000, -0.0010]
+  - [0.0010, 0.0010, 0.0000]
+  - [-0.0005, 0.0015, 0.0005]
+  - [0.0015, 0.0005, -0.0005]
+  - [0.0005, -0.0015, 0.0010]
+  - [-0.0010, -0.0005, 0.0000]
+  - [0.0000, 0.0010, -0.0010]
+  - [0.0010, -0.0005, 0.0005]
+
+# Round-trip probes: forward-then-inverse under ground_truth must recover
+# each of these exactly (to floating-point tolerance) - covers the 3 scene
+# modalities named in plan/04_METRIC_SCALE_ROBOT_ALIGNMENT.md's test list.
+roundtrip_probe:
+  point_m: [0.83, -1.21, 0.44]
+  pose:
+    position_m: [0.20, 0.40, 0.60]
+    quaternion_wxyz: [0.9238795325, 0.3826834324, 0.0, 0.0]   # 45 deg about x
+  camera_w2c:
+    rotation_euler_xyz_deg: [10.0, -20.0, 5.0]
+    translation_m: [1.0, 0.5, 2.0]
+
+# Pass/fail numbers straight from plan/04_METRIC_SCALE_ROBOT_ALIGNMENT.md's
+# "Tests" section, so the test file has one source of truth for them.
+tolerances:
+  scale_pct: 1.0
+  translation_mm: 5.0
+  rotation_deg: 0.5

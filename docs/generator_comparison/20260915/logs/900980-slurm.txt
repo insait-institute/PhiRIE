@@ -1,0 +1,24 @@
+{
+  "task_id": "gc32-reconviagen-smoke-recovery1",
+  "task_sha256": "31f629e1e50f9f31d2d0661c03770a540e6cfd0927a8320ba2bb8ad8f63443de",
+  "source": {
+    "commit": "d42922b4527eeaa8fc47a280ab51815bc5b3f9c9",
+    "root": "/group/worldcept/code/SimAny/worktrees/generator-comparison-results-20260915"
+  },
+  "artifacts": {
+    "batch": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-smoke-recovery1/results/gc32-reconviagen-smoke-recovery1/component/batch.json",
+      "sha256": "872f79ffe7b431be6bd40658dbfefb69951396fc4804a12324e96a1587d3fe4b",
+      "bytes": 9526
+    },
+    "integration_receipt": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reconviagen-smoke-recovery1/results/gc32-reconviagen-smoke-recovery1/component/outputs.json",
+      "sha256": "45fe7c04028909929ae9d00f255b6ec409f3be5a78a2170e43b1648f0b026207",
+      "bytes": 306
+    }
+  },
+  "status": "COMPLETE",
+  "job_id": "900980",
+  "component_execution_only": true,
+  "wall_s": 118.2608018440078
+}

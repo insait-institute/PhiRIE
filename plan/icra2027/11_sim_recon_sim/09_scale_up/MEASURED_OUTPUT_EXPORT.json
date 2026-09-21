@@ -1,0 +1,3017 @@
+{
+  "kind": "verbatim_generated_output_export",
+  "metric_recomputation": false,
+  "paper_numbers_hand_edited": false,
+  "dev_boundary": "complete200-unit DEV and original generated release",
+  "test_boundary": "Final native primary and L1 populations complete under explicit audited failure classification. Historical incomplete snapshots preserved as historical evidence.",
+  "raw_videos_models_captures": "remain in original shared storage, not part of this Git export",
+  "files": [
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "3b1a710da411c3b6487676a99f95233bf48bf568141f2ad874e9ef37cb83ece3",
+      "bytes": 3034
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "963367fd07dd0380e60572fd7b81ceddaf579d2735fab1346ed91bcc86f1e54d",
+      "bytes": 4807
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "d572ad9639a9c61603f8d2b7a4bab3be76b32982f07bd5cfcb9c311ccab2179d",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "8fd319d359cde204dd9526c4ad59eef95cea4b3879ac3cfdf2b915de93906046",
+      "bytes": 3099
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "889a95cc6cdd86ee5ffafdc18ff76dc64907e02df5f4f07c41a3a78a80b5e093",
+      "bytes": 5616
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "9d48d52bd25d78b22a22e2c7b91e298b3c0b2fd28e849c4097b903046440d59b",
+      "bytes": 3459
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "32a9c556a9a27f4d17503311efcddd30c3533c255f7900368e166973e96562be",
+      "bytes": 1478
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "287b9b8c9cdfbb4375e6b8129f1413e16c0bd16332ec7601e861dc9560613afe",
+      "bytes": 4059
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "92939716e4573b4a3b3cd7ef576fa4e49823248990e686bd03081fa0908e0293",
+      "bytes": 1235
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "3c4f92544aa2941932409037dcb1959992d457182dc97993cc671a00aa320bc6",
+      "bytes": 1092
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "273779e940a558e9052c7d4f5253776de02ac7485b4a489420c1fb9a3fd16a6f",
+      "bytes": 2511
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "0b99e330119433b3966f90c9f9f77bb26eda4870f360817ee48e7f96bb1d93cd",
+      "bytes": 468
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "5aec2389daec015025ae29e66811d34e03cfd31467893d2a90e29aaaf9e58311",
+      "bytes": 403
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "0aca54e12d24f7c68c1e1a8f205547757d5aa40438367b9d5958a7dd5d8620cf",
+      "bytes": 1771
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "300f08f5cf56082ca0ffd575888228209a17dae79abfe37c0116bb81e23ee691",
+      "bytes": 604
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "7117d86bc31e54fdae5afb970abb663f6e2a9d86710eae031e0977bf0d80b21c",
+      "bytes": 8874
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "9c0adb243f74b50897d6d6a84429cf95f19743ce9d79cc582b6e024dc2578868",
+      "bytes": 3794
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "a290ad06c3798ef2f0d23fb970e0616a4c36e60add8388e8721b9f1b68d10e5f",
+      "bytes": 7419
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "ebbaf0bf4a281c4a056e42ba1f090b65c86394725026e7712f714d932850f42a",
+      "bytes": 4187
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "ff25d7cce77d98ab4f5a684323fa33c5ff63a17d2d027359aac340a724c47bc1",
+      "bytes": 1793
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "cfcf8b8197934098855d824fdc20d10c0ee7539f4bbe119814ef7e25f35f7104",
+      "bytes": 3468
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "803664361d336527479f5a6431f98917edb84d9fe45e0d161985133fbd915da8",
+      "bytes": 511
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "103433b54d9c73644758c08c8435acf4ced466597b23f8402648ea9e862ec53e",
+      "bytes": 4839
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "6d7b3033c95097625c6feddb31e5cfcf1f5352eb1b6594d8e8c4765f97b16352",
+      "bytes": 11742
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "55e2ae73e8545256f2666d9041a2d44a0e6a5c6453232151374e683f4a71e295",
+      "bytes": 2092
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "863a27810348e6b1430db62688d0722383fffc89634b51f4b8fcfac7d7cf5d43",
+      "bytes": 3479
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "765615d15ac1e5c301af9a6c299c089244092c7cdf235e655ce45751b7e73fac",
+      "bytes": 5384
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "ec239f8ffddbbf92114db39735408f27c3a9b5017d7f0da2c0e6f89873ebaa4d",
+      "bytes": 3830
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "18e1944e4e0a8ff7269122b190a2c42ddc829b34ef76faef8bca5f7a41fd07ef",
+      "bytes": 9546
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.csv",
+      "sha256": "1e8c02933f2c32c564b27261d664471bf3b9dbbed690717a859d8f912c050390",
+      "bytes": 3447
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.json",
+      "sha256": "4d448905247138a956ed66994d355d8172da8d2f8929ba982e48e6fe8a86cd3e",
+      "bytes": 6176
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.tex",
+      "sha256": "8f8e39b67a66d1b4008b2ca2d2de7c3f997b19ae8ff1f005fa101c692266f8a4",
+      "bytes": 642
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.csv",
+      "sha256": "b2f2c711a620479e7e5b945696da8ee68dd946a32830d125ec6b6f5b1d609832",
+      "bytes": 12592
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.json",
+      "sha256": "fdc8d9d5839de7f9811db200fc90f011afe90596f07a4ddb33dba3d5f8abe5f3",
+      "bytes": 22735
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.tex",
+      "sha256": "9055af5016739f9177301fbdf61ee1af795e14ac0dfd794a1c7fee5e9b2ffeee",
+      "bytes": 1430
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_appearance.tex",
+      "sha256": "3e4ac246ccc10eff80cf7b10d73abc3bb23ce8081b5287307dd750eac80df8c0",
+      "bytes": 617
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_results.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_results.tex",
+      "sha256": "05f1da15bdcb6c93f796cb1de8a7408425e1e2d7f59eccb3b6ec460baa7d557c",
+      "bytes": 543
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_section.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/native_dev_section.tex",
+      "sha256": "f446950b92d78f8e75abb7df4f54855c448e3c983ccdd9d948d6d491997046fe",
+      "bytes": 2469
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "56801e16397a5d836ab24e4c8c5ee34d70a900f78cfd0401fd6e220ecc573738",
+      "bytes": 427493
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "65f91d3bd1638b56b3287107292924241647640d947ba5192f04df98c787c374",
+      "bytes": 2502
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "ae2f90fb7e82809983c1cece5f656b44939389d5f5158005e1e481e41ede52a8",
+      "bytes": 7454
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "46c2994eded6d333b146f0fd3c5a4f388b26b37cb23439b5ee47ab6d3111db44",
+      "bytes": 3245
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "72d46234d0a5921a488f06ecb24727918d584e68dc3fd1854560d0159a3c7d4f",
+      "bytes": 431493
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "ee6f4e9bc967145ca427ad4d6a4983ada69e87834e880fb2b8472cbd377a7dd8",
+      "bytes": 216
+    },
+    {
+      "path": "outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-f1ef144-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "56801e16397a5d836ab24e4c8c5ee34d70a900f78cfd0401fd6e220ecc573738",
+      "bytes": 427493
+    },
+    {
+      "path": "outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/coverage.csv",
+      "sha256": "b17ec97645e51e52241875b986de7752cc63b98af162c8a9d4fff935ab4a3a34",
+      "bytes": 364
+    },
+    {
+      "path": "outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/episode_ledger.jsonl",
+      "sha256": "220e1c47061cae08553c2812fb1ab383d611c9caee1d58747fbae6701e5cc69b",
+      "bytes": 1241260
+    },
+    {
+      "path": "outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/failed_units.jsonl",
+      "sha256": "25ddb8af3d4e6301fa3f460ba5b81bf6fd2a4ab953934f9de862a43cc22eccc3",
+      "bytes": 812933
+    },
+    {
+      "path": "outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-56d3ab2-v1/sim_recon_sim/scale_up/release_snapshot_002/merged/status.json",
+      "sha256": "006ddd81974369b23078e5a8454d6fa74ee29ca7d4591661d05cb537e500a0cf",
+      "bytes": 1464
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "a47bd8787f4c673b1afaa658cda1a59d16d794248062e22361b666bcae6b66c3",
+      "bytes": 1808
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "bc435aaf2f5d98da69f0acad7697168c5f328598f173008075e5d628a9494b88",
+      "bytes": 3489
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "e054eff8a75dda0d2230f881182a5158665977aa2c0e19c48f0ff83c2d89b0f1",
+      "bytes": 547
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "ab57dd86f73b4dfadc7ba81eb5ed571f8a5b1da43c4841c0cd651f6b165da5fa",
+      "bytes": 18499
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "36f8b39b700603e660cf82540ae1a0a4dbdd04a8ae036c4c1da637f4a4e6e360",
+      "bytes": 24634
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "a538ece6bffb0713f792a4577533976f4de01a8029f0484b5922e7980ba95ad6",
+      "bytes": 19132
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "b976a046762ab67a4ef162359aea52b7d2b8ef3334b545304295e21c2c2fdf61",
+      "bytes": 5431
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "312152a795fcddd3eb5e23f6e231d260e502f24374b802c725664b8ccf94deab",
+      "bytes": 7333
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "b9370cd70b3720b18e1142ce6cc5fc123f763710465d3878746264a0641d3e64",
+      "bytes": 5735
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "68c84a6c8db7427a405656b53be17184dabc273243ca63db84c5788be768848e",
+      "bytes": 1433
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "0f4125a426e6070a48f8324d4941c7c0ec0d7863497ba8513fd6ecfbceaea684",
+      "bytes": 4102
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "bd559dfb97815d4c98b6a3fea5824b6b86575ab5177350e141d02ed37e2918eb",
+      "bytes": 1146
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "6f258a66ffcdee9e83ab89ae1543c8b3e707bae311ca2b7c0e1b6843a60acdc9",
+      "bytes": 1180
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "806c65276ddf82a3b13dca3e75995371d49e6064239ee02d845ea4df77dbad66",
+      "bytes": 2753
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "7d9b88bfd61e0b1a3bd9c2638bdbf0c493cf4a362af6b2fa84ac7a5594ea0006",
+      "bytes": 473
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "5aec2389daec015025ae29e66811d34e03cfd31467893d2a90e29aaaf9e58311",
+      "bytes": 403
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "0aca54e12d24f7c68c1e1a8f205547757d5aa40438367b9d5958a7dd5d8620cf",
+      "bytes": 1771
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "300f08f5cf56082ca0ffd575888228209a17dae79abfe37c0116bb81e23ee691",
+      "bytes": 604
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "bddee990b1f80a6409ce6c3f1672143fbd14218d36158053192a6edb57704d8a",
+      "bytes": 8935
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "0079d8107b7ae7f23eeb0830f56b0b5fb79bcfad2427f2331bb73e364a346fdc",
+      "bytes": 63478
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "6e1d5132446b864c9a2074daa256645dcd317a67e2d22faac2e5f7b968e934e9",
+      "bytes": 150840
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "a736255a9b2e5d3e92600cf83349e805466e73f57fb68c44a183f29d4a3a7b0d",
+      "bytes": 69660
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "0edb8559ebcc8dd79b43957dd9fde61d2e955c4568b81df84d40aad7f0359813",
+      "bytes": 3374
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "f3a32bedc27ed60805abb8b932b1f3147b725e817e3bc538b3556d30dc4bf695",
+      "bytes": 6377
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "26be21c88ddac28c85447c84eb30fefc70058aa643572da9b4982b3352946149",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "5ad735e7b367cb45a59fc5d05f5cbb6493cfaa67dcec8766a6288aa819c3be20",
+      "bytes": 119270
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "caeb27132f0c2ffa8c2bae83a6facebf58edd6ded59bcb38cda93c70a9b54493",
+      "bytes": 206303
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "64bfbe3205b0f0ababa8366c4d4d274c9d05700fad0fac3ea21f1860e60325b8",
+      "bytes": 9624
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "204f1246900ddbb405ff17dbf1769141bb65f83e1d1cf4368aaf1cabbb841313",
+      "bytes": 142117
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "0add38454cc8f9f81b73e53ae4560d8ffd2cfbf181cee15b1aa6685791dc84d9",
+      "bytes": 2462747
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "1c139fcf4ea940b32deb0314f870e321adaaf50cfeed455af88c4eb793606efb",
+      "bytes": 3592
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "7e028a9e3f654cb03c797dc4a91fd145aadf639e7f273377a5dea7c2298b6e0e",
+      "bytes": 11277
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "f9a1d5a10352f788ca68c8357f70b4e7ed8faef647e181a21f21e70053600b99",
+      "bytes": 4646
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "dbbc77cc288d0b0c0dded9a776e701966c9a2dfdf462a053d881e7ad44984453",
+      "bytes": 2466438
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "1e8cc8986c05a2f0effc32aea9760670bbceefd736f30ace3575def1872ed46c",
+      "bytes": 212
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "0add38454cc8f9f81b73e53ae4560d8ffd2cfbf181cee15b1aa6685791dc84d9",
+      "bytes": 2462747
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "89512e7150fafc2cb167b95d9e6d718ed0f89a66fcb69f9be7289abbc756ce94",
+      "bytes": 4355
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "14d26d8318eec92fbfb97b0b003ea947506c445f2432743c92b938d607c69d1f",
+      "bytes": 8768
+    },
+    {
+      "path": "outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-630ee6c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "38377e3b533fde53b359998621ed8b8ad233526b338543a81d21703de73cc84c",
+      "bytes": 4929
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/coverage.csv",
+      "sha256": "adc23fca50b6d35396fbcca80da1d82e1d9cceb8fbde83b4d6018031bb3c840a",
+      "bytes": 470
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/episode_ledger.jsonl",
+      "sha256": "d7fce926287e1f2687288e40b51f03290dbd8b85b24c572e3e5e4fa0b8251f36",
+      "bytes": 9225013
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/failed_units.jsonl",
+      "sha256": "6f1e6cb49bb630cb53001598e4ed484eff41d1f4d74003e0f5d714111dfe1975",
+      "bytes": 5121397
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_006/merged/status.json",
+      "sha256": "c8b165438bbedbffc93a204495b83d80f4f039c17dd1b157dbd3e9bac481c1dc",
+      "bytes": 1593
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "02a2f3f29ff5e9dc0f684bd02ae418bdf76bf2b2b758e73f0fb2cdd56bb05c85",
+      "bytes": 167
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "765402737675707e60d0f7fc2d06820b0b146e2ce69c7ea674f7e604891c3432",
+      "bytes": 828
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "505ec3af5bb9b7990edaba7dfe57543c1a4741bbc11923e2a06486af2ce7c08b",
+      "bytes": 292
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "7faaacbe5e5eb58b303abdeb60e716a9b932db320f951344469e3603c7980f9e",
+      "bytes": 4718
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "3dd42e745a3c7b368295cc6b752a0086381726ec15d83d128efa5e82b3a6880d",
+      "bytes": 9837
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "56e928392a0d0deadde70c6988ad4cc0b6543fdbfe97c791db4f9926195a7fb3",
+      "bytes": 5363
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "2160b4a843fd8e59b0067dbc1681b8ca9f93f4947a978addbe9b6acf0b43f3c2",
+      "bytes": 1676
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "82a2d245f2bd0df67c5847b11f81b3677ca766cc580598e03f6fd0440cd7a726",
+      "bytes": 3338
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "e596302d8dc44d5ff22ce607dc0a0a92dc7e801470674aba38a1dc63cd093b2a",
+      "bytes": 1988
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "32a9c556a9a27f4d17503311efcddd30c3533c255f7900368e166973e96562be",
+      "bytes": 1478
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "287b9b8c9cdfbb4375e6b8129f1413e16c0bd16332ec7601e861dc9560613afe",
+      "bytes": 4059
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "92939716e4573b4a3b3cd7ef576fa4e49823248990e686bd03081fa0908e0293",
+      "bytes": 1235
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "0b112d1a9ac5854144c5e317cdf51a4bfe70583b644c94d0cfec379bd612e9b3",
+      "bytes": 1175
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "18a13cd891643c5141debb375e076ddbf40aa478bd70e036dee4a05509606810",
+      "bytes": 2736
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "0b99e330119433b3966f90c9f9f77bb26eda4870f360817ee48e7f96bb1d93cd",
+      "bytes": 468
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "sha256": "3ce411db60f7e164229fca1421ea3bd74c95ab3c9ed96d2e35c5b1cca4476917",
+      "bytes": 672
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "sha256": "83c9c2ceccebef026ebf60f8fdf3dbb78d19d3dd1f24ea2987b4e68a33139543",
+      "bytes": 937
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "sha256": "db111cebd75f5715d8d76a3bbcde54cdad4bd8e0ac3ef2ae0290c6867e6a255b",
+      "bytes": 309
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "1536c8db748f095f5ba159b156659c5038533b62d16e7f733bef81a486942301",
+      "bytes": 1280
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "29834513cb539833d26fbd0a5a00cfdf5963187c9f98f551657fa9c0ab366376",
+      "bytes": 2234
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "b3d0e133656c797e737e10352092cf48dd748bfa03af88f1fc69f9408fec434f",
+      "bytes": 438
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "sha256": "8f8ce9797b20319f7025bfa3b4784a45446f19c92c474527895ebbbf87b76942",
+      "bytes": 840
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "sha256": "f093ea2813ca2178584b80cf638d45e4d275882b4519e817a9ee300feae524cd",
+      "bytes": 1139
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "sha256": "c4b4dccd8ef7b19e8a1264aef25a5983e3579eb264c9902e00edcc7d54baa478",
+      "bytes": 286
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "7117d86bc31e54fdae5afb970abb663f6e2a9d86710eae031e0977bf0d80b21c",
+      "bytes": 8874
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "383e521b9ad03eb13843ef1ea871372c5bd3aa6b45a474facc2d810ebb218da8",
+      "bytes": 6748
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "5d9c7a4c15dafb568bdd517061ee073bfd85ebf91608b3c8a47fd9f3ba01690b",
+      "bytes": 15679
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "d19addaca15880ed1127a731b28612efbd7732215f8ad18c3c575305a1d2b9af",
+      "bytes": 7443
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "ffa4d4e8bb0d680669340984dd0f25f4e4780ab403b85394d9d7aaadcf034e97",
+      "bytes": 3255
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "88f2bac8cefc4ec6d84aa982be7849e0d6eee606dd07b11a2e0f38502b50ec85",
+      "bytes": 6266
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "803664361d336527479f5a6431f98917edb84d9fe45e0d161985133fbd915da8",
+      "bytes": 511
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "103433b54d9c73644758c08c8435acf4ced466597b23f8402648ea9e862ec53e",
+      "bytes": 4839
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "6d7b3033c95097625c6feddb31e5cfcf1f5352eb1b6594d8e8c4765f97b16352",
+      "bytes": 11742
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "55e2ae73e8545256f2666d9041a2d44a0e6a5c6453232151374e683f4a71e295",
+      "bytes": 2092
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "b0db81179b51eb44c716125db9dc021d6a3895cef0fe252de9a8a2983a4bfc65",
+      "bytes": 5824
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "11c29f2a7e757ed097012f12e2e29b97b550be84955ce3bb06ab6bce907cff67",
+      "bytes": 10223
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "2062bfbe030b95c31e57fd088c0124fcde4c301418c272a8214c52cb619d758a",
+      "bytes": 6413
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "18e1944e4e0a8ff7269122b190a2c42ddc829b34ef76faef8bca5f7a41fd07ef",
+      "bytes": 9546
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.csv",
+      "sha256": "b85f5f6fb85179d234a3fa29b5fc0663debe1adbeb699ed8e8475a7f482e0e74",
+      "bytes": 1295
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.json",
+      "sha256": "b185f8af8f89fa5fa44a55464c64d39ee4d0c2958d8f7ec528c937ab88b0deeb",
+      "bytes": 2284
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_diagnostic.tex",
+      "sha256": "9dc77b6494b958b9cfb97d6964d29615773f24a9adb4e4d61b414abd7fb83f09",
+      "bytes": 349
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.csv",
+      "sha256": "fd6c1ac2dba90e344ec2784f60f21b2335caf89f19ffb4a89dbf4c7dc65b8b47",
+      "bytes": 5509
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.json",
+      "sha256": "8b87c0a49204fbc73384ee62230864b8043fa57a076553a126ea03b9b1ee713f",
+      "bytes": 10079
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/full_horizon_episodes.tex",
+      "sha256": "23c6a437ad4b0861735e13475c673993e8272a261b955d968f633c84ecb766e3",
+      "bytes": 622
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "bb1302cd502e9df98ef924f4ff6365ebb55cff32ea3328ef58a5cc3e1f21e65f",
+      "bytes": 200219
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "65f91d3bd1638b56b3287107292924241647640d947ba5192f04df98c787c374",
+      "bytes": 2502
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "ae2f90fb7e82809983c1cece5f656b44939389d5f5158005e1e481e41ede52a8",
+      "bytes": 7454
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "46c2994eded6d333b146f0fd3c5a4f388b26b37cb23439b5ee47ab6d3111db44",
+      "bytes": 3245
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "023afa453ee7b2a7ce358c7fe7708c01337844253b41bad8bfeb483bd8b0fec5",
+      "bytes": 205415
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "ee6f4e9bc967145ca427ad4d6a4983ada69e87834e880fb2b8472cbd377a7dd8",
+      "bytes": 216
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "bb1302cd502e9df98ef924f4ff6365ebb55cff32ea3328ef58a5cc3e1f21e65f",
+      "bytes": 200219
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "c518eaff491466b38fb63661a694e08098e13f5a2746cb2224b71829f70293ad",
+      "bytes": 1884
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "88ef6326c7fdd0aabd8257d085e6aecbb49799ac5c6c19eeec840ab653551314",
+      "bytes": 3653
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "e054eff8a75dda0d2230f881182a5158665977aa2c0e19c48f0ff83c2d89b0f1",
+      "bytes": 547
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "ab57dd86f73b4dfadc7ba81eb5ed571f8a5b1da43c4841c0cd651f6b165da5fa",
+      "bytes": 18499
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "36f8b39b700603e660cf82540ae1a0a4dbdd04a8ae036c4c1da637f4a4e6e360",
+      "bytes": 24634
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "a538ece6bffb0713f792a4577533976f4de01a8029f0484b5922e7980ba95ad6",
+      "bytes": 19132
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "b976a046762ab67a4ef162359aea52b7d2b8ef3334b545304295e21c2c2fdf61",
+      "bytes": 5431
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "312152a795fcddd3eb5e23f6e231d260e502f24374b802c725664b8ccf94deab",
+      "bytes": 7333
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "b9370cd70b3720b18e1142ce6cc5fc123f763710465d3878746264a0641d3e64",
+      "bytes": 5735
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "68c84a6c8db7427a405656b53be17184dabc273243ca63db84c5788be768848e",
+      "bytes": 1433
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "0f4125a426e6070a48f8324d4941c7c0ec0d7863497ba8513fd6ecfbceaea684",
+      "bytes": 4102
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "bd559dfb97815d4c98b6a3fea5824b6b86575ab5177350e141d02ed37e2918eb",
+      "bytes": 1146
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "6f258a66ffcdee9e83ab89ae1543c8b3e707bae311ca2b7c0e1b6843a60acdc9",
+      "bytes": 1180
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "806c65276ddf82a3b13dca3e75995371d49e6064239ee02d845ea4df77dbad66",
+      "bytes": 2753
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "7d9b88bfd61e0b1a3bd9c2638bdbf0c493cf4a362af6b2fa84ac7a5594ea0006",
+      "bytes": 473
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "sha256": "ea23e42fa3e949621aa3933abbcac497f93845f30897141c57a3623107eb88a6",
+      "bytes": 670
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "sha256": "3c7d21452459d02ec9694f9de95f56944aa626c735698714b78196c74cfba5d4",
+      "bytes": 947
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "sha256": "34598a7da31efd4e227a49298172ca8bf107db93f76e0210b4707f14ac0e55d1",
+      "bytes": 316
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "0dfa7dbae09ad8a12bc7c8562380154648c80c5e205e42506658237b0a3b4bed",
+      "bytes": 1689
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "9f72d32d2d8cd36f493f68b1f9a7ae1aec87529c407277c81e2b54379074e1ea",
+      "bytes": 4221
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "d9caf142380a69691378f53bf069a04e8521347fc3a433b6eefc8ad00fd7c642",
+      "bytes": 719
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "sha256": "f41f7134e28f9344382e730b72134fa676fb398182e2640843072705e053e420",
+      "bytes": 1447
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "sha256": "fe8dfa3a19437c929a28321bb6c89af6048b2350283dce97f568bf2ea7b48cdc",
+      "bytes": 2299
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "sha256": "1be02922de308c08203fbd395658f2346036adf12eb2ad5da5bf8339bc06d0d5",
+      "bytes": 452
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "sha256": "016effc4d50684f4b2f818bcd96b114edad1e818cc1aa948d31d336e3e2eef34",
+      "bytes": 374326
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "sha256": "dba0d342cfe911f055721e121cb4acb4ce249279ec000e22eefc6ce3c04823ca",
+      "bytes": 742523
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "sha256": "490701a924b9565a31de98eeef5a7112cb3fa69cd3e007c85f6aebb6243cd91b",
+      "bytes": 249045
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "bddee990b1f80a6409ce6c3f1672143fbd14218d36158053192a6edb57704d8a",
+      "bytes": 8935
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "0079d8107b7ae7f23eeb0830f56b0b5fb79bcfad2427f2331bb73e364a346fdc",
+      "bytes": 63478
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "6e1d5132446b864c9a2074daa256645dcd317a67e2d22faac2e5f7b968e934e9",
+      "bytes": 150840
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "a736255a9b2e5d3e92600cf83349e805466e73f57fb68c44a183f29d4a3a7b0d",
+      "bytes": 69660
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "0edb8559ebcc8dd79b43957dd9fde61d2e955c4568b81df84d40aad7f0359813",
+      "bytes": 3374
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "f3a32bedc27ed60805abb8b932b1f3147b725e817e3bc538b3556d30dc4bf695",
+      "bytes": 6377
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "26be21c88ddac28c85447c84eb30fefc70058aa643572da9b4982b3352946149",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "5ad735e7b367cb45a59fc5d05f5cbb6493cfaa67dcec8766a6288aa819c3be20",
+      "bytes": 119270
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "caeb27132f0c2ffa8c2bae83a6facebf58edd6ded59bcb38cda93c70a9b54493",
+      "bytes": 206303
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "64bfbe3205b0f0ababa8366c4d4d274c9d05700fad0fac3ea21f1860e60325b8",
+      "bytes": 9624
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "204f1246900ddbb405ff17dbf1769141bb65f83e1d1cf4368aaf1cabbb841313",
+      "bytes": 142117
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "7f02bb4ce3b1d733744a16a9911cd1105274ca4064df99437a9e5e2594b633b6",
+      "bytes": 3000550
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "1c139fcf4ea940b32deb0314f870e321adaaf50cfeed455af88c4eb793606efb",
+      "bytes": 3592
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "7e028a9e3f654cb03c797dc4a91fd145aadf639e7f273377a5dea7c2298b6e0e",
+      "bytes": 11277
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "f9a1d5a10352f788ca68c8357f70b4e7ed8faef647e181a21f21e70053600b99",
+      "bytes": 4646
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "8e6537132586752454cc3818cfeb796dc87a4af72917425d9ce2e136e6b76d69",
+      "bytes": 3005129
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "1e8cc8986c05a2f0effc32aea9760670bbceefd736f30ace3575def1872ed46c",
+      "bytes": 212
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "7f02bb4ce3b1d733744a16a9911cd1105274ca4064df99437a9e5e2594b633b6",
+      "bytes": 3000550
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "89512e7150fafc2cb167b95d9e6d718ed0f89a66fcb69f9be7289abbc756ce94",
+      "bytes": 4355
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "14d26d8318eec92fbfb97b0b003ea947506c445f2432743c92b938d607c69d1f",
+      "bytes": 8768
+    },
+    {
+      "path": "outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-044e56c-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "38377e3b533fde53b359998621ed8b8ad233526b338543a81d21703de73cc84c",
+      "bytes": 4929
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/coverage.csv",
+      "sha256": "27d9056809c93be686be662ad88ec377448be7023c35c6808eab00637a68c768",
+      "bytes": 458
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/episode_ledger.jsonl",
+      "sha256": "b1ba163be52afb4da4fc82ae7e63bda6a0db99d6f8f5a00c8f629a6e43344ee2",
+      "bytes": 10860503
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/failed_units.jsonl",
+      "sha256": "81535bf026941a2a849c12c9c0b83980af82c2cb39cc02917d491461a161b1b4",
+      "bytes": 6447893
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_008/merged/status.json",
+      "sha256": "f725d45319a91444b5c3d0294dbaed815e21e9c3a6213a61687b1de1c9d68b1e",
+      "bytes": 1581
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/admission_sources.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/admission_sources.json",
+      "sha256": "28389585e4bd35daaf5c413198fbc8d366763384d3f625febc1331d1a22622d0",
+      "bytes": 331
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/coverage.csv",
+      "sha256": "9f556864968979e5c964873f068c871a5b8f8521f5f516cbef7c56eff8333d3b",
+      "bytes": 244
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/episode_ledger.jsonl",
+      "sha256": "4c9fd634ca976f5fb9b37027e12ce2302623c83a8a67896ef578d4fa61370f41",
+      "bytes": 3320810
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/failed_units.jsonl",
+      "sha256": "9e290e0fd56b139c582bac6e753694f9d91465e5bdc415212a503d0b07ba338d",
+      "bytes": 1436975
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/collections/003/status.json",
+      "sha256": "72c87978558c1321f7e8f24105e4b78ded000beddc0a0df58686de90076923c0",
+      "bytes": 910
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/coverage.csv",
+      "sha256": "59244965719f3db301fdef1bff482a0d048f573b6a0370b23a46fa0e5177e0b9",
+      "bytes": 460
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/episode_ledger.jsonl",
+      "sha256": "e1c83672234a7406791392f8d5ef38c6b69742f31ec8dc1bbcf386f229d265de",
+      "bytes": 13182654
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/failed_units.jsonl",
+      "sha256": "5b70bdc55ec166193fce2129339ab321ffd21aae2d127bc506c9e2016ed25d52",
+      "bytes": 7106669
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/status.json",
+      "sha256": "dc145fa74abee17e1e35f9cfc6cb80fc04eeaaffb1513b2472155ade3f060b23",
+      "bytes": 1583
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/collection.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/collection.json",
+      "sha256": "dabcb83c6c71cd18ffa18bdf2d2d9419526fe67dc5e394ee0190a865edf14527",
+      "bytes": 425
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/coverage.csv",
+      "sha256": "b79f2e8242c90f66e3cd2388c8a779cccd9cb5ae43ccc9704c27e58c2db0c524",
+      "bytes": 287
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/episode_ledger.jsonl",
+      "sha256": "24d4e4e19d3fd9f7db7e6281ec8a0c8a57c1a12af776d3a200692463790e67af",
+      "bytes": 3799520
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/failed_units.jsonl",
+      "sha256": "95b0ef7503221c087284a900da124359d8b7feb3ff249522195f500ab7200af5",
+      "bytes": 2036995
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0032/status.json",
+      "sha256": "e3223219c8548f73e470cffdb14d3ac793647ef51537de2276ee7ee02c39ef38",
+      "bytes": 945
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0/diagnosis.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0/diagnosis.json",
+      "sha256": "d6688263f860e2f5e52c5afbd3410ea9b62799e52fb3c40deea9d4888cf7f6da",
+      "bytes": 11920
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0_numerical/audit.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0_numerical/audit.json",
+      "sha256": "2effa479924f10cf5ca0acec555f04d577925256395ddf24a408fbe21429940c",
+      "bytes": 6069
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0_numerical/completed_block.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/diagnostics/first_declared_r0_numerical/completed_block.json",
+      "sha256": "0c9e2a63c27f37226b9eb0ede15d7d1859937946b8a856fb8fb32343b7863798",
+      "bytes": 1850
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/demo_source_manifest.json",
+      "sha256": "15bbb5ecd5eb608470dceec67376743987f14da43d898d6e289a60e85a14e6ff",
+      "bytes": 56291
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/qa.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/qa.json",
+      "sha256": "d0e05e0a9e7d2c54eba85b7668b22a896ea9c81a1e18c6d70496d5695fca91b7",
+      "bytes": 189
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/render_command.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/render_command.json",
+      "sha256": "5fbd80f336e00f9bd61d1dcfc97935b63716531958f9073fedc3541a2482caea",
+      "bytes": 1338
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/scope_diagnostic.srt",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v5/sim_recon_sim/scale_up/scope_diagnostic_demo/demo/scope_diagnostic.srt",
+      "sha256": "f8293cec66da984e5fd92b6e2cbd9a99f287a485c2378fa1002cf8ac26a4a568",
+      "bytes": 233
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v4/sim_recon_sim/scale_up/gs_depth_replay_dev/renderer/observations/observation_invariance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v4/sim_recon_sim/scale_up/gs_depth_replay_dev/renderer/observations/observation_invariance.json",
+      "sha256": "48deaaedafb3f4b0f2898605b9e74c92190f32a7997c802874dafdf1438d97d7",
+      "bytes": 9341
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v4/sim_recon_sim/scale_up/gs_depth_replay_dev/renderer/observations/validation_audit.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v4/sim_recon_sim/scale_up/gs_depth_replay_dev/renderer/observations/validation_audit.json",
+      "sha256": "dd652f00efc9e767ad8298280a04f9fd41a4d26fe145fc3ad15669f55ff76c7b",
+      "bytes": 1830
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "f08038d821b10203ccea39e1c4fd84c15e1786cb9e4747d870d635e5144379e2",
+      "bytes": 7709
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "4b009c6e71c3b8fdfcd87f055f6d040a6143ef09afa5a0d83b1b6c883352aef7",
+      "bytes": 10910
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "5ac7d6d6c6e8465480d4a4234efd11f3cb84e002681399b4d235f36754cc2d17",
+      "bytes": 731
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "ab57dd86f73b4dfadc7ba81eb5ed571f8a5b1da43c4841c0cd651f6b165da5fa",
+      "bytes": 18499
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "36f8b39b700603e660cf82540ae1a0a4dbdd04a8ae036c4c1da637f4a4e6e360",
+      "bytes": 24634
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "a538ece6bffb0713f792a4577533976f4de01a8029f0484b5922e7980ba95ad6",
+      "bytes": 19132
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "b976a046762ab67a4ef162359aea52b7d2b8ef3334b545304295e21c2c2fdf61",
+      "bytes": 5431
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "312152a795fcddd3eb5e23f6e231d260e502f24374b802c725664b8ccf94deab",
+      "bytes": 7333
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "b9370cd70b3720b18e1142ce6cc5fc123f763710465d3878746264a0641d3e64",
+      "bytes": 5735
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "62df0ca3d9840396f613b54c8ffeb631f886a4be6277495a5779636531627ebd",
+      "bytes": 1423
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "fc55b48050f04b2d86ad91e1b828ceeae414f9803d5f427c82394badb05c9d7a",
+      "bytes": 4092
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "e131e6389f78c98e164e6bfd79bbd632cbae70f9b3fd6ed8087e33e257a46d04",
+      "bytes": 1163
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "addfede95f40e75db57541e2525205fc432211616002a1aec99085024b6737eb",
+      "bytes": 1180
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "37b247c32448c43c30951351335ecf950c80551e78810dcf8d5df4fabbddd9af",
+      "bytes": 2753
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "7d9b88bfd61e0b1a3bd9c2638bdbf0c493cf4a362af6b2fa84ac7a5594ea0006",
+      "bytes": 473
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "sha256": "df78a6243c9d5ea52c3aafbf1ad669bb0f32c7a55a258dfa393c88300a5466f2",
+      "bytes": 693
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "sha256": "3e1451bc40350a926ecb973fdb0c4c61d31941b07a84ca44ea34ce0c3febc61e",
+      "bytes": 966
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "sha256": "862c1513f180d2f983d69aaf8413623e83832deb83859faa30de479bdb4ef447",
+      "bytes": 337
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "43d783daad030bd91d67f50e57a12e7cdad6207f71cf766161d48fd66bfc0890",
+      "bytes": 1989
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "257fb6f52882fa0f4fcc79fa02404bfb9c41753f657f9b5f8c9629736c39b4af",
+      "bytes": 4495
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "434b7b901bc7eeeb75a14fe2092edc2a00e4bf01f9f5f9ffc19ee40df1dc286c",
+      "bytes": 795
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "sha256": "33253e461b6092b1d1acdca52111557799d294dcb390342b45c98685dcfba810",
+      "bytes": 1522
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "sha256": "c0d67cef405b89ba5d2b43468b082fc99b365a80d1cd620871b520da8cdd95fd",
+      "bytes": 2374
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "sha256": "cf84b541a1a3ae43292eaa5f951525144d5b8ee834a81aecd802c1a3d5b9d66c",
+      "bytes": 454
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "sha256": "a9716837d676efa5205ad83cd04183dcc93e740667f9f771caccd94b5d10031e",
+      "bytes": 420908
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "sha256": "1fd48d6a9546b3d82c6fe16e9a762539c7268967a08b0af6d8a34bd50b9a08c7",
+      "bytes": 775333
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "sha256": "d30c0e80e13dc62555f207b809b6cfeea81283443e39564d82822fd022c1eeb8",
+      "bytes": 241274
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "21f343c84379f355fa8bbf12242f7233e4832494dbde800b1890db9ac5efe86b",
+      "bytes": 9046
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "0079d8107b7ae7f23eeb0830f56b0b5fb79bcfad2427f2331bb73e364a346fdc",
+      "bytes": 63478
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "6e1d5132446b864c9a2074daa256645dcd317a67e2d22faac2e5f7b968e934e9",
+      "bytes": 150840
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "a736255a9b2e5d3e92600cf83349e805466e73f57fb68c44a183f29d4a3a7b0d",
+      "bytes": 69660
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "0edb8559ebcc8dd79b43957dd9fde61d2e955c4568b81df84d40aad7f0359813",
+      "bytes": 3374
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "f3a32bedc27ed60805abb8b932b1f3147b725e817e3bc538b3556d30dc4bf695",
+      "bytes": 6377
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "26be21c88ddac28c85447c84eb30fefc70058aa643572da9b4982b3352946149",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "5ad735e7b367cb45a59fc5d05f5cbb6493cfaa67dcec8766a6288aa819c3be20",
+      "bytes": 119270
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "caeb27132f0c2ffa8c2bae83a6facebf58edd6ded59bcb38cda93c70a9b54493",
+      "bytes": 206303
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "64bfbe3205b0f0ababa8366c4d4d274c9d05700fad0fac3ea21f1860e60325b8",
+      "bytes": 9624
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "b6adf1dfa6b385766cf55cf2ee50a34351873e894f977ded7e8f79c3069126ec",
+      "bytes": 126947
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "a0dea619e543e47b79ee647ab8f238d72a4436c6569f8b31a7a97b273b278911",
+      "bytes": 3739153
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "e890878872e84e4646ed2171a917fd921eba028b3a79151d72be1707cb8ab3b0",
+      "bytes": 3678
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "a6809996d2dac0a46aa2efd758c1157df5eca8e0f95f08d3602754fbd06e7206",
+      "bytes": 11351
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "740fd55176ecaa8a7baef38c166d47062b940534694392b574148aeea26eb633",
+      "bytes": 4732
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "afee8dfb5a89463389bf5b8a1692f072bbfe1e9b93955a24b8402b3724327a11",
+      "bytes": 3743732
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "1e8cc8986c05a2f0effc32aea9760670bbceefd736f30ace3575def1872ed46c",
+      "bytes": 212
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "a0dea619e543e47b79ee647ab8f238d72a4436c6569f8b31a7a97b273b278911",
+      "bytes": 3739153
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "6204692c70c791f041d3ba2f113da8b8e97a731cf72dc49489014feded8ab6bc",
+      "bytes": 4358
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "0aed5cfd02ec1af6325f958dd0b51eebadde5403d054e1191ba980bcc1904e6e",
+      "bytes": 8771
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "2e06e896e2706eb50307fa5bae5c7d6b1b4b8a160ef261591cb8a8830d25195c",
+      "bytes": 4932
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/input_boundary.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/input_boundary.json",
+      "sha256": "4d3fc0aa16eab26d78b675dbafa5501c4290e8a0dc37eca748edfab41ce8f0b2",
+      "bytes": 6283
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+      "sha256": "e1c97cbdad8039384090b04d151b3cf15fbd9af848f459bf912eebab5509720d",
+      "bytes": 58396
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/pipeline_admission.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/pipeline_admission.json",
+      "sha256": "48806fa58c3658120cf406d778dd0b38001614bb6772e1ca3e51ad8289ed6cdc",
+      "bytes": 1018
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/pipeline_execution.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/pipeline_execution.json",
+      "sha256": "b0b8ab26e1692d992660eee37793e6dd56e3d9e37d547c5920f91f7d609010df",
+      "bytes": 480
+    },
+    {
+      "path": "outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/validation_receipt.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/validation_receipt.json",
+      "sha256": "a1df00c1539284052c57b2fa1c0187cebe1327c901dd11434082c9f71e9416dd",
+      "bytes": 6633
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/artifact_admission.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/artifact_admission.json",
+      "sha256": "01ffbbdf2a675cbc004442edf8283b525121fed840b90cdee9bef73dde197d00",
+      "bytes": 77690
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/binding_assessment.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/binding_assessment.json",
+      "sha256": "cb49ac622b0b524c93cb7e1af33613c290984e99a440137f809cc3e1fb451c4c",
+      "bytes": 16275
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/completion.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/completion.json",
+      "sha256": "cd4b27d31864b9fa185237c28e6f44e503b53e136909be47c5ed2e84d57e0f2e",
+      "bytes": 2384
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/construction/components/workspace_components.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/construction/components/workspace_components.json",
+      "sha256": "bc28a92676050bb78667a62f2012b5c28f781c34c1199fd90d9e32cacc0fd32b",
+      "bytes": 162484
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/config.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/config.json",
+      "sha256": "89a2a7f96f72ad16d54895e2b4bcb1743159e76a2ebfa3c9e6eb0147f2012013",
+      "bytes": 10472
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/predeclaration.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/predeclaration.json",
+      "sha256": "8de69c3bf0c89f662f759b1df2157be64e4f7a378f5dd96854479204cc19a934",
+      "bytes": 1879
+    },
+    {
+      "path": "outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/submission.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a394b38-v1/sim_recon_sim/scale_up/residual_obstacles/dispatch/submission.json",
+      "sha256": "3c5fa483021bbfa1452ffcbfdccb88751acee09b17afc7cebd5b905e443851a4",
+      "bytes": 626
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/diagnostics/diagnosis.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/diagnostics/diagnosis.json",
+      "sha256": "1ca3eab47ff6b311eec0d74d6b8499ede9b4c9263f18e343a50ece2f2c06dbe3",
+      "bytes": 12845
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/diagnostics/videos.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/diagnostics/videos.json",
+      "sha256": "ff28ebe15be7a6d4e09a0b915f598517df12a4c4a0f4b7f0e62e9f00b3759a2e",
+      "bytes": 1716
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/result.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/DEV_PARTIAL_WORKSPACE/episode/result.json",
+      "sha256": "7955f5e5dcaf125a7afb9ffb600e60db811b24806a9978fd89e37f4318ef1dae",
+      "bytes": 8949
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/result.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/L0_B3/episode/result.json",
+      "sha256": "e90c240f09840ebf68cd271a8b7a807f69bb939478a6923fae1264aff2e6fb83",
+      "bytes": 8229
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/result.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/REF/episode/result.json",
+      "sha256": "ea889401e0a93f89877a3ba861dbf7cbe40871b6106b6dd2d11db9c75fb427e1",
+      "bytes": 8206
+    },
+    {
+      "path": "outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/scope_pilot_summary.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-c2dc6cf-v2/sim_recon_sim/scale_up/dev_workspace_policy/pilot/scope_pilot_summary.json",
+      "sha256": "ba8cde13942d0b29151452d3e237ef692c1cfd2dd75ebb55e88e8a0a912081a4",
+      "bytes": 2928
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/coverage.csv",
+      "sha256": "8fb4760a58dfdda99a6bc76171495a2aa1c37719c078c8ed9a9e489a04f45002",
+      "bytes": 469
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/episode_ledger.jsonl",
+      "sha256": "907641595a14f61edc74b5e7df15fe1cf11c05a5e605569636bd13d8620304fd",
+      "bytes": 14246852
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/failed_units.jsonl",
+      "sha256": "9d1b04780234ddb7eff11d8d5bbf9b90493e7d3102066003cfd9da1c2d5a1e39",
+      "bytes": 7647835
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_011/merged/status.json",
+      "sha256": "758d8e5b2d9a76e638fd77f8b22fa796be45d78e62d1bb489644de9489d9ff93",
+      "bytes": 1592
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/collection.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/collection.json",
+      "sha256": "7773b84f5fb37b553e1accaf472d495a2e8186b3b1a9647f758c1fcfae421d39",
+      "bytes": 425
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/coverage.csv",
+      "sha256": "84b1e670cb41339318ad47f3dd12bbfe154c29cac7a4043f203dfbf6e687247c",
+      "bytes": 311
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/episode_ledger.jsonl",
+      "sha256": "80171ac18aa78dc0ff2a4c5ac74128a89e342e52ac3d7ed3a4d103cd4b2c0d75",
+      "bytes": 4059385
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/failed_units.jsonl",
+      "sha256": "3ed9326efa2a340c8110934ed55c466327a903c9770b1d390eacbb5ea2d68d90",
+      "bytes": 2084897
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0060/status.json",
+      "sha256": "fc86dce84d9e6563be8fb6074b11b702f5b6e40fb028dacc9d6c4dd6f33e185e",
+      "bytes": 965
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/coverage.csv",
+      "sha256": "1f192b376b5d8558c25452900431d16859c8f83dec6966e1d150b082c0da233a",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/episode_ledger.jsonl",
+      "sha256": "5aed01bb235a824d864ead2b1d59287177dd05521c4009709d82a02a9471081d",
+      "bytes": 14823922
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/failed_units.jsonl",
+      "sha256": "d46ba372771d0079c183acf59e70290c90ac3ec5371aef9cb223f4dd0d085c70",
+      "bytes": 8084048
+    },
+    {
+      "path": "outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_012/merged/status.json",
+      "sha256": "4920cd613bfd52ff7f74db2c4e02456d38e1f96ff6643f0550f0826853ec7024",
+      "bytes": 1598
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/collection.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/collection.json",
+      "sha256": "9ad728e79746e691c8e0b7f62be7e4476ef15de7b6e1eba7f08f29e641d0f341",
+      "bytes": 425
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/coverage.csv",
+      "sha256": "447f1fad73943bbb76fcfea3f4ed6ff310f0452a405065e6a9e5bccd2138a65a",
+      "bytes": 309
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/episode_ledger.jsonl",
+      "sha256": "574ad4f54dd6c57c9d53f0453b8f8c888e77432f5d8663e17ce639cd30718405",
+      "bytes": 4226929
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/failed_units.jsonl",
+      "sha256": "79d4f4d813bad83967cdb03c5af36fd827bea27f2df9b62761c1c1a62255450b",
+      "bytes": 2240535
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0078/status.json",
+      "sha256": "5a279e8e1b9daa4781bae5f33ee105933bb3596558017b5bb1c665e162777775",
+      "bytes": 963
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "sha256": "f9e89800eb3bab9d8fa73e92a637079227603c7d3039c6448e857b7e347ba83e",
+      "bytes": 2459
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "a538ece6bffb0713f792a4577533976f4de01a8029f0484b5922e7980ba95ad6",
+      "bytes": 19132
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "afde6722d69b0c964d8c2883e5c7e8434fe2334b8f2f7d18eb8136f19e0af4cd",
+      "bytes": 4880
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "0079d8107b7ae7f23eeb0830f56b0b5fb79bcfad2427f2331bb73e364a346fdc",
+      "bytes": 63478
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "f4e22351186c30b64fd8872a1d5097ef2d5a47e65d9bb93ff063d19ac7c4809f",
+      "bytes": 9081
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "e4f8182d3c3c18c2666b1fe5da8ed6667da6b79bedd0dbece192ebe1d1c2da06",
+      "bytes": 4187
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "sha256": "c508b0642d31a9def846abc92612fcd7fc91c20e68cb62c8ee927f8882bf4a4a",
+      "bytes": 651851
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "b9370cd70b3720b18e1142ce6cc5fc123f763710465d3878746264a0641d3e64",
+      "bytes": 5735
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "sha256": "2a32286e4a62a3c8e3b92b77c3186272e61c3cf3d20f1c908ebbf0da149b061b",
+      "bytes": 992
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "d97ca5811da9b74a6d1b7944eb48ac6e2603be59e33c61a60e5427e29ba18c13",
+      "bytes": 2525
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "5ad735e7b367cb45a59fc5d05f5cbb6493cfaa67dcec8766a6288aa819c3be20",
+      "bytes": 119270
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "sha256": "e721f8b094bc359a19865ac734d15d2ef0bad0f29476b31f0625e2c17a0ae2d1",
+      "bytes": 727
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "0edb8559ebcc8dd79b43957dd9fde61d2e955c4568b81df84d40aad7f0359813",
+      "bytes": 3374
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "sha256": "5c861ee3b7f995206ef65fd5de99cc4c058408c5484c3fbb0a6c873e4f75c35f",
+      "bytes": 354
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "10b9e4bb1f97a4251dc434c441b17d76b040252c1bebb03dcbdeea829caecb95",
+      "bytes": 1240
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "fe8da2e07cd26199c2fe4ded257f8b4e815043f01983d297dff91906dd0d2a7b",
+      "bytes": 11411
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "f08038d821b10203ccea39e1c4fd84c15e1786cb9e4747d870d635e5144379e2",
+      "bytes": 7709
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "sha256": "968172583153a38964710ff4d9a10878f1f16025c4db7eb006da168d4aa2f319",
+      "bytes": 1615
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "790a4293bde9b9df79740a968d98582f205973bbd23c23ca7c6a9d30f89b4e90",
+      "bytes": 4838
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/episode_media_seal.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/episode_media_seal.json",
+      "sha256": "a5ffe95c23b2ab36090c9d3a2b58abb87f141a2c33f0b4582343eb15cf373f9b",
+      "bytes": 2754900
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "1e8cc8986c05a2f0effc32aea9760670bbceefd736f30ace3575def1872ed46c",
+      "bytes": 212
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "64bfbe3205b0f0ababa8366c4d4d274c9d05700fad0fac3ea21f1860e60325b8",
+      "bytes": 9624
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "d04dac638bb1a468350c03f07a4d81451237518508799506d1036ec30097e6b0",
+      "bytes": 5593220
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "6e1d5132446b864c9a2074daa256645dcd317a67e2d22faac2e5f7b968e934e9",
+      "bytes": 150840
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "d836f47025848b5585e107c7da5b2a24d58dc9b2fa6a13d3e17e5e2099e89d27",
+      "bytes": 9247
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "sha256": "712736a9f72827b5a5df2266c8c20855ee7efec72679ae63b7ae21a32df83c41",
+      "bytes": 195341
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "6850fee5ddd26619ab21188aa61b6204e2386ba0b8c1225f04ee430ff3d291e7",
+      "bytes": 5419
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "36f8b39b700603e660cf82540ae1a0a4dbdd04a8ae036c4c1da637f4a4e6e360",
+      "bytes": 24634
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "sha256": "f93fd9c605e81d97028e630997c744db7959a223a04d4dcbe4111d6112ccea14",
+      "bytes": 538
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "4b009c6e71c3b8fdfcd87f055f6d040a6143ef09afa5a0d83b1b6c883352aef7",
+      "bytes": 10910
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/retry_action_seal.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/retry_action_seal.json",
+      "sha256": "1b050eae989141257db46ccb1528b2b680fc8ea8af24bb398722530ae0b9ad2a",
+      "bytes": 35861
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "26be21c88ddac28c85447c84eb30fefc70058aa643572da9b4982b3352946149",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "7fee19167b3ccaf41672fd7f88f9147cdc0932bba6175550b0c5c3adab69ff93",
+      "bytes": 5597996
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "caeb27132f0c2ffa8c2bae83a6facebf58edd6ded59bcb38cda93c70a9b54493",
+      "bytes": 206303
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "a736255a9b2e5d3e92600cf83349e805466e73f57fb68c44a183f29d4a3a7b0d",
+      "bytes": 69660
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "c53fb7e596c48d72bbf1900a1516287e48436c1654af7b91efe0db3824cf7a43",
+      "bytes": 882
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "93b785772951d80c2e9decdea5f43d61c41331b512030dfcdde77542391393b3",
+      "bytes": 529
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "2506eead05a712d792a63a99ae496c011fc617768d83a2c6ff19bfcc4a8c466c",
+      "bytes": 2818
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "b976a046762ab67a4ef162359aea52b7d2b8ef3334b545304295e21c2c2fdf61",
+      "bytes": 5431
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "285091febe2fc78d154a1feb4b68397a2160b36e1c90b298b163fefbd59c1ffc",
+      "bytes": 4989
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "f3a32bedc27ed60805abb8b932b1f3147b725e817e3bc538b3556d30dc4bf695",
+      "bytes": 6377
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "d04dac638bb1a468350c03f07a4d81451237518508799506d1036ec30097e6b0",
+      "bytes": 5593220
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "12053ead82e1a7841b469a7d181882bb74ba8da249ca9fd9fba92b73d10a2bad",
+      "bytes": 1542
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "4417e08b8772b4027657fbe58eb1dd06f5ab853764c88bf0de04b541fca14b37",
+      "bytes": 1257
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "5ac7d6d6c6e8465480d4a4234efd11f3cb84e002681399b4d235f36754cc2d17",
+      "bytes": 731
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "ab57dd86f73b4dfadc7ba81eb5ed571f8a5b1da43c4841c0cd651f6b165da5fa",
+      "bytes": 18499
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "1e21e7399b5aedb7d9083731a6e434487d4c2019802f6d4c35e34b7f4995ec8d",
+      "bytes": 3826
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "312152a795fcddd3eb5e23f6e231d260e502f24374b802c725664b8ccf94deab",
+      "bytes": 7333
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "abb0b3e9cab17e0a67ad6bbf4b0a130bedf66c412b8807bf519eccec0dbdac52",
+      "bytes": 107587
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "sha256": "8062d13e525abf607dbeb2de67bbbafff685f5b5c93e2d9dc0178d60539c723d",
+      "bytes": 372136
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_pipeline.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/paper_pipeline.json",
+      "sha256": "68d56de06f9dbe69259e0b495c147c4ed3fc5337a606efd4c40ee7676b7bed90",
+      "bytes": 58396
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/input_boundary.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/input_boundary.json",
+      "sha256": "9fce492000a4636e873b220f3e62cd3832f7c0e04baee2f2cce30ae3eab4ad54",
+      "bytes": 366
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/b0_import_diagnosis.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/b0_import_diagnosis.json",
+      "sha256": "dea92fc5b499d8d51c0b11590b31615b9291382268e377427d5aada4a171dc25",
+      "bytes": 5763
+    },
+    {
+      "path": "outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/dispatch.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-23892b7-v2/sim_recon_sim/scale_up/dispatch.json",
+      "sha256": "8e2348335b82656698f37c45c25a7d81f719f79c2af39d95336cf1935c52127e",
+      "bytes": 669
+    },
+    {
+      "path": "outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.json",
+      "sha256": "5056754a717ab0d43b0d8300aac30fdd37f84cf043f83a664d18ea52c6208d66",
+      "bytes": 43983
+    },
+    {
+      "path": "outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.log",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.log",
+      "sha256": "0b46cb0e628719cf6a0f83dcae960b3ef7655bbc915d18c2c1aca1df116d96f9",
+      "bytes": 736
+    },
+    {
+      "path": "outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.py",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a5ddbb5-v1/sim_recon_sim/scale_up/b0_collision_adjudication_audit/audit.py",
+      "sha256": "66239d9c554290e308b8aef764c3ca42db5dfc59c1b96dbde080cd1946ec1cf7",
+      "bytes": 8199
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/adjudications.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/adjudications.json",
+      "sha256": "79d54201fdfb5a6fa0231776e8fad6a08e8e5538ad13fbe5a2378147b3228601",
+      "bytes": 10526
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/collect.log",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/collect.log",
+      "sha256": "087572834f4557ab84f4878c25763e2df9d89d865b7519d6bd3c59111b4918f8",
+      "bytes": 164
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/completion_receipt.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/completion_receipt.json",
+      "sha256": "aec2680510276ae2642843f6bd3715c674b9a1c3d16b4f6e207dd018a87d5725",
+      "bytes": 1170
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/dispatch.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/dispatch.json",
+      "sha256": "da27c23a6ad3b2bc9d9de26c992200565323af5c9669ffe08ece4134de6f27ec",
+      "bytes": 1096
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/adjudication_receipt.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/adjudication_receipt.json",
+      "sha256": "7ccd3d0a3ef86fbabd74b41019f9daeec5edb33f8ca6794b15ea9a98ebf14902",
+      "bytes": 347
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/coverage.csv",
+      "sha256": "e86ebdaa842341037fcc627ad4374eae22d051fa9ccdcd8e1be3874cb8297421",
+      "bytes": 524
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/episode_ledger.jsonl",
+      "sha256": "1bded5bad0e86489d677a78b70e162364f9dc1d8ec43abfe30244986162639fc",
+      "bytes": 19989292
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/failed_units.jsonl",
+      "sha256": "36b57974a9602d0cbaa6ceb36897573f908c2faa3fcd64b7211c8f8f41f8ca86",
+      "bytes": 11735565
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/status.json",
+      "sha256": "74117c6ed485b8047652ba795df0392187e559d8f78badbe003e726551b5fd39",
+      "bytes": 1626
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/collection.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/collection.json",
+      "sha256": "0f31804a8c7c459b7f9fec74fd6fce74030624ccd57750ad04bde0e781b1940c",
+      "bytes": 426
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/coverage.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/coverage.csv",
+      "sha256": "ab78b1d6df1af4f5fe9bdecb089ecc413997518d23a1d81304ec63684d0955b8",
+      "bytes": 379
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/episode_ledger.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/episode_ledger.jsonl",
+      "sha256": "82f9fb4f78fac839ff2dfce7dad2121632a7b954258c576502d1b0bd3de9b597",
+      "bytes": 9110206
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/failed_units.jsonl",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/failed_units.jsonl",
+      "sha256": "d7a3c7c969e31ea334c7cc9b9b9f60eaf801f4962b48ca1277408b9537318449",
+      "bytes": 5897458
+    },
+    {
+      "path": "outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/status.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/status.json",
+      "sha256": "95a2860d0735a50c5059953f5e04af58371baf0e11d0af84c27b0586128c8f90",
+      "bytes": 1021
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.json",
+      "sha256": "f9e89800eb3bab9d8fa73e92a637079227603c7d3039c6448e857b7e347ba83e",
+      "bytes": 2459
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.json",
+      "sha256": "b96e04f5060716c6fe601e4f0e61e327757df4a871419940853daa77098d4b49",
+      "bytes": 22073
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.tex",
+      "sha256": "a538ece6bffb0713f792a4577533976f4de01a8029f0484b5922e7980ba95ad6",
+      "bytes": 19132
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.tex",
+      "sha256": "1d5a8c595e3bcb3fe344b176c967f9988c9ed8f6308c2901cac5edab91243edd",
+      "bytes": 4889
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.csv",
+      "sha256": "0079d8107b7ae7f23eeb0830f56b0b5fb79bcfad2427f2331bb73e364a346fdc",
+      "bytes": 63478
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_scope.tex",
+      "sha256": "eafdabbb2619346164c0b42e08c968fe9bad675388854f153c0582d0e83c99e3",
+      "bytes": 570
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.tex",
+      "sha256": "832e375a57d8f94bae9b6c7497f8439c78ce2add38b3494bb685e253de361528",
+      "bytes": 464
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/comparison_statistics.json",
+      "sha256": "ee4cd91179d658496b058e07e0cef0129d20d45c2be3743c2bb94128be1d6328",
+      "bytes": 9290
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.json",
+      "sha256": "dea5070d1fdbd473fe5a85a90ea9f0e6bdf884b73fcf7461f4a61b23b851ea76",
+      "bytes": 4374
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.json",
+      "sha256": "c508b0642d31a9def846abc92612fcd7fc91c20e68cb62c8ee927f8882bf4a4a",
+      "bytes": 651851
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/claim_ledger.csv",
+      "sha256": "1443c4f281e4ae55d0c0fa59607e7c56f78e36128e491d9c3813ffe003a422ba",
+      "bytes": 1314
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.tex",
+      "sha256": "dc68f26c8009bc36af70a419032c95b7f89b940530a85749a9da5bf347ce9498",
+      "bytes": 16972
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.tex",
+      "sha256": "b9370cd70b3720b18e1142ce6cc5fc123f763710465d3878746264a0641d3e64",
+      "bytes": 5735
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.json",
+      "sha256": "2a32286e4a62a3c8e3b92b77c3186272e61c3cf3d20f1c908ebbf0da149b061b",
+      "bytes": 992
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.csv",
+      "sha256": "d97ca5811da9b74a6d1b7944eb48ac6e2603be59e33c61a60e5427e29ba18c13",
+      "bytes": 2525
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.csv",
+      "sha256": "5ad735e7b367cb45a59fc5d05f5cbb6493cfaa67dcec8766a6288aa819c3be20",
+      "bytes": 119270
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.csv",
+      "sha256": "e721f8b094bc359a19865ac734d15d2ef0bad0f29476b31f0625e2c17a0ae2d1",
+      "bytes": 727
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_results.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_results.tex",
+      "sha256": "c2b344cf63f9087432faa3e52dc65ada79ca9a415fa77daa9d5b8b9eb03ec95c",
+      "bytes": 567
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.csv",
+      "sha256": "0edb8559ebcc8dd79b43957dd9fde61d2e955c4568b81df84d40aad7f0359813",
+      "bytes": 3374
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_native_controls.tex",
+      "sha256": "5c861ee3b7f995206ef65fd5de99cc4c058408c5484c3fbb0a6c873e4f75c35f",
+      "bytes": 354
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_section.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_section.tex",
+      "sha256": "863c8edb9f83c3c6a806f11d4a220885a731037ec9fecd6ec4114610b28af9a8",
+      "bytes": 8482
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.tex",
+      "sha256": "3c22ad3b91b4f9a98a2eb6c8006e7f481d5f41f6a7e01b7131e60d27e167ddf1",
+      "bytes": 1392
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.json",
+      "sha256": "2e18a1eaf4471443822d4edde50f53b3bcd71e5740727a2d7cd4ab61e24049a0",
+      "bytes": 11404
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_paper_claim_gates.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_paper_claim_gates.json",
+      "sha256": "0eb0bc7135915e6951ef7ce8c46082c961ea35a5631e3679fabef318e61843b2",
+      "bytes": 2066
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+      "sha256": "f08038d821b10203ccea39e1c4fd84c15e1786cb9e4747d870d635e5144379e2",
+      "bytes": 7709
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.csv",
+      "sha256": "968172583153a38964710ff4d9a10878f1f16025c4db7eb006da168d4aa2f319",
+      "bytes": 1615
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.csv",
+      "sha256": "3ac11d4af9a86bd1462c5ab76da3dff568b56564587116239a725cc1a4b27a6c",
+      "bytes": 6002
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/episode_media_seal.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/episode_media_seal.json",
+      "sha256": "e6c7a223cbae7e9150ca33f291de98d5ec3e2c195def5934adc3ac886ad1e550",
+      "bytes": 2775470
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/scope_inventory.csv",
+      "sha256": "1e8cc8986c05a2f0effc32aea9760670bbceefd736f30ace3575def1872ed46c",
+      "bytes": 212
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.tex",
+      "sha256": "64bfbe3205b0f0ababa8366c4d4d274c9d05700fad0fac3ea21f1860e60325b8",
+      "bytes": 9624
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/table_provenance.json",
+      "sha256": "99a2c1d5399e60a26b926d3f778b09013b192980a08491ff3af1cf65a0d50973",
+      "bytes": 5621730
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.json",
+      "sha256": "6e1d5132446b864c9a2074daa256645dcd317a67e2d22faac2e5f7b968e934e9",
+      "bytes": 150840
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.json",
+      "sha256": "8ebe0ce2975736cebb737eabceefe283eaeea14e779774e7e3f3c056797bc97b",
+      "bytes": 10401
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.tex",
+      "sha256": "712736a9f72827b5a5df2266c8c20855ee7efec72679ae63b7ae21a32df83c41",
+      "bytes": 195341
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/test_conclusion_ledger.tex",
+      "sha256": "c5ca453c86bbb38afb97c30a2feb4137306374cc35997d1c9edd5373f2ffa5d5",
+      "bytes": 6591
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.json",
+      "sha256": "36f8b39b700603e660cf82540ae1a0a4dbdd04a8ae036c4c1da637f4a4e6e360",
+      "bytes": 24634
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_comparisons.tex",
+      "sha256": "f93fd9c605e81d97028e630997c744db7959a223a04d4dcbe4111d6112ccea14",
+      "bytes": 538
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+      "sha256": "4b009c6e71c3b8fdfcd87f055f6d040a6143ef09afa5a0d83b1b6c883352aef7",
+      "bytes": 10910
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.csv",
+      "sha256": "ee7b41310a422f7ebe0bd721f628fe867abc844739ea15ca54f62bffcbb75def",
+      "bytes": 343
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/retry_action_seal.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/retry_action_seal.json",
+      "sha256": "1b050eae989141257db46ccb1528b2b680fc8ea8af24bb398722530ae0b9ad2a",
+      "bytes": 35861
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.tex",
+      "sha256": "26be21c88ddac28c85447c84eb30fefc70058aa643572da9b4982b3352946149",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+      "sha256": "dd1ee0c0be35c74225228128282c96b88b60a30345c3065be282c880a9d2e0e0",
+      "bytes": 5627678
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/context_diagnostics.json",
+      "sha256": "caeb27132f0c2ffa8c2bae83a6facebf58edd6ded59bcb38cda93c70a9b54493",
+      "bytes": 206303
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_cost_details.tex",
+      "sha256": "a736255a9b2e5d3e92600cf83349e805466e73f57fb68c44a183f29d4a3a7b0d",
+      "bytes": 69660
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.tex",
+      "sha256": "c53fb7e596c48d72bbf1900a1516287e48436c1654af7b91efe0db3824cf7a43",
+      "bytes": 882
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.tex",
+      "sha256": "93b785772951d80c2e9decdea5f43d61c41331b512030dfcdde77542391393b3",
+      "bytes": 529
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.json",
+      "sha256": "2506eead05a712d792a63a99ae496c011fc617768d83a2c6ff19bfcc4a8c466c",
+      "bytes": 2818
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/dev_conclusion_ledger.tex",
+      "sha256": "cdab97de97fa77f7c10ee8b222380629ba834a05231d433d45c0fe62dc9ed14c",
+      "bytes": 43
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.csv",
+      "sha256": "b976a046762ab67a4ef162359aea52b7d2b8ef3334b545304295e21c2c2fdf61",
+      "bytes": 5431
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope.json",
+      "sha256": "285091febe2fc78d154a1feb4b68397a2160b36e1c90b298b163fefbd59c1ffc",
+      "bytes": 4989
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/construction_stage_costs.json",
+      "sha256": "f3a32bedc27ed60805abb8b932b1f3147b725e817e3bc538b3556d30dc4bf695",
+      "bytes": 6377
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudication_summary.json",
+      "sha256": "7ad539dd501f54e825196df97b785eb6a3e534450eea79a5758fd8af6cb8d9a6",
+      "bytes": 464
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/paper_table_provenance.json",
+      "sha256": "99a2c1d5399e60a26b926d3f778b09013b192980a08491ff3af1cf65a0d50973",
+      "bytes": 5621730
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T2_manipulation.csv",
+      "sha256": "eefe3eb1b3f9787769830b9ab2e2b649d8996fdc692e8085c074ee3576ab16fe",
+      "bytes": 1793
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_import_adjudications.csv",
+      "sha256": "5ec4d643e906f3a0c10d37e31b1d58cc6bc990041e0c1aa0b1d9903ba3167ea3",
+      "bytes": 16128
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T3_verification.csv",
+      "sha256": "4417e08b8772b4027657fbe58eb1dd06f5ab853764c88bf0de04b541fca14b37",
+      "bytes": 1257
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.tex",
+      "sha256": "5ac7d6d6c6e8465480d4a4234efd11f3cb84e002681399b4d235f36754cc2d17",
+      "bytes": 731
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry.csv",
+      "sha256": "ab57dd86f73b4dfadc7ba81eb5ed571f8a5b1da43c4841c0cd651f6b165da5fa",
+      "bytes": 18499
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/per_task_manipulation.csv",
+      "sha256": "10c2d1fd16e3d019c2a7fe3ea241efca8f921aefe02fe45e85c843049d33ca3b",
+      "bytes": 3835
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/demo_source_manifest.json",
+      "sha256": "83779a99e41d78e7b84e81b96f69c92b7f83b88dd92ec3a7d609b5a36ebf77cd",
+      "bytes": 127
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T1b_geometry_common.json",
+      "sha256": "312152a795fcddd3eb5e23f6e231d260e502f24374b802c725664b8ccf94deab",
+      "bytes": 7333
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_appearance.tex",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/native_test_appearance.tex",
+      "sha256": "54e61e0784c8fac065824f50075f379b3911bb1a2ce8e6a3b74fdc74b3ea87ee",
+      "bytes": 743
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/failure_inventory.csv",
+      "sha256": "6b0108c2137af39568b24f5cd66a47ac5bfce4f3de92331ad760bbee648712f2",
+      "bytes": 106977
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_tables/T4_scope_failures.csv",
+      "sha256": "8062d13e525abf607dbeb2de67bbbafff685f5b5c93e2d9dc0178d60539c723d",
+      "bytes": 372136
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/input_boundary.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/input_boundary.json",
+      "sha256": "f0cb1f756d5cf3354efe8483365c0ca658e89983384e433757778420ed557309",
+      "bytes": 6026
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+      "sha256": "264a7d03d7915e74f329e2188adcb5e10e1975d43a68983edaf85403f656c5f5",
+      "bytes": 58379
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/pipeline_admission.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/pipeline_admission.json",
+      "sha256": "dc24a586979ec00cec8ff873c3073fb8f5eb9e0da567008ec238b98b588b5ef6",
+      "bytes": 1063
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_pipeline.log",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/paper_pipeline.log",
+      "sha256": "f4be174cd3b1dd886de41c8ada3dae99a10190f3eead69743ac9bb681b95cacd",
+      "bytes": 5627678
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/native_test_90s_1080p.mp4",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/native_test_90s_1080p.mp4",
+      "sha256": "18d83b78d2bbd658c81585db5898ad6366821c4565982f0424e5ed882e427ddb",
+      "bytes": 7584352
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/teaser_30s_1080p.mp4",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/teaser_30s_1080p.mp4",
+      "sha256": "4c24124d7729032e14ded1cb60f64d8ae591e6d9e2b526d3ce6dad52fa69e9c8",
+      "bytes": 3705738
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/static_evidence_loop_8s.mp4",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/static_evidence_loop_8s.mp4",
+      "sha256": "c4ccc3fe0467e35645535b1ea3c4c736800c2a00d01d7c832c911c5a5d715686",
+      "bytes": 152125
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/poster.png",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/poster.png",
+      "sha256": "98736a6cdbbe3e75b14e2daf7663b9b69b92c89d89b0fe2c474bc47282aff23d",
+      "bytes": 101457
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/native_test.srt",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/native_test.srt",
+      "sha256": "3bea41bd36841126b971cfc6b58a896a17ebc93688ebaa963eea3b488c222d6f",
+      "bytes": 482
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/demo_source_manifest.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/demo_source_manifest.json",
+      "sha256": "bd71c77f5f89a919cbd1040461cd32b620c413de50c16f8fc38525106c637e75",
+      "bytes": 354919
+    },
+    {
+      "path": "outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/qa.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-3b5e853-v1/sim_recon_sim/scale_up/native_demo/qa.json",
+      "sha256": "063c580c9c18ea3343f4f3e3070cff5ca4cbec92e53068610e61151699836601",
+      "bytes": 227
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/completion_receipt.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/completion_receipt.json",
+      "sha256": "46bc66289ae1c3edbbc4c40cae038a56ac0afd2ae05e03f6c980264d85ad2105",
+      "bytes": 1366
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_tables.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_tables.json",
+      "sha256": "bbd52533611ee7b42cd24c242a58e87c47d37515b351afd806e90f41f6df9242",
+      "bytes": 4373
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_per_task.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_per_task.json",
+      "sha256": "7cff5c770f085af01cdd3bc84f62db9b3c513afa1bf8bde02b0b79edd1e1367d",
+      "bytes": 11403
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/audit.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/audit.json",
+      "sha256": "097e1e304b3907972ef68b68618a59ae0dbac28cd1fe8b306237843f9ba86544",
+      "bytes": 7744
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_native_control_instances.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_native_control_instances.json",
+      "sha256": "217a536e04a63078433aeaa02ae5e15edafdd9ca8f859864395925e919d817dd",
+      "bytes": 10290
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_comparisons.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/primary_comparisons.json",
+      "sha256": "2fb3adfb5d9a537dc5150a16b7a394057a8394555103675449c9abd73f52cecf",
+      "bytes": 9289
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/admissible_conclusions.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/admissible_conclusions.json",
+      "sha256": "d48612320e5ffe898b98ea93a1b99fec8d77d2dcf028bc56bdf6d6fe58f7eaac",
+      "bytes": 9830
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_validated_lineage.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_validated_lineage.json",
+      "sha256": "a234f924f3718d23cfc20e2d73ed0e67b37d15156826c8471f84cc177b1a49c0",
+      "bytes": 882468
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_native_control_instances.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_native_control_instances.json",
+      "sha256": "06bdeebaaad56ebda7b3fbb9bd642784f98cde3309b22bc518f70812ad990629",
+      "bytes": 5145
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_tables.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/scope_tables.json",
+      "sha256": "d5c9a4ea0e4824e6729d6892da1afd32bb0207cf538ede83cc582f046351d384",
+      "bytes": 688738
+    },
+    {
+      "path": "outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/strict_adjudication_revalidation.json",
+      "original_path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v3/sim_recon_sim/scale_up/independent_final_results_audit/strict_adjudication_revalidation.json",
+      "sha256": "72da9d38a5966a9901c1f28e3cd09f6baf63b752e8008b3280e400d7953b2c96",
+      "bytes": 688
+    }
+  ],
+  "total_bytes": 267640412,
+  "additional_exports": {
+    "date_utc": "2026-09-07",
+    "dev": "044e56c-v1:complete200 primary plus3 separately accounted scope episodes",
+    "test_tables": "044e56c-v2:partial primary2400 and historical scope collection000; no paper promotion",
+    "newer_ledger_snapshots": "primary008:1405terminal/365executed/995unmeasured; scope003:470typed nonexecution/0executed/730unmeasured; not inserted into historical generated tables",
+    "population_rates": "partial TEST success/planned and paired conclusions remain null"
+  },
+  "file_count": 491,
+  "additional_exports_0416": {
+    "primary": "snapshot010:2400planned,1654terminal,614executed,746unmeasured",
+    "scope": "execution0032:1200planned,644terminal,44executed,556unmeasured; pooled controls and scope must be separated by T4 producer",
+    "diagnostics": "First declared r0 continuous scope demo provenance and numerical audit; actual GS visibility failure audit",
+    "raw_video_location": "Source manifest points to unchanged videos on shared storage; video bytes not added to Git"
+  },
+  "additional_exports_warm_complete": {
+    "freeze": "20260907-a1832f4-v1",
+    "release_sha256": "afee8dfb5a89463389bf5b8a1692f072bbfe1e9b93955a24b8402b3724327a11",
+    "primary": "incomplete snapshot010",
+    "scope": "separate incomplete execution0045",
+    "appearance": "82admitted metrics,4render identity failures; common support12/48instances24/96views; fullframe retained native context",
+    "paper_transfer": false
+  },
+  "workspace_diagnostic_export": {
+    "residual": "46planned/43built/34strictimport;0resolvedanonymousnativebindings;notfullL2",
+    "policy": "3sameengineDEVepisodes:REFsuccess359/L0B3success356/partialworkspacefailure900;allreportederrornull",
+    "raw_videos_and_physics_traces": "unchanged shared storage; hashes/source paths in diagnostic manifests"
+  },
+  "latest_ledger_export": {
+    "primary": "snapshot012:2400planned,1831terminal,791executed,1040constructionnonrollouts,569unmeasured",
+    "scope": "execution0078:1200planned,690terminal,90executed,600constructionnonrollouts,510unmeasured",
+    "generated_tables": "a1832f4-v1 and sealed04cc514-v2 retain their earlier primary010/scope0045 boundary; no numbers updated in place"
+  },
+  "latest_generated_release": {
+    "freeze": "20260907-3b5e853-v1",
+    "release_sha256": "dd1ee0c0be35c74225228128282c96b88b60a30345c3065be282c880a9d2e0e0",
+    "primary": "2400planned/measured;1350executed+1050constructionfailure/abstain",
+    "scope": "1200planned/measured;600executed+600constructionfailure/abstain",
+    "artifacts_verified": 65,
+    "paper_transfer": true
+  },
+  "final_native_ledger_export": {
+    "primary": "0886b4e-v1 strict adjudicated merge:2400planned/measured,1350executed,1050build/abstain",
+    "scope": "0412:1200planned/measured,600executed,600build/abstain",
+    "classification": "10original generic CODE_FAILED independently proven invalid frozen collision; originalshards/outcomes unchanged",
+    "raw_artifacts": "original shared paths remain authoritative; this export copies generated ledgers and audit evidence only"
+  },
+  "presentation_video_export": {
+    "freeze": "20260907-3b5e853-v1",
+    "files": [
+      "native_test_90s_1080p.mp4",
+      "teaser_30s_1080p.mp4",
+      "static_evidence_loop_8s.mp4",
+      "poster.png",
+      "native_test.srt",
+      "demo_source_manifest.json",
+      "qa.json"
+    ],
+    "bytes": 11899300,
+    "raw_episode_videos_models_captures": "remain in original shared storage; only finished presentation outputs copied here"
+  }
+}

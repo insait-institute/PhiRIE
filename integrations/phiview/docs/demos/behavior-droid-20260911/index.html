@@ -1,0 +1,414 @@
+<title>BEHAVIOR &amp; DROID in PhysicalView</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #eef0ee;
+    --surface: #ffffff;
+    --surface-sunk: #e6e9e7;
+    --ink: #131817;
+    --ink-2: #3c4442;
+    --muted: #666f6d;
+    --line: #d5dad8;
+    --line-strong: #b9c1be;
+    --droid: #00998f;
+    --droid-text: #00756e;
+    --behavior: #a8432b;
+    --behavior-text: #8f3722;
+    --live: #2f7d32;
+    --shadow: 0 1px 2px rgba(19, 24, 23, .07);
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0f1413;
+      --surface: #161c1b;
+      --surface-sunk: #1d2423;
+      --ink: #e7eceb;
+      --ink-2: #bcc5c3;
+      --muted: #8e9a97;
+      --line: #283130;
+      --line-strong: #3a4442;
+      --droid: #1fa095;
+      --droid-text: #4cc2b6;
+      --behavior: #cc6149;
+      --behavior-text: #e28a70;
+      --live: #6fbf73;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0f1413;
+    --surface: #161c1b;
+    --surface-sunk: #1d2423;
+    --ink: #e7eceb;
+    --ink-2: #bcc5c3;
+    --muted: #8e9a97;
+    --line: #283130;
+    --line-strong: #3a4442;
+    --droid: #1fa095;
+    --droid-text: #4cc2b6;
+    --behavior: #cc6149;
+    --behavior-text: #e28a70;
+    --live: #6fbf73;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-inline: 24px;
+    padding-block: 48px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  a { color: inherit; }
+  code, .mono { font-family: var(--mono); font-variant-ligatures: none; }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; flex-direction: column; gap: 20px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 { font-size: clamp(30px, 5.2vw, 46px); font-weight: 700; letter-spacing: -.022em; line-height: 1.06; }
+  .lede { font-size: clamp(16px, 2.1vw, 18.5px); color: var(--ink-2); max-width: 62ch; }
+
+  .status {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px;
+    font-family: var(--mono); font-size: 13px; color: var(--ink-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding-block: 12px;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--live); display: inline-block; margin-right: 6px;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--live) 22%, transparent);
+  }
+  .status b { font-weight: 600; color: var(--ink); }
+
+  .figures { display: flex; flex-wrap: wrap; gap: 0; }
+  .fig {
+    flex: 1 1 170px; padding: 2px 20px;
+    border-left: 1px solid var(--line);
+  }
+  .fig:first-child { padding-left: 0; border-left: 0; }
+  .fig .v {
+    font-family: var(--display); font-weight: 600; font-size: 27px;
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums; display: block;
+  }
+  .fig .k { font-size: 13px; color: var(--muted); }
+
+  /* ---------- generic section ---------- */
+  section { display: flex; flex-direction: column; gap: 20px; }
+  h2 { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-family: var(--mono); }
+  .prose { max-width: 66ch; color: var(--ink-2); display: flex; flex-direction: column; gap: 12px; }
+
+  /* ---------- commands ---------- */
+  pre {
+    margin: 0; padding: 16px 18px; overflow-x: auto;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 6px; font-family: var(--mono); font-size: 13.5px; line-height: 1.75;
+    color: var(--ink);
+  }
+  pre .c { color: var(--muted); }
+
+  /* ---------- dataset sections ---------- */
+  .ds { --accent: var(--muted); --accent-text: var(--muted); }
+  .ds.behavior { --accent: var(--behavior); --accent-text: var(--behavior-text); }
+  .ds.droid { --accent: var(--droid); --accent-text: var(--droid-text); }
+  .ds-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px;
+    border-left: 3px solid var(--accent); padding-left: 14px;
+  }
+  .ds-head h3 { font-size: 25px; font-weight: 700; letter-spacing: -.018em; }
+  .ds-head .sub { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+  figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  figure img {
+    display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+    border-radius: 5px; border: 1px solid var(--line); background: var(--surface-sunk);
+  }
+  figcaption { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  figcaption b { color: var(--ink-2); font-weight: 500; font-family: var(--mono); font-size: 12.5px; }
+
+  /* ---------- table ---------- */
+  .tw { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 620px; }
+  caption { text-align: left; font-size: 13px; color: var(--muted); padding-bottom: 10px; }
+  th {
+    text-align: left; font-family: var(--mono); font-weight: 500; font-size: 11.5px;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    border-bottom: 1px solid var(--line-strong); padding: 0 12px 8px 0; vertical-align: bottom;
+  }
+  td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tbody tr:hover td { background: var(--surface-sunk); }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .name { font-family: var(--mono); font-size: 13px; color: var(--ink); }
+  .meter { display: flex; align-items: center; gap: 10px; min-width: 150px; }
+  .track { flex: 1; height: 7px; background: var(--surface-sunk); border-radius: 2px; overflow: hidden; }
+  .bar { height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; }
+  .meter .num { font-size: 13px; width: 5.6ch; }
+  .zero { color: var(--muted); }
+
+  /* ---------- notes ---------- */
+  dl { margin: 0; display: flex; flex-direction: column; gap: 18px; }
+  dt { font-family: var(--display); font-weight: 600; font-size: 16.5px; letter-spacing: -.01em; margin-bottom: 3px; }
+  dd { margin: 0; color: var(--ink-2); max-width: 66ch; }
+
+  footer {
+    border-top: 1px solid var(--line); padding-top: 20px;
+    font-family: var(--mono); font-size: 12.5px; color: var(--muted);
+    display: flex; flex-direction: column; gap: 5px;
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding-block: 34px 52px; gap: 44px; }
+    .fig { flex-basis: 46%; padding: 2px 14px; border-left: 0; }
+    .fig:nth-child(odd) { padding-left: 0; }
+    .figures { gap: 18px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <span class="eyebrow">PhysicalView · viser GPU studio</span>
+    <h1>BEHAVIOR &amp; DROID in PhysicalView</h1>
+    <p class="lede">
+      Fifteen robot-dataset reconstructions now load in the studio: six BEHAVIOR tasks
+      (BEHAVIOR-1K simulation episodes, via the PointWorld release) and nine DROID scenes
+      (real Franka teleop). Pick either with the Scene tab's new <b>dataset</b> filter.
+    </p>
+
+    <div class="status">
+      <span><span class="dot"></span><b>Live</b> on <code>hala:8090</code></span>
+      <span>Slurm job <b>876053</b></span>
+      <span>RTX A6000</span>
+      <span>allocation ends ~13:55 UTC</span>
+    </div>
+
+    <div class="figures">
+      <div class="fig"><span class="v">15</span><span class="k">scenes served</span></div>
+      <div class="fig"><span class="v">20.3 M</span><span class="k">Gaussians on disk</span></div>
+      <div class="fig"><span class="v">21.7 dB</span><span class="k">best holdout PSNR</span></div>
+      <div class="fig"><span class="v">0.2 s</span><span class="k">per 720p GPU frame</span></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Open it</h2>
+    <div class="prose">
+      <p>
+        The studio renders on the cluster GPU and streams JPEG frames, so the browser never
+        receives the Gaussians — a laptop can drive a 3 M-splat scene. Reach the running
+        server through an SSH tunnel:
+      </p>
+    </div>
+<pre>ssh -L 8090:hala:8090 &lt;login-host&gt;      <span class="c"># then open http://localhost:8090</span></pre>
+    <div class="prose">
+      <p>To start your own, from the PhysicalView checkout:</p>
+    </div>
+<pre>PORT=8090 STUDIO_ARGS="--scene behavior_task-0020" sbatch run/studio.sbatch
+PORT=8090 STUDIO_ARGS="--scene droid_iprl_sat_oct_14_20_58_47_2023" sbatch run/studio.sbatch
+tail -f outputs/logs/studio_&lt;jobid&gt;.log   <span class="c"># prints the node and the tunnel line</span></pre>
+    <div class="prose">
+      <p>
+        <code>--scene</code> is new: it preselects the result set, preselects its dataset
+        filter, and loads the scene at startup, so the first browser to connect already
+        sees it.
+      </p>
+    </div>
+  </section>
+
+  <section class="ds behavior">
+    <div class="ds-head">
+      <h3>BEHAVIOR</h3>
+      <span class="sub">6 tasks · simulation source · 320×180 release frames, ×4 upscaled</span>
+    </div>
+    <div class="prose">
+      <p>
+        Full kitchens and living rooms from BEHAVIOR-1K episodes. The robot is part of the
+        release frames, so it is baked into the Gaussians rather than posed — you see it
+        standing in the room, not driven by the Robot tab.
+      </p>
+      <p>
+        Object yield is near zero and that is a data limit, not a bug: SAM3 discovery on
+        320×180 source frames finds almost nothing, so five of the six tasks have an empty
+        object table. Show these scenes for reconstruction and the exported room.
+      </p>
+    </div>
+
+    <div class="shots">
+      <figure>
+        <img src="img/behavior-0045-kitchen.jpg" alt="Rendered kitchen with red backsplash, microwave on a counter and the BEHAVIOR robot standing in the doorway">
+        <figcaption><b>behavior_task-0045</b> · 15.00 dB · the robot is baked into the splat, next to the microwave it was manipulating.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/behavior-0020-bowl.jpg" alt="Rendered kitchen island and counter with a red bowl at right">
+        <figcaption><b>behavior_task-0020</b> · 17.32 dB · the best BEHAVIOR reconstruction, 205 training views. The red bowl at right is the one discovered object.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/behavior-0002.jpg" alt="Rendered room corner with brick wall and a wall-mounted screen, breaking into floaters at right">
+        <figcaption><b>behavior_task-0002</b> · 13.83 dB · what 8 training views buys: the walls hold, everything unobserved shatters into floaters.</figcaption>
+      </figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Holdout PSNR on a shared 0–24 dB scale; <code>obj</code> is discovered instances, <code>acc</code> those registered into the simulator.</caption>
+        <thead>
+          <tr>
+            <th>result set</th>
+            <th>holdout PSNR</th>
+            <th class="num">Gaussians</th>
+            <th class="num">obj / acc</th>
+            <th>scene.xml</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">behavior_task-0020</td><td><span class="meter"><span class="track"><span class="bar" style="width:72.2%"></span></span><span class="num">17.32</span></span></td><td class="num">2,068,618</td><td class="num">1 / 0</td><td>yes</td></tr>
+          <tr><td class="name">behavior_task-0045</td><td><span class="meter"><span class="track"><span class="bar" style="width:62.5%"></span></span><span class="num">15.00</span></span></td><td class="num">1,128,463</td><td class="num zero">0 / 0</td><td>yes</td></tr>
+          <tr><td class="name">behavior_task-0023</td><td><span class="meter"><span class="track"><span class="bar" style="width:61.3%"></span></span><span class="num">14.70</span></span></td><td class="num">442,997</td><td class="num zero">0 / 0</td><td>yes</td></tr>
+          <tr><td class="name">behavior_task-0027</td><td><span class="meter"><span class="track"><span class="bar" style="width:58.9%"></span></span><span class="num">14.13</span></span></td><td class="num">544,265</td><td class="num zero">0 / 0</td><td>yes</td></tr>
+          <tr><td class="name">behavior_task-0002</td><td><span class="meter"><span class="track"><span class="bar" style="width:57.6%"></span></span><span class="num">13.83</span></span></td><td class="num">585,191</td><td class="num zero">0 / 0</td><td>yes</td></tr>
+          <tr><td class="name">behavior_task-0011</td><td><span class="meter"><span class="track"><span class="bar" style="width:42.6%"></span></span><span class="num">10.24</span></span></td><td class="num">1,325,326</td><td class="num zero">0 / 0</td><td>no</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="ds droid">
+    <div class="ds-head">
+      <h3>DROID</h3>
+      <span class="sub">9 scenes · real Franka teleop · 30 k gsplat iterations</span>
+    </div>
+    <div class="prose">
+      <p>
+        Real lab benches and kitchens from the DROID rig. These carry the object pipeline:
+        <code>droid_iprl_sat</code> (5 registered) and <code>droid_iris</code> (4) have
+        assets, collision parts and an exported <code>scene.xml</code>.
+      </p>
+      <p>
+        Every DROID camera is close to the table — one is wrist-mounted — so snapping to a
+        camera frame lands you in a close-up, and that close-up is where the reconstruction
+        is sharpest. Pull back far and it falls apart; see the note below.
+      </p>
+    </div>
+
+    <div class="shots">
+      <figure>
+        <img src="img/droid-rail-bench.jpg" alt="Rendered lab bench with an optical breadboard, clamps, coiled tubing and a Franka gripper in the foreground">
+        <figcaption><b>droid_rail</b> · 18.70 dB · optical breadboard, clamps and the Franka gripper, all reconstructed from the rig's own cameras.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/droid-rail-stove.jpg" alt="Rendered white stovetop with a teal cup on a burner, a yellow object and the gripper approaching">
+        <figcaption><b>droid_rail</b> · the manipulation target: teal cup on a burner, gripper closing. One object registered into the simulator here.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/droid-iprl.jpg" alt="Rendered granite countertop and cabinets seen from close range, with a red object at the top right">
+        <figcaption><b>droid_iprl_sat</b> · 21.74 dB · the sharpest scene of the set, and the one with the most registered assets (5 of 6).</figcaption>
+      </figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Same 0–24 dB scale as the BEHAVIOR table. All nine carry a derived mesh and an exported <code>scene.xml</code>.</caption>
+        <thead>
+          <tr>
+            <th>result set</th>
+            <th>holdout PSNR</th>
+            <th class="num">Gaussians</th>
+            <th class="num">obj / acc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">droid_iprl_sat_oct_14</td><td><span class="meter"><span class="track"><span class="bar" style="width:90.6%"></span></span><span class="num">21.74</span></span></td><td class="num">1,118,332</td><td class="num">6 / 5</td></tr>
+          <tr><td class="name">droid_tri_thu_sep_21</td><td><span class="meter"><span class="track"><span class="bar" style="width:87.8%"></span></span><span class="num">21.08</span></span></td><td class="num">2,192,781</td><td class="num zero">0 / 0</td></tr>
+          <tr><td class="name">droid_pennpal_sat_apr_29</td><td><span class="meter"><span class="track"><span class="bar" style="width:87.4%"></span></span><span class="num">20.97</span></span></td><td class="num">551,662</td><td class="num zero">0 / 0</td></tr>
+          <tr><td class="name">droid_rpl_mon_jun_5</td><td><span class="meter"><span class="track"><span class="bar" style="width:84.0%"></span></span><span class="num">20.16</span></span></td><td class="num">625,450</td><td class="num zero">0 / 0</td></tr>
+          <tr><td class="name">droid_iprl_thu_aug_24</td><td><span class="meter"><span class="track"><span class="bar" style="width:83.5%"></span></span><span class="num">20.03</span></span></td><td class="num">1,112,286</td><td class="num zero">0 / 0</td></tr>
+          <tr><td class="name">droid_rail_tue_oct_24</td><td><span class="meter"><span class="track"><span class="bar" style="width:77.9%"></span></span><span class="num">18.70</span></span></td><td class="num">667,270</td><td class="num">1 / 1</td></tr>
+          <tr><td class="name">droid_iris_mon_apr_17</td><td><span class="meter"><span class="track"><span class="bar" style="width:76.6%"></span></span><span class="num">18.38</span></span></td><td class="num">2,893,808</td><td class="num">10 / 4</td></tr>
+          <tr><td class="name">droid_real_wed_jun_7</td><td><span class="meter"><span class="track"><span class="bar" style="width:74.6%"></span></span><span class="num">17.90</span></span></td><td class="num">3,005,965</td><td class="num zero">0 / 0</td></tr>
+          <tr><td class="name">droid_autolab_fri_jul_14</td><td><span class="meter"><span class="track"><span class="bar" style="width:67.2%"></span></span><span class="num">16.13</span></span></td><td class="num">2,016,150</td><td class="num zero">0 / 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Read this before you fly the camera</h2>
+    <dl>
+      <div>
+        <dt>Stay near the capture trajectory</dt>
+        <dd>
+          Both datasets are captured by cameras looking inward from close range — a robot
+          head or wrist rig, not a room scan — so nothing supervises the Gaussians from
+          outside, and the usable viewing volume is roughly the capture trajectory itself.
+          Measured three ways on an A6000: at a data camera the render is clean, down to the
+          holes in the breadboard; backed off 0.45× the scene radius along that same camera's
+          axis the centre holds but the periphery shatters; orbiting at 2× the scene extent
+          is shards everywhere, BEHAVIOR rooms included — they come out as a doll's-house
+          cutaway. Snap to a camera frame and make small moves from there.
+          <figure style="margin-top:14px; max-width:520px;">
+            <img src="img/behavior-0020-orbit-fail.jpg" alt="The same kitchen rendered from outside the room: walls and floor survive as a cutaway, everything else is white spikes and shards">
+            <figcaption>The same <b>behavior_task-0020</b> kitchen as above, rendered from an orbit camera outside the room. Nothing ever observed it from here.</figcaption>
+          </figure>
+        </dd>
+      </div>
+      <div>
+        <dt>The Robot tab has nothing to drive yet</dt>
+        <dd>
+          Neither dataset has a <code>pi05_tasks.json</code>, so there is no authored task to
+          pick and no policy rollout to run. That needs Export MJCF → Generate tasks in the
+          Generate tab first.
+        </dd>
+      </div>
+      <div>
+        <dt>PSNR here is holdout, not novel-view</dt>
+        <dd>
+          The numbers come from each scene's <code>_train_report.json</code>: a held-out
+          frame from the same capture. It measures reconstruction quality, not generalization
+          to new viewpoints — which is exactly the limit the point above describes.
+        </dd>
+      </div>
+      <div>
+        <dt>One fix made BEHAVIOR visible at all</dt>
+        <dd>
+          <code>run_behavior_recon.sh</code> writes <code>outputs/behavior_task-0020</code>
+          but builds the scene as <code>behavior_task0020</code>, dashes stripped. The viewer
+          resolved the dashed name and found nothing, so all six BEHAVIOR entries showed
+          <em>no splat</em>. The scene id now strips the dash.
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <span>PhysicalView commit 1d18746 · branch worktree-phiview-demo-behavior-droid</span>
+    <span>renders measured on RTX A6000, Slurm jobs 876038 / 876057 / 876067 · server job 876053</span>
+    <span>scenes: $SIMANY_ROOT/outputs · splats: $SIMANY_ROOT/data/recon_scenes/splats</span>
+  </footer>
+
+</div>

@@ -1,0 +1,34 @@
+{
+  "id": "discovery",
+  "branch": "module/discovery-v2",
+  "description": "Automatic object discovery and mask refinement",
+  "inputs": [
+    "scene images and reconstructed geometry"
+  ],
+  "outputs": [
+    "auto_instances.npz; objects/objects.json; refined masks"
+  ],
+  "tools": [
+    "SAM3"
+  ],
+  "actions": {
+    "automatic": {
+      "target": "agents.discover.auto_segment",
+      "runtime": "sam3",
+      "gpu": true,
+      "args": []
+    },
+    "prepare": {
+      "target": "agents.discover.factory_prepare",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "refine": {
+      "target": "agents.discover.factory_refine_masks",
+      "runtime": "sam3",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

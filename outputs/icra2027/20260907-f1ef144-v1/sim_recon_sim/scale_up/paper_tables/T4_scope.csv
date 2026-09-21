@@ -1,0 +1,7 @@
+method,scope,reconstructed_context,retained_context,executed,planned,success_per_planned,absolute_replay_position_error_cm,rollout_coverage
+B3_AGENT_NATIVE,L0_target_only,,,,,,,
+B3_AGENT_NATIVE,L1_target_destination,,,,,,,
+B3_AGENT_NATIVE,L2_workspace,,,,,,,
+B4_ROOM_REPAIR_NATIVE,L0_target_only,,,,,,,
+B4_ROOM_REPAIR_NATIVE,L1_target_destination,,,,,,,
+B4_ROOM_REPAIR_NATIVE,L2_workspace,,,,,,,

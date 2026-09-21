@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible pipeline, viewer or environment failure.
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include the block, command, version/commit and relevant config paths. Remove credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and evidence
+      description: Include the uv profile, GPU/toolkit if relevant, exit status and job receipt/log excerpt.

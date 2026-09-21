@@ -1,0 +1,154 @@
+# Task 08. plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md's aspirational
+# candidate matrix ("Start with PolaRiS/DROID-compatible pi0.5, pi0-FAST,
+# pi0, pi0-100k, and PaliGemma-binning checkpoints") minus the pi0.5
+# entries already covered by pi05_droid_jointpos.yaml /
+# pi05_droid_jointpos_sim.yaml. Per a repo audit (2026-08-16): none of
+# these four checkpoints have ever been downloaded to this cluster --
+# `grep`-ing this repo and /group/worldcept/PhiRIE/checkpoints/openpi_cache/ for
+# pi0-FAST/pi0/pi0-100k/PaliGemma checkpoint references turns up nothing
+# except the vendored gs:// URIs in third_party/PolaRiS/docs/
+# checkpoints_and_envs.md ("Base DROID Joint Position Checkpoints" table --
+# an untracked clone, not integrated; see docs/ICRA_RESEARCH_CONTRACT.md
+# Decision 1). These are registered here so `robo.policy.registry` CAN
+# represent the full plan/08 candidate matrix, not so they can be run:
+# `PolicyRegistry.make_client` on any id below always raises
+# `PolicyUnavailableError` naming `checkpoint_uri`, never a generic crash
+# (Task 08 test requirement).
+#
+# status: unavailable for all four. training_config/model_action_convention
+# below are best-effort, UNCONFIRMED guesses at openpi's naming convention
+# (only pi05_droid_jointpos / pi05_droid_jointpos_sim are confirmed to
+# exist in this repo's openpi fork, via
+# /group/worldcept/PhiRIE/code/openpi/src/openpi/training/config.py:681,701) --
+# do not treat them as verified until the checkpoint is actually present
+# and a real training config resolves against it.
+policies:
+  - id: pi0_fast_droid_jointpos
+    status: unavailable
+    client_kind: unavailable
+    checkpoint_uri: gs://openpi-assets/checkpoints/pi0_fast_droid_jointpos
+    checkpoint_path: null
+    checkpoint_hash: null
+    training_config: pi0_fast_droid_jointpos  # UNCONFIRMED, see file header
+    model_action_convention: fast_token_chunk_15x8  # UNCONFIRMED, see file header
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    language_template: "{instruction}"
+    published_real_score_ref: null
+    notes: >-
+      No local checkpoint anywhere on this cluster as of 2026-08-16 (repo +
+      openpi_cache audit). Aspirational URI is the "Base DROID Joint
+      Position Checkpoints" pi0-FAST row in
+      third_party/PolaRiS/docs/checkpoints_and_envs.md (a PolaRiS-cotrained
+      variant also exists at .../polaris/pi0_fast_droid_jointpos_polaris,
+      relevant only if/when the PolaRiS feasibility probe in
+      docs/ICRA_RESEARCH_CONTRACT.md succeeds).
+
+  - id: pi0_droid_jointpos
+    status: unavailable
+    client_kind: unavailable
+    checkpoint_uri: gs://openpi-assets/checkpoints/pi0_droid_jointpos
+    checkpoint_path: null
+    checkpoint_hash: null
+    training_config: pi0_droid_jointpos  # UNCONFIRMED, see file header
+    model_action_convention: joint_delta_chunk_15x8  # UNCONFIRMED, see file header
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    language_template: "{instruction}"
+    published_real_score_ref: null
+    notes: >-
+      No local checkpoint anywhere on this cluster as of 2026-08-16. URI
+      from third_party/PolaRiS/docs/checkpoints_and_envs.md's pi0 Base row.
+      This is the predecessor architecture to pi0.5 (flow-matching
+      continuous actions, no discrete/FAST tokenization) -- action
+      semantics assumed analogous to pi05_droid_jointpos.yaml's but
+      unverified without the checkpoint present.
+
+  - id: pi0_droid_jointpos_100k
+    status: unavailable
+    client_kind: unavailable
+    checkpoint_uri: gs://openpi-assets/checkpoints/pi0_droid_jointpos_100k
+    checkpoint_path: null
+    checkpoint_hash: null
+    training_config: pi0_droid_jointpos_100k  # UNCONFIRMED, see file header
+    model_action_convention: joint_delta_chunk_15x8  # UNCONFIRMED, see file header
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    language_template: "{instruction}"
+    published_real_score_ref: null
+    notes: >-
+      No local checkpoint anywhere on this cluster as of 2026-08-16. URI
+      from third_party/PolaRiS/docs/checkpoints_and_envs.md's "pi0 Base
+      (100k)" row -- the plan file's "pi0-100k" entry: pi0 trained for
+      100k steps (a lower-compute ablation of pi0_droid_jointpos, per
+      PolaRiS's own naming), not a separately-architected model.
+
+  - id: paligemma_binning_droid_jointpos
+    status: unavailable
+    client_kind: unavailable
+    checkpoint_uri: gs://openpi-assets/checkpoints/paligemma_binning_droid_jointpos
+    checkpoint_path: null
+    checkpoint_hash: null
+    training_config: paligemma_binning_droid_jointpos  # UNCONFIRMED, see file header
+    model_action_convention: binned_action_chunk_15x8  # UNCONFIRMED, see file header
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    language_template: "{instruction}"
+    published_real_score_ref: null
+    notes: >-
+      No local checkpoint anywhere on this cluster as of 2026-08-16. URI
+      from third_party/PolaRiS/docs/checkpoints_and_envs.md's PaliGemma
+      Base row. PaliGemma-binning discretizes actions into per-dimension
+      bins rather than flow-matching or FAST-tokenizing them -- listed here
+      per plan/08's candidate matrix as the fourth architecture family,
+      distinct from the pi0/pi0.5/pi0-FAST family above.
+
+# SimFoundry / WANDA / Lumera are explicitly NOT policy entries here: per
+# docs/BASELINES.md and docs/ICRA_RESEARCH_CONTRACT.md section 3, they
+# remain literature-only citations, never re-benchmarked against this
+# repo's closed-loop numbers because their released artifacts do not
+# support running this policy/task suite.

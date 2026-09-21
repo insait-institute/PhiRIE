@@ -1,0 +1,54 @@
+# Default thresholds for capture/validate_video.py.
+#
+# Every metric is computed on frames resized to `sampling.work_width` on the
+# long side, so these thresholds are resolution-independent -- a 4K and a
+# 720p phone clip of the same motion/blur/texture score the same. Motion
+# thresholds are in px/second of median ORB-match displacement (NOT dense
+# optical flow, and NOT raw px-per-sampled-pair): samples are taken at a
+# fixed RATE (sampling.samples_per_second), capped in count for long clips,
+# so px/second is what stays comparable across clip lengths, and sparse
+# feature matching (not dense flow) is what stays accurate once samples are
+# a large fraction of a second apart -- see validate_video.py's
+# `sample_frames` and `baseline_px` docstrings for why each of those matters.
+#
+# Tuned against: tests/data/phone/*.mp4 (synthetic fast-pan / static /
+# severe-blur / no-marker fixtures, see tests/data/phone/make_fixtures.py)
+# and videos/pilot_a29cccc784.mp4 (the one real phone clip in the repo,
+# 28.2s/1168x778/15fps). Not tuned to force that one clip to PASS -- see
+# capture/README.md's "Interpreting a report" section for what it actually
+# triggers.
+
+sampling:
+  samples_per_second: 3.0   # fixed temporal sampling rate the thresholds below assume
+  max_samples: 90            # cost cap; rate degrades gracefully below samples_per_second on long clips
+  work_width: 640             # long-side resize before any metric is computed
+
+blur:
+  severe_blur_var_min: 40.0     # variance-of-Laplacian floor for "sharp"
+  min_sharp_fraction: 0.7       # below this fraction of sharp frames -> SEVERE_BLUR
+  severe_blur_min_run_s: 0.5    # a contiguous blurred run this long also -> SEVERE_BLUR
+
+exposure:
+  max_brightness_delta: 35.0    # mean-brightness delta (0-255) between consecutive samples
+
+duplication:
+  similarity_min: 0.995         # normalized cross-correlation above this = near-duplicate
+  min_run_samples: 3            # this many consecutive near-duplicate pairs -> FRAME_DUPLICATION
+
+motion:
+  min_good_matches: 8            # fewer confident ORB matches between a sample pair -> NO_FRAME_OVERLAP
+  static_flow_px_s_max: 5.0      # median ORB-match displacement (px/s) below this = "no motion"
+  static_min_run_s: 1.5          # sustained for this long -> STATIC_CAMERA
+  fast_pan_flow_px_s_min: 220.0  # median ORB-match displacement (px/s) above this -> FAST_PAN
+
+features:
+  min_keypoints: 40             # ORB keypoints below this = low-texture frame
+  max_low_feature_fraction: 0.35  # this fraction of low-texture frames -> LOW_FEATURE_COVERAGE
+
+calibration_marker:
+  dictionary: DICT_4X4_50        # cv2.aruco predefined dictionary name
+  min_marker_frames: 3           # fewer sampled frames with a detected marker -> NO_CALIBRATION_MARKER
+
+duration:
+  min_duration_s: 60.0           # plan's two-pass recommendation floor (room + workspace loop)
+  max_duration_s: 150.0          # soft ceiling; compute cost warning only, never critical

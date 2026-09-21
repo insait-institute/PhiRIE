@@ -1,0 +1,90 @@
+# Task 08 (plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md). One of the three
+# policies configs/experiments/frozen_fields.yaml actually names. Loaded by
+# robo.policy.registry.PolicyRegistry.from_config_dir() into a
+# robo.policy.registry.PolicyEntry (see that module for full field docs).
+#
+# status: verified -- docs/ROBOT.md's honest results section cites pi0.5
+# zero-shot scoring 28% (nonzero-episode rate) on RoboLab-120 as the public
+# baseline to calibrate against; this repo's own closed-loop pooled nonzero
+# rate on c50d2d1d42 composite (13/47 = 0.28, coding_agents/memory/
+# pi05-droid-sim-eval.md, 2026-08-04 entry, post the 2026-08-01
+# base-placement geometry fix) independently lands on the same order of
+# magnitude with the SAME checkpoint bytes -- not an exact number
+# reproduction (different task suite/scene/camera), but a real, documented
+# checkpoint-to-behavior correspondence check, which is what "verified"
+# means in this registry (Task 08 step 6).
+policies:
+  - id: pi05_droid_jointpos
+    status: verified
+    client_kind: pi05_server
+
+    checkpoint_uri: gs://openpi-assets-simeval/pi05_droid_jointpos
+    checkpoint_path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/pi05_droid_jointpos
+    # Computed via robo.manifest.hash.hash_checkpoint_path on 2026-08-16
+    # against the path above (26 files: assets/, params/). This is a
+    # path+size+mtime fingerprint, NOT a cryptographic content hash of the
+    # checkpoint bytes -- see robo/manifest/hash.py's documented limitation.
+    checkpoint_hash: "6351f967c0cae4e3d9a559edb0a16b3b9ed47828021e2ff35985ea77476ab040"
+    training_config: pi05_droid_jointpos
+
+    # What the model predicts internally (frozen_fields.yaml's
+    # action_output field, verbatim) -- informational, NOT validated
+    # against the frozen control contract. See robo/policy/
+    # control_contract.py's module docstring for why only
+    # env_action_convention below is frozen.
+    model_action_convention: joint_delta_chunk_15x8
+    # What the client hands to the environment, downstream of openpi's
+    # server-side AbsoluteActions transform (docs/ROBOT.md). THIS is
+    # checked against configs/experiments/frozen_fields.yaml's
+    # control.action_convention.
+    env_action_convention: absolute_joint_position
+    action_dim: 8
+
+    gripper_range: [0.0, 1.0]
+    gripper_open_value: 0.0
+    gripper_closed_value: 1.0
+    gripper_binarize_threshold: 0.5
+
+    control_rate_hz: 15
+    per_tick_joint_delta_clamp_rad: 0.2
+
+    chunk_size: 15
+    temporal_aggregation: requery_after_full_chunk
+
+    image_preprocessing:
+      mode: resize_with_pad
+      resize_hw: [224, 224]
+    # robo/tasks/pi05_tasks.py emits three instruction variants per task
+    # (vague/default/specific free-text natural language, e.g. "pick up
+    # the mug and place it inside the bowl"); the client passes whichever
+    # variant robo/eval/pi05_eval.py's --variant flag selects straight
+    # through as `prompt`, with no additional template wrapping.
+    language_template: "{instruction}"
+
+    published_real_score_ref: >-
+      docs/ROBOT.md "Results (honest, as of 2026-08-04)": pi0.5 zero-shot
+      scores 28% on RoboLab-120 (external baseline); this repo's own pooled
+      c50d2d1d42 composite nonzero rate is 13/47 = 0.28 with the same
+      checkpoint (coding_agents/memory/pi05-droid-sim-eval.md, 2026-08-04).
+    notes: >-
+      Variance dominates at this sample size (docs/ROBOT.md: detecting a
+      +0.15 nonzero-rate change needs ~158 episodes/arm at 80% power) --
+      treat "verified" as "checkpoint-to-behavior correspondence checked
+      and order-of-magnitude consistent", not "exact score reproduced".
+      c50d2d1d42 composite is a favourable outlier (0/36 elsewhere across
+      two other inpainted scenes); do not generalize the 0.28 figure to
+      every scene. Exterior camera choice materially changes per-episode
+      score (docs/ROBOT.md demo clip caveat) -- pin the camera and report
+      it alongside any number quoted from this policy.
+      NOTE on checkpoint_path vs configs/experiments/frozen_fields.yaml:
+      that file lists this policy's checkpoint_path as the PARENT directory
+      (.../openpi-assets-simeval/, which also contains the sibling
+      with_web_and_sim checkpoint), while its sibling entry points at its
+      own specific subdirectory. checkpoint_path above intentionally uses
+      the specific pi05_droid_jointpos/ subdirectory instead, matching what
+      run/pi05_serve.sh actually serves (CKPT_NAME defaults to
+      "pi05_droid_jointpos", SHARED_CKPT=.../openpi-assets-simeval/$CKPT_NAME)
+      -- hashing the parent directory would fold the sibling checkpoint's
+      files into this one's fingerprint, which is not what "this
+      checkpoint's hash" should mean. Flagged here rather than silently
+      diverging from frozen_fields.yaml's literal (looser) path.

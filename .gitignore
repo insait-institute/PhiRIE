@@ -1,0 +1,75 @@
+# ---- environments & caches ----
+.venv*/
+.envs/
+.pip-cache/
+.tmp/
+.cache/
+/configs/phiview.local.yaml
+__pycache__/
+*.pyc
+*.egg-info/
+
+# ---- vendored third-party checkouts (re-clone via run/setup_env.sh) ----
+# bddl_data is the exception: it backs agents/eval/behavior1k_coverage
+# (paper Sec V.H); READMEs stay tracked so the layout is documented.
+third_party/*
+!third_party/bddl_data/
+!third_party/README.md
+
+# ---- data, weights and run products (contents live on the cluster) ----
+outputs/
+data/*
+!data/README.md
+!data/zeroshot_100_scenes.txt
+!data/zeroshot_100_scenes.json
+checkpoints/*
+!checkpoints/README.md
+weights
+*.log
+MUJOCO_LOG.TXT
+
+# ---- regenerated-on-demand test scratch (see tests/data/phone/make_fixtures.py) ----
+tests/data/phone/_canvas.png
+tests/data/phone/_marker.png
+
+# ---- large binaries ----
+*.ply
+*.mp4
+*.urdf
+*.obj
+*.safetensors
+*.pt
+*.pth
+
+# ---- latex build products (root.tex, refs.bib and figs/ ARE tracked) ----
+docs/paper/root.pdf
+docs/paper/conference.pdf
+docs/paper/*.aux
+docs/paper/*.log
+docs/paper/*.out
+docs/paper/*.bbl
+docs/paper/*.blg
+docs/paper/*.fls
+docs/paper/*.fdb_latexmk
+docs/paper/*.synctex.gz
+
+# ---- reference material (re-fetchable from arXiv) ----
+docs/related/*.pdf
+slurm-*.out
+
+/configs/runtime.local.json
+
+# ---- local worktrees, build products and retained review assets ----
+/worktrees/
+/demo
+/docs/project_overview
+/dist/
+/build/
+/.t/
+.pytest_cache/
+.ruff_cache/
+
+# ---- local credentials ----
+.env
+.env.*
+!.env.example

@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-09-15T00:17:22.218010+00:00",
+  "failed_job": "900945",
+  "allocated_gpu_seconds": 95,
+  "reason": "Pinned RVG Gaussian.save_ply(path) does not accept transform keyword; error after inference and mesh/native arrays were saved",
+  "fix": "Call native save_ply(path) for future production; CPU-only recovery of already produced multiview smoke mesh and native attributes",
+  "infrastructure_recovery_number": 1,
+  "inference_repeated": false,
+  "gaussian_state": "not retained; smoke Gaussian appearance remains unavailable",
+  "new_config": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/inputs/reconviagen-smoke-recovery1.json",
+    "sha256": "636102750fc67a471cbd15f56818528a70c347ef8283e4400a1f4bcbe6b0b387",
+    "bytes": 1574
+  }
+}

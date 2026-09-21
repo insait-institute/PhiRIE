@@ -1,0 +1,38 @@
+{
+  "all_input_queries": 6155,
+  "budget_exclusions": 5886,
+  "camera": "Same source and host after all50 handoffs close, existing full OSMesa scorer; no policy launch",
+  "command": [
+    "python",
+    "-m",
+    "run.icra2027.e4_full_qualification",
+    "--config",
+    "/group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json",
+    "--freeze-root",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1",
+    "--expected-code-commit",
+    "EXACT_FINAL_CONFIG_COMMIT",
+    "--scene-id",
+    "09c1414f1b"
+  ],
+  "freeze_id": "20260906-0e7579a-v1",
+  "full_scenes": 50,
+  "pilot_scene": "09c1414f1b",
+  "planned_cells": 2690,
+  "release": "Remaining original scenes only after fixed pilot canonical qualification closure; no positive qualification count requirement; no substituted pilot",
+  "resources": {
+    "array": false,
+    "cpus": 8,
+    "gpus": 0,
+    "memory_gib": 64,
+    "node": "sof1-h200-3",
+    "partition": "non-reserved",
+    "qos": "normal",
+    "requeue": false,
+    "time": "04:00:00"
+  },
+  "schema_version": 1,
+  "selected_query_scenes": 41,
+  "source_commit": "E0-bound exact final config commit",
+  "source_only_scenes": 9
+}

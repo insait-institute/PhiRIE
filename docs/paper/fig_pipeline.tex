@@ -1,0 +1,110 @@
+%% System overview. Emphasis: ONE discovery stage feeding TWO branches.
+%% Absolute coordinates throughout -- relative placement collided badly.
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm, font=\footnotesize,
+  box/.style={draw, rounded corners=1.5pt, align=center, inner sep=3pt,
+              minimum height=8mm, line width=0.5pt},
+  inb/.style={box, draw=cIn, fill=cIn!7, text=black!25!cIn, minimum width=42mm},
+  disc/.style={box, draw=cDisc, fill=cDisc!10, text=black!25!cDisc,
+               line width=0.9pt, minimum width=96mm, minimum height=10mm},
+  phys/.style={box, draw=cPhys, fill=cPhys!8, text=black!25!cPhys,
+               minimum width=58mm},
+  app/.style={box, draw=cApp, fill=cApp!8, text=black!25!cApp,
+              minimum width=58mm},
+  outb/.style={box, draw=cOut, fill=cOut!8, text=black!25!cOut,
+               minimum width=50mm},
+  ar/.style={-{Stealth[length=1.8mm]}, line width=0.5pt, draw=black!55},
+  fb/.style={-{Stealth[length=1.8mm]}, line width=0.5pt, draw=black!40, dashed},
+  lbl/.style={font=\scriptsize\itshape, text=black!60},
+]
+
+% ---------------- inputs (y = 0) ----------------
+\node[inb] (imgs)  at (-5.4, 0) {posed RGB $\{I_k, W_k\},\,K$};
+\node[inb] (mesh)  at ( 0.0, 0) {scene mesh $\mathcal{M}$};
+\node[inb] (splat) at ( 5.4, 0) {scene splat $\mathcal{G}$};
+
+% ---------------- discovery (y = -1.5) ----------------
+\node[disc] (disc) at (0, -1.5)
+  {\textbf{training-free instance discovery}\\[1pt]
+   \scriptsize SAM3 masks $\to$ occlusion-aware raycast $\to$
+   voxel merge $\to$ dedup};
+\node[lbl] (contract) at (0, -2.28)
+  {output contract: one mesh-vertex set per object\quad(ground-truth
+   annotations substitute here)};
+
+\draw[ar] (imgs.south)  -- ++(0,-0.35) -| ([xshift=-30mm]disc.north);
+\draw[ar] (mesh.south)  -- (disc.north);
+\draw[ar] (splat.south) -- ++(0,-0.35) -| ([xshift=30mm]disc.north);
+
+% ---------------- physics branch (left column, x = -4.6) ----------------
+\node[phys] (gen) at (-4.6, -3.45)
+  {generate\\[-1pt]\scriptsize TRELLIS $+$ ReconViaGen};
+\node[phys] (reg) at (-4.6, -4.80)
+  {register\\[-1pt]\scriptsize symmetric clipped chamfer};
+\node[phys] (ann) at (-4.6, -6.15)
+  {annotate\\[-1pt]\scriptsize CoACD $+$ LLM mass/friction};
+
+% ---------------- appearance branch (right column, x = +4.6) ----------------
+\node[app] (sel) at (4.6, -3.45)
+  {select removal set\\[-1pt]\scriptsize surface $\cup$ asset $\cup$
+   \textbf{mask vote}};
+\node[app] (fill) at (4.6, -4.80)
+  {complete\\[-1pt]\scriptsize support-plane disks $+$ diffusion refine};
+\node[app] (ver) at (4.6, -6.15)
+  {verify\\[-1pt]\scriptsize alpha / depth / re-detect / held-out};
+
+\draw[ar] (disc.south) -- (0,-2.62) -- (-4.6,-2.62) -- (gen.north);
+\draw[ar] (disc.south) -- (0,-2.62) -- ( 4.6,-2.62) -- (sel.north);
+\draw[ar] (gen)  -- (reg);
+\draw[ar] (reg)  -- (ann);
+\draw[ar] (sel)  -- (fill);
+\draw[ar] (fill) -- (ver);
+
+% registered asset volume also feeds the removal set
+\draw[fb] (reg.east) -- node[lbl, above, align=center, pos=0.5]
+  {registered asset volume} (sel.west |- reg.east) -- (sel.south west)
+  ++(0,0);
+% verification failures re-enter as a worklist
+\draw[fb] (ver.east) -- ++(0.75,0) |- node[lbl, right, pos=0.25, align=left]
+  {re-process\\worklist} (sel.east);
+
+% ---------------- outputs (y = -7.7) ----------------
+\node[outb] (urdf)  at (-4.6, -7.75) {URDF / MJCF / Isaac manifest};
+\node[outb] (clean) at ( 4.6, -7.75)
+  {clean background splat $\mathcal{G}^{\text{clean}}$};
+\node[outb, minimum width=56mm] (comp) at (0, -9.0)
+  {composite render\\[-1pt]\scriptsize simulator state $\to$ photoreal frame};
+
+\draw[ar] (ann) -- (urdf);
+\draw[ar] (ver) -- (clean);
+\draw[ar] (urdf.south) |- (comp.west);
+\draw[ar] (clean.south) |- (comp.east);
+
+% ---------------- branch groupings ----------------
+\begin{scope}[on background layer]
+  \node[fit=(gen)(ann), draw=cPhys!35, dashed, rounded corners,
+        inner xsep=5pt, inner ysep=8pt] (physbox) {};
+  \node[fit=(sel)(ver), draw=cApp!35, dashed, rounded corners,
+        inner xsep=5pt, inner ysep=8pt] (appbox) {};
+\end{scope}
+\node[font=\scriptsize\bfseries, text=cPhys, anchor=south]
+  at (physbox.north) {physics branch};
+\node[font=\scriptsize\bfseries, text=cApp, anchor=south]
+  at (appbox.north) {appearance branch};
+
+\end{tikzpicture}
+\caption{\name\ overview. A single training-free discovery stage emits one
+mesh-vertex set per object and is consumed \emph{twice}: the physics branch
+(left) builds a simulatable asset, and the appearance branch (right) erases
+the same object from the background splat so the twin stays photorealistic
+after objects move. Ground-truth instance annotations, when available,
+substitute at exactly the discovery output contract, so every downstream stage
+runs identically in both modes---which is what makes the ablation ladder of
+Sec.~\ref{sec:ladder} a measurement of supervision rather than of two different
+pipelines. Dashed arrows are the two feedback paths: the registered asset
+contributes volume the scan never captured to the removal set, and verification
+failures return as a re-processing worklist.}
+\label{fig:pipeline}
+\end{figure*}

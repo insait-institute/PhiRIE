@@ -1,0 +1,7 @@
+scene_id,task_id,signal,invalid_label,invalid_probability
+REPLACE_SCENE,REPLACE_TASK,Global PSNR,0,0.0
+REPLACE_SCENE,REPLACE_TASK,Global LPIPS,0,0.0
+REPLACE_SCENE,REPLACE_TASK,Scene-global build audit,0,0.0
+REPLACE_SCENE,REPLACE_TASK,Task-local visual evidence,0,0.0
+REPLACE_SCENE,REPLACE_TASK,Task-local geometry + support,0,0.0
+REPLACE_SCENE,REPLACE_TASK,Full task-local audit,0,0.0

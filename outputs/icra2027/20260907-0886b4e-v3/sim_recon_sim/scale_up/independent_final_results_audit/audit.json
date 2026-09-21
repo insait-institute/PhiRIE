@@ -1,0 +1,223 @@
+{
+  "source_head": "0886b4ee2ac61e06789554aa86683ef1b659ff38",
+  "source_files_sha256": {
+    "robo/eval/native_scale_tables.py": "a77f1ec52c33653dd6ebe93e7546a83d591c4812f0fba3ee9b823dae972a1a92",
+    "robo/eval/native_scale_scope.py": "fc097f71ae51fd4ee893d4a8e2b930d2a8697e1dbf8dbdbf4f3b859fe88929be",
+    "robo/eval/native_final_release.py": "cd0df9960ebeffde968c47c4521b175da4a9ae016f01ae50351f8d96f6924baf",
+    "robo/eval/metric_utils.py": "dfdea8d0f312edc0c1468c1582ae64a5da39a6731e1f68b2b658b6cd57e3926a",
+    "robo/roundtrip/spec.py": "6cbc04e69292a30023d5ecf1d27551ab495e031e7dcf6f224883b7f417387de6"
+  },
+  "audit_uses_existing_producers": [
+    "native_scale_tables.load_units/tables",
+    "native_final_release.validate_primary",
+    "native_scale_scope.scope_tables"
+  ],
+  "primary_validation": {
+    "completion_receipt": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/completion_receipt.json",
+      "sha256": "aec2680510276ae2642843f6bd3715c674b9a1c3d16b4f6e207dd018a87d5725"
+    },
+    "status": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/status.json",
+      "sha256": "74117c6ed485b8047652ba795df0392187e559d8f78badbe003e726551b5fd39"
+    },
+    "episode_ledger": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/merged/episode_ledger.jsonl",
+      "sha256": "1bded5bad0e86489d677a78b70e162364f9dc1d8ec43abfe30244986162639fc"
+    },
+    "planned_units": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/planned_units.jsonl",
+      "sha256": "54afe88ea0bd9880db3708ae6c0ff5b72ab83257858ece2a59b83ea61d9ed8f3"
+    },
+    "planned": 2400,
+    "measured": 2400,
+    "executed": 1350,
+    "nonexecuted": 1050
+  },
+  "primary_raw": {
+    "planned": 2400,
+    "executed": 1350,
+    "unmeasured": 10,
+    "terminal_statuses": {
+      "RECORDED": 1350,
+      "ABSTAINED": 390,
+      "BUILD_FAILED": 650,
+      "CODE_FAILED": 10
+    }
+  },
+  "primary_final": {
+    "planned": 2400,
+    "instances": 48,
+    "layouts": 8,
+    "executed": 1350,
+    "unmeasured": 0,
+    "terminal_statuses": {
+      "RECORDED": 1350,
+      "ABSTAINED": 390,
+      "BUILD_FAILED": 660
+    },
+    "same_engine_instances": 48,
+    "device_instances": {
+      "NVIDIA RTX A6000": 42,
+      "NVIDIA H200": 6
+    },
+    "actual_matched_ref_pairs": {
+      "B0_FIXED_NATIVE": 310,
+      "B3_AGENT_NATIVE": 320,
+      "B4_ROOM_REPAIR_NATIVE": 120,
+      "BM_BUDGET_MATCHED_NATIVE": 120
+    },
+    "all_executed_result_files_equal_ledger": true,
+    "all_executed_paired_config_hashes_equal": true
+  },
+  "classification_only_changes": [
+    {
+      "unit_id": "unit-f356c2b8db08dbcb41bc036ebf5c84a5",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-1c5ebbc49d559bc626ef12cc5beeb8a7",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-e172791528f90caa6d89eed2c6fc6894",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-22b5ae0c9f38e097a54a75c31f1a8be4",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-558143cdf381fe70b5f66e15fe1b2615",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-5172521ee96160688782c608965ddd3e",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-769c76920a2f105b46e6f29a29395eca",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-037b901eb83b766cafff137a624deded",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-c153b11116e4e03df7b0a6dea2504ba9",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    },
+    {
+      "unit_id": "unit-d9a8b3882e38991f9713710ccb61915e",
+      "changed_fields": [
+        "classification_adjudication",
+        "failure",
+        "failure_classification",
+        "measured",
+        "original_terminal_status",
+        "service_success",
+        "terminal_status"
+      ]
+    }
+  ],
+  "scope": {
+    "planned": 1200,
+    "instances": 24,
+    "layouts": 4,
+    "executed": 600,
+    "terminal_statuses": {
+      "RECORDED": 600,
+      "ABSTAINED": 200,
+      "BUILD_FAILED": 400
+    },
+    "same_engine_instances": 24,
+    "fresh_engines_disjoint_from_primary": true,
+    "zero_shared_unit_ids": true,
+    "phase_binding": {
+      "manifest": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/roster/scope_execution_manifest.json",
+      "manifest_sha256": "42a908b624fb9b62a2161ea24dfd07b37fb95109dfa793e052184d9935e8a99d",
+      "planned_units": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/roster/planned_units.jsonl",
+      "planned_units_sha256": "121819ef11e4ff4eb2bfe53b718c2a185aa3ad6e43a7e908fb4b9f3a5d2022ea",
+      "episode_ledger": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0412/episode_ledger.jsonl",
+      "episode_ledger_sha256": "82f9fb4f78fac839ff2dfce7dad2121632a7b954258c576502d1b0bd3de9b597",
+      "expected_instances": 24,
+      "expected_resets_per_instance": 10
+    }
+  },
+  "claim_scope": "native task predicates on scoped reconstructed artifacts with retained native context; not full room real-to-sim, real robot, geometry gain, GS policy or general fidelity guarantee",
+  "adjudication_scope": "raw10CODE_FAILED remain archived; final classification changes exactly10 to construction BUILD_FAILED, no asset/native outcome change; strict release source0886b4e",
+  "paired_inference_scope": "existing2000-sample seed42 layout\u2192instance\u2192reset hierarchical bootstrap;8primary/4scope layouts only; raw success difference alone does not establish improvement",
+  "complete": true
+}

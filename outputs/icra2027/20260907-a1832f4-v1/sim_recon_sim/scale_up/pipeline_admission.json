@@ -1,0 +1,24 @@
+{
+  "freeze_id": "20260907-a1832f4-v1",
+  "source_commit": "c60f3e3f0660334642a9ee085b1dd2d5c04e238f",
+  "source_dirty": false,
+  "input_boundary": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/input_boundary.json",
+    "sha256": "4d3fc0aa16eab26d78b675dbafa5501c4290e8a0dc37eca748edfab41ce8f0b2"
+  },
+  "config": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+    "sha256": "e1c97cbdad8039384090b04d151b3cf15fbd9af848f459bf912eebab5509720d"
+  },
+  "command": [
+    "/group/worldcept/code/SimAny/.venv/bin/python",
+    "-m",
+    "robo.eval.paper_pipeline",
+    "--config",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_pipeline.json",
+    "--out",
+    "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables"
+  ],
+  "paper_transfer": false,
+  "automatic_claim_promotion": false
+}

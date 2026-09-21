@@ -1,0 +1,42 @@
+[
+ {
+  "index": 0,
+  "label": "obj0",
+  "gt_object_id": null,
+  "extent": [
+   0.1,
+   0.1,
+   0.1
+  ]
+ },
+ {
+  "index": 1,
+  "label": "obj1",
+  "gt_object_id": null,
+  "extent": [
+   0.1,
+   0.1,
+   0.1
+  ]
+ },
+ {
+  "index": 2,
+  "label": "obj2",
+  "gt_object_id": null,
+  "extent": [
+   0.1,
+   0.1,
+   0.1
+  ]
+ },
+ {
+  "index": 3,
+  "label": "obj3",
+  "gt_object_id": null,
+  "extent": [
+   0.1,
+   0.1,
+   0.1
+  ]
+ }
+]

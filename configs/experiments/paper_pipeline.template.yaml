@@ -1,0 +1,22 @@
+construction:
+  input: outputs/paper_inputs/construction_records.csv
+
+fidelity:
+  manifest: configs/experiments/fidelity_manifest.json
+  lpips_device: cuda
+
+manipulation:
+  harness_config: configs/experiments/harness_paper.yaml
+  ledger: outputs/harness_runs/paper_main/harness_ledger.jsonl
+
+audit:
+  features: outputs/audit/task_local_features_and_labels.csv
+  l2: 1.0
+
+harmony_visual:
+  manifest: configs/experiments/harmony_visual_manifest.json
+  lpips_device: cuda
+
+real_world:
+  construction: outputs/real_world/workspaces.csv
+  trials: outputs/real_world/paired_trials.csv

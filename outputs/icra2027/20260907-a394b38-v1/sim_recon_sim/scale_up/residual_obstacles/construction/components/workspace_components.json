@@ -1,0 +1,2871 @@
+{
+  "L2_READY": false,
+  "built_components": 43,
+  "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+  "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+  "cohort_id": "native_dev_v2_8instances",
+  "cross_role_aliasing": "UNRESOLVED",
+  "heldout_access": false,
+  "inherited_unresolved_roles": [
+    {
+      "absence_certified": false,
+      "role": "obstacle",
+      "role_id": "residual-000016",
+      "semantic_identity": "UNCLASSIFIED",
+      "state": "INSUFFICIENT_VIEWS"
+    },
+    {
+      "absence_certified": false,
+      "role": "obstacle",
+      "role_id": "residual-000033",
+      "semantic_identity": "UNCLASSIFIED",
+      "state": "INSUFFICIENT_VIEWS"
+    },
+    {
+      "absence_certified": false,
+      "role": "obstacle",
+      "role_id": "residual-000041",
+      "semantic_identity": "UNCLASSIFIED",
+      "state": "INSUFFICIENT_VIEWS"
+    }
+  ],
+  "inventory_manifest_sha256": "ab9d2b3b8f0a784b209a48235f32c8cd1ec324c7951f669814946e56d642ed1c",
+  "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+  "native_asset_access": false,
+  "native_role_mapping": "NOT_RUN; only allowed after component freeze",
+  "obstacle_inventory_complete": false,
+  "physical_prior": "fixed category-independent source bytes; no native mass/friction fit",
+  "physics_prior_sha256": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f",
+  "planned_components": 46,
+  "policy_outcomes": "NOT_RUN",
+  "rows": [
+    {
+      "artifact_hashes": {
+        "aligned.json": "e6e96972a3651cc8ee0a260c08b9dae5d746c3d2b618b7ec2dc5b5fa05cad66e",
+        "collision/part_00.obj": "56b05960f532b2d5440214f8faa79efe11d4193a9f3c79a2220dec4dd684953a",
+        "collision/part_01.obj": "88b710048251af949647074dccf9109563d78568a05b4b7eb8776f4a6b6316c6",
+        "mesh_sim.obj": "a5c8f46c7201029992a1350bb3847bcf3e0fee999166fb82a99e25e5629fc450",
+        "mesh_sim.ply": "623963136b257af49a0c884d086fa40762ab387c10f54928f4f7153a91de785f",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-18b13adabdcb05da64e90ea18d8e025d0c913ec2fb3ea0fb46f7517542d0077a",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000001",
+      "collision_parts": 2,
+      "collision_wall_s": 1.3045822610147297,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.44684285402763635,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000001",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000001__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "22a17a8f49559f9f1f03b8a3b5d9baef40d9f677558879e0919f5a8c583ff7f1"
+        },
+        {
+          "candidate_id": "residual-000001__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "9b908bf312435452d17025f74efbe4c87c8925371ca2e5e40420c25fc9c768e9"
+        },
+        {
+          "candidate_id": "residual-000001__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "404f07bd378635599dcda11c6f39fbbe89f11f0691e5fcdd8cd54ea1a3e761b8"
+        },
+        {
+          "candidate_id": "residual-000001__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "5e05287c153015ec4ff204916b4bcd3b960afcc773f07099055863189f6f04f3"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 1.751426664995961,
+      "visual_mesh_faces": 627,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "015dccfb01309305c7f0b870d40c5470fc8ded404f5e12b55efb96b323bdceff",
+        "collision/part_00.obj": "88cdad712b8e9c5f0768f68be6ced1ce91d00543db3d5f9c1bee3109540cd64f",
+        "collision/part_01.obj": "7d59eafe5d812281fd7a4a81d34d7af59c81191ae788f7f65e6e262417df018b",
+        "collision/part_02.obj": "99a31b0807ae250ad0de60718e046da86aef0af11c7995a097c34b9a8f2360ad",
+        "collision/part_03.obj": "9f460258c33443bd7d49d53bd835207a92324ba7f43bf7ce6c65159a3446aa82",
+        "collision/part_04.obj": "e6111af7122960aac310468b563c89c70febe179d8678dbcd7b721350753643b",
+        "collision/part_05.obj": "d643a46ca0ca4e718768cda9325b619319103bfec6076272b4a2dd6383007e73",
+        "collision/part_06.obj": "66107ed66a602220a4719fb1553114126d23ae14769aeb09b5ed23bebacbb8ef",
+        "collision/part_07.obj": "60e5b2a8ee13b1ab5a74cb4e9e85f48df401dd01cdabe65744607c95a55f49b0",
+        "collision/part_08.obj": "f83aad07af0a4d316661b90bab5c2a4bfc7a2bca22a2bfa4a6e44c268df030f9",
+        "collision/part_09.obj": "9f6378a1883a6d18e8fa7c60bb36fbbf72f94cfc5a81da236fda5d00ec4754a1",
+        "collision/part_10.obj": "fcb5934c38a87477a1a13cee75bf62982db314714a92fa3612529f7bcbafeb85",
+        "collision/part_11.obj": "1947c8a78b7217ce36a5691d59394ab634ab7c7fe3bf0c87cd02ab320db2f728",
+        "collision/part_12.obj": "db7c0ce199480c2989e3154b19f09d7639710b93b1975412495efe30dc0f526a",
+        "collision/part_13.obj": "0c8575c26d3afa959fdd6f45c7cd8d868579b195156822a74b4e9b81007564c8",
+        "mesh_sim.obj": "f564bb535d387e475a9b89a9fe6d65b5df5114e60e540fe1d2954ae8052ada10",
+        "mesh_sim.ply": "242b073a0b09e5e32d891781328cd8f1d443ce992d18ecfe4ecaee3c48915142",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-460e51cf635aaf4f7d87808617d140aa78b02e977f1175df3c68b0e92666ad01",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000002",
+      "collision_parts": 14,
+      "collision_wall_s": 6.312469604949001,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.6894104309612885,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000002",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000002__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "8c0db4506c3de13e9bbfdb33db295e65e8a66aaea4ee84a780400ceb208b13c9"
+        },
+        {
+          "candidate_id": "residual-000002__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "f3dc9d44e4585fc0348e07831853d373a743d9d01098e05a706234064af72946"
+        },
+        {
+          "candidate_id": "residual-000002__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "2374ae9ac00d0b0115204730ee3324ca360551bc2b190e67e017518bb9e5d421"
+        },
+        {
+          "candidate_id": "residual-000002__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "e3f30a098608ea731d3c9d3cf937cac63e763683fb704f7c202b781f6f17f544"
+        },
+        {
+          "candidate_id": "residual-000002__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "f1721a7bcd681fa569d6cf14eed537cd488cde78567131029f9174b2a690b807"
+        },
+        {
+          "candidate_id": "residual-000002__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "fa91ea0f14a6c8c7761a270be34bf915943dd90a67cc6c5f5ba0c5b5f3d04551"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 7.0018812859780155,
+      "visual_mesh_faces": 55241,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "1f0b81cf247756f83791219e4a45ad926a8d753a4e8d8eca37ec705439c7edeb",
+        "collision/part_00.obj": "ca21d871b31c24e1c5953594274faf19dcac2f72be0d1779f8ebee23c8aacb42",
+        "collision/part_01.obj": "96230b9a06ce8c31c0f2386b442ef5e7e25085729f99a4496d93390db5e5537f",
+        "collision/part_02.obj": "9de5429dccf2dd32ff329079e8ad860339e511556d47dcaf5f5a591b6087e20b",
+        "collision/part_03.obj": "9f99f514bd1c58b22504dd48d617175d55d18b005a669ea83d0054ce4113debc",
+        "collision/part_04.obj": "924e059c1c7ad49b0ae9f0af2939b1435a008e2f12a2dd5ab844a68b6b6a8ddc",
+        "collision/part_05.obj": "d8383166b4c99b6b1531eba397415928bfbb2e7f4e363741e07f4cad02cd5b17",
+        "mesh_sim.obj": "02297b7fa1ee8c8d7d65fe4877edee05d394c346b472d327a665850488a0cd79",
+        "mesh_sim.ply": "e89c799a1634fa2892ad6f980b79e111e647ca56bc322033574d3f1259cc8853",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-8b6a44fd943a4dd5d47f66496ed843fe189a92c99cc18f5fbf8a77a057fce679",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000003",
+      "collision_parts": 6,
+      "collision_wall_s": 3.056754304037895,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.133078163024038,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000003",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000003__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "7f3e2e90e31390fd9b39a232ce5f4ea942d7d1d67bc47c3b79b0f841263b905e"
+        },
+        {
+          "candidate_id": "residual-000003__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "c20d583712711182154f34dfb024e794ee5fcffa473f7bdc0f74834400c23dd9"
+        },
+        {
+          "candidate_id": "residual-000003__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "e8cde8d24fd10b1df89dc6fe1cfc29c4f94dc87e26e98c3b5f840bc9e80b2548"
+        },
+        {
+          "candidate_id": "residual-000003__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "1240bf0223a1b4c6e4d9f9b8126978c4fd5d2fa6b373ccaadfff6875a257d13a"
+        },
+        {
+          "candidate_id": "residual-000003__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "1a21b3418f7841686b41c35535a2367d22973cc4bc08805f1d0f44b46c2f525d"
+        },
+        {
+          "candidate_id": "residual-000003__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "ef49637e434ffdc362045abe55d3377766cc0de8c6609a0176c1c233ea2f8c9e"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 4.189833867014386,
+      "visual_mesh_faces": 272888,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "3c7172f2b7c96bc8e9f1476bad399e4c5db6df277767c38cbc6d9ddfd90eebb8",
+        "collision/part_00.obj": "3f7321d5c2b447f0bf067fbdc69e8c09257848b33c21d9f9fd7ec15bb7ad981a",
+        "mesh_sim.obj": "9aad27396c296343f005579407dbd8cc815ea0407bb248897e020543cf41a105",
+        "mesh_sim.ply": "38097125ea2281712f15de776f765a2eed011546b3856094b193af4026cb6c29",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-7531611d429075aca3c360e391a25c90035729a9ce4df2cb2e30d84cf23880d2",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000004",
+      "collision_parts": 1,
+      "collision_wall_s": 0.1267753879656084,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.754405869054608,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000004",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000004__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "dd59c980bd7a33847f3c6e22e8f7cafac8ae399fcc083240ee32f79174b2a8a4"
+        },
+        {
+          "candidate_id": "residual-000004__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "88d37d869f1f9276111de6e5226245ccd3d651cebdc263e6abea39df7a26b6db"
+        },
+        {
+          "candidate_id": "residual-000004__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "611f6bdf0d307ee9ae21d229a1096526cde18113ed8437a4c89a514071e3f455"
+        },
+        {
+          "candidate_id": "residual-000004__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "e1e9cab1c962194ceafcaf1027834d930c4135a3270ccafdf3889c84d148620c"
+        },
+        {
+          "candidate_id": "residual-000004__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "4d1387b94533d2f494469766aabeacd7ce917a6a018943a314bfa86320767b97"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 0.8811820970149711,
+      "visual_mesh_faces": 1049,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "2c80b5e820204498108101c1071df360fc160e09d712a917fccdc6bbcec392be",
+        "collision/part_00.obj": "f2c10e6f23a18143d30d6001c50d431a55e5ae54e77bd312a69fae9721a6351e",
+        "collision/part_01.obj": "47306fda709789566f0534f33d8b1052414cead305fdab5c987b98ba40f929e5",
+        "collision/part_02.obj": "917a93fa2ab499c6b7db5191f7501769995c77a3604e4eb09dda53f32923e935",
+        "collision/part_03.obj": "e31e25206dfb07cf29250ba2f1f36d99b38ba0ed1852acb08079e88a37712026",
+        "collision/part_04.obj": "cfec3c4e361f9fc3792a962b0f6663d68b9e2500fac016e413240de07fcf13f1",
+        "collision/part_05.obj": "95142581c5ff36811c06888fa893c38a30067252bcb2021e1370ff3e53a937c0",
+        "collision/part_06.obj": "cdd97036a24999151ae7fe60401eb7bf7190ebf662665e0148572ef80d50ea36",
+        "collision/part_07.obj": "1bad81142653d2493f3217bdf9fcf546d23210509e7c58cb38ae488535d7b2a8",
+        "collision/part_08.obj": "aa56c328d65d4b278600a7cdff854482cf4d5f6a1f7a005c907b0b424d569561",
+        "collision/part_09.obj": "ffa81c3aad66aad0f45ba279dc5005bc2a0feaabe571325f904fe29641f9d0bd",
+        "collision/part_10.obj": "b6ae753839c62eb14e43556839ab46181fc49889286917aafa1a5310bf81a00e",
+        "collision/part_11.obj": "153b6082f6c178c1178c49491204273b3ffc9ded09e96c92e76b4327d1a8febd",
+        "collision/part_12.obj": "4989626cef04f55f43bc45350a9a570e858ea7373abc094810bc33657c556979",
+        "collision/part_13.obj": "25ded94f79dd104847aa68c23d7e3babf6ae117d178c8674fc78459b770cae07",
+        "collision/part_14.obj": "a2080afc1780aa813b4935455c5d2096f53a8b624f076b42f31929545dd9c47b",
+        "collision/part_15.obj": "a9498c6444f366ce4cc6d902dfc9fcb8887835829ee686df5da979d45144ae1c",
+        "mesh_sim.obj": "c44f1265db59edfcf12ffa9c6c2844c8bfee68a5bcaa3770c421e775f8631839",
+        "mesh_sim.ply": "aed539d0e3755382c0a0da7410c7723a09e405424d8ccafa13e40254bfebdfbf",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-803668b3a6193168e0323b6514f4ff0ff8fcdcf750890034a8ca50cc1ae0c843",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000005",
+      "collision_parts": 16,
+      "collision_wall_s": 19.904509852989577,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.8326929369941354,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000005",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000005__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "daad85fe1b418a9ff65ee8e55bbe6d81cdc96ced6080ea8d82afa4716482934c"
+        },
+        {
+          "candidate_id": "residual-000005__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "7793247b4f870c765b3f4f3794cb39cf37fdac8ce56033f9fda106a0c30aba68"
+        },
+        {
+          "candidate_id": "residual-000005__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "eafe42128812c4203e4530dff7fcd255f6565530ea59d5ff64f695d5ae2aea7c"
+        },
+        {
+          "candidate_id": "residual-000005__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "f437c1ea31b7d2fc43dbabb2e20afa8e218604a25b37b0a13270c8414bf1c43a"
+        },
+        {
+          "candidate_id": "residual-000005__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "72f7df6d652055d092eaa61017d2bd95b617af5f193135964f5de71010f701d7"
+        },
+        {
+          "candidate_id": "residual-000005__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "ced555bfdb8bf0f6eef0bf33e3817dd7e011fa400fcc9f25f42724f079c2291b"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 20.737203489989042,
+      "visual_mesh_faces": 54673,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "2814cb3a839a3f8ecd6d7be0be89210c4b77cbf31c2f98f1dd3d889f97b7f7c6",
+        "collision/part_00.obj": "36e3f65ba0ebd41dd255f74f4dfbad73d6d4613d021ed082410820dac437488c",
+        "collision/part_01.obj": "f929428f11388cc703a66d0c5fdfc84ca4e9a24cae9a5dc8e19c346a4ba079f8",
+        "collision/part_02.obj": "9c97f83bbd833bfa1582320da71de3f5a8f94805e1ed7b55b403b53be89ecba3",
+        "collision/part_03.obj": "6902a87018991a557fdc64cc020a75469f46b1f09979f1403a99727ada271002",
+        "collision/part_04.obj": "656d91878d80237a70eeefb5b641e892b0f2923e6c5a41ea64b49bb510e8a4f2",
+        "collision/part_05.obj": "bb314a547dd2cf92078043b49e839046d779291a7440021e9dce8a66c22f33a7",
+        "collision/part_06.obj": "bdaf54e0d23d5251ddace9a8f4a63d409bc752bb9783a6a9dc703c3fbc4e6465",
+        "collision/part_07.obj": "61fcf9d7a0f60d5238f8c51df4cb4b03c8b511fcf12e71e20305768e67e05809",
+        "collision/part_08.obj": "b8a18ec3014fed9935d53753b018ddd7c153b37f8cb7104f3510b8d8cfb10361",
+        "collision/part_09.obj": "f429b067eb959dedd6cdf9f6289c88fdcd3f691976dbc9daa232c8aaaf98798d",
+        "collision/part_10.obj": "e615f97eec9c33518edb1e14e5ea6c84cbd6e9072024537116e0c27b39b0bf4b",
+        "collision/part_11.obj": "6c106348471e672978b7a9312d314caa952c7a651b78c99d6d08efe60f365ce6",
+        "collision/part_12.obj": "8295fd6a8657da83f66b21536d8cd33054869cce246516d603f867ff846f689b",
+        "collision/part_13.obj": "43e955b2b1ab1adc31f24f9ae1e3a5fec692c1d47ad1d4b823cb389211339610",
+        "collision/part_14.obj": "917217f185ef77dfac047c9f695b2f1421a9541cc36bb53cd02d4e365e09630b",
+        "collision/part_15.obj": "a1ae9b8a4ff05deaf238fb32d64b86744c54a39aa3b72339953dbf624e51a16c",
+        "mesh_sim.obj": "98021d569d32e463b6012827608efa3fcc4d8fd629d352aae8dce260cc5c3617",
+        "mesh_sim.ply": "b68db3876a0aff78efd40c0d85d661edd911b8d77f05ac3dd1a00bde64e5a75a",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-e8b92406b77a843cdae5c3b9ddd5fed4b6f74ddcb240d2bd8ba18b6d61c647ab",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000006",
+      "collision_parts": 16,
+      "collision_wall_s": 19.953342530992813,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.46375543298199773,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000006",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000006__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "982070454e94997219533c605b1b76623150165a0f5a9ca8dff7aba1724ed1b1"
+        },
+        {
+          "candidate_id": "residual-000006__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "c6d55ffaa42c707086625b55eddb2b925389ea2cf371ee2292bbd9723f6bf238"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 20.417098643956706,
+      "visual_mesh_faces": 314,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "696354d3a66563e559243c95fb8e7ee923cf34a3c8e08fd057b7432356bc5c94",
+        "collision/part_00.obj": "2d4b5cf0d7ca421be9f2b722085131a031da92f3f0b69d0a4632ba323f44fbac",
+        "collision/part_01.obj": "52be4179b6bb4196e938e6e89988b4648be807263594e37107b41f79f2a3f005",
+        "collision/part_02.obj": "ade5161d37a5bc4e45de78da07176aa76ef4e45884a0adaea6c0b6fd010405ca",
+        "collision/part_03.obj": "4d71302e85e391211f7d3289422855ae1386fc004cfdd1cce4c42bf17365e959",
+        "collision/part_04.obj": "1f4028e820e3e1643d5e819b0546d7ef450520c03fced9396f1477bcec8451df",
+        "collision/part_05.obj": "43c081cb2bc8883d872c0d0ec622d7c0745bd1be4f73c86052449c9daa0b1d93",
+        "collision/part_06.obj": "cb8efc96cddeb9e2e6eddaa740b0fce6db2d89dc3494165759e7835b658e24ea",
+        "collision/part_07.obj": "ef43c467b91a9baf2a8be20d1597b50e4880d3cc15db1c67ec44060f850e359b",
+        "collision/part_08.obj": "19271b3e2b4fc4ee95c1f41edc6d85217690be0b589cb05b1435121b54269f8c",
+        "collision/part_09.obj": "203b65f5a2fce831ea21c05c1edd064a728b04c013e4d532db97091c83c16de3",
+        "collision/part_10.obj": "9481e00c8e37513af183c2e0efb7670dd0a4cfed01cd21580037a8dce25c9641",
+        "collision/part_11.obj": "b5c335e3fdcaa6bede22de4732d4ab2cd791601571e961d50fc1f025379074af",
+        "collision/part_12.obj": "01bb91ccca2b9a3e910585ea179fe43d10d5747c3fad91234b377e84e4047ba0",
+        "collision/part_13.obj": "daecdc947866522af4e526fcaa8f9982d6b81a6340787a4b9072c243f22cacf7",
+        "collision/part_14.obj": "51c8b29f173bbfeb359f121bc796da69d96617544749c74028b6bd77d2095590",
+        "collision/part_15.obj": "0afbab5fd078fc49a53b67b7a974a75153f92f6bd90c749d265206c358d88ab7",
+        "mesh_sim.obj": "d3e5a4cf440c7e4beca92a1c3400bc0fe5b40b29e236802e12b1dcc7e410ab7f",
+        "mesh_sim.ply": "b75e24bdcdf209c74e83b11c30d92225e7c1da7228bdf7e60ae993e2d4abad34",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-68cf3b2026940e954dc3281bc9ce4c27f0a974ba02e10c333cec6e3203da92ab",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000007",
+      "collision_parts": 16,
+      "collision_wall_s": 13.555516526976135,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.0585765640134923,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000007",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000007__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "258e123e61b6b3d83bf355d97a3aa1fd6b28176e3187ca5b144c6a01f65e5405"
+        },
+        {
+          "candidate_id": "residual-000007__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "43f188130dfa9ed3e40f2b3a31693eb183b671adaa2639b8c53a5bab8d30bc48"
+        },
+        {
+          "candidate_id": "residual-000007__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "09fa59a2b9defa0edda73720caa62521a63e17c776f8637ba136b4ed380089a8"
+        },
+        {
+          "candidate_id": "residual-000007__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "00a3dc04b0715b2e1268237bdeab8b692e14fa301b5de4d25604be8e40995a25"
+        },
+        {
+          "candidate_id": "residual-000007__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "4d225e076f56c054a1fd74b6680fcdac64380de76b236d6b9b43610a3c919571"
+        },
+        {
+          "candidate_id": "residual-000007__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "0e33afb1bac245a94437154884ba6e36cae2671bf8e5b514166310711ebd13f4"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 14.614093761018012,
+      "visual_mesh_faces": 18315,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "d08a172e1eec290ff88388e334de1627d9240c13aa85061fc05534f796e071eb",
+        "collision/part_00.obj": "d2a982acb7e315bbc37166a2bc277691f940e6ccff760ca4d936cbc6a1b88e5c",
+        "collision/part_01.obj": "4828e5f9afeae0c2e5d6d73308a4c8d883c1bd942e38bf7d9009b2b8b859ace7",
+        "collision/part_02.obj": "08b19e037414e7d46769abcb3ee575d260d8dfefb6daf9472aa67c4181ffbb6f",
+        "collision/part_03.obj": "8bd0ec976486b0f2cf6977607331fb94e5cd98537f73b9b33ec9b86cad349e74",
+        "collision/part_04.obj": "a039278e608ccf4a213cf1fce698f937531e1ad88c88d52aa3e895d4f0ea65dc",
+        "collision/part_05.obj": "067de6cd3b5704d0efa852d7c80c4aec8735cc1b213214bf96c7d69d398caea2",
+        "collision/part_06.obj": "c0c3b1e4dff03f362733c9fc69ec49bea4309f96632afdf29749fb664e88f7ff",
+        "collision/part_07.obj": "bbddbfb4f811ba3db0c85e5603add5adc844a01d5ece1b0c4e14c9712d3f0d75",
+        "collision/part_08.obj": "26a2e4e6b493711ee7ac6b2bc0c48e811140783ec71e810a91bb1438139ab4bd",
+        "collision/part_09.obj": "80b2b06f8c127725969ac40252f633b34a3d08c8487c373caa7a60c16f0fe05b",
+        "collision/part_10.obj": "8ee72e85bdb3c3306451d14301fbb4faece00c3dac7e8be4682c68ff9446458d",
+        "collision/part_11.obj": "bbd214fb9c2bf18b58194b6e95a31c06a55abb007c8509acc3f0915d1cd97dd8",
+        "collision/part_12.obj": "c445443a006caadafdfcc8cab5b5f95a1ff890041a26d8e9f636933e1f62e397",
+        "collision/part_13.obj": "e90cebf6f2daadb199c50bf3d6d63bf3c96934adb90ca7b24d5069e096c5a4ad",
+        "collision/part_14.obj": "aaed8d283122dc725ee4444f395585a0e47c6b63c07ea66cac338dc533488c47",
+        "collision/part_15.obj": "00b7ed56a5490fa4f5fe8127eda6446905485a5ea47de1a8e96358ab996b14c5",
+        "mesh_sim.obj": "7e93cd405da1eb43f3cfa11bf9e58b6e2a0316b07d33d543fbf21510d7e3bad8",
+        "mesh_sim.ply": "0dd18a0932c5dd662bad102545597180f6fce4cfb4790291add7b1c915d420f5",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-e57cb5e63a1b1ed1fb756e0650bde6200af48cf8e06d2f12d2e67c9ae7a4b62f",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000008",
+      "collision_parts": 16,
+      "collision_wall_s": 15.241817853006069,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.682316368969623,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000008",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000008__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "3424f857d10eb2b328ee97d552dbb746efb3d1ab979742dbcc19c53a541df9c6"
+        },
+        {
+          "candidate_id": "residual-000008__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "6ff4d77c861eee99b9d29defc23273c1be6b5b312e6cb949a660e8837eb74bd2"
+        },
+        {
+          "candidate_id": "residual-000008__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "5a2965e15669ecb625607546706f7841992411b8c87d32b90d28685ab7891e7e"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 15.924135001958348,
+      "visual_mesh_faces": 910,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "5d43b0ff6e8ffb19ba8c2715a686759ae15d0c35f739d88de95291edc0c8ea51",
+        "collision/part_00.obj": "489fa8a14f088171df0c9f4fac10179e4c905ab0a578cba31dd23226cc6d53cf",
+        "collision/part_01.obj": "241b50e673c920d1796e879d96d42e97cf4476bed0102b1e683eeba1fee63b43",
+        "collision/part_02.obj": "84c6c99df5d78c69a97aff6d35f6c5ea4f4fcc694d55fe5986b8fc09412bd4cd",
+        "collision/part_03.obj": "d9ce1ea39ae5cfea193ca8a5e44a5d6dbe50936f3d82789f5552c7e7d31c4f54",
+        "collision/part_04.obj": "3ab991dfd419e6eaf2b862062d48890e5bdd799cbee7669949a985e3986b2b1f",
+        "collision/part_05.obj": "8f5ce6886b2fc6bc9d2988634c69ee68c65c29cfd394d6b952d9ac9d90842291",
+        "collision/part_06.obj": "abfdbfd21af93510278e94571788d864be4c2e3c3b06641ac3b76bf625efbafb",
+        "collision/part_07.obj": "c7abc66a4be0fdaeb647c8850294b915eaa2cfcb8fc00c73fca85c2f277b7329",
+        "collision/part_08.obj": "ed986bbe3ce01c087c4a06adf648ce002fba366340a5989f79ee606addafd6a0",
+        "collision/part_09.obj": "315396995095d8056f95690f1d9550f88307d60554cf15f52988fb3dd33e3f74",
+        "collision/part_10.obj": "1ba4872700bd3ea9a8d8ac97b4ca7de5aa26a66559cbfcbbf0e059232751b271",
+        "collision/part_11.obj": "2f38e9d585800721671ddf4158c9dd4b152a0d8946b83cb434e6dc1c57f16c60",
+        "collision/part_12.obj": "90e7b1f9754749ea54e0f519025a4e44d0cdb04577ee3a01a0831a27f8229c09",
+        "collision/part_13.obj": "b18548fbc4dc38cf737788b2f566f2e1fb93bb93ac25671affe9765fe16508cc",
+        "collision/part_14.obj": "f886e3a77b4ccad5efc7a9c8a968e20697ccdd14bbdde9a62eb101bb5f3b24e2",
+        "collision/part_15.obj": "59005e77851ba98dbace17f3ef3a7fd3e7c5c50d9f63a0f600a1269a6b9ace0b",
+        "mesh_sim.obj": "b9ef1625c09ee3f80daaa96b7341d925602492ad666cb0e8d8f6039634d4b9c5",
+        "mesh_sim.ply": "ba8dadfbe70d33d8838224838a499d265b4b588c91bf991fcdc3681260502d93",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-b29522703a1bde707af5b4b8c7528dbabb8da180d9d3678881712203e198e235",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000009",
+      "collision_parts": 16,
+      "collision_wall_s": 11.88017918303376,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.5407718520145863,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000009",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000009__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "9b551b323091fa7217908e82781afe9017ed5bd09ba38bafd052f605e0a6f5ca"
+        },
+        {
+          "candidate_id": "residual-000009__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "dc1ad34d4052bcfadbe605f312f1758403ea6e3879efb46732ce63ce75e59a68"
+        },
+        {
+          "candidate_id": "residual-000009__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "44a628325e5d71462b45ca6c9474222774dd5d52b6e11879fcde1b4c58d24943"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 12.420951795007568,
+      "visual_mesh_faces": 253,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "b594f09cc01a8527828f7c1630d56274a6fe11d1b29b3a33cfc57396d7ab15e4",
+        "collision/part_00.obj": "8eb1e3cc51c81c8d43645d4cbca3f2b34529bef9d96705009c1bd317f6fd5dc5",
+        "collision/part_01.obj": "fabefda23a65b5ed285b8c6bfec2af2fa306a714063e351db75ead5e885abe80",
+        "collision/part_02.obj": "c4f74b9a825e5daa3fc6d1c3ca966856c0144353a483ffdf31748a5563245a01",
+        "collision/part_03.obj": "a1472a2450ae1e2813a61a3331aa5c5a00652ffb6ac8a0271c93a2c3b77dff40",
+        "collision/part_04.obj": "dfdcf8bf57daa4cd467e658ea0330a6d16ab46187037fefe148362e2fec021f0",
+        "collision/part_05.obj": "86991b2e00b651d12df5b12717360746454dc66a2d28d3ab40105f6bfb7c78c7",
+        "collision/part_06.obj": "796c3fcc627163b98a788ed02b730284c1806c56853ff554fb606993316e4da8",
+        "collision/part_07.obj": "be01aed6c3300bcf31cae396a201bc5d716f06bca6f99cf494487fb92c9d51f8",
+        "collision/part_08.obj": "1b970301d56eb535047a8dffd598861cd310445e47fbc863b0961be792988402",
+        "collision/part_09.obj": "183925a8e052cc5d4a5a87efa1738dcce40b12284f197847e20a581f8f20e958",
+        "collision/part_10.obj": "3f9e1c7eb0c23015bf691dd6acfe27c19b5bc1ffa610aa73ac5fbfee345d1327",
+        "collision/part_11.obj": "2ac3491dccfb94fbb8ea07a757d2d8d17aa00cf381917897ce3ac81f1308e95b",
+        "collision/part_12.obj": "1617e0d4c07aa30d03651fc83043fb58d178c4335996ccb65e7a6c3f9191aa6e",
+        "collision/part_13.obj": "d622a1c95fb9770a8b54853f285aac3587c8531dd5cadf395f066e66cde86a62",
+        "collision/part_14.obj": "e8722a9d40ff861dcc0267b7cc6ef52e2b6c02a2367b49748b0112ccfaac438d",
+        "collision/part_15.obj": "1e4ff44e5c6e2a59fa037dacb336c09696726f00ee8d649024f9a19a14a0d18a",
+        "mesh_sim.obj": "9bbc1e37f450981dbf795b5dcc23a25ce98cf3b713f8d72c5215d03b746db052",
+        "mesh_sim.ply": "8c198ddd66d35d3d8d9f4060008f2829d2bc4286cb27bf4ffadd0ff1dbaedee4",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-13a77d414d732ce23a88a5088f71fa4196ada17a11fe605b81224e5fc924db79",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000010",
+      "collision_parts": 16,
+      "collision_wall_s": 14.985176486021373,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.0505825750296935,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000010",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000010__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "169623a59f7ea3e7976542417fb8e56927b6204a3c44e0e4bc113a324fa7acdc"
+        },
+        {
+          "candidate_id": "residual-000010__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "bdc3ecf7f0a4c3c17185f76dec87c98d4f7da4197cc3a13470325e5740f6333b"
+        },
+        {
+          "candidate_id": "residual-000010__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "441737158475f79edbb1e8a9a188800a420908731de81e73d98494ee99fecabe"
+        },
+        {
+          "candidate_id": "residual-000010__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "85d73bc3ac5ed2f7f96725cd0f21c2d99aa81e09d57f66e1f047496992b870c1"
+        },
+        {
+          "candidate_id": "residual-000010__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "8075165f826aedb30f2e3e8943f25b43a31b26d40740e85ad5e547f877c9749c"
+        },
+        {
+          "candidate_id": "residual-000010__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "265a9208bff8792dbd7421939ebc2bb5f281ec4a48dbc2e9d302db159809eeb3"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 16.03575981099857,
+      "visual_mesh_faces": 11454,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "223785d5c1722d0a291a44eb7ea2c1194fdd61c2b6b16ac0c7d56df215675dcd",
+        "collision/part_00.obj": "baf88cb669a7dce9981d473f6b8b202ec1a430e9a6bb3ad7438922ee45990d44",
+        "collision/part_01.obj": "0d1f3cab326c0d97c980358cbd57b058f70f37ad53812a5e0559bb3f4eeb623e",
+        "collision/part_02.obj": "0869133e5b633d5e1ed4cd9634e5bd20ff561decf12595d417aeec6495a7b781",
+        "collision/part_03.obj": "3e78129365fc0648727123ae47f50d39ff5ff1974906ad8080554f69077b86a6",
+        "collision/part_04.obj": "03fccf8bd0529dbb01612992e3f688835b2d4afe04f05e97afd74fe1554f582e",
+        "collision/part_05.obj": "329ada82092da8e03b7ee21b35d935af9c96668cc0dc3d5939bd3e0f02b9d1dc",
+        "collision/part_06.obj": "4eabfdfb275352e6a61cb45fc4613d3b6d2fb787f9fc32d212a6360b879c377d",
+        "collision/part_07.obj": "c4c7f1a9f5971409b3dccca9bf29d60917e845095b6cf16fdcf29317242faf93",
+        "collision/part_08.obj": "445653f6b6fc6b552e7276096c11d07170d7c4c59d975be40502a2661b0df2ff",
+        "collision/part_09.obj": "1e595ec1e34a6a1b0914efdf6c037b8ca4ec9576ecde6557e42f3e28c7ce5b67",
+        "collision/part_10.obj": "583bcf167e75c2cbd72c494c85e6564516270a4026ece7ed8ccd66dd5a103dae",
+        "collision/part_11.obj": "49c00af725432b1d829e636b582668735ef52c12a2ae5738c133bbdfa30131dc",
+        "collision/part_12.obj": "4665d8d5ec61c5aaf96747ae74c284637c22a3e74beaa46317b615db025e4679",
+        "collision/part_13.obj": "67efd0fe3d33eedd4f5f20b26105652291207a5cafb0718a2f5e87213b6ea35a",
+        "collision/part_14.obj": "043bd01e6bf7d772f06da4a2e915194a9ecf5c8d5289f4c2363e4372f5ff33ff",
+        "mesh_sim.obj": "4c3be636d46d81f59135d0f695d70d6aae6abe1c50c9520cba5ef95b93629c9e",
+        "mesh_sim.ply": "9d801046ca84f19cd2cc30aa89f999137382c1318c6c1ca5d7e17c082cbd038f",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-eb860dfccea1f9684362eb983c32141f219e28a4b3f5ffc04e10608fb9f6b19e",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000011",
+      "collision_parts": 15,
+      "collision_wall_s": 7.972579550987575,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.45644548296695575,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000011",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000011__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "fbeafcbaaf9ccfa8c87fbc126719ef80b3ed3fceca3812fe8fc2efeb2529fe0e"
+        },
+        {
+          "candidate_id": "residual-000011__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "064d4c70de709f751877f5289784b8e6a6ef21e79adf36793587fda43739c88b"
+        },
+        {
+          "candidate_id": "residual-000011__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "7121d0e47a8c25f7a63d4b0f7af022c4e0f52c26fd889fee5ec5aa23ca02af0d"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 8.42902562400559,
+      "visual_mesh_faces": 343,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "76d16ddd9c891c1211919b1a9d26745d1eb9cef2b621ebc5022ecf06d8eab7ca",
+        "collision/part_00.obj": "4a9526a0111c1a9cd81b6681b52e8ba08402f8362bd57a43289c3a8a095d1988",
+        "collision/part_01.obj": "1b9dfa6d0a7cb535684aec4a16163758d309ad496283ce99493891755e5ff08e",
+        "collision/part_02.obj": "6a0698251db897f62c6f1ffb0b9a3254189b927eda90044003d827c2b402ff9a",
+        "collision/part_03.obj": "4d9c8af73fc32018a5bc851f16e4f064d0ad3ed2da48d49470a07084aceb8023",
+        "collision/part_04.obj": "0f23f05b9eab7955f9d947caf3d10275dd95cdeda795797ea2bd45e3fb259c3e",
+        "collision/part_05.obj": "b92861e96a79d20046dc84537c12324c6a28a220bf6a784a40322327fff1db50",
+        "collision/part_06.obj": "2c1ea7b57dd758661fef5323810f36a5a7846143ee74548282cfc209e98208e2",
+        "collision/part_07.obj": "3802a655ed490f37f2849f28da72fc2b671508d83de9ad0272b484f30abfe67e",
+        "collision/part_08.obj": "b4a17e2c1b142e4726eac3ce732b1ebbbd6ed338bf7af49161d4fdef29fd995c",
+        "collision/part_09.obj": "466f0e671a766cfa9dd7a36f938597adc88a8186238f906544ea73f745b905b8",
+        "collision/part_10.obj": "282491a8546e35f8e1d6ff54ae9f8f42fea7c9f3aea6b537cd9216e955e0582b",
+        "collision/part_11.obj": "0f78680f433e4677e2ee0d3e01a4542f787b5c1bdf01a7ca11cebaf8a92ce2b7",
+        "collision/part_12.obj": "8acccdba69b76966b4ed78858c929ce9044c66551d23cee508f67ea1ee0a9887",
+        "collision/part_13.obj": "7abc30f0a086ddfe0f2f9b916a74d3b835b8442e65d17946cf611282514d103a",
+        "collision/part_14.obj": "130542bb6761167eedf37bf57aa9c85dfcbe4e20b69f54e1fa5a23ac0617b978",
+        "collision/part_15.obj": "3324f7bedb3dac31cb18b80f8507d8ee822bef9352e07f009ed3eff385df644b",
+        "mesh_sim.obj": "74132dd828a0275d68d2f2f53f275cc26ac62553a5914580e4b57e0482373c9a",
+        "mesh_sim.ply": "274df375fefa543841a4328ae00a095c3f33f043d87d194125d76e491d68470b",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-f7e69fdd90989f9b5d557d517f083169da1b14069936310db74372bb91f1d672",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000012",
+      "collision_parts": 16,
+      "collision_wall_s": 5.903985682001803,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9036847359966487,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000012",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000012__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "6a0786dd1b53f301ff6553dcf43056c8f483e3940858eb94c92806d26f319a0a"
+        },
+        {
+          "candidate_id": "residual-000012__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "52811f74969faf5fb2d44d61a23e872753317babe1c18ffce6395f8f7373adff"
+        },
+        {
+          "candidate_id": "residual-000012__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "11daf635e03074b37c51bc0539850f68e676941e1a32f80d9c88d314ef3ea2b2"
+        },
+        {
+          "candidate_id": "residual-000012__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "4ef8ef42731094f65f3a0f7fe6caed2827070d41d1de4e075c6e4a385b3e7616"
+        },
+        {
+          "candidate_id": "residual-000012__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "5a5ff48bd6cfc852afacf95001e82e602fed0a3490aac09f7d4601229c9f0c1c"
+        },
+        {
+          "candidate_id": "residual-000012__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "e533c22ce60422ba14fb32e575bdfd87c898df917a248a6e4e8ef2466a9a3b59"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 6.807671157992445,
+      "visual_mesh_faces": 6608,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "46199c4075ef3d08962aaf61e7dd7d1798a8e184265cd971a168c6b2cab4e3e0",
+        "collision/part_00.obj": "8b15d044a78be300b3f384d6fd0f44f3051d5a049a1b2b65eb5ace631aa7ee59",
+        "collision/part_01.obj": "312790cf34b459bf278ca3bc993f8ba33eff57d22d36f870dbbb73c40104b955",
+        "collision/part_02.obj": "4d47ac074d0ddd935fc13a263f181163c1a6235c8cef1b8c6f6dc3c2e833ae1d",
+        "collision/part_03.obj": "f69ce89e66ea960a0dfa92a2f14b6e842ab3eb2209dc6dd6fee36fe98564bd4b",
+        "collision/part_04.obj": "cc9c7b1143c8f7cc565ec7829c5f0af1c735f242a63b75f0d8eadae7566a69ab",
+        "collision/part_05.obj": "8e863c169fc6bd25bfc6cc3c87caf048e95f44ac410e4e548d7eef477407e2e1",
+        "collision/part_06.obj": "e9ab1a2b0e149e1bf5c8a07c2674d6dade538b89f140055962c3399367841389",
+        "collision/part_07.obj": "664d8897536e7c8a64fc2621f006a4407add45dc94ede23cd230d976fff26aff",
+        "collision/part_08.obj": "2a74dc899ba12aff07ba802f7495c71bc39babd7b7b365ae9a4f671469b32c0a",
+        "collision/part_09.obj": "93c651586665fc84d87d04a34d563d2b212703171566040a77055ee26a297c2b",
+        "collision/part_10.obj": "84bfeb18d3c3931d8ef6ab84ef7e91328e05f60b8872e3d028b2ea4040ba5e8e",
+        "collision/part_11.obj": "fd0cfa5f6b705df61afb0845c17fdcc8452275103a6bb4660f268a5022ca80e9",
+        "collision/part_12.obj": "0581ab88232157c6982a9552bd1c43864c1903259eeba101982a6e2ce8d634f2",
+        "collision/part_13.obj": "3d259125d915273948e817813a0495ea2c7807c419d8901d15aa926848478021",
+        "collision/part_14.obj": "62cc9a14827e827bebcbd73ab8d9b641bf58f62436eb16bbf7558a4de5112238",
+        "collision/part_15.obj": "497a79dc3bd28fcc544647ffb3d521ae52ea12f59959c1b34a2993dc11d81a51",
+        "mesh_sim.obj": "2258b8cd0941f5b90388af98c98706877e4cd8f1c82a5577673c41e1550f4052",
+        "mesh_sim.ply": "623d70215f6c8f352a2edca768cefc9e69b64799edf53a402906dce56b9c1ff4",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-6911a37c52119b580efc38891d7a21202691ea658c43cfa60de51a738c1ba772",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000013",
+      "collision_parts": 16,
+      "collision_wall_s": 15.308935040957294,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.955836845037993,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000013",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000013__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "851beba71e1a8cb31613810f6b151d784d6b1f13a83aac445f145875d7283297"
+        },
+        {
+          "candidate_id": "residual-000013__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "5e8a54e338a0876a45b102cb980670a17838d89c65622edc03c7a2690e6801ca"
+        },
+        {
+          "candidate_id": "residual-000013__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "5cfadc1e61dfce96509541d0a46a1eab5acad5cec9fd9deeb80465e13041788c"
+        },
+        {
+          "candidate_id": "residual-000013__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "84722c993e49e3b1295cf78c900d5f87dcac5317fa4314e8c92d628aff2f9240"
+        },
+        {
+          "candidate_id": "residual-000013__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "5139872408120e5de31ce792800b6961a67d95ace5f56d86c9dc00f76e869e12"
+        },
+        {
+          "candidate_id": "residual-000013__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "5282ba5907ef217a889d4e60e827505aaa7655e0e142851ae961c6065ce381b3"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 16.26477266603615,
+      "visual_mesh_faces": 795,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "b9fbd39ef8066e46166b209390c3abd0ab1176657380380bf9726d5aed79ca34",
+        "collision/part_00.obj": "7ff6109e576911dbfa6e44ea40e028c9dea328de52d8408064c2e1069d36840e",
+        "collision/part_01.obj": "7c50bd40d92a38a705ed86e21cdecbbd3fc1a99fd0fecec24b7bcf9462d9a1e3",
+        "collision/part_02.obj": "07eb6fcd676e349469f0def66e838e5edbef73e3e6e89cc374767611d9b603e4",
+        "collision/part_03.obj": "b49c3f784da485acd9bb178144c4c6bdeeb9d583acf7f4c5efe89c072c8d1aed",
+        "collision/part_04.obj": "4b00ceb471da1dade7ab8ee7e10211e8196ee9154f54b58d226afae98089a91f",
+        "collision/part_05.obj": "77d5a05b505e1645e8ac755625c7e0206e113aa319de65d310e4c8c790dad90d",
+        "collision/part_06.obj": "9d250d8f6a24b8cfd58f85e62e4f4c3a8d2b637640be5f033a41fb6f18cff786",
+        "collision/part_07.obj": "598eeb5c478480c857d5c88fc997d9be8907c36eaf5f9a1231cc9bbdebd1136e",
+        "mesh_sim.obj": "ba18b8386e1e4de6aa4dd0fb34e47eb2aade172d90bfec91f0529b97c321f7d7",
+        "mesh_sim.ply": "ea782f6be1902f77fbc00c6f32348b52752e194c6f7cc7e283bec11dfdbb1b9a",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-b586c946d6fdb5015f19c665a02ea521d4294c86ee90f3dd9a780dccae76fc45",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000014",
+      "collision_parts": 8,
+      "collision_wall_s": 2.8786094569950365,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.0529307940159924,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000014",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000014__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "114bcdd24fc31b38b668fcb8d3df1333bc10bad67e62207637353a6f9108a8c6"
+        },
+        {
+          "candidate_id": "residual-000014__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "dec1cfbbe122956b51416f934972278a1e4453cbe15fb95c64c6c1f5c53bc644"
+        },
+        {
+          "candidate_id": "residual-000014__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "d88ea3cec537babe06e11bb1e4a4dcea73d4088d6ec9f5b2dc5a1fa43d1ee980"
+        },
+        {
+          "candidate_id": "residual-000014__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "f727b28bb0a226c5d9cdd9ba27abe0ca756af4b803cf1e3781c6d1534da99dd7"
+        },
+        {
+          "candidate_id": "residual-000014__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "21d64d24f07725a937695145ee869b63e14aeaca1002bc41f22350c6d1c0adf3"
+        },
+        {
+          "candidate_id": "residual-000014__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "624c1a01240d8f221c8ac2da158534c9c134a833e8ef87d866d470389a2a8d05"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 3.9315408910042606,
+      "visual_mesh_faces": 235,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "2b5ac7ec4c579560ff4eb98c10ad9a7dc1ec1d432a74973f59ee34db1dcd1768",
+        "collision/part_00.obj": "ea8a476cbeaf3b5fbd415a2bbf8d00e938548a3442e6488da1e74557115e809d",
+        "collision/part_01.obj": "b5d2e670ec3c78c5987d3cb96fe1915f2fc5f3d9b0a595e441692fcb8541f359",
+        "collision/part_02.obj": "eecb0aa8b5b6401ac3654180f67ec79e5ed35bb5ce0a7045a9ab990159ca515b",
+        "collision/part_03.obj": "53557d5ad122839dd0ef32e0ad11744f9b1d9b18f637f477ad75891dfdf47326",
+        "collision/part_04.obj": "72bf9c570e07b73e974a1a50f9919de23477446ee9ea3b6ff4a6bdb159588132",
+        "collision/part_05.obj": "2268935e7520a707158060237e7afbfacfe4d06ecd853cb0f8979bae323af126",
+        "collision/part_06.obj": "163af9d44e242d1629e1085090c1b1c1b51dc1f80eded901a4fb849d0a2925d5",
+        "collision/part_07.obj": "f2b6c2005c0eb0b9d34160ac76cf7c9ca11288c31924e9d290716b37101f9343",
+        "collision/part_08.obj": "414c436e7ef84bb8ff6d8f1925f3778411cbf38794f3ee566c04ee6b9510fb44",
+        "collision/part_09.obj": "303f46efee36c411fa969a7bf877117adab25f16ce0d5fa8de80d0a745d3f627",
+        "collision/part_10.obj": "43490c0d2c67e0035c369662bc8f635c7225172b5a903a7ceb525b012c808dee",
+        "collision/part_11.obj": "56aa1315b56255f3c22aa45c584a18efa46742bf400a565afcee0a855a924d9c",
+        "collision/part_12.obj": "d8757819df1ab7b9c41937b9c456940f9e14ae831f5e1f7659aeedb5af9d17ad",
+        "collision/part_13.obj": "62dbf5b28ea28aa103a3a4b90189236745649afd0aaf6c15ab018378491fd463",
+        "collision/part_14.obj": "3e797ef58c47ce1bf71cfeb8030061650ab4b2824b6c63128a67f8f3482ad06a",
+        "collision/part_15.obj": "8c04a68b0e878f676423a7e16df5120814556a7b5db60372b6a78f5f111c9958",
+        "mesh_sim.obj": "9b8732c793cea1f6f1731b6b7488dcac6edef017e14a3b513fbc813ad3c7ec6a",
+        "mesh_sim.ply": "80791d34c4732504168762e483cd3c2afcbc571207eef46f11014189df361f6c",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-6d3ce9910be142922fb551cfe9cb4982747e545d7e3e5c7e6fcc73603a0d0717",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000015",
+      "collision_parts": 16,
+      "collision_wall_s": 13.340435129997786,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.34489051502896473,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000015",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000015__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "1fcf4c898f680fe5173ce1bc262545fc7ee33ce5586d1a2b40663dc0bd97956c"
+        },
+        {
+          "candidate_id": "residual-000015__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "4892015962c3ef0ebc435a1a2acaa2224d5aeb069a29ab046d5088f77bd0033f"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 13.68532646499807,
+      "visual_mesh_faces": 230,
+      "visual_mesh_watertight": false
+    },
+    {
+      "cluster_id": "residual-000016",
+      "error": "ValueError: component lacks confirmed TRAIN views",
+      "partial_output": "/output/components/residual-000016",
+      "role": "obstacle",
+      "status": "BUILD_FAILED"
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "29aa0ee24210204585a31293e33debad2a97cbf42622049f0da9b6f5f059d72e",
+        "collision/part_00.obj": "531b219763f06e1162b9e6f66b6ffbaa21925efee4a2b84d36a172f2fb290225",
+        "collision/part_01.obj": "51f3573063122172cbb53b2a0917435cc9def43d8911264062b70dbb2a7460f2",
+        "collision/part_02.obj": "3305769fb58207bf0a78be7d3861ab9b4d903f57bd309f230bf6be527459f642",
+        "collision/part_03.obj": "fa082a381ca137c1d408f8676178b0eb963872749a658f40ac5a2ada54ef2647",
+        "collision/part_04.obj": "3ef100480111450be13896fee000e78900df9d474d73ff16b64941d1a67d9567",
+        "collision/part_05.obj": "9a79ffa105632a33bf4d1f308f8b6770753f8a611a1a07a2bbc2c8826c298d13",
+        "collision/part_06.obj": "324fefa7e3bb55b18099f88552170e9e98cd4ef47a0bb9c2fd10ccdc865982a9",
+        "collision/part_07.obj": "35edc528d42856754025a4d255b6b58c7a764a518d16bc0172739fc5bdb7ef16",
+        "collision/part_08.obj": "d2ffef7a0b1ffed278b97a4dd7c7fe0e551afadf00eee2dc293a3d6b432b7523",
+        "collision/part_09.obj": "7c96df29a86e3f017a272c330e2cd808c76e0cf194a3bd70e4087408b1c482a2",
+        "collision/part_10.obj": "47f7f78443d653ddc7c020ca810e5bee5df2e5043fc37ba392459465eff0e4b7",
+        "collision/part_11.obj": "087a79e704c226630b565240f83df40913b7ca1358604e5d0ca267130d1d40c4",
+        "collision/part_12.obj": "3500bfc29bb1725d14822b4491021560f0a165c5d2b219e837c61a7d2ce61c0f",
+        "collision/part_13.obj": "41ea309709358dece495e7500a6d38d7e91eea48f6f609e7a57047e19371a01c",
+        "collision/part_14.obj": "a32791318a86becef25cc2ee8a5419f8a8ff60b15e3aae5aa216ccbc8706aace",
+        "collision/part_15.obj": "0c9d4c64a623e37569c845de7901ab39de22af04d53a3cdd7525be018d2681fb",
+        "mesh_sim.obj": "7d4b8758609c349e447ffac451a74f4a75579ed2180198843e3d6e89136f0dc9",
+        "mesh_sim.ply": "86458171d077a83a49ec3a504078ed67da832a00fbaaf95bd8e99c3e3644c1dc",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-c1ee1967a53f8ee957c62f424752d154a4f0d7fbf0f94b3115a04d083345210e",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000017",
+      "collision_parts": 16,
+      "collision_wall_s": 13.183922641037498,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9855062139686197,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000017",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000017__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "0572bc3cb22ac236ab7ec7c40212d217b72e0f300f16dd589af0038c27340b03"
+        },
+        {
+          "candidate_id": "residual-000017__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "a70786652147bde10148e7846a9a55ccdb3b07a7a17c05e92934b647e2184bf4"
+        },
+        {
+          "candidate_id": "residual-000017__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "d0afb319aa3bd044200093eecc32d8605fb421ac2c63dc7543b567862b3fd3e9"
+        },
+        {
+          "candidate_id": "residual-000017__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "b9700accbc61d300cc863668c251cbcb7a6ff54a86dc4adffb3b3fdd766a6861"
+        },
+        {
+          "candidate_id": "residual-000017__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "383b07e4b12a2be112245e469d9d25aaceb8e5194ba46446ebc8a574e7dccfcc"
+        },
+        {
+          "candidate_id": "residual-000017__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "4915965ec612cb1cb3ba8cd413e8b1e19dfa7cace8afe7f7a5e3ef33dbe98e78"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 14.169429624977056,
+      "visual_mesh_faces": 3640,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "d4f11ee0b8af32bffb731ba03e934681733438d1f37ca13d2e631cade9252fd3",
+        "collision/part_00.obj": "d0d6d34d57909235c4b36e1f2cd33733d35905b8958331b9024a7edfeafc964d",
+        "collision/part_01.obj": "ed5404829d396c9090af19f4cfb9a5129903d752d8c8d2ef0c0672b6da6004fe",
+        "collision/part_02.obj": "24ddc122151f4af49921e80bf8d0472f0d69cbc1c97d12132cdc9eba84c29db8",
+        "collision/part_03.obj": "0ea9048aafb841d5cb8bda3d62f1b0f9a690710c853ea377b5198559bf3fa36c",
+        "collision/part_04.obj": "29c36536fb60f76a498ded87a7075984a8b641bffd1622cb095e0370bca94f14",
+        "collision/part_05.obj": "62bb4ed5b25ec25420853498911eaf7d532ce04b6a7a80a37277a775bfab0516",
+        "collision/part_06.obj": "41e09071543444771e14dee16cfc8aaaeb8991430d6389d6e8a1d0ac66083712",
+        "collision/part_07.obj": "2bab322b50c19783858d0dfe3b9b72832a6025a7112d3865f67aff75d67bd013",
+        "collision/part_08.obj": "08b8a81ba2fcb776700819a5b38a530fbc1f9a399a015853e1fcaade9b768558",
+        "collision/part_09.obj": "b6e1312a71bfc51b77a8369d656af97edca825621ec2a5bc91732bd084516974",
+        "collision/part_10.obj": "d5563fceb830f61fac1ded1d4637b1ea820254c1e7c727af1ff59df8e2b61c82",
+        "collision/part_11.obj": "dae4c62ebcd7ae7df2e3a67068eea2566e544060e080aac7af69c10062c61dfb",
+        "collision/part_12.obj": "b2c6023322521e4548eb82e16c21df35f3358d362c12d080711e951a6454e118",
+        "collision/part_13.obj": "d2ae8f20e531d156466a95bb7d275d53e1a6ee5e0682bae284760a016fff1952",
+        "collision/part_14.obj": "13f5de08be4a35c640f4e69ec019806c819d6e683dd1b153a25d21570577717c",
+        "collision/part_15.obj": "c1c9803029f9a6bc4e0b523fd1baac0c24240fc7824f316c85400adf7e93d524",
+        "mesh_sim.obj": "fe8a40c5b9fb54d66a8710d0be60e4a6f13f87d71c5c8c12bb824da1e8d7bd5c",
+        "mesh_sim.ply": "6c2ce4e1a19e2edefd53449ff3c15d441f0561a6d74a5f86280c71144e45940e",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-9250d2a1b4a3f7d57a984f293042da811f86e4435d0d2a4c0f498501038ba943",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000018",
+      "collision_parts": 16,
+      "collision_wall_s": 13.646309292991646,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.0566246039816178,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000018",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000018__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "a5a8c03ae82060a15ce419a2285641938421ddf0050fa7d758a3164357e31434"
+        },
+        {
+          "candidate_id": "residual-000018__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "f8d7e6c5f5de766ffcd79e12c29d077db6f30facbfc9f31a410b903b2500123f"
+        },
+        {
+          "candidate_id": "residual-000018__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "a9cc608931f3ad8926ccce1cf311658813ab3d7ac7a1d1d78d64dddfc88302a6"
+        },
+        {
+          "candidate_id": "residual-000018__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "5ee64eb5b62da19ddc133202a677b13312edda264e3a868cdd23aac5bb97df77"
+        },
+        {
+          "candidate_id": "residual-000018__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "b471cb3e157bade39048b20c3a3ecc015acb8652927d9324d8049b96aebd17fd"
+        },
+        {
+          "candidate_id": "residual-000018__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "47bbada31bcc450a5df089aeed006646a40ccd4c8955448b8745d9f8a54fc618"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 14.702934567001648,
+      "visual_mesh_faces": 13686,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "cd4681eee87d30515579eb4bd84bf42f668f7899e0aa0f1d39e83821cec95e49",
+        "collision/part_00.obj": "b8aee911b7bbcc38f06779eafae8d2063ff9a0281b9e3f7142bc3a75172cbf3d",
+        "collision/part_01.obj": "d44d234ce3d95b050c8568361822b53b86a24d2eec5ed4605cdc3e18d841ee33",
+        "collision/part_02.obj": "defffa30e365aa57e501c2a149234a298c802fe16ed4f4105ea8c09f8ed10b50",
+        "collision/part_03.obj": "fb554882f6d9518f116883769d7d0160d88c243115b389d9bd3e45c475ffff79",
+        "collision/part_04.obj": "293bca80893289231c89687bf464f9d2bea371c3aa6787cd1f1a4096584bb868",
+        "collision/part_05.obj": "5e42ca015b471eaf0d0b6fc02f425a0b2dcfc265d2f4c39133852ff40e507fca",
+        "collision/part_06.obj": "e988f5a652029d557e01232a4b22a0d30056522dd7965956e87a35f0460033a7",
+        "collision/part_07.obj": "0862a2db6eaa1977b290e33699999d1c74d9ec1d2ae7efe75705d286c4816dec",
+        "collision/part_08.obj": "2e312e69fbf59880315520d19bd52e6a8a14737fa98501e14eabd013c5d60cc0",
+        "collision/part_09.obj": "6c1155ca6be87e0a29d2a892ac26878542cf56f082f669b8148f5b80e24c314b",
+        "collision/part_10.obj": "0aa94a49f3d0a902b4162a0c9dc86bcefb374ae1021aeb52386883965f2ca74c",
+        "collision/part_11.obj": "cbbded38552f2cde59fe7165d5c6467bffa91ee8dd3154e4a221325817fa4cc1",
+        "collision/part_12.obj": "d7032cf70bd49317b923f2d66b865fd18b411a7e08f1b97430a52809d860a584",
+        "collision/part_13.obj": "90929849c08726f430dc0ae1897ebb824996baebbc96f81ffddbe3b0a6bbdb5c",
+        "collision/part_14.obj": "949f019d302f339397d2e070cef72ec3938384ac647f430a117e0ca65a5f646a",
+        "collision/part_15.obj": "8168b2030ac017dca217fa46d840519506914b4773b50a94451657c8e991680a",
+        "mesh_sim.obj": "25375370636a834c3698a6e0acef4ee18d010f1d0fef02ecccd2cf99be9c0110",
+        "mesh_sim.ply": "c2899ceb575d1d5464e1a394c3aa66645ed1c427546ce0ca7250b739628b9f4f",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-b224117fcb397be4b4a452b69073543f8d03932ca0be22019892f0d8748500cc",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000019",
+      "collision_parts": 16,
+      "collision_wall_s": 16.131021404988132,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.1264709929819219,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000019",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000019__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "5358e8d0c12df86ee005c5aeb366e54140217f86c062513e933f19b02f7407b9"
+        },
+        {
+          "candidate_id": "residual-000019__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "70072f374cc94b989cbbddcd88359ad5a8eb692a7bda76e971bb74014728aef2"
+        },
+        {
+          "candidate_id": "residual-000019__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "566fa346c04fbe0be6247e05c1f1861eccacbd0372b459fb9b4e5691eeee4ab7"
+        },
+        {
+          "candidate_id": "residual-000019__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "a4efaf54cd20b1b1349c591e2f91672dfbdf51f307d832ec2b9eb480f96ec8b5"
+        },
+        {
+          "candidate_id": "residual-000019__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "01d3dd28a10e7bcd6904c0234d9a66e470ccaebbad93684298292f381344ba52"
+        },
+        {
+          "candidate_id": "residual-000019__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "73ba9935c44376a9c318f983a6528aabdde1804cbff54835292d61ad59c4639e"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 17.257493047975004,
+      "visual_mesh_faces": 15898,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "dbd85ffd3b8c8869a56a182c76d39765c5e1bad5a7901e2656613c2dd5ffb73a",
+        "collision/part_00.obj": "a83cb3af3733f2816f069da4ac891ba18c39eff18cd43ddf2dc6d300e136c147",
+        "collision/part_01.obj": "903ead9e438fbcf1815523e000f76c85d74bb84663beb09584ad6e2e5704635b",
+        "collision/part_02.obj": "aee4833d1ebc84100aefacbc15fce126d09ab08a5e6f4cfb3c58ac2de1afc922",
+        "collision/part_03.obj": "dfddb8a7041f1f8b9ee6255bc1f04bb351ec7b4f89cd926eb864655beeac5fc6",
+        "collision/part_04.obj": "d660d503be59af35a7f09b7083744fedca5ab088285b31005b9365f9b478b02c",
+        "collision/part_05.obj": "389587adc8129637357c44e56941f507d4b85f63d355390f33bf93559ea5f195",
+        "collision/part_06.obj": "d60ebf117c64eee2da4299bfd4c242aa6a6e6e2fcc2a8e54d460ff292ce7263c",
+        "collision/part_07.obj": "1f60ef74eb9d172d473cec133648804fbeb86f8acfda6ad26bca72ac7e57d075",
+        "collision/part_08.obj": "667284ec5e3498ef124488c56a1b1a298cc395b63cd675f8e85fa783ece0fe67",
+        "collision/part_09.obj": "5935c0ae26f941879632fcff5ac2a11b74084ac21c298db7029eb3b1a31d657e",
+        "collision/part_10.obj": "6598ef1af4f65b0730f0417352fb4506ddcfcc66787725930d58bc095359f192",
+        "collision/part_11.obj": "76b0c786ec36acbf95e991be01ebb53803bf98e8132e3da2271e06e9105d9df7",
+        "collision/part_12.obj": "5735de423c7d8a27a90d7226a13139ff6b8a0d1e10d663c7f067bf496e0419c2",
+        "collision/part_13.obj": "2e941bdfc73b51b8e7216cde5edc2738ffeb6fc7e50dbeaaa1fe1b7fc39fe31c",
+        "collision/part_14.obj": "08fc541587f2fb7e2599accdc8816e1cf2c3555ac461edbe4c9092290cd2ab16",
+        "collision/part_15.obj": "ee3d33830b63b8aaf7519d1c8061ae28a133fc7d1680f0ed898f753c5d36d227",
+        "mesh_sim.obj": "2c6a35ec3f28e9d48639750ed61d926c59ad4b51e3b61a75a8a92e68d24f1c0f",
+        "mesh_sim.ply": "32350725ee691be21c79c65179bbf30765f8edeef3f25a9a73484491a737003e",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-7cdad076bb4328379124ea5fd0fd1f1bbdc51cffcbcde83712f5391ca5fc0460",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000020",
+      "collision_parts": 16,
+      "collision_wall_s": 18.565774639020674,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.6403572899871506,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000020",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000020__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "878ab9e16046b1f7cb0547b7e6005eb0c3fb169649f00683fd9c121ea7a56355"
+        },
+        {
+          "candidate_id": "residual-000020__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "3a660d985a61084dcb2c2e6c5355725d7faf626d55ec8046b6553f8d073f9d1f"
+        },
+        {
+          "candidate_id": "residual-000020__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "4861a40129072b8f6bc21639a1adc1f23039c07dcf9f83216df5525c10e4a544"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 19.20613272895571,
+      "visual_mesh_faces": 1017,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "4df465b2be0bff6ac3ad0152edd180708b029d7600b2c7eff3557824a89c8cd3",
+        "collision/part_00.obj": "afe83f23b45a6a2e7b4700178b241b9c3270d7e75a11883101778b6e9b9bff9b",
+        "collision/part_01.obj": "cff74e68be7276739eae1915b2df531955e200eae0ebf18dda17700f4181a2d0",
+        "collision/part_02.obj": "e84b695ccf3871d565dea9d623f580e19bc58fa12469699cb7b0a7a8bea84361",
+        "collision/part_03.obj": "dfda0b50dbe36afe21fff38f63d071cb82b969349d2c8c1760687b1f9f479830",
+        "collision/part_04.obj": "c2cb3cda9f0b314e8821052b520efad791533fa5fdb536f332e8d6db1a7f1b57",
+        "collision/part_05.obj": "ed5fccc7a1c3a21c2a4774127e470f59529b277b8e7e554351f96604b531a968",
+        "collision/part_06.obj": "fcd85bc784d7d37a6f8cf2d06d46920c8733f68f9e5a5e881c3fb84922595cb2",
+        "collision/part_07.obj": "4c6125b49ba5dbfd457a2d97b5763ae3958caf65484d1ee7653a3e63cef83536",
+        "collision/part_08.obj": "8887fb9d965ce5b5c656a5ec1d4d40279a9340ed49b040e652faf6f1e8fab058",
+        "collision/part_09.obj": "9cccd8850603a6b5128c81387ee9ce8c804bbf706851ea82452e0a85423dd36b",
+        "collision/part_10.obj": "6cbffcf6911001359ea3e06c928891564c67105c7e67c1b9237a41ddacf22ade",
+        "mesh_sim.obj": "fe3fd78185b1b69d3f56a74fc01e3e741d19f02d2abc9b33577232a44bb3e157",
+        "mesh_sim.ply": "7d294bab3446d671b43df62ae821ddddf63b095e0e8197c018751ca4ba094e35",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-047c2cdacbbe6bdac4b3d030d7927158517c50fbfb93db9a96b7a50ec5381061",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000021",
+      "collision_parts": 11,
+      "collision_wall_s": 6.023123249004129,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.4305652140174061,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000021",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000021__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "27fb6b4a76391703d4e1e0908d006a529199ad06564e95a6903aec4d4dad8d9f"
+        },
+        {
+          "candidate_id": "residual-000021__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "11d48ea4d0dcbeb50efff5ad3fb447b8bb1f2aeb48511a56db48a91b1a8ec5ac"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 6.453689172980376,
+      "visual_mesh_faces": 318,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "e6f87a34ee9e435c0cf786f9e74db5421dfb53e1eae6ba93865998fde752c481",
+        "collision/part_00.obj": "49ca167ecc5e694471000a90329e73baa583bc5cea739e281d6544584e19b9b7",
+        "collision/part_01.obj": "2c9b7c76455457f3381a9f3f0d5ee3c76ae91648434abafb28fadc1481f2927c",
+        "collision/part_02.obj": "d2090f9d7dee76da11e27f8433bc3309772b449138e0600fccbc25dde6271ef6",
+        "collision/part_03.obj": "0f9d0260aaa4bfad488f9f5b50dabc786dc84b6258b5fe489828d328f723c729",
+        "collision/part_04.obj": "4a6ad94a8568a349748f155171b1a7d302ca0d0d12339c4666407ac240ef3beb",
+        "collision/part_05.obj": "c815b780f0b51abe2fbb8ef88e9ad8d8c466157506e25722a5eeb65620542834",
+        "collision/part_06.obj": "9fc54446ed1b1cdf5c13cf8ee1eb95922008ad7defda28714bd551b65408c16b",
+        "collision/part_07.obj": "c3247072226def259a40e9cd08cae43bd066dcc99de4c13a600b471e01465f4c",
+        "collision/part_08.obj": "d2d565a1b4117b707b015d8166175752b361f2ed95a6d7d5ab08ffd8597ee900",
+        "collision/part_09.obj": "a9ebefcaa9887bf79b010d10a32bf16655eaac83be283f21346b46dbe03327a2",
+        "collision/part_10.obj": "e8ed9b9d690c04d168ac13cc2ce58af0ec61c1303f9a377c9043d0eac0962f05",
+        "collision/part_11.obj": "b24078f87f3d9df26fa038eb3ffd4080272ca4d933ed91687e51dcfcaaae38f8",
+        "collision/part_12.obj": "8e57647ca53119068285b95b4b461ff303043743c27975c5dfd5b9cbb6c5ec19",
+        "collision/part_13.obj": "da836a9575737a9f332ee602ff34442fe7aabd17cc9ef28902fe6b061ebf23f5",
+        "collision/part_14.obj": "f9201be180fa57e4be6093b2c105a52f5fc258fa4969901efab45af7af1e7fab",
+        "collision/part_15.obj": "d8b7664d89c5905bfed3ecac892d2b11ef6888478a76946940002bac5c6f160a",
+        "mesh_sim.obj": "e989f9e1d89635ee27997d69c392cc3155eeb4fc452f709a7d7e46f4d9a9d0bc",
+        "mesh_sim.ply": "52ba2bdfa031fab807525c19842ccbf21086838da65a882aa0afd90d7853a47e",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-ab22bd14c9735ded8a7005fd08cdee79d976858f3c620fa29075bde2ea564205",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000022",
+      "collision_parts": 16,
+      "collision_wall_s": 27.849222577002365,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.1073309729690664,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000022",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000022__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "2f9e36f8b335f2065b367356cb3c34bf0d60ee4b21603a52d799c3ea287e426a"
+        },
+        {
+          "candidate_id": "residual-000022__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "09ea824a5b974039fe92e75845120bb0a3cedf6a376352c642c43cfb7077f487"
+        },
+        {
+          "candidate_id": "residual-000022__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "99cf15c070164da12a5377abf43942c3809b828866fb759ab2b5bf8338f90b3c"
+        },
+        {
+          "candidate_id": "residual-000022__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "320e8952df270ddec33442578e24db6495d14cadc69edb2cb8bbe3451158ab63"
+        },
+        {
+          "candidate_id": "residual-000022__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "67ff55c45dfbbfa7698a69b53a7257086bfce5e01ab4388fb3def29250eac507"
+        },
+        {
+          "candidate_id": "residual-000022__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "4439c96077485822b154f5ca1d1514a5c2575ee4cbbafeee4c6a2060e47fb3c3"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 28.956554239965044,
+      "visual_mesh_faces": 1308,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "7f24f92c0a5a87a4a76dd316eebb23bff43351696fe7f53739eb7c347f38ec09",
+        "collision/part_00.obj": "1adff87dba523b4ea2cb7b2ff97037f0438320809889604e922c4d552a2fc09d",
+        "collision/part_01.obj": "cc7b1258cb3dc5cc7928aafcb7d4a4ff789080346fa7a367130fd0d934e36680",
+        "collision/part_02.obj": "0385d0a218e2607e233bdcba05bdcffe2e5b588afb46b7dd6e076ba87e398ca8",
+        "collision/part_03.obj": "9d125f10f19b403bcce3c489093318693e3a7731c7cddb80b8209e66446a9b7e",
+        "collision/part_04.obj": "0cab973eabe29e649115554c7d9b329cad605fc73834465971b2e035898d0fc2",
+        "collision/part_05.obj": "860f2e446fdfe1283c0c0b55ec3624067e05f60eaa6608f429b71ffc0d82e3e2",
+        "collision/part_06.obj": "11d86c09efab1171e7853436027c95a499574e004434bf4a7d76d4d83573a444",
+        "collision/part_07.obj": "a00ee7f73ff8565dde785203986cc8755a6192d2b1d8591b3b162b2c7ae5f2ee",
+        "collision/part_08.obj": "400f6755eeaa7c01e03dea59dd8b1d148e5c618906433454d1612851e5c21673",
+        "collision/part_09.obj": "0f243af88d6f495d8dc01eb3c5e49205b6ea630cf3143c0a008f27f5fe616fea",
+        "collision/part_10.obj": "381227f631b6991d646bac4a53290204f3a9402539702681119b813c0174cb32",
+        "collision/part_11.obj": "7f26e62905b349f93fb8cdae724efa32331a99fb66848e449e648928b03cecae",
+        "collision/part_12.obj": "1bc253b0466346809f86dee07695a56d08a7327e2fc190e137b7e4cee4eb63f3",
+        "collision/part_13.obj": "d9e512ccf7b19caba31e2d4a7d85dfa7a88780b95688669de76042db044966d3",
+        "mesh_sim.obj": "5ee8add441eac612910dc51b0ab148f6ac6c208184d7c997d99c2946ad54f21e",
+        "mesh_sim.ply": "c45ef0566202599efa056184743638cf3215988f46d54e37933d7f814e3b1b4a",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-c8cafb688b07577c591bbc28c6aff554f7905d2610fde8bd3946320bdd12244c",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000023",
+      "collision_parts": 14,
+      "collision_wall_s": 10.557883269968443,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.41552986396709457,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000023",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000023__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "0c19c8a338d6d624cd3e2c7e7db35b0330e991490ddde2c791ba5eeed0266e34"
+        },
+        {
+          "candidate_id": "residual-000023__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "93acee1c61a258cff18b8dcf3f18f03fbeef5916d9951710046e4c249b6e6bd6"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 10.973413933999836,
+      "visual_mesh_faces": 4427,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "95c57a269b1f940bb7be7fa42f0bb8baa37700dfe558ab693bf209d26263ccb8",
+        "collision/part_00.obj": "f0150eec69017c1d7780f3e062a1ef388c297205d47dc618793cca19e331cfe4",
+        "collision/part_01.obj": "12eb3dcd5ce2a3efc3471e2d502eb8c9c0980ff02ef67b2437246e11adc3f9d9",
+        "collision/part_02.obj": "4a9513f2ce44f954eb5c4a99f95c53a5c1404e08af05af88efaaa5fc43655bd8",
+        "collision/part_03.obj": "bd71c9ddade3f68e4857a7757fff00c612410d611c3dddbc9c8a4fc97597608f",
+        "collision/part_04.obj": "52e32abdb8011fb995bee2f2a657f7e16cd9deb224bedb87223e5b5e887bb9cd",
+        "collision/part_05.obj": "418a678f35cf1c2663b0dc120ce87c2ab0c48744d18a7227b0c70c0912db0792",
+        "collision/part_06.obj": "897d446c2971e204891f46b4c4909cb4add6ccd1f46e6fec3ab576bfe3e0d1d5",
+        "mesh_sim.obj": "29a2e9dc7d522b5847afda481d3c0ff8def449d207268248ba435c8657265efa",
+        "mesh_sim.ply": "f4067534b649d76ee19b8ef310d42ac6230f51e35f9d7f96075010faf70d5aeb",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-e96d9539d2a3e992ddb15771a69c79152406d312830a04f15461bf9d9c159011",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000024",
+      "collision_parts": 7,
+      "collision_wall_s": 6.229037926008459,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.463893692009151,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000024",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000024__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "4d9595d70a113b276a2bc030eed3b22dc8f724d9446a0f1b09d3d2c97cb4590d"
+        },
+        {
+          "candidate_id": "residual-000024__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "024c5e2481e402e6b635c649ba7a0f8cf7ebfd9bdb53d722ba6ac4c938746b7b"
+        },
+        {
+          "candidate_id": "residual-000024__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "d3eaf57044f2115dd07d51da8e62460b794696eb19cf9c643f3d3e30f7132e1c"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 6.69293248798931,
+      "visual_mesh_faces": 1801,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "961974072fc37218b5b842a3f4450cb812c6011aea1cdbb63042ac49519d317f",
+        "collision/part_00.obj": "f64771c046117b9a015fe27a5ee99c6471b4dd8b4a747302be145febd3f214fb",
+        "collision/part_01.obj": "693568c0ed9a6fb4290296dc9fe9f739d21bb071a3a6524d5a0138dbd68478ad",
+        "collision/part_02.obj": "ef1cec4be5546016b8333ab31c3e984c745c2636aa2f35d723aadaae0dbb8c79",
+        "collision/part_03.obj": "c7b02a31e301363345e6d1a7d5740ca07d682abcc2c47c886fabb2530c2f56d4",
+        "collision/part_04.obj": "6c01ac2bdd22c09567f3b3a5a098e6145cd9fcdb66b1d54d7f5c4f39b4578999",
+        "collision/part_05.obj": "ecda856f5dfcbbb1f70235aa3c6e404d9f2791cf6713445344377c767c23329a",
+        "collision/part_06.obj": "d35780c2236426536e0d2eb8829fef46ceb20eadbf5753c066e1c8f24223b1f5",
+        "collision/part_07.obj": "a5d475d6e8a1f1a762c45e7cb352cf7015c25fec250b42eeb2139b7341cfb523",
+        "collision/part_08.obj": "6b0c6f3313d0e6f7b86b18c3343d498268d94210ff03c794af2ded818b6cdb31",
+        "collision/part_09.obj": "092367748362af465d703578754bf9cc19b38d3276a31470576034581165884c",
+        "collision/part_10.obj": "a76b206937c81f47dc83b1d94f80c9601a184fb372433ffc410fba679213ed8a",
+        "collision/part_11.obj": "7431b5a4d5e85589ec99b39bd747d70e678b412ceee10c8f73ae2d01566e4219",
+        "collision/part_12.obj": "6e2500ca59ad74944a866731da92446db60a096e102d34b4b8394d0864bac710",
+        "collision/part_13.obj": "bfa829e29f410b8cca4d1181756a8f30c024688d975b2cfb37c52d570e21a830",
+        "collision/part_14.obj": "3965be7ffee1d88a95f0c4847586b5bfc4a3108917db45e8a636254aecea2eed",
+        "collision/part_15.obj": "40b079cc39e735ef4f0bcc81f1867a0adbda7640b14ce276e10edbe9abac1f64",
+        "mesh_sim.obj": "e4ed8d1a43f0635ac059025fb075bd5a1d32614def0bb42626e6d1acdfe43c66",
+        "mesh_sim.ply": "a6f574b84fdbd1ca243d4d3effe82920cd70af5cbaace642c4f4feb9d0b5104c",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-64a1a344735e1138446faf6300d2e4ce1c5d56aed9366ce3762204dbe1d98bdf",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000025",
+      "collision_parts": 16,
+      "collision_wall_s": 8.737084508000407,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.629901569976937,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000025",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000025__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "6525e569ba5d373cd70a8131f0cb9486d3ce2728ad75d632a7e0e5687cfa4c49"
+        },
+        {
+          "candidate_id": "residual-000025__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "f7a1a6bbe474e63708a025a8f437c7791149401ac99488c69f2cfd4fff5900ea"
+        },
+        {
+          "candidate_id": "residual-000025__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "4dc792c9f387459aaa1cc13a4a891bf775874ef3476b1699806ae5d8c42f9db1"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 9.366986627981532,
+      "visual_mesh_faces": 1733,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "fce18d941bbc09fbc55c500725403302891df8a1cb88f00263c6ab744e42ad21",
+        "collision/part_00.obj": "2ed05d95cf680709af40df4620864075089043b141883b8fade200c55c4432ca",
+        "collision/part_01.obj": "d6625f890cdab0770395951efb282728bd561c14c56343807eb8f3f319445781",
+        "collision/part_02.obj": "478558ead2a379b85bcce56763f5236429b8d92a8092efa956910632fe92d627",
+        "collision/part_03.obj": "6ceed52e8457b3ebe4ff86f46de7ac041e265cf5a244ff5d3f057baca47884c1",
+        "collision/part_04.obj": "9514adf23089e4b1c44de2a556b53c5a91970ea95af7f75a317a6be5ffc78407",
+        "collision/part_05.obj": "f65db321a050ef4568ad2ed9092de864a7bd602bbe59af76859bac9ba9ff66ae",
+        "collision/part_06.obj": "562673c8e06636b6972f5d26099e03b34be3fe26c925539408f27b4753c1fcc9",
+        "collision/part_07.obj": "42dc714014eb2e09f481c31205aa26f3fa63d190efdea86d787bf2bae1e3750a",
+        "collision/part_08.obj": "7d98c5d43e42889d133b6fe7be655c8f9b60c092eb1eec3ed2938637c2d45301",
+        "collision/part_09.obj": "99318927ff1de46dcac27fec36312f8370f4b8bacf07a0c827ebc29c1609e8ff",
+        "collision/part_10.obj": "e5f039a6caa18d85ea8632f50770c1c7eda360f29fe2675d0a2438edd51f2954",
+        "collision/part_11.obj": "873e48c90119159f3a58ca8047f43192e6dbdabae2356ba1dc70d9ce33d2bce4",
+        "collision/part_12.obj": "b46a01418dd3c34bb912a54df64161398880c0540212cfe0932740fd1526f44c",
+        "collision/part_13.obj": "7e5638c991f1439a7436ae0fd8fe399ac1cec437e71b8ee96d57c276ba43910a",
+        "collision/part_14.obj": "5bbec5db7ef0cdbe36b19f76f6ae798f3e3b47dc2d55af7b35671e05c03c2c86",
+        "collision/part_15.obj": "89133b4fe91dc0414b341a82918d057741d6607b1157ce77c9051d78b9773eca",
+        "mesh_sim.obj": "4952d5fa0812b28f80f43908948aa45eb22351b228058a855d76759ff0e2a7fb",
+        "mesh_sim.ply": "7d3b8f7cc16cc950999f9ea43401ead8b11eaa954e2b637101c17c6cf2fd980e",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-80dd350abedff31f64cca3676ffd03dd0d255089cf549cdc715709dce20af2f4",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000026",
+      "collision_parts": 16,
+      "collision_wall_s": 28.607520065037534,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.7874155680183321,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000026",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000026__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "5702f95ca0bfb291990cf680e6da59ad3ee364c9ba3fba3a0a9a86d3431c9da8"
+        },
+        {
+          "candidate_id": "residual-000026__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "05284471b385dee8684bc936a49bf61b42f4139a14cb2fce31ebf162d286265d"
+        },
+        {
+          "candidate_id": "residual-000026__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "5364bcd057d48f80f2f9038b48018f132bb376326a658781a3ab0137ba2743c8"
+        },
+        {
+          "candidate_id": "residual-000026__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "4b273e3113c9bf5b7fb9099d3f3c74a28cfff801bd78db390143e88b3ce99884"
+        },
+        {
+          "candidate_id": "residual-000026__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "0e832197dfd03c3235d75c72cedd1084472f7195c1ba4902a9a2118c1a754bf6"
+        },
+        {
+          "candidate_id": "residual-000026__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "2daa025a20c4aa3ae667857049292dbae25c8e0cea389fc861c760004d424f6a"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 29.39493626303738,
+      "visual_mesh_faces": 1137,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "e3f519614ce554930444249dfad2d2966ae5c7333411b16af040d68157471b58",
+        "collision/part_00.obj": "7a1fc69410f96b97d07a5019fb7c98785cab9adb1c4a6ea9eeee4f4bec856df9",
+        "collision/part_01.obj": "901d9cf9cebc52a75f294db405c8d1b4007995c464584e3f97dc0238dd80fe20",
+        "collision/part_02.obj": "3f708c4b1413f4ad2a0e676147209784aebc5e606fa6f24c0bfedcaeb1f61812",
+        "collision/part_03.obj": "06c17d253484e89eb3c90d5213b5c54cc1beb638e9b773ef767b502577f51322",
+        "collision/part_04.obj": "7c4ef4c10140be087d8b83e5fe17eda80bd140845cbfd701d5e80d0fee89a3cb",
+        "collision/part_05.obj": "0db3c7d44967c8553a3d1f761e80a07cdc7442343a43876087c2b7e9e9b8a216",
+        "collision/part_06.obj": "b9342ca41534297223f6f55ac91b7dd839ea831c2a7fcbe2e2b2f10187b48cf8",
+        "collision/part_07.obj": "d35459051ce61eb3ea7837a67e0df42a20dc5b753422865f007531d2969bfc2d",
+        "collision/part_08.obj": "d4b6da62723134a221f43c0ed24a07519783e037e3bccb25caa7f02b1bdf094e",
+        "collision/part_09.obj": "5e388e6c6abccaef332eb95a4b0742488a5de72e1a12a08216181076d36a0e7f",
+        "collision/part_10.obj": "329fe3bd2da90e40a1d3e5f58b7850d1f4a9c37ae2f9fce8524ad4ac0990fe8b",
+        "collision/part_11.obj": "20bb69aedd180a5f314d894d59ad1818e88c759c24a16cc045de3675b13a9a46",
+        "collision/part_12.obj": "3b4c84e6f6d21a0ea287ff4b088985381a137e0dfb4db6ad5239c5f3349ea1fa",
+        "collision/part_13.obj": "6a5515757727e47f9672c6835ec9d69a6d340b67645534c290b45953a94a288d",
+        "collision/part_14.obj": "f0dfbdeb2c0c7d97faf3413f93b0482c8144f14575bfe5a93161645caab306da",
+        "collision/part_15.obj": "bc515439551ac31de7a8f37ec1f940a3dffe10d4f9f01488aa3eb2e8995958e5",
+        "mesh_sim.obj": "a27250f4ee2a2d18dfa74fa2a95833b43ab9e434d853379b6f9cddfdf8c29b5b",
+        "mesh_sim.ply": "35f3906bae221d83bf42813c53f6ecbaffb4665820480b5d93ab4e8ea24fe962",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-52a3f39d47a025c7a4fd8658518e04e4e5ec9d5797a645735d47264285766601",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000027",
+      "collision_parts": 16,
+      "collision_wall_s": 9.578703225008212,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.7172173790168017,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000027",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000027__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "5f5c7e372d5b18d4c912546d61284d5d1c53328ede6a1303ba5617b9301ff66f"
+        },
+        {
+          "candidate_id": "residual-000027__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "97d772cd3b233ffc31eaaefb3c395adf9c934e94dcc90308fdbaaa8c222f85f3"
+        },
+        {
+          "candidate_id": "residual-000027__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "fa4fd76831be3795322fe79ef07fb07556054a58021d48c736b241e919817bf7"
+        },
+        {
+          "candidate_id": "residual-000027__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "0f2f3c63af98d5186edc15d2fd681683c040d1361fbdfcfb87c54a6bee59c422"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 10.295921213983092,
+      "visual_mesh_faces": 1686,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "65743b6d142644e6d18e0341cdf6e0ec854dae1ebd9ce3fd5f0ca610ada84d43",
+        "collision/part_00.obj": "f4a5cbce3275a1a6d11e77651e055ccf4445e81feb0ba4e5ed466f4b216d2872",
+        "collision/part_01.obj": "fbc6e233e2e4ac5e235d92ac770352c8e0505dc7ca6d499b37b4feebee98bc75",
+        "collision/part_02.obj": "3260d98d77449b3a48d5cb5fd161d7bc9fed5b6df2f8b3623bee03d7f237bf9a",
+        "collision/part_03.obj": "fac08e4abcd0dd7b3b721e90ceddd7d7f558b1b7f7f6d196e4dbfe52ec43e00d",
+        "collision/part_04.obj": "0a1c2a4132f36e53209873b473cab64daf9470bfc398f43c3a386bc37b30666c",
+        "collision/part_05.obj": "73d2a35baa844227440a07ebc027d84013d5f142a76e030f3d10f71a874f69aa",
+        "collision/part_06.obj": "c46d50e1f4ab9fa017181ff9cd75d14974f01381cfd9427e10be75078a2668f1",
+        "collision/part_07.obj": "f0c09eacb5fe9dd52b9c6c116660cd3ed46839f215de184405d18ef8c4c225cf",
+        "collision/part_08.obj": "fe0977c4d34a7bcf67a1f15917d4a094de89bd8e0f88a1fc8c35229fa609dd20",
+        "collision/part_09.obj": "334a4ba5b985a5ba0cf48eb4c347daba22b757c99618ade5d94c0e373034bdf7",
+        "collision/part_10.obj": "b1ca7c3a4056d7bdaaa93918337712250f1d3e7fe82e9123d80afdcd6fbbf7ba",
+        "collision/part_11.obj": "5f15a609e5b78b1943abd4b62ed13e86f301d09d0317948b7bf7b87b6fe14634",
+        "collision/part_12.obj": "40fde54082f621e4d7f445d1e15323b99a8ed76af680148a86015f1cc2df5d48",
+        "collision/part_13.obj": "9f7708739420afc863ec4dcf1d408161883c00b78b6d5264ef1c694cc7eadd04",
+        "collision/part_14.obj": "d06f03c7ead3344a419f0db27d05cb73352416872afaa6903a1998847102768a",
+        "collision/part_15.obj": "e8b9499c124a1bb3aa155fbe4bece8342352d61820302e5e8d861b0e0c25cfd0",
+        "mesh_sim.obj": "a34a107eedb96762a1cc816384fce41129ce9595cabb9cc7c3c468c7cda6a28e",
+        "mesh_sim.ply": "1f3fccd34db8558c4902608e28b7a04476f55a2bbbf1669701a858d4747e0e4f",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-01c73ddfec2517d80e993e3c4b8de9d17820d15dd0dcecd98f6779cd97d673af",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000028",
+      "collision_parts": 16,
+      "collision_wall_s": 26.25103747198591,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.8552734469994903,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000028",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000028__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "2c709754bc052922590d00aca8dadbe4b16e1fd4a770acca3b2f3b746cfb283a"
+        },
+        {
+          "candidate_id": "residual-000028__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "6744036a8e0a75c12080011fa01366f2a42435ef4e3ddb7e13fbadd37f784489"
+        },
+        {
+          "candidate_id": "residual-000028__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "e308567eb54f9c1153d5d3a5f528067f6a6796ccb44d20c6c2c46bff70ec4862"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 27.10631146898959,
+      "visual_mesh_faces": 1337,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "aa4bad5b3684369adc8f84a6bc7e5e2c41dad4b55ada2a08a1b448117a16709f",
+        "collision/part_00.obj": "d97817a559da7351135ef0ed9762a37a72eefe5fa4422cb144ccfeb4a4c87d9c",
+        "collision/part_01.obj": "d7c6139208b42ce695215cc1099378493fe3a153dd5a85c01c9bb59e55394e27",
+        "collision/part_02.obj": "a7bfdb58098a143928092d94de4138288ad572e2cc8ca94b92b9a856fba8f3c1",
+        "collision/part_03.obj": "08236880a33c1b98a54091b754222c6124e4db6f17a1d809e321fb1f77bfeb51",
+        "collision/part_04.obj": "1567bb26418a3163a7704e3067849b234de35e4fe2499623790b40353e51d89b",
+        "collision/part_05.obj": "fc453c7bdc50f05a11e3e2e425e48b4669ce6fbf53870a1684068b36265c86ee",
+        "collision/part_06.obj": "2e44ee13367436d275118c68de91f7baeb1f327ff42cae3ac3c7750579cedc59",
+        "collision/part_07.obj": "4d041e68151db8a09759b72121b37012de7d6909bc4c80759eed11a2f8c964f3",
+        "collision/part_08.obj": "fbc59b68df080b95c5dc0bd2c3ada2eebe64a52eda7f14902e8c2873a2f092c8",
+        "collision/part_09.obj": "db00b6353105eee4b7cd706b2102d1bc98ad7a1d4e69de433a46f1c3b0b185a9",
+        "collision/part_10.obj": "97c7cfe878b526977213f917a2596137ff1a8cf135a474948a5185bf757b11af",
+        "collision/part_11.obj": "563d71d32190a0a345c8b6103848cb607fa862d8e5da76a8a1a875e23bdc9092",
+        "collision/part_12.obj": "ae2e7f70e9dff5bc1f3ea7dff7367abfca71d7317e0507c4c34d7bde16d07efa",
+        "collision/part_13.obj": "af86b2d34996f48a8bef514ade6f821a8aabcfa791331b81134b23cc1ccbe52c",
+        "collision/part_14.obj": "1ad8f9b06a166361f62bac15662178e85e86c092c4c7a22eecac8edd933952b7",
+        "collision/part_15.obj": "ef80d38ff5d4dc9442510d01e1ca1ddfbdff9aba0d1fbdfbdb050f7952c713d9",
+        "mesh_sim.obj": "3d4deeff5b9878898571630ce0dda6c228630817c22225b9d8037316f784d8b6",
+        "mesh_sim.ply": "77e2fb953b9de9f3985885b8749fb61cc7cf067cb58ee06ddfa6ebf21f0b4657",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-d7f91b2cd5b22d1d1c8abbc59c7a5083b8d26813d6fa548a39039db2714a58d1",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000029",
+      "collision_parts": 16,
+      "collision_wall_s": 10.465815952047706,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.4777497419854626,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000029",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000029__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "0a1fef972c09bc4679339a61d2dea48650333993ad60f1b4f883def75950540d"
+        },
+        {
+          "candidate_id": "residual-000029__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "f0aa9ca1f2b0b86ab830cc1cfb6ef16246d7090c07fc56a467e77f9f05bf15d4"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 10.943566353991628,
+      "visual_mesh_faces": 258,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "2b0774700ce9242899f44c1f8b1ff03e376b0747fa2785d9a0b5b9dfa9dba9fe",
+        "collision/part_00.obj": "fbb6da89a9d01d5b1a847ee7acc8ffc3bd55932e10df148901a6f53e40457fc4",
+        "collision/part_01.obj": "0eeaa16d3c3859e9af2d9073e2cbabeebdc41cbbb734abce79b5e2638da52f05",
+        "collision/part_02.obj": "7bf56d2e84d4aa2979d8cd711d1648be481ab107c928e364c1a892ab8cb558ae",
+        "collision/part_03.obj": "fb275975f0a92c04b1defe6e2e13a175b6eb64b2af819bb5f80038a3536ecc3f",
+        "collision/part_04.obj": "aaa6af9d90c4b6107d3bc5036ff079e7167848077441cad9ba0b686f84842791",
+        "collision/part_05.obj": "cb966a50bc8ff81a63935ce9f6ab6861be0a29fa54d22f3c9065b4dd748d8e20",
+        "collision/part_06.obj": "534e20a00c8be06323762432daad9c084eccfe002287f79623c149c34475947b",
+        "collision/part_07.obj": "7f722740f86cc00c76bc86f433214dfe07e2c37f699e2c6809fab32162321784",
+        "collision/part_08.obj": "edc8458a1f4b1a888409330a7c9ca727519d3c07eb36e412f7d3471d718f4047",
+        "collision/part_09.obj": "d231f1ab5bf97819a783653109a198a320f9ee8696429154099f38f70c15425c",
+        "collision/part_10.obj": "f2bf26be05d415317495f19e9608bee4fa85e988e3b2f7b5f6f8ca797dc6bc48",
+        "collision/part_11.obj": "13d73dd941587178f181fdda12e19497bd0356815599228d2a8518c094166ca2",
+        "mesh_sim.obj": "ca9a282bdb84a6a3c8338d601cda574bb630f09a8e19393e663d606c7713454d",
+        "mesh_sim.ply": "0352c1275721621dfec1e53e745e581d53e35ae1afc5e02ae958682f78259ef1",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-2ba7b66b842f92a7ea0bba2676f8bbd0868c22b50474afd12873150d92d361bf",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000030",
+      "collision_parts": 12,
+      "collision_wall_s": 7.136395431007259,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.5493618730106391,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000030",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000030__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "48563b1fa140885e6e38389791dc55b76a82e0cda01ae4683f02eb41554c18cc"
+        },
+        {
+          "candidate_id": "residual-000030__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "b16a90349987e8e434cb5529b5ca9b43e743d725174de3eb188372254ebbaa0a"
+        },
+        {
+          "candidate_id": "residual-000030__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "a264a4e25d34912bbb5d31fb4a83243db73893f267f54c29da61147ddbd620de"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 7.685758013976738,
+      "visual_mesh_faces": 261,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "1617124044fee84a13512211ee6b8972bf2a6673ce7e7f33972080dac4334b27",
+        "collision/part_00.obj": "ce74ddf2ae207349e636ce46da2f0cfdc4f43af6c926af11d5b964557d5a7f4c",
+        "collision/part_01.obj": "899bde007163326c3daa0de0a7849ffe3171891ce3528188ad4bfae016e4ccbd",
+        "collision/part_02.obj": "a95c6bf29684645046b3afa21f476873ab34d6e262e4a321057167c519c47f07",
+        "collision/part_03.obj": "d911dcb7d138afe80915a4f12ab05a76455690e3d9f76410ebf957e7360eb140",
+        "collision/part_04.obj": "6a499c6fa11eb6f383f8dea075fd50b1b50bfc3e7f94c5c7e3c84bceaec28ea2",
+        "collision/part_05.obj": "2457af6856bcbd35d396465afe8fdcc7c64af2a7b45b6d11d8a0b9861fe0a464",
+        "collision/part_06.obj": "2dae27dafbdf0d712b45465ab031f5e099b649bf2b3f34d30256ef42e7dcf01d",
+        "collision/part_07.obj": "7d8cab1288f185007d619e67cc70fbb61067c36d477b95f5d1c367adfea150c7",
+        "collision/part_08.obj": "cf6a77772602bc8601a0aee70444933ca0c4275af49bb333ec1bf8d632387760",
+        "mesh_sim.obj": "2b0a2e628e4607b9efc14c3d6196eacb41f8e7db9d1417c38a1a151bdfd013ee",
+        "mesh_sim.ply": "2a7483f8b5c049d1fe96a7cf94744f3be10db4af93b1828795d67dd1e98b24d9",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-b9e75502e8d8fd5bb6c9eb17a4f7463d62c4d750e6233b67dd253180a457815c",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000031",
+      "collision_parts": 9,
+      "collision_wall_s": 4.408111753000412,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.2794421709841117,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000031",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000031__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "fcf50b34a3093c6d48b1ea687ee4b415fecd19a4b83930738bffe37e238da895"
+        },
+        {
+          "candidate_id": "residual-000031__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "ec929401be0aa58af39638b94beb60082e12a1b44272f7dbb4fff53550e5b1d8"
+        },
+        {
+          "candidate_id": "residual-000031__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "d02ada1935433c43bf2d8189a9281080cabb7446992031b07176676af1822428"
+        },
+        {
+          "candidate_id": "residual-000031__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "2329721f9f57e88f15f4ca5ca6c7ee400b582ff760c037e35c10002d36082ca8"
+        },
+        {
+          "candidate_id": "residual-000031__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "f4b10d3997d9d512d4801059267b2525f07b72b3233fbd9cbc77d51bb77b6057"
+        },
+        {
+          "candidate_id": "residual-000031__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "ad3a059f47ad81c8f327862fb9a8c99ec7734cf6af1b095dc5efa33ff85fa807"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 5.687554684001952,
+      "visual_mesh_faces": 111926,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "2b9d9b460645007f9217fc46e4100b6a50bf3ae1673d2e6e97b32a044360c747",
+        "collision/part_00.obj": "adc689a37914e7b7c24ed37d0a10320f70a65600109ce5d06721765270050f00",
+        "collision/part_01.obj": "f992d5e7ebb8cc98e61c2b134d84e9ac64f56b7557995d6551113de43990de87",
+        "collision/part_02.obj": "13fd402f30842bb9e57054e3ac3ab5077f7547d406648efa7ae926d20c5798f3",
+        "collision/part_03.obj": "90bc5942debbc93949c10464cc15160e39fd6f8baee4e3e3556e8ee8470de648",
+        "collision/part_04.obj": "19ba0da66882d5fc06c7d6ed20d6935cd8e4176684aaeffab15f4780a35f0aae",
+        "collision/part_05.obj": "c5a19a30fc9c9b91422803fb3a5e670e6cf0528f06c7f280ec857815ea54b14b",
+        "collision/part_06.obj": "c6db2339bae1309b5e38b01ec5dd0b4107c2acffbcc59dd8a16d5116171626f7",
+        "collision/part_07.obj": "a13e3a716fa1d647f8bf045bdbbc47a7fe2cf642480e5b88eff128b503cd521b",
+        "collision/part_08.obj": "7e1077a11b3ac770a5f30c651e4fa12fe145296ab658a95b7fc4505aff426a11",
+        "collision/part_09.obj": "5bfca7f9dae64254f810c9130b71e66454cc0c3a49da1356ee2bac12d85a2f21",
+        "collision/part_10.obj": "7c35c207820244940b35bac82db1aa2c298530bd4598594864cb7dc537479c48",
+        "collision/part_11.obj": "ce82652483d9280555e9eace14dd8c1cd856dd7e8c8de6c92fb4dce2d4decbe2",
+        "collision/part_12.obj": "feff94ed99ad5c742cdd35c56eced22a68e1ae6b2f606551ea3a4c501cb73739",
+        "collision/part_13.obj": "3775bfb4f707ebf0ec8ead034f2405816654dbdf77d5f9ad0f5361c270fa1343",
+        "collision/part_14.obj": "310e4d827d1bd5e4c26b5b09dfebc5eca4181ee81dacffd5b10b91d27becca4e",
+        "mesh_sim.obj": "6041017a914ea2b267c20f29f9d8c5cb751174135ecf8511b1dc7514014b937e",
+        "mesh_sim.ply": "64ca42162d6f1e324530cc50f1b6cdacb51296851a46a1d001759ec234748ec3",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-6ffea3fb2feb6f6976586a2481340072e0ad378d6773c9fc19e31279ae9f338a",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000032",
+      "collision_parts": 15,
+      "collision_wall_s": 6.40278818301158,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.8621666469844058,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000032",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000032__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "c2f0d727fc0c8cbc398d4f302fc00463f6bfceb711c77c3507f02125fb00c627"
+        },
+        {
+          "candidate_id": "residual-000032__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "32618389fe64eaaa7826fa6b15b9fb3d0a0cc0c5ed408053715daf68464e3290"
+        },
+        {
+          "candidate_id": "residual-000032__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "11c9aa21a9669a1d1b7aff7fa2c11b84a27a7183d1a07663fdfedf629e325aaf"
+        },
+        {
+          "candidate_id": "residual-000032__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "4d212c0f874ec6cc1ec144808c59d220cd7288bf59e68464e6ccc9182998bd9f"
+        },
+        {
+          "candidate_id": "residual-000032__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "db2f2e87c7cd6e7c41b1c21bb2813b9f992ba9ed938fdd5c15790133531a78e6"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 7.264955469989218,
+      "visual_mesh_faces": 304,
+      "visual_mesh_watertight": false
+    },
+    {
+      "cluster_id": "residual-000033",
+      "error": "ValueError: component lacks confirmed TRAIN views",
+      "partial_output": "/output/components/residual-000033",
+      "role": "obstacle",
+      "status": "BUILD_FAILED"
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "a30bf6550c7c8b7497bd1fe00c6089bd40aae5c76fe1ec1bec8b76d89a1f929a",
+        "collision/part_00.obj": "b445a5509d3791869869d33458d11dd4077c4e5f787b4acda27d2e3bd6d3913c",
+        "collision/part_01.obj": "859d21a53c498c95bd3fb1e5021f4d55d1a9926a365d3abe9b7dea46cad57286",
+        "collision/part_02.obj": "e4aa0a81f40274d7a74ad74392ebdc2a2ec580c97fb27b9b2701989e068a796e",
+        "collision/part_03.obj": "765c17d194d4ce28e9c33d37e87492fc722c85ca4a82fb7c0687635c62ce44f3",
+        "collision/part_04.obj": "5aed80c48cc15d781dc4945c32b9c3ebc58edb032849b7234c13766321c4e6f0",
+        "collision/part_05.obj": "b55b5d307ad015346156e85bdfcbad5a6b2848e60bc0cb3f0e603c240ef863e2",
+        "collision/part_06.obj": "dc06ec4e9bfecbf88b8706966f1d3bb621d7d0a2e4866a1e18c9579cdb07abf3",
+        "collision/part_07.obj": "adf6e19c2d06159de9a25f130718ef0d163f5e5b6d3a9eab27a222cb0d40446b",
+        "collision/part_08.obj": "abd93777ac757d0d5f258be1a4479e5089b9e858bff94b933a4dc05afd3ab5a0",
+        "collision/part_09.obj": "54109b61c1b118c97e1eaa132d41eecd44a64fb3e9a8614bdbac33a98b185859",
+        "collision/part_10.obj": "992cd9f7f7ca5ee1debc8418147b593945d92cab610e5f1f91e75db5eec7c8e0",
+        "collision/part_11.obj": "4b159953fdba910dfa734086d3df94be7a83e5e02a49c5a7279f510455c8b018",
+        "collision/part_12.obj": "aeaa4905b0e856750a8e13c907421327e7ea9496a2bc3cbc4e7f186606538bbd",
+        "collision/part_13.obj": "bb77cbe24336cc55f167d2bece8b49024200bcb5550959e776b3216ab2875766",
+        "collision/part_14.obj": "c1634d7145942e00dada23606d317963685cc577d75990f827fc102a891e1864",
+        "collision/part_15.obj": "8b652dc354c0b02ff7ee8ff5e4f88c2fef23d7ee6f0f07d7ec02536526ccf19a",
+        "mesh_sim.obj": "b05a716de7c6d5588fcf47869f6f0ef86347c04b1ea3d54b0a045bfc251882f3",
+        "mesh_sim.ply": "fb62b07ab3f6e81993a893da1c54429557fc865d1a279cdfdbbacd6338ba5a0c",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-e1c35f16171428283dc4d8ba17cd2d63f9dd93449ec2ad584637c0f55de5b8b1",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000034",
+      "collision_parts": 16,
+      "collision_wall_s": 8.441434642008971,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9126392070320435,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000034",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000034__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "71a9cbd9d2c2e9c4051534232af0bc84931ac12c49c6a5b03014a1641a39ce04"
+        },
+        {
+          "candidate_id": "residual-000034__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "a87e62630f4d41c5629cae0f8802aae9b29408fe7d586d850e5be3a0cec000f6"
+        },
+        {
+          "candidate_id": "residual-000034__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "b3713d6b55f05dbe94eb8021df7b635c6726e9a9774c279128e26194bb1d2de8"
+        },
+        {
+          "candidate_id": "residual-000034__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "50db932bf038298bce504989ad20e58189d81a1315a6f18fceeb0c74e77b8196"
+        },
+        {
+          "candidate_id": "residual-000034__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "e9ee3ae0a89676dd21b07445849200c6d2741fc3333247ba79ba263e7bd62be4"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 9.35407473903615,
+      "visual_mesh_faces": 3188,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "d5135232f23ff316ced71e402d32846933cd70842e44af6eba4b586ce968f38e",
+        "collision/part_00.obj": "a842edc96ff0353acafdee31f224422389fd5f9c6f2ae9a8286071bda0b73c87",
+        "collision/part_01.obj": "91d1f3104d8d1515c51f778b5188b04826ab8e5fe3f524416db974105675903b",
+        "collision/part_02.obj": "6d944e986047a93b3fe74186ec65280c8a5012c7d47f2c743d7c41f991ba0334",
+        "collision/part_03.obj": "68884f57f919f5b52ae9013c5be72003f587f2127f2ff832c02178503c1624c2",
+        "collision/part_04.obj": "be230bb973c41dcb89723ef39fc3a4b8e3a910ad742c4cc9f4dbd0410212f216",
+        "collision/part_05.obj": "2908cb120b6c86407be012004715c591068e576c2a69e7db7e050b5cb7e5634b",
+        "collision/part_06.obj": "22bb7f3e2a5c12bec6a3c3e8f7ad3c9d29107e2b40b40e49c9b9d542131d52f9",
+        "collision/part_07.obj": "daa7c68b0b4dcede326883c368c6802978926ccca8b37180e7646c368529b9b0",
+        "collision/part_08.obj": "007874cff2b226d8e8cbe5bdb751200f91af6b405c9975fe1f56ce92229503c1",
+        "collision/part_09.obj": "48e457b732143810002883fe88a0af0708bdf7b130c282b061d3a0e50c41b6e5",
+        "collision/part_10.obj": "3d44f22ec8de465f69185481539efc46ac519ca9cda2e5da8e51d7aff63e254d",
+        "collision/part_11.obj": "71f31520ecc5cde4cd811bd9efd8f68dda75fa4210b22107a6c3e40567e6cf8a",
+        "collision/part_12.obj": "cdbdeae28320953be41660a64a8c41f624f174c410208c92a7d16264e19ac04e",
+        "collision/part_13.obj": "4be293f92b9927b69e9732540d4b4755a51038bd980287e874e41c3e76cbc3a7",
+        "collision/part_14.obj": "971f9ed7e8fa552dfe5809d31488846719b914e2863c8e20dc17d795998c6477",
+        "collision/part_15.obj": "ba138ae4a406b63f7e5a388dd3adec49b011f6a34ecf2bac1a792ac5ac13cbb4",
+        "mesh_sim.obj": "1816c35b56b9c4840e81c63b2f3061b4968a3410d586a4817141f7e4de9d63e7",
+        "mesh_sim.ply": "70c11367d9f2bf843e9bd9e0508576a3eb5ad3bba093426eedb90c9f7e57b150",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-5123483a53e2edbde1b142a08037d1dbd88ae53550c2f8574364529ca4aea4db",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000035",
+      "collision_parts": 16,
+      "collision_wall_s": 17.068452730949502,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.8776407769764774,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000035",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000035__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "bd06917c308d14d6292a041da53761e2844c184042969cbf5a4739a5ff06df9a"
+        },
+        {
+          "candidate_id": "residual-000035__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "6a793961821eefaf0ebd9446e78676984d1973a128be12dd04058a4bfa364b81"
+        },
+        {
+          "candidate_id": "residual-000035__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "4123a9916996aaf4aab68de4c8bc96f5202f33e8a60710e54ded8b6b69b18930"
+        },
+        {
+          "candidate_id": "residual-000035__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "9fc915ece7e0b88ef56c374e5e0016ae438b7d85b4d535129b67457078ae4278"
+        },
+        {
+          "candidate_id": "residual-000035__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "5561da3df8e75fce4dd86f6a25fc5fed5bab98573e69ae49ffadc45ff9596f3d"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 17.94609435799066,
+      "visual_mesh_faces": 816,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "b9f7918e7e43bda5e83d7943da975cb82288e53ea7a41fffd35ae28789d3b3c7",
+        "collision/part_00.obj": "4bcd4bf2007fdd5030a60f746cd371a4584ba153d3e8f165c9e7c82dce56f73e",
+        "collision/part_01.obj": "c6381c4bf7581c40a16d40995f2bb648c202b8cc88100df5c40e800b1981ec1c",
+        "collision/part_02.obj": "3ff2818e690aff8e5b10c3f08b8b44ecabb9549332437fb97cb2f433ab46e0d6",
+        "collision/part_03.obj": "f44fcbe04f7ade54976be2acb61c139c046d939a413ec6530b445a855ff07109",
+        "collision/part_04.obj": "499ccc2c2164e76cee071e1449c1936875013183a98a07da7a182212b0157225",
+        "collision/part_05.obj": "67496c9796331e46a148cb28d9833aa6562e9af724eb1f8d323d9d3e0d0ba1f3",
+        "collision/part_06.obj": "7a93583e4d17f498b1aa1a7c5df1c38fb2d428ffefd9ccaf655a70085f94203c",
+        "collision/part_07.obj": "665ee5b917290486a837391c643cdf4c9a7213ee9b4a172395fd1dbb337e19bb",
+        "collision/part_08.obj": "c221170d2e8030795449fb6cc7a17c89ddc19ad0e24f7c1ee9809be52f38fdd9",
+        "collision/part_09.obj": "9da4737fe1e468d735d4c78c44064e0165098d785c677cd82624c4be53707695",
+        "collision/part_10.obj": "270583024921610d07e55fde697e0d887067b6260907ada8ea212dda80b828ff",
+        "collision/part_11.obj": "9d527a9fffd9bea55572b611c7bea0b8f6c47a271853f8e35051b8485822ead5",
+        "collision/part_12.obj": "c794258175ef0e26f306ca92952877e6013cd935dccbc8ec7214037e5f5bbb03",
+        "collision/part_13.obj": "ec266bcf5536a3c3fc72642db17c14256030ad73d86c3c3780205164d8777f71",
+        "collision/part_14.obj": "f27c4c3cb35b07fb2cfba240b9072759c02c6847feb7c83a92544b5a7e3a3910",
+        "collision/part_15.obj": "4b5f989452d4a68d3ff7fbf5142871a97b7230b052cc1731eb89a9b875bea393",
+        "mesh_sim.obj": "6758732aea75ee90a174695b666a4fa3732ac7aaf289a24791e977dc80b40ada",
+        "mesh_sim.ply": "fde2840e8b26433807a82f931079c5579558b97c2b3a811f72700f7052f7130a",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-db15261ebd206bf2f2e0543d37a29a3abdc107323888144254089a8cca11dd3e",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000036",
+      "collision_parts": 16,
+      "collision_wall_s": 13.190078279993031,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9326697749784216,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000036",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000036__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "cf153e00ef6efa9a51b1c3e2f2334cc42d5687f68d2e4199fb902fcdbc4cc1c9"
+        },
+        {
+          "candidate_id": "residual-000036__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "fff0ebfa04255df7d03edbbac6c62fd965cd6c0aae8f7c97666100595ef444e2"
+        },
+        {
+          "candidate_id": "residual-000036__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "542a1ead9c5143777e3d617b7dbbcad8e19aa93c619d08186498f722ba1221c7"
+        },
+        {
+          "candidate_id": "residual-000036__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "913038fa0da1e1dcafb8e099d7ca3260981a51f1d87e1b5c40868695bd0c1133"
+        },
+        {
+          "candidate_id": "residual-000036__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "ce5389814aee7917585f9c19327f27e2ba848e78ab338b5dcadb698615176bf6"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 14.122748735011555,
+      "visual_mesh_faces": 1855,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "d5e53f60a4e740508edf465cddd2edd3af71602dd11c73e7a92c5acc3152f8de",
+        "collision/part_00.obj": "064386603c2d568d308e987912c6bd97757cfbf4970fb386839533722ece7c8a",
+        "collision/part_01.obj": "2cccb54f52fb811dd964ac1985c4e6c949b4ba2d8b788848fe2508721446b55b",
+        "collision/part_02.obj": "8cb3233c3a4656457530942316c85c9766cf16081de37f98270019a0b22100f2",
+        "collision/part_03.obj": "67c772d535b02dfd974c732da9a97458f48ee8912d6d648edc91fe8f5ef39874",
+        "collision/part_04.obj": "3ef7bd77f45d0e2762b86ff0462e706191deef108f098f21031b99d709cbaf93",
+        "collision/part_05.obj": "50182eb00268b558306b505a346732b70662ae631b6414297888c0b52d32f2d9",
+        "collision/part_06.obj": "efb6383c1ba96ea11598175d5b3541b0889343f7fe8271b068a83e5f74ac16ef",
+        "collision/part_07.obj": "a2f9a713badd83d4f8d197ef3c4227429ffec2f6ac3bcc922c4007812a99c7be",
+        "collision/part_08.obj": "383d4a135f3161c1b844a0cba8598525ce6baa7c691e04a0bd8a6e1384b5da77",
+        "collision/part_09.obj": "009738f8c1c70d69cc333cf3275e293dc879e88bb2e22d6220d4944ab6fb267c",
+        "collision/part_10.obj": "51d0b4d97e11b44f3ea6a17dd262ae2475dff5bbc2db00e3a8df5ffc0143ce50",
+        "collision/part_11.obj": "641395aaffbed5913e51c8ee9814bed3855db8cfd2e0e6702ac6eb17967cde6d",
+        "collision/part_12.obj": "3e34a23f1681cb477e0f66fc46d469140864d949fd23b8a4158df392c05a6878",
+        "collision/part_13.obj": "563c9f594b75ed8cd8e2f6a9d1a7ee1ea8a17d26c49cd46fd20e5bcb303599d2",
+        "collision/part_14.obj": "c79d7198d4f75124ce38c939c39171fbf40c95a68dfad6ff1111aa4b6ecb5116",
+        "collision/part_15.obj": "453553004c0d7aeed83e403f9883c7d2ce7b1ee977da3f5eab7e12da6598faf8",
+        "mesh_sim.obj": "878763ec762ebc0371114106b00973973018269fa76a6b53c99a614977d71b1c",
+        "mesh_sim.ply": "6ceca3354fccda801ca0bebedabcf684eab054f8aa251a58613e5490e3bff4e2",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-f9fb574c93d98aacbbb74cea93715f67e04209f620bb72c067b607d29bcfcf9c",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000037",
+      "collision_parts": 16,
+      "collision_wall_s": 18.640876956982538,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.788529408047907,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000037",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000037__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "26ae65b4cd02730820abe990856f49199ee6279590e49be34089a55878fe0c69"
+        },
+        {
+          "candidate_id": "residual-000037__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "694b661ab990e8592874817636db2081b13328632f5d5795c3fa75147aaf36d8"
+        },
+        {
+          "candidate_id": "residual-000037__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "5fab5b9b451b31f53c88f826657e54992b598ed881d7e5f9deed6e1c528acc45"
+        },
+        {
+          "candidate_id": "residual-000037__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "ef77c6208b546a264066582f023873b6c4a5d0332700a5e4fd934487574caeb2"
+        },
+        {
+          "candidate_id": "residual-000037__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "8b0b5af9a5985858a7de9dcf718a8cf628868200335720a6e51f1e7b4122d9ce"
+        },
+        {
+          "candidate_id": "residual-000037__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "257a94ba3b33bd4026a832cde435f2cb8745b825cd73d2da40de55a07682a8ac"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 19.429407175048254,
+      "visual_mesh_faces": 2605,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "abf4b0fbbf555c9666f2804096e048e390825ff35b8cbbf8164f4baa0fbb30fb",
+        "collision/part_00.obj": "77d0566714938d359ce14bf7d22ecd0a5c0bd8022c391bc7e2d37ecbddbb3923",
+        "mesh_sim.obj": "95d0a3516351dbcd36228f73678cfbd07ccb10e7b60484932becd0d6ca99f038",
+        "mesh_sim.ply": "f100b2239bf6ccd1c65d91dd7b70e8384d4c7af1fbca59c0bdece3c549c757b1",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-1ac84ac20454a9861de3596dbc2c18309143c4158c2aab57f5a566a394ad6f7b",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000038",
+      "collision_parts": 1,
+      "collision_wall_s": 5.264498119999189,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.1899676529574208,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000038",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000038__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "bb628cbaaa40ba918fef6bd04cd71e7d8c75aa4219019390ff48cd88f584d109"
+        },
+        {
+          "candidate_id": "residual-000038__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "2da0971e48b2397fe80bdda1ada2ac5f08455e9c0b99e4f0710abc7f88c6b730"
+        },
+        {
+          "candidate_id": "residual-000038__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "0777ef4f4cd0b6ac50abb5787dfaa5f8ad4c45455f8c079a64a32396a47f0aa5"
+        },
+        {
+          "candidate_id": "residual-000038__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "10d4746a0b9c851af81ba6bf5dd67f7bfc9a30f279f6f15c8647fefcf65d4690"
+        },
+        {
+          "candidate_id": "residual-000038__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "6e1c44bac4be6016ce744dbb7058169a363855e67c14d81aa1c428c556748ac1"
+        },
+        {
+          "candidate_id": "residual-000038__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "cb9ecd538e36c550e0bc4df79ab075c4276bc9b7be2ff3c06abff2d32415d8ba"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 6.454466532974038,
+      "visual_mesh_faces": 1817,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "55adf7ab1594d05b8aff41628571cb36e7e377c06be6d5ce5a500ac7a3ca4521",
+        "collision/part_00.obj": "a6f0922b9bfd1370fcf507c48a72fdfe5567567e1e68cc781ebb069cead60612",
+        "collision/part_01.obj": "365bf991d24b1a6648b5a165dc305cc218f23268bd707116e36562cc9effc719",
+        "collision/part_02.obj": "4ea0f5631190e2767185fc419a45a0089e7c7ac03860d4e322ed819e769e2f79",
+        "collision/part_03.obj": "8b0f4e0f7b7b224219283c749f56888bd15516019e973bfdbee56fe244516e49",
+        "collision/part_04.obj": "9eebbc1b698390ed8e61f2dcb9149ded0ed03b7094c96fc4fe469cdcddb7e8a3",
+        "collision/part_05.obj": "5ac0cf07809570ef1b0add9c288e01d4b18f80d2289ced61ea4cb8c9ab7c0c27",
+        "collision/part_06.obj": "6b91a2ba142f4d93d9fd7d1a5694c9c397c8fad62bd923ed2671971be3c4bbb6",
+        "collision/part_07.obj": "a8d69c81c86e668606816eb3de1ea1771356e491546981bf32409274bb41c234",
+        "collision/part_08.obj": "e79fff1a5ff3a1947c16221a5c9db36bed0defc9fec7ede9c978bf683d5f8c2c",
+        "collision/part_09.obj": "4de0c1f9af609e40c47d8927be129fb3d6ab27fb298ea17c890c786e7048f833",
+        "collision/part_10.obj": "7c75009f8614959db8347a893baac263241324c77c333448721cfcd4ffd0144e",
+        "collision/part_11.obj": "b26e74b91457da66fa62243d9f11dfd0ea347e8dc9243fa3b64c4beb719fd77c",
+        "collision/part_12.obj": "ecba37c8677994d11560fd3df5464b637ea46443335e1125427dc5795b9f6062",
+        "collision/part_13.obj": "80a3970434f54e274ae0aa4b9a3db6f2c29affcd670bd5d5ae0ae7c6264b7f79",
+        "collision/part_14.obj": "1e3240de1f32ae57b506bdfa6936382670eb25a065e7fb87ba8d512afe9c166a",
+        "collision/part_15.obj": "90937d2fd4aecbfd2365354cdebffa32090f2135a32bb75ef8c6ef0f25fe30b4",
+        "mesh_sim.obj": "ed1f69794201e7d317381d7ec3553df8b27f0aeff6125b8786653d36555f9bca",
+        "mesh_sim.ply": "d98d08cee2d63ff6749949c0f1acb32107f84624a9afede86bdbcf05cfb4151b",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-dc933d2b869441cae42013f1160b3332f4f2e094bb3803d2fc040dc7cd3ffe95",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000039",
+      "collision_parts": 16,
+      "collision_wall_s": 42.06480096199084,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.567603292001877,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000039",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000039__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "eec016106af9a5ea69d6002f8ee10fd2d7b79d58e2b7255715e3928c04366703"
+        },
+        {
+          "candidate_id": "residual-000039__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "abc83c32ef514387f01860635541a90dc994946727f294f7166d8d89ec3a6c7c"
+        },
+        {
+          "candidate_id": "residual-000039__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "01dfef225c2ee84ce59740f35a17c106563c1992860306229aef8d3fc17d7312"
+        },
+        {
+          "candidate_id": "residual-000039__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "363b143e5315ffee22127a598ea65d6fb071323821e1af7fcc6ba4fee738165d"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 42.63240509398747,
+      "visual_mesh_faces": 1051,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "0dd6c3f0ceb77119d498fcd8af0ae5b6190f3b0f3a97a04fb589ec4d138363d7",
+        "collision/part_00.obj": "5fc7b3f07e0f50d96ef9a2799075b870b78c1eb58a072e5d60d8af320dc00f52",
+        "collision/part_01.obj": "794464e4cfc468da4d3ee3b6e336b5c6d4207b577d3a31ffee87a25c436ffe0a",
+        "collision/part_02.obj": "1f1801fe76ff5932635ba205d4a74aa88690d0bc5152133c269c24b0a642b253",
+        "collision/part_03.obj": "c04c8ea2a63e2041c1c3692c530c8c8275033e5edcce5eca74e8872fea563c16",
+        "collision/part_04.obj": "13b3924620bf07653d28de35e49ca150b39a36810c07450f7390912951dcd5fd",
+        "collision/part_05.obj": "53725aa2d24d26fbbe8bc809a2beba0540770cd2552cb4ca08ba1b83d309146a",
+        "collision/part_06.obj": "e11421f1d829f67cc8832700d73f9dfb09b43c026bdb84dad4900ee94e55d967",
+        "collision/part_07.obj": "6dbbd1165e013d505dd29394915e62a164180bd43181fbf9793a95070b8b8307",
+        "collision/part_08.obj": "830ad6d3ee766e84e83120d1bf0bd4f86db8efea9a47dbbf16bb8d2bf36d338f",
+        "collision/part_09.obj": "f4169304799546c643d59e534e8cac14494e9cb857de930ce94e6b6e694fe38a",
+        "collision/part_10.obj": "ff74dccfaa4cdda0a540b3d6c3b9695ce130b9cf23fc1de24da788349a7dad20",
+        "collision/part_11.obj": "d4dee14bdaee662a2799aa18f19ec67036aa9a03d941645dd01edf9ceb41780d",
+        "collision/part_12.obj": "40e66402dc5dba8073914269f2289b5ccc572b2b97720cca56f03bbba4eaee22",
+        "collision/part_13.obj": "ef61959b273cf015dd4d4740d49a2e7f5ab609e739c6ff888311841e3c910ca1",
+        "collision/part_14.obj": "dfc2765d47ff56ef94b01e4075e71359cfe411a73de59d95f56332e4e470092b",
+        "collision/part_15.obj": "663397d6476d170fd75ab293d041f478b890f01e621bbf4b8f3046d1f262ad74",
+        "mesh_sim.obj": "e3971be0f2af8f2c2c8f7e902aa790513ad924a070699798445ba0fd378cd21e",
+        "mesh_sim.ply": "9049c6f381c8de4b863f701e48e2fad6e72aeb9dbf1771e4cf96df2b87ec9946",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-c03052c12f77e896abefe49d2de8d361dcf5f2d600ca6693b348b16695d8f879",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000040",
+      "collision_parts": 16,
+      "collision_wall_s": 23.658302280993666,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.6251997000072151,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000040",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000040__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "afeb5f8b3e36ab480cdca853b85cb05a1212af7810269fdd559698b930acfbf0"
+        },
+        {
+          "candidate_id": "residual-000040__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "c6d28c7fe2dcdb6d95cbb4ba4aa741867dd800bdcb575e5a6e6421bd6291c238"
+        },
+        {
+          "candidate_id": "residual-000040__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "87005fd7d8fa6f06b233e78e6e0b395e1c23f54218d4576438e29b57264fe163"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 24.283502600970678,
+      "visual_mesh_faces": 590,
+      "visual_mesh_watertight": false
+    },
+    {
+      "cluster_id": "residual-000041",
+      "error": "ValueError: component lacks confirmed TRAIN views",
+      "partial_output": "/output/components/residual-000041",
+      "role": "obstacle",
+      "status": "BUILD_FAILED"
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "7ee1dd19610ed27bcc4b2c552660c54b2a34ae9a9ee7e168cbce3174f3acf9a5",
+        "collision/part_00.obj": "c3492c113daee58baac9d5810400aa0ee28bb1dba89398c3c364434ea428ffe2",
+        "collision/part_01.obj": "d850597957bbfb3a6ff7fd11a06e0c3fa6328517c695fe164b00048beeef4e99",
+        "collision/part_02.obj": "e65c0bc372f46a3747c01aac931c573b868da0b9f66a4ab39e20b8b0a8c98f20",
+        "collision/part_03.obj": "7beccde68111fd9974193d7c874b13bd1b96e1e3114ca01899e5822a5270a68d",
+        "collision/part_04.obj": "e41550196b1eb390a6314b7e4d0c6852e44d3e7afeac1655f7ce912be504f6f1",
+        "collision/part_05.obj": "d0b13b482dd009ee3d8988866f4cc439f35c374594ba7d8e7903161808ad7a60",
+        "collision/part_06.obj": "9d33685179e8ba043199ad73f5a8bca88a07e3de311a0d82b2448f52dc4fd47c",
+        "collision/part_07.obj": "c2738b8e8a0c875e95ee95c584c4e590707ae22a5bf296d917d1c74ec060f92a",
+        "collision/part_08.obj": "9b26d9a783b8d467f37992cf6286f6a43fdf8c9878394b5b9ace651ebe918cdc",
+        "collision/part_09.obj": "057b5e01a3dabf7bafbad491abf044f301684d389523809ee2ef99f1c1c1856a",
+        "collision/part_10.obj": "b08c8370f6e1974dde87f986aae7312c0e370586f3aa1ed1ad507b79d0a424a0",
+        "collision/part_11.obj": "3cd0af6c8798d03e369107a9af94f09e1164b9f9e533c6a39a4f9e596407825a",
+        "collision/part_12.obj": "c85166134d8147681697c401cc15e32c9b5532755c92e7438576f591cb444f7d",
+        "collision/part_13.obj": "a9dbcf6340e18b935cf47cad1cb81cd9c4a5c0ce7e5ce5b864341f7b7944f4ee",
+        "collision/part_14.obj": "cddce91c79d6846ef5c1eaffb5c7365b57a6b00e7222c046142a485ff081de49",
+        "collision/part_15.obj": "c6e2d9c8223894b19a23f8d48cdba47fe8bb61e9407939342c1d4487679a420d",
+        "mesh_sim.obj": "b11a937992220ef3573ce82e8c8d5d83eb14e5159f35d96534050f5388434825",
+        "mesh_sim.ply": "38072311edcf6d20333c544e11031610fed975fdbfb0cbd30956296b6723f5be",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-b1967c1bc9e4410dfa75998107ba40c5edf292ef3e85d7d338b57b1b16e30537",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000042",
+      "collision_parts": 16,
+      "collision_wall_s": 39.4167340429849,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.7999065569601953,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000042",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000042__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "97b7f1a0f21b35a88497822a9f3d75b5d519f99ba13276fd32424fcec6d08f00"
+        },
+        {
+          "candidate_id": "residual-000042__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "54662ab5eea9a1dc1fad08a4bea5d90cef1dc08a0569005b68fca59413e0801e"
+        },
+        {
+          "candidate_id": "residual-000042__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "89a750db55bbae85d886d67a24bf04d6a9a10607bfc1e079ec071524e2276d18"
+        },
+        {
+          "candidate_id": "residual-000042__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "888dea647561dff96513de5549fae72622f64a57436bc0fcb70a15cfa47abd17"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 40.21664135000901,
+      "visual_mesh_faces": 1231,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "1ecb8afeeac525ea94a8c337484033d5221556d61e5dfa0aec559278b473fdbb",
+        "collision/part_00.obj": "4dcf4a9813a84f3ecd0c743150ef23703417c2ed17c6d0125db1b70c7e6ed0d8",
+        "collision/part_01.obj": "85c6f4e4f080201b58a980f60f9bdc2c65cbc5e71acad9d14c38ac4abcb7df55",
+        "collision/part_02.obj": "f03704dccdecdaa803a3b7179f123554ae453a8defe79f97e2125b70587c7e4a",
+        "collision/part_03.obj": "72ba8af7547eb884c71ef27bf6843320022adeffcb911d323c5d5e06bab4e507",
+        "collision/part_04.obj": "d8e4977b98edd40e355595a8eebe4cb600c572fca995a48528dd9cb4e3e9dc64",
+        "collision/part_05.obj": "4a56db31d472a2e0941820b81e5dcdb61fa45469dd2b3716ab84e1338c080df1",
+        "collision/part_06.obj": "379ebe175302df0f037e2ad721beeac322264bd6c9bac17d007b0f87b988a521",
+        "collision/part_07.obj": "b3087682d2db3037e7ce3f9b9a5fffefb12bba79de38366a6b3954c016739814",
+        "collision/part_08.obj": "1d3b161f0184deebefae62902fc88cd4f6350c7cc4c06362690a36db36e43625",
+        "collision/part_09.obj": "67d73a664d68da988e08b3656836d7f6fbf36c92901a2a5b02326c004f90c76d",
+        "collision/part_10.obj": "39b5adb28df7aa8673590891fab7908f33c8b5ac53c33ac0da116a59ad0e4009",
+        "collision/part_11.obj": "95a9beef5ebcd6e9a2b6cac1e06c8a6ee000597b09413e88e7af37d7eb1e0c36",
+        "collision/part_12.obj": "e6556986d4a3d7e792495e81239c57deade49d8becb5a93871041fc3cd78c0a5",
+        "collision/part_13.obj": "d27c70f273c1d3c39298c2dd7c372c0986c3e6e76d9a004daebbd1f59851642b",
+        "collision/part_14.obj": "366eca8e9098b26f80ad07a3c5205adc432b2e08c9658bb79899009f01f16d70",
+        "collision/part_15.obj": "9e1aed7e2bccaf49a60af11284cdef5a33db28e7c68301bf6e1c18deeebd7b13",
+        "mesh_sim.obj": "17ab6e378c50f26960ef2fc469b3198dddffdefe19cfe0bf561db54c53527bcc",
+        "mesh_sim.ply": "1fc346a8e130acf45bb8c55999e0aea8bf4977af7743562bec920bc8c327fe5a",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-5152dc7f6f1b2d181907c212f51d8bf6c47421d2209db07353544cabdcb118e5",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000043",
+      "collision_parts": 16,
+      "collision_wall_s": 13.087066420004703,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9076293369871564,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000043",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000043__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "d19d68abca873a4ec8d0e26a58f851ed7ffed9b9c07a639a3d381c0ea786a527"
+        },
+        {
+          "candidate_id": "residual-000043__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "320b32996a0d1d68bb6bf0b55f1c0879906c00e6d74ce71e9a4ff681b73ebd37"
+        },
+        {
+          "candidate_id": "residual-000043__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "65049352a7f007f8d994b6ba7b94b1ceeb269e0661654203e691ab16e8d42922"
+        },
+        {
+          "candidate_id": "residual-000043__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "f3e9f2eb7622f139109a1b5d513551a26d189683e5a6ad1b30b12519df3a212a"
+        },
+        {
+          "candidate_id": "residual-000043__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "6b1bf3148a1b8c9104fa8ceefaf998f0cea6d8830dd9d2792ff31942ac456fb7"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 13.994696536974516,
+      "visual_mesh_faces": 18672,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "9ebf7533aa6b1d652240581b309505f8f3e8d96e9a97b9f9357f64d8e84b154e",
+        "collision/part_00.obj": "7982c7c989e1acd8ceaa1858c609d579258ee754e5ee081d73d2af2d7044780e",
+        "collision/part_01.obj": "1dd9f11e701d5d545d4e9ff4cc417cb9d964906aba9d041195225a3f3e64c7b9",
+        "collision/part_02.obj": "53fde56259a2bb0b4e9e126e9ec5b59d67162ff57c13455cf6e70d4aaaa60b74",
+        "collision/part_03.obj": "6de138c1fb047a483c78db15662c88ed211bc241ef64265e0ae45a27ed1e51c6",
+        "collision/part_04.obj": "2f49e71d16eb4da129f7d4c5f739b411af7cec94022a24774646b37e9aa1001d",
+        "collision/part_05.obj": "5651c978743e34c67bf1fde367ae371471dc00f6e31f43ae0a88ee2a5608055c",
+        "collision/part_06.obj": "f9aa13aa7dbc0f573b1b9bb7a0acd3bc7fdfc3dd34235e4887fc3be344cdbe34",
+        "collision/part_07.obj": "20d5fbd580720c3f14fe7acc4b319c489e229c30b1fd275723b03aec4ba2b050",
+        "collision/part_08.obj": "a4464bf09440e293a7d52630d945b21ab24949a30e084cc402d815d5f05fb2f2",
+        "collision/part_09.obj": "da79c750b4908046c5f7e7759b185dbb8be12ba9a8d460dbf82ffb0f82828ed4",
+        "collision/part_10.obj": "dbfc15203cc5b5ea15d21ea7d613c72219ec2c71eeb87c65f3ab984b1ad8bdb6",
+        "collision/part_11.obj": "0a98dded678230e124dc018c2fba76b90c6fe8344dbc15b12868128d0b57bde5",
+        "collision/part_12.obj": "a843c764bed815680633ed1c93a4501aa159551c52f964eae7b4030367ab8eec",
+        "collision/part_13.obj": "95f8e9ad389a4741b85b26ac01181a95f8a34787cb74dc1e37cdc3b30db2334c",
+        "mesh_sim.obj": "d9a760cada72342b5b777542a13436d110044bdcc10e815c0bcc6d3956b1d1b6",
+        "mesh_sim.ply": "caed593e6b3929fd255715e06b510c6ac5b72c79db067074179e31ba0b15e865",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-6823b1c6d831161a8ec5a79d4dd79d3c5f4dabc864124d3c642e35de38ef245a",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000044",
+      "collision_parts": 14,
+      "collision_wall_s": 5.789852173009422,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.734766278997995,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000044",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000044__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "d46d32042042e959bd8252f4710d051a5caef749020cd272b454c43d484b38d7"
+        },
+        {
+          "candidate_id": "residual-000044__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "3e952e36515039877cef81a1cbd3aac5eb1468284f407680d6768f2c87ecf71f"
+        },
+        {
+          "candidate_id": "residual-000044__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "fc9090b1c90348fcb4711dde86c1a49d07cf8c7233468970fc31099d51424277"
+        },
+        {
+          "candidate_id": "residual-000044__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "8d4e471d44800724d1172f2755d23aaab4b636e22674a3c9a012340395777998"
+        },
+        {
+          "candidate_id": "residual-000044__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "fcce6a9ec51c0eb4dd2355f94d3436e951e45cfbf6554f27908be724d97a18eb"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 6.5246191620244645,
+      "visual_mesh_faces": 305,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "5b4c2bf7a3c8f2da6bc87a24ea8142f04b976ac200fe6c88b819054a40b3c712",
+        "collision/part_00.obj": "9b662b25a6e908ceb531385290468d7c0ef51494a4e1229d193fce26fb7f0b27",
+        "collision/part_01.obj": "08d1a7c6adc9cfabbe6feb1262cf61421bceaa058377386254b44dce3eccc370",
+        "collision/part_02.obj": "15d43b925801715707dad59bd40957c77e4129b85d7ab2b2bc587e3a4afe726d",
+        "collision/part_03.obj": "92b56d635b28b52b2a8754c65395378a58648a0fb7fa058cf25df726b41161fc",
+        "collision/part_04.obj": "2da42593721e6009fcea4d6b8da50f60d08f600b958f2bfe63d437f47bfca46c",
+        "collision/part_05.obj": "14689c71d1bbdfea1f90b4f741a27602ba415b14604878310905894d1c20d0fb",
+        "collision/part_06.obj": "3b7bbf57591b273d6e5734f1417bcdbedbc8b7d9e7bf4c3bae5cf6fdfd30b2b0",
+        "collision/part_07.obj": "d1681a5039083b92629078603288c269368093f28959ffc36f95a7fca7a9b44c",
+        "collision/part_08.obj": "837c0d72ad568a60e29a8fbfebd7e2f2ddead044b78b454297846defabc2c132",
+        "collision/part_09.obj": "efac610c2bc7aeffa77daace351728f5ed3e9a006a7ee367d6a55b2ea48e0cac",
+        "collision/part_10.obj": "9e851ef595162b24aa8f8188b142cdc195ec7a83fab77e7a435b5bf68b3bc2ee",
+        "collision/part_11.obj": "f8d62d234dbc14f8bb06a0d153b10231f030a4dab32b9033851c289e87b264b5",
+        "collision/part_12.obj": "d9debf86c95c4a98fd7984aa3ca772451612d55d210366b65680e709daccecbf",
+        "collision/part_13.obj": "a1f2514643a68424345cd0451f52ea04f2cac787821b13813ee37e063bf3f5d7",
+        "collision/part_14.obj": "77feee3d9a85e39617879ec3054b98189a201a1e33d616cf5f5ca161f1f3528a",
+        "collision/part_15.obj": "127f1712b06054801226c6b4ccfd71c7017ebda81d62113e5c7f1a56fe8eb0e1",
+        "mesh_sim.obj": "87cd055901f5d70f31887da7c4a8453417dff9cc643c29e07333284432ab43a0",
+        "mesh_sim.ply": "dc2b50ee09971b1bf1385ecaae98df4fef02d72472f315c091d62fea1fbec2f4",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-9d2dbed4becc9f0cdb31baf1a82478b15f623b86ee93ec5a1eb130bf7779e72f",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000045",
+      "collision_parts": 16,
+      "collision_wall_s": 13.682593351986725,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 0.9741280950256623,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000045",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000045__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "7b19001921e81cfd801fed3879e28dd2b96457c7fdb435e35d469fe4639d4ede"
+        },
+        {
+          "candidate_id": "residual-000045__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "5a511a7749abdac0ba403226412b04df617da9a8d1e22a7a908133dbe89e518c"
+        },
+        {
+          "candidate_id": "residual-000045__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "ddcfc3f83784ed01aa6468b2e721a4feb1d97dcd00ea33a4ff49861b7ce8b4b5"
+        },
+        {
+          "candidate_id": "residual-000045__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "eb8e621db8faec067755b987b6af14bed0e2433c0b78d8633fdaba214f549b2d"
+        },
+        {
+          "candidate_id": "residual-000045__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "9668467d16594b48b52c2518c06f9893102ca775dde4989b6ad5e2d9c5cd3312"
+        },
+        {
+          "candidate_id": "residual-000045__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "bee415c3ea58aeda1fd2bbdeffb05a7d208475780e26dfa182b09ecd157df9aa"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 14.656722116982564,
+      "visual_mesh_faces": 11139,
+      "visual_mesh_watertight": false
+    },
+    {
+      "artifact_hashes": {
+        "aligned.json": "43882d49640d7bc6762b8983580271956df61cad0667f0001d626124a4640d2e",
+        "collision/part_00.obj": "b21269ab3a80dc2cde95204d3795f29b5a84a256be6da985d427d1e2ee1065ca",
+        "mesh_sim.obj": "db8fa90e1cc66f10b8ca60f96d6ed04fb07a7f468e172ad216fa70c5928abfc2",
+        "mesh_sim.ply": "6d7a28665dac239600d248b9aab8159073d213be99f4ce72a81534529818a416",
+        "physics.json": "4cf225bde2e0305acc5b744546f71877fa828e35bcc28416dfd9d4224d4f4e0f"
+      },
+      "canonical_component_id": "residual-6a580aaac5ec42786dd5ef08878224ccd9b0c764fe99db0b6f3634224dbb904e",
+      "canonical_instance_id": "native-8becd0a1c1032a80bf88fe97aa35387cc1db28f448caca69470fbe6e7fca0c2d",
+      "capture_manifest_sha256": "f3437a83ee5fe4e65188d70bdbf2c66707ab95efebe7b624d10b35636d92ea68",
+      "cluster_id": "residual-000046",
+      "collision_parts": 1,
+      "collision_wall_s": 0.12448904803022742,
+      "completion": "CoACD convex collision approximation of partial observed TSDF",
+      "fusion_wall_s": 1.1497846430283971,
+      "geometry_source": "automatic TRAIN masks and metric depth",
+      "method": "OBSERVED_RESIDUAL_OBSTACLE_TSDF",
+      "native_import": "NOT_RUN",
+      "native_role_binding": null,
+      "object_dir": "/output/components/residual-000046",
+      "role": "obstacle",
+      "semantic_identity": "UNCLASSIFIED",
+      "source_views": [
+        {
+          "candidate_id": "residual-000046__f000000",
+          "frame_id": "f000000",
+          "mask_sha256": "654be4f526b6e6c8ee3a5aecbeb3247019ad622532d1efaa952373e3de98d03b"
+        },
+        {
+          "candidate_id": "residual-000046__f000001",
+          "frame_id": "f000001",
+          "mask_sha256": "4ff86fd24fba05dfc2cf3c5db0cb62c4fb60f79f66d5d2d3a59a4771983af5cb"
+        },
+        {
+          "candidate_id": "residual-000046__f000002",
+          "frame_id": "f000002",
+          "mask_sha256": "78b19964d169f6616fc8789c58d91bc790881a871fe2a7d75f0796d62adb6f60"
+        },
+        {
+          "candidate_id": "residual-000046__f000003",
+          "frame_id": "f000003",
+          "mask_sha256": "1682ab66084a912f9d9a33a141f31b40ac7383d87fe7267c40953a2d311060ba"
+        },
+        {
+          "candidate_id": "residual-000046__f000004",
+          "frame_id": "f000004",
+          "mask_sha256": "1f76f7965a862302c79e4699138e3dd0c86b5e681734c388283a907f2744568c"
+        },
+        {
+          "candidate_id": "residual-000046__f000005",
+          "frame_id": "f000005",
+          "mask_sha256": "156d94bdd4eb744580e42afaaeaff45d0b6a2ad9af046d015400a7d4c7778482"
+        }
+      ],
+      "status": "BUILT",
+      "total_wall_s": 1.2742744809947908,
+      "visual_mesh_faces": 1361,
+      "visual_mesh_watertight": false
+    }
+  ],
+  "schema_version": 1,
+  "tier": "DEV"
+}

@@ -1,0 +1,168 @@
+{
+  "state": "PASS_PARTIAL_PRIMARY_COMPLETE_AVAILABLE_WARM_FIDELITY",
+  "release": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/release_manifest.json",
+    "sha256": "afee8dfb5a89463389bf5b8a1692f072bbfe1e9b93955a24b8402b3724327a11"
+  },
+  "artifacts_verified": 52,
+  "primary_planned": 2400,
+  "primary_measured": 1654,
+  "primary_complete": false,
+  "primary_boundary": {
+    "episode_ledger": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/episode_ledger.jsonl",
+      "sha256": "e1c83672234a7406791392f8d5ef38c6b69742f31ec8dc1bbcf386f229d265de"
+    },
+    "planned_units": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/roster/planned_units.jsonl",
+      "sha256": "54afe88ea0bd9880db3708ae6c0ff5b72ab83257858ece2a59b83ea61d9ed8f3"
+    },
+    "status": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-73ff4ab-v1/sim_recon_sim/scale_up/test_execution/release_snapshot_010/merged/status.json",
+      "sha256": "dc145fa74abee17e1e35f9cfc6cb80fc04eeaaffb1513b2472155ade3f060b23"
+    },
+    "planned": 2400,
+    "measured": 1654,
+    "unmeasured": 746,
+    "executed": 614,
+    "complete": false,
+    "kind": "EXPLICIT_PARTIAL_PRIMARY_SNAPSHOT"
+  },
+  "scope_collection": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-6a60a51-v6/sim_recon_sim/scale_up/test_l1_execution/execution_snapshots/0045/collection.json",
+    "sha256": "dd93e27edba4165425198dbc7d4afa4e1f1291e35362d411acd35e480e1c8ba0"
+  },
+  "scope_measured": 657,
+  "scope_unmeasured": 543,
+  "warm_planned": 86,
+  "warm_ready": 82,
+  "warm_metrics": 82,
+  "warm_failures": {
+    "slot-6c19079e3806eb6d2fcf/pool": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-6c19079e3806eb6d2fcf/pool_failure.json",
+      "sha256": "2d00c65059837806a94a32e988f7af58292f47f61995ef714f58a417fd85ef08",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-4cb8248fbd47bc306e29/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-4cb8248fbd47bc306e29/b0_failure.json",
+      "sha256": "7648bcf5e67944b52ee9e0b199f81a64229accca13cb08acb301ab76118068a1",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-6c19079e3806eb6d2fcf/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-6c19079e3806eb6d2fcf/b0_failure.json",
+      "sha256": "f3474a404e5821be29d20261f38f4ba03b5e176fda647311096361e4ba08d0c5",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    },
+    "slot-d55f3dd1cf4ce18c0efd/b0": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-2056ce2-v2/sim_recon_sim/scale_up/test_appearance/slot-d55f3dd1cf4ce18c0efd/b0_failure.json",
+      "sha256": "9b7bb6ace91b8158df49ebf9757fcf4c0e2d3e4386bc8226bd649a8a629c3490",
+      "classification": "RENDER_IDENTITY_FAILURE",
+      "error": "ValueError('unchanged-native heldout rendering differs')"
+    }
+  },
+  "warm_unattempted": [],
+  "appearance_table": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.json",
+    "sha256": "4b009c6e71c3b8fdfcd87f055f6d040a6143ef09afa5a0d83b1b6c883352aef7"
+  },
+  "appearance_csv": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/paper_tables/T1a_appearance.csv",
+    "sha256": "f08038d821b10203ccea39e1c4fd84c15e1786cb9e4747d870d635e5144379e2"
+  },
+  "input_boundary": {
+    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-a1832f4-v1/sim_recon_sim/scale_up/input_boundary.json",
+    "sha256": "4d3fc0aa16eab26d78b675dbafa5501c4290e8a0dc37eca748edfab41ce8f0b2"
+  },
+  "paper_transfer": false,
+  "new_metric_computation": false,
+  "scientific_claim_promotion": false,
+  "appearance": [
+    {
+      "method": "B0_FIXED_NATIVE",
+      "scenes_available": 29,
+      "scenes_planned": 48,
+      "views_available": 58,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9808247743352084,
+      "lpips": 0.02870373124771201,
+      "perfect_views": 1
+    },
+    {
+      "method": "B1_FIXED_PRIORITY",
+      "scenes_available": 31,
+      "scenes_planned": 48,
+      "views_available": 62,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9984757125484954,
+      "lpips": 0.003308721502132054,
+      "perfect_views": 4
+    },
+    {
+      "method": "B2_EVIDENCE",
+      "scenes_available": 31,
+      "scenes_planned": 48,
+      "views_available": 62,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9971776379339873,
+      "lpips": 0.004765880547059472,
+      "perfect_views": 2
+    },
+    {
+      "method": "B3_AGENT_NATIVE",
+      "scenes_available": 31,
+      "scenes_planned": 48,
+      "views_available": 62,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9971947533702509,
+      "lpips": 0.004757245123983012,
+      "perfect_views": 3
+    },
+    {
+      "method": "B4_ROOM_REPAIR_NATIVE",
+      "scenes_available": 12,
+      "scenes_planned": 48,
+      "views_available": 24,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9971722390170866,
+      "lpips": 0.00480688896823267,
+      "perfect_views": 3
+    },
+    {
+      "method": "BM_BUDGET_MATCHED_NATIVE",
+      "scenes_available": 12,
+      "scenes_planned": 48,
+      "views_available": 24,
+      "views_planned": 96,
+      "common_scenes": 12,
+      "common_views": 24,
+      "psnr": null,
+      "psnr_status": "POSITIVE_INFINITY",
+      "ssim": 0.9972000222638712,
+      "lpips": 0.004770951141229792,
+      "perfect_views": 3
+    }
+  ]
+}

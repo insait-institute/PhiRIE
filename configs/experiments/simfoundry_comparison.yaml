@@ -1,0 +1,35 @@
+# Real mujoco_paired comparison: simany vs reference vs simfoundry_repro,
+# across the 5 scenes where both the SimAny factory build and a completed
+# SimFoundry-repro baseline (outputs/<scene>_baselines/simfoundry_repro/)
+# exist. Scripted policy first (cheap, validates the full real-data chain
+# end to end); rerun with the frozen horizon + a real pi0.5 checkpoint for
+# a benchmark-valid number once this is confirmed working.
+policy: scripted_sinusoid
+seeds: [0, 1]
+episodes: 2
+horizon_s: 6.0
+jitter: 0.0
+variant: default
+video: false
+render_wh: [640, 360]
+policy_timeout_s: 20.0
+conditions: [simany, reference, simfoundry_repro]
+
+scenes:
+  - id: 45b0dac5e3_factory
+    factory_dir: outputs/45b0dac5e3_factory
+    tasks_json: outputs/45b0dac5e3_factory/sim_export/pi05_tasks.json
+  - id: 578511c8a9_factory
+    factory_dir: outputs/578511c8a9_factory
+    tasks_json: outputs/578511c8a9_factory/sim_export/pi05_tasks.json
+  - id: 7b6477cb95_factory
+    factory_dir: outputs/7b6477cb95_factory
+    tasks_json: outputs/7b6477cb95_factory/sim_export/pi05_tasks.json
+  - id: 825d228aec_factory
+    factory_dir: outputs/825d228aec_factory
+    tasks_json: outputs/825d228aec_factory/sim_export/pi05_tasks.json
+  - id: c50d2d1d42_factory
+    factory_dir: outputs/c50d2d1d42_factory
+    tasks_json: outputs/c50d2d1d42_factory/sim_export/pi05_tasks.json
+
+out_dir: outputs/paired_runs/simfoundry_comparison_scripted

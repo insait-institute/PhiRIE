@@ -1,0 +1,98 @@
+[
+  {
+    "accepted_objects": null,
+    "accepted_objects_observed": 0,
+    "aggregation": "available quality is method-conditional; common quality uses identical canonical instances and reference samples; no unconditional selection gain",
+    "build_decisions_available": 0,
+    "cohort_id": "native_dev_v2_8instances",
+    "common_catastrophic_collapse_count": null,
+    "common_cd_cm": null,
+    "common_f1_at_20mm": null,
+    "common_matched_instance_ids": [],
+    "common_matched_objects": 0,
+    "common_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "matched_objects": 5,
+    "method": "B0_FIXED_NATIVE",
+    "planned_objects": 8,
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "development"
+  },
+  {
+    "accepted_objects": null,
+    "accepted_objects_observed": 0,
+    "aggregation": "available quality is method-conditional; common quality uses identical canonical instances and reference samples; no unconditional selection gain",
+    "build_decisions_available": 0,
+    "cohort_id": "native_dev_v2_8instances",
+    "common_catastrophic_collapse_count": null,
+    "common_cd_cm": null,
+    "common_f1_at_20mm": null,
+    "common_matched_instance_ids": [],
+    "common_matched_objects": 0,
+    "common_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "matched_objects": 5,
+    "method": "B3_AGENT_NATIVE",
+    "planned_objects": 8,
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "development"
+  },
+  {
+    "accepted_objects": null,
+    "accepted_objects_observed": 0,
+    "aggregation": "available quality is method-conditional; common quality uses identical canonical instances and reference samples; no unconditional selection gain",
+    "build_decisions_available": 0,
+    "cohort_id": "native_dev_v2_8instances",
+    "common_catastrophic_collapse_count": null,
+    "common_cd_cm": null,
+    "common_f1_at_20mm": null,
+    "common_matched_instance_ids": [],
+    "common_matched_objects": 0,
+    "common_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "matched_objects": 0,
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "planned_objects": 8,
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "development"
+  },
+  {
+    "accepted_objects": null,
+    "accepted_objects_observed": 0,
+    "aggregation": "available quality is method-conditional; common quality uses identical canonical instances and reference samples; no unconditional selection gain",
+    "build_decisions_available": 0,
+    "cohort_id": "native_dev_v2_8instances",
+    "common_catastrophic_collapse_count": null,
+    "common_cd_cm": null,
+    "common_f1_at_20mm": null,
+    "common_matched_instance_ids": [],
+    "common_matched_objects": 0,
+    "common_methods": [
+      "B0_FIXED_NATIVE",
+      "B3_AGENT_NATIVE",
+      "B4_ROOM_REPAIR_NATIVE",
+      "BM_BUDGET_MATCHED_NATIVE"
+    ],
+    "matched_objects": 0,
+    "method": "BM_BUDGET_MATCHED_NATIVE",
+    "planned_objects": 8,
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "development"
+  }
+]

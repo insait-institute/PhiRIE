@@ -1,0 +1,34 @@
+%% EXTENDED / arXiv version: full detail + appendices.
+%% The 8-page ICRA cut is conference.tex; both share preamble/body/appendix.
+\documentclass[letterpaper, 10pt, conference]{ieeeconf}
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+
+\newif\ifextended \extendedtrue
+\input{preamble}
+
+\title{\LARGE \bf
+\name: Fully Automatic, Annotation-Free Digital Twins of Real Scenes\\
+via Gaussian-Native Scene Editing}
+
+% ---- ANONYMOUS SUBMISSION: do not add names/affiliations before review ----
+\author{Anonymous Submission%
+\thanks{Paper ID: TBD. Code, the benchmark protocol, and per-scene results
+will be released upon acceptance. This is the extended version; the
+conference version omits the appendices.}%
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\input{fig_pipeline}
+\input{body}
+
+\appendix
+\input{appendix}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}

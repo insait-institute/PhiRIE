@@ -1,0 +1,73 @@
+{
+  "authors": [
+    {
+      "name": "Runyi Yang",
+      "given_names": "Runyi",
+      "family_names": "Yang",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Deheng Zhang",
+      "given_names": "Deheng",
+      "family_names": "Zhang",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Xiaoye Wang",
+      "given_names": "Xiaoye",
+      "family_names": "Wang",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Kanzhi Wu",
+      "given_names": "Kanzhi",
+      "family_names": "Wu",
+      "affiliation": 2,
+      "corresponding": false
+    },
+    {
+      "name": "Lei Sun",
+      "given_names": "Lei",
+      "family_names": "Sun",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Ajad Chhatkuli",
+      "given_names": "Ajad",
+      "family_names": "Chhatkuli",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Kunyu Peng",
+      "given_names": "Kunyu",
+      "family_names": "Peng",
+      "affiliation": 3,
+      "corresponding": true
+    },
+    {
+      "name": "Luc Van Gool",
+      "given_names": "Luc",
+      "family_names": "Van Gool",
+      "affiliation": 1,
+      "corresponding": false
+    },
+    {
+      "name": "Danda Pani Paude",
+      "given_names": "Danda Pani",
+      "family_names": "Paude",
+      "affiliation": 1,
+      "corresponding": false
+    }
+  ],
+  "affiliations": {
+    "1": "INSAIT, Sofia University “St. Kliment Ohridski”.",
+    "2": "vivo Mobile Communication Co., Ltd.",
+    "3": "Karlsruhe Institute of Technology"
+  },
+  "corresponding_author": "Kunyu Peng"
+}

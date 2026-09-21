@@ -1,0 +1,104 @@
+[simany] scene=c50d2d1d42 out=/group/worldcept/code/SimAny/worktrees/generator-comparison-bounded-20260914/outputs/c50d2d1d42 auto=1 mesh_src=derived
+/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-09-14 23:54:57.997 | INFO     | sam3d_objects.pipeline.inference_pipeline:set_attention_backend:17 - GPU name is NVIDIA H200
+2026-09-14 23:55:02.288 | INFO     | sam3d_objects.model.backbone.tdfy_dit.modules.sparse:__from_env:39 - [SPARSE] Backend: spconv, Attention: flash_attn
+2026-09-14 23:55:05.718 | INFO     | sam3d_objects.model.backbone.tdfy_dit.modules.attention:__from_env:30 - [ATTENTION] Using backend: flash_attn
+2026-09-14 23:55:09.375 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+2026-09-14 23:55:09.375 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+2026-09-14 23:55:09.489 | WARNING  | sam3d_objects.data.dataset.tdfy.preprocessor:__post_init__:51 - No rgb pointmap normalizer provided, using scale + shift
+Traceback (most recent call last):
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 306, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 307, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 107, in send
+    raise OfflineModeIsEnabled(
+huggingface_hub.errors.OfflineModeIsEnabled: Cannot reach https://huggingface.co/Ruicheng/moge-vitl/resolve/main/model.pt: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 92, in _call_target
+    return _target_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/moge/model/v1.py", line 224, in from_pretrained
+    cached_checkpoint_path = hf_hub_download(
+                             ^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/group/worldcept/code/SimAny/worktrees/generator-comparison-bounded-20260914/robo/campaign/component_worker.py", line 352, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "/group/worldcept/code/SimAny/worktrees/generator-comparison-bounded-20260914/robo/campaign/component_worker.py", line 344, in main
+    if a.mode == 'generate': generate(a.config, a.out)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/worktrees/generator-comparison-bounded-20260914/robo/campaign/component_worker.py", line 169, in generate
+    pipe = load_component_pipeline(model['source']['root'], model['pipeline']['path'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/worktrees/generator-comparison-bounded-20260914/models/s4_sam3d.py", line 58, in load_component_pipeline
+    return Inference(str(config), compile=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/third_party/sam-3d-objects/notebook/inference.py", line 92, in __init__
+    self._pipeline: InferencePipelinePointMap = instantiate(config)
+                                                ^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+           ^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+            ^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+            ^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 347, in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/group/worldcept/code/SimAny/.envs/sam3d-objects/lib/python3.11/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 97, in _call_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error in call to target 'moge.model.v1.MoGeModel.from_pretrained':
+LocalEntryNotFoundError('An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.')
+full_key: depth_model.model
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.2
+   Devices:
+     "cpu"      : "CPU"
+     "cuda:0"   : "NVIDIA H200" (140 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/tmp/xdg/warp/1.16.0
+[SPARSE][CONV] spconv algo: native

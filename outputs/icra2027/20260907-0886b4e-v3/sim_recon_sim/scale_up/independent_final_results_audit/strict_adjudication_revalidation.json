@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "existing_strict_producer": "robo.roundtrip.matrix.adjudicate_collision_failures",
+  "implementation_sha256": "be87e6e2fdd6840f42888962cbc4fd2a28214733981907d2bdcebffaf88e5165",
+  "manifest": "/group/worldcept/code/SimAny/outputs/icra2027/20260907-0886b4e-v1/sim_recon_sim/scale_up/adjudicated_primary/adjudications.json",
+  "manifest_sha256": "79d54201fdfb5a6fa0231776e8fad6a08e8e5538ad13fbe5a2378147b3228601",
+  "classified_units": 10,
+  "every_output_field_equals_final_ledger": true,
+  "original_shards_changed": false,
+  "assets_changed": false,
+  "native_outcomes_changed": 0,
+  "python": "/group/worldcept/code/SimAny-wt/sr0-native/.venv-native/bin/python"
+}

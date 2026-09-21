@@ -1,0 +1,79 @@
+{
+  "id": "phiview",
+  "branch": "module/phiview-v2",
+  "description": "Image-only browser and server-side interactive demo",
+  "inputs": [
+    "original full-resolution Gaussian scene; prepared assets; local viewer config"
+  ],
+  "outputs": [
+    "server-rendered frames; selections; simulation interactions"
+  ],
+  "tools": [
+    "gsplat",
+    "MuJoCo",
+    "PhiView"
+  ],
+  "actions": {
+    "blocks": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": false,
+      "args": [
+        "blocks"
+      ]
+    },
+    "init": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": false,
+      "args": [
+        "init"
+      ]
+    },
+    "doctor": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": false,
+      "args": [
+        "doctor"
+      ]
+    },
+    "demo": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "viewer",
+        "--action",
+        "demo"
+      ]
+    },
+    "studio": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "viewer",
+        "--action",
+        "studio"
+      ]
+    },
+    "pipeline": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "full"
+      ]
+    }
+  }
+}

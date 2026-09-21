@@ -1,0 +1,24 @@
+{
+  "task_id": "gc32-sam3d-smoke-retry2",
+  "task_sha256": "1d741337657561714ff49fc4411105090ed2b047aca15dbb1608550ca90bead2",
+  "source": {
+    "commit": "402b1a275414721a804bf937eee010fe350b14a8",
+    "root": "/group/worldcept/code/SimAny/worktrees/generator-comparison-evidence-20260915"
+  },
+  "artifacts": {
+    "batch": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-smoke-retry2/results/gc32-sam3d-smoke-retry2/component/batch.json",
+      "sha256": "fcb5cc3319122bc43480a2ab0f45b30bb054d4c991c47cb117a33a23dadd11fc",
+      "bytes": 3620
+    },
+    "integration_receipt": {
+      "path": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-smoke-retry2/results/gc32-sam3d-smoke-retry2/component/outputs.json",
+      "sha256": "33b9365fa1c2ab03fd5013ed50c44032790f1ffdaee7b2b73d05f21cc9b9ed9f",
+      "bytes": 288
+    }
+  },
+  "status": "COMPLETE",
+  "job_id": "901678",
+  "component_execution_only": true,
+  "wall_s": 173.07877192500746
+}

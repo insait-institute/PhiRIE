@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fresh TRELLIS generation config, populated only after discovery seals",
+  "type": "object",
+  "required": ["freeze_id", "paper_ready", "seed", "python", "runtime_sha256", "models", "source_pilot", "source_summary_sha256", "source_output_hashes_sha256", "source_gaussian_training_provenance", "source_discovery_hashes", "source_discovery_config", "source_discovery_contract", "source_discovery_commit"],
+  "properties": {
+    "freeze_id": {"type": "string", "minLength": 1},
+    "paper_ready": {"const": false},
+    "seed": {"const": 42},
+    "source_gaussian_training_provenance": {"const": "FRESH_OFFICIAL_TRAIN_ONLY"},
+    "source_discovery_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "source_discovery_hashes": {
+      "type": "object",
+      "required": ["input_manifest.json", "pilot_summary.json", "output_hashes.json", "postrun_audit.json", "all_jobs_manifest.json"],
+      "additionalProperties": false,
+      "properties": {
+        "input_manifest.json": {"$ref": "#/$defs/sha256"},
+        "pilot_summary.json": {"$ref": "#/$defs/sha256"},
+        "output_hashes.json": {"$ref": "#/$defs/sha256"},
+        "postrun_audit.json": {"$ref": "#/$defs/sha256"},
+        "all_jobs_manifest.json": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "source_discovery_config": {"$ref": "#/$defs/identity"},
+    "source_discovery_contract": {"$ref": "#/$defs/identity"},
+    "crop_comparison_sha256": {"$ref": "#/$defs/sha256"},
+    "raw_reuse": {
+      "description": "Optional audited candidate source. Missing independently anchored original runtime bytes make all candidates ineligible; GPU generation then processes all prepared jobs.",
+      "type": "object",
+      "required": ["directory", "producer_commit", "config", "contract", "anchors", "algorithm_files"],
+      "properties": {
+        "config": {"$ref": "#/$defs/identity"},
+        "contract": {"$ref": "#/$defs/identity"},
+        "anchors": {
+          "type": "object",
+          "required": ["input_manifest.json", "proposal_pool.json", "postrun_audit.json", "python_runtime.json", "runtime.json"],
+          "additionalProperties": false,
+          "properties": {
+            "input_manifest.json": {"$ref": "#/$defs/identity"},
+            "proposal_pool.json": {"$ref": "#/$defs/identity"},
+            "postrun_audit.json": {"$ref": "#/$defs/identity"},
+            "python_runtime.json": {"$ref": "#/$defs/identity"},
+            "runtime.json": {"$ref": "#/$defs/identity"}
+          }
+        }
+      }
+    }
+  },
+  "dependentRequired": {"raw_reuse": ["crop_comparison_sha256"]},
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "identity": {
+      "type": "object", "required": ["path", "bytes", "sha256"],
+      "properties": {"path": {"type": "string"}, "bytes": {"type": "integer", "minimum": 1}, "sha256": {"$ref": "#/$defs/sha256"}}
+    }
+  }
+}

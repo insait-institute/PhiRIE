@@ -1,0 +1,7 @@
+{
+  "urdf": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/reference-evaluation-retry1/results/gc32-reference-evaluation-retry1/component/27dd4da69e-a1004-trellis2/object.urdf",
+  "mass_kg": 0.3,
+  "lateral_friction": 0.5,
+  "restitution": 0.0,
+  "note": "Existing shared factory drop protocol uses PyBullet contact defaults; the stored prior restitution .1 is not applied by existing write_urdf/drop_test. Actual restitution is recorded here; no recipe changed."
+}

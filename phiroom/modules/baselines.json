@@ -1,0 +1,36 @@
+{
+  "id": "baselines",
+  "branch": "module/baselines-v2",
+  "description": "Single-image and comparison methods",
+  "inputs": [
+    "single image or reconstructed scene as required by backend"
+  ],
+  "outputs": [
+    "baseline assets; depth or reconstruction outputs"
+  ],
+  "tools": [
+    "SHARP",
+    "MaskClustering",
+    "FlashSplat"
+  ],
+  "actions": {
+    "single-image-depth": {
+      "target": "agents.single_image.sharp_render_depth",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    },
+    "maskclustering": {
+      "target": "agents.baselines.maskclustering",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    },
+    "flashsplat": {
+      "target": "agents.baselines.flashsplat",
+      "runtime": "main",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "blocked_before_execution",
+  "run_id": 34845525682,
+  "job_id": 103980414699,
+  "message": "The job was not started because an Actions budget is preventing further use.",
+  "alternative": "Local Python 3.11 and 3.12 tests, four lockfiles, distributions and isolated wheel validation; hosted CI is not passing."
+}

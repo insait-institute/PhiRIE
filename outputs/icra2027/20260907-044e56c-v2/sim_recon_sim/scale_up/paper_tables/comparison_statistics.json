@@ -1,0 +1,314 @@
+[
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B0_FIXED_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 4,
+      "both_success": 10,
+      "ci95": [
+        -0.925,
+        -0.4110000000000006
+      ],
+      "delta": -0.7155555555555556,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 5,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 4,
+      "matched_resets": 49,
+      "method_only_success": 0,
+      "reference_only_success": 35,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "REF_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B3_AGENT_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 1,
+      "both_success": 13,
+      "ci95": [
+        -0.975,
+        -0.25
+      ],
+      "delta": -0.6000000000000001,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 4,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 4,
+      "matched_resets": 40,
+      "method_only_success": 1,
+      "reference_only_success": 25,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "REF_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B3_AGENT_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 183,
+      "both_success": 7,
+      "ci95": [
+        -0.013636363636363636,
+        0.09474342105263155
+      ],
+      "delta": 0.02,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 20,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 8,
+      "matched_resets": 200,
+      "method_only_success": 7,
+      "reference_only_success": 3,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "B0_FIXED_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 4,
+      "both_success": 18,
+      "ci95": [
+        -0.8888888888888888,
+        -0.18325000000000044
+      ],
+      "delta": -0.5133333333333333,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 5,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 4,
+      "matched_resets": 49,
+      "method_only_success": 1,
+      "reference_only_success": 26,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "REF_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 167,
+      "both_success": 1,
+      "ci95": [
+        -0.15321929824561406,
+        0.2579179566563466
+      ],
+      "delta": 0.022222222222222233,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 20,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 8,
+      "matched_resets": 199,
+      "method_only_success": 18,
+      "reference_only_success": 13,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "B3_AGENT_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 361,
+      "both_success": 17,
+      "ci95": [
+        -0.026834212261041532,
+        0.0
+      ],
+      "delta": -0.005263157894736842,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 38,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 8,
+      "matched_resets": 380,
+      "method_only_success": 0,
+      "reference_only_success": 2,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "BM_BUDGET_MATCHED_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "B4_ROOM_REPAIR_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 0,
+      "both_success": 0,
+      "ci95": [
+        null,
+        null
+      ],
+      "delta": null,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 0,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 0,
+      "matched_resets": 0,
+      "method_only_success": 0,
+      "reference_only_success": 0,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 0,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "V1_VERIFY_ABSTAIN_NATIVE",
+    "reference_has_success": false,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  },
+  {
+    "ci95_pp": [
+      null,
+      null
+    ],
+    "cohort_id": "native_test_v2_48instances",
+    "delta_pp": null,
+    "execution_protocol": "primary_native",
+    "method": "BM_BUDGET_MATCHED_NATIVE",
+    "observed_pairs_descriptive": {
+      "bootstrap_samples": 2000,
+      "both_failure": 3,
+      "both_success": 18,
+      "ci95": [
+        -1.0,
+        0.0
+      ],
+      "delta": -0.425,
+      "estimand": "instance_macro_method_minus_reference",
+      "instances": 4,
+      "interval_scope": "descriptive; limited independent layout support",
+      "layouts": 3,
+      "matched_resets": 40,
+      "method_only_success": 1,
+      "reference_only_success": 18,
+      "seed": 42
+    },
+    "paired_population_complete": false,
+    "planned_method_resets": 480,
+    "planned_reference_resets": 480,
+    "policy_id": "pi05_pretrain_human300_75000_c484448",
+    "preservation_claim": "NOT_RUN",
+    "reference": "REF_NATIVE",
+    "reference_has_success": true,
+    "renderer": "native",
+    "scope": "L0_target_only",
+    "sensor_regime": "ideal_rgbd_posed",
+    "split": "test"
+  }
+]

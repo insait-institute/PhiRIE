@@ -1,0 +1,12 @@
+[
+ {
+  "index": 0,
+  "label": "glass bottle",
+  "gt_object_id": null,
+  "extent": [
+   0.06,
+   0.06,
+   0.2
+  ]
+ }
+]

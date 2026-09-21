@@ -1,0 +1,32 @@
+{
+ "scene": "fixture",
+ "out_dir": "fixture",
+ "n_objects": 2,
+ "n_matched": 2,
+ "n_unmatched": 0,
+ "n_gt_missed": 0,
+ "n_gt_whitelist": 2,
+ "mean_f1_20_gt_AB": 0.6,
+ "objects": [
+  {
+   "name": "obj_00",
+   "label": "mug",
+   "matched_gt_id": 1,
+   "matched_gt_label": "mug",
+   "match_iou": 1.0,
+   "f1_20_gt": 0.6,
+   "f1_40_gt": 0.8,
+   "tier": "A"
+  },
+  {
+   "name": "obj_01",
+   "label": "bottle",
+   "matched_gt_id": 2,
+   "matched_gt_label": "bottle",
+   "match_iou": 1.0,
+   "f1_20_gt": 0.6,
+   "f1_40_gt": 0.8,
+   "tier": "A"
+  }
+ ]
+}

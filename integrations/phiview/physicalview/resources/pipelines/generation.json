@@ -1,0 +1,22 @@
+{
+  "id": "generation",
+  "branch": "block/generation",
+  "default_action": "generate",
+  "description": "Generate selectable 3D object candidates",
+  "implementation": [
+    "physicalview/pipeline.py",
+    "physicalview/paper_foreign.py"
+  ],
+  "tools": [
+    "TRELLIS",
+    "ReconViaGen",
+    "SAM 3D Objects",
+    "hybrid"
+  ],
+  "commands": [
+    "uv run physicalview run generation --config configs/local.yaml --scene room --model trellis --objects 0,1 --out outputs/scenes/room_factory",
+    "uv run physicalview plan generation --config configs/local.yaml --scene room --model sam3d --objects 0"
+  ],
+  "inputs": "Discovered object crops and model weights",
+  "outputs": "Canonical Gaussian and mesh candidates. Native extensions and model-specific environments remain prerequisites."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "decoded_all_frames": true,
+  "frames": 900,
+  "size": [
+    1920,
+    1080
+  ],
+  "duration_s": 30,
+  "source_copies_byte_exact": true,
+  "full_demo_ready": false
+}

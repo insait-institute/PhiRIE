@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-09-15T00:07:23.771133+00:00",
+  "status": "BLOCKED_RETRY_LIMIT",
+  "reason": "Original smoke failed on offline MoGe cache; its single allowed infrastructure retry failed on wrapper keyword signature before inference. Signature correction is CPU-tested only.",
+  "attempts": [
+    "900911",
+    "900930"
+  ],
+  "allocated_gpu_seconds": 92,
+  "production_slots_never_started": 29,
+  "missing_input_slots": 3,
+  "additional_gpu_retry_submitted": false,
+  "authorization_boundary": "docs/GENERATOR_COMPARISON_CODEX_PROMPT.md section6: at most one infrastructure retry",
+  "logs": [
+    "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-smoke/results/gc32-sam3d-smoke/command.log",
+    "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/bundles/sam3d-smoke-retry1/results/gc32-sam3d-smoke-retry1/command.log"
+  ]
+}

@@ -1,0 +1,22 @@
+schema_version: 2
+mode: engineering_evidence_clips
+freeze_id: 20260906-aa67bf0-v2
+source_root: /group/worldcept/code/SimAny
+e3:
+  completion_audit:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
+    sha256: 68d6f8cc9d3b0a7bbd05c7243f9de0e1f1b3821f12b8cb428c20a6ba30b24ecb
+  rule: scene_id_ascending_no_quality_or_policy_outcome_v1
+e9:
+  freeze_id: 20260906-6dcb0e7-v2
+  provenance:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/paper_table_provenance.json
+    sha256: 3fdfdd63f7956a42c23a13306fbcb943238009cfafd84439cd870df601f0f841
+  submission_audit:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/submission_audit.json
+    sha256: 30cc81bdd2336d2e4f83ccc815a157f32cdc6bd82a6b18a80da69a87917da231
+publication_receipt:
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_publication/receipt.json
+  sha256: b350556e37900125469ebfe73641420316ab0cbc9a9540ed025df6fe3097f6e3
+result_figure: figures/agentic_paired_uncertainty.png
+execution_contract: /group/worldcept/code/SimAny/outputs/icra2027/20260906-aa67bf0-v2/contract/freeze_manifest.json

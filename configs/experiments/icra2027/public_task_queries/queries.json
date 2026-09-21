@@ -1,0 +1,3401 @@
+{
+  "schema_version": 1,
+  "status": "preliminary_prospective_annotation",
+  "paper_ready": false,
+  "purpose": "Public-RGB query preparation only; not labels, construction features, completed graphs, or evaluated experiments.",
+  "selection_scope": "Four query templates per predeclared scene, selected from deterministic public RGB views without reconstruction/policy/validity outcomes. Reusing the same visible object across distinct target regions is intentional.",
+  "coordinate_system": {
+    "image_size": [
+      1280,
+      720
+    ],
+    "origin": "top_left",
+    "axes": "x right, y down",
+    "boxes": "[xmin,ymin,xmax,ymax], approximate manual visible extent; not a segmentation mask",
+    "polygons": "Visible target patches in source-image coordinates; no metric depth/pose implied."
+  },
+  "source_manifest": "sources.json",
+  "scene_ids": [
+    "behavior_task0020",
+    "behavior_task0011",
+    "behavior_task0023",
+    "behavior_task0027",
+    "behavior_task0045",
+    "behavior_task0002"
+  ],
+  "conditions": [
+    "clean",
+    "mild",
+    "severe"
+  ],
+  "queries": [
+    {
+      "scene_id": "behavior_task0020",
+      "task_id": "e6_public_q01",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the red bowl immediately left of the rectangular sink into the rectangular sink basin interior.",
+      "source_state_anchor": "behavior_task0020.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "red bowl immediately left of the rectangular sink",
+          "bbox_xyxy_pixels": [
+            420,
+            356,
+            558,
+            467
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.328125,
+            0.49444444,
+            0.4359375,
+            0.64861111
+          ]
+        },
+        "receptacle": {
+          "description": "rectangular sink basin interior",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              596,
+              312
+            ],
+            [
+              646,
+              300
+            ],
+            [
+              730,
+              334
+            ],
+            [
+              670,
+              374
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            596,
+            300,
+            730,
+            374
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.465625,
+            0.41666667,
+            0.5703125,
+            0.51944444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.465625,
+              0.43333333
+            ],
+            [
+              0.5046875,
+              0.41666667
+            ],
+            [
+              0.5703125,
+              0.46388889
+            ],
+            [
+              0.5234375,
+              0.51944444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale kitchen countertop under the selected bowl",
+          "bbox_xyxy_pixels": [
+            368,
+            275,
+            870,
+            548
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2875,
+            0.38194444,
+            0.6796875,
+            0.76111111
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot in front of the sink",
+          "bbox_xyxy_pixels": [
+            603,
+            338,
+            888,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.47109375,
+            0.46944444,
+            0.69375,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Bowl capacity, physical fit, reachability, and contents are not inferred from RGB."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "153bf9e020a2a8c0cf9987928be219803454ecbde9c4957285b8be3e0ab54b72"
+    },
+    {
+      "scene_id": "behavior_task0020",
+      "task_id": "e6_public_q02",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the red bowl immediately left of the rectangular sink into the interior of the large red basin at the lower left.",
+      "source_state_anchor": "behavior_task0020.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "red bowl immediately left of the rectangular sink",
+          "bbox_xyxy_pixels": [
+            420,
+            356,
+            558,
+            467
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.328125,
+            0.49444444,
+            0.4359375,
+            0.64861111
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the large red basin at the lower left",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              211,
+              555
+            ],
+            [
+              292,
+              506
+            ],
+            [
+              348,
+              532
+            ],
+            [
+              337,
+              596
+            ],
+            [
+              244,
+              630
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            211,
+            506,
+            348,
+            630
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.16484375,
+            0.70277778,
+            0.271875,
+            0.875
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.16484375,
+              0.77083333
+            ],
+            [
+              0.228125,
+              0.70277778
+            ],
+            [
+              0.271875,
+              0.73888889
+            ],
+            [
+              0.26328125,
+              0.82777778
+            ],
+            [
+              0.190625,
+              0.875
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale kitchen countertop under the selected bowl",
+          "bbox_xyxy_pixels": [
+            368,
+            275,
+            870,
+            548
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2875,
+            0.38194444,
+            0.6796875,
+            0.76111111
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot in front of the sink",
+          "bbox_xyxy_pixels": [
+            603,
+            338,
+            888,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.47109375,
+            0.46944444,
+            0.69375,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Bowl capacity, physical fit, reachability, and contents are not inferred from RGB."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "7a435219867cea78bff93740b35a1b478475fef2761d0cf331c7496a3cc2275a"
+    },
+    {
+      "scene_id": "behavior_task0020",
+      "task_id": "e6_public_q03",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small red bowl behind and to the right of the sink into the rectangular sink basin interior.",
+      "source_state_anchor": "behavior_task0020.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "small red bowl behind and to the right of the sink",
+          "bbox_xyxy_pixels": [
+            772,
+            200,
+            852,
+            259
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.603125,
+            0.27777778,
+            0.665625,
+            0.35972222
+          ]
+        },
+        "receptacle": {
+          "description": "rectangular sink basin interior",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              596,
+              312
+            ],
+            [
+              646,
+              300
+            ],
+            [
+              730,
+              334
+            ],
+            [
+              670,
+              374
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            596,
+            300,
+            730,
+            374
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.465625,
+            0.41666667,
+            0.5703125,
+            0.51944444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.465625,
+              0.43333333
+            ],
+            [
+              0.5046875,
+              0.41666667
+            ],
+            [
+              0.5703125,
+              0.46388889
+            ],
+            [
+              0.5234375,
+              0.51944444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale kitchen countertop under the selected bowl",
+          "bbox_xyxy_pixels": [
+            368,
+            275,
+            870,
+            548
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2875,
+            0.38194444,
+            0.6796875,
+            0.76111111
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot in front of the sink",
+          "bbox_xyxy_pixels": [
+            603,
+            338,
+            888,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.47109375,
+            0.46944444,
+            0.69375,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Bowl capacity, physical fit, reachability, and contents are not inferred from RGB."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "8ce33fdf9ac9a0cc2453f44bb9e851000e34b45e593508b59ad2cfce5e8190ba"
+    },
+    {
+      "scene_id": "behavior_task0020",
+      "task_id": "e6_public_q04",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small red bowl behind and to the right of the sink into the interior of the large red basin at the lower left.",
+      "source_state_anchor": "behavior_task0020.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "small red bowl behind and to the right of the sink",
+          "bbox_xyxy_pixels": [
+            772,
+            200,
+            852,
+            259
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.603125,
+            0.27777778,
+            0.665625,
+            0.35972222
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the large red basin at the lower left",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              211,
+              555
+            ],
+            [
+              292,
+              506
+            ],
+            [
+              348,
+              532
+            ],
+            [
+              337,
+              596
+            ],
+            [
+              244,
+              630
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            211,
+            506,
+            348,
+            630
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.16484375,
+            0.70277778,
+            0.271875,
+            0.875
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.16484375,
+              0.77083333
+            ],
+            [
+              0.228125,
+              0.70277778
+            ],
+            [
+              0.271875,
+              0.73888889
+            ],
+            [
+              0.26328125,
+              0.82777778
+            ],
+            [
+              0.190625,
+              0.875
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale kitchen countertop under the selected bowl",
+          "bbox_xyxy_pixels": [
+            368,
+            275,
+            870,
+            548
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2875,
+            0.38194444,
+            0.6796875,
+            0.76111111
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot in front of the sink",
+          "bbox_xyxy_pixels": [
+            603,
+            338,
+            888,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0020.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.47109375,
+            0.46944444,
+            0.69375,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Bowl capacity, physical fit, reachability, and contents are not inferred from RGB."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "d997c71fa56144ac88e5fa73b0a94e075eeeb1072a8b4af0aeb1b04a58e8bf85"
+    },
+    {
+      "scene_id": "behavior_task0011",
+      "task_id": "e6_public_q01",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the frontmost white plate on the wooden island onto the clear far-end region of the wooden island near the sofa.",
+      "source_state_anchor": "behavior_task0011.rgb.2",
+      "roles": {
+        "manipulated_object": {
+          "description": "frontmost white plate on the wooden island",
+          "bbox_xyxy_pixels": [
+            377,
+            328,
+            476,
+            386
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.29453125,
+            0.45555556,
+            0.371875,
+            0.53611111
+          ]
+        },
+        "target": {
+          "description": "clear far-end region of the wooden island near the sofa",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              648,
+              184
+            ],
+            [
+              741,
+              170
+            ],
+            [
+              828,
+              194
+            ],
+            [
+              744,
+              223
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            648,
+            170,
+            828,
+            223
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.50625,
+            0.23611111,
+            0.646875,
+            0.30972222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.50625,
+              0.25555556
+            ],
+            [
+              0.57890625,
+              0.23611111
+            ],
+            [
+              0.646875,
+              0.26944444
+            ],
+            [
+              0.58125,
+              0.30972222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden island tabletop beneath the selected plate",
+          "bbox_xyxy_pixels": [
+            185,
+            141,
+            913,
+            560
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.14453125,
+            0.19583333,
+            0.71328125,
+            0.77777778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the island",
+          "bbox_xyxy_pixels": [
+            513,
+            272,
+            900,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.40078125,
+            0.37777778,
+            0.703125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Plate appearance identifies only this source-frame instance; no cross-frame instance identity is asserted."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "8e3853c4841372b4be8d6f021c937ed2d7ba25301e962e8b38d35a7d48620ec3"
+    },
+    {
+      "scene_id": "behavior_task0011",
+      "task_id": "e6_public_q02",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the frontmost white plate on the wooden island onto the clear near-left corner region of the wooden island.",
+      "source_state_anchor": "behavior_task0011.rgb.2",
+      "roles": {
+        "manipulated_object": {
+          "description": "frontmost white plate on the wooden island",
+          "bbox_xyxy_pixels": [
+            377,
+            328,
+            476,
+            386
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.29453125,
+            0.45555556,
+            0.371875,
+            0.53611111
+          ]
+        },
+        "target": {
+          "description": "clear near-left corner region of the wooden island",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              238,
+              372
+            ],
+            [
+              331,
+              416
+            ],
+            [
+              397,
+              402
+            ],
+            [
+              305,
+              352
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            238,
+            352,
+            397,
+            416
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.1859375,
+            0.48888889,
+            0.31015625,
+            0.57777778
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.1859375,
+              0.51666667
+            ],
+            [
+              0.25859375,
+              0.57777778
+            ],
+            [
+              0.31015625,
+              0.55833333
+            ],
+            [
+              0.23828125,
+              0.48888889
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden island tabletop beneath the selected plate",
+          "bbox_xyxy_pixels": [
+            185,
+            141,
+            913,
+            560
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.14453125,
+            0.19583333,
+            0.71328125,
+            0.77777778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the island",
+          "bbox_xyxy_pixels": [
+            513,
+            272,
+            900,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.40078125,
+            0.37777778,
+            0.703125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Plate appearance identifies only this source-frame instance; no cross-frame instance identity is asserted."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "077bdabb5fbf85bcd1476704df18813edfe4821bd31cee1db4491283f487c564"
+    },
+    {
+      "scene_id": "behavior_task0011",
+      "task_id": "e6_public_q03",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small white plate immediately behind and right of the frontmost plate onto the clear far-end region of the wooden island near the sofa.",
+      "source_state_anchor": "behavior_task0011.rgb.2",
+      "roles": {
+        "manipulated_object": {
+          "description": "small white plate immediately behind and right of the frontmost plate",
+          "bbox_xyxy_pixels": [
+            492,
+            307,
+            567,
+            353
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.384375,
+            0.42638889,
+            0.44296875,
+            0.49027778
+          ]
+        },
+        "target": {
+          "description": "clear far-end region of the wooden island near the sofa",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              648,
+              184
+            ],
+            [
+              741,
+              170
+            ],
+            [
+              828,
+              194
+            ],
+            [
+              744,
+              223
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            648,
+            170,
+            828,
+            223
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.50625,
+            0.23611111,
+            0.646875,
+            0.30972222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.50625,
+              0.25555556
+            ],
+            [
+              0.57890625,
+              0.23611111
+            ],
+            [
+              0.646875,
+              0.26944444
+            ],
+            [
+              0.58125,
+              0.30972222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden island tabletop beneath the selected plate",
+          "bbox_xyxy_pixels": [
+            185,
+            141,
+            913,
+            560
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.14453125,
+            0.19583333,
+            0.71328125,
+            0.77777778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the island",
+          "bbox_xyxy_pixels": [
+            513,
+            272,
+            900,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.40078125,
+            0.37777778,
+            0.703125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Plate appearance identifies only this source-frame instance; no cross-frame instance identity is asserted."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "d43a717cdac41dfd70a07e453d4d0b09f4f0a50dd8960add4eebc8615c2ba908"
+    },
+    {
+      "scene_id": "behavior_task0011",
+      "task_id": "e6_public_q04",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small white plate immediately behind and right of the frontmost plate onto the clear near-left corner region of the wooden island.",
+      "source_state_anchor": "behavior_task0011.rgb.2",
+      "roles": {
+        "manipulated_object": {
+          "description": "small white plate immediately behind and right of the frontmost plate",
+          "bbox_xyxy_pixels": [
+            492,
+            307,
+            567,
+            353
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.384375,
+            0.42638889,
+            0.44296875,
+            0.49027778
+          ]
+        },
+        "target": {
+          "description": "clear near-left corner region of the wooden island",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              238,
+              372
+            ],
+            [
+              331,
+              416
+            ],
+            [
+              397,
+              402
+            ],
+            [
+              305,
+              352
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            238,
+            352,
+            397,
+            416
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.1859375,
+            0.48888889,
+            0.31015625,
+            0.57777778
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.1859375,
+              0.51666667
+            ],
+            [
+              0.25859375,
+              0.57777778
+            ],
+            [
+              0.31015625,
+              0.55833333
+            ],
+            [
+              0.23828125,
+              0.48888889
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden island tabletop beneath the selected plate",
+          "bbox_xyxy_pixels": [
+            185,
+            141,
+            913,
+            560
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.14453125,
+            0.19583333,
+            0.71328125,
+            0.77777778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the island",
+          "bbox_xyxy_pixels": [
+            513,
+            272,
+            900,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0011.rgb.2",
+          "bbox_xyxy_normalized": [
+            0.40078125,
+            0.37777778,
+            0.703125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Plate appearance identifies only this source-frame instance; no cross-frame instance identity is asserted."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "5ed1f8591ce9aa7e749e6d283c87ec3a06afbdee28bc76aa2799fa45d9117c02"
+    },
+    {
+      "scene_id": "behavior_task0023",
+      "task_id": "e6_public_q01",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the light-blue rectangular book-like object in the upper cubby left of the yellow object into the empty upper cubby immediately left of the light-blue object.",
+      "source_state_anchor": "behavior_task0023.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "light-blue rectangular book-like object in the upper cubby left of the yellow object",
+          "bbox_xyxy_pixels": [
+            405,
+            390,
+            479,
+            455
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.31640625,
+            0.54166667,
+            0.37421875,
+            0.63194444
+          ]
+        },
+        "receptacle": {
+          "description": "empty upper cubby immediately left of the light-blue object",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              244,
+              467
+            ],
+            [
+              331,
+              427
+            ],
+            [
+              360,
+              463
+            ],
+            [
+              275,
+              511
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            244,
+            427,
+            360,
+            511
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.190625,
+            0.59305556,
+            0.28125,
+            0.70972222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.190625,
+              0.64861111
+            ],
+            [
+              0.25859375,
+              0.59305556
+            ],
+            [
+              0.28125,
+              0.64305556
+            ],
+            [
+              0.21484375,
+              0.70972222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "white cubby shelf holding the selected book-like object",
+          "bbox_xyxy_pixels": [
+            390,
+            334,
+            598,
+            479
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3046875,
+            0.46388889,
+            0.4671875,
+            0.66527778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the cubbies",
+          "bbox_xyxy_pixels": [
+            494,
+            323,
+            849,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3859375,
+            0.44861111,
+            0.66328125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Book-like is an appearance description, not a recovered category/instance ID. Cubby polygons mark visible interior floor patches; 3D depth/capacity remains unresolved."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "4568114cf3af11bb04bd8008fe8aaf293d2ead5b2a6a7145e12fee2b46b85cef"
+    },
+    {
+      "scene_id": "behavior_task0023",
+      "task_id": "e6_public_q02",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the light-blue rectangular book-like object in the upper cubby left of the yellow object into the empty middle cubby immediately below that empty upper cubby.",
+      "source_state_anchor": "behavior_task0023.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "light-blue rectangular book-like object in the upper cubby left of the yellow object",
+          "bbox_xyxy_pixels": [
+            405,
+            390,
+            479,
+            455
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.31640625,
+            0.54166667,
+            0.37421875,
+            0.63194444
+          ]
+        },
+        "receptacle": {
+          "description": "empty middle cubby immediately below that empty upper cubby",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              290,
+              541
+            ],
+            [
+              377,
+              499
+            ],
+            [
+              403,
+              537
+            ],
+            [
+              330,
+              581
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            290,
+            499,
+            403,
+            581
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2265625,
+            0.69305556,
+            0.31484375,
+            0.80694444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.2265625,
+              0.75138889
+            ],
+            [
+              0.29453125,
+              0.69305556
+            ],
+            [
+              0.31484375,
+              0.74583333
+            ],
+            [
+              0.2578125,
+              0.80694444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "white cubby shelf holding the selected book-like object",
+          "bbox_xyxy_pixels": [
+            390,
+            334,
+            598,
+            479
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3046875,
+            0.46388889,
+            0.4671875,
+            0.66527778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the cubbies",
+          "bbox_xyxy_pixels": [
+            494,
+            323,
+            849,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3859375,
+            0.44861111,
+            0.66328125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Book-like is an appearance description, not a recovered category/instance ID. Cubby polygons mark visible interior floor patches; 3D depth/capacity remains unresolved."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "1505c9982c5defcee59bf2551f3648bc5eb62bdf956243aaa2ec10406b4f04ef"
+    },
+    {
+      "scene_id": "behavior_task0023",
+      "task_id": "e6_public_q03",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the yellow rectangular book-like object in the adjacent upper cubby into the empty upper cubby immediately left of the light-blue object.",
+      "source_state_anchor": "behavior_task0023.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "yellow rectangular book-like object in the adjacent upper cubby",
+          "bbox_xyxy_pixels": [
+            516,
+            366,
+            572,
+            404
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.403125,
+            0.50833333,
+            0.446875,
+            0.56111111
+          ]
+        },
+        "receptacle": {
+          "description": "empty upper cubby immediately left of the light-blue object",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              244,
+              467
+            ],
+            [
+              331,
+              427
+            ],
+            [
+              360,
+              463
+            ],
+            [
+              275,
+              511
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            244,
+            427,
+            360,
+            511
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.190625,
+            0.59305556,
+            0.28125,
+            0.70972222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.190625,
+              0.64861111
+            ],
+            [
+              0.25859375,
+              0.59305556
+            ],
+            [
+              0.28125,
+              0.64305556
+            ],
+            [
+              0.21484375,
+              0.70972222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "white cubby shelf holding the selected book-like object",
+          "bbox_xyxy_pixels": [
+            390,
+            334,
+            598,
+            479
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3046875,
+            0.46388889,
+            0.4671875,
+            0.66527778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the cubbies",
+          "bbox_xyxy_pixels": [
+            494,
+            323,
+            849,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3859375,
+            0.44861111,
+            0.66328125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Book-like is an appearance description, not a recovered category/instance ID. Cubby polygons mark visible interior floor patches; 3D depth/capacity remains unresolved."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "6ffffccf26c5fcad05abaf830b4b8609b4ef3ce25919fac4f81df7a3524d6363"
+    },
+    {
+      "scene_id": "behavior_task0023",
+      "task_id": "e6_public_q04",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the yellow rectangular book-like object in the adjacent upper cubby into the empty middle cubby immediately below that empty upper cubby.",
+      "source_state_anchor": "behavior_task0023.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "yellow rectangular book-like object in the adjacent upper cubby",
+          "bbox_xyxy_pixels": [
+            516,
+            366,
+            572,
+            404
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.403125,
+            0.50833333,
+            0.446875,
+            0.56111111
+          ]
+        },
+        "receptacle": {
+          "description": "empty middle cubby immediately below that empty upper cubby",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              290,
+              541
+            ],
+            [
+              377,
+              499
+            ],
+            [
+              403,
+              537
+            ],
+            [
+              330,
+              581
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            290,
+            499,
+            403,
+            581
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.2265625,
+            0.69305556,
+            0.31484375,
+            0.80694444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.2265625,
+              0.75138889
+            ],
+            [
+              0.29453125,
+              0.69305556
+            ],
+            [
+              0.31484375,
+              0.74583333
+            ],
+            [
+              0.2578125,
+              0.80694444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "white cubby shelf holding the selected book-like object",
+          "bbox_xyxy_pixels": [
+            390,
+            334,
+            598,
+            479
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3046875,
+            0.46388889,
+            0.4671875,
+            0.66527778
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the cubbies",
+          "bbox_xyxy_pixels": [
+            494,
+            323,
+            849,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0023.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3859375,
+            0.44861111,
+            0.66328125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Book-like is an appearance description, not a recovered category/instance ID. Cubby polygons mark visible interior floor patches; 3D depth/capacity remains unresolved."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "05b208b7032ec335a314fd935c3494c5f0f4e1dd58525cd1da0c05101780780d"
+    },
+    {
+      "scene_id": "behavior_task0027",
+      "task_id": "e6_public_q01",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the blue bottle with a red top standing between the two sinks into the interior of the right-hand round sink.",
+      "source_state_anchor": "behavior_task0027.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "blue bottle with a red top standing between the two sinks",
+          "bbox_xyxy_pixels": [
+            386,
+            525,
+            450,
+            606
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3015625,
+            0.72916667,
+            0.3515625,
+            0.84166667
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the right-hand round sink",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              470,
+              430
+            ],
+            [
+              522,
+              412
+            ],
+            [
+              581,
+              439
+            ],
+            [
+              565,
+              490
+            ],
+            [
+              498,
+              508
+            ],
+            [
+              459,
+              471
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            459,
+            412,
+            581,
+            508
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.35859375,
+            0.57222222,
+            0.45390625,
+            0.70555556
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.3671875,
+              0.59722222
+            ],
+            [
+              0.4078125,
+              0.57222222
+            ],
+            [
+              0.45390625,
+              0.60972222
+            ],
+            [
+              0.44140625,
+              0.68055556
+            ],
+            [
+              0.3890625,
+              0.70555556
+            ],
+            [
+              0.35859375,
+              0.65416667
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden vanity top supporting the blue bottle",
+          "bbox_xyxy_pixels": [
+            321,
+            496,
+            492,
+            654
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.25078125,
+            0.68888889,
+            0.384375,
+            0.90833333
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot standing beside the vanity, excluding its mirror reflection",
+          "bbox_xyxy_pixels": [
+            580,
+            322,
+            868,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.453125,
+            0.44722222,
+            0.678125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Mirror reflections are excluded from referent counts. The small colored top is used only to describe appearance, never as a validity indicator."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "861389361634fc68dcef192e5013e0deeba5b85fb485ea5a83af6d6851d2ab57"
+    },
+    {
+      "scene_id": "behavior_task0027",
+      "task_id": "e6_public_q02",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the blue bottle with a red top standing between the two sinks into the interior of the left-hand round sink.",
+      "source_state_anchor": "behavior_task0027.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "blue bottle with a red top standing between the two sinks",
+          "bbox_xyxy_pixels": [
+            386,
+            525,
+            450,
+            606
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3015625,
+            0.72916667,
+            0.3515625,
+            0.84166667
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the left-hand round sink",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              113,
+              584
+            ],
+            [
+              205,
+              553
+            ],
+            [
+              281,
+              580
+            ],
+            [
+              267,
+              658
+            ],
+            [
+              163,
+              684
+            ],
+            [
+              80,
+              654
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            80,
+            553,
+            281,
+            684
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.0625,
+            0.76805556,
+            0.21953125,
+            0.95
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.08828125,
+              0.81111111
+            ],
+            [
+              0.16015625,
+              0.76805556
+            ],
+            [
+              0.21953125,
+              0.80555556
+            ],
+            [
+              0.20859375,
+              0.91388889
+            ],
+            [
+              0.12734375,
+              0.95
+            ],
+            [
+              0.0625,
+              0.90833333
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden vanity top supporting the blue bottle",
+          "bbox_xyxy_pixels": [
+            321,
+            496,
+            492,
+            654
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.25078125,
+            0.68888889,
+            0.384375,
+            0.90833333
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot standing beside the vanity, excluding its mirror reflection",
+          "bbox_xyxy_pixels": [
+            580,
+            322,
+            868,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.453125,
+            0.44722222,
+            0.678125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Mirror reflections are excluded from referent counts. The small colored top is used only to describe appearance, never as a validity indicator."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "c1534b40c7cc2e9d019edaccdb60073ffbdff2b0ba4bb2b1e5bde7572748183f"
+    },
+    {
+      "scene_id": "behavior_task0027",
+      "task_id": "e6_public_q03",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the blue bottle with a red top standing between the two sinks into the visible interior of the bathtub to the right of the vanity.",
+      "source_state_anchor": "behavior_task0027.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "blue bottle with a red top standing between the two sinks",
+          "bbox_xyxy_pixels": [
+            386,
+            525,
+            450,
+            606
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.3015625,
+            0.72916667,
+            0.3515625,
+            0.84166667
+          ]
+        },
+        "receptacle": {
+          "description": "visible interior of the bathtub to the right of the vanity",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              936,
+              480
+            ],
+            [
+              1070,
+              502
+            ],
+            [
+              1231,
+              590
+            ],
+            [
+              1216,
+              659
+            ],
+            [
+              1052,
+              601
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            936,
+            480,
+            1231,
+            659
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.73125,
+            0.66666667,
+            0.96171875,
+            0.91527778
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.73125,
+              0.66666667
+            ],
+            [
+              0.8359375,
+              0.69722222
+            ],
+            [
+              0.96171875,
+              0.81944444
+            ],
+            [
+              0.95,
+              0.91527778
+            ],
+            [
+              0.821875,
+              0.83472222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden vanity top supporting the blue bottle",
+          "bbox_xyxy_pixels": [
+            321,
+            496,
+            492,
+            654
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.25078125,
+            0.68888889,
+            0.384375,
+            0.90833333
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot standing beside the vanity, excluding its mirror reflection",
+          "bbox_xyxy_pixels": [
+            580,
+            322,
+            868,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.453125,
+            0.44722222,
+            0.678125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Mirror reflections are excluded from referent counts. The small colored top is used only to describe appearance, never as a validity indicator."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "8adaa9f9a75ffc3f25c03bc1b0cd4687ef5580388340a7d71acc5b7c34ea8b35"
+    },
+    {
+      "scene_id": "behavior_task0027",
+      "task_id": "e6_public_q04",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the pink rectangular package standing on the ledge below the mirror into the interior of the right-hand round sink.",
+      "source_state_anchor": "behavior_task0027.rgb.0",
+      "roles": {
+        "manipulated_object": {
+          "description": "pink rectangular package standing on the ledge below the mirror",
+          "bbox_xyxy_pixels": [
+            548,
+            269,
+            597,
+            329
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.428125,
+            0.37361111,
+            0.46640625,
+            0.45694444
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the right-hand round sink",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              470,
+              430
+            ],
+            [
+              522,
+              412
+            ],
+            [
+              581,
+              439
+            ],
+            [
+              565,
+              490
+            ],
+            [
+              498,
+              508
+            ],
+            [
+              459,
+              471
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            459,
+            412,
+            581,
+            508
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.35859375,
+            0.57222222,
+            0.45390625,
+            0.70555556
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.3671875,
+              0.59722222
+            ],
+            [
+              0.4078125,
+              0.57222222
+            ],
+            [
+              0.45390625,
+              0.60972222
+            ],
+            [
+              0.44140625,
+              0.68055556
+            ],
+            [
+              0.3890625,
+              0.70555556
+            ],
+            [
+              0.35859375,
+              0.65416667
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "narrow wooden ledge below the mirror supporting the pink package",
+          "bbox_xyxy_pixels": [
+            487,
+            288,
+            636,
+            364
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.38046875,
+            0.4,
+            0.496875,
+            0.50555556
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot standing beside the vanity, excluding its mirror reflection",
+          "bbox_xyxy_pixels": [
+            580,
+            322,
+            868,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0027.rgb.0",
+          "bbox_xyxy_normalized": [
+            0.453125,
+            0.44722222,
+            0.678125,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Mirror reflections are excluded from referent counts. The small colored top is used only to describe appearance, never as a validity indicator."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "2f1f3966d3d179a5cfa61c192ec54dcdfe4072befc137442340a6ff438007e68"
+    },
+    {
+      "scene_id": "behavior_task0045",
+      "task_id": "e6_public_q01",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small yellow curved object on the counter between the stove and open microwave into the visible white turntable surface inside the open microwave.",
+      "source_state_anchor": "behavior_task0045.rgb.4",
+      "roles": {
+        "manipulated_object": {
+          "description": "small yellow curved object on the counter between the stove and open microwave",
+          "bbox_xyxy_pixels": [
+            768,
+            432,
+            819,
+            478
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.6,
+            0.6,
+            0.63984375,
+            0.66388889
+          ]
+        },
+        "receptacle": {
+          "description": "visible white turntable surface inside the open microwave",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              994,
+              512
+            ],
+            [
+              1033,
+              504
+            ],
+            [
+              1061,
+              517
+            ],
+            [
+              1045,
+              543
+            ],
+            [
+              1015,
+              547
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            994,
+            504,
+            1061,
+            547
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.7765625,
+            0.7,
+            0.82890625,
+            0.75972222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.7765625,
+              0.71111111
+            ],
+            [
+              0.80703125,
+              0.7
+            ],
+            [
+              0.82890625,
+              0.71805556
+            ],
+            [
+              0.81640625,
+              0.75416667
+            ],
+            [
+              0.79296875,
+              0.75972222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale countertop beneath the yellow curved object",
+          "bbox_xyxy_pixels": [
+            715,
+            364,
+            929,
+            544
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.55859375,
+            0.50555556,
+            0.72578125,
+            0.75555556
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the stove and microwave",
+          "bbox_xyxy_pixels": [
+            426,
+            319,
+            720,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.3328125,
+            0.44305556,
+            0.5625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "The yellow item is described by appearance; no food identity is assumed. The turntable is partly occupied by a brown item; occupancy, capacity, and fit must remain construction requirements. Burner temperature, appliance state, and reachable placement area are unknown. No appliance operation is requested."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "3dcb834e79b3b83ede0feccaaa6fc0920cb7d59a4c0f68078a7bf756ab374959"
+    },
+    {
+      "scene_id": "behavior_task0045",
+      "task_id": "e6_public_q02",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small yellow curved object on the counter between the stove and open microwave onto the clear countertop corner to the left of the stovetop.",
+      "source_state_anchor": "behavior_task0045.rgb.4",
+      "roles": {
+        "manipulated_object": {
+          "description": "small yellow curved object on the counter between the stove and open microwave",
+          "bbox_xyxy_pixels": [
+            768,
+            432,
+            819,
+            478
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.6,
+            0.6,
+            0.63984375,
+            0.66388889
+          ]
+        },
+        "target": {
+          "description": "clear countertop corner to the left of the stovetop",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              326,
+              261
+            ],
+            [
+              409,
+              234
+            ],
+            [
+              521,
+              271
+            ],
+            [
+              458,
+              293
+            ],
+            [
+              391,
+              285
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            326,
+            234,
+            521,
+            293
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.2546875,
+            0.325,
+            0.40703125,
+            0.40694444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.2546875,
+              0.3625
+            ],
+            [
+              0.31953125,
+              0.325
+            ],
+            [
+              0.40703125,
+              0.37638889
+            ],
+            [
+              0.3578125,
+              0.40694444
+            ],
+            [
+              0.30546875,
+              0.39583333
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale countertop beneath the yellow curved object",
+          "bbox_xyxy_pixels": [
+            715,
+            364,
+            929,
+            544
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.55859375,
+            0.50555556,
+            0.72578125,
+            0.75555556
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the stove and microwave",
+          "bbox_xyxy_pixels": [
+            426,
+            319,
+            720,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.3328125,
+            0.44305556,
+            0.5625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "The yellow item is described by appearance; no food identity is assumed. The turntable is partly occupied by a brown item; occupancy, capacity, and fit must remain construction requirements. Burner temperature, appliance state, and reachable placement area are unknown. No appliance operation is requested."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "6825e55c6783ed3f1818435da5a645ead3dac8bad1325514ad2ae205046a26b4"
+    },
+    {
+      "scene_id": "behavior_task0045",
+      "task_id": "e6_public_q03",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small yellow curved object on the counter between the stove and open microwave onto the front-right burner region on the stovetop.",
+      "source_state_anchor": "behavior_task0045.rgb.4",
+      "roles": {
+        "manipulated_object": {
+          "description": "small yellow curved object on the counter between the stove and open microwave",
+          "bbox_xyxy_pixels": [
+            768,
+            432,
+            819,
+            478
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.6,
+            0.6,
+            0.63984375,
+            0.66388889
+          ]
+        },
+        "target": {
+          "description": "front-right burner region on the stovetop",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              653,
+              351
+            ],
+            [
+              679,
+              346
+            ],
+            [
+              707,
+              364
+            ],
+            [
+              684,
+              386
+            ],
+            [
+              656,
+              374
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            653,
+            346,
+            707,
+            386
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.51015625,
+            0.48055556,
+            0.55234375,
+            0.53611111
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.51015625,
+              0.4875
+            ],
+            [
+              0.53046875,
+              0.48055556
+            ],
+            [
+              0.55234375,
+              0.50555556
+            ],
+            [
+              0.534375,
+              0.53611111
+            ],
+            [
+              0.5125,
+              0.51944444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale countertop beneath the yellow curved object",
+          "bbox_xyxy_pixels": [
+            715,
+            364,
+            929,
+            544
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.55859375,
+            0.50555556,
+            0.72578125,
+            0.75555556
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the stove and microwave",
+          "bbox_xyxy_pixels": [
+            426,
+            319,
+            720,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.3328125,
+            0.44305556,
+            0.5625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "The yellow item is described by appearance; no food identity is assumed. The turntable is partly occupied by a brown item; occupancy, capacity, and fit must remain construction requirements. Burner temperature, appliance state, and reachable placement area are unknown. No appliance operation is requested."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "7480dae9f314e7d2c8a509c1c6cbede88434441a743e4f82f6d08a4f51ed30c0"
+    },
+    {
+      "scene_id": "behavior_task0045",
+      "task_id": "e6_public_q04",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the small yellow curved object on the counter between the stove and open microwave onto the clear rear countertop strip between the stovetop and microwave.",
+      "source_state_anchor": "behavior_task0045.rgb.4",
+      "roles": {
+        "manipulated_object": {
+          "description": "small yellow curved object on the counter between the stove and open microwave",
+          "bbox_xyxy_pixels": [
+            768,
+            432,
+            819,
+            478
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.6,
+            0.6,
+            0.63984375,
+            0.66388889
+          ]
+        },
+        "target": {
+          "description": "clear rear countertop strip between the stovetop and microwave",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              803,
+              378
+            ],
+            [
+              876,
+              401
+            ],
+            [
+              850,
+              426
+            ],
+            [
+              778,
+              401
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            778,
+            378,
+            876,
+            426
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.6078125,
+            0.525,
+            0.684375,
+            0.59166667
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.62734375,
+              0.525
+            ],
+            [
+              0.684375,
+              0.55694444
+            ],
+            [
+              0.6640625,
+              0.59166667
+            ],
+            [
+              0.6078125,
+              0.55694444
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "pale countertop beneath the yellow curved object",
+          "bbox_xyxy_pixels": [
+            715,
+            364,
+            929,
+            544
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.55859375,
+            0.50555556,
+            0.72578125,
+            0.75555556
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot facing the stove and microwave",
+          "bbox_xyxy_pixels": [
+            426,
+            319,
+            720,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0045.rgb.4",
+          "bbox_xyxy_normalized": [
+            0.3328125,
+            0.44305556,
+            0.5625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "The yellow item is described by appearance; no food identity is assumed. The turntable is partly occupied by a brown item; occupancy, capacity, and fit must remain construction requirements. Burner temperature, appliance state, and reachable placement area are unknown. No appliance operation is requested."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "b926b7c4834ffb9f6de3aa63b2c6e8b4bf0d87c6b4246f6f12caef91450f1592"
+    },
+    {
+      "scene_id": "behavior_task0002",
+      "task_id": "e6_public_q01",
+      "task_family": "place_in_receptacle",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the orange ridged object on the floor immediately left of the black bowl into the interior of the black bowl on the floor.",
+      "source_state_anchor": "behavior_task0002.rgb.1",
+      "roles": {
+        "manipulated_object": {
+          "description": "orange ridged object on the floor immediately left of the black bowl",
+          "bbox_xyxy_pixels": [
+            1007,
+            626,
+            1066,
+            683
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.78671875,
+            0.86944444,
+            0.8328125,
+            0.94861111
+          ]
+        },
+        "receptacle": {
+          "description": "interior of the black bowl on the floor",
+          "region_type": "receptacle_interior",
+          "polygon_xy_pixels": [
+            [
+              1148,
+              612
+            ],
+            [
+              1179,
+              609
+            ],
+            [
+              1208,
+              634
+            ],
+            [
+              1192,
+              663
+            ],
+            [
+              1154,
+              645
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            1148,
+            609,
+            1208,
+            663
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.896875,
+            0.84583333,
+            0.94375,
+            0.92083333
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.896875,
+              0.85
+            ],
+            [
+              0.92109375,
+              0.84583333
+            ],
+            [
+              0.94375,
+              0.88055556
+            ],
+            [
+              0.93125,
+              0.92083333
+            ],
+            [
+              0.9015625,
+              0.89583333
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden floor beneath the orange ridged object",
+          "bbox_xyxy_pixels": [
+            949,
+            595,
+            1099,
+            716
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.74140625,
+            0.82638889,
+            0.85859375,
+            0.99444444
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the console",
+          "bbox_xyxy_pixels": [
+            624,
+            273,
+            914,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.4875,
+            0.37916667,
+            0.7140625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Orange ridged object is an appearance-only referent; no hidden semantic class is assigned. Reach to the mantel and capacity of the bowl are unverified."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "925e5b13eaa7f798e4c3567f136d69982b734a09b6ba01ad50b46f9ef80a97d6"
+    },
+    {
+      "scene_id": "behavior_task0002",
+      "task_id": "e6_public_q02",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the orange ridged object on the floor immediately left of the black bowl onto the clear left-end top of the low dark console below the television.",
+      "source_state_anchor": "behavior_task0002.rgb.1",
+      "roles": {
+        "manipulated_object": {
+          "description": "orange ridged object on the floor immediately left of the black bowl",
+          "bbox_xyxy_pixels": [
+            1007,
+            626,
+            1066,
+            683
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.78671875,
+            0.86944444,
+            0.8328125,
+            0.94861111
+          ]
+        },
+        "target": {
+          "description": "clear left-end top of the low dark console below the television",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              421,
+              484
+            ],
+            [
+              492,
+              450
+            ],
+            [
+              548,
+              452
+            ],
+            [
+              475,
+              498
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            421,
+            450,
+            548,
+            498
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.32890625,
+            0.625,
+            0.428125,
+            0.69166667
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.32890625,
+              0.67222222
+            ],
+            [
+              0.384375,
+              0.625
+            ],
+            [
+              0.428125,
+              0.62777778
+            ],
+            [
+              0.37109375,
+              0.69166667
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden floor beneath the orange ridged object",
+          "bbox_xyxy_pixels": [
+            949,
+            595,
+            1099,
+            716
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.74140625,
+            0.82638889,
+            0.85859375,
+            0.99444444
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the console",
+          "bbox_xyxy_pixels": [
+            624,
+            273,
+            914,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.4875,
+            0.37916667,
+            0.7140625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Orange ridged object is an appearance-only referent; no hidden semantic class is assigned. Reach to the mantel and capacity of the bowl are unverified."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "416b4e5dcc360c71a0701bf656b577cb5120cf03f262476ce5d3eefec80d81ca"
+    },
+    {
+      "scene_id": "behavior_task0002",
+      "task_id": "e6_public_q03",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the orange ridged object on the floor immediately left of the black bowl onto the visible clear top of the pale fireplace mantel.",
+      "source_state_anchor": "behavior_task0002.rgb.1",
+      "roles": {
+        "manipulated_object": {
+          "description": "orange ridged object on the floor immediately left of the black bowl",
+          "bbox_xyxy_pixels": [
+            1007,
+            626,
+            1066,
+            683
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.78671875,
+            0.86944444,
+            0.8328125,
+            0.94861111
+          ]
+        },
+        "target": {
+          "description": "visible clear top of the pale fireplace mantel",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              46,
+              394
+            ],
+            [
+              189,
+              349
+            ],
+            [
+              249,
+              410
+            ],
+            [
+              98,
+              457
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            46,
+            349,
+            249,
+            457
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.0359375,
+            0.48472222,
+            0.19453125,
+            0.63472222
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.0359375,
+              0.54722222
+            ],
+            [
+              0.14765625,
+              0.48472222
+            ],
+            [
+              0.19453125,
+              0.56944444
+            ],
+            [
+              0.0765625,
+              0.63472222
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden floor beneath the orange ridged object",
+          "bbox_xyxy_pixels": [
+            949,
+            595,
+            1099,
+            716
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.74140625,
+            0.82638889,
+            0.85859375,
+            0.99444444
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the console",
+          "bbox_xyxy_pixels": [
+            624,
+            273,
+            914,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.4875,
+            0.37916667,
+            0.7140625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Orange ridged object is an appearance-only referent; no hidden semantic class is assigned. Reach to the mantel and capacity of the bowl are unverified."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "b2778bc179936a07883cc7e9fe78bd9d73a6d3b5dc6580ac71f3811c11335d64"
+    },
+    {
+      "scene_id": "behavior_task0002",
+      "task_id": "e6_public_q04",
+      "task_family": "place_on_surface_region",
+      "annotation_status": "annotated_public_rgb",
+      "instruction": "Move the orange ridged object on the floor immediately left of the black bowl onto the clear floor staging region between the console and dining chair.",
+      "source_state_anchor": "behavior_task0002.rgb.1",
+      "roles": {
+        "manipulated_object": {
+          "description": "orange ridged object on the floor immediately left of the black bowl",
+          "bbox_xyxy_pixels": [
+            1007,
+            626,
+            1066,
+            683
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.78671875,
+            0.86944444,
+            0.8328125,
+            0.94861111
+          ]
+        },
+        "target": {
+          "description": "clear floor staging region between the console and dining chair",
+          "region_type": "surface_region",
+          "polygon_xy_pixels": [
+            [
+              940,
+              395
+            ],
+            [
+              1010,
+              417
+            ],
+            [
+              1000,
+              482
+            ],
+            [
+              927,
+              463
+            ]
+          ],
+          "bbox_xyxy_pixels": [
+            927,
+            395,
+            1010,
+            482
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.72421875,
+            0.54861111,
+            0.7890625,
+            0.66944444
+          ],
+          "polygon_xy_normalized": [
+            [
+              0.734375,
+              0.54861111
+            ],
+            [
+              0.7890625,
+              0.57916667
+            ],
+            [
+              0.78125,
+              0.66944444
+            ],
+            [
+              0.72421875,
+              0.64305556
+            ]
+          ]
+        },
+        "source_support_candidate": {
+          "description": "wooden floor beneath the orange ridged object",
+          "bbox_xyxy_pixels": [
+            949,
+            595,
+            1099,
+            716
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.74140625,
+            0.82638889,
+            0.85859375,
+            0.99444444
+          ]
+        },
+        "robot_visual_reference": {
+          "description": "black and white robot beside the console",
+          "bbox_xyxy_pixels": [
+            624,
+            273,
+            914,
+            720
+          ],
+          "annotation_basis": "visible_public_rgb",
+          "grounding_status": "image_region_annotated_3d_unresolved",
+          "source_image_id": "behavior_task0002.rgb.1",
+          "bbox_xyxy_normalized": [
+            0.4875,
+            0.37916667,
+            0.7140625,
+            1.0
+          ]
+        }
+      },
+      "required_unresolved_roles": {
+        "robot_frame": "No metric robot pose/alignment is inferred from RGB. The visible robot box is a visual reference only.",
+        "policy_cameras": "The selected public capture image is not declared to be a policy-camera observation.",
+        "support_contact": "Source support and destination support/contact require construction evidence; apparent RGB adjacency is not a measured support relation.",
+        "swept_workspace_obstacles": "Cannot identify the complete collision-relevant obstacle set without a grounded robot/object workspace.",
+        "one_hop_visibility": "Visibility in this source image does not establish policy-camera visibility or a 3D visibility relation."
+      },
+      "missing_annotation": null,
+      "uncertainties": [
+        "Orange ridged object is an appearance-only referent; no hidden semantic class is assigned. Reach to the mantel and capacity of the bowl are unverified."
+      ],
+      "conditions": [
+        "clean",
+        "mild",
+        "severe"
+      ],
+      "query_sha256": "19761c464965691eb5b858336377182f8f5ab3f142b8206eaa27c5779dc632d2"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+schema_version: 1
+study_scope: automatic_training_only_engineering
+paper_ready: false
+output_dir: outputs/icra2027/{freeze_id}/agentic
+automatic_sources:
+  scene_id: 09c1414f1b
+  planned_jobs: 6
+  discovery_directory: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
+  discovery_hashes:
+    pilot_summary.json: 3818cffc464cd0cb76c27476185f540e499bf609d490c2addc7f3c1cd6dc4a51
+    output_hashes.json: 6f4f91d2282005ed20eec2fdf00a02f1e138b05aafff6b5d340cf3d4b2eac738
+    input_manifest.json: 7501b7deedf6a174c8064313020e014df8e7a4eb8f6e11409133527eeea0c923
+    postrun_audit.json: 509933833ccf301bf366fdd7994ad55f0c5845e2b3eaa1520fdb8372890c3e74
+  scene_sources:
+    gaussian:
+      path: /data/ScanNetppv2_gsplat/splats/09c1414f1b.ply
+      size_bytes: 839192364
+      sha256: c320546ba3481348c88fb0ab944f1cf424820f7aae9c36c7146383041266cbef
+    intrinsics:
+      path: /data/ScanNetpp/data/09c1414f1b/dslr/nerfstudio/transforms_undistorted.json
+      size_bytes: 2180517
+      sha256: d176b2ef6d845220fa50b7f3e808bd4a3a5fdaecae09c2777974b95def39a707
+    poses:
+      path: /data/ScanNetpp/data/09c1414f1b/dslr/colmap/images.txt
+      size_bytes: 692280331
+      sha256: bbc002d263e09bd6233a8474718875d3dc175fea98a41ac0fde28beb0cbf6ffb
+  initial_pools:
+    trellis:
+      path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v28/trellis_initial/proposal_pool.json
+      sha256: 07be7eb5226fb7f07b62a786224e1238cc91660c69db71ddefb48b2aff6b97b5
+    reconviagen:
+      path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v31/rvg_initial/proposal_pool.json
+      sha256: acd7068de358529ebc68003822d891d4e92f1b650810aabd81ed3221de42cea7

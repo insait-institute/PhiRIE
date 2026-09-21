@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "paper_ready": false,
+  "rvg_config": {
+    "path": "/group/worldcept/code/SimAny-wt/e3-fresh-rvg/configs/experiments/icra2027/e3_fresh_rvg.yaml",
+    "bytes": 4555,
+    "mtime_ns": 1788566624896146856,
+    "sha256": "6e0c9a35de2e34ab2a620be8058696fa5c1909ee691c4bb65305af0e0259aac5"
+  },
+  "pools": {
+    "trellis": {
+      "proposal_pool.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260904-4d0787c-v2/trellis_initial/proposal_pool.json",
+        "bytes": 8224,
+        "mtime_ns": 1788566703155032243,
+        "sha256": "f4090713c248b6ddc4d0bc5f4af7f6809d5213004b6170fa7321a2e6bc6537fa"
+      },
+      "input_manifest.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260904-4d0787c-v2/trellis_initial/input_manifest.json",
+        "bytes": 100938,
+        "mtime_ns": 1788566518827658473,
+        "sha256": "73f547e65eb5eae92258f94997a18fb533f057a333c70a02eeced050eaaa1ecf"
+      },
+      "postrun_audit.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260904-4d0787c-v2/trellis_initial/postrun_audit.json",
+        "bytes": 3142,
+        "mtime_ns": 1788566834693152856,
+        "sha256": "bf29486cfaf48948f89666a7e764f9950b0777479b7a70316e2a4d026da32caa"
+      }
+    },
+    "reconviagen": {
+      "proposal_pool.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-4d0787c-v1/rvg_initial/proposal_pool.json",
+        "bytes": 22977,
+        "mtime_ns": 1788567136538890701,
+        "sha256": "7ae06d4a115d70b07cc410410d751f0a807758c741b932538e33b828ecbb0571"
+      },
+      "input_manifest.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-4d0787c-v1/rvg_initial/input_manifest.json",
+        "bytes": 134956,
+        "mtime_ns": 1788566890552351192,
+        "sha256": "e815919f78d42c640e38298e379a2f8fdb83400a4c3e0eaebe4f05f1f2d6c66b"
+      },
+      "postrun_audit.json": {
+        "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-4d0787c-v1/rvg_initial/postrun_audit.json",
+        "bytes": 3984,
+        "mtime_ns": 1788567221327741930,
+        "sha256": "1e66dbb17640fade98d38ec49a9eed6cbb053a2228df530d356bc7bd00be1a48"
+      }
+    }
+  }
+}

@@ -1,0 +1,870 @@
+schema_version: 1
+scope: full_e2_training_preparation
+paper_ready: false
+freeze_id: 20260906-65c5a7e-v1
+full_protocol:
+  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  bytes: 10979
+  sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
+background_admission:
+  path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_materialization/background_admission.yaml
+  bytes: 1417
+  sha256: b1929887a037038c512e6b6577a5a1f15697754937018f1b12ba3c26e8f6d537
+pilot_preparation:
+  directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint
+  seal:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint/seal.json
+    bytes: 3736
+    sha256: 49b963966a6639edfaae5906613ba9913e4b7cdbe325d09a110ecad32b5a638c
+  context:
+    path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/preparation_pilot.yaml
+    bytes: 783
+    sha256: 8358258e148ed16a86abee6bb2f252d2da3444d5caa388b2ab03af65e15c6c1c
+  contract:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/contract/freeze_manifest.json
+    bytes: 14481
+    sha256: 223c4d6eb0b54930ae9fea3900dd9110973d251487389c6e29c660f9edb2aeca
+  producer_commit: 776d37c045fe63647e10b246d0c4ea512ab90a67
+scene_ids:
+- acd95847c5
+- bcd2436daf
+- c49a8c6cff
+- c50d2d1d42
+- c5439f4607
+- cc5237fd77
+- d755b3d9d8
+- e398684d27
+- f2dc06b1d2
+- f3d64c30f8
+- f9f95681fd
+contexts:
+  acd95847c5:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/acd95847c5.yaml
+    bytes: 719
+    sha256: 95c3bde757ec3b587d19e26b7a422ac7135ff70f5bc61a221ab3db78ae72b859
+  bcd2436daf:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/bcd2436daf.yaml
+    bytes: 718
+    sha256: f80fb3dd2e06bc6ce0a09bd3ccb73b2cd0db00960db37dc9b547945e4780b60b
+  c49a8c6cff:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c49a8c6cff.yaml
+    bytes: 718
+    sha256: e06e0e42269518c66f68e205134bda91c66b219dfc5dfe271d25baf42f8b8c3e
+  c50d2d1d42:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c50d2d1d42.yaml
+    bytes: 718
+    sha256: 563c1da0e3990974cf8a7fd7b6c1bcf6a595aaeb8c7bb25a42125a099935d41c
+  c5439f4607:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/c5439f4607.yaml
+    bytes: 718
+    sha256: 96cdec333e3d7e949c0fe572e6b276ec4bebf8b38932b81c3584f5745bf89acd
+  cc5237fd77:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/cc5237fd77.yaml
+    bytes: 718
+    sha256: 357bcef6e5d03b8011afbe7d53c02f6778d34ea2c4523fa6e2146e278d03afd7
+  d755b3d9d8:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/d755b3d9d8.yaml
+    bytes: 719
+    sha256: 223450a8b4d1472d393a2ac0aafec75272a023671c357bbd8125cb7f3a71a4d4
+  e398684d27:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/e398684d27.yaml
+    bytes: 718
+    sha256: d5dab2e6bbe60400e30ca3d3846e919739348ae91398564e6c779d70170d785f
+  f2dc06b1d2:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f2dc06b1d2.yaml
+    bytes: 718
+    sha256: fea522fe7831e6195f43a30007ec0ca6228d2b8a62cb04b7f63e6c82deac935c
+  f3d64c30f8:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f3d64c30f8.yaml
+    bytes: 718
+    sha256: bdbbc5a6b1995745e5e39e305153b94cdb090c77bcf4a2d6bc4a7e3a3c7b7da4
+  f9f95681fd:
+    path: /group/worldcept/code/SimAny-wt/e2-preparation-remainder/configs/experiments/icra2027/e2_full_preparation_batch2/f9f95681fd.yaml
+    bytes: 718
+    sha256: 35b89c592ae1d55011e969f3e8444e1d9f543c5fa199ff3fc7685be3e39bb9cc
+prior_batch:
+  config:
+    path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/execution.yaml
+    bytes: 21724
+    sha256: fc73cebbfbf90d449dabb4b26bbe3f2d564c706c2eb20ea643037b9b5339678b
+  contract:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+    bytes: 85041
+    sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+  integrity:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/dispatch/batch_preparation_integrity.json
+    bytes: 50609
+    sha256: cd9d099f16f269586b824aaf65e249a24ed90e8fb6a40bdf85765f4e2bd55977
+prior_preparations:
+  0d2ee665be:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/0d2ee665be/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/0d2ee665be/inpaint/seal.json
+      bytes: 1108
+      sha256: f49762d435f4e6467a3ebd65dbb3644cde667cca86e29047e2aff91429cc0cb7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/0d2ee665be.yaml
+      bytes: 718
+      sha256: 7839c3c853f936e5664235aa8f6cce74f00dc890637a73825bbb487ad46f2838
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  13c3e046d7:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/13c3e046d7/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/13c3e046d7/inpaint/seal.json
+      bytes: 330
+      sha256: 41deb74c302f8057274406a4fd78d2f1931a17462474ee52fcfd186f43bf63d6
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/13c3e046d7.yaml
+      bytes: 718
+      sha256: dceeb0084f13025c66c59c9ad917dac8dd98dadf357343e7a6fa2cca9a7d8d69
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  1ada7a0617:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/1ada7a0617/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/1ada7a0617/inpaint/seal.json
+      bytes: 3442
+      sha256: 3e989158daa939b8d3f92f1a91624cc4fce7a77bc5ddc24e3539505784e4c51f
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/1ada7a0617.yaml
+      bytes: 719
+      sha256: b6e382f845c1e50b56f20b7689506e8b558671b5d7224245ba2c5f0365e27692
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  21d970d8de:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/21d970d8de/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/21d970d8de/inpaint/seal.json
+      bytes: 1013
+      sha256: c892f24cff6228dfa7eb372b4087b8d2e8fc4896bbda226c38e8a55d0e79f48c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/21d970d8de.yaml
+      bytes: 719
+      sha256: a9d098f2a3b63848c3fab3f0ccfdf2f71682fedd74c8e3ab3eb58b57e31e2de0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  25f3b7a318:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/25f3b7a318/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/25f3b7a318/inpaint/seal.json
+      bytes: 4609
+      sha256: ac15d78505075191022506517f7300ed709e92d90fea83dbdc063f8d9bfc9782
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/25f3b7a318.yaml
+      bytes: 718
+      sha256: fd52c767684b194d350d9cf73d255c056e39d4b3a1421c6817ae249deb34a9df
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  27dd4da69e:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/27dd4da69e/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/27dd4da69e/inpaint/seal.json
+      bytes: 719
+      sha256: c19cd04045d1daad2b4e5656639c1379a24f2c848c0d6e9bf5a977bb3453c14c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/27dd4da69e.yaml
+      bytes: 718
+      sha256: 1d3505b2408fda1e0225833768440f64654a95466679db841279039002937ebc
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  286b55a2bf:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/286b55a2bf/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/286b55a2bf/inpaint/seal.json
+      bytes: 4220
+      sha256: d3ba6d1672f125f829c54afd8272a981a24d553fbbf95106b74a44cb793b357c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/286b55a2bf.yaml
+      bytes: 718
+      sha256: b3a2be1dafc16a35c25c353755ca97ba57a595153bcb1d6d6dd7e6e75508b1d4
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  31a2c91c43:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/31a2c91c43/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/31a2c91c43/inpaint/seal.json
+      bytes: 719
+      sha256: b9d3dcb901b25d8757c8f3db9355bf9552476ef2937b9b34ab70fdc2fc780c2c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/31a2c91c43.yaml
+      bytes: 717
+      sha256: d5d7d2675d52680e1d9c6f9531634420ae358b8f5fbb187e8ee8bec6d0c4ae86
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  '3864514494':
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3864514494/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3864514494/inpaint/seal.json
+      bytes: 3053
+      sha256: 2af05c6c9818c68d18f9f4387cda98f095bda79f5e0ec5f2f39e20e4f1d80b49
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3864514494.yaml
+      bytes: 720
+      sha256: 8a9af59e37447b63ef81b155176124e31a23dd09a83537facfabacf16078a29a
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  38d58a7a31:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/38d58a7a31/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/38d58a7a31/inpaint/seal.json
+      bytes: 1108
+      sha256: c2036af6b452f6fc4f7c482c5129b553dab3ef90de27670300dd2d35aaf6b127
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/38d58a7a31.yaml
+      bytes: 719
+      sha256: 2a70c88322f6b09046287503af6d964188976136828c6642b5d3bab41b28ea5b
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  3db0a1c8f3:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3db0a1c8f3/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3db0a1c8f3/inpaint/seal.json
+      bytes: 2275
+      sha256: 4c86bd5e1d8dc7688bdeaf03ccf66fe9599bbf57d715e54988283899647def99
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3db0a1c8f3.yaml
+      bytes: 718
+      sha256: 5a0c0c15ad25658f9fd74967bf120c4890ac4f79a88caec3000023dd1df2d3c0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  3e8bba0176:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3e8bba0176/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3e8bba0176/inpaint/seal.json
+      bytes: 3736
+      sha256: 4e6eed3474884516d823c69cce61bfcf772ab5ab6f14e08c14599832d9c94e28
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3e8bba0176.yaml
+      bytes: 718
+      sha256: f54a1bd4ee8691aea950d627ee57671193ba2117afe00fc4dd49974674bbf270
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  3f15a9266d:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3f15a9266d/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/3f15a9266d/inpaint/seal.json
+      bytes: 8404
+      sha256: cf11f6081fca3291f60ff4d4af5ca19180eb3f0c064f8dc0efa748411b3b3224
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3f15a9266d.yaml
+      bytes: 719
+      sha256: 4d740b7671c55a1b9f2410df27d8dca80bcefbc937da6cd9243a29217f71a970
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  40aec5fffa:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/40aec5fffa/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/40aec5fffa/inpaint/seal.json
+      bytes: 1791
+      sha256: 4f8e1bd099abd37a1f4a08e508c5f3156f60232aebedc9d37469eadca9794ccd
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/40aec5fffa.yaml
+      bytes: 718
+      sha256: 4c539a835f0d1826abe27ee524fd718cb63fabdfcf95056426afeae5f04460e7
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  45b0dac5e3:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/45b0dac5e3/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/45b0dac5e3/inpaint/seal.json
+      bytes: 1497
+      sha256: 7ce0b84319ad91390f497f46cc5b9030ce55784851e8bc9569716f14a06f0a13
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/45b0dac5e3.yaml
+      bytes: 718
+      sha256: 6e04ae3676993bf9e11696884e2f765dd5a248dc2723cc22b633cbb294972376
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  5748ce6f01:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5748ce6f01/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5748ce6f01/inpaint/seal.json
+      bytes: 1108
+      sha256: 6c55b256c1e2cec3c5b53a8422c130a966c4e589575427fffc5e58e4c1ecc545
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5748ce6f01.yaml
+      bytes: 719
+      sha256: 880dcdc56f0605288dedd9f4060e1913e49d2e3b6ce400df96ae71f02e40c08a
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  578511c8a9:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/578511c8a9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/578511c8a9/inpaint/seal.json
+      bytes: 1108
+      sha256: 20f76d7f50c8ed70b1ead9a8b512c6ac2aca0be1cc435566d8f59e391eee6844
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/578511c8a9.yaml
+      bytes: 718
+      sha256: 21ba8ffc09f825533cb5dba694670ba5ff781a8853fcc7fa06e1fbd6a61a9afd
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  '5942004064':
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5942004064/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5942004064/inpaint/seal.json
+      bytes: 4609
+      sha256: 807d368416cb661288bfb93d366c6ad03173c52de34d7503b675a7c4e7d1a477
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5942004064.yaml
+      bytes: 720
+      sha256: c7e11503cf07715299b638c8190ef61982f06f89b232d819b0db89a117cf5ecb
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  5eb31827b7:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5eb31827b7/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5eb31827b7/inpaint/seal.json
+      bytes: 1108
+      sha256: f14dcbb0edcf2c46d423d0bf138b26b3ff55d24332a029e3c6fad60507858451
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5eb31827b7.yaml
+      bytes: 718
+      sha256: e5aa200cdeeee23edf252b9469cb3f8419474849407d7a4a66e02defcb8e87d0
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  5ee7c22ba0:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5ee7c22ba0/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5ee7c22ba0/inpaint/seal.json
+      bytes: 2664
+      sha256: ef5ba0077e7f05ce9e26c433bf8b918aae9e410acfaad9514f106492a701e3e2
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5ee7c22ba0.yaml
+      bytes: 718
+      sha256: 15a42c9ec797b16d6c7d5edfff4240f82b8a89380fd1e80e94fbe9565fe488a3
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  5f99900f09:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5f99900f09/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/5f99900f09/inpaint/seal.json
+      bytes: 6563
+      sha256: cda02c8a5927e5d171d6e6a92407b7eb3c5627ec5723e5be106b092417f5f1d0
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5f99900f09.yaml
+      bytes: 718
+      sha256: 5b3c82efbac490486d4ae5bd0fc83e624b55f7fa0c573714de70294f9644b76c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  6115eddb86:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/6115eddb86/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/6115eddb86/inpaint/seal.json
+      bytes: 3831
+      sha256: 01062368015222664a3f759cd7c1c49f29b1bf92db13e444e3fb989ff4889d11
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/6115eddb86.yaml
+      bytes: 718
+      sha256: f3d7ad413445d8d5a8ed221c85e42c11d223f13e0a8880ca553d01af40b197b6
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  7831862f02:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7831862f02/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7831862f02/inpaint/seal.json
+      bytes: 2664
+      sha256: b6f2ae8df61539cacf57e2283052d9eb3aa52be17ffcee1bbc29c3b74a460a7a
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7831862f02.yaml
+      bytes: 718
+      sha256: f279e58a6e909457dcdbe99e0bbfb670d7d6e30d8dee94a2d6e696ecde742915
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  7b6477cb95:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7b6477cb95/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7b6477cb95/inpaint/seal.json
+      bytes: 3736
+      sha256: 5ff3dac76c90b97086bd09fd0af275c23aad1edae0e0113b91b49d1009017c94
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7b6477cb95.yaml
+      bytes: 718
+      sha256: a00ea02c6d5a3f13b1d03276c99515f202aea78b0c1157cd3b01547b5ed060a8
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  7bc286c1b6:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/7bc286c1b6/inpaint/seal.json
+      bytes: 2664
+      sha256: 615f77162a898590c8fc92d509a32885239d7b599d40e425c72a3f86e7d5f593
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7bc286c1b6.yaml
+      bytes: 718
+      sha256: d5e705fd7a52430d559f57becc13cfe6d7766f7e2c1ef01e16621f7fd6fde7f1
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  825d228aec:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/825d228aec/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/825d228aec/inpaint/seal.json
+      bytes: 1497
+      sha256: db5f3c49b8bade2f73c84c60253ba5b33aa89429aa9f2f98ec08a0fa0e097ff7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/825d228aec.yaml
+      bytes: 718
+      sha256: c0e8afb460d75f1081c977730493574fd4f65fc169061ed3b8d2ba5a1ed41104
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  9071e139d9:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/9071e139d9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/9071e139d9/inpaint/seal.json
+      bytes: 24647
+      sha256: 79ea26d390833c635db642fce242027f4d1ee73d850efc602eab47ba8bf05118
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/9071e139d9.yaml
+      bytes: 719
+      sha256: 187cb72f571762b0982fe64976eeaf32dfd5da2bdc868406a3cb1bb2d2241ef6
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  99fa5c25e1:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/99fa5c25e1/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/99fa5c25e1/inpaint/seal.json
+      bytes: 2275
+      sha256: 02c9ce2d04c3f0d034fa872b8896c13b405cb2d6bb08275e2b457c3c11c2c9df
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/99fa5c25e1.yaml
+      bytes: 718
+      sha256: 5d3dbfbf4583e56473b065b71ab8a629f65d34a08f2904028ef64e8efa774d42
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  a24f64f7fb:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a24f64f7fb/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a24f64f7fb/inpaint/seal.json
+      bytes: 1886
+      sha256: eeb16134cec7aedebbe45833a05e4b4591418d94562532e6497f309de0bfd894
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a24f64f7fb.yaml
+      bytes: 718
+      sha256: 6638a858472a17db7d9be0eda948a6207304ee60675a442e2a3d1d28bb77999c
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  a8bf42d646:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a8bf42d646/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a8bf42d646/inpaint/seal.json
+      bytes: 330
+      sha256: fe1e4e8df861c6d009d6ae1b9670c067cc1db0c7e87ba9e2a700b176d505cbd3
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a8bf42d646.yaml
+      bytes: 718
+      sha256: 6be324941b08e0c5d8766231b2f0428e7cf056ce49968ca857ee2fe8dcbd0439
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  a980334473:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a980334473/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/a980334473/inpaint/seal.json
+      bytes: 4220
+      sha256: d23af746c720d5077e3a089415ce8b44439f9344f75ad522f5706f542833934c
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a980334473.yaml
+      bytes: 718
+      sha256: b461ac6709eccb92b623b0b69bb871f932cea298a86bbb3ebf5256fd81cfecb8
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  ac48a9b736:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/ac48a9b736/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/ac48a9b736/inpaint/seal.json
+      bytes: 330
+      sha256: f236e28d91fde2b74810bee51003565cfda4db0c9443a732607044a7e34694d7
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/ac48a9b736.yaml
+      bytes: 718
+      sha256: 418bd8fc82a375c771c509e2699136fc243a9e549fd7d39e6a5973c25338f021
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  b0a08200c9:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/b0a08200c9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/b0a08200c9/inpaint/seal.json
+      bytes: 3831
+      sha256: a6ac39c33c629a4136d9f8a7e32c6b7d00fec8ce5311609a5ecdb5f890d0deb9
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/b0a08200c9.yaml
+      bytes: 718
+      sha256: 38c12944339f70cb4dd358b1be068908cbc4f4cc92e87acdf9f7c2d76aed4d62
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  bde1e479ad:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/bde1e479ad/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/bde1e479ad/inpaint/seal.json
+      bytes: 1497
+      sha256: 7e7c8e3208d773b061e0e9db287defe695e7025dcabb8dcd0c4d2bc445b719e9
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/bde1e479ad.yaml
+      bytes: 719
+      sha256: 80260f1bb62e6ac1e1b28a5945b6f84d969640c7b3ef0b2b9a123eed104674a5
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  c4c04e6d6c:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/c4c04e6d6c/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/c4c04e6d6c/inpaint/seal.json
+      bytes: 1108
+      sha256: 54d416792c675761e12461bf826891fad64b42b7bb21fde183219a6b86af8045
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/c4c04e6d6c.yaml
+      bytes: 719
+      sha256: ad9b574315aa800e199a2ea3ca88d6d34910766bf70b51bcfeeb185746791918
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  e7af285f7d:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/e7af285f7d/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/e7af285f7d/inpaint/seal.json
+      bytes: 1497
+      sha256: fde53fcc4465f875d4ecf8fce28790653da33da9506133b14383f013ab4b4187
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/e7af285f7d.yaml
+      bytes: 718
+      sha256: 2b83075bc72bc00884ee56481f8d14876b87a2cbb18e3476898ab8ee8b2708cb
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  f3685d06a9:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/f3685d06a9/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/f3685d06a9/inpaint/seal.json
+      bytes: 330
+      sha256: cb8b65d0108fc5d7de007b81dba816fd20e15adb3c6865b3c5582587a292a641
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/f3685d06a9.yaml
+      bytes: 717
+      sha256: 7eb23340e734f7bc9f6bd29855587b3fc254507990f6a3bb8beddd302bfba5a1
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+  fb5a96b1a2:
+    directory: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/fb5a96b1a2/inpaint
+    seal:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/fidelity/removal/fb5a96b1a2/inpaint/seal.json
+      bytes: 6269
+      sha256: 4f627e0728e4c3429697f538da74386cc1de96f7e51ff62c907716b92c6843eb
+    context:
+      path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/fb5a96b1a2.yaml
+      bytes: 718
+      sha256: e71ffeb452d634319d5fb3b597a425a13bf41789fab6eaa99cd582ff4b3ee6ba
+    contract:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-e7c60da-v2/contract/freeze_manifest.json
+      bytes: 85041
+      sha256: 015a0467f484b114c83d53ec5d0d4776135cdf4af3d160f3b022308e4ee87f9e
+    producer_commit: 5d294c87650bb86dc94fd8bd57cedc67f8586ab5
+unavailable_factory_scenes: []
+all_planned_scenes: 50
+all_planned_objects: 1871
+all_planned_test_views: 400
+batch_rule: all_currently_available_factories_before_preparation_outcomes
+availability_snapshot:
+  0d2ee665be:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/0d2ee665be/materialized/A4/materialization_manifest.json
+    bytes: 28793
+    sha256: 140e09330c3945c6366c02820bd4a01673fae868eaac1dff3f8c960dddfdcd97
+  13c3e046d7:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/13c3e046d7/A4/materialization_manifest.json
+    bytes: 5078
+    sha256: 537d603c2ee11f6ab01be0659067abfb99fb3b2bd1303fde9b96a8715ebf3b0e
+  1ada7a0617:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/1ada7a0617/A4/materialization_manifest.json
+    bytes: 35332
+    sha256: 270f2a4d0aa7aca134a7bb1588c6393d93c42a8cee5ecf8aa9ab6ab94063b131
+  21d970d8de:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/21d970d8de/A4/materialization_manifest.json
+    bytes: 23676
+    sha256: 4cf0cdfd6d042d945e8dbe2931cad3abb8a1f972bd93daee2b0c86802fda358f
+  25f3b7a318:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/25f3b7a318/materialized/A4/materialization_manifest.json
+    bytes: 59284
+    sha256: 7c5ef019b5eb68989ac421fb5e36b6864f70bfa277e8bd8d9b6b0646d162815f
+  27dd4da69e:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/27dd4da69e/materialized/A4/materialization_manifest.json
+    bytes: 11036
+    sha256: 3eab59e70fc3ae27e424f4dbea54dbc007fb2511af8f037feb46667bda6fc3f2
+  286b55a2bf:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/286b55a2bf/materialized/A4/materialization_manifest.json
+    bytes: 45208
+    sha256: 77345e9c5fe770dce8688a7492920d3a006565044ed9dd9ea0ddf495bfcfcf93
+  31a2c91c43:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/31a2c91c43/materialized/A4/materialization_manifest.json
+    bytes: 8097
+    sha256: cf813ce4c2e8aaa8b45bd8e8186d797f6f5b3625fd9556e9503a86ff159ec50b
+  '3864514494':
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3864514494/materialized/A4/materialization_manifest.json
+    bytes: 31673
+    sha256: 03c0e5ca8a599872e6727548d747f99adce6ecc182a5354b4c5d7b6dd05bde0d
+  38d58a7a31:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/38d58a7a31/A4/materialization_manifest.json
+    bytes: 18529
+    sha256: 0c1297adf905e87fd0747246198813f5f2cd7fcf9124a49bc0dbda6da3ef7784
+  3db0a1c8f3:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3db0a1c8f3/materialized/A4/materialization_manifest.json
+    bytes: 52195
+    sha256: c0250316e963b8587e8ac38430555f09adc97bef848762fb7156d25a00ab4d42
+  3e8bba0176:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3e8bba0176/materialized/A4/materialization_manifest.json
+    bytes: 56137
+    sha256: cdc077a3c13b339318bdea2564483a671bf65e6a10f0abd19cb4d341e16d8e25
+  3f15a9266d:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3f15a9266d/materialized/A4/materialization_manifest.json
+    bytes: 117375
+    sha256: 2574a9b8744b7beb23fe52995015cb379545903e0ca3b296500c87641a316fad
+  40aec5fffa:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/40aec5fffa/materialized/A4/materialization_manifest.json
+    bytes: 18274
+    sha256: 77acce1cc526d2ea4923ce58e8a9aeb41a7e84534e5916b048a6951d372a02f9
+  45b0dac5e3:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/45b0dac5e3/materialized/A4/materialization_manifest.json
+    bytes: 15814
+    sha256: bb12bc81e8b349637154606711afb562bf0e0897ece15a3561f58a2fe4518ccc
+  5748ce6f01:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/5748ce6f01/A4/materialization_manifest.json
+    bytes: 20001
+    sha256: 971c072061c69b3cc3aaf5e02ccfb287a7e5fb82aa261baf62142e0719eee8ea
+  578511c8a9:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/578511c8a9/materialized/A4/materialization_manifest.json
+    bytes: 15554
+    sha256: bb65789b6fc86d8b467f802495df3d824538b8ea65f773225f7428790bed28ac
+  '5942004064':
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5942004064/materialized/A4/materialization_manifest.json
+    bytes: 57077
+    sha256: 094e3f5e095a9a73deb13d118bdba62a14c486592562be8c9785d247fb1fcf7b
+  5eb31827b7:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5eb31827b7/materialized/A4/materialization_manifest.json
+    bytes: 18649
+    sha256: 8cb7cf6523005ffbbcbf3f433fe5ed9f230892237be16f71219adaf67241d89f
+  5ee7c22ba0:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5ee7c22ba0/materialized/A4/materialization_manifest.json
+    bytes: 47584
+    sha256: b920f35fc53527f189936a65a67e2fa714bb2cd29f5a50ea6474a85165f5dc23
+  5f99900f09:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5f99900f09/materialized/A4/materialization_manifest.json
+    bytes: 90786
+    sha256: 42b6df8345cff520a0cf63b0b0e2712864c39f9d437ca3679e6c2b5f7e97ba0f
+  6115eddb86:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/6115eddb86/materialized/A4/materialization_manifest.json
+    bytes: 34386
+    sha256: 313855f1006a8c438ceba39cc2b31006519ab3e1b0bf2e3ab3f711b91194ad85
+  7831862f02:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7831862f02/materialized/A4/materialization_manifest.json
+    bytes: 39649
+    sha256: 006871bbe95283b182cb3e3285206449f311bb86e48df2138489604ecf3bff84
+  7b6477cb95:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7b6477cb95/materialized/A4/materialization_manifest.json
+    bytes: 41434
+    sha256: de198d7681e64f4aadd89118dcd320c876ffe3b8fdddc7c94c42ecd1ea924336
+  7bc286c1b6:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7bc286c1b6/materialized/A4/materialization_manifest.json
+    bytes: 22740
+    sha256: 9b277e5d755e5d79517ee71e0715e541feb29ad8fd48f88f35fb6ad0193f620d
+  825d228aec:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/825d228aec/materialized/A4/materialization_manifest.json
+    bytes: 22281
+    sha256: d63c194dc4a14aa35606419535ac9bd47b2adef7fd51e40ad46adcfa60c917ff
+  9071e139d9:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/9071e139d9/materialized/A4/materialization_manifest.json
+    bytes: 257465
+    sha256: 498923a1d6b6b173f9eb30abec7cf8c13db25a72127e5064841d31239ab94f6a
+  99fa5c25e1:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/99fa5c25e1/materialized/A4/materialization_manifest.json
+    bytes: 38655
+    sha256: 6e5985d096ff1aa7982c42d9937fefd9298739b3871e7f542f224a69df081ec8
+  a24f64f7fb:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a24f64f7fb/materialized/A4/materialization_manifest.json
+    bytes: 21956
+    sha256: 30784e4b38719ab8c6dcc1041bf7049e7cc85e4ebccf44fbba42db5c4d5902e6
+  a8bf42d646:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/a8bf42d646/A4/materialization_manifest.json
+    bytes: 5817
+    sha256: f6308679f35b84d4e418da39829c862ac457ee03bfa9bd258d9f2d420d462c6f
+  a980334473:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a980334473/materialized/A4/materialization_manifest.json
+    bytes: 36250
+    sha256: 44c9f0c50f989bda6df6b4cf2ce166950b20fd6fba31319ed93271e3894cb128
+  ac48a9b736:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/ac48a9b736/A4/materialization_manifest.json
+    bytes: 5078
+    sha256: e8f45c81684a4ca34ad559008cd17f2eb91aa361faee73485cbb2961810b8590
+  acd95847c5:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/acd95847c5/materialized/A4/materialization_manifest.json
+    bytes: 105567
+    sha256: 4f4c977c1e2fe972275f6619fdac9afb36b60357ae8448e5691e4e7b5a0bb6f3
+  b0a08200c9:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/b0a08200c9/materialized/A4/materialization_manifest.json
+    bytes: 34829
+    sha256: b0c31256ce615065408ad37b0ec7260e2a7fa4291c481ee339bc2b5422c99019
+  bcd2436daf:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/bcd2436daf/materialized/A4/materialization_manifest.json
+    bytes: 14824
+    sha256: c2f01a7b0be58590817d82a3140b40d2f3a006efc566cc9eff88a2dc96f124d4
+  bde1e479ad:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/bde1e479ad/A4/materialization_manifest.json
+    bytes: 31133
+    sha256: 78f4870e11c34a079af1b861aa94b82001eaf90333ce836a8ea6d41d4eaaa11b
+  c49a8c6cff:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/c49a8c6cff/materialized/A4/materialization_manifest.json
+    bytes: 54040
+    sha256: 309ddc9fab60524e79830da8b6815eed11fa0c63c24c0c2d71262b3fc49eea28
+  c4c04e6d6c:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/c4c04e6d6c/A4/materialization_manifest.json
+    bytes: 26032
+    sha256: 85a819b6491995cf6e1813d001829002b1f4bc87e8e72d141ce1439c56811198
+  c50d2d1d42:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/c50d2d1d42/materialized/A4/materialization_manifest.json
+    bytes: 47417
+    sha256: 4219bff36f6bba5e5a09c4ccc2f5fe99b3333b79a24b3411963afda4f1206cad
+  c5439f4607:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/c5439f4607/materialized/A4/materialization_manifest.json
+    bytes: 45262
+    sha256: 755e61cd97f94c4587f9ab2d1fc16535fd19866cdfffc12c7be8dbff1ca5caba
+  cc5237fd77:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/cc5237fd77/materialized/A4/materialization_manifest.json
+    bytes: 96996
+    sha256: 2f8546c18e534b251085dd7ac542d4b35cacfa9a90510f0335452d7f5e7b8c21
+  d755b3d9d8:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/d755b3d9d8/materialized/A4/materialization_manifest.json
+    bytes: 103154
+    sha256: 78eb1ee0ebf91df48f201a3664e9079099f01a2eeabcea456fbc1ca29d18f924
+  e398684d27:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/e398684d27/materialized/A4/materialization_manifest.json
+    bytes: 40970
+    sha256: 01d2afb0b2b971be8a163c1c88fb14a0726ede4cc7af3f9b88f37ada8ea50e6b
+  e7af285f7d:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/e7af285f7d/materialized/A4/materialization_manifest.json
+    bytes: 29779
+    sha256: ab09ec11091ae92db74eacb633afc06f081f77a583852a0d984c8471ec35e4ed
+  f2dc06b1d2:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f2dc06b1d2/materialized/A4/materialization_manifest.json
+    bytes: 23118
+    sha256: 6daf01fc635b07d9f8c4230a832a515203eeaf99c3a1621cefba640edab227ec
+  f3685d06a9:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f3685d06a9/materialized/A4/materialization_manifest.json
+    bytes: 5046
+    sha256: 0824fa1be48babe5b24d740e6a857748346f2c4be5b53cbd840cea01bbc40807
+  f3d64c30f8:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f3d64c30f8/materialized/A4/materialization_manifest.json
+    bytes: 38814
+    sha256: 50664d0791b161950cfe9251f1d42459a74321408a621416bd25dc1d8517925d
+  f9f95681fd:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f9f95681fd/materialized/A4/materialization_manifest.json
+    bytes: 33563
+    sha256: 590b9b78f992d545b0e967e1131cf33fea271465d3c47cb155eb6ef1937d31f8
+  fb5a96b1a2:
+    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/fb5a96b1a2/materialized/A4/materialization_manifest.json
+    bytes: 95697
+    sha256: 3b2fa240814deee768586bbbe29f099d97ca1660a65ff8fc45a6033f32d9f69a

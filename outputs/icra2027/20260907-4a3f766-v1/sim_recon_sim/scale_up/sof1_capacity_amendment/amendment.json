@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "scontrol",
+    "update",
+    "JobId=840157",
+    "NodeList=",
+    "Features=zone-sof1"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

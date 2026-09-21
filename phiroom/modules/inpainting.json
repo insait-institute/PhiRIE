@@ -1,0 +1,52 @@
+{
+  "id": "inpainting",
+  "branch": "module/inpainting-v2",
+  "description": "Public-contract object removal and scene completion",
+  "inputs": [
+    "public context JSON; contract manifest; explicit removal selection"
+  ],
+  "outputs": [
+    "removal masks; completed views; clean background Gaussian scene"
+  ],
+  "tools": [
+    "SAM3",
+    "Qwen",
+    "gsplat"
+  ],
+  "actions": {
+    "prepare": {
+      "target": "agents.edit.inpaint_prepare",
+      "runtime": "main",
+      "gpu": false,
+      "args": []
+    },
+    "masks": {
+      "target": "agents.edit.inpaint_masks",
+      "runtime": "sam3",
+      "gpu": true,
+      "args": []
+    },
+    "views": {
+      "target": "agents.edit.inpaint_qwen",
+      "runtime": "qwen",
+      "gpu": true,
+      "args": []
+    },
+    "fill": {
+      "target": "agents.edit.inpaint_fill",
+      "runtime": "gsplat",
+      "gpu": true,
+      "args": []
+    },
+    "interactive": {
+      "kind": "phiview",
+      "target": "physicalview.cli",
+      "runtime": "phiview",
+      "gpu": true,
+      "args": [
+        "run",
+        "inpainting"
+      ]
+    }
+  }
+}

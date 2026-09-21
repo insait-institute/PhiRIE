@@ -1,0 +1,65 @@
+schema_version: 1
+mode: smoke
+freeze_id: 20260906-a61a9ba-v1
+code_commit: auto
+git_dirty: false
+created_utc: auto
+paper_repository: /group/worldcept/code/SimAnyRoom
+paper_commit_before_update: auto
+input_roots:
+- id: paper_current_engineering_draft
+  path: configs/experiments/icra2027/paper_current_engineering_draft.yaml
+  kind: experiment_config
+  required: true
+- id: construction_source
+  path: /group/worldcept/code/SimAny/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
+  kind: metadata
+  required: true
+- id: fidelity_source
+  path: /group/worldcept/code/SimAny-wt/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
+  kind: metadata
+  required: true
+- id: fidelity_completion_receipt
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
+  kind: metadata
+  required: true
+- id: agentic_source
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/agentic_ablation.json
+  kind: metadata
+  required: true
+- id: agentic_completion_audit
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/independent_evaluation_completion_audit.json
+  kind: metadata
+  required: true
+- id: trellis2_geometry_source
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
+  kind: metadata
+  required: true
+- id: trellis2_geometry_completion_audit
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
+  kind: metadata
+  required: true
+- id: e4_planning_source
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/planned_coverage/handoff.json
+  kind: metadata
+  required: true
+- id: e4_planning_completion_audit
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/independent_qa.json
+  kind: metadata
+  required: true
+- id: e4_planning_publication_receipt
+  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/publication_receipt.json
+  kind: metadata
+  required: true
+checkpoint_roots: []
+hardware:
+  accelerator: cpu
+  gpu_required: false
+  purpose: CPU-only current-draft formatting with source-bound mesh/applicability engineering evidence;
+    no scientific source promotion
+construction_config: configs/experiments/icra2027/construction_regimes.yaml
+fidelity_manifest: configs/experiments/icra2027/fidelity_manifest.json
+harness_config: configs/experiments/icra2027/harness.yaml
+audit_config: configs/experiments/icra2027/audit.yaml
+harmony_manifest: configs/experiments/icra2027/harmony_visual_manifest.json
+real_world_config: configs/experiments/icra2027/real_world.yaml

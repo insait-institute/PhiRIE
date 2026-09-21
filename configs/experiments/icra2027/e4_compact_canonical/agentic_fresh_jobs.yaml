@@ -1,0 +1,138 @@
+schema_version: 1
+study_scope: automatic_training_only_engineering
+paper_ready: false
+output_dir: outputs/icra2027/{freeze_id}/agentic
+population:
+  scene_roster_config: /group/worldcept/code/SimAny-wt/e4-compact-canonical/configs/experiments/icra2027/e4_compact_canonical/protocol.yaml
+  scene_roster_config_file_sha256: cb43b5e1f501fe013b09b68d74c5047e50bca4d64404fb65f4142f6f2cb84e43
+  scene_roster_sha256: 3f079f4d21d9c6eb512f79d6cd44b06c630719c5854a0f764894a155a0cb083b
+  planned_scenes: 2
+  planned_jobs_per_policy: 17
+  planned_policy_object_rows: 85
+automatic_sources:
+- scene_id: 27dd4da69e
+  planned_jobs: 7
+  discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/27dd4da69e
+  discovery_hashes:
+    all_jobs_manifest.json: bf08f6f304b486172f4a19e25b8de8cf540f3904da9f084d44654c6f7abf93d1
+    input_manifest.json: 949e1d0e75316726d41b3212ee6d0b96f092e3518c817a5cd507c47272dd3b25
+    output_hashes.json: 0b051ea1c65f10a9f6f33db4222ce5e974d9f66533c5c21d5e2814ae362cb5a3
+    pilot_summary.json: 12be7c09f37896b354e399803e0af8aa5316ad1f33e922e9a84ae37b26fe155c
+    postrun_audit.json: 4cbeb7348043abc2c887574d8a1c891ae1e3444b97ed741f41c99f9623f9b323
+  initial_pools:
+    trellis:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/trellis_initial/27dd4da69e/proposal_pool.json
+      sha256: afd21b43eed09243a63a629b5893e53ccfe8c2ccb17b468a47c71fde6853a5cd
+      producer_provenance:
+        freeze_id: 20260905-02b54da-v2
+        source_commit: 0dbdee3391a799bf8b56b1d3d71f8a11db39f146
+        config_sha256: 475ce0ca05764ea6f248efca1db4161cdb949beaf27e71773ab5ba9b6e3ad055
+        contract_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/contract/freeze_manifest.json
+        contract_file_sha256: 88f810a6b24940181ea3b9012a97af1f5947177cefbd824f5740c66a2462a61e
+        contract_sha256: 2d11affbafb4b7308eda54de5a72ccd34339931810376481c69b8e229c729510
+        input_manifest_sha256: 342479202509a80a3bf967bedfcef231fa274c18a9960753303aee12a4552d7b
+        proposal_records_sha256: b3b990a05c32a9a55f816fdfcdd27c5207adefdccc2ca70bab6a1b8b09ce2219
+        completion_audit_kind: postrun
+        completion_audit_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/trellis_initial/27dd4da69e/postrun_audit.json
+        completion_audit_sha256: 148737c733cb3b8b7f586986cf29f8897afe09438e8da0cf6d768ce540ec3b3f
+        postrun_audit_sha256: 148737c733cb3b8b7f586986cf29f8897afe09438e8da0cf6d768ce540ec3b3f
+    reconviagen:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/rvg_initial/27dd4da69e/proposal_pool.json
+      sha256: 371105dd623f97cf974d767500a169eb8f79a6317c4560572d7c9c0087e21050
+      producer_provenance:
+        freeze_id: 20260905-d1e8e21-v1
+        source_commit: 3ff95f4ec7dee0a46d8259c8fabbd16b1704bfcf
+        config_sha256: d9bf49ef9827c42a64fcae2a8d477a53ef8f36b31e146a14d4e35b97f0879aa3
+        contract_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/contract/freeze_manifest.json
+        contract_file_sha256: 336ec2afe232aaccf4a713abcb33a39463703bd65a3a3ae5d91468ed57ad8f61
+        contract_sha256: cf479faec22013e0eadbbaa2113711930acdd4f273e3897dd48ff6488d90a709
+        input_manifest_sha256: 33afcdfb870b87c64263354ca415685be14ec36e89e04cdad6200852f71c48d0
+        proposal_records_sha256: 94fd3afdf275bf00d4c0c849affa5014acb3aba1db7a60f25c64a100005a28b8
+        completion_audit_kind: postrun
+        completion_audit_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/rvg_initial/27dd4da69e/postrun_audit.json
+        completion_audit_sha256: cd1fbd09f7d52a28327b0e8a4924bd1b0d552cf6e78aa859f81cc943919f1d6d
+        postrun_audit_sha256: cd1fbd09f7d52a28327b0e8a4924bd1b0d552cf6e78aa859f81cc943919f1d6d
+  scene_sources:
+    gaussian:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-9ef4ab1-v1/gaussian_train_only/27dd4da69e/train-full/scene.ply
+      size_bytes: 58898803
+      sha256: 234df91cfbb0077ec4ff37fd076d1c97be746a93e479f92ed51bda55a67307b2
+    intrinsics:
+      path: /data/ScanNetpp/data/27dd4da69e/dslr/nerfstudio/transforms_undistorted.json
+      size_bytes: 220332
+      sha256: a594ce08cf3ca8102301a2e9979ee9969b727b34817a43ea5d536001bc6ecda1
+    poses:
+      path: /data/ScanNetpp/data/27dd4da69e/dslr/colmap/images.txt
+      size_bytes: 28306074
+      sha256: 59f32c27a3177918441a787b89fbe48dbb181b2a5c07a6da5217eabd709367bc
+- scene_id: 40aec5fffa
+  planned_jobs: 10
+  discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/40aec5fffa
+  discovery_hashes:
+    all_jobs_manifest.json: 4f9e0645a313f45c3a281e141a85103c3396ee66597fc9b6a3df689169b3ff72
+    input_manifest.json: b7fea0651bc6e6156dcda81d593b1325e8f7d24c02c5720ef13a7b3937b3dd65
+    output_hashes.json: be3e94c01d1c060283a5c2c53a688210bfb1829b9dbf8aa811edc65e528eb282
+    pilot_summary.json: d9f7cf6a92a3689905fdc0620ebb8ac7e29b8b49da5588a6b53fbcfd67f57b44
+    postrun_audit.json: a7157edf06a6ec8b5af3257da90af4d599ce822cc369a71003de0da524e2e7bd
+  initial_pools:
+    trellis:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/trellis_initial/40aec5fffa/proposal_pool.json
+      sha256: 1d2301d3b63cb153452ce2314a20122468255f66ab2b88304495c498000c7acf
+      producer_provenance:
+        freeze_id: 20260905-02b54da-v2
+        source_commit: 0dbdee3391a799bf8b56b1d3d71f8a11db39f146
+        config_sha256: 8f0d5c69a0ae965ffbd4a61f47bda7df9ed5f94dc3250cbb865fa54640cfbc00
+        contract_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/contract/freeze_manifest.json
+        contract_file_sha256: 88f810a6b24940181ea3b9012a97af1f5947177cefbd824f5740c66a2462a61e
+        contract_sha256: 2d11affbafb4b7308eda54de5a72ccd34339931810376481c69b8e229c729510
+        input_manifest_sha256: 6823d465c38e6008e32ab30e8dbaa230fa46d81dbbcd66ac8e9f7d7876566124
+        proposal_records_sha256: 44163300bdf9fcb4ca7c59082fbdc4735c959056e73de0181aee8e81a0609652
+        completion_audit_kind: terminal
+        completion_audit_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/terminal_audit/20260905T161447Z/40aec5fffa.json
+        completion_audit_sha256: 1a5b9fae747e29747856a099b7fd5d1c348a6e30abedcecff4a76c1f4fb1443e
+      terminal_audit:
+        path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2/terminal_audit/20260905T161447Z/40aec5fffa.json
+        sha256: 1a5b9fae747e29747856a099b7fd5d1c348a6e30abedcecff4a76c1f4fb1443e
+        freeze_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-02b54da-v2
+    reconviagen:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-58cabb1-v1/rvg_initial/40aec5fffa/proposal_pool.json
+      sha256: e34f2c212e7f96916ec42341f744f9b00b7e57301d0bfeac01ee33d60b8bdce9
+      producer_provenance:
+        freeze_id: 20260905-58cabb1-v1
+        source_commit: 9e44da2cf769ffc57d3283b6ec09220072b9348a
+        config_sha256: 46dec817041bf6d91aaa13ac4cc5b458886daa36cf7742c5101ec2ba248b9066
+        contract_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-58cabb1-v1/contract/freeze_manifest.json
+        contract_file_sha256: 7f12a0e137cd2c52f6433278453e6854162f7c69a571cfdbed49d0c83eb98a34
+        contract_sha256: d998430411ba41068fc1bf01ca94062be39bc9e3cc962da6ce315834044cc65e
+        input_manifest_sha256: 831af099c13de325ce8d0e930cc3ac4af94f6023cef2b63925dfb626b72240bd
+        proposal_records_sha256: 4145a615b5e2dedc389eddc42f824037bf1093df58d7448974b4de37cee40157
+        completion_audit_kind: postrun
+        completion_audit_path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-58cabb1-v1/rvg_initial/40aec5fffa/postrun_audit.json
+        completion_audit_sha256: f32e8c85f178914aff3bf7ece0424500df8f32e77791c883d12719272448d9c1
+        postrun_audit_sha256: f32e8c85f178914aff3bf7ece0424500df8f32e77791c883d12719272448d9c1
+  scene_sources:
+    gaussian:
+      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-9ef4ab1-v1/gaussian_train_only/40aec5fffa/train-full/scene.ply
+      size_bytes: 136497507
+      sha256: 043d132780304874bb1dfaab5dbcb2c0c650e25901d1f836dc62eddcb568aa29
+    intrinsics:
+      path: /data/ScanNetpp/data/40aec5fffa/dslr/nerfstudio/transforms_undistorted.json
+      size_bytes: 200260
+      sha256: 5d8c094dc8392e1961ace724efe1449a3388a5a9e84478df4d58ebe83fea49c6
+    poses:
+      path: /data/ScanNetpp/data/40aec5fffa/dslr/colmap/images.txt
+      size_bytes: 23774921
+      sha256: efe56e995c8231f74a2655f68dce8c58ed862c5400fb246dbeda2f8624ce32d5
+runtime_accounting:
+  schema_version: 1
+  process_histories:
+  - scene_id: 40aec5fffa
+    tool: reconviagen
+    pools:
+    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/rvg_initial/40aec5fffa/proposal_pool.json
+      sha256: 075fdb6a86a3ab0dac711620fb77fd14fe276fbb27dae0751978807c39fe8ea3
+    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-58cabb1-v1/rvg_initial/40aec5fffa/proposal_pool.json
+      sha256: e34f2c212e7f96916ec42341f744f9b00b7e57301d0bfeac01ee33d60b8bdce9
+pool_override_manifest:
+  path: /group/worldcept/code/SimAny-wt/e4-compact-canonical/configs/experiments/icra2027/canonical_rvg_pool_overrides.yaml
+  sha256: 44b634a7fb9df396b1b6a6ac1a989b1051f248b25cfddfc66f869fe41f874d6a
