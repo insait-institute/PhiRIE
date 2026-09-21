@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "asset_count": 61,
+  "asset_count": 60,
   "assets": [
     {
       "file": "media/paper-qualitative.webp",
@@ -647,18 +647,6 @@
         {
           "path": "results/demo/qualitative/VIDEOS24FPS_STRONG_IMPACTS_20260915/delivery/KEYBOARD_robot.mp4",
           "sha256": "512a65fd33cce359cf27786f738eb945fd232d6daae8fc1eb7d9fb796af59111"
-        }
-      ]
-    },
-    {
-      "file": "media/manuscript-snapshot.pdf",
-      "sha256": "6134220ae8e933aa9234b536ef10823b7cc2b70c56b3da89078ca52fc4b12723",
-      "bytes": 391403,
-      "operation": "Unmodified existing manuscript PDF snapshot; uses the historical SimAnyRoom name, may precede current TeX",
-      "sources": [
-        {
-          "path": "code/SimAnyRoom/conference.pdf",
-          "sha256": "6134220ae8e933aa9234b536ef10823b7cc2b70c56b3da89078ca52fc4b12723"
         }
       ]
     },

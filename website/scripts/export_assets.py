@@ -95,9 +95,6 @@ def media():
         for family in ['shooting','robot']:
             src=videos/f'{obj}_{family}.mp4'; dst=PUBLIC/'media'/src.name.lower()
             shutil.copyfile(src,dst);record(dst,[src],'Unmodified recorded 24 fps video')
-    shutil.copyfile(paper/'conference.pdf', PUBLIC/'media/manuscript-snapshot.pdf')
-    record(PUBLIC/'media/manuscript-snapshot.pdf',[paper/'conference.pdf'],
-           'Unmodified existing manuscript PDF snapshot; uses the historical SimAnyRoom name, may precede current TeX')
     (PUBLIC/'gallery.json').write_text(json.dumps(GALLERY,indent=2)+'\n')
 
 

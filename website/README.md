@@ -26,7 +26,7 @@ the initial page does not load the rendering stack or 3D models.
 
 The `project-page` workflow builds and deploys this folder from `main` using
 GitHub Pages. Author order and affiliations are recorded in `../AUTHORS.json`;
-the manuscript PDF is the original snapshot and has not been rewritten.
+the paper download is withheld until the authors provide the arXiv link.
 
 ## Three experiences
 
@@ -63,13 +63,14 @@ Reference APIs: [Three.js WebGPURenderer](https://threejs.org/docs/pages/WebGPUR
 ## Evidence and reproduction
 
 [public/provenance.json](public/provenance.json) records source paths, SHA-256
-identities, conversion operations, and output checksums for 61 media/model files.
+identities, conversion operations, and output checksums for 60 media/model files.
 [public/gallery.json](public/gallery.json) supplies per-view captions. Original
 figures and results remain untouched. No training, model inference, Slurm job,
 or new research experiment is part of website construction.
 
-The paper source uses the earlier name **SimAnyRoom**. The existing PDF is
-served unchanged as a **manuscript snapshot**, not rebuilt from current TeX.
+The paper source uses the earlier name **SimAnyRoom**. The old PDF snapshot has
+been removed from the website and asset exporter; the arXiv link will be added
+when the authors provide it.
 The qualitative and harmonizer figures come from the paper figure collection;
 the uncertainty plot comes directly from the manuscript repository. A damaged
 legacy JPEG teaser was excluded. The gallery retains source reconstruction and

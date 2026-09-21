@@ -77,7 +77,6 @@ try {
     "media/paper-qualitative.webp",
     "media/paper-uncertainty.webp",
     "media/paper-teaser.webp",
-    "media/manuscript-snapshot.pdf",
     "provenance.json",
   ];
   const failures = [];

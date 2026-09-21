@@ -7,7 +7,7 @@ Prepared 2026-09-21 for `insait-institute/PhiRIE`.
   occupy one row; smaller screens can scroll that row horizontally.
 - The full paper title is the main large heading. The introductory headline and
   description appear together in a separate highlighted TL;DR box.
-- Complete source and all 61 research media/model assets retained with matching
+- Complete source and 60 research media/model assets retained with matching
   provenance checksums; 45 visualization views, six videos, three paper figures.
 - Three WebGPU experiences: Gaussian scene editing, rigid-body interactions,
   and recorded robot motion replay.
@@ -23,9 +23,10 @@ SwiftShader software WebGPU. Hardware GPU performance, Safari, and Firefox are n
 measured. The original construction, collider, and scripted replay limitations in
 README.md and the page captions remain applicable.
 
-The manuscript PDF remains an unchanged historical snapshot; author metadata was
-added to the project page, README, and citation file. The original site delivery
-report is retained in REPORT-original.md for historical evidence only.
+The manuscript PDF download has been withdrawn from the website and asset
+exporter at the authors' request, pending an arXiv link. The figures remain
+available. Author metadata is recorded in the project page, README, and citation
+file. REPORT-original.md is retained for historical evidence only.
 
 Exact run output and screenshots are retained in the release validation archive.
 
