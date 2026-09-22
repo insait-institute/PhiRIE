@@ -37,7 +37,11 @@ const context = await browser.newContext({
 const page = await context.newPage();
 page.on("pageerror", (e) => report.errors.push(e.message));
 page.on("console", (m) => {
-  if (m.type() === "error") report.errors.push(m.text());
+  if (m.type() === "error") {
+    const origin = m.location().url;
+    if (origin && !origin.startsWith(base)) report.warnings.push(m.text());
+    else report.errors.push(m.text());
+  }
   if (m.type() === "warning") report.warnings.push(m.text());
 });
 const record = (name, detail) => {
@@ -58,6 +62,7 @@ try {
   page.on("request", (r) => requests.push(r.url()));
   await page.goto(base, { waitUntil: "networkidle" });
   await page.waitForSelector(".result-card");
+  await page.waitForSelector(".video-picker button");
   assert.equal(await page.locator(".result-card").count(), 12);
   assert(!requests.some((r) => r.includes("/models/")));
   record(
@@ -65,19 +70,65 @@ try {
     "12 initial gallery cards; no model downloads before launch",
   );
   await page.screenshot({ path: path.join(output, "desktop.png") });
+  assert.equal(await page.locator(".hero-summary + .featured-film").count(), 1);
+  assert.equal(
+    await page.locator(".contact a").getAttribute("href"),
+    "mailto:runyi.yang@insait.ai",
+  );
+  assert.equal(
+    (await page.locator(".corresponding").innerText()).trim(),
+    "∗ Corresponding author",
+  );
+  assert(
+    (await page
+      .locator('a[href="https://github.com/RunyiYang/PhysicalView"]')
+      .count()) >= 1,
+  );
+  assert.equal(
+    await page
+      .locator('a[href*="provenance"], img[src*="paper-uncertainty"]')
+      .count(),
+    0,
+  );
+  assert(
+    !/How to read the demonstrations|View source manifest/.test(
+      await page.locator("body").innerText(),
+    ),
+  );
+  assert.deepEqual(await page.locator(".version-number").allTextContents(), [
+    "0.0.0",
+    "1.0.0",
+    "2.0.0",
+    "2.0.1",
+  ]);
+  assert.equal(
+    await page.locator("main > section:last-child").getAttribute("id"),
+    "versions",
+  );
+  await page
+    .locator("#versions")
+    .screenshot({ path: path.join(output, "version-tree.png") });
+  record(
+    "Page content and development tree",
+    "Contact, PhiView link, video below TL;DR, requested removals, and four milestones",
+  );
   const gallery = await page.evaluate(() =>
     fetch("gallery.json").then((r) => r.json()),
   );
+  const demos = await page.evaluate(() =>
+    fetch("demos.json").then((r) => r.json()),
+  );
+  assert.equal(demos.length, 9);
   assert.equal(gallery.length, 45);
   const files = [
     ...new Set(gallery.map((x) => x.src)),
-    ...["headphone", "cup", "keyboard"].flatMap((o) =>
-      ["shooting", "robot"].map((f) => `media/${o}_${f}.mp4`),
-    ),
+    ...demos.flatMap((d) => [d.src, d.poster]),
+    "media/phirie-demo.mp4",
+    "media/spray-mass-friction-2x2.mp4",
+    "media/spray-mass-friction-impact.png",
+    "media/spray-mass-friction-final.png",
     "media/paper-qualitative.webp",
-    "media/paper-uncertainty.webp",
     "media/paper-teaser.webp",
-    "provenance.json",
   ];
   const failures = [];
   for (const file of files) {
@@ -85,7 +136,7 @@ try {
     if (!r.ok()) failures.push([file, r.status()]);
   }
   assert.deepEqual(failures, []);
-  record("Media and provenance links", `${files.length} URLs return HTTP 200`);
+  record("Media and download links", `${files.length} URLs return HTTP 200`);
   await page.click("[data-filter=Objects]");
   assert.equal(await page.locator(".result-card").count(), 3);
   await page.click("[data-filter=All]");
@@ -123,7 +174,7 @@ try {
     "27%",
   );
   record("Matched-view comparison", "Object selection and divider controls");
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 9; i++) {
     await page.locator(".video-picker button").nth(i).click();
     await page.waitForFunction(
       () => document.querySelector("#result-video").readyState >= 1,
@@ -131,8 +182,13 @@ try {
     const data = await page
       .locator("#result-video")
       .evaluate((v) => ({ duration: v.duration, error: v.error?.message }));
-    assert(data.duration > 3 && data.duration < 8);
+    assert(Math.abs(data.duration - demos[i].duration) < 0.1);
     assert(!data.error);
+    await page.locator("#result-video").evaluate((v) => v.play());
+    await page.waitForFunction(
+      () => document.querySelector("#result-video").currentTime > 0.2,
+    );
+    await page.locator("#result-video").evaluate((v) => v.pause());
   }
   await page.locator("#result-video").evaluate((v) => v.play());
   await page.waitForFunction(
@@ -140,8 +196,46 @@ try {
   );
   await page.locator("#result-video").evaluate((v) => v.pause());
   record(
-    "Six recorded videos",
-    "All metadata loaded; duration 4–7 s; playback advanced",
+    "Nine recorded videos",
+    "Every video decoded and played; durations match the delivered recordings",
+  );
+  await page.click('[data-film-source="local"]');
+  await page.locator("#overview-local").evaluate((v) => {
+    v.muted = true;
+    return v.play();
+  });
+  await page.waitForFunction(
+    () => document.querySelector("#overview-local").currentTime > 0.2,
+  );
+  assert(
+    await page
+      .locator("#overview-local")
+      .evaluate((v) => v.duration > 178 && v.duration < 179),
+  );
+  await page.locator("#overview-local").evaluate((v) => v.pause());
+  await page.click('[data-film-source="youtube"]');
+  assert(
+    (await page.locator("#overview-youtube").getAttribute("src")).includes(
+      "3-YdcBh6Tbw",
+    ),
+  );
+  await page.locator("#parameter-video").evaluate((v) => {
+    v.muted = true;
+    return v.play();
+  });
+  await page.waitForFunction(
+    () => document.querySelector("#parameter-video").currentTime > 0.2,
+  );
+  await page.locator("#parameter-video").evaluate((v) => {
+    v.pause();
+    v.currentTime = 4.5;
+  });
+  await page
+    .locator("#physics-comparison")
+    .screenshot({ path: path.join(output, "parameter-comparison.png") });
+  record(
+    "Overview fallback and parameter comparison",
+    "YouTube source selected; direct overview and 2x2 comparison played",
   );
   report.adapter = await page.evaluate(async () => {
     const a = await navigator.gpu.requestAdapter();
@@ -271,6 +365,7 @@ try {
   }
   await page.click("[data-demo=scene]");
   const a11y = await new AxeBuilder({ page })
+    .exclude("#overview-youtube")
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
   report.accessibility = a11y.violations.map((v) => ({
@@ -285,7 +380,7 @@ try {
   assert.equal(a11y.violations.length, 0);
   record(
     "Accessibility audit",
-    "No WCAG 2 A/AA or WCAG 2.1 AA violations detected by axe",
+    "No WCAG A/AA violations in page-owned content; the external YouTube player is outside this audit",
   );
   const mobile = await browser.newPage({
     viewport: { width: 390, height: 844 },

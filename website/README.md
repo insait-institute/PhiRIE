@@ -1,109 +1,56 @@
 # PhiRIE project page
 
-Research page with three interactive WebGPU experiences, 45 visualization views,
-six recorded videos, three paper-figure exports, and a source manifest.
+[Live page](https://insait-institute.github.io/PhiRIE/) · [Overview video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView)
 
-## Run and build
+The page includes the overview video directly below the TL;DR, nine PhiView
+recordings, a four-setting mass/friction comparison, an image gallery, three
+WebGPU playgrounds, and the development version tree and release plan.
 
-Node.js 22 is supported. All npm versions are pinned in `package-lock.json`.
+## Run locally
+
+Use Node.js 22:
 
 ```bash
 cd website
 npm ci
 npm run dev
-npm run build
-npm run preview -- --port 4173
+# http://127.0.0.1:5173/PhiRIE/
 ```
-
-The default local build uses `/PhiRIE/`; the Pages workflow obtains the actual
-base path from GitHub. The public project page is
-https://insait-institute.github.io/PhiRIE/.
-Open `http://127.0.0.1:4173/PhiRIE/` when using the preview command.
-Override the deployment path with `SITE_BASE=/another/path/ npm run build`.
-Serve the build over HTTPS (or localhost) with normal binary MIME types. There are no API keys, inference services, Python
-servers, or external font/CDN requests at runtime. Assets are loaded on demand;
-the initial page does not load the rendering stack or 3D models.
-
-The `project-page` workflow builds and deploys this folder from `main` using
-GitHub Pages. Author order and affiliations are recorded in `../AUTHORS.json`;
-the paper download is withheld until the authors provide the arXiv link.
-
-## Three experiences
-
-1. **Scene editing:** native WGSL anisotropic Gaussian rendering of the captured
-   `c50d2d1d42` desk. Original / removed / completed / reassembled states use
-   saved target membership, the actual 476-Gaussian fill slice, and registered
-   TRELLIS appearance. Translation and rotation update the replacement in 3D.
-   The browser asset is a deterministic spatial crop/subsample with SH0 color.
-   Background kernels are widened 1.4× to compensate for subsampling. This is
-   a web preview, not the full-resolution research renderer. Registration uses
-   GT assistance; this interaction does not run object discovery or generation.
-2. **Physics sandbox:** native Three.js WebGPU rendering, Rapier WASM dynamics,
-   and three actual SAM3D meshes (cup, headphones, keyboard). Metric meshes are
-   decimated and colored from nearest Gaussian SH0 samples. Collisions use one
-   convex hull per object, so holes/cavities and concavities are approximated.
-   Mass, friction, throwing and projectile speed are interactive. Browser
-   dynamics and estimated parameters are not calibrated physical predictions.
-3. **Robot replay:** original robot visual geometry and SAM3D cup collision
-   geometry positioned from **213 recorded MuJoCo integration states**. Controls
-   select original states without interpolation, show the tool trajectory, and
-   jump to the first recorded contact. The added support plane is contextual
-   browser geometry at the recorded support height. The source controller is a
-   scripted physical cup push and retract; task success is unmeasured.
-
-Hardware adapters render directly to the WebGPU canvas. Software adapters use
-the same WebGPU shaders, then read the render target into a visible Canvas2D
-surface to avoid Linux software swapchain presentation failures. That path is
-explicitly labeled **software adapter**. There is no silent WebGL substitution.
-An unavailable adapter shows a support message and links to recorded videos.
-
-Reference APIs: [Three.js WebGPURenderer](https://threejs.org/docs/pages/WebGPURenderer.html),
-[Rapier JavaScript](https://rapier.rs/docs/user_guides/javascript/getting_started_js/).
-
-## Evidence and reproduction
-
-[public/provenance.json](public/provenance.json) records source paths, SHA-256
-identities, conversion operations, and output checksums for 60 media/model files.
-[public/gallery.json](public/gallery.json) supplies per-view captions. Original
-figures and results remain untouched. No training, model inference, Slurm job,
-or new research experiment is part of website construction.
-
-The paper source uses the earlier name **SimAnyRoom**. The old PDF snapshot has
-been removed from the website and asset exporter; the arXiv link will be added
-when the authors provide it.
-The qualitative and harmonizer figures come from the paper figure collection;
-the uncertainty plot comes directly from the manuscript repository. A damaged
-legacy JPEG teaser was excluded. The gallery retains source reconstruction and
-completion artifacts; it does not fabricate missing views or claim whole-room
-collision accuracy, learned-policy success, or physical-robot transfer.
-
-To rebuild derived research assets, run the exporter in the original consolidated
-PhiRIE workspace, which contains the source research data:
 
 ```bash
-envs/control/.venv/bin/python website/scripts/export_assets.py
-# Or one export group:
-envs/control/.venv/bin/python website/scripts/export_assets.py --only robot
+npm run format:check
+npm run build
+npm run preview -- --port 4173
+# http://127.0.0.1:4173/PhiRIE/
 ```
 
-The exporter requires NumPy, Pillow, plyfile, SciPy, trimesh,
-fast-simplification, and MuJoCo. Original absolute XML paths are relocated in
-memory. Fonts are self-hosted DM Sans and DM Serif Display from Google Fonts;
-their SIL Open Font Licenses are included in `public/fonts/`.
+`SITE_BASE` selects the deployment path. The default is `/PhiRIE/`; set
+`SITE_BASE=/` for an origin-root deployment. GitHub Pages builds from `main`.
 
-## Browser verification
+## Content
+
+- `index.html`: page structure, featured video, comparison, and version tree.
+- `src/main.js`: gallery, demo picker, and video source controls.
+- `public/demos.json`: titles, descriptions, durations, and files for demos 01–09.
+- `public/media/`: videos, images, posters, and downloadable screenshots.
+- `public/gallery.json`: gallery images and captions.
+- `src/lab.js`, `src/gaussian.js`, `src/physics.js`, `src/robot.js`: playgrounds.
+
+The overview embeds YouTube and includes a direct MP4 playback option.
+Recordings use HTML video controls and load on demand. WebGPU assets load
+only when a playground is launched.
+
+## Browser checks
 
 ```bash
 npx playwright install --with-deps chromium
-# In another terminal: npm run preview -- --port 4173
+# Start the preview server in another terminal.
 BASE_URL=http://127.0.0.1:4173/PhiRIE/ npm test
 ```
 
-The test launches Chromium with a software Vulkan/WebGPU adapter for CI.
-It checks gallery filters/search/pagination/lightbox, comparison controls,
-six videos, rendered changes from Gaussian edits, physical response to a
-projectile, robot state playback, mobile overflow, unsupported WebGPU fallback,
-and axe WCAG A/AA rules. Results and screenshots go to `test-results/` or
-`OUTPUT_DIR`. A software-adapter pass is not a hardware performance measurement.
+Checks cover the header and contact links, video placement and playback, all
+nine recordings, parameter comparison, version tree, gallery controls, mobile
+layout, accessibility, and the existing WebGPU interactions.
 
-See [REPORT.md](REPORT.md) for this delivery's checks and remaining limits.
+Original recordings remain in the research workspace. Website videos are copied
+or compressed for web playback; figures use aspect-preserving image conversion.

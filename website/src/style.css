@@ -1525,7 +1525,9 @@ dialog > img {
   }
 }
 @media (max-width: 380px) {
-  .site-header nav a[href="#method"] {
+  .site-header nav a[href="#method"],
+  .site-header nav a[href="#versions"],
+  .site-header nav a[href="#playground"] {
     display: none;
   }
 }
@@ -1587,6 +1589,223 @@ dialog > img {
 .affiliations .corresponding {
   margin-top: 7px;
   font-size: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+.contact a,
+.media-download,
+.parameter-links a {
+  color: var(--green);
+  text-underline-offset: 4px;
+}
+.featured-film {
+  margin: 32px 0 42px;
+  text-align: left;
+}
+.film-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #101a18;
+  border: 1px solid var(--line);
+}
+.film-frame iframe,
+.film-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+}
+.film-caption,
+.parameter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 20px;
+}
+.film-caption h3 {
+  margin-top: 8px;
+  font-size: 23px;
+}
+.film-sources,
+.parameter-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  font-size: 12px;
+}
+.film-sources button {
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+}
+.film-sources button[aria-pressed="true"] {
+  background: var(--green);
+  color: white;
+}
+.component-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 22px 0;
+  border-radius: 8px;
+}
+.video-main video {
+  aspect-ratio: 16 / 9;
+}
+.video-picker {
+  max-height: 630px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.video-picker button {
+  flex: none;
+  min-height: 75px;
+}
+.media-download {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 18px;
+}
+.parameter-demo {
+  margin-top: 70px;
+  padding-top: 38px;
+  border-top: 1px solid var(--line);
+}
+.parameter-heading {
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+.parameter-heading h3 {
+  font-size: 28px;
+  margin-top: 14px;
+}
+.parameter-heading > p {
+  max-width: 440px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.parameter-demo video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: #101a18;
+}
+.parameter-links {
+  margin-top: 20px;
+}
+.research-figures {
+  grid-template-columns: 1fr;
+}
+.research-figures img {
+  max-height: none;
+}
+.version-tree,
+.version-tree ol {
+  list-style: none;
+  padding: 0;
+}
+.version-tree ol {
+  margin: 20px 0 0 42px;
+  padding-left: 30px;
+  border-left: 1px solid #9aaa91;
+}
+.version-node {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 28px;
+  padding: 25px 28px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcf8;
+}
+.version-number {
+  color: var(--green);
+  font: 600 22px monospace;
+  padding-top: 3px;
+}
+.version-node h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.version-node p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.version-node.current {
+  background: #e9efdf;
+  border-color: #91a875;
+}
+.release-plan {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 30px;
+  margin-top: 55px;
+  border-top: 1px solid var(--line);
+  padding-top: 35px;
+}
+.release-plan h3 {
+  margin: 14px 0 12px;
+  font-size: 27px;
+}
+.release-plan p,
+.release-plan > a {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.release-plan ol {
+  padding-left: 22px;
+}
+.release-plan li {
+  padding-left: 8px;
+  margin-bottom: 20px;
+}
+.release-plan strong,
+.release-plan span {
+  display: block;
+}
+.release-plan span {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 5px;
+}
+@media (max-width: 760px) {
+  .film-caption,
+  .parameter-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .video-picker {
+    grid-template-columns: 1fr 1fr;
+    max-height: 365px;
+  }
+  .version-tree ol {
+    margin-left: 8px;
+    padding-left: 9px;
+  }
+  .version-node {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px 16px;
+  }
+  .version-node h3 {
+    font-size: 20px;
+  }
+  .release-plan {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 760px) {
   .authors {

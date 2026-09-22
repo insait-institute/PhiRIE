@@ -42,8 +42,9 @@
         ></a
       >
       <nav aria-label="Main navigation">
-        <a href="#method">Method</a><a href="#playground">Playground</a
-        ><a href="#results">Results</a><a href="#paper">Research</a>
+        <a href="#method">Method</a><a href="#motion">Demos</a
+        ><a href="#playground">Playground</a><a href="#results">Results</a
+        ><a href="#versions">Versions</a>
       </nav>
       <a
         class="repo-link"
@@ -87,14 +88,22 @@
             <p><sup>1</sup> INSAIT, Sofia University “St. Kliment Ohridski”.</p>
             <p><sup>2</sup> vivo Mobile Communication Co., Ltd.</p>
             <p><sup>3</sup> Karlsruhe Institute of Technology</p>
-            <p class="corresponding">∗ Corresponding author: Kunyu Peng</p>
+            <p class="contact">
+              Contact:
+              <a href="mailto:runyi.yang@insait.ai">runyi.yang@insait.ai</a>
+            </p>
+            <p class="corresponding">∗ Corresponding author</p>
           </div>
         </div>
         <div class="hero-actions">
           <a href="#playground" class="button primary"
             >Enter the playground <span aria-hidden="true">↗</span></a
-          ><a href="#paper" class="button secondary"
-            >Explore the research <span aria-hidden="true">↓</span></a
+          ><a
+            href="https://github.com/RunyiYang/PhysicalView"
+            class="button secondary"
+            target="_blank"
+            rel="noreferrer"
+            >PhiView code <span aria-hidden="true">↗</span></a
           >
         </div>
         <aside class="hero-summary" aria-labelledby="summary-title">
@@ -109,6 +118,55 @@
             </p>
           </div>
         </aside>
+
+        <section class="featured-film" aria-label="PhiRIE overview video">
+          <div class="film-frame">
+            <iframe
+              id="overview-youtube"
+              src="https://www.youtube-nocookie.com/embed/3-YdcBh6Tbw?rel=0&amp;playsinline=1"
+              title="PhiRIE demo video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <video
+              id="overview-local"
+              controls
+              playsinline
+              preload="none"
+              poster="%BASE_URL%media/phirie-demo.webp"
+              aria-label="PhiRIE overview video, direct playback"
+              hidden
+            >
+              <source src="%BASE_URL%media/phirie-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="film-caption">
+            <div>
+              <span class="caption-label">THE FULL DEMO</span>
+              <h3>From reconstruction to interaction.</h3>
+            </div>
+            <div
+              class="film-sources"
+              role="group"
+              aria-label="Video playback source"
+            >
+              <button data-film-source="youtube" aria-pressed="true">
+                YouTube
+              </button>
+              <button data-film-source="local" aria-pressed="false">
+                Direct video
+              </button>
+              <a
+                href="https://youtu.be/3-YdcBh6Tbw"
+                target="_blank"
+                rel="noreferrer"
+                >Watch on YouTube ↗</a
+              >
+            </div>
+          </div>
+        </section>
         <div class="hero-visual" aria-label="Three real PhiRIE result views">
           <figure>
             <img
@@ -174,7 +232,15 @@
         </div>
         <div class="method-grid">
           <article>
-            <span class="step">01</span>
+            <span class="step">01</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/bottle-02.webp"
+              alt="Object selected in a reconstructed office"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
             <h3>Observe & propose</h3>
             <p>
               Start with captured views and metric observations. Specialized
@@ -183,7 +249,15 @@
             <span class="method-tag">Images → candidates</span>
           </article>
           <article>
-            <span class="step">02</span>
+            <span class="step">02</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/bottle-06.webp"
+              alt="Generated bottle aligned to its observed geometry"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
             <h3>Register & select</h3>
             <p>
               Compare proposals in a shared frame. Use alignment evidence to
@@ -192,7 +266,15 @@
             <span class="method-tag">Evidence → decisions</span>
           </article>
           <article>
-            <span class="step">03</span>
+            <span class="step">03</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/demo-02.webp"
+              alt="Robot grasping a bottle in PhiView"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
             <h3>Connect & interact</h3>
             <p>
               Link geometry, collision, and Gaussian appearance through object
@@ -221,7 +303,6 @@
             ><strong>Different rooms. A shared representation.</strong> Gaussian
             environments across ScanNet++ and LIBERO. Includes original scene
             fits, saved background completion, and a recorded robot state.
-            <a href="%BASE_URL%provenance.json">Asset provenance ↗</a>
           </figcaption>
         </figure>
       </section>
@@ -335,13 +416,13 @@
       <section class="section container" id="motion">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">03 — IN MOTION</p>
+            <p class="eyebrow">03 — PHIVIEW DEMOS</p>
             <h2>See the interaction<br />from start to finish.</h2>
           </div>
           <p>
-            Six complete, recorded sequences show reconstructed headphones, a
-            cup, and a keyboard in their environments. Watch physical impacts
-            and scripted robot interactions.
+            Nine demonstrations of shooting, grasping, placing, and navigating
+            reconstructed rooms. Compare the same scenes with the harmonizer
+            switched off and on.
           </p>
         </div>
         <div class="video-layout">
@@ -351,27 +432,82 @@
               controls
               playsinline
               preload="none"
-              poster="/media/headphone-06_shooting_1.webp"
-              aria-label="Recorded headphone shooting sequence"
+              poster="%BASE_URL%media/demo-01.webp"
+              aria-label="Spray bottle shooting in PhiView"
             >
-              <source src="/media/headphone_shooting.mp4" type="video/mp4" />
+              <source src="%BASE_URL%media/demo-01.mp4" type="video/mp4" />
             </video>
             <div class="video-caption">
               <div>
                 <span class="caption-label" id="video-type"
-                  >RECORDED MUJOCO · 24 FPS</span
+                  >PHIVIEW · SIX SHOTS · COLORFUL TRAILS</span
                 >
-                <h3 id="video-title">Headphones / two impacts</h3>
+                <h3 id="video-title">Spray bottle / shooting</h3>
               </div>
-              <span id="video-counter">01 / 06</span>
+              <span id="video-counter">01 / 09</span>
             </div>
             <p id="video-description">
-              Two scripted projectile launches with SAM3D collision geometry.
-              Estimated parameters; a qualitative physics demonstration.
+              Shoot the spray bottle and watch its physical response.
+            </p>
+            <a
+              id="video-download"
+              class="media-download"
+              href="%BASE_URL%media/demo-01.mp4"
+              download
+              >Download MP4 ↓</a
+            >
+          </div>
+          <div
+            class="video-picker"
+            aria-label="Choose a PhiView demonstration"
+          ></div>
+        </div>
+        <article class="parameter-demo" id="physics-comparison">
+          <div class="parameter-heading">
+            <div>
+              <p class="eyebrow">MASS × FRICTION</p>
+              <h3>Same bottle. Four physical settings.</h3>
+            </div>
+            <p>
+              Three shots in each view. Mass: 0.15 / 0.75 kg. Friction: 0.05 /
+              0.80. The projectile, firing speed, cadence, and camera stay
+              fixed.
             </p>
           </div>
-          <div class="video-picker" aria-label="Choose a recorded video"></div>
-        </div>
+          <video
+            id="parameter-video"
+            controls
+            playsinline
+            preload="none"
+            poster="%BASE_URL%media/spray-mass-friction-impact.webp"
+            aria-label="Two by two comparison of low and high bottle mass and friction"
+          >
+            <source
+              src="%BASE_URL%media/spray-mass-friction-2x2.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="parameter-links">
+            <a href="%BASE_URL%media/spray-mass-friction-2x2.mp4" download
+              >Download comparison ↓</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-impact.png"
+              target="_blank"
+              rel="noreferrer"
+              >Impact screenshot ↗</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-final.png"
+              target="_blank"
+              rel="noreferrer"
+              >Final-state screenshot ↗</a
+            ><a
+              href="https://github.com/RunyiYang/PhysicalView"
+              target="_blank"
+              rel="noreferrer"
+              >PhiView code ↗</a
+            >
+          </div>
+        </article>
       </section>
 
       <section class="comparison-section section">
@@ -437,7 +573,7 @@
           <p>
             Explore captured environments, reconstruction candidates, background
             edits, and recorded interactions. Open any image for its full view
-            and source context.
+            and details.
           </p>
         </div>
         <div class="gallery-toolbar">
@@ -493,30 +629,10 @@
                   >Get v2.0.1 ↗</a
                 >
               </div>
-              <p class="small-note">
-                Paper link coming soon. The code repository requires access.
-              </p>
+              <p class="small-note">Paper link coming soon.</p>
             </div>
           </div>
           <div class="research-figures">
-            <figure>
-              <button
-                class="image-expand"
-                data-image="media/paper-uncertainty.webp"
-                data-title="Paired uncertainty · original manuscript figure"
-              >
-                <img
-                  loading="lazy"
-                  src="/media/paper-uncertainty.webp"
-                  alt="Original manuscript chart reporting paired uncertainty of agentic construction ablations"
-                />
-              </button>
-              <figcaption>
-                <span class="caption-label">ORIGINAL MANUSCRIPT FIGURE</span
-                >Paired comparisons and uncertainty. See the manuscript for
-                protocols and denominators.
-              </figcaption>
-            </figure>
             <figure>
               <button
                 class="image-expand"
@@ -536,30 +652,113 @@
               </figcaption>
             </figure>
           </div>
-          <details class="evidence-note">
-            <summary>
-              How to read the demonstrations and results
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div>
-              <p>
-                The gallery uses existing research artifacts. Scene images
-                include training-view diagnostics and native synthetic LIBERO
-                observations. Some construction examples use GT assistance.
-                Coverage, held-out quality, and complete-room collision accuracy
-                are distinct questions.
-              </p>
-              <p>
-                The live physics sandbox uses reconstructed meshes with
-                browser-side Rapier dynamics and simplified convex colliders.
-                The robot demo replays recorded MuJoCo states from a scripted
-                cup push; it does not run a learned policy or establish grasp
-                success. Web previews use reduced geometry and color detail. See
-                <a href="%BASE_URL%provenance.json">the asset manifest</a> for
-                source identities, transformations, and checksums.
-              </p>
+        </div>
+      </section>
+
+      <section class="section container version-section" id="versions">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">07 — DEVELOPMENT</p>
+            <h2>How PhiRIE<br />has grown.</h2>
+          </div>
+          <p>
+            From the first reconstruction prototype to a modular system for
+            building and interacting with reconstructed environments.
+          </p>
+        </div>
+        <ol class="version-tree" aria-label="PhiRIE version history">
+          <li>
+            <div class="version-node">
+              <span class="version-number">0.0.0</span>
+              <div>
+                <h3>Reconstruction prototype</h3>
+                <p>
+                  Captured views, camera geometry, and Gaussian scene
+                  reconstruction formed the foundation.
+                </p>
+              </div>
             </div>
-          </details>
+            <ol>
+              <li>
+                <div class="version-node">
+                  <span class="version-number">1.0.0</span>
+                  <div>
+                    <h3>Object construction and simulation</h3>
+                    <p>
+                      Object discovery, 3D asset generation, metric
+                      registration, background completion, and physics export
+                      connected reconstructed rooms to simulation.
+                    </p>
+                  </div>
+                </div>
+                <ol>
+                  <li>
+                    <div class="version-node">
+                      <span class="version-number">2.0.0</span>
+                      <div>
+                        <h3>Modular pipeline and PhiView</h3>
+                        <p>
+                          Independent feature interfaces, composable pipelines,
+                          simulator adapters, and PhiView brought construction
+                          and interaction into one workflow.
+                        </p>
+                      </div>
+                    </div>
+                    <ol>
+                      <li>
+                        <div class="version-node current">
+                          <span class="version-number">2.0.1</span>
+                          <div>
+                            <h3>PhiRIE release and demonstrations</h3>
+                            <p>
+                              Consolidated setup and documentation, the project
+                              page, illustrated components, and demonstrations
+                              of manipulation, harmonization, and controllable
+                              physical parameters.
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <div class="release-plan" id="release-plan">
+          <div>
+            <p class="eyebrow">RELEASE PLAN</p>
+            <h3>What comes next.</h3>
+            <p>Planned work; release dates will follow validation.</p>
+          </div>
+          <ol>
+            <li>
+              <strong>Guided setup</strong
+              ><span
+                >Simpler installation and a complete first-scene
+                walkthrough.</span
+              >
+            </li>
+            <li>
+              <strong>Downloadable scene packs</strong
+              ><span
+                >Prepared scenes and repeatable shooting, manipulation, and
+                harmonizer demos.</span
+              >
+            </li>
+            <li>
+              <strong>Reproducible evaluation</strong
+              ><span
+                >Documented configurations, benchmark instructions, and results
+                as they are finalized.</span
+              >
+            </li>
+          </ol>
+          <a
+            href="https://github.com/insait-institute/PhiRIE/blob/main/RELEASE_PLAN.md"
+            >Follow the release plan ↗</a
+          >
         </div>
       </section>
     </main>
@@ -571,8 +770,8 @@
       >
       <p>From observations to interaction.</p>
       <div>
-        <a href="%BASE_URL%provenance.json">Provenance</a
-        ><a href="https://github.com/insait-institute/PhiRIE">GitHub ↗</a
+        <a href="https://github.com/insait-institute/PhiRIE">PhiRIE code ↗</a
+        ><a href="https://github.com/RunyiYang/PhysicalView">PhiView code ↗</a
         ><a href="#">Back to top ↑</a>
       </div>
     </footer>
@@ -582,9 +781,6 @@
       <div class="lightbox-caption">
         <h3 id="lightbox-title"></h3>
         <p id="lightbox-description"></p>
-        <a href="%BASE_URL%provenance.json" target="_blank" rel="noreferrer"
-          >View source manifest ↗</a
-        >
       </div>
     </dialog>
     <script type="module" src="/src/main.js"></script>

@@ -1,154 +1,214 @@
 # PhiRIE
 
-Research code for constructing editable scene assets and interactive environments
-from posed RGB images and reconstructed scenes.
+### From Photorealistic Reconstruction to Interactive Environments
 
-> **PhiRIE: From Photorealistic Reconstruction to Interactive Environments.**
-> Previously developed as SimAny/PhiRoom. The `phiroom` Python package and CLI remain compatible.
-> 中文说明: [README_Chinese.md](README_Chinese.md).
+[Project page](https://insait-institute.github.io/PhiRIE/) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView) · [Release plan](RELEASE_PLAN.md)
 
-**Authors:** Runyi Yang<sup>1</sup>, Deheng Zhang<sup>1</sup>, Xiaoye Wang<sup>1</sup>, Kanzhi Wu<sup>2</sup>, Lei Sun<sup>1</sup>, Ajad Chhatkuli<sup>1</sup>, Kunyu Peng<sup>3,∗</sup>, Luc Van Gool<sup>1</sup>, Danda Paudel<sup>1</sup>
+**PhiRIE turns captured rooms into editable environments.** It connects object
+discovery, 3D asset generation, metric registration, background completion, and
+physics. PhiView lets you explore the result, change object parameters, shoot
+projectiles, and run robot interactions.
 
-<sup>1</sup> INSAIT, Sofia University “St. Kliment Ohridski”.<br>
-<sup>2</sup> vivo Mobile Communication Co., Ltd.<br>
-<sup>3</sup> Karlsruhe Institute of Technology<br>
-∗ Corresponding author: Kunyu Peng. See [author metadata](AUTHORS.md) and [citation](CITATION.cff).
+[![Watch the PhiRIE demo](website/public/media/phirie-demo.webp)](https://youtu.be/3-YdcBh6Tbw)
 
-**PhiRIE v2.0.1** includes the complete pinned [PhiView source](integrations/phiview).
-Clone with `git clone https://github.com/insait-institute/PhiRIE.git`. No recursive
-submodule checkout is required. See
-[PhiView setup](docs/PHIVIEW.md), [modular feature interfaces](docs/MODULES.md),
-[contribution workflow](CONTRIBUTING.md), and [release notes and readiness report](docs/releases/v2.0.1.md).
+**Runyi Yang**, Deheng Zhang, Xiaoye Wang, Kanzhi Wu, Lei Sun, Ajad Chhatkuli,
+Kunyu Peng*, Luc Van Gool, Danda Paudel
 
-**Project page:** [PhiRIE](https://insait-institute.github.io/PhiRIE/) — paper figures,
-three interactive WebGPU demos, 45 visualization views, and six recorded videos.
-See [website source, provenance, and local setup](website/README.md).
+INSAIT, Sofia University “St. Kliment Ohridski” · vivo Mobile Communication Co., Ltd. · Karlsruhe Institute of Technology
+
+Contact: [runyi.yang@insait.ai](mailto:runyi.yang@insait.ai)
+
+*Corresponding author
+
+## 1. Installation
+
+### Start with the control tools
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then:
 
 ```bash
+git clone https://github.com/insait-institute/PhiRIE.git
+cd PhiRIE
 uv sync --project envs/control --locked
 bash run/phiroom.sh modules
-bash run/phiroom.sh plan generation trellis -- --help
-bash run/phiroom.sh pipeline run pipelines/preflight.json
 ```
 
-**ScanNet++ demo (`fb5a96b1a2`):** [download the red-mask ZIP](https://github.com/RunyiYang/PhiRIE/releases/download/v2.0.0/PhiRIE_ScanNetpp_fb5a96b1a2_RedMask_Demo.zip)
-or [watch the 54-second video](https://github.com/RunyiYang/PhiRIE/releases/download/v2.0.0/PhiRIE_fb5a96b1a2_RedMask_Demo.mp4).
-The separate [PhiView shooting video](https://github.com/RunyiYang/PhiRIE/releases/download/v2.0.0/PhiView_fb5a96b1a2_Shooting_Demo.mp4)
-shows actual server rendering and projectile simulation.
-Extract the ZIP and open `PhiRIE_ScanNetpp_Demo/index.html`.
-See [contents, checksums and scope](docs/demos/scannetpp-fb5a96b1a2.md).
-This demonstration uses **GT assistance plus scripted IK, not a learned policy**.
+The control environment lists components, prepares commands, and runs CPU tools.
+The organization checkout includes PhiView source in `integrations/phiview/`.
 
-Given posed RGB images of an indoor scene plus its off-the-shelf
-reconstruction (a mesh and a 3D Gaussian splat), SimAny discovers every
-object, replaces it with a generated 3D asset registered back into the metric
-scene, annotates it with collision geometry and physical parameters (URDF),
-and erases it from the background splat — so the twin stays photorealistic
-once objects move. No semantic annotations, no per-object prompts, no clicks;
-the output is verified without any ground truth.
+### Set up reconstruction and simulation
 
-## What it can do
+GPU reconstruction and rendering require an NVIDIA GPU and the runtime for the
+selected model. Prepare the environments, data, and weights with these guides:
 
-- Automatic object discovery (SAM3) → image-to-3D asset generation
-  (TRELLIS / ReconViaGen hybrid) → Sim(3) registration → collision geometry
-  (CoACD) + physical parameters → URDF, per object.
-- Gaussian-native object removal and background completion, so edits stay
-  photoreal — including transparent objects that geometric selectors miss.
-- Exports to PyBullet, MuJoCo/MJCF, Isaac Lab, and OmniGibson.
-- GT-free automatic mode (`run/run_auto.sh`) alongside the GT-driven
-  benchmark mode; downstream stages run identically in both.
-- Single-image zero-shot mode: one frame + monocular metric depth, no
-  reconstruction.
-- Closed-loop pi0.5 robot policy evaluation inside the exported scenes, with
-  photoreal composite observations ([robo/](robo/)).
-- Interactive viser editor: drag assets, re-run physics, watch playback
-  ([interface/viewer.py](interface/viewer.py)).
-
-## Repository layout
-
-| Directory | Contents |
+| Setup | Guide |
 |---|---|
-| [phiroom/](phiroom/) | portable module CLI, shared contracts and 16 feature interfaces |
-| [pipelines/](pipelines/) | separate feature calls, tool ownership and composable recipes |
-| [envs/control/](envs/control/) | locked uv environment for CPU orchestration and tests |
-| [simfactory/blocks/](simfactory/blocks/) | separate reconstruction, segmentation, generation, editing, simulation and evaluation adapters |
-| [integrations/phiview/](integrations/phiview/) | bundled PhiView source, server rendering and interactive demo |
-| [agents/](agents/) | generation pipeline: `core` (paths/IO/cameras/vocabulary), `discover`, `assets`, `edit` (Gaussian-native inpainting), `render`, `eval`, `baselines`, `single_image` |
-| [models/](models/) | runnable bridges to external neural models: `s1_segment` (SAM3), `s2_depth`, `s4_trellis`, `s4_reconviagen` |
-| [robo/](robo/) | robot layer: pi0.5 MuJoCo env/rig/tasks/eval, photoreal rendering, simulator exports (`sim/`) |
-| [interface/](interface/) | viser multi-scene editor, MuJoCo live viewer, demo movie/session |
-| [run/](run/) | `env.sh` (paths + env knobs), setup, pipeline launchers, slurm jobs |
-| [coding_agents/](coding_agents/) | AI coding-agent traces: memory, history, skills |
-| [data/](data/) | datasets (contents gitignored) |
-| [checkpoints/](checkpoints/) | downloaded model weights (gitignored) |
-| [third_party/](third_party/) | vendored checkouts: TRELLIS, ReconViaGen, MaskClustering, FlashSplat, BEHAVIOR-1K, mujoco_menagerie, ... |
-| [docs/](docs/) | documentation and the paper LaTeX |
-| [tests/](tests/) | dataset-free registration stress suite |
+| Python, CUDA, and model environments | [Environment setup](docs/ENVIRONMENTS.md) |
+| Captured views, camera poses, reconstructions, and weights | [Data and weights](docs/DATA_AND_WEIGHTS.md) |
+| PhiView rendering and interaction | [PhiView setup](docs/PHIVIEW.md) |
+| Independent component commands | [Module interfaces](docs/MODULES.md) |
 
-## Quickstart
+## 2. Basic demos
+
+### Watch or download the recordings
+
+Open the [demo gallery](https://insait-institute.github.io/PhiRIE/#motion).
+Each recording can be played in the browser or downloaded as an MP4.
+
+| Demo | Interaction |
+|---|---|
+| [01 — Spray bottle](https://insait-institute.github.io/PhiRIE/media/demo-01.mp4) | Six shots with colorful trails |
+| [02 — Bottle to paper](https://insait-institute.github.io/PhiRIE/media/demo-02.mp4) | Grasp, lift, and place |
+| [03 — LIBERO bottle](https://insait-institute.github.io/PhiRIE/media/demo-03.mp4) | Grasp and move |
+| [04 — Kitchen](https://insait-institute.github.io/PhiRIE/media/demo-04.mp4) / [05 — Kitchen, harmonized](https://insait-institute.github.io/PhiRIE/media/demo-05.mp4) | Matched camera walk, harmonizer off / on |
+| [06 — Office](https://insait-institute.github.io/PhiRIE/media/demo-06.mp4) / [07 — Office, harmonized](https://insait-institute.github.io/PhiRIE/media/demo-07.mp4) | Matched camera walk, harmonizer off / on |
+| [08 — Office bottles](https://insait-institute.github.io/PhiRIE/media/demo-08.mp4) | Eighteen shots across nine bottles, with harmonization |
+| [09 — Bottle to mouse pad](https://insait-institute.github.io/PhiRIE/media/demo-09.mp4) | Grasp, lift, and place |
+| [Mass × friction](https://insait-institute.github.io/PhiRIE/media/spray-mass-friction-2x2.mp4) | Four settings, three shots per setting |
+
+### Explore the browser playground
+
+The [project page](https://insait-institute.github.io/PhiRIE/#playground) includes
+scene editing, a physics sandbox, and a recorded robot replay. To run it locally:
 
 ```bash
-bash run/setup_env.sh        # installs the main .venv; two more envs are needed,
-                             # see docs/ENVIRONMENTS.md
-
-bash run/run_factory.sh      # GT-driven benchmark mode (one scene)
-bash run/run_auto.sh         # fully automatic mode, no annotations
-bash run/run_inpaint.sh      # Gaussian-native removal + background completion
-bash run/run_simfoundry.sh   # SimFoundry-reproduction baseline (single frame)
-
-# interactive editor (runs in the gsplat env, serves on :8090)
-source run/env.sh
-run_gs interface.viewer --outputs-root outputs
+cd website
+npm ci
+npm run dev
+# Open http://127.0.0.1:5173/PhiRIE/
 ```
 
-Scene selection and every path/flag are environment variables (`SIMANY_SCENE`,
-`SIMANY_OUT`, `SIMANY_AUTO=1`, ...), documented in [run/env.sh](run/env.sh)
-and the `run/run_*.sh` launchers. Stages are python modules run from the repo root
-(`python -m agents.assets.s5_align`) or via the `run` / `run_sam3` / `run_gs`
-/ `run_qwen` helpers that `run/env.sh` defines — three python environments
-are unavoidable; [docs/ENVIRONMENTS.md](docs/ENVIRONMENTS.md) explains why.
+Use Node.js 22. The WebGPU playground runs in a compatible browser; recorded
+videos remain available on other browsers.
 
-## Documentation
+### Inspect a component before running it
 
-| Page | What it covers |
+```bash
+bash run/phiroom.sh describe generation
+bash run/phiroom.sh plan generation trellis -- --help
+bash run/phiroom.sh describe phiview
+```
+
+`plan` shows the command and required runtime. Replace `plan` with `run` when
+the model environment, input data, and weights are ready.
+
+### Open a prepared scene in PhiView
+
+After completing [PhiView setup](docs/PHIVIEW.md), initialize your configuration
+and launch a prepared scene:
+
+```bash
+bash run/phiview.sh init --config configs/phiview.local.yaml \
+  --simany-root "$PWD/integrations/phiview/backends/simany" \
+  --outputs-root "$PWD/outputs" \
+  --data-root /path/to/scannetpp --splats-root /path/to/splats
+
+bash run/phiview.sh run viewer --action demo \
+  --config configs/phiview.local.yaml --scene ROOM_factory
+```
+
+Select an object, make it simulatable, then use the viewer's shooting, friction,
+and movement controls. The harmonizer can be enabled separately.
+
+## 3. Components
+
+### Scene reconstruction
+
+Build the scene representation from captured views, camera geometry, meshes,
+and 3D Gaussian splats. See [reconstruction](pipelines/reconstruction/).
+
+![Reconstructed kitchen](website/public/media/Q01_27dd4da69e.webp)
+
+### Object discovery and generation
+
+Find objects in the captured scene and generate complete asset candidates with
+the available model adapters. See [discovery](pipelines/discovery/) and
+[generation](pipelines/generation/).
+
+![Object selection and generated candidate](website/public/media/component-generation.webp)
+
+### Metric registration
+
+Align each candidate with its observed object so position, orientation, and
+scale agree with the scene. See [registration](pipelines/registration/).
+
+![Generated bottle registered to the scene](website/public/media/bottle-06.webp)
+
+### Background completion
+
+Remove the selected object's original appearance and fill its exposed background
+before moving the replacement. See [inpainting](pipelines/inpainting/).
+
+![Background removal and completion](website/public/media/component-background.webp)
+
+### Physics and PhiView
+
+Connect collision geometry, mass, friction, and Gaussian appearance. The example
+below compares masses of 0.15 and 0.75 kg with friction coefficients of 0.05 and
+0.80. See [physics](pipelines/physics/) and [PhiView](https://github.com/RunyiYang/PhysicalView).
+
+[![Mass and friction comparison in PhiView](website/public/media/spray-mass-friction-impact.webp)](https://insait-institute.github.io/PhiRIE/media/spray-mass-friction-2x2.mp4)
+
+### Robot interaction
+
+Render the robot alongside reconstructed objects and use the simulation interfaces
+for interaction. The recordings above show scripted grasp-and-place sequences.
+Policy integration and evaluation tools are documented in [robotics](docs/ROBOT.md).
+
+[![Bottle manipulation in PhiView](website/public/media/demo-09.webp)](https://insait-institute.github.io/PhiRIE/media/demo-09.mp4)
+
+### Appearance harmonization
+
+Apply optional harmonization to the rendered view while preserving the recorded
+camera path and physical state. See the [harmonizer integration](integrations/harmonizer/)
+and [matched-view comparison](https://insait-institute.github.io/PhiRIE/#motion).
+
+![Matched views with and without harmonization](website/public/media/paper-teaser.webp)
+
+## 4. Build a scene
+
+Prepare posed images, the scene mesh, and a Gaussian reconstruction using
+[the data guide](docs/DATA_AND_WEIGHTS.md). Configure the paths in your environment,
+then run the automatic construction pipeline:
+
+```bash
+export SIMANY_SCENE=YOUR_SCENE_ID
+export SIMANY_OUT="$PWD/outputs/${SIMANY_SCENE}_auto"
+bash run/run_auto.sh
+```
+
+This runs object discovery, crop preparation, asset generation, registration,
+collision construction, and simulator export. For background editing, run:
+
+```bash
+bash run/run_inpaint.sh
+```
+
+See [the pipeline guide](docs/PIPELINE.md) for inputs, stage outputs, and the
+separate benchmark and single-image workflows.
+
+## 5. Code map
+
+| Directory | Purpose |
 |---|---|
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | annotated code map, execution model, env-var reference, old→new migration table |
-| [docs/PIPELINE.md](docs/PIPELINE.md) | the generation pipeline stage by stage, all four run modes |
-| [docs/ROBOT.md](docs/ROBOT.md) | the pi0.5 closed loop: components, recipes, honest results |
-| [docs/DATA_AND_WEIGHTS.md](docs/DATA_AND_WEIGHTS.md) | datasets, weights, third_party inventory, outputs/ anatomy |
-| [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md) | the claims, the audited numbers, and what is deliberately not claimed |
-| [docs/BASELINES.md](docs/BASELINES.md) | positioning against concurrent systems; which comparisons are still owed |
-| [docs/ENVIRONMENTS.md](docs/ENVIRONMENTS.md) | why three python environments, and what lives in each |
-| [docs/PAPER_NOTES.md](docs/PAPER_NOTES.md) | paper working notes |
-| [docs/PAPER_REVISIONS.md](docs/PAPER_REVISIONS.md) | revisions owed after the July-2026 concurrent work |
-| [docs/DEMO_STORYBOARD.md](docs/DEMO_STORYBOARD.md) | demo video storyboard |
-| [docs/related/](docs/related/) | source material on cited prior work |
-| [docs/paper/](docs/paper/) | paper LaTeX source and `build.sh` |
-| [coding_agents/](coding_agents/) | how the AI coding agent's memory/history/skills are organized |
+| `phiroom/`, `pipelines/` | Component interfaces and pipeline recipes |
+| `agents/`, `models/` | Discovery, generation, registration, editing, and model adapters |
+| `robo/`, `simfactory/` | Robot interaction and simulator integration |
+| `integrations/phiview/` | PhiView source; upstream at [PhysicalView](https://github.com/RunyiYang/PhysicalView) |
+| `integrations/harmonizer/` | Optional appearance harmonization |
+| `run/`, `envs/` | Launchers and runtime environments |
+| `website/` | Project page, images, recordings, and browser demos |
+| `docs/`, `tests/` | Guides and automated checks |
 
-## Naming
+The Python package and command remain named `phiroom` for compatibility with
+earlier versions. Development uses `main`.
 
-The project is **PhiRIE**, previously developed under the names SimAny, PhiRoom,
-and SimFoundry. The GitHub repository is `insait-institute/PhiRIE`; `phiroom`,
-`simfactory`, `SIMANY_*`, and legacy `SIMF_*` entry points remain compatible.
-References to the external SimFoundry baseline retain their original meaning.
-Development is consolidated on `main`. Historical branch tips are recoverable
-from the original RunyiYang/PhiRIE v2.0.1 history bundle. This organization repository
-starts from the recorded release snapshot in [RELEASE_SOURCE.json](RELEASE_SOURCE.json).
+## 6. Release plan
 
-## Historical results
+The project has developed from **0.0.0: reconstruction prototype**, through
+**1.0.0: object construction and simulation**, to **2.0.0: modular pipeline and
+PhiView**. The current maintenance version is **2.0.1**.
 
-These are historical measurements, not experiments rerun for v2.0.1. Current
-scientific completion remains governed by [FINAL_EXPERIMENTS.md](FINAL_EXPERIMENTS.md).
-
-Protocol: all 50 ScanNet++ v2 validation scenes, unless noted
-(full tables and caveats in [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md)).
-
-- Geometry F1@20 mm **0.783** GT-driven (hybrid generation; 0.708
-  single-view), **0.582** fully automatic (scored vs matched GT).
-- Automatic mode with no annotations: 1,082 instances, 62.0% tier-A+B yield,
-  75.4% drop-test stable.
-- Cost: 9.7 A6000-hours for 50 scenes GT-driven, 14.1 automatic
-  (11.6 / 17.0 min per scene).
-- Appearance on the official DSLR test split: composite twin 28.32 dB vs
-  28.89 dB SceneSplat background — a 0.57 dB gap; automatic twin 27.52 dB.
+Next steps are guided installation, downloadable prepared scenes and repeatable
+demos, followed by documented evaluation configurations and results. See
+[RELEASE_PLAN.md](RELEASE_PLAN.md) and [the version tree](https://insait-institute.github.io/PhiRIE/#versions).

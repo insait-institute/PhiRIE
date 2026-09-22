@@ -4,7 +4,7 @@ let previousFocus;
 function showImage(
   src,
   title,
-  description = "Preserved from the project’s paper figure collection. Source details are available in the asset manifest.",
+  description = "PhiRIE reconstruction and interaction results.",
 ) {
   previousFocus = document.activeElement;
   $("#lightbox-image").src = src;
@@ -114,50 +114,70 @@ $("#load-more").addEventListener("click", () => {
   renderGallery();
 });
 
-const objects = ["headphone", "cup", "keyboard"];
-const videoList = objects.flatMap((object) =>
-  ["shooting", "robot"].map((family) => ({ object, family })),
-);
-videoList.forEach(({ object, family }, i) => {
-  const label =
-    object === "headphone"
-      ? "Headphones"
-      : object[0].toUpperCase() + object.slice(1);
-  const button = document.createElement("button");
-  button.setAttribute("aria-pressed", String(i === 0));
-  const img = document.createElement("img");
-  img.src = `media/${object}-${family === "shooting" ? "06_shooting_1" : "10_robot_2"}.webp`;
-  img.alt = "";
-  img.loading = "lazy";
-  const text = document.createElement("span");
-  text.textContent = label;
-  const small = document.createElement("small");
-  small.textContent =
-    family === "shooting" ? "Two impacts · 4 s" : "Robot interaction · 7 s";
-  text.append(small);
-  button.append(img, text);
-  button.addEventListener("click", () => {
-    const video = $("#result-video");
-    video.pause();
-    video.src = `media/${object}_${family}.mp4`;
-    video.poster = img.src;
-    video.setAttribute("aria-label", `Recorded ${label} ${family} sequence`);
-    video.load();
-    $("#video-title").textContent =
-      `${label} / ${family === "shooting" ? "two impacts" : "robot interaction"}`;
-    $("#video-counter").textContent = `0${i + 1} / 06`;
-    $("#video-description").textContent =
-      family === "shooting"
-        ? "Two scripted projectile launches with SAM3D collision geometry. Estimated parameters; a qualitative physics demonstration."
-        : object === "cup"
-          ? "Recorded scripted push and retract with SAM3D cup collision geometry. This sequence does not establish a successful grasp or learned-policy performance."
-          : "Recorded scripted robot motion with SAM3D appearance replacement and the original collision dynamics. No new SAM3D robot dynamics or grasp success is claimed.";
-    document
-      .querySelectorAll(".video-picker button")
-      .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+fetch("demos.json")
+  .then((response) => {
+    if (!response.ok) throw new Error("Demos unavailable");
+    return response.json();
+  })
+  .then((videos) => {
+    videos.forEach((item, i) => {
+      const button = document.createElement("button");
+      button.dataset.videoId = item.id;
+      button.setAttribute("aria-pressed", String(i === 0));
+      const img = document.createElement("img");
+      img.src = item.poster;
+      img.alt = "";
+      img.loading = "lazy";
+      const text = document.createElement("span");
+      text.textContent = `${item.id} / ${item.title}`;
+      const small = document.createElement("small");
+      small.textContent = item.subtitle;
+      text.append(small);
+      button.append(img, text);
+      button.addEventListener("click", () => {
+        const video = $("#result-video");
+        video.pause();
+        video.src = item.src;
+        video.poster = item.poster;
+        video.setAttribute("aria-label", `PhiView: ${item.title}`);
+        video.load();
+        $("#video-title").textContent = item.title;
+        $("#video-type").textContent = `PHIVIEW · ${item.subtitle}`;
+        $("#video-counter").textContent = `${item.id} / 09`;
+        $("#video-description").textContent = item.description;
+        $("#video-download").href = item.src;
+        document
+          .querySelectorAll(".video-picker button")
+          .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      });
+      $(".video-picker").append(button);
+    });
+  })
+  .catch(() => {
+    $(".video-picker").textContent =
+      "Please refresh to load the demo collection.";
   });
-  $(".video-picker").append(button);
-});
+
+document.querySelectorAll("[data-film-source]").forEach((button) =>
+  button.addEventListener("click", () => {
+    const local = button.dataset.filmSource === "local";
+    const frame = $("#overview-youtube");
+    $("#overview-local").pause();
+    $("#overview-local").hidden = !local;
+    frame.hidden = local;
+    if (local) {
+      frame.removeAttribute("src");
+      $("#overview-local").load();
+    } else {
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/3-YdcBh6Tbw?rel=0&playsinline=1";
+    }
+    document
+      .querySelectorAll("[data-film-source]")
+      .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+  }),
+);
+
 $("#compare-slider").addEventListener("input", (e) =>
   $("#comparison").style.setProperty("--split", `${e.target.value}%`),
 );

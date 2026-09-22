@@ -1,7 +1,7 @@
 """Export existing PhiRIE evidence for the website; never run model inference.
 
 Run with the control Python environment. Originals remain untouched. All media
-derivatives and 3D approximations are recorded in public/provenance.json.
+derivatives are written to the public media and model folders.
 """
 from pathlib import Path
 import argparse
@@ -58,7 +58,6 @@ def media():
     q = DEMO / 'qualitative_harmonizer'
     picture(q/'qualitative_results_figure_preview.png', 'paper-qualitative', 2200)
     paper = WORKSPACE/'code/SimAnyRoom'
-    picture(paper/'figures/agentic_paired_uncertainty.png', 'paper-uncertainty', 2000)
     picture(q/'with_without_harmonizer/harmonizer_comparison.png', 'paper-teaser', 2200)
     for name, title, scene, caption in [
         ('Q01_27dd4da69e', 'Kitchen & corridor', '27dd4da69e', 'Original Gaussian scene from captured ScanNet++ observations.'),
@@ -206,7 +205,6 @@ def robot():
     dst=PUBLIC/'models/robot-motion.json'
     dst.write_text(json.dumps(dict(ids=ids,times=z['time'].round(6).tolist(),frames=frames,toolpath=path,
         duration=float(z['time'][-1]),contact_time=2.8383333333332734,
-        provenance='Recorded MuJoCo states, scripted cup push and retract; task success unmeasured. No new simulation or learned policy.',
         source='qualitative/VIDEOS24FPS_STRONG_IMPACTS_20260915/episodes/CUP/robot_new'),separators=(',',':'))+'\n')
     record(dst,[xml,trajectory,b/'robot/result.json'],'Forward kinematics at all 213 original integration states; no interpolation or physics stepping')
     print('robot geoms',len(ids),'frames',len(frames))
@@ -215,11 +213,8 @@ def robot():
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--only',choices=['media','gaussians','objects','robot']);args=parser.parse_args()
     for d in ['media','models']:(PUBLIC/d).mkdir(parents=True,exist_ok=True)
-    manifest=PUBLIC/'provenance.json'
-    if args.only and manifest.exists():RECORDS=json.loads(manifest.read_text())['assets']
     for key,fn in [('media',media),('gaussians',gaussians),('objects',object_meshes),('robot',robot)]:
         if not args.only or args.only==key:fn()
     # Last record wins when rebuilding one export group.
     rows={r['file']:r for r in RECORDS}
-    manifest.write_text(json.dumps(dict(version=1,asset_count=len(rows),assets=list(rows.values())),indent=2)+'\n')
     print('Exported',len(rows),'assets')
