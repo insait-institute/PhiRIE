@@ -188,9 +188,9 @@ h3 {
   margin-left: 3px;
 }
 .hero h1 {
-  font-size: clamp(42px, 5.3vw, 72px);
-  line-height: 1.08;
-  letter-spacing: -3px;
+  font-size: clamp(28px, 3.8vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.8px;
   font-weight: 500;
   margin: 26px auto 0;
   max-width: 1100px;
@@ -1182,7 +1182,7 @@ dialog > img {
     gap: 55px;
   }
   .hero h1 {
-    letter-spacing: -3px;
+    letter-spacing: -1.5px;
   }
   .hero-visual figure {
     height: 230px;
@@ -1250,7 +1250,7 @@ dialog > img {
     gap: 8px;
   }
   .hero h1 {
-    font-size: clamp(32px, 6.7vw, 48px);
+    font-size: clamp(28px, 6.7vw, 40px);
     letter-spacing: -1.3px;
     margin-top: 22px;
   }
@@ -1570,7 +1570,8 @@ dialog > img {
   margin: 0;
   padding: 2px 0 8px;
   list-style: none;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.8;
 }
 .authors li {
@@ -1811,7 +1812,7 @@ dialog > img {
 }
 @media (max-width: 760px) {
   .authors {
-    font-size: 14px;
+    font-size: 17px;
     gap: 16px;
   }
   .affiliations {
