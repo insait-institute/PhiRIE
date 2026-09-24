@@ -1,4 +1,54 @@
 const $ = (s) => document.querySelector(s);
+const notice = $(".code-notice");
+const noticeButton = $(".release-dot");
+const noticeText = $("#code-release-note");
+let noticePinned = false;
+function showNotice(show) {
+  noticeText.hidden = !show;
+  noticeButton.setAttribute("aria-expanded", String(show));
+}
+notice.addEventListener("mouseenter", () => showNotice(true));
+notice.addEventListener("mouseleave", () => {
+  if (!noticePinned && !notice.contains(document.activeElement))
+    showNotice(false);
+});
+notice.addEventListener("focusin", () => showNotice(true));
+notice.addEventListener("focusout", (event) => {
+  if (!notice.contains(event.relatedTarget)) {
+    noticePinned = false;
+    showNotice(false);
+  }
+});
+noticeButton.addEventListener("click", () => {
+  noticePinned = !noticePinned;
+  showNotice(noticePinned);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    noticePinned = false;
+    showNotice(false);
+  }
+});
+document.addEventListener("click", (event) => {
+  if (!notice.contains(event.target)) {
+    noticePinned = false;
+    showNotice(false);
+  }
+});
+$("#copy-citation").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText($("#bibtex").textContent);
+    $("#citation-status").textContent = "BibTeX copied to clipboard.";
+  } catch {
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents($("#bibtex"));
+    selection.removeAllRanges();
+    selection.addRange(range);
+    $("#citation-status").textContent =
+      "Citation selected. Copy the selection or download the .bib file.";
+  }
+});
 const dialog = $("#lightbox");
 let previousFocus;
 function showImage(

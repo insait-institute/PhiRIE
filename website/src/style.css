@@ -1816,3 +1816,264 @@ dialog > img {
     font-size: 12px;
   }
 }
+
+/* Paper resources and author profiles. */
+.site-header {
+  gap: 24px;
+}
+.site-header nav {
+  gap: clamp(16px, 2.1vw, 32px);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.resource-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 19px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 650;
+  border: 1px solid var(--green);
+  transition:
+    background 160ms,
+    box-shadow 160ms;
+}
+.code-button {
+  background: var(--green);
+  color: white;
+}
+.paper-button {
+  background: var(--lime);
+}
+.cite-button {
+  background: white;
+  font-family: ui-monospace, monospace;
+}
+.resource-button:hover {
+  box-shadow: 0 3px 10px #192c2426;
+}
+.code-notice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+}
+.release-dot {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: -3px;
+  top: -7px;
+  border-radius: 50%;
+  border: 2px solid var(--paper);
+  background: #c92b39;
+  color: white;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 750;
+}
+.release-tooltip {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -100px;
+  width: 320px;
+  background: #fff5f4;
+  color: #8d1925;
+  border: 1px solid #e7b4b8;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 28px #192c2426;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  z-index: 30;
+}
+.release-tooltip::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  top: -14px;
+  left: 0;
+  right: 0;
+}
+.hero {
+  padding-top: 65px;
+}
+.hero .paper-title {
+  margin-top: 0;
+}
+.authors li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authors a:hover,
+.authors a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.authors .author-scholar {
+  color: var(--green);
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
+}
+.publication-figure {
+  margin: 0 0 42px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+.publication-figure .image-expand {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: white;
+}
+.publication-figure img {
+  width: 100%;
+  height: auto;
+}
+.publication-figure figcaption {
+  padding: 18px 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.publication-figure figcaption strong {
+  color: var(--ink);
+}
+#results .paper-figure {
+  margin-bottom: 48px;
+}
+.citation-section {
+  padding-bottom: 32px;
+}
+.citation-heading,
+.citation-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.citation-heading .eyebrow {
+  margin-bottom: 15px;
+}
+.citation-heading p a {
+  color: var(--green);
+}
+.citation-heading h2 {
+  margin-bottom: 15px;
+}
+.citation-section pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  background: white;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.citation-status {
+  min-height: 26px;
+  color: var(--green);
+  font-size: 13px;
+}
+@media (max-width: 1000px) {
+  .site-header {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 14px 24px 10px;
+    gap: 12px;
+  }
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .site-header nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    gap: clamp(18px, 6vw, 44px);
+    font-size: 13px;
+  }
+  .site-header nav a,
+  .site-header nav a:last-child,
+  .site-header nav a[href="#method"],
+  .site-header nav a[href="#playground"] {
+    display: inline;
+  }
+  html {
+    scroll-padding-top: 115px;
+  }
+}
+@media (max-width: 600px) {
+  .site-header {
+    padding: 12px 16px 10px;
+  }
+  .header-actions {
+    gap: 7px;
+  }
+  .resource-button {
+    padding: 9px 11px;
+    min-height: 38px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .brand {
+    font-size: 19px;
+    gap: 3px;
+  }
+  .brand-mark {
+    font-size: 29px;
+    margin-right: 0;
+  }
+  .release-dot {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+  .release-tooltip {
+    position: fixed;
+    top: 62px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+  .hero {
+    padding-top: 40px;
+  }
+  .publication-figure .image-expand {
+    padding: 5px;
+  }
+  .publication-figure figcaption {
+    padding: 14px;
+    font-size: 12px;
+  }
+  .citation-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .citation-section pre {
+    font-size: 11px;
+    padding: 18px;
+  }
+  .citation-actions .button {
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+}

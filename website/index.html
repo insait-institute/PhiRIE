@@ -14,21 +14,24 @@
     />
     <meta
       property="og:title"
-      content="PhiRIE: From Photorealistic Reconstruction to Interactive Environments"
+      content="ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments"
     />
     <meta
       property="og:description"
-      content="Evidence-driven real-to-sim. Paper figures, reconstruction galleries, and three hands-on WebGPU demonstrations."
+      content="From captured rooms to interactive environments. Watch manipulation, shooting, and harmonization demos, read the paper, and explore the playground."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/media/Q03_578511c8a9.webp" />
+    <meta
+      property="og:image"
+      content="https://insait-institute.github.io/PhiRIE/media/paper-teaser-arxiv.png"
+    />
     <meta
       property="og:url"
       content="https://insait-institute.github.io/PhiRIE/"
     />
     <link rel="canonical" href="https://insait-institute.github.io/PhiRIE/" />
     <title>
-      PhiRIE: From Photorealistic Reconstruction to Interactive Environments
+      ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments
     </title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/src/style.css" />
@@ -36,32 +39,61 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="PhiRIE home"
-        ><span class="brand-mark">Φ</span> PhiRIE<span class="brand-dot"
-          >.</span
-        ></a
+      <a class="brand" href="#" aria-label="ϕ-RIE home"
+        ><span class="brand-mark" aria-hidden="true">ϕ</span> RIE</a
       >
       <nav aria-label="Main navigation">
         <a href="#method">Method</a><a href="#motion">Demos</a
-        ><a href="#playground">Playground</a><a href="#results">Results</a
-        ><a href="#versions">Versions</a>
+        ><a href="#playground">Playground</a><a href="#results">Results</a>
       </nav>
-      <a
-        class="repo-link"
-        href="https://github.com/insait-institute/PhiRIE"
-        target="_blank"
-        rel="noreferrer"
-        >Code <span aria-hidden="true">↗</span></a
-      >
+      <div class="header-actions" aria-label="Research resources">
+        <div class="code-notice">
+          <a
+            class="resource-button code-button"
+            href="https://github.com/insait-institute/PhiRIE"
+            target="_blank"
+            rel="noreferrer"
+            aria-describedby="code-release-note"
+            >Code <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="release-dot"
+            type="button"
+            aria-label="Code release information"
+            aria-expanded="false"
+            aria-controls="code-release-note"
+          >
+            <span aria-hidden="true">!</span>
+          </button>
+          <p
+            id="code-release-note"
+            class="release-tooltip"
+            role="tooltip"
+            hidden
+          >
+            The author is busy with deadlines. The code will open-source before
+            10 October 2026
+          </p>
+        </div>
+        <a
+          class="resource-button paper-button"
+          href="https://arxiv.org/abs/2609.26795"
+          target="_blank"
+          rel="noreferrer"
+          >Paper <span aria-hidden="true">↗</span></a
+        >
+        <a
+          class="resource-button cite-button"
+          href="#citation"
+          aria-label="Cite this paper"
+          >&lt;cite&gt;</a
+        >
+      </div>
     </header>
     <main id="main">
       <section class="hero container">
-        <div class="eyebrow">
-          <span class="pulse-dot"></span> EVIDENCE-DRIVEN REAL-TO-SIM
-          <span class="release-pill">v2.0.1</span>
-        </div>
         <h1 class="paper-title">
-          <span class="title-line"><em>PhiRIE:</em> From Photorealistic</span>
+          <span class="title-line"><em>ϕ-RIE:</em> From Photorealistic</span>
           <span class="title-line">Reconstruction to</span>
           <span class="title-line">Interactive Environments</span>
         </h1>
@@ -73,15 +105,161 @@
             aria-label="All nine authors; scroll horizontally on small screens"
           >
             <ul class="authors" aria-label="Authors">
-              <li>Runyi Yang<sup>1</sup></li>
-              <li>Deheng Zhang<sup>1</sup></li>
-              <li>Xiaoye Wang<sup>1</sup></li>
-              <li>Kanzhi Wu<sup>2</sup></li>
-              <li>Lei Sun<sup>1</sup></li>
-              <li>Ajad Chhatkuli<sup>1</sup></li>
-              <li>Kunyu Peng<sup>3,∗</sup></li>
-              <li>Luc Van Gool<sup>1</sup></li>
-              <li>Danda Paudel<sup>1</sup></li>
+              <li>
+                <span
+                  ><a
+                    href="https://runyiyang.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Runyi Yang homepage"
+                    >Runyi Yang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=l5PcSqwAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Runyi Yang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://dehezhang2.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Deheng Zhang homepage"
+                    >Deheng Zhang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=7pEFc9wAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Deheng Zhang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://adamwang0224.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Xiaoye Wang homepage"
+                    >Xiaoye Wang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=KRQ3cJwAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Xiaoye Wang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://www.kanzhi.tech/about"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Kanzhi Wu homepage"
+                    >Kanzhi Wu</a
+                  ><sup>2</sup></span
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://ahupujr.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Lei Sun homepage"
+                    >Lei Sun</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=VLFyM50AAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Lei Sun on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://ajadchhatkuli.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Ajad Chhatkuli homepage"
+                    >Ajad Chhatkuli</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=3BHMHU4AAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Ajad Chhatkuli on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://kpeng9510.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Kunyu Peng homepage"
+                    >Kunyu Peng</a
+                  ><sup>3,∗</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=pA9c0YsAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Kunyu Peng on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://insait.ai/prof-luc-van-gool/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Luc Van Gool homepage"
+                    >Luc Van Gool</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Luc Van Gool on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://insait.ai/dr-danda-paudel/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Danda Paudel homepage"
+                    >Danda Paudel</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=W43pvPkAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Danda Paudel on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
             </ul>
           </div>
           <div class="affiliations">
@@ -167,47 +345,6 @@
             </div>
           </div>
         </section>
-        <div class="hero-visual" aria-label="Three real PhiRIE result views">
-          <figure>
-            <img
-              fetchpriority="high"
-              src="/media/Q01_27dd4da69e.webp"
-              alt="Gaussian reconstruction of a captured kitchen"
-              width="1440"
-              height="960"
-            />
-            <figcaption>
-              <span>01 / OBSERVE</span> Captured environments
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              fetchpriority="high"
-              src="/media/bottle-09.webp"
-              alt="Reconstructed bottle reassembled into a Gaussian office scene"
-              width="1600"
-              height="800"
-            />
-            <figcaption>
-              <span>02 / CONSTRUCT</span> Editable scene objects
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              fetchpriority="high"
-              src="/media/Q05_libero_living_room_scene5.webp"
-              alt="Recorded robot and reconstructed cup in a LIBERO tabletop scene"
-              width="1440"
-              height="960"
-            />
-            <figcaption>
-              <span>03 / INTERACT</span> Appearance meets motion
-            </figcaption>
-          </figure>
-          <span class="visual-note"
-            >Real project assets. Explore the details below.</span
-          >
-        </div>
         <div class="hero-foot">
           <span
             >REAL SCANS <i>×</i> OBJECT RECONSTRUCTION
@@ -218,10 +355,107 @@
         </div>
       </section>
 
+      <section class="section container" id="motion">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 — PHIVIEW DEMOS</p>
+            <h2>See the interaction<br />from start to finish.</h2>
+          </div>
+          <p>
+            Nine demonstrations of shooting, grasping, placing, and navigating
+            reconstructed rooms. Compare the same scenes with the harmonizer
+            switched off and on.
+          </p>
+        </div>
+        <div class="video-layout">
+          <div class="video-main">
+            <video
+              id="result-video"
+              controls
+              playsinline
+              preload="none"
+              poster="%BASE_URL%media/demo-01.webp"
+              aria-label="Spray bottle shooting in PhiView"
+            >
+              <source src="%BASE_URL%media/demo-01.mp4" type="video/mp4" />
+            </video>
+            <div class="video-caption">
+              <div>
+                <span class="caption-label" id="video-type"
+                  >PHIVIEW · SIX SHOTS · COLORFUL TRAILS</span
+                >
+                <h3 id="video-title">Spray bottle / shooting</h3>
+              </div>
+              <span id="video-counter">01 / 09</span>
+            </div>
+            <p id="video-description">
+              Shoot the spray bottle and watch its physical response.
+            </p>
+            <a
+              id="video-download"
+              class="media-download"
+              href="%BASE_URL%media/demo-01.mp4"
+              download
+              >Download MP4 ↓</a
+            >
+          </div>
+          <div
+            class="video-picker"
+            aria-label="Choose a PhiView demonstration"
+          ></div>
+        </div>
+        <article class="parameter-demo" id="physics-comparison">
+          <div class="parameter-heading">
+            <div>
+              <p class="eyebrow">MASS × FRICTION</p>
+              <h3>Same bottle. Four physical settings.</h3>
+            </div>
+            <p>
+              Three shots in each view. Mass: 0.15 / 0.75 kg. Friction: 0.05 /
+              0.80. The projectile, firing speed, cadence, and camera stay
+              fixed.
+            </p>
+          </div>
+          <video
+            id="parameter-video"
+            controls
+            playsinline
+            preload="none"
+            poster="%BASE_URL%media/spray-mass-friction-impact.webp"
+            aria-label="Two by two comparison of low and high bottle mass and friction"
+          >
+            <source
+              src="%BASE_URL%media/spray-mass-friction-2x2.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="parameter-links">
+            <a href="%BASE_URL%media/spray-mass-friction-2x2.mp4" download
+              >Download comparison ↓</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-impact.png"
+              target="_blank"
+              rel="noreferrer"
+              >Impact screenshot ↗</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-final.png"
+              target="_blank"
+              rel="noreferrer"
+              >Final-state screenshot ↗</a
+            ><a
+              href="https://github.com/RunyiYang/PhysicalView"
+              target="_blank"
+              rel="noreferrer"
+              >PhiView code ↗</a
+            >
+          </div>
+        </article>
+      </section>
+
       <section id="method" class="section container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">01 — THE IDEA</p>
+            <p class="eyebrow">02 — THE METHOD</p>
             <h2>A room is more<br />than its appearance.</h2>
           </div>
           <p>
@@ -230,6 +464,47 @@
             builds these pieces through evidence-guided construction.
           </p>
         </div>
+        <figure class="publication-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-teaser-arxiv.png"
+            data-title="ϕ-RIE at a glance"
+            aria-label="Enlarge ϕ-RIE at a glance"
+          >
+            <img
+              src="%BASE_URL%media/paper-teaser-arxiv.png"
+              alt="Paper teaser showing spray bottle reconstruction, generated assets, physical properties, harmonization, and robot and shooting interactions"
+              width="2034"
+              height="1002"
+              loading="lazy"
+            />
+          </button>
+          <figcaption>
+            <strong>ϕ-RIE at a glance.</strong> From captured views to editable
+            objects, physical interaction, and harmonized rendering.
+          </figcaption>
+        </figure>
+        <figure class="publication-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-main.png"
+            data-title="Method overview"
+            aria-label="Enlarge Method overview"
+          >
+            <img
+              src="%BASE_URL%media/paper-main.png"
+              alt="Main method figure showing scene observation, coupled object and background construction, and synchronized visual and physical states"
+              width="1600"
+              height="780"
+              loading="lazy"
+            />
+          </button>
+          <figcaption>
+            <strong>Method overview.</strong> Reconstruct the scene, build and
+            register objects, complete the background, and connect appearance to
+            simulation.
+          </figcaption>
+        </figure>
         <div class="method-grid">
           <article>
             <span class="step">01</span
@@ -283,35 +558,13 @@
             <span class="method-tag">Objects → environments</span>
           </article>
         </div>
-        <figure class="paper-figure">
-          <button
-            class="image-expand"
-            data-image="media/paper-qualitative.webp"
-            data-title="Qualitative environments · paper figure collection"
-            aria-label="Enlarge qualitative paper figure"
-          >
-            <img
-              loading="lazy"
-              src="/media/paper-qualitative.webp"
-              alt="Six qualitative environments from the paper figure collection: four ScanNet++ rooms and two LIBERO workspaces"
-              width="2092"
-              height="2200"
-            />
-          </button>
-          <figcaption>
-            <span class="caption-label">FROM THE PAPER FIGURE COLLECTION</span
-            ><strong>Different rooms. A shared representation.</strong> Gaussian
-            environments across ScanNet++ and LIBERO. Includes original scene
-            fits, saved background completion, and a recorded robot state.
-          </figcaption>
-        </figure>
       </section>
 
       <section id="playground" class="playground section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">02 — HANDS ON</p>
+              <p class="eyebrow">03 — HANDS ON</p>
               <h2>Go beyond<br />the still image.</h2>
             </div>
             <p>
@@ -408,106 +661,9 @@
           </div>
           <p class="lab-footnote">
             WebGPU needs a compatible browser and a secure connection. If it is
-            unavailable, the recorded results below remain accessible.
+            unavailable, the recorded demos above remain accessible.
           </p>
         </div>
-      </section>
-
-      <section class="section container" id="motion">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">03 — PHIVIEW DEMOS</p>
-            <h2>See the interaction<br />from start to finish.</h2>
-          </div>
-          <p>
-            Nine demonstrations of shooting, grasping, placing, and navigating
-            reconstructed rooms. Compare the same scenes with the harmonizer
-            switched off and on.
-          </p>
-        </div>
-        <div class="video-layout">
-          <div class="video-main">
-            <video
-              id="result-video"
-              controls
-              playsinline
-              preload="none"
-              poster="%BASE_URL%media/demo-01.webp"
-              aria-label="Spray bottle shooting in PhiView"
-            >
-              <source src="%BASE_URL%media/demo-01.mp4" type="video/mp4" />
-            </video>
-            <div class="video-caption">
-              <div>
-                <span class="caption-label" id="video-type"
-                  >PHIVIEW · SIX SHOTS · COLORFUL TRAILS</span
-                >
-                <h3 id="video-title">Spray bottle / shooting</h3>
-              </div>
-              <span id="video-counter">01 / 09</span>
-            </div>
-            <p id="video-description">
-              Shoot the spray bottle and watch its physical response.
-            </p>
-            <a
-              id="video-download"
-              class="media-download"
-              href="%BASE_URL%media/demo-01.mp4"
-              download
-              >Download MP4 ↓</a
-            >
-          </div>
-          <div
-            class="video-picker"
-            aria-label="Choose a PhiView demonstration"
-          ></div>
-        </div>
-        <article class="parameter-demo" id="physics-comparison">
-          <div class="parameter-heading">
-            <div>
-              <p class="eyebrow">MASS × FRICTION</p>
-              <h3>Same bottle. Four physical settings.</h3>
-            </div>
-            <p>
-              Three shots in each view. Mass: 0.15 / 0.75 kg. Friction: 0.05 /
-              0.80. The projectile, firing speed, cadence, and camera stay
-              fixed.
-            </p>
-          </div>
-          <video
-            id="parameter-video"
-            controls
-            playsinline
-            preload="none"
-            poster="%BASE_URL%media/spray-mass-friction-impact.webp"
-            aria-label="Two by two comparison of low and high bottle mass and friction"
-          >
-            <source
-              src="%BASE_URL%media/spray-mass-friction-2x2.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div class="parameter-links">
-            <a href="%BASE_URL%media/spray-mass-friction-2x2.mp4" download
-              >Download comparison ↓</a
-            ><a
-              href="%BASE_URL%media/spray-mass-friction-impact.png"
-              target="_blank"
-              rel="noreferrer"
-              >Impact screenshot ↗</a
-            ><a
-              href="%BASE_URL%media/spray-mass-friction-final.png"
-              target="_blank"
-              rel="noreferrer"
-              >Final-state screenshot ↗</a
-            ><a
-              href="https://github.com/RunyiYang/PhysicalView"
-              target="_blank"
-              rel="noreferrer"
-              >PhiView code ↗</a
-            >
-          </div>
-        </article>
       </section>
 
       <section class="comparison-section section">
@@ -576,6 +732,28 @@
             and details.
           </p>
         </div>
+        <figure class="paper-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-qualitative.webp"
+            data-title="Qualitative environments · paper figure collection"
+            aria-label="Enlarge qualitative paper figure"
+          >
+            <img
+              loading="lazy"
+              src="/media/paper-qualitative.webp"
+              alt="Six qualitative environments from the paper figure collection: four ScanNet++ rooms and two LIBERO workspaces"
+              width="2092"
+              height="2200"
+            />
+          </button>
+          <figcaption>
+            <span class="caption-label">FROM THE PAPER FIGURE COLLECTION</span
+            ><strong>Different rooms. A shared representation.</strong> Gaussian
+            environments across ScanNet++ and LIBERO. Includes original scene
+            fits, saved background completion, and a recorded robot state.
+          </figcaption>
+        </figure>
         <div class="gallery-toolbar">
           <div class="filters" role="group" aria-label="Filter result category">
             <button data-filter="All" aria-pressed="true">All results</button
@@ -623,13 +801,21 @@
               <div class="paper-links">
                 <a
                   class="button secondary"
-                  href="https://github.com/insait-institute/PhiRIE/releases/tag/v2.0.1"
+                  href="https://arxiv.org/abs/2609.26795"
                   target="_blank"
                   rel="noreferrer"
-                  >Get v2.0.1 ↗</a
+                  >Read the paper ↗</a
                 >
               </div>
-              <p class="small-note">Paper link coming soon.</p>
+              <p class="small-note">
+                <a
+                  href="https://arxiv.org/pdf/2609.26795"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Download PDF ↗</a
+                >
+                · arXiv:2609.26795 · September 2026
+              </p>
             </div>
           </div>
           <div class="research-figures">
@@ -653,6 +839,55 @@
             </figure>
           </div>
         </div>
+      </section>
+
+      <section
+        class="section container citation-section"
+        id="citation"
+        aria-labelledby="citation-title"
+      >
+        <div class="citation-heading">
+          <div>
+            <p class="eyebrow">CITATION</p>
+            <h2 id="citation-title">Cite ϕ-RIE.</h2>
+            <p>
+              <a
+                href="https://arxiv.org/abs/2609.26795"
+                target="_blank"
+                rel="noreferrer"
+                >arXiv:2609.26795 ↗</a
+              >
+            </p>
+          </div>
+          <div class="citation-actions">
+            <button class="button primary" id="copy-citation" type="button">
+              Copy BibTeX</button
+            ><a
+              class="button secondary"
+              href="%BASE_URL%media/phirie.bib"
+              download
+              >Download .bib ↓</a
+            >
+          </div>
+        </div>
+        <pre
+          tabindex="0"
+          aria-label="BibTeX citation"
+        ><code id="bibtex">@misc{yang2026phirie,
+  title = {{$\phi$-RIE}: From Photorealistic Reconstruction to Interactive Environments},
+  author = {Runyi Yang and Deheng Zhang and Xiaoye Wang and Kanzhi Wu and Lei Sun and Ajad Chhatkuli and Kunyu Peng and Luc Van Gool and Danda Pani Paudel},
+  year = {2026},
+  eprint = {2609.26795},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2609.26795}
+}</code></pre>
+        <p
+          class="citation-status"
+          id="citation-status"
+          role="status"
+          aria-live="polite"
+        ></p>
       </section>
 
       <section class="section container version-section" id="versions">
@@ -730,7 +965,10 @@
           <div>
             <p class="eyebrow">RELEASE PLAN</p>
             <h3>What comes next.</h3>
-            <p>Planned work; release dates will follow validation.</p>
+            <p>
+              Code will be open-source before 10 October 2026. Further releases
+              will follow validation.
+            </p>
           </div>
           <ol>
             <li>
@@ -763,10 +1001,8 @@
       </section>
     </main>
     <footer class="container">
-      <a class="brand" href="#"
-        ><span class="brand-mark">Φ</span> PhiRIE<span class="brand-dot"
-          >.</span
-        ></a
+      <a class="brand" href="#" aria-label="ϕ-RIE home"
+        ><span class="brand-mark" aria-hidden="true">ϕ</span> RIE</a
       >
       <p>From observations to interaction.</p>
       <div>

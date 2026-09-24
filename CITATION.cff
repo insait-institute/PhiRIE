@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use PhiRIE, please cite this software and its accompanying manuscript."
 type: software
-title: "PhiRIE: From Photorealistic Reconstruction to Interactive Environments"
+title: "ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments"
 version: 2.0.1
 date-released: 2026-09-21
 repository-code: "https://github.com/insait-institute/PhiRIE"
@@ -32,5 +32,33 @@ authors:
     given-names: "Luc"
     affiliation: "INSAIT, Sofia University “St. Kliment Ohridski”."
   - family-names: "Paudel"
-    given-names: "Danda"
+    given-names: "Danda Pani"
     affiliation: "INSAIT, Sofia University “St. Kliment Ohridski”."
+preferred-citation:
+  type: article
+  title: "ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments"
+  journal: "arXiv"
+  year: 2026
+  url: "https://arxiv.org/abs/2609.26795"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.26795"
+  authors:
+    - family-names: "Yang"
+      given-names: "Runyi"
+    - family-names: "Zhang"
+      given-names: "Deheng"
+    - family-names: "Wang"
+      given-names: "Xiaoye"
+    - family-names: "Wu"
+      given-names: "Kanzhi"
+    - family-names: "Sun"
+      given-names: "Lei"
+    - family-names: "Chhatkuli"
+      given-names: "Ajad"
+    - family-names: "Peng"
+      given-names: "Kunyu"
+    - family-names: "Van Gool"
+      given-names: "Luc"
+    - family-names: "Paudel"
+      given-names: "Danda Pani"

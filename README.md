@@ -1,24 +1,44 @@
-# PhiRIE
+# ϕ-RIE
 
 ### From Photorealistic Reconstruction to Interactive Environments
 
-[Project page](https://insait-institute.github.io/PhiRIE/) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView) · [Release plan](RELEASE_PLAN.md)
+[Project page](https://insait-institute.github.io/PhiRIE/) · [Paper](https://arxiv.org/abs/2609.26795) · [Citation](#citation) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView) · [Release plan](RELEASE_PLAN.md)
 
-**PhiRIE turns captured rooms into editable environments.** It connects object
+**ϕ-RIE turns captured rooms into editable environments.** It connects object
 discovery, 3D asset generation, metric registration, background completion, and
 physics. PhiView lets you explore the result, change object parameters, shoot
 projectiles, and run robot interactions.
 
-[![Watch the PhiRIE demo](website/public/media/phirie-demo.webp)](https://youtu.be/3-YdcBh6Tbw)
+![ϕ-RIE teaser: reconstruction, object assets, physical interaction, and harmonization](website/public/media/paper-teaser-arxiv.png)
 
-**Runyi Yang**, Deheng Zhang, Xiaoye Wang, Kanzhi Wu, Lei Sun, Ajad Chhatkuli,
-Kunyu Peng*, Luc Van Gool, Danda Paudel
+[Runyi Yang](https://runyiyang.github.io/), [Deheng Zhang](https://dehezhang2.github.io/), [Xiaoye Wang](https://adamwang0224.github.io/), [Kanzhi Wu](https://www.kanzhi.tech/about), [Lei Sun](https://ahupujr.github.io/), [Ajad Chhatkuli](https://ajadchhatkuli.github.io/), [Kunyu Peng](https://kpeng9510.github.io/)*, [Luc Van Gool](https://insait.ai/prof-luc-van-gool/), [Danda Paudel](https://insait.ai/dr-danda-paudel/)
 
 INSAIT, Sofia University “St. Kliment Ohridski” · vivo Mobile Communication Co., Ltd. · Karlsruhe Institute of Technology
 
 Contact: [runyi.yang@insait.ai](mailto:runyi.yang@insait.ai)
 
 *Corresponding author
+
+## Image demos
+
+| Shooting and physical parameters | Grasp and place |
+|---|---|
+| ![Four mass and friction settings in PhiView](website/public/media/spray-mass-friction-impact.webp) | ![Bottle grasp and placement on a mouse pad](website/public/media/demo-09.webp) |
+| Three colorful shots per setting | Lift the bottle and move it to the target |
+
+![Appearance harmonization in matched views](website/public/media/paper-teaser.webp)
+
+Watch [the full demo](https://youtu.be/3-YdcBh6Tbw) or explore
+[all nine recordings](https://insait-institute.github.io/PhiRIE/#motion) on the project page.
+
+## Method overview
+
+![ϕ-RIE main figure: scene observation, coupled construction, and interactive environments](website/public/media/paper-main.png)
+
+The pipeline connects captured Gaussian scenes to complete object assets and
+backgrounds, then keeps rendered appearance aligned with simulated body poses.
+
+> **Code release:** The author is busy with deadlines. The code will open-source before 10 October 2026
 
 ## 1. Installation
 
@@ -212,3 +232,19 @@ PhiView**. The current maintenance version is **2.0.1**.
 Next steps are guided installation, downloadable prepared scenes and repeatable
 demos, followed by documented evaluation configurations and results. See
 [RELEASE_PLAN.md](RELEASE_PLAN.md) and [the version tree](https://insait-institute.github.io/PhiRIE/#versions).
+
+## Citation
+
+[Paper on arXiv](https://arxiv.org/abs/2609.26795)
+
+```bibtex
+@misc{yang2026phirie,
+  title = {{$\phi$-RIE}: From Photorealistic Reconstruction to Interactive Environments},
+  author = {Runyi Yang and Deheng Zhang and Xiaoye Wang and Kanzhi Wu and Lei Sun and Ajad Chhatkuli and Kunyu Peng and Luc Van Gool and Danda Pani Paudel},
+  year = {2026},
+  eprint = {2609.26795},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2609.26795}
+}
+```

@@ -70,6 +70,100 @@ try {
     "12 initial gallery cards; no model downloads before launch",
   );
   await page.screenshot({ path: path.join(output, "desktop.png") });
+  assert((await page.locator("h1").innerText()).startsWith("ϕ-RIE:"));
+  assert.equal(await page.locator(".hero > .eyebrow").count(), 0);
+  assert.deepEqual(await page.locator(".site-header nav a").allTextContents(), [
+    "Method",
+    "Demos",
+    "Playground",
+    "Results",
+  ]);
+  assert.equal(
+    (await page.locator(".site-header .brand").innerText()).replace(
+      /\s+/g,
+      " ",
+    ),
+    "ϕ RIE",
+  );
+  assert.equal(await page.locator(".authors li > span > a").count(), 9);
+  assert.equal(await page.locator(".author-scholar").count(), 8);
+  assert.equal(
+    await page.locator(".paper-button").getAttribute("href"),
+    "https://arxiv.org/abs/2609.26795",
+  );
+  assert.equal(
+    await page.locator("main > section:nth-child(2)").getAttribute("id"),
+    "motion",
+  );
+  for (const asset of ["paper-teaser-arxiv.png", "paper-main.png"]) {
+    const figure = page.locator(`.publication-figure img[src$="${asset}"]`);
+    await figure.scrollIntoViewIfNeeded();
+    await figure.evaluate((img) => img.decode());
+    assert(await figure.evaluate((img) => img.naturalWidth > 1000));
+  }
+  await page.locator(".code-button").hover();
+  assert(await page.locator("#code-release-note").isVisible());
+  assert.equal(
+    (await page.locator("#code-release-note").innerText())
+      .replace(/\s+/g, " ")
+      .trim(),
+    "The author is busy with deadlines. The code will open-source before 10 October 2026",
+  );
+  await page.keyboard.press("Escape");
+  assert(!(await page.locator("#code-release-note").isVisible()));
+  await page.locator(".code-button").focus();
+  assert(await page.locator("#code-release-note").isVisible());
+  await page.locator(".paper-button").focus();
+  assert(!(await page.locator("#code-release-note").isVisible()));
+  await page.locator(".release-dot").click();
+  assert(await page.locator("#code-release-note").isVisible());
+  await page.locator(".release-dot").click();
+  assert(!(await page.locator("#code-release-note").isVisible()));
+  await page.locator(".cite-button").click();
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.locator("#copy-citation").click();
+  await page.waitForFunction(() =>
+    document.querySelector("#citation-status").textContent.includes("copied"),
+  );
+  assert.equal(
+    await page.evaluate(() => navigator.clipboard.readText()),
+    await page.locator("#bibtex").textContent(),
+  );
+  const bibDownload = await context.request.get(base + "media/phirie.bib");
+  assert(bibDownload.ok());
+  assert.equal(
+    (await bibDownload.text()).trim(),
+    (await page.locator("#bibtex").textContent()).trim(),
+  );
+  await page
+    .locator("#citation")
+    .screenshot({ path: path.join(output, "citation.png") });
+  for (const width of [1440, 1280, 1024, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 1050 });
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+    assert(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+      `Overflow at ${width}px`,
+    );
+    for (const link of await page
+      .locator(".site-header nav a, .header-actions a")
+      .all()) {
+      assert(await link.isVisible());
+      const bounds = await link.boundingBox();
+      assert(
+        bounds.x >= 0 && bounds.x + bounds.width <= width,
+        `Clipped navigation at ${width}px`,
+      );
+    }
+    await page.screenshot({ path: path.join(output, `header-${width}.png`) });
+  }
+  await page.setViewportSize({ width: 1440, height: 1050 });
+  record(
+    "Paper resources, figures, and responsive header",
+    "Greek title, four navigation links, nine homepages, eight Scholar links, release notice, BibTeX clipboard/download, and layouts from 320 to 1440 px",
+  );
   assert.equal(await page.locator(".hero-summary + .featured-film").count(), 1);
   assert.equal(
     await page.locator(".contact a").getAttribute("href"),

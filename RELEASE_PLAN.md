@@ -1,4 +1,4 @@
-# PhiRIE release plan
+# ϕ-RIE release plan
 
 [Project page](https://insait-institute.github.io/PhiRIE/) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView](https://github.com/RunyiYang/PhysicalView)
 
@@ -15,7 +15,13 @@ The early numbers describe development milestones. Release notes for the
 packaged versions are available for [2.0.0](docs/releases/v2.0.0.md) and
 [2.0.1](docs/releases/v2.0.1.md).
 
-## Available now
+## Code release
+
+The code will open-source before **10 October 2026**.
+The [paper](https://arxiv.org/abs/2609.26795), project page, and recorded demos
+are available now.
+
+## Current implementation
 
 - Component interfaces for reconstruction, discovery, generation, registration,
   background editing, rendering, physics, and simulation.
