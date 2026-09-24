@@ -121,6 +121,8 @@ h3 {
 }
 .brand-mark {
   font-family: Georgia, serif;
+  font-style: italic;
+  font-synthesis: style;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
