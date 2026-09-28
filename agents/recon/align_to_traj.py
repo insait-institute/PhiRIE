@@ -11,7 +11,7 @@ correspondence the robot layer relies on; base z=0 is the robot mount plane,
 typically the TABLE, which plays the floor's role downstream).
 
 WHY Umeyama on centers: COLMAP's BA-consistent local poses win splat PSNR
-(25.52 vs 22.52 dB, see coding_agents memory / commits 589ab4a..d318e50),
+(25.52 vs 22.52 dB, see commits 589ab4a..d318e50),
 but its frame/scale are arbitrary; FK gives metric truth per frame. Centers
 constrain the similarity fully; rotations then serve as a free cross-check
 of the camera-axis convention (reported, not fitted).

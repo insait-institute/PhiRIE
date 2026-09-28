@@ -9,22 +9,22 @@ max_train_frames: 48
 render_stride: 3
 discovery_stride: 12
 dataset_root: /data/ScanNetpp
-gaussian: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v30/gaussian_train_only/train-pilot/scene.ply
+gaussian: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v30/gaussian_train_only/train-pilot/scene.ply
 gaussian_sha256: c5ef22a1faf6fb9a54d2d0836e53aea6df9bdad636d51439522a2de4f10fe191
 source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
 sam3_source:
-  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
   upstream_commit: 8e451d5eb43c817b64ae7577fb7b9ae223db88a9
   tree_sha256: 73c418359155da5da839853613260e84f48e5bd8e3d494c6614ca9e561a187ae
 sam3_checkpoint:
-  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
   sha256: 9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e
   bytes: 3450062241
-hf_home: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface
-sam3_python: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python
-render_python: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python
+hf_home: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/huggingface
+sam3_python: ${SIMANY_ROOT}/.envs/sam3d-objects/bin/python
+render_python: ${SIMANY_GSPLAT_PY}
 gaussian_provenance:
-  freeze_root: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v30
+  freeze_root: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v30
   producer_commit: c33e5c561dd642e4ce8cdc369875f619da9b0599
   anchors:
     contract/freeze_manifest.json:
@@ -58,7 +58,7 @@ unchanged_producer_files:
 component_rng_protocol: 'unchanged v21 producer defaults: projection RandomState(0),
   surface sampling seed42, SAM3 eval inference'
 crop_comparison_reference:
-  directory: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
+  directory: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
   anchors:
     pilot_summary.json:
       sha256: 3818cffc464cd0cb76c27476185f540e499bf609d490c2addc7f3c1cd6dc4a51

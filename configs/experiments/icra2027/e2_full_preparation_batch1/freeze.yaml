@@ -4,483 +4,483 @@ freeze_id: 20260906-e7c60da-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: preparation_config
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/execution.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/execution.yaml
   kind: experiment_config
   required: true
 - id: full_e2_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   kind: experiment_config
   required: true
 - id: background_admission
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_materialization/background_admission.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_materialization/background_admission.yaml
   kind: experiment_config
   required: true
 - id: pilot_preparation_gate
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/dispatch/independent_completion_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v3/dispatch/independent_completion_gate.json
   kind: source_manifest
   required: true
 - id: preparation_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  path: ${SIMANY_ROOT}/.venv/bin/python3.11
   kind: python_runtime
   required: true
 - id: prepare_0d2ee665be
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/0d2ee665be.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/0d2ee665be.yaml
   kind: experiment_config
   required: true
 - id: factory_0d2ee665be
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/0d2ee665be/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/0d2ee665be/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_0d2ee665be
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/0d2ee665be.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/0d2ee665be.yaml
   kind: experiment_config
   required: true
 - id: prepare_13c3e046d7
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/13c3e046d7.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/13c3e046d7.yaml
   kind: experiment_config
   required: true
 - id: factory_13c3e046d7
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/13c3e046d7/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/13c3e046d7/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_13c3e046d7
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/13c3e046d7.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/13c3e046d7.yaml
   kind: experiment_config
   required: true
 - id: prepare_1ada7a0617
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/1ada7a0617.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/1ada7a0617.yaml
   kind: experiment_config
   required: true
 - id: factory_1ada7a0617
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/1ada7a0617/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/1ada7a0617/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_1ada7a0617
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/1ada7a0617.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/1ada7a0617.yaml
   kind: experiment_config
   required: true
 - id: prepare_21d970d8de
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/21d970d8de.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/21d970d8de.yaml
   kind: experiment_config
   required: true
 - id: factory_21d970d8de
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/21d970d8de/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/21d970d8de/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_21d970d8de
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/21d970d8de.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/21d970d8de.yaml
   kind: experiment_config
   required: true
 - id: prepare_25f3b7a318
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/25f3b7a318.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/25f3b7a318.yaml
   kind: experiment_config
   required: true
 - id: factory_25f3b7a318
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/25f3b7a318/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/25f3b7a318/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_25f3b7a318
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/25f3b7a318.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/25f3b7a318.yaml
   kind: experiment_config
   required: true
 - id: prepare_27dd4da69e
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/27dd4da69e.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/27dd4da69e.yaml
   kind: experiment_config
   required: true
 - id: factory_27dd4da69e
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/27dd4da69e/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/27dd4da69e/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_27dd4da69e
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/27dd4da69e.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/27dd4da69e.yaml
   kind: experiment_config
   required: true
 - id: prepare_286b55a2bf
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/286b55a2bf.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/286b55a2bf.yaml
   kind: experiment_config
   required: true
 - id: factory_286b55a2bf
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/286b55a2bf/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/286b55a2bf/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_286b55a2bf
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/286b55a2bf.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/286b55a2bf.yaml
   kind: experiment_config
   required: true
 - id: prepare_31a2c91c43
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/31a2c91c43.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/31a2c91c43.yaml
   kind: experiment_config
   required: true
 - id: factory_31a2c91c43
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/31a2c91c43/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/31a2c91c43/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_31a2c91c43
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/31a2c91c43.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/31a2c91c43.yaml
   kind: experiment_config
   required: true
 - id: prepare_3864514494
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3864514494.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3864514494.yaml
   kind: experiment_config
   required: true
 - id: factory_3864514494
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3864514494/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3864514494/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_3864514494
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3864514494.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3864514494.yaml
   kind: experiment_config
   required: true
 - id: prepare_38d58a7a31
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/38d58a7a31.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/38d58a7a31.yaml
   kind: experiment_config
   required: true
 - id: factory_38d58a7a31
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/38d58a7a31/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/38d58a7a31/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_38d58a7a31
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/38d58a7a31.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/38d58a7a31.yaml
   kind: experiment_config
   required: true
 - id: prepare_3db0a1c8f3
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3db0a1c8f3.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3db0a1c8f3.yaml
   kind: experiment_config
   required: true
 - id: factory_3db0a1c8f3
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3db0a1c8f3/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3db0a1c8f3/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_3db0a1c8f3
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3db0a1c8f3.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3db0a1c8f3.yaml
   kind: experiment_config
   required: true
 - id: prepare_3e8bba0176
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3e8bba0176.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3e8bba0176.yaml
   kind: experiment_config
   required: true
 - id: factory_3e8bba0176
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3e8bba0176/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3e8bba0176/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_3e8bba0176
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3e8bba0176.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3e8bba0176.yaml
   kind: experiment_config
   required: true
 - id: prepare_3f15a9266d
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3f15a9266d.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/3f15a9266d.yaml
   kind: experiment_config
   required: true
 - id: factory_3f15a9266d
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3f15a9266d/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/3f15a9266d/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_3f15a9266d
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3f15a9266d.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/3f15a9266d.yaml
   kind: experiment_config
   required: true
 - id: prepare_40aec5fffa
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/40aec5fffa.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/40aec5fffa.yaml
   kind: experiment_config
   required: true
 - id: factory_40aec5fffa
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/40aec5fffa/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/40aec5fffa/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_40aec5fffa
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/40aec5fffa.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/40aec5fffa.yaml
   kind: experiment_config
   required: true
 - id: prepare_45b0dac5e3
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/45b0dac5e3.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/45b0dac5e3.yaml
   kind: experiment_config
   required: true
 - id: factory_45b0dac5e3
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/45b0dac5e3/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/45b0dac5e3/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_45b0dac5e3
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/45b0dac5e3.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/45b0dac5e3.yaml
   kind: experiment_config
   required: true
 - id: prepare_5748ce6f01
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5748ce6f01.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5748ce6f01.yaml
   kind: experiment_config
   required: true
 - id: factory_5748ce6f01
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/5748ce6f01/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/5748ce6f01/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_5748ce6f01
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5748ce6f01.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5748ce6f01.yaml
   kind: experiment_config
   required: true
 - id: prepare_578511c8a9
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/578511c8a9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/578511c8a9.yaml
   kind: experiment_config
   required: true
 - id: factory_578511c8a9
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/578511c8a9/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/578511c8a9/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_578511c8a9
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/578511c8a9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/578511c8a9.yaml
   kind: experiment_config
   required: true
 - id: prepare_5942004064
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5942004064.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5942004064.yaml
   kind: experiment_config
   required: true
 - id: factory_5942004064
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5942004064/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5942004064/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_5942004064
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5942004064.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5942004064.yaml
   kind: experiment_config
   required: true
 - id: prepare_5eb31827b7
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5eb31827b7.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5eb31827b7.yaml
   kind: experiment_config
   required: true
 - id: factory_5eb31827b7
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5eb31827b7/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5eb31827b7/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_5eb31827b7
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5eb31827b7.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5eb31827b7.yaml
   kind: experiment_config
   required: true
 - id: prepare_5ee7c22ba0
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5ee7c22ba0.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5ee7c22ba0.yaml
   kind: experiment_config
   required: true
 - id: factory_5ee7c22ba0
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5ee7c22ba0/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5ee7c22ba0/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_5ee7c22ba0
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5ee7c22ba0.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5ee7c22ba0.yaml
   kind: experiment_config
   required: true
 - id: prepare_5f99900f09
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5f99900f09.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/5f99900f09.yaml
   kind: experiment_config
   required: true
 - id: factory_5f99900f09
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5f99900f09/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/5f99900f09/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_5f99900f09
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5f99900f09.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/5f99900f09.yaml
   kind: experiment_config
   required: true
 - id: prepare_6115eddb86
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/6115eddb86.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/6115eddb86.yaml
   kind: experiment_config
   required: true
 - id: factory_6115eddb86
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/6115eddb86/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/6115eddb86/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_6115eddb86
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/6115eddb86.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/6115eddb86.yaml
   kind: experiment_config
   required: true
 - id: prepare_7831862f02
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7831862f02.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7831862f02.yaml
   kind: experiment_config
   required: true
 - id: factory_7831862f02
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7831862f02/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7831862f02/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_7831862f02
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7831862f02.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7831862f02.yaml
   kind: experiment_config
   required: true
 - id: prepare_7b6477cb95
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7b6477cb95.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7b6477cb95.yaml
   kind: experiment_config
   required: true
 - id: factory_7b6477cb95
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7b6477cb95/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7b6477cb95/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_7b6477cb95
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7b6477cb95.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7b6477cb95.yaml
   kind: experiment_config
   required: true
 - id: prepare_7bc286c1b6
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7bc286c1b6.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/7bc286c1b6.yaml
   kind: experiment_config
   required: true
 - id: factory_7bc286c1b6
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7bc286c1b6/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/7bc286c1b6/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_7bc286c1b6
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7bc286c1b6.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/7bc286c1b6.yaml
   kind: experiment_config
   required: true
 - id: prepare_825d228aec
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/825d228aec.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/825d228aec.yaml
   kind: experiment_config
   required: true
 - id: factory_825d228aec
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/825d228aec/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/825d228aec/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_825d228aec
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/825d228aec.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/825d228aec.yaml
   kind: experiment_config
   required: true
 - id: prepare_9071e139d9
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/9071e139d9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/9071e139d9.yaml
   kind: experiment_config
   required: true
 - id: factory_9071e139d9
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/9071e139d9/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/9071e139d9/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_9071e139d9
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/9071e139d9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/9071e139d9.yaml
   kind: experiment_config
   required: true
 - id: prepare_99fa5c25e1
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/99fa5c25e1.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/99fa5c25e1.yaml
   kind: experiment_config
   required: true
 - id: factory_99fa5c25e1
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/99fa5c25e1/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/99fa5c25e1/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_99fa5c25e1
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/99fa5c25e1.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/99fa5c25e1.yaml
   kind: experiment_config
   required: true
 - id: prepare_a24f64f7fb
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a24f64f7fb.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a24f64f7fb.yaml
   kind: experiment_config
   required: true
 - id: factory_a24f64f7fb
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a24f64f7fb/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a24f64f7fb/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_a24f64f7fb
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a24f64f7fb.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a24f64f7fb.yaml
   kind: experiment_config
   required: true
 - id: prepare_a8bf42d646
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a8bf42d646.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a8bf42d646.yaml
   kind: experiment_config
   required: true
 - id: factory_a8bf42d646
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/a8bf42d646/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/a8bf42d646/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_a8bf42d646
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a8bf42d646.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a8bf42d646.yaml
   kind: experiment_config
   required: true
 - id: prepare_a980334473
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a980334473.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/a980334473.yaml
   kind: experiment_config
   required: true
 - id: factory_a980334473
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a980334473/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/a980334473/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_a980334473
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a980334473.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/a980334473.yaml
   kind: experiment_config
   required: true
 - id: prepare_ac48a9b736
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/ac48a9b736.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/ac48a9b736.yaml
   kind: experiment_config
   required: true
 - id: factory_ac48a9b736
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/ac48a9b736/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/ac48a9b736/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_ac48a9b736
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/ac48a9b736.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/ac48a9b736.yaml
   kind: experiment_config
   required: true
 - id: prepare_b0a08200c9
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/b0a08200c9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/b0a08200c9.yaml
   kind: experiment_config
   required: true
 - id: factory_b0a08200c9
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/b0a08200c9/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/b0a08200c9/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_b0a08200c9
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/b0a08200c9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/b0a08200c9.yaml
   kind: experiment_config
   required: true
 - id: prepare_bde1e479ad
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/bde1e479ad.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/bde1e479ad.yaml
   kind: experiment_config
   required: true
 - id: factory_bde1e479ad
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/bde1e479ad/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/bde1e479ad/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_bde1e479ad
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/bde1e479ad.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/bde1e479ad.yaml
   kind: experiment_config
   required: true
 - id: prepare_c4c04e6d6c
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/c4c04e6d6c.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/c4c04e6d6c.yaml
   kind: experiment_config
   required: true
 - id: factory_c4c04e6d6c
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/c4c04e6d6c/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-02e9d33-v2/fidelity/materialization/factories/c4c04e6d6c/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_c4c04e6d6c
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/c4c04e6d6c.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/c4c04e6d6c.yaml
   kind: experiment_config
   required: true
 - id: prepare_e7af285f7d
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/e7af285f7d.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/e7af285f7d.yaml
   kind: experiment_config
   required: true
 - id: factory_e7af285f7d
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/e7af285f7d/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/e7af285f7d/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_e7af285f7d
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/e7af285f7d.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/e7af285f7d.yaml
   kind: experiment_config
   required: true
 - id: prepare_f3685d06a9
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/f3685d06a9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/f3685d06a9.yaml
   kind: experiment_config
   required: true
 - id: factory_f3685d06a9
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f3685d06a9/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/f3685d06a9/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_f3685d06a9
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/f3685d06a9.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/f3685d06a9.yaml
   kind: experiment_config
   required: true
 - id: prepare_fb5a96b1a2
-  path: /group/worldcept/code/SimAny-wt/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/fb5a96b1a2.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-preparation-v2/configs/experiments/icra2027/e2_full_preparation_batch1/fb5a96b1a2.yaml
   kind: experiment_config
   required: true
 - id: factory_fb5a96b1a2
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/fb5a96b1a2/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/fb5a96b1a2/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: generation_fb5a96b1a2
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/fb5a96b1a2.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/fb5a96b1a2.yaml
   kind: experiment_config
   required: true
 checkpoint_roots: []

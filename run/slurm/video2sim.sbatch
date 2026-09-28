@@ -4,7 +4,7 @@
 #SBATCH --mem=64G
 #SBATCH --time=03:50:00
 #SBATCH --job-name=video2sim
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/video2sim_%j.log
+#SBATCH --output=outputs/video2sim_%j.log
 # Usage:
 #   sbatch --export=ALL,VIDEO=/abs/path/clip.mp4 run/slurm/video2sim.sbatch
 #   sbatch run/slurm/video2sim.sbatch     # all of videos/*.mp4, sequentially
@@ -12,7 +12,7 @@
 # separate submissions hit stale cross-node NFS reads once (see
 # ablation_rowC_scene.sbatch) - same reasoning applies to the trained splat.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 # env.sh pins TORCH_CUDA_ARCH_LIST/CXX so gsplat's JIT cache is reused instead
 # of rebuilt; run_video2sim.sh re-sources it after exporting the recon-scenes
 # roots, which is safe (its exports all honour pre-set values).

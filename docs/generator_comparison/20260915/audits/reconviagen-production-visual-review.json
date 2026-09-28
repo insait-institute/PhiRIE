@@ -1,6 +1,0 @@
-{
-  "checked_utc": "2026-09-15T02:24:56.066774+00:00",
-  "contact_sheet": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/audits/reconviagen-production-renders.jpg",
-  "objects_in_montage": 29,
-  "review": "Inspected all29 production diagnostic renders in a contact sheet. Several geometries are fragmented, thin, or incomplete; some furniture-like structures are recognizable. Inspection does not validate textures or Gaussian appearance. Poor reconstructions are retained as outcomes; no quality-based reruns."
-}

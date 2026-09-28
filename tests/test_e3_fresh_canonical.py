@@ -99,11 +99,11 @@ def test_phase_guard_forbids_gt_and_original_rgb(phase):
                  '/data/ScanNetpp/data/09c1414f1b/dslr/resized_undistorted_images/a.JPG']:
         with pytest.raises(ValueError):guard('open',(path,'r',0))
     with pytest.raises(ValueError):guard('socket.connect',())
-    guard('open',('/group/worldcept/PhiRIE/code/SimAny/outputs/raw_mesh.ply','r',0))
+    guard('open',('${SIMANY_ROOT:-$PWD}/outputs/raw_mesh.ply','r',0))
 
 
 def test_control_forbids_fresh_source_gaussian_but_observe_can_read_it():
-    path='/group/worldcept/PhiRIE/code/SimAny/outputs/fresh/scene.ply'
+    path='${SIMANY_ROOT:-$PWD}/outputs/fresh/scene.ply'
     cfg={'scene_id':'09c1414f1b'}
     with pytest.raises(ValueError):launcher.guard_for('control',cfg,[path])('open',(path,'r',0))
     launcher.guard_for('observe',cfg,[path])('open',(path,'r',0))

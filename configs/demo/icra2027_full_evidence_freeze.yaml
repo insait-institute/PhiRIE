@@ -4,31 +4,31 @@ freeze_id: 20260906-aa67bf0-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: demo_config
-  path: /group/worldcept/code/SimAny-wt/d0-final-mode/configs/demo/icra2027_full_evidence.yaml
+  path: ${SIMANY_ROOT}/worktrees/d0-final-mode/configs/demo/icra2027_full_evidence.yaml
   kind: metadata
   required: true
 - id: e3_audit
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
   kind: metadata
   required: true
 - id: e9_provenance
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/paper_table_provenance.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/paper_table_provenance.json
   kind: metadata
   required: true
 - id: e9_submission
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/submission_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/submission_audit.json
   kind: metadata
   required: true
 - id: paper_receipt
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_publication/receipt.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_publication/receipt.json
   kind: metadata
   required: true
 - id: python
-  path: /group/worldcept/code/SimAny/.venv/bin/python
+  path: ${SIMANY_ROOT}/.venv/bin/python
   kind: metadata
   required: true
 - id: ffmpeg
@@ -36,7 +36,7 @@ input_roots:
   kind: metadata
   required: true
 - id: headless_env
-  path: /group/worldcept/code/SimAny/outputs/test-headless-setup/env.sh
+  path: ${SIMANY_ROOT}/outputs/test-headless-setup/env.sh
   kind: metadata
   required: true
 checkpoint_roots: []

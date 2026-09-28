@@ -10,7 +10,7 @@ CONFIG=Path(__file__).parents[1]/'configs/experiments/sim_recon_sim/reference.ya
 
 def test_planning_template_rejected():
     with pytest.raises(ValueError,match='resolved native schema'):
-        load_spec(Path(__file__).parents[1]/'plan/icra2027/11_sim_recon_sim/experiment.template.yaml')
+        load_spec(Path(__file__).parents[1]/'configs/experiments/sim_recon_sim/experiment.template.yaml')
 
 def test_native_pair_rejects_policy_camera_horizon_drift():
     a=load_spec(CONFIG)

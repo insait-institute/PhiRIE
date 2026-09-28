@@ -4,9 +4,9 @@
 #SBATCH --mem=100G
 #SBATCH --time=02:00:00
 #SBATCH --job-name=simany_demoB
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/demo_movie/jobB.log
+#SBATCH --output=outputs/demo_movie/jobB.log
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 OUTD=$SIMANY_ROOT/outputs/demo_movie
 echo "=== rescan d755 (floater cull) ==="

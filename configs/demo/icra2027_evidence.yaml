@@ -1,21 +1,21 @@
 schema_version: 1
 mode: draft
 freeze_id: 20260905-61d8ba4-v3
-source_root: /group/worldcept/code/SimAny
+source_root: ${SIMANY_ROOT}
 resolution:
 - 960
 - 540
 fps: 15
 sources:
 - id: capture
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31/construction/objects/obj_00/rgba.png
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31/construction/objects/obj_00/rgba.png
   sha256: 6b509a56d56f0af038745e4f7ff670f2934f65219a5ee9e9ae0da4836de26ab5
   kind: image
   freeze_id: 20260905-61d8ba4-v3
   origin_freeze_id: 20260905-76c15d5-v1
   source_type: training_only_prepared_object_observation
 - id: selection
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
   sha256: 3980de3ee981ab6c2bc03ed4fd085062e7d9a973b52add68d1d9ef21b1ee073d
   kind: selection
   freeze_id: 20260905-61d8ba4-v3
@@ -23,13 +23,13 @@ sources:
   evidence_comparison:
     kind: initial_selection
     records:
-    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A0/38d58a7a31/obj_1000.json
+    - path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A0/38d58a7a31/obj_1000.json
       sha256: 67abca44c64a713b5a2ed55c82b82edced5154385a23dd52adc265d81a344759
     - &id001
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A2/38d58a7a31/obj_1000.json
       sha256: 3980de3ee981ab6c2bc03ed4fd085062e7d9a973b52add68d1d9ef21b1ee073d
 - id: retry
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
   sha256: e09b1f692db34efb0d0eb7694beb0c8a9c5fe93a9e69de31104e99d618bc821e
   kind: selection
   freeze_id: 20260905-61d8ba4-v3
@@ -38,10 +38,10 @@ sources:
     kind: registration_retry
     records:
     - *id001
-    - path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
+    - path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/selected_assets/A3/38d58a7a31/obj_1000.json
       sha256: e09b1f692db34efb0d0eb7694beb0c8a9c5fe93a9e69de31104e99d618bc821e
 - id: missing
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v6/draft_assets/missing_manipulation.png
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v6/draft_assets/missing_manipulation.png
   sha256: 9b336ef46ff6baec636649ca8e5df96c1edf60ebb2367d1d12fc1fe292ee07c6
   kind: image
   freeze_id: 20260905-61d8ba4-v3

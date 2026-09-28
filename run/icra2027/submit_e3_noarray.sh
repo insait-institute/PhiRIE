@@ -17,7 +17,7 @@
 # this script intentionally refuses to append to or replay an existing ledger.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 PYTHON="$ROOT/.venv/bin/python"
 ROSTER="$ROOT/configs/experiments/icra2027/construction_regimes.yaml"
 JOBS="$ROOT/configs/experiments/icra2027/agentic_jobs.yaml"
@@ -25,7 +25,7 @@ POLICIES="$ROOT/configs/experiments/icra2027/agentic_policies.yaml"
 E0_LAUNCHER="$ROOT/run/slurm/icra2027_e0_preflight.sbatch"
 E3_LAUNCHER="$ROOT/run/slurm/icra2027_e3_agentic.sbatch"
 SBATCH_BIN=${SBATCH_BIN:-sbatch}
-ACCOUNT=${E3_ACCOUNT:-runyi_yang}
+ACCOUNT=${E3_ACCOUNT:-${SLURM_ACCOUNT:-phirie}}
 CPU_NODELIST=${E3_CPU_NODELIST:-sof1-h200-[0-7]}
 GPU_PROFILE=${E3_GPU_PROFILE:-gcp-a100}
 GPU_NODE=""

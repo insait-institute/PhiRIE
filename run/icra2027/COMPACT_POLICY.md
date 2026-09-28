@@ -14,15 +14,15 @@ Prepare scripted smoke (replace the uppercase arguments with exact frozen paths,
 SHA256 values and newly reserved IDs):
 
 ```bash
-export SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny
-source /group/worldcept/code/SimAny/outputs/test-headless-setup/env.sh
-PY=/group/worldcept/code/SimAny/.venv/bin/python
+export SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT}
+source ${SIMANY_ROOT}/outputs/test-headless-setup/env.sh
+PY=${SIMANY_ROOT}/.venv/bin/python
 $PY -m run.icra2027.e4_compact_policy prepare --mode scripted \
   --camera-config-path CAMERA_CONFIG --camera-config-sha256 CAMERA_CONFIG_SHA256 \
   --camera-output CAMERA_OUTPUT --expected-code-commit SOURCE_COMMIT \
   --freeze-id SCRIPTED_FREEZE_ID \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/SCRIPTED_FREEZE_ID/harness/compact_scripted_smoke \
-  --openpi-root /group/worldcept/code/openpi-wt/e4-policy-server \
+  --out ${SIMANY_ROOT}/outputs/icra2027/SCRIPTED_FREEZE_ID/harness/compact_scripted_smoke \
+  --openpi-root ${OPENPI_ROOT}/worktrees/e4-policy-server \
   --openpi-commit 2f51088169d2e2b480ce54faa737be9b0279eed4
 ```
 

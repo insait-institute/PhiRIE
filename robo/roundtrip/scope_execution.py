@@ -8,7 +8,7 @@ import argparse
 import copy
 import json
 from pathlib import Path
-from robo.roundtrip.matrix import IDENTITY_FIELDS,read_rows,save_new,sha,canonical_hash,validate_terminal
+from robo.roundtrip.matrix import NATIVE_PYTHON,IDENTITY_FIELDS,read_rows,save_new,sha,canonical_hash,validate_terminal
 from robo.roundtrip.local_policy_instance import SCOPE_BLOCKS
 
 
@@ -81,7 +81,7 @@ def emit(primary,targets,destinations,out,*,worker_root,protocol,run_id,plan_onl
             for path in [dest['build_manifest'],*[role[k] for k in ('candidate_pool','rvg_receipt','repair_receipt') if role.get(k)]]:
                 input_hashes[str(Path(path).resolve())]=sha(path)
         if frozen_plan is None:u['scope_input_hashes']=input_hashes
-        base=['/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/.venv-native/bin/python','-m',
+        base=[NATIVE_PYTHON,'-m',
               'robo.roundtrip.scope_worker' if scope=='L1_target_destination' else 'robo.roundtrip.paired',
               '--config',u['config_path'],'--canonical-reference',u['bundle_dir'],'--canonical-manifest',u['canonical_manifest'],
               '--reset-bank',u['reset_bank'],'--out',str(Path(u['result_path_planned']).parent.parent),'--host','localhost','--port','8017']

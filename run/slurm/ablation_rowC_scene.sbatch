@@ -9,7 +9,7 @@
 # across separate job submissions hit stale cross-node NFS reads once
 # (see outputs/ablation_rowC_v4.log vs _clean.log); keep it one job.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 # SIMANY_AUTO=1 is what makes this row SAM3 discovery (factory_prepare would
 # otherwise silently fall back to the GT whitelist); _rowC2 is a fresh dir so

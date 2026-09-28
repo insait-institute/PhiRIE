@@ -89,7 +89,7 @@ SimAny/
 ├── interface/                  human-facing tools
 │   ├── viewer.py               viser multi-scene digital-twin editor (default port 8090)
 │   ├── mujoco_live_viewer.py   live MuJoCo sim rendered as gaussians in the browser (port 8091)
-│   ├── demo_movie.py           demo-film segments (storyboard: docs/DEMO_STORYBOARD.md)
+│   ├── demo_movie.py           demo-film segments (storyboard kept outside this repository)
 │   └── demo_session.py         scripted interactive-session demo (pybullet, CPU)
 ├── run/                        launchers
 │   ├── env.sh                  shared env: paths, three interpreters, run helpers (source it)
@@ -103,7 +103,6 @@ SimAny/
 │   └── slurm/                  sbatch launchers (fleet runs, ablations, demo, pi0.5)
 ├── tests/
 │   └── test_align_synthetic.py dataset-free synthetic stress suite for registration
-├── coding_agents/              AI coding-agent traces: memory/, history/, skills/
 ├── data/                       datasets (contents gitignored)
 ├── checkpoints/                downloaded weights (gitignored; dreamsim/ lives here;
 │                               top-level weights -> checkpoints compat symlink, because
@@ -113,11 +112,7 @@ SimAny/
 │                               BEHAVIOR-1K, bddl_data, behavior1k_datasets, mujoco_menagerie
 ├── outputs/                    per-scene result trees (see section 3)
 └── docs/                       this page, PIPELINE, ROBOT, DATA_AND_WEIGHTS,
-    │                           CONTRIBUTIONS, BASELINES, ENVIRONMENTS,
-    │                           PAPER_NOTES, PAPER_REVISIONS, DEMO_STORYBOARD
-    ├── related/                reference material on cited systems
-    └── paper/                  LaTeX source + build.sh (do not rename anything in here:
-                                "SimFoundry" in the paper cites the prior system arXiv:2606.28276)
+                                CONTRIBUTIONS, BASELINES, ENVIRONMENTS, MODULES
 ```
 
 ## 2. How execution works
@@ -128,12 +123,12 @@ three mutually incompatible torch environments). Stage modules run with the
 repo root on `sys.path`:
 
 ```bash
-cd /group/worldcept/code/SimAny
+cd ${SIMANY_ROOT}
 python -m agents.assets.s5_align        # works: python -m puts CWD on sys.path
 python agents/assets/s5_align.py        # fails: package imports unresolved
 ```
 
-From anywhere else, `export PYTHONPATH=/group/worldcept/code/SimAny` first
+From anywhere else, `export PYTHONPATH=${SIMANY_ROOT}` first
 (this is what `run/smoke_imports.sh` does).
 
 ### run/env.sh
@@ -144,8 +139,8 @@ Every launcher sources [`run/env.sh`](../run/env.sh), which resolves paths,
 | Helper | Interpreter variable | Default interpreter | Environment |
 |---|---|---|---|
 | `run` | `VENV` (override: `SIMANY_PY`) | `$ROOT/.venv/bin/python` | main pipeline: torch 2.4.1+cu124, open3d/trimesh/coacd/xformers |
-| `run_sam3` | `SAM3PY` (override: `SIMANY_SAM3_PY`) | `/group/streetsplat/worldcept/.envs/sam3/bin/python` | SAM3 + Qwen-Image-Edit: torch 2.10 |
-| `run_gs` | `MVPY` (override: `SIMANY_GSPLAT_PY`) | `/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python` | gsplat CUDA rendering (cp310) |
+| `run_sam3` | `SAM3PY` (override: `SIMANY_SAM3_PY`) | `${SIMANY_SAM3_PY}` | SAM3 + Qwen-Image-Edit: torch 2.10 |
+| `run_gs` | `MVPY` (override: `SIMANY_GSPLAT_PY`) | `${SIMANY_GSPLAT_PY}` | gsplat CUDA rendering (cp310) |
 | `run_qwen` | `QWEN_PY` (override: `QWEN_PY` — no `SIMANY_` prefix) | `$VENV` | set `QWEN_PY=$SAM3PY` on nodes with torch>=2.5 + enough VRAM |
 
 Usage: `run <package>.<module> [args...]`, e.g.
@@ -352,8 +347,7 @@ Non-module moves:
 Naming reminder: "SimFoundry" now refers only to the cited prior system
 (arXiv:2606.28276); "PhiRoom" survives as the GitHub repo name
 (github.com/RunyiYang/PhiRoom) and the package name in `pyproject.toml`. The
-system and paper name is **SimAny**. Nothing inside `docs/paper/` is ever
-renamed.
+system and paper name is **SimAny**.
 
 ## 5. Environment variables
 

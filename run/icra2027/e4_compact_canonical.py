@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import yaml
@@ -18,7 +19,7 @@ from run.icra2027.e3_auto_discovery_pilot import identity, sha
 from robo.tasks.pi05_tasks import GRASP_LABELS, RECEPTACLE_LABELS
 
 CODE = Path(__file__).resolve().parents[2]
-EVIDENCE = Path("/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027")
+EVIDENCE = Path(os.environ.get("SIMANY_EVIDENCE_ROOT", CODE)) / "outputs/icra2027"
 DISCOVERY = EVIDENCE / "20260905-76c15d5-v1/auto_discovery_pilot"
 TRELLIS = EVIDENCE / "20260905-02b54da-v2"
 RVG = EVIDENCE / "20260905-d1e8e21-v1"

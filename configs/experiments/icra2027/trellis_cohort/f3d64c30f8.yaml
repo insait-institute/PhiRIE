@@ -1,25 +1,25 @@
 schema_version: 1
 paper_ready: false
 seed: 42
-source_pilot: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f3d64c30f8
+source_pilot: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/f3d64c30f8
 source_summary_sha256: 0464c1e739e223dcf32a3bd3987841ab70b506dea50a86988f9314c0f9dc0373
 source_output_hashes_sha256: 2e6e74e3447cfd469c917788763c6923fbd2d9d039804e0dc640b61b577d916b
-python: /group/worldcept/code/SimAny/.venv/bin/python
+python: ${SIMANY_ROOT}/.venv/bin/python
 models:
   trellis_source:
-    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/trellis-source-442aa1e1afb9014e80681d3bf604e8d728a86ee7
+    path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/trellis-source-442aa1e1afb9014e80681d3bf604e8d728a86ee7
     upstream_repository: microsoft/TRELLIS
     upstream_commit: 442aa1e1afb9014e80681d3bf604e8d728a86ee7
     flexicubes_commit: 815e075a2a400d06c48d94c347674344ed6ae5c5
     file_count: 223
     tree_sha256: df4059255d1a72a6d82a76f2b9c97f034e1c1fd9c06ddec782bd8282be3f8401
   trellis_snapshot:
-    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/trellis-image-large-25e0d31ffbebe4b5a97464dd851910efc3002d96
+    path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/trellis-image-large-25e0d31ffbebe4b5a97464dd851910efc3002d96
     upstream_revision: 25e0d31ffbebe4b5a97464dd851910efc3002d96
     file_count: 13
     tree_sha256: 8daaba378d461e5ac0a7771c92d8ee70abfe7a95b0bb54149b44d3f12ea79d41
   dinov2_source:
-    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/torch/hub/facebookresearch_dinov2_main
+    path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/torch/hub/facebookresearch_dinov2_main
     upstream_repository: facebookresearch/dinov2
     upstream_commit: null
     upstream_commit_reason: torch.hub branch cache did not retain an upstream commit;
@@ -27,7 +27,7 @@ models:
     file_count: 203
     tree_sha256: bad25746e5bccefe9a039b7ebe5537c72765edc9be6654881699298f37f0cc4d
   dinov2_checkpoint:
-    path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/torch/hub/checkpoints/dinov2_vitl14_reg4_pretrain.pth
+    path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/torch/hub/checkpoints/dinov2_vitl14_reg4_pretrain.pth
     size_bytes: 1217607321
     sha256: 36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51
 runtime_sha256: 008d45bf3f4bb0ed651affd239e0d9b75d054b2dc170747f4d9b69033d54604f
@@ -39,13 +39,13 @@ source_discovery_hashes:
   pilot_summary.json: 0464c1e739e223dcf32a3bd3987841ab70b506dea50a86988f9314c0f9dc0373
   postrun_audit.json: f0455f1f10ea84e98d588084edc1227da2f600d8106a54ee8da22a1c44b13196
 source_discovery_config:
-  path: /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
   bytes: 9678
   mtime_ns: 1788599841893682554
   sha256: e470304281f03c0051af95ddb61975142be6b4fdb4ed9522aae69caa7f7b9081
 source_discovery_commit: 86613e37d7bdfcef5ad10eb5cf289051055cdec3
 source_discovery_contract:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
   bytes: 10053
   mtime_ns: 1788599945922128577
   sha256: e7d5111806d7ca1521b1db878c1ddb002c8d3edb3505f375a147d6a512d9ebd5

@@ -4,7 +4,7 @@ Preliminary source-frame annotations; all metric grounding and experiment result
 
 ## behavior_task0020
 
-Reference image: [ep00200010_c000005_left.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0020/dslr/resized_undistorted_images/ep00200010_c000005_left.jpg)
+Reference image: [ep00200010_c000005_left.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0020/dslr/resized_undistorted_images/ep00200010_c000005_left.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|
@@ -15,7 +15,7 @@ Reference image: [ep00200010_c000005_left.jpg](/group/worldcept/code/SimAny/data
 
 ## behavior_task0011
 
-Reference image: [00112700_1405_1416_left.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0011/dslr/resized_undistorted_images/00112700_1405_1416_left.jpg)
+Reference image: [00112700_1405_1416_left.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0011/dslr/resized_undistorted_images/00112700_1405_1416_left.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|
@@ -26,7 +26,7 @@ Reference image: [00112700_1405_1416_left.jpg](/group/worldcept/code/SimAny/data
 
 ## behavior_task0023
 
-Reference image: [00232480_1820_1831_left.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0023/dslr/resized_undistorted_images/00232480_1820_1831_left.jpg)
+Reference image: [00232480_1820_1831_left.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0023/dslr/resized_undistorted_images/00232480_1820_1831_left.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|
@@ -37,7 +37,7 @@ Reference image: [00232480_1820_1831_left.jpg](/group/worldcept/code/SimAny/data
 
 ## behavior_task0027
 
-Reference image: [00270040_1850_1861_left.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0027/dslr/resized_undistorted_images/00270040_1850_1861_left.jpg)
+Reference image: [00270040_1850_1861_left.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0027/dslr/resized_undistorted_images/00270040_1850_1861_left.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|
@@ -48,7 +48,7 @@ Reference image: [00270040_1850_1861_left.jpg](/group/worldcept/code/SimAny/data
 
 ## behavior_task0045
 
-Reference image: [00451330_1285_1296_right.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0045/dslr/resized_undistorted_images/00451330_1285_1296_right.jpg)
+Reference image: [00451330_1285_1296_right.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0045/dslr/resized_undistorted_images/00451330_1285_1296_right.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|
@@ -59,7 +59,7 @@ Reference image: [00451330_1285_1296_right.jpg](/group/worldcept/code/SimAny/dat
 
 ## behavior_task0002
 
-Reference image: [00020010_50_61_left.jpg](/group/worldcept/code/SimAny/data/recon_scenes/data/behavior_task0002/dslr/resized_undistorted_images/00020010_50_61_left.jpg)
+Reference image: [00020010_50_61_left.jpg](${SIMANY_ROOT}/data/recon_scenes/data/behavior_task0002/dslr/resized_undistorted_images/00020010_50_61_left.jpg)
 
 | Query | Template | Instruction |
 |---|---|---|

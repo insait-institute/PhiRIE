@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/metadata_PennPAL+06b0ffa5+2023-04-29-20h-28m-46s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/metadata_PennPAL+06b0ffa5+2023-04-29-20h-28m-46s.json",
       "sha256": "f1fb623b29036202e650657886a382837c658c5c86da8fb89eb0c49bfecd1a5c",
       "size_bytes": 1778
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/trajectory.h5",
       "sha256": "b056aec2341ba2d830f31663e126f5e5a19314df3eb642db876d6070db665780",
       "size_bytes": 763251
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/recordings/MP4/14436910.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/PennPAL/success/2023-04-29/Sat_Apr_29_20:28:46_2023/recordings/MP4/14436910.mp4",
       "sha256": "7220d7594e11a24ee90cfd6139fa3d1478309bb5a421f43c0fa0805ec3d612be",
       "size_bytes": 2920482
     }

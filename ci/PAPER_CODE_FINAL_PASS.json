@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "suite": "constructor-harness-audit-tables-v1",
-  "tested_commit": "8ad9c227a5f60a44b4e58fa56c4bafb5b9006178",
-  "workflow_run": "33572868851",
-  "test_files": 13
-}

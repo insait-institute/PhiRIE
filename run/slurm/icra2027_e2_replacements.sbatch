@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=100G
 #SBATCH --time=03:50:00
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-replace-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-replace-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e2-replace-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e2-replace-%j.err
 
 # Build the five fixed leakage-remediation bundles (eight objects total).
 # This script never edits outputs/<scene>_{factory,auto}; every job publishes
@@ -15,7 +15,7 @@
 # It is intentionally not submitted by this repository change.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 PYTHON_ENV="$ROOT/.envs/sam3d-objects"
 PYTHON="$PYTHON_ENV/bin/python"
 SAM3PY="$PYTHON"

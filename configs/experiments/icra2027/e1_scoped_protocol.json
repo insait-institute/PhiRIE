@@ -74,7 +74,7 @@
     "policy_id": "A4",
     "vocabulary": "FULL",
     "policies": {
-      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/configs/experiments/icra2027/agentic_automatic_policies.yaml",
+      "path": "${SIMANY_ROOT}/worktrees/e1-scoped-closure/configs/experiments/icra2027/agentic_automatic_policies.yaml",
       "sha256": "0831349a0de6c7885bcec27ec412298add1c84907dd4536b55f5e30c5ef002da"
     },
     "initial_tools": [
@@ -88,11 +88,11 @@
   "physical_implementation": {
     "call": "agents.eval.factory_report.drop_test",
     "source": {
-      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/agents/eval/factory_report.py",
+      "path": "${SIMANY_ROOT}/worktrees/e1-scoped-closure/agents/eval/factory_report.py",
       "sha256": "48f7ddbcaf710b959a749828e841c47882ad539e0ca424754b2410d19188f154"
     },
     "link_pose_source": {
-      "path": "/group/worldcept/code/SimAny-wt/e1-scoped-closure/robo/sim/s7_sim.py",
+      "path": "${SIMANY_ROOT}/worktrees/e1-scoped-closure/robo/sim/s7_sim.py",
       "sha256": "36c7043b4b96be512b52d6ed63479e5b5afce4bfc6afdd42f0af49af9d0ad4f6"
     },
     "input": "exact verified simulator-export URDF/collision assets",

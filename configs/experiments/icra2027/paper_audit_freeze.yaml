@@ -4,7 +4,7 @@ freeze_id: icra2027-contract-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/PhiRIE/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: frozen_fields
@@ -28,15 +28,15 @@ input_roots:
   kind: experiment_config
   required: true
 - id: construction_archived_aggregate
-  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
   kind: metadata
   required: true
 - id: fidelity_archived_aggregate
-  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e2-2c7ed67df534-full/fidelity/table-reval-2f3ca585f30a-20260904T121220Z/fidelity_table.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e2-2c7ed67df534-full/fidelity/table-reval-2f3ca585f30a-20260904T121220Z/fidelity_table.json
   kind: metadata
   required: true
 - id: agentic_archived_aggregate
-  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic/agentic_ablation.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic/agentic_ablation.json
   kind: metadata
   required: true
 checkpoint_roots: []

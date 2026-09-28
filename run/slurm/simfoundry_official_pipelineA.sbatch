@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --time=08:00:00
 #SBATCH --job-name=simfoundry_pipeA
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/simfoundry_official/pipelineA_%j.log
+#SBATCH --output=outputs/simfoundry_official/pipelineA_%j.log
 
 # Stage 3 of the official-SimFoundry integration attempt: run their Pipeline A
 # (video -> OmniGibson scene, stages 1b-14) on THEIR OWN example video first
@@ -15,18 +15,18 @@
 #
 # Scene/video are overridable so the SAME script serves the follow-up run on
 # our own video:
-#   sbatch --export=ALL,SCENE_NAME=pilot_a29cccc784,VIDEO_FPATH=/group/worldcept/PhiRIE/code/SimAny/videos/pilot_a29cccc784.mp4 \
+#   sbatch --export=ALL,SCENE_NAME=pilot_a29cccc784,VIDEO_FPATH=${SIMANY_ROOT:-$PWD}/videos/pilot_a29cccc784.mp4 \
 #     run/slurm/simfoundry_official_pipelineA.sbatch
 
 set -uo pipefail
 
-SIMF=/group/worldcept/PhiRIE/code/SimAny/third_party/SimFoundry
+SIMF=${SIMANY_ROOT:-$PWD}/third_party/SimFoundry
 SCENE_NAME="${SCENE_NAME:-PutCupInBowl_repro}"
 VIDEO_FPATH="${VIDEO_FPATH:-$SIMF/docs/assets/example_videos/PutCupInBowl.mp4}"
 
 export PATH="$HOME/bin:$PATH"           # mamba -> micromamba shim (see install sbatch)
 export PIP_CONFIG_FILE=/dev/null         # site pip.conf carries a dead NGC extra index
-export HF_HOME=/group/worldcept/hf_cache # reuse the existing gated-model cache (facebook/sam3 already present)
+export HF_HOME=${HF_HOME:-$HOME/.cache/huggingface} # reuse the existing gated-model cache (facebook/sam3 already present)
 
 # Same CUDA-env sanitization as the install sbatch: the submission shell
 # leaks CUDA_HOME=/opt/modules/nvidia-cuda-12.4.1 (+ CUDA_PATH /
@@ -44,7 +44,7 @@ export PATH="$(echo "$PATH" | tr ':' '\n' | grep -v '/opt/modules/nvidia-cuda' |
 # google-genai natively honors GOOGLE_GEMINI_BASE_URL (google/genai/_base_url.py).
 # Token is sourced from the existing credential file rather than copied to a
 # new file on disk.
-set -a; source /group/worldcept/PhiRIE/code/openrouter/.env; set +a
+set -a; source ${PHIRIE_WORKSPACE:-$HOME}/code/openrouter/.env; set +a
 export GEMINI_API_KEY="$OPENAI_API_KEY"
 export GOOGLE_GEMINI_BASE_URL="https://ai-gateway-native-gemini.plain-flower-4887.workers.dev/"
 unset OPENAI_API_KEY CF_PROJECT_ID CF_USER_ID MODEL_ID  # keep non-Gemini routes from grabbing the gateway token

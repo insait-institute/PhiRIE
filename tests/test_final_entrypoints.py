@@ -42,16 +42,3 @@ def test_preflight_rejects_submit_flag():
     assert result.returncode == 2
     assert "No experiment has been launched" in result.stderr
 
-
-@pytest.mark.parametrize("path", ["README.md", "RUNBOOK.md", "AGENT_PROMPT.md"])
-def test_old_plan_only_points_to_current_plan(path):
-    text = (ROOT / "plan/icra2027/14_finalization" / path).read_text()
-    assert "../14_final_experiments/" in text
-    assert "robo/finalize/protocol.py" not in text
-
-
-def test_active_entry_preserves_current_budget():
-    text = (ROOT / "plan/icra2027/ACTIVE_CAMPAIGN.md").read_text()
-    assert "14_final_experiments" in text
-    assert "2040" in text
-    assert "not a\nsecond campaign" in text

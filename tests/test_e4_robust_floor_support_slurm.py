@@ -128,7 +128,7 @@ esac
     fake_sacctmgr.write_text(
         """#!/usr/bin/env bash
 set -euo pipefail
-printf 'runyi_yang|%s|batch|normal|\n' "$TEST_SUBMIT_USER"
+printf 'phirie|%s|batch|normal|\n' "$TEST_SUBMIT_USER"
 """,
         encoding="utf-8",
     )
@@ -155,13 +155,13 @@ printf '%s\n' "$((10000 + count))"
 
     rendered = SUBMITTER.read_text(encoding="utf-8")
     replacements = {
-        "CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot": (
+        "CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot": (
             f"CODE_ROOT={shlex.quote(str(code_root))}"
         ),
-        "EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny": (
+        "EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}": (
             f"EVIDENCE_ROOT={shlex.quote(str(evidence_root))}"
         ),
-        "PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python": (
+        "PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python": (
             f"PYTHON={shlex.quote(str(fake_python))}"
         ),
         'LAUNCHER="$CODE_ROOT/run/slurm/'

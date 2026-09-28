@@ -15,13 +15,15 @@ System python3 (stdlib only). Usage:
     python3 run/fetch_droid_raw.py [--include-svo] [--max-gb 20]
 """
 import argparse
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-RLDS_DIR = Path("/group/worldcept/PhiRIE/data/droid/droid_100/1.0.0")
-DEST = Path("/group/worldcept/PhiRIE/data/droid/raw")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RLDS_DIR = Path(os.environ.get("SIMANY_DROID_RLDS_DIR", REPO_ROOT / "data/droid/droid_100/1.0.0"))
+DEST = Path(os.environ.get("SIMANY_DROID_RAW_ROOT", REPO_ROOT / "data/droid/raw"))
 BUCKET_PREFIX = "robotics/droid_raw/1.0.1"
 FETCH = Path(__file__).resolve().parent / "gcs_fetch.py"
 

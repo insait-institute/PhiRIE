@@ -317,7 +317,7 @@ def test_manifest_from_dict_unknown_kind_raises():
 # ------------------------------------------------------- semantic checks --
 
 def test_find_semantic_issues_flags_cluster_path():
-    d = {"checkpoint_path": "/group/worldcept/PhiRIE/checkpoints/openpi_cache/x"}
+    d = {"checkpoint_path": "/scratch/checkpoints/x"}
     issues = find_semantic_issues(d)
     assert any("cluster-specific path" in i for i in issues)
 

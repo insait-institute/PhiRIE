@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "preliminary_prospective_annotation",
-  "public_root": "/group/worldcept/code/SimAny/data/recon_scenes/data",
+  "public_root": "${SIMANY_ROOT}/data/recon_scenes/data",
   "selection_rule": {
     "sort": "lexicographic basename, *.jpg only",
     "indices": "Python round((N-1)*q/4), q=0,1,2,3,4; ties to even",

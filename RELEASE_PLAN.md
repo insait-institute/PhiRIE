@@ -17,7 +17,7 @@ packaged versions are available for [2.0.0](docs/releases/v2.0.0.md) and
 
 ## Code release
 
-The code will open-source before **10 October 2026**.
+The code is available in this repository under the [MIT License](LICENSE).
 The [paper](https://arxiv.org/abs/2609.26795), project page, and recorded demos
 are available now.
 

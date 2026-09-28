@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import sys
 import uuid
 
 import yaml
@@ -550,8 +551,8 @@ def main(argv=None):
     parser.add_argument('--prospective-summary', action='store_true')
     parser.add_argument('--stage-root')
     parser.add_argument('--tier', choices=['pilot', 'pilot_then_full'], default='pilot_then_full')
-    parser.add_argument('--h5-python', default='/group/worldcept/artifixer/.venv/bin/python')
-    parser.add_argument('--sfm-python', default='/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python')
+    parser.add_argument('--h5-python', default=os.environ.get('SIMANY_H5_PY', sys.executable))
+    parser.add_argument('--sfm-python', default=os.environ.get('SIMANY_PY', sys.executable))
     args = parser.parse_args(argv)
     if args.prospective_prepare:
         result = prepare_prospective(args.config, args.out, args.freeze_id, args.repo_root,

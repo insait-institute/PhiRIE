@@ -62,7 +62,6 @@ def resolve_sam3_ckpt() -> str:
 
     candidates = [
         os.path.expanduser(f"~/.cache/huggingface/hub/{_SAM3_SNAPSHOT_REL}"),
-        f"/group/worldcept/hf_cache/hub/{_SAM3_SNAPSHOT_REL}",
     ]
     if os.environ.get("HF_HOME"):
         candidates.insert(
@@ -72,8 +71,8 @@ def resolve_sam3_ckpt() -> str:
             return c
     raise FileNotFoundError(
         f"SAM3 checkpoint not found in any of: {candidates}. "
-        "Copy it to /group/worldcept/hf_cache/hub/models--facebook--sam3/ "
-        "or set HF_HOME to a shared location.")
+        "Download facebook/sam3 into the Hugging Face hub cache, point HF_HOME "
+        "at a cache that holds it, or set SIMANY_SAM3_CKPT.")
 
 
 # Repo root is derived from this file, so the tree can be moved or cloned.

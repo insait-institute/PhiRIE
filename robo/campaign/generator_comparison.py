@@ -17,7 +17,7 @@ from pathlib import Path
 import subprocess
 from .core import checked_path, digest, load, receipt, save, source_identity
 
-BASE = Path('/group/worldcept/PhiRIE/code/SimAny')
+BASE = Path(os.environ.get('SIMANY_ROOT', Path(__file__).resolve().parents[2]))
 OLD = BASE / 'outputs/icra2027/todo-followup-20260912'
 G = BASE / 'outputs/icra2027/20260908T222513Z-gaussian-system'
 SOURCE = Path(__file__).resolve().parents[2]

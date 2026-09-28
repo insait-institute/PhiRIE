@@ -10,14 +10,14 @@
 # outcome.  This script never requests a GPU and never submits a Slurm array.
 set -euo pipefail
 
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_candidate_cpu.sbatch"
 MENAGERIE_ROOT="$CODE_ROOT/third_party/mujoco_menagerie"
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
 EXPECTED_MENAGERIE_COMMIT=71f066ad0be9cd271f7ed58c030243ef157af9f4
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 CPU_NODELIST='sof1-h200-[0-7]'
 SETFACL=/usr/bin/setfacl
 GETFACL=/usr/bin/getfacl

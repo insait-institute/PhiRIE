@@ -19,7 +19,7 @@ candidate_pool_roots:
 # Reuse the successful native engine admission for the unchanged policy/runtime.
 engine_admission: /REPLACE/per_canonical_engine/admission.json
 
-native_python: /group/worldcept/code/SimAny-wt/sr0-native/.venv-native/bin/python
+native_python: ${SIMANY_ROOT}/worktrees/sr0-native/.venv-native/bin/python
 # Prefer a detached clean worktree at the final reviewed code commit.
 worker_source: /REPLACE/clean_PhiRoom_worktree
 

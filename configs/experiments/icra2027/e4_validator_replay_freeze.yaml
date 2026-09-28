@@ -4,7 +4,7 @@ freeze_id: 20260904-07e8b05-v19
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/PhiRIE/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: frozen_fields
@@ -44,11 +44,11 @@ input_roots:
   kind: metadata
   required: true
 - id: immutable_v18_harness_ledger
-  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/harness_ledger.jsonl
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_resume/harness_ledger.jsonl
   kind: metadata
   required: true
 - id: immutable_v18_harness_config
-  path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_harness.yaml
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v18/harness/scripted_harness.yaml
   kind: metadata
   required: true
 checkpoint_roots: []

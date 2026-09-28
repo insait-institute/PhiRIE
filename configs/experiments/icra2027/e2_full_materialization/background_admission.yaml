@@ -2,7 +2,7 @@ schema_version: 1
 scope: full_e2_training_structural_background_admission
 selection_time: Before full TRAIN preparation outputs or new mask/fill/TEST outcomes
 original_full_protocol:
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   bytes: 10979
   sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
 policy_id: A4

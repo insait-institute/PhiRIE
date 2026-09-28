@@ -6,6 +6,7 @@ Run with:
 """
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import numpy as np
@@ -382,7 +383,7 @@ def test_shipped_pi05_policies_are_verified_or_exploratory_not_unavailable():
 
 
 @pytest.mark.skipif(
-    not Path("/group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval").exists(),
+    not (Path(os.environ.get("OPENPI_DATA_HOME", "/nonexistent")) / "openpi-assets-simeval").exists(),
     reason="real checkpoint cache not present on this machine",
 )
 def test_shipped_real_checkpoint_hashes_match_disk_right_now():

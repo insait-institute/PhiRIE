@@ -311,7 +311,7 @@ def test_submitter_is_seven_ordinary_cpu_jobs_without_gpu_or_array():
     assert sum(line.startswith("submit_job prepare ") for line in calls) == 2
     assert sum(line.startswith("submit_job final ") for line in calls) == 1
     assert "--no-requeue" in source
-    assert "ACCOUNT=runyi_yang" in source
+    assert "ACCOUNT=${SLURM_ACCOUNT:-phirie}" in source
     assert "SUBMIT_USER=$(id -un)" in source
     assert "--dependency=\"$dependency\"" in source
     assert "--kill-on-invalid-dep=yes" in source
@@ -561,7 +561,7 @@ def test_submitter_fake_sbatch_builds_exact_4_to_2_to_1_ledger(tmp_path):
     _write_executable(
         fake_sacctmgr,
         "#!/usr/bin/env bash\n"
-        f"printf 'runyi_yang|{submit_user}||normal\\n'\n",
+        f"printf 'phirie|{submit_user}||normal\\n'\n",
     )
 
     source = (
@@ -620,7 +620,7 @@ def test_submitter_fake_sbatch_builds_exact_4_to_2_to_1_ledger(tmp_path):
     ]
     for call in calls:
         assert "--no-requeue" in call
-        assert "--account=runyi_yang" in call
+        assert "--account=phirie" in call
         assert not any(arg.startswith("--array") for arg in call)
         assert not any(arg.startswith("--gpus") for arg in call)
         assert not any(arg.startswith("--gres") for arg in call)
@@ -653,7 +653,7 @@ def test_submitter_fake_sbatch_builds_exact_4_to_2_to_1_ledger(tmp_path):
         "no", "no", "no", "no", "yes", "yes", "yes",
     ]
     assert all(row["profile"] == "sof1-cpu" and row["gres"] == "none" for row in rows)
-    assert all(row["account"] == "runyi_yang" for row in rows)
+    assert all(row["account"] == "phirie" for row in rows)
     assert all(row["submit_user"] == submit_user for row in rows)
     assert all(row["code_commit"] == rows[0]["code_commit"] for row in rows)
     for index, row in enumerate(rows, start=9101):
@@ -712,7 +712,7 @@ def test_launcher_sanitizes_env_and_imports_only_fixture_code(tmp_path):
         fake_bin / "scontrol",
         "#!/usr/bin/env bash\n"
         f"printf '%s\\n' 'JobId=77 JobName=e4 UserId={submit_user}(1000) "
-        "Account=runyi_yang QOS=normal Requeue=0 TimeLimit=01:00:00 "
+        "Account=phirie QOS=normal Requeue=0 TimeLimit=01:00:00 "
         "Partition=batch NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 "
         "ReqTRES=cpu=8,mem=64G,node=1 MinMemoryNode=64G "
         f"Command={launcher} WorkDir={code_root}'\n",
@@ -752,7 +752,7 @@ def test_launcher_sanitizes_env_and_imports_only_fixture_code(tmp_path):
             "SIMF_SCENE": "wrong-scene",
             "SLURMD_NODENAME": "sof1-h200-0",
             "SLURM_CPUS_PER_TASK": "8",
-            "SLURM_JOB_ACCOUNT": "runyi_yang",
+            "SLURM_JOB_ACCOUNT": "phirie",
             "SLURM_JOB_ID": "77",
             "SLURM_JOB_PARTITION": "batch",
             "SLURM_JOB_QOS": "normal",

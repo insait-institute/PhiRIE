@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH --account=runyi_yang
 #SBATCH --partition=batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -19,4 +18,4 @@ export MKL_NUM_THREADS=4
 args=(--config "${E3_DISCOVERY_CONFIG:-configs/experiments/icra2027/e3_fresh_discovery.yaml}"
       --freeze-root "$E3_DISCOVERY_FREEZE" --phase "${E3_DISCOVERY_PHASE:-run}")
 if [[ -n "${E3_DISCOVERY_SCENE:-}" ]]; then args+=(--scene-id "$E3_DISCOVERY_SCENE"); fi
-/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python -m run.icra2027.e3_auto_discovery_pilot "${args[@]}"
+${SIMANY_ROOT:-$PWD}/.venv/bin/python -m run.icra2027.e3_auto_discovery_pilot "${args[@]}"

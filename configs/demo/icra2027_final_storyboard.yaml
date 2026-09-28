@@ -3,7 +3,7 @@
 schema_version: 2
 mode: final
 freeze_id: UNASSIGNED
-source_root: /group/worldcept/code/SimAny
+source_root: ${SIMANY_ROOT}
 resolution: [1920, 1080]
 fps: 30
 selector_rule: scene_id_ascending_no_quality_or_policy_outcome_v1

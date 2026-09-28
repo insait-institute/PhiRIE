@@ -40,7 +40,7 @@ Run on a GPU node (login node: only --selftest):
   srun --partition=debug --gpus=a6000:1 --mem=48G --time=00:30:00 \
     bash -c '\
       SIMANY_SCENE=c50d2d1d42 \
-      SIMANY_OUT=/group/worldcept/PhiRIE/code/SimAny/outputs/c50d2d1d42_factory \
+      SIMANY_OUT=${SIMANY_ROOT}/outputs/c50d2d1d42_factory \
       .venv/bin/python -m agents.baselines.flashsplat --slackness -0.4'
 """
 import argparse

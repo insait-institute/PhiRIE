@@ -38,8 +38,6 @@ Watch [the full demo](https://youtu.be/3-YdcBh6Tbw) or explore
 The pipeline connects captured Gaussian scenes to complete object assets and
 backgrounds, then keeps rendered appearance aligned with simulated body poses.
 
-> **Code release:** The author is busy with deadlines. The code will open-source before 10 October 2026
-
 ## 1. Installation
 
 ### Start with the control tools
@@ -218,6 +216,7 @@ separate benchmark and single-image workflows.
 | `integrations/harmonizer/` | Optional appearance harmonization |
 | `run/`, `envs/` | Launchers and runtime environments |
 | `website/` | Project page, images, recordings, and browser demos |
+| `configs/`, `tools/` | Runtime, capture, policy and frozen experiment configurations; release tools |
 | `docs/`, `tests/` | Guides and automated checks |
 
 The Python package and command remain named `phiroom` for compatibility with
@@ -232,6 +231,13 @@ PhiView**. The current maintenance version is **2.0.1**.
 Next steps are guided installation, downloadable prepared scenes and repeatable
 demos, followed by documented evaluation configurations and results. See
 [RELEASE_PLAN.md](RELEASE_PLAN.md) and [the version tree](https://insait-institute.github.io/PhiRIE/#versions).
+
+## License
+
+PhiRIE is released under the [MIT License](LICENSE). PhiView
+(`integrations/phiview/`) is a separate MIT-licensed project bundled here with
+its license and provenance, and the model checkouts under `third_party/` keep
+their own upstream licenses.
 
 ## Citation
 

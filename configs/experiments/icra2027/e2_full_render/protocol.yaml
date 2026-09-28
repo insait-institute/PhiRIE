@@ -2,11 +2,11 @@ schema_version: 1
 scope: full_e2_fixed_roster_consumer_execution
 freeze_id: 20260906-b689700-v1
 full_protocol:
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   bytes: 10979
   sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
 fill_integrity:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0be94c7-v1/dispatch/fill_integrity.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0be94c7-v1/dispatch/fill_integrity.json
   bytes: 57906
   sha256: e534323a3964f4713b93109d4b11a37d6f19256e4b87bc33f1b83b8f9e13c2d9
 scene_ids:

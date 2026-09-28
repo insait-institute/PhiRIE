@@ -18,7 +18,7 @@ from robo.eval.freeze import CANONICAL_FREEZE_ID
 from robo.eval import e4_candidate_screen as sealed
 
 CODE=Path(__file__).resolve().parents[2]
-ROOT=Path('/group/worldcept/PhiRIE/code/SimAny')
+ROOT=Path(os.environ.get('SIMANY_ROOT',CODE))
 PUBLIC=ROOT/'data/recon_scenes/data'
 SCENES=('behavior_task0020','behavior_task0011','behavior_task0023','behavior_task0027','behavior_task0045','behavior_task0002')
 CONDITIONS=('clean','mild','severe')

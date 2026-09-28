@@ -18,12 +18,12 @@ SOURCE_COMMIT=$2
 CONTRACT_DIR=$3
 OUTPUT_DIR=$4
 export PYTHONDONTWRITEBYTECODE=1
-export PYTHONPATH="$ROOT:/group/worldcept/PhiRIE/code/openpi-wt/e4-policy-server/packages/openpi-client/src"
+export PYTHONPATH="$ROOT:${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout}/worktrees/e4-policy-server/packages/openpi-client/src"
 export OMP_NUM_THREADS=4
 export OPENBLAS_NUM_THREADS=4
 export MKL_NUM_THREADS=4
 cd "$ROOT"
-exec /group/worldcept/PhiRIE/code/openpi/.venv/bin/python \
+exec ${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout}/.venv/bin/python \
   run/icra2027/policy_service_smoke.py \
   --config configs/experiments/icra2027/policy_service_smoke.yaml \
   --expected-code-commit "$SOURCE_COMMIT" \

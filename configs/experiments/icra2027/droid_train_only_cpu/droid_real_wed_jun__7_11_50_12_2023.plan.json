@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/metadata_REAL+4dbb5646+2023-06-07-11h-50m-12s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/metadata_REAL+4dbb5646+2023-06-07-11h-50m-12s.json",
       "sha256": "8b24e5dd39f8d8d3cdb36c0445ada2793ced5b8ef8112005bfefabbb52672bb6",
       "size_bytes": 1758
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/trajectory.h5",
       "sha256": "cf712deea394600eb1333b8aa914cca16d0dabaa7899e5c8e1dea74b4326acb1",
       "size_bytes": 1333212
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/recordings/MP4/11744905.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/recordings/MP4/11744905.mp4",
       "sha256": "14317c8309a49fab92737488cf34de465858b70f25cbd663ca2949875d872ed0",
       "size_bytes": 3529784
     }

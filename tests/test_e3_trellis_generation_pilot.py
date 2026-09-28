@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import os
 from pathlib import Path
 import pytest
 
@@ -43,7 +44,7 @@ def test_model_weight_hash_mismatch_fails_before_generation(pilot,tmp_path):
     with pytest.raises(pilot.PilotError,match='model weight'):pilot.validate_models(c)
 
 def test_real_sealed_six_job_input_manifest(pilot):
-    source=Path('/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot')
+    source=Path(os.environ.get('SIMANY_EVIDENCE_ROOT','/nonexistent'))/'outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot'
     if not source.is_dir():pytest.skip('local engineering pilot absent')
     rows=pilot.source_jobs(source)
     assert len(rows)==6 and sum(r['prepared'] for r in rows)==3

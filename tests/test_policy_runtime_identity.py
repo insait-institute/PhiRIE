@@ -251,7 +251,7 @@ def test_e4_real_contract_requires_registry_and_clean_pinned_dependencies(
                 "openpi": {"root": str(openpi), "commit": openpi_commit},
                 "mujoco_menagerie": {
                     "root": str(menagerie), "commit": menagerie_commit},
-                "checkpoint_cache_root": "/scratch/runyi_yang/e4-policy-test-cache",
+                "checkpoint_cache_root": "/scratch/${USER}/e4-policy-test-cache",
             },
             "robot": {"id": "robot"}, "cameras": {"id": "cameras"},
             "action_convention": "absolute_joint_position",

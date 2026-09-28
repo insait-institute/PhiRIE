@@ -29,8 +29,8 @@ SimAny spans seven sub-problems, each with its own literature:
   correctly cited in our Related Work as a **discovery (B)** ancestor.
 - SimFoundry's actual baseline is **SAM 3D: 3Dfy Anything in Images**
   ([2511.16624](https://arxiv.org/abs/2511.16624), Meta) — an **image-to-3D
-  generator (C)**. Verified at line 1048 of the prior-work text in
-  `docs/related/`.
+  generator (C)**. Verified at line 1048 of the prior-work text
+  (fetched arXiv source, not included in this repository).
 
 `refs.bib` now carries both, as `sam3d` and `sam3dgen`.
 
@@ -67,8 +67,8 @@ Single smartphone video → per-object mesh/scale/pose, **articulation (part seg
 + joints + URDF)**, CoACD, VLM mass/friction, PyBullet + Isaac Lab export, 3DGS
 background, plus object/scene/task **digital cousins** and MimicGen demos.
 
-What matters for our positioning, all verified against the full text in
-`docs/related/simfoundry_arxiv_2606.28276.txt`:
+What matters for our positioning, all verified against the full text of
+arXiv:2606.28276:
 
 - **Their headline geometry column is human-tuned.** Table L.2 reports
   `SimFoundry Tuned (3 min/Obj)` at F1 0.99/0.97/0.93 (easy/med/hard) vs
@@ -325,4 +325,4 @@ name** — check which you mean), driving/outdoor GS systems.
 
 The **29× / 43×** multipliers in the abstract are against **HoloScene** and
 must name it. Against SimFoundry the honest figure is **~6.5× per object**,
-across different GPUs. See [PAPER_REVISIONS.md](PAPER_REVISIONS.md).
+across different GPUs.

@@ -10,16 +10,16 @@
 # uses `batch` (infinite). Pinned to hala because it is the only a6000 (sm_86) and
 # the prebuilt gsplat JIT cache holds sm_86/sm_90 only — an A100 (sm_80) would
 # silently rebuild it. msp3-* are excluded everywhere in this repo: they are
-# region-us and do not mount /group/worldcept.
+# region-us and do not mount ${PHIRIE_WORKSPACE:-$HOME}.
 #SBATCH -p batch
 #SBATCH -w hala
 #SBATCH --gres=gpu:a6000:1
 #SBATCH -t 12:00:00
 #SBATCH --mem=200G
 #SBATCH -J inpaint
-#SBATCH -o /group/worldcept/PhiRIE/code/SimAny/outputs/inpaint_%x_%j.log
+#SBATCH -o outputs/inpaint_%x_%j.log
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 : "${SIMANY_SCENE:?set SIMANY_SCENE=<scene id>}"
 export SIMANY_SCENE
 source "$SIMANY_ROOT/run/env.sh"
@@ -27,7 +27,7 @@ source "$SIMANY_ROOT/run/env.sh"
 # Qwen-Image-Edit-2509 needs torch>=2.5 (enable_gqa); the main venv is 2.4.1, so
 # the erase stage must run in the sam3 env. QWEN=force selects the sequential
 # CPU-offload path, which is what makes the 2509 checkpoint fit on a 48 GB A6000.
-export QWEN_PY="${SIMANY_SAM3_PY:-/group/streetsplat/worldcept/.envs/sam3/bin/python}"
+export QWEN_PY="${SIMANY_SAM3_PY:-${SIMANY_SAM3_PY:-${SIMANY_ROOT:-$PWD}/.envs/sam3/bin/python}}"
 export SIMANY_QWEN=force
 export MUJOCO_GL=egl
 GPU_IDX=$(nvidia-smi --query-gpu=index --format=csv,noheader | head -1)

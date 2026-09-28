@@ -27,16 +27,16 @@
 # docs/ORACLE_PROTOCOL.md). `mild` is intentionally skipped here to bound
 # GPU cost; it already has fast-tier numbers.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 cd "$SIMANY_ROOT"
 
 # ~/.cache is a symlink to hala's NODE-LOCAL /scratch -- this job lands on
 # H200/GCP nodes where that path doesn't exist, so any HF/torch-hub-cached
 # checkpoint (SAM3, TRELLIS-image-large, dinov2) FileNotFoundErrors instead
 # of falling back online (HF_HUB_OFFLINE=1 is set repo-wide). Point both
-# caches at the /group/worldcept-hosted shared copies instead.
-export HF_HOME=/group/worldcept/hf_cache
-export TORCH_HOME=/group/worldcept/torch_hub_cache
+# caches at the shared-storage-hosted shared copies instead.
+export HF_HOME=${HF_HOME:-$HOME/.cache/huggingface}
+export TORCH_HOME=${TORCH_HOME:-$HOME/.cache/torch}
 
 # index -> "scene_id task_id level"
 TRIPLES=(

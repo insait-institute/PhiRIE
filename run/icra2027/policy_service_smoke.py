@@ -211,7 +211,7 @@ def run(args):
         if registry.validate_control_contract(entry.id):
             raise ValueError("registry policy control contract differs")
         # Job-scoped scratch prevents accidentally reusing a service/identity receipt.
-        cache = Path("/scratch/runyi_yang/icra2027/policy-service")/config["freeze_id"]/os.environ["SLURM_JOB_ID"]
+        cache = Path(os.environ.get("SIMANY_SCRATCH", "/scratch/" + os.environ.get("USER", "phirie")))/"icra2027/policy-service"/config["freeze_id"]/os.environ["SLURM_JOB_ID"]
         cache.mkdir(parents=True,exist_ok=False)
         result["checkpoint_cache_root"] = str(cache)
         with socket.socket() as reservation:

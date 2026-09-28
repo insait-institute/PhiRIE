@@ -3,7 +3,7 @@
 #SBATCH --gres=gpu:a6000:1
 #SBATCH -t 4:00:00
 #SBATCH -J pi05_eval
-#SBATCH -o /group/worldcept/PhiRIE/code/SimAny/outputs/pi05_eval_%j.log
+#SBATCH -o outputs/pi05_eval_%j.log
 # The policy server holds the 12 GB checkpoint in host RAM while jax stages it
 # to the GPU; the cgroup default (2G) OOM-kills it mid-restore (job 645991).
 # This used to be passed on the sbatch command line and got dropped.
@@ -16,7 +16,7 @@
 set -e
 # The packages (robo/, agents/, ...) are NOT pip-installed into .venv, so the
 # repo root has to be on PYTHONPATH for `from robo ...`.
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 # cwd must stay one level below $ROOT: the 07-22 task suites hard-code
 # "scene_xml": "../outputs/<scene>_factory/sim_export/scene.xml" (pi05_tasks.py

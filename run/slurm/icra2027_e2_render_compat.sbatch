@@ -8,15 +8,15 @@
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
 #SBATCH --gpus=a6000:1
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-render-compat-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-render-compat-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e2-render-compat-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e2-render-compat-%j.err
 
 # One-scene E2 compatibility smoke for CUDA gsplat rendering and LPIPS.
 # This is not a paper evaluation. It reuses frozen source objects read-only and
 # writes the two renderer products beneath a new job-specific ICRA output root.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 SCENE=5748ce6f01
 SOURCE_OUT="$ROOT/outputs/${SCENE}_factory"
 DATA_SCENE=/data/ScanNetpp/data/$SCENE

@@ -1,6 +1,6 @@
 """Stage 1: SAM3 text-prompted instance segmentation on the representative frame.
 
-MUST run under the sam3 env: /group/streetsplat/worldcept/.envs/sam3/bin/python
+MUST run under the sam3 env: ${SIMANY_SAM3_PY}
 (standalone on purpose: no common.py import, torch versions differ).
 
 Usage: s1_segment.py --image X.JPG --out-dir OUT/masks \

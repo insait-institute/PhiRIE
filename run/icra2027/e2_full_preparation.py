@@ -248,7 +248,7 @@ def build_configs(out_dir, *, full_protocol, background_admission, missing_facto
         if _identity(input_path)['sha256']!=pool_value['input_manifest_sha256']:
             raise ValueError('generation input manifest changed')
         inputs=json.loads(input_path.read_text())
-        generation=Path('/group/worldcept/PhiRIE/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort')/(sid+'.yaml')
+        generation=Path(os.environ.get('SIMANY_GENERATION_COHORT_CONFIGS',Path(__file__).resolve().parents[2]/'configs/experiments/icra2027/trellis_cohort'))/(sid+'.yaml')
         if _identity(generation)['sha256']!=inputs['config_sha256']:
             raise ValueError('original generation config differs')
         prepared[sid]={**template,'scene_id':sid,'materialization_manifest':_identity(factory/'materialization_manifest.json'),

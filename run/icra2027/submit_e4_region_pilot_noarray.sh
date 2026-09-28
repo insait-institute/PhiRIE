@@ -10,8 +10,8 @@
 # CPU DAG does not perform camera/oracle validation or a real-policy smoke.
 set -euo pipefail
 
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
 LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_region_cpu.sbatch"
 if [[ -v SBATCH_BIN || -v SACCTMGR_BIN ]]; then
   [[ "${E4_TEST_TOOL_OVERRIDES:-}" == 1 ]] || {
@@ -21,7 +21,7 @@ if [[ -v SBATCH_BIN || -v SACCTMGR_BIN ]]; then
 fi
 SBATCH_BIN=${SBATCH_BIN:-sbatch}
 SACCTMGR_BIN=${SACCTMGR_BIN:-sacctmgr}
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 SUBMIT_USER=$(id -un)
 if [[ -v E4_ACCOUNT && "$E4_ACCOUNT" != "$ACCOUNT" ]]; then
   echo "E4_ACCOUNT cannot override canonical account=$ACCOUNT" >&2

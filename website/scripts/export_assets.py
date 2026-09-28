@@ -165,7 +165,7 @@ def robot():
     b=DEMO/'qualitative/VIDEOS24FPS_STRONG_IMPACTS_20260915/episodes/CUP/robot_new'
     xml=b/'robot.xml';trajectory=b/'robot/trajectory.npz'
     # Resolve the workspace relocation without touching the historical XML.
-    source=xml.read_text().replace('/group/worldcept/code/','/group/worldcept/PhiRIE/code/')
+    source=xml.read_text()
     m=mujoco.MjModel.from_xml_string(source);d=mujoco.MjData(m);z=np.load(trajectory)
     ids=[];sc=trimesh.Scene();offsets=[]
     for i in range(m.ngeom):

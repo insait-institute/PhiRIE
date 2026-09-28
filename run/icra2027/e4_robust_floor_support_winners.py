@@ -12,12 +12,13 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import stat
 from pathlib import Path, PurePosixPath
 from typing import Any, Mapping
 
 
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 EXTERNAL_SWEEP_ID = (
     "icra2027-contract-v1-e4-8c7b796b3f25-robust-floor-support-"
     "20260904T192849Z"

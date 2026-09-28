@@ -5,7 +5,7 @@ Protocol for quantifying what is lost between **(a)** real or rendered video
 living natively in a simulator. Companion pages:
 [PIPELINE.md](PIPELINE.md) (the stages being measured),
 [ROBOT.md](ROBOT.md) (the pi0.5 closed loop), and the experiment history in
-[`coding_agents/memory/pi05-droid-sim-eval.md`](../coding_agents/memory/pi05-droid-sim-eval.md).
+the internal pi0.5 DROID sim-eval notes (2026-08-04, not part of this repository).
 
 The study is deliberately axis-by-axis: a single "gap number" would average
 photometric loss against policy variance and mean nothing. Every comparison
@@ -58,7 +58,7 @@ published number measured under different conditions).
 Our twin is **rigid-only**: one rigid body per object, CoACD convex parts,
 no joints (the BDDL validation likewise scripts substance/cloth literals as
 out of rigid-body scope — see
-[`outputs/omnigibson_export/comparison_table.md`](../outputs/omnigibson_export/comparison_table.md)).
+`outputs/omnigibson_export/comparison_table.md`, generated at run time).
 The honest number to report is the **fraction of task-relevant objects that
 are articulated in the source simulator** (joint count from the native
 BEHAVIOR scene assets), stated as coverage lost, with no attempt to fake a
@@ -71,7 +71,7 @@ so).
 pi0.5 success in the native environment vs in our twin of the same scene, on
 the same tasks where a task mapping exists. Only LIBERO offers the full
 round trip (section 2). Calibration from
-[pi05-droid-sim-eval](../coding_agents/memory/pi05-droid-sim-eval.md):
+the internal pi0.5 DROID sim-eval notes:
 pi0.5 zero-shot in sim is weak everywhere — 28% on RoboLab-120 — and PolaRiS
 attributes ~25% success cost to the visual real2sim gap with ~0 to dynamics,
 so low absolute numbers are the normal regime and the *delta* between arms is
@@ -108,7 +108,7 @@ compare against the **same scene natively in OmniGibson**.
 - **Axes covered**: all four. Exact GT object meshes + poses make generation
   F1 apples-to-apples; native joint lists make the articulation fraction
   computable; BDDL-checker parity extends
-  [`comparison_table.md`](../outputs/omnigibson_export/comparison_table.md)
+  `outputs/omnigibson_export/comparison_table.md`
   (current result on curated-asset export: **7/7 BDDL tasks pass with our
   CoACD collision vs 6/7 with single-convex-hull baseline**, over 14
   geometric + 8 scripted literals).
@@ -124,7 +124,7 @@ compare against the **same scene natively in OmniGibson**.
 
 ### Track 3 — LIBERO (the clean round trip)
 
-Native MuJoCo benchmark; suites on disk at `/group/worldcept/data/libero`
+Native MuJoCo benchmark; suites on disk at `${SIMANY_ROOT}/data/libero`
 (`libero_spatial`, `libero_object`, `libero_goal`, `libero_10` — 4 suites /
 40 tasks; demonstration HDF5s + BDDL task definitions). `pi05_libero`
 checkpoint is downloading.
@@ -143,7 +143,7 @@ checkpoint is downloading.
 
 ### Track 4 — DROID (real robot video; no GT of any kind)
 
-`droid_100` RLDS at `/group/worldcept/data/droid` — real robot episodes,
+`droid_100` RLDS at `${SIMANY_ROOT}/data/droid` — real robot episodes,
 external camera. Video → `run/run_video2sim.sh` → twin →
 `pi05_droid_jointpos` closed loop.
 
@@ -168,7 +168,7 @@ external camera. Video → `run/run_video2sim.sh` → twin →
 ## 3. Honest numbers: what pi05-in-twin currently looks like
 
 All numbers from
-[pi05-droid-sim-eval](../coding_agents/memory/pi05-droid-sim-eval.md).
+the internal pi0.5 DROID sim-eval notes.
 **Set expectations accordingly before promising policy-gap deltas.**
 
 - The score landscape is **0-heavy**: every pre-geometry-fix run was 0.0 (32
@@ -221,8 +221,8 @@ pipeline runs unmodified (see [`agents/core/common.py`](../agents/core/common.py
 
 ```sh
 # every recon-track invocation
-export SIMANY_SCANNETPP_ROOT=/group/worldcept/code/SimAny/data/recon_scenes
-export SIMANY_SPLATS_ROOT=/group/worldcept/code/SimAny/data/recon_scenes/splats
+export SIMANY_SCANNETPP_ROOT=${SIMANY_ROOT}/data/recon_scenes
+export SIMANY_SPLATS_ROOT=${SIMANY_ROOT}/data/recon_scenes/splats
 export SIMANY_AUTO=1 SIMANY_MESH_SRC=derived   # no GT anno, no scan mesh
 # scene dir: data/recon_scenes/data/<scene>/dslr/{resized_undistorted_images/,
 #            nerfstudio/transforms_undistorted.json, colmap/images.txt}

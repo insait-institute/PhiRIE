@@ -4,7 +4,7 @@ freeze_id: 20260906-dba8e6b-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: public_preparation_27dd4da69e
@@ -12,11 +12,11 @@ input_roots:
   kind: experiment_config
   required: true
 - id: source_factory_27dd4da69e
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-cda9efc-v1/automatic_candidates/27dd4da69e/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-cda9efc-v1/automatic_candidates/27dd4da69e/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: source_generation_27dd4da69e
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/27dd4da69e.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/27dd4da69e.yaml
   kind: experiment_config
   required: true
 - id: public_preparation_40aec5fffa
@@ -24,11 +24,11 @@ input_roots:
   kind: experiment_config
   required: true
 - id: source_factory_40aec5fffa
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-cda9efc-v1/automatic_candidates/40aec5fffa/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-cda9efc-v1/automatic_candidates/40aec5fffa/materialized/A4/materialization_manifest.json
   kind: source_manifest
   required: true
 - id: source_generation_40aec5fffa
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/40aec5fffa.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/40aec5fffa.yaml
   kind: experiment_config
   required: true
 - id: compact_background_protocol
@@ -36,7 +36,7 @@ input_roots:
   kind: experiment_config
   required: true
 - id: preparation_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  path: ${SIMANY_ROOT}/.venv/bin/python3.11
   kind: python_runtime
   required: true
 checkpoint_roots: []

@@ -2,14 +2,14 @@
 # Submit the exact 17-job robust-floor/support CPU diagnostic DAG.
 set -euo pipefail
 
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_robust_floor_support_cpu.sbatch"
 SWEEP_SCRIPT="$CODE_ROOT/run/icra2027/e4_robust_floor_support_diagnostic.py"
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
 CONTROL_SWEEP_ID=icra2027-contract-v1-e4-46bab70bc69c-collision-diagnostic-20260904T181737Z
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 CPU_NODELIST='sof1-h200-[0-7]'
 SETFACL=/usr/bin/setfacl
 GETFACL=/usr/bin/getfacl

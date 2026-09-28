@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import tempfile
@@ -156,8 +157,11 @@ def _planning_terminal(path, expected_sha256, *, protocol_path, protocol_sha256,
     return receipt, {'path':str(path),'sha256':expected_sha256}, producer
 
 
+DEFAULT_EVIDENCE_ROOT = os.environ.get('SIMANY_EVIDENCE_ROOT', str(Path(__file__).resolve().parents[2]))
+
+
 def prepare(protocol_path, expected_sha256, out, *, screen_id=None,
-            expected_commit=None, evidence_root='/group/worldcept/PhiRIE/code/SimAny',
+            expected_commit=None, evidence_root=DEFAULT_EVIDENCE_ROOT,
             planning_terminal_path=None, planning_terminal_sha256=None):
     out = Path(out)
     if out.exists():
@@ -263,7 +267,7 @@ def main():
     parser.add_argument('--out',required=True)
     parser.add_argument('--qualification-screen-id')
     parser.add_argument('--expected-code-commit')
-    parser.add_argument('--evidence-root',default='/group/worldcept/PhiRIE/code/SimAny')
+    parser.add_argument('--evidence-root',default=DEFAULT_EVIDENCE_ROOT)
     parser.add_argument('--planning-terminal')
     parser.add_argument('--planning-terminal-sha256')
     a=parser.parse_args()

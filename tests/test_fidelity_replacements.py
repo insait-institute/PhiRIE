@@ -731,7 +731,7 @@ def test_launcher_is_non_array_with_pinned_bundle_and_strict_resume_validation()
     assert 'PYTHON_ENV="$ROOT/.envs/sam3d-objects"' in launcher
     assert 'PYTHON="$PYTHON_ENV/bin/python"' in launcher
     assert 'SAM3PY="$PYTHON"' in launcher
-    assert "/group/streetsplat" not in launcher
+    assert "${CONDA_ROOT:-$HOME/miniconda3}" not in launcher
     assert 'SAM3_SOURCE="${MODEL_INPUTS[4]}"' in launcher
     assert 'SAM3_VERSION="${MODEL_INPUTS[7]}"' in launcher
     assert 'export PATH="$PYTHON_ENV/bin:$PATH"' in launcher
@@ -751,8 +751,8 @@ def test_launcher_is_non_array_with_pinned_bundle_and_strict_resume_validation()
     assert "-m robo.eval.fidelity_replacements --help" in launcher
     assert "-m agents.discover.factory_prepare --help" in launcher
     assert "-m agents.discover.factory_refine_masks --help" in launcher
-    assert "/group/worldcept/hf_cache" not in launcher
-    assert "/group/worldcept/torch_hub_cache" not in launcher
+    assert "${HF_HOME:-$HOME/.cache/huggingface}" not in launcher
+    assert "${TORCH_HOME:-$HOME/.cache/torch}" not in launcher
 
 
 def test_replacement_launcher_requires_exact_gpu_profile_and_sm80_caches():

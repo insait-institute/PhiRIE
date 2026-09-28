@@ -4,7 +4,7 @@ freeze_id: 20260906-472a6d7-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: public_erasure_27dd4da69e
@@ -12,7 +12,7 @@ input_roots:
   kind: experiment_config
   required: true
 - id: mask_integrity_27dd4da69e
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-a0a1aa3-v1/dispatch/mask_integrity_27dd4da69e.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-a0a1aa3-v1/dispatch/mask_integrity_27dd4da69e.json
   kind: source_manifest
   required: true
 - id: public_erasure_40aec5fffa
@@ -20,7 +20,7 @@ input_roots:
   kind: experiment_config
   required: true
 - id: mask_integrity_40aec5fffa
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-a0a1aa3-v1/dispatch/mask_integrity_40aec5fffa.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-a0a1aa3-v1/dispatch/mask_integrity_40aec5fffa.json
   kind: source_manifest
   required: true
 - id: compact_erasure_protocol
@@ -28,16 +28,16 @@ input_roots:
   kind: experiment_config
   required: true
 - id: lama_runtime_receipt
-  path: /group/worldcept/code/SimAny-wt/e2-public-erasure-pilot/outputs/erasure-runtime-preflight/result.json
+  path: ${SIMANY_ROOT}/worktrees/e2-public-erasure-pilot/outputs/erasure-runtime-preflight/result.json
   kind: source_manifest
   required: true
 - id: lama_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  path: ${SIMANY_ROOT}/.venv/bin/python3.11
   kind: python_runtime
   required: true
 checkpoint_roots:
 - id: lama_checkpoint
-  path: /group/worldcept/code/SimAny/outputs/e2-runtime-lama-v1/big-lama.pt
+  path: ${SIMANY_ROOT}/outputs/e2-runtime-lama-v1/big-lama.pt
   kind: checkpoint
   required: true
 hardware:

@@ -399,5 +399,5 @@ individually.
   GPU.
 - [`make_paper_tables.py`](../agents/eval/make_paper_tables.py) — regenerates
   every LaTeX data table for the paper from the on-disk results, so the paper
-  never drifts from the measurements. The tables live in
-  [`paper/tables/`](paper/tables/) (the module's default `--out`).
+  never drifts from the measurements. The tables are written to
+  `docs/paper/tables/` (the module's default `--out`).

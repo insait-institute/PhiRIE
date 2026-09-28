@@ -82,5 +82,5 @@ coverage:
   failures_are_terminal_rows: true
   missing_rows_are_failures: true
 mode: legacy_audit
-artifact_root: /group/worldcept/PhiRIE/code/SimAny
-raw_root: /group/worldcept/PhiRIE/data/droid/raw
+artifact_root: ${SIMANY_ROOT}
+raw_root: ${SIMANY_ROOT}/data/droid/raw

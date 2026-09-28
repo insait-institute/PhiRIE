@@ -1,3 +1,0 @@
-1
-00:00:00,000 --> 00:00:30,000
-First declared TEST reset; one-instance scope diagnostic. Same policy engine. Continuous episodes; ended panels hold. Measured robot-destination interference in L1. No aggregate or preservation claim.

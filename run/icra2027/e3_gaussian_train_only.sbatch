@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH --account=runyi_yang
 #SBATCH --partition=batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -25,5 +24,5 @@ case "$E3_GAUSSIAN_PHASE" in
   *) phases=("$E3_GAUSSIAN_PHASE") ;;
 esac
 for phase in "${phases[@]}"; do
-  /group/worldcept/PhiRIE/code/SimAny/.venv/bin/python -m run.icra2027.e3_gaussian_train_only "${args[@]}" --phase "$phase"
+  ${SIMANY_ROOT:-$PWD}/.venv/bin/python -m run.icra2027.e3_gaussian_train_only "${args[@]}" --phase "$phase"
 done

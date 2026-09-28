@@ -41,20 +41,6 @@ tests/data/phone/_marker.png
 *.pt
 *.pth
 
-# ---- latex build products (root.tex, refs.bib and figs/ ARE tracked) ----
-docs/paper/root.pdf
-docs/paper/conference.pdf
-docs/paper/*.aux
-docs/paper/*.log
-docs/paper/*.out
-docs/paper/*.bbl
-docs/paper/*.blg
-docs/paper/*.fls
-docs/paper/*.fdb_latexmk
-docs/paper/*.synctex.gz
-
-# ---- reference material (re-fetchable from arXiv) ----
-docs/related/*.pdf
 slurm-*.out
 
 /configs/runtime.local.json

@@ -15,6 +15,8 @@ import subprocess
 import sys
 import time
 import yaml
+
+NATIVE_PYTHON = os.environ.get('SIMANY_NATIVE_PY', 'python')  # interpreter of the native robot runtime
 from robo.manifest.hash import canonical_hash, git_snapshot
 
 IDENTITY_FIELDS = ('cohort_id','canonical_instance_id','reset_id','policy_id',
@@ -115,7 +117,7 @@ def canonical_reset_roster_hash(rows):
     return canonical_hash([identities[k] for k in sorted(identities)])
 
 
-def write_resolved_configs(planned,bindings,out,*,worker_root,host='localhost',port=8017,python_native='/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/.venv-native/bin/python',builds=(),reference_units=(),test_admission=None):
+def write_resolved_configs(planned,bindings,out,*,worker_root,host='localhost',port=8017,python_native=NATIVE_PYTHON,builds=(),reference_units=(),test_admission=None):
     """Emit N5 v2 configs and executable existing-runner commands, no rollout."""
     import copy
     from robo.roundtrip.spec import validate_spec
@@ -196,7 +198,7 @@ def extend_methods(planned,methods,bindings,out,*,worker_root,builds=(),host='lo
     return combined,commands
 
 
-def commands_for_units(rows,builds=(),*,host='localhost',port=8017,python_native='/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/.venv-native/bin/python'):
+def commands_for_units(rows,builds=(),*,host='localhost',port=8017,python_native=NATIVE_PYTHON):
     objects={};commands={}
     for b in builds:
         key=(b['canonical_instance_id'],b['controller_method'])

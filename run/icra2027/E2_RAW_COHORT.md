@@ -17,7 +17,7 @@ There is no threshold on metric quality and no view/scene selection by result.
 
 ```bash
 # Use the matching *_freeze.yaml with robo.eval.freeze first.
-python -m run.icra2027.e2_raw_room --config configs/experiments/icra2027/e2_raw_cohort_smoke.yaml --freeze-root /group/worldcept/code/SimAny/outputs/icra2027/20260905-b3b85c6-v1 --phase plan --scene-id 38d58a7a31
+python -m run.icra2027.e2_raw_room --config configs/experiments/icra2027/e2_raw_cohort_smoke.yaml --freeze-root ${SIMANY_ROOT}/outputs/icra2027/20260905-b3b85c6-v1 --phase plan --scene-id 38d58a7a31
 # Repeat CPU plan for the other fixed smoke scene.
 # Existing e2_raw_room.sbatch accepts E2_RAW_CODE, E2_RAW_FREEZE,
 # E2_RAW_CONFIG, E2_RAW_SCENE and E2_RAW_PHASE=run or aggregate.
@@ -40,7 +40,7 @@ Smoke and schema tests (including 50-scene/400-view canonical synthetic
 aggregation, source drift, byte leakage, negative gates and worker routing):
 
 ```bash
-CUDA_VISIBLE_DEVICES='' MUJOCO_GL=egl TMPDIR="$PWD/.t" /group/worldcept/code/SimAny/.venv/bin/python -m pytest -q tests/test_e2_raw_cohort.py tests/test_e2_raw_room.py tests/test_e2_fresh_readiness.py tests/test_e3_discovery_cohort.py --basetemp=.t/c
+CUDA_VISIBLE_DEVICES='' MUJOCO_GL=egl TMPDIR="$PWD/.t" ${SIMANY_ROOT}/.venv/bin/python -m pytest -q tests/test_e2_raw_cohort.py tests/test_e2_raw_room.py tests/test_e2_fresh_readiness.py tests/test_e3_discovery_cohort.py --basetemp=.t/c
 ```
 
 ## Exact camera-bank recovery after cross-runtime replay failure
@@ -51,8 +51,8 @@ config may bind `camera_bank` to a byte identity returned by:
 
 ```bash
 python -m run.icra2027.e2_raw_room \
-  --config /group/worldcept/code/SimAny-wt/e2-raw-cohort/configs/experiments/icra2027/e2_raw_cohort_full.yaml \
-  --freeze-root /group/worldcept/code/SimAny/outputs/icra2027/20260905-b3b85c6-v2 \
+  --config ${SIMANY_ROOT}/worktrees/e2-raw-cohort/configs/experiments/icra2027/e2_raw_cohort_full.yaml \
+  --freeze-root ${SIMANY_ROOT}/outputs/icra2027/20260905-b3b85c6-v2 \
   --phase camera-bank --camera-bank-out <new-bank.json>
 ```
 

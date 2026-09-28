@@ -5,8 +5,8 @@
 #SBATCH --time=04:00:00
 #SBATCH --array=0-3
 #SBATCH --job-name=simany_hybrid
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/fleet_hybrid_%a.log
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+#SBATCH --output=outputs/fleet_hybrid_%a.log
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 mapfile -t SCENES < /data/ScanNetpp/splits/nvs_sem_val.txt
 STRIDE=4

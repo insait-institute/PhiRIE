@@ -4,12 +4,12 @@
 #SBATCH --mem=48G
 #SBATCH --time=02:00:00
 #SBATCH --job-name=simany_mc_s12
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/fleet/mc_s12.log
+#SBATCH --output=outputs/fleet/mc_s12.log
 
 # Matched-frame-density MaskClustering baseline (stride 12 = same 28 frames
 # auto_segment sees), fixing the ~6x density confound in the Table III run.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 MCPY=$SIMANY_ROOT/.venv-mc/bin/python
 

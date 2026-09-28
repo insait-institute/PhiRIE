@@ -3,7 +3,7 @@
 # This script is read-only: it queries Slurm and never changes jobs or files.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 SQUEUE_BIN=${SQUEUE_BIN:-squeue}
 SACCT_BIN=${SACCT_BIN:-sacct}
 WATCH=false

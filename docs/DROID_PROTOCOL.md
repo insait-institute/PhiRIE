@@ -11,7 +11,7 @@ provenance and is never treated as a label for a policy evaluated here.
 
 ## 1. Data
 
-Raw DROID release at `/group/worldcept/data/droid/raw/<lab>/success/<date>/
+Raw DROID release at `${SIMANY_ROOT}/data/droid/raw/<lab>/success/<date>/
 <timestamp>/` (`trajectory.h5` + `recordings/MP4/<serial>.mp4` per camera +
 `metadata_*.json`), fetched by `run/fetch_droid_raw.py` (which walks episode
 paths referenced in the local `droid_100` RLDS shards and re-fetches the
@@ -47,7 +47,7 @@ directly) - see §3.1, this is load-bearing, not a style preference.
 5th `sbatch` queues with reason `AssocGrpGRES` until one finishes, which is
 expected, not a hang. For longer/unattended batches use `--partition=batch
 --qos=normal` targeting `sof1-h200-*`, adding `--exclude=msp3-[0-7]` if
-requesting h200s - `msp3-*` nodes do not mount `/group/worldcept`
+requesting h200s - `msp3-*` nodes do not mount `${PHIRIE_WORKSPACE}`
 (`docs/ENVIRONMENTS.md`).
 
 ## 3. Two pilot failures, root-caused and fixed (2026-08-16)

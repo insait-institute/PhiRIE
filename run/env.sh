@@ -16,8 +16,8 @@ ROOT=$SIMANY_ROOT
 #   SAM3PY SAM3 segmentation + Qwen-Image-Edit (torch 2.10)
 #   MVPY   gsplat CUDA rendering (only prebuilt wheel is cp310)
 VENV=${SIMANY_PY:-$ROOT/.venv/bin/python}
-SAM3PY=${SIMANY_SAM3_PY:-/group/streetsplat/worldcept/.envs/sam3/bin/python}
-MVPY=${SIMANY_GSPLAT_PY:-/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python}
+SAM3PY=${SIMANY_SAM3_PY:-$ROOT/.envs/sam3/bin/python}
+MVPY=${SIMANY_GSPLAT_PY:-$ROOT/.envs/mini-viewer/bin/python}
 QWEN_PY=${QWEN_PY:-$VENV}   # override with SAM3PY on nodes with torch>=2.5 + VRAM
 # SAM 3D Objects (models.s4_sam3d): torch 2.5.1+cu121 + pytorch3d/kaolin,
 # built per third_party/sam-3d-objects/doc/setup.md into its own conda env
@@ -36,30 +36,8 @@ IMG=$SD/dslr/resized_undistorted_images                     # posed RGB frames
 
 # ---- build/runtime flags -------------------------------------------------
 export HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-1}
-# ~/.cache is a symlink to hala's NODE-LOCAL /scratch, so an HF/torch-hub
-# checkpoint cached there is invisible from H200/GCP nodes -- with
-# HF_HUB_OFFLINE=1 that's a hard FileNotFoundError, not a slow online
-# fallback. On hala, leave HF_HOME/TORCH_HOME unset so the fast local
-# scratch cache is still used; everywhere else, fall back to the
-# /group/worldcept-hosted shared copies (populated on demand as new
-# models are needed off-hala -- see docs/DATA_AND_WEIGHTS.md).
-#
-# CAVEAT (found 2026-08-30): hala's /scratch also evicts entries over
-# time independent of node choice -- TRELLIS-image-large and
-# DA3METRIC-LARGE both vanished from it between two runs hours apart.
-# This fallback (triggered only when the whole hub/ dir is empty) does
-# NOT catch a specific model going missing from an otherwise-populated
-# cache. Any launcher whose exact model set is known and fully mirrored
-# in the shared cache should export HF_HOME/TORCH_HOME explicitly before
-# sourcing this file (see run/slurm/oracle_matrix.sbatch,
-# run/slurm/simfoundry_baseline.sbatch) rather than relying on this
-# heuristic alone.
-if [ -z "$(ls -A "$HOME/.cache/huggingface/hub" 2>/dev/null)" ]; then
-  export HF_HOME=${HF_HOME:-/group/worldcept/hf_cache}
-fi
-if [ -z "$(ls -A "$HOME/.cache/torch/hub" 2>/dev/null)" ]; then
-  export TORCH_HOME=${TORCH_HOME:-/group/worldcept/torch_hub_cache}
-fi
+# HF_HOME / TORCH_HOME are honoured as-is. Point them at a shared cache when
+# the compute node cannot see the default per-user cache directory.
 # gsplat's JIT fallback prefers gcc<=13, but hala only ships gcc-14: probe for
 # the newest usable one instead of hardcoding (a missing $CXX kills even
 # cache-reuse loads — torch verifies the compiler before checking the cache).

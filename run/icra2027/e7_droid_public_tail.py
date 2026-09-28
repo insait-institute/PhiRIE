@@ -145,7 +145,7 @@ def enforce_public_read(event,args):
     p=Path(os.fsdecode(args[0])).resolve()
     if (p.name in {'held_out_reference.json','alignment_evaluation.json','result.json'}
         or any(x.lower() in {'vault','hidden_gt','ground_truth','full_cpu_summary'} for x in p.parts)
-        or p.is_relative_to('/data/ScanNetpp') or p.is_relative_to('/group/worldcept/PhiRIE/code/SimAny/data/recon_scenes/data')):
+        or p.is_relative_to('/data/ScanNetpp') or p.is_relative_to(Path(os.environ.get('SIMANY_ROOT',Path(__file__).resolve().parents[2]))/'data/recon_scenes/data')):
         raise PermissionError('public tail forbids reference/outcome/legacy scene reads: '+str(p))
 
 

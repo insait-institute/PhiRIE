@@ -4,7 +4,7 @@
 # entries already covered by pi05_droid_jointpos.yaml /
 # pi05_droid_jointpos_sim.yaml. Per a repo audit (2026-08-16): none of
 # these four checkpoints have ever been downloaded to this cluster --
-# `grep`-ing this repo and /group/worldcept/PhiRIE/checkpoints/openpi_cache/ for
+# `grep`-ing this repo and ${OPENPI_DATA_HOME}/ for
 # pi0-FAST/pi0/pi0-100k/PaliGemma checkpoint references turns up nothing
 # except the vendored gs:// URIs in third_party/PolaRiS/docs/
 # checkpoints_and_envs.md ("Base DROID Joint Position Checkpoints" table --
@@ -19,7 +19,7 @@
 # below are best-effort, UNCONFIRMED guesses at openpi's naming convention
 # (only pi05_droid_jointpos / pi05_droid_jointpos_sim are confirmed to
 # exist in this repo's openpi fork, via
-# /group/worldcept/PhiRIE/code/openpi/src/openpi/training/config.py:681,701) --
+# ${OPENPI_ROOT}/src/openpi/training/config.py:681,701) --
 # do not treat them as verified until the checkpoint is actually present
 # and a real training config resolves against it.
 policies:

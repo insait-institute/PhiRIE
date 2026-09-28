@@ -6,15 +6,15 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e1-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e1-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e1-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e1-%j.err
 
 # Read-only E1 legacy-evidence inventory. This job never launches a constructor
 # and never requests a GPU. It publishes either a two-scene/two-regime smoke or
 # the complete 50-scene/five-regime preliminary audit below a fresh freeze ID.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 PYTHON="$ROOT/.venv/bin/python"
 ROSTER="$ROOT/configs/experiments/icra2027/construction_regimes.yaml"
 

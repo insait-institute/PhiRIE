@@ -14,6 +14,7 @@ import argparse
 import importlib.util
 import json
 import math
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -22,7 +23,7 @@ from typing import Any, Mapping, Sequence
 
 CODE_ROOT = Path(__file__).resolve().parents[2]
 BASE_RUNNER = CODE_ROOT / "run/icra2027/e4_collision_diagnostic_sweep.py"
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 EXPECTED_E3_ROOT = Path(
     "outputs/icra2027/"
     "icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic"

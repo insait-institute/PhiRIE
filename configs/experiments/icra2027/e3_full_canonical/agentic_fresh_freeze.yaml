@@ -4,7 +4,7 @@ freeze_id: 20260905-859f51d-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: agentic_fresh_jobs
@@ -24,7 +24,7 @@ input_roots:
   kind: experiment_config
   required: true
 - id: canonical_scene_roster
-  path: /group/worldcept/code/SimAny-wt/e3-full-canonical/configs/experiments/icra2027/construction_regimes.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-full-canonical/configs/experiments/icra2027/construction_regimes.yaml
   kind: experiment_config
   required: true
 checkpoint_roots: []

@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/metadata_TRI+22cb038f+2023-09-21-17h-26m-41s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/metadata_TRI+22cb038f+2023-09-21-17h-26m-41s.json",
       "sha256": "481bc5671f170882a2fac67901b5cfc4b393914dd190dbf0e547169573c21204",
       "size_bytes": 1770
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/trajectory.h5",
       "sha256": "6239730fa4fb51db9212066a474bfd18f58161a8e564ed55e811bf4040a16a6e",
       "size_bytes": 1289730
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/recordings/MP4/14549178.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/TRI/success/2023-09-21/Thu_Sep_21_17:26:41_2023/recordings/MP4/14549178.mp4",
       "sha256": "a179cc4e2a3ed45541287ba189486e06cd6137d4af8a9106751845bd8baab8c3",
       "size_bytes": 2193327
     }

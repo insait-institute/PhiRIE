@@ -3,6 +3,8 @@ from __future__ import annotations
 import argparse
 import json
 import hashlib
+import os
+import sys
 from pathlib import Path
 import yaml
 
@@ -200,7 +202,7 @@ def _write_configs(payload, bundles, result, freeze_id, config_directory):
          ('freeze','agentic_fresh_freeze.yaml')]}
     if any(p.exists() or p.is_symlink() for p in paths.values()):
         raise FileExistsError('fresh configs already exist')
-    control_python = '/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python'
+    control_python = os.environ.get('SIMANY_PY', sys.executable)
     runtime = yaml.safe_load((CODE/RUNTIME).read_text())
     cohort = isinstance(payload['automatic_sources'], list)
     execution = dict(schema_version=2 if cohort else 1,scope='fresh_canonical_engineering',paper_ready=False,

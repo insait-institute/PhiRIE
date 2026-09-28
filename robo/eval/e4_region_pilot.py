@@ -43,7 +43,7 @@ from typing import Any, Iterator, Mapping, Sequence
 
 SCHEMA_VERSION = 1
 CODE_ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 SCANNETPP_ROOT = Path("/data/ScanNetpp")
 SPLATS_ROOT = Path("/data/ScanNetppv2_gsplat/splats")
 FREEZE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")

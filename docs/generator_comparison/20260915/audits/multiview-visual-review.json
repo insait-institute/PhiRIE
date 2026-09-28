@@ -1,7 +1,0 @@
-{
-  "checked_utc": "2026-09-15T00:10:45.280943+00:00",
-  "object_key": "fb5a96b1a2-a1037",
-  "contact_sheet": "/group/worldcept/code/SimAny/outputs/icra2027/generator-comparison-bounded-20260914/audits/multiview-smoke-contact-sheet.jpg",
-  "visual_review": "Inspected all 12 source crops. Masks include sparse disconnected regions across views; this observed input limitation is retained. Source-selected smoke object and shared anchor unchanged.",
-  "generation_quality_review": "NOT_RUN; GPU smoke queued"
-}

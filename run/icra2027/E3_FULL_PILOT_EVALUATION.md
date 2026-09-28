@@ -11,8 +11,8 @@ unchanged; unmatched jobs keep null geometry.
 Reserve a new evaluation freeze, then run from this clean evaluation worktree:
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny PYTHONPATH=. \
-/group/worldcept/code/SimAny/.venv/bin/python -m run.icra2027.e3_pilot_evaluation prepare \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} PYTHONPATH=. \
+${SIMANY_ROOT}/.venv/bin/python -m run.icra2027.e3_pilot_evaluation prepare \
   --execution-config /absolute/frozen/construction/execution.yaml \
   --freeze-id NEW_EVALUATION_ID \
   --destination configs/experiments/icra2027/e3_full_pilot_evaluation
@@ -24,10 +24,10 @@ from the generated `freeze.yaml` with the production evidence root restored.
 On an ordinary CPU job on Hala/gcp*/sof1*, execute:
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny PYTHONPATH=. \
-/group/worldcept/code/SimAny/.venv/bin/python -m run.icra2027.e3_pilot_evaluation run \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} PYTHONPATH=. \
+${SIMANY_ROOT}/.venv/bin/python -m run.icra2027.e3_pilot_evaluation run \
   --config configs/experiments/icra2027/e3_full_pilot_evaluation/matching.yaml \
-  --contract /group/worldcept/code/SimAny/outputs/icra2027/NEW_EVALUATION_ID/contract/freeze_manifest.json
+  --contract ${SIMANY_ROOT}/outputs/icra2027/NEW_EVALUATION_ID/contract/freeze_manifest.json
 ```
 
 The existing producers write the matching manifest and the canonical per-scene

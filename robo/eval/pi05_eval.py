@@ -1,8 +1,8 @@
 """Closed-loop pi0.5 evaluation over SimAny pick-and-place task suites.
 
 Server side (openpi, separate JAX venv, e.g. on the same A6000):
-  cd /group/worldcept/PhiRIE/code/openpi && \
-  OPENPI_DATA_HOME=/group/worldcept/PhiRIE/checkpoints/openpi_cache \
+  cd ${OPENPI_ROOT} && \
+  OPENPI_DATA_HOME=${OPENPI_DATA_HOME} \
   XLA_PYTHON_CLIENT_MEM_FRACTION=0.5 uv run scripts/serve_policy.py \
     policy:checkpoint --policy.config=pi05_droid_jointpos \
     --policy.dir=gs://openpi-assets-simeval/pi05_droid_jointpos

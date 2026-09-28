@@ -5,6 +5,7 @@ Run from any directory: python path/to/public_task_queries/validate.py
 import copy
 import hashlib
 import json
+import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -47,12 +48,10 @@ def validate(sources, roster, expansion, verify_source_bytes=True):
     require([s["scene_id"] for s in sources["scenes"]] == SCENES, "source scene mismatch")
     # Preserve the frozen declaration while locating its unchanged bytes after
     # the workspace move. Only these two exact roots are approved.
-    relocated_root = "/group/worldcept/PhiRIE/code/SimAny/data/recon_scenes/data"
+    relocated_root = "${SIMANY_ROOT}/data/recon_scenes/data"
     source_root = sources["public_root"]
-    require(source_root in {
-        "/group/worldcept/code/SimAny/data/recon_scenes/data", relocated_root,
-    }, "unapproved source root")
-    public_root = Path(relocated_root)
+    require(source_root == relocated_root, "unapproved source root")
+    public_root = Path(os.environ.get("SIMANY_ROOT", HERE.parents[3])) / "data/recon_scenes/data"
     by_id = {}
     for scene in sources["scenes"]:
         require(len(scene["sources"]) == 7, "expected five RGB and two camera files")

@@ -3,7 +3,7 @@ scope: full_e2_missing_factory_materialization
 paper_ready: false
 freeze_id: 20260906-02e9d33-v2
 full_protocol:
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   bytes: 10979
   sha256: dada154405e7f507a157cebb6f1e86e36fdefbbd1fe787785ed99d0c743174b0
 scene_ids:
@@ -21,10 +21,10 @@ policy_id: A4
 planned_full_scenes: 50
 planned_full_objects: 1871
 planned_full_views: 400
-e3_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic
+e3_root: ${SIMANY_ROOT}/outputs/icra2027/20260905-859f51d-v1/agentic
 descriptors:
   13c3e046d7:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/13c3e046d7
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/13c3e046d7
     discovery_hashes:
       all_jobs_manifest.json: fc7714ea124d9b4e41ac87f257366170ef075048bde2a2cb69e976ca8ffa4bf9
       input_manifest.json: 22347c9ff28f4a03f4a2e96d2aecd30bb941306929fded045a6e08fce5879553
@@ -34,7 +34,7 @@ descriptors:
     scene_id: 13c3e046d7
     schema_version: 1
   1ada7a0617:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/1ada7a0617
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/1ada7a0617
     discovery_hashes:
       all_jobs_manifest.json: ee2be65b1345b092a798bb097a78d883c3a1a51901047125280f0609a6ce6bcf
       input_manifest.json: 9111274c2d54541af340fd02cdd23590c21b0403579f2fc8f00ec139a6aa4370
@@ -44,7 +44,7 @@ descriptors:
     scene_id: 1ada7a0617
     schema_version: 1
   21d970d8de:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/21d970d8de
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/21d970d8de
     discovery_hashes:
       all_jobs_manifest.json: 7e88a5be898654f88845ab5332d0981b32fc4e75ac595a17a06919827834fb3d
       input_manifest.json: 252476017a0fc494bcfdbc5dc666583d6ab9adeb6ea32170f300e14e2f30a214
@@ -54,7 +54,7 @@ descriptors:
     scene_id: 21d970d8de
     schema_version: 1
   38d58a7a31:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31
     discovery_hashes:
       all_jobs_manifest.json: 7676610b5dc37a7b603de96de7ba268e2144790957dc1e5ef544279d6195365f
       input_manifest.json: 156d5490e16c1f7bd4b51bd8f0246e7e03b6ab9754bbe4032454f00669c091a1
@@ -64,7 +64,7 @@ descriptors:
     scene_id: 38d58a7a31
     schema_version: 1
   5748ce6f01:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5748ce6f01
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/5748ce6f01
     discovery_hashes:
       all_jobs_manifest.json: 066792cd9fd25982622aafc94bbf1e9dcc55e100785fa9c9997a10f84b198a6b
       input_manifest.json: b059ceab204e18f1bc633cfc671ac2349ebc23be08ffa8a76b12a8f79b0acd67
@@ -74,7 +74,7 @@ descriptors:
     scene_id: 5748ce6f01
     schema_version: 1
   a8bf42d646:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/a8bf42d646
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/a8bf42d646
     discovery_hashes:
       all_jobs_manifest.json: e42847ac16d60c8af2d0b9390512b88f6487a8313cdffa0bf4eda282ece70e89
       input_manifest.json: a2172b28d4a38b171b24b15663fd5ae89cff25b3ada6c16d78cf17c2870c3462
@@ -84,7 +84,7 @@ descriptors:
     scene_id: a8bf42d646
     schema_version: 1
   ac48a9b736:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/ac48a9b736
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/ac48a9b736
     discovery_hashes:
       all_jobs_manifest.json: 8da0ebc105eb09a268a73fa0f0cf07c766fd7f5ac3b2fcb160105384d8553d6e
       input_manifest.json: 05181cc0384b80b43ae78756adcf0a9727bc1d33d975bff87d38bbd43b751168
@@ -94,7 +94,7 @@ descriptors:
     scene_id: ac48a9b736
     schema_version: 1
   bde1e479ad:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/bde1e479ad
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/bde1e479ad
     discovery_hashes:
       all_jobs_manifest.json: a6ada817aab8cefa86ef804149ae533dab0acbd39ccc91b4f1dd301eacc3fed1
       input_manifest.json: 2a3c8b06db59c063c5f7d59aab3190da122260dfd397b41b669734e9eda2a7fc
@@ -104,7 +104,7 @@ descriptors:
     scene_id: bde1e479ad
     schema_version: 1
   c4c04e6d6c:
-    discovery_directory: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c4c04e6d6c
+    discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/c4c04e6d6c
     discovery_hashes:
       all_jobs_manifest.json: df7c08c7314d32580c7f5509c964ef28f9f7aeae2eaa0980f568d57e6c33dda5
       input_manifest.json: 24550c56ba62e3abc2ab285e5dae99850f72d9694d3e81bf7fbcc2c9604d9f9d
@@ -113,4 +113,4 @@ descriptors:
       postrun_audit.json: bff95b586f008a279dcc9f18984f59a4e9624f388a22912f8196c14e604f1407
     scene_id: c4c04e6d6c
     schema_version: 1
-python: /group/worldcept/code/SimAny/.venv/bin/python3.11
+python: ${SIMANY_ROOT}/.venv/bin/python3.11

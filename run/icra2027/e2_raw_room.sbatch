@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH --account=runyi_yang
 #SBATCH --partition=debug
 #SBATCH --qos=debug
 #SBATCH --nodelist=hala
@@ -26,4 +25,4 @@ nvidia-smi --query-gpu=uuid,name,memory.total,memory.used --format=csv,noheader
 args=(--config "${E2_RAW_CONFIG:-configs/experiments/icra2027/e2_raw_room.yaml}"
       --freeze-root "$E2_RAW_FREEZE" --phase "${E2_RAW_PHASE:-run}")
 if [[ -n "${E2_RAW_SCENE:-}" ]]; then args+=(--scene-id "$E2_RAW_SCENE"); fi
-/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python -m run.icra2027.e2_raw_room "${args[@]}"
+${SIMANY_ROOT:-$PWD}/.venv/bin/python -m run.icra2027.e2_raw_room "${args[@]}"

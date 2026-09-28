@@ -3,9 +3,9 @@ freeze_id: 20260904-07e8b05-v20
 study_scope: synthetic_policy_service_infrastructure_only
 paper_ready: false
 policy_id: pi05_droid_jointpos
-openpi_root: /group/worldcept/PhiRIE/code/openpi-wt/e4-policy-server
+openpi_root: ${OPENPI_ROOT}/worktrees/e4-policy-server
 openpi_commit: 2f51088169d2e2b480ce54faa737be9b0279eed4
-openpi_python: /group/worldcept/PhiRIE/code/openpi/.venv/bin/python
+openpi_python: ${OPENPI_ROOT}/.venv/bin/python
 synthetic_observation:
   image_shape: [224, 224, 3]
   image_dtype: uint8

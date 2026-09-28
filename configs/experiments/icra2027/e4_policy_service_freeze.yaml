@@ -4,7 +4,7 @@ freeze_id: 20260904-07e8b05-v20
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/PhiRIE/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: frozen_fields
@@ -53,7 +53,7 @@ input_roots:
   required: true
 checkpoint_roots:
 - id: pi05_droid_jointpos
-  path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/pi05_droid_jointpos
+  path: ${OPENPI_DATA_HOME}/openpi-assets-simeval/pi05_droid_jointpos
   kind: checkpoint
   required: true
 hardware:

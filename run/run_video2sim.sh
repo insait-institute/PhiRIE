@@ -20,7 +20,7 @@ set -e
 #   splats      $RECON_ROOT/splats/<scene>.ply   (= $SIMANY_SPLATS_ROOT/<scene>.ply)
 # agents/recon/make_scene_dir.py takes --root $RECON_ROOT and writes the
 # data/<scene> level itself; keep the two sides of this contract in sync.
-RECON_ROOT=/group/worldcept/PhiRIE/code/SimAny/data/recon_scenes
+RECON_ROOT=${SIMANY_ROOT:-$PWD}/data/recon_scenes
 
 # ---- pick the video(s) -----------------------------------------------------
 VIDEO=${VIDEO:-}

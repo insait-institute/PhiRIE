@@ -75,7 +75,7 @@ def test_submitter_enqueues_exact_21_job_dag(submitter_text: str) -> None:
 
 
 def test_submitter_uses_exact_cpu_profiles(submitter_text: str) -> None:
-    assert "ACCOUNT=runyi_yang" in submitter_text
+    assert "ACCOUNT=${SLURM_ACCOUNT:-phirie}" in submitter_text
     assert "CPU_NODELIST='sof1-h200-[0-7]'" in submitter_text
     assert "--partition=batch --qos=normal --nodelist=\"$CPU_NODELIST\"" in submitter_text
     assert "--parsable --no-requeue" in submitter_text
@@ -211,7 +211,7 @@ esac
     fake_sacctmgr.write_text(
         """#!/usr/bin/env bash
 set -euo pipefail
-printf 'runyi_yang|%s|batch|normal|\n' "$TEST_SUBMIT_USER"
+printf 'phirie|%s|batch|normal|\n' "$TEST_SUBMIT_USER"
 """,
         encoding="utf-8",
     )
@@ -238,13 +238,13 @@ printf '%s\n' "$job_id"
 
     rendered = submitter_text
     replacements = {
-        "CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot": (
+        "CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot": (
             f"CODE_ROOT={shlex.quote(str(code_root))}"
         ),
-        "EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny": (
+        "EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}": (
             f"EVIDENCE_ROOT={shlex.quote(str(evidence_root))}"
         ),
-        "PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python": (
+        "PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python": (
             f"PYTHON={shlex.quote(str(fake_python))}"
         ),
         'LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_candidate_cpu.sbatch"': (
@@ -363,8 +363,8 @@ printf '%s\n' "$job_id"
 def test_launcher_binds_exact_roots_commit_import_and_cpu_allocation(
     launcher_text: str,
 ) -> None:
-    assert "CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot" in launcher_text
-    assert "EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny" in launcher_text
+    assert "CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot" in launcher_text
+    assert "EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}" in launcher_text
     assert '[[ "$CODE_ROOT" != "$EVIDENCE_ROOT" ]]' in launcher_text
     assert '"$observed_commit" == "$E4_CODE_COMMIT"' in launcher_text
     assert "status --porcelain --untracked-files=normal" in launcher_text

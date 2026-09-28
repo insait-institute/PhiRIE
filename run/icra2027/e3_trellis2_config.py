@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Pin the fixed TRELLIS.2 pilot using the existing TRAIN discovery declaration."""
 import argparse
+import os
 from pathlib import Path
 import sys
 import yaml
@@ -76,8 +77,9 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--freeze-id', required=True)
     p.add_argument('--out', required=True)
-    p.add_argument('--evidence-root', default='/group/worldcept/PhiRIE/code/SimAny')
-    p.add_argument('--python', default='/group/worldcept/PhiRIE/code/SimAny/.venv-trellis2/bin/python')
+    code = Path(__file__).resolve().parents[2]
+    p.add_argument('--evidence-root', default=os.environ.get('SIMANY_EVIDENCE_ROOT', str(code)))
+    p.add_argument('--python', default=os.environ.get('SIMANY_TRELLIS2_PY', str(code / '.envs/trellis2/bin/python')))
     a=p.parse_args()
     print(build(a.freeze_id, a.out, evidence_root=a.evidence_root, python=a.python))
 

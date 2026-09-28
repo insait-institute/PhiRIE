@@ -8,7 +8,7 @@ environments:
     python: /RESOLVE/gaussian-env/bin/python
     sbatch_args: [--nodes=1, --ntasks=1, --cpus-per-task=8, --mem=96G, --gres=gpu:1, '--time=06:00:00']
   native:
-    python: /group/worldcept/code/SimAny-wt/sr0-native/.venv-native/bin/python
+    python: ${SIMANY_ROOT}/worktrees/sr0-native/.venv-native/bin/python
     admission: {path: /RESOLVE/native-admission.json, sha256: RESOLVE}
     setup_script: {path: /RESOLVE/run/roundtrip/native_env.sh, sha256: RESOLVE}
     sbatch_args: [--nodes=1, --ntasks=1, --cpus-per-task=8, --mem=48G, --gres=gpu:1, '--time=04:00:00']

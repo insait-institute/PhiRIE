@@ -9,7 +9,7 @@
 # ablation_rowC_scene.sbatch (derived_mesh.ply across separate jobs once hit
 # stale cross-node NFS reads).
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 export TASK=${TASK:-task-0000}
 export EPISODES=${EPISODES:-3}
 export STATIC_ONLY=${STATIC_ONLY:-1}

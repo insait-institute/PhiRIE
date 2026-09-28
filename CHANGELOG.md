@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — open-source cleanup
+
+- Add the MIT `LICENSE` and switch the PhiView submodule URL to HTTPS so
+  anonymous recursive clones work.
+- Remove internal material from the tree: experiment output snapshots
+  (`outputs/`), agent task plans (`plan/`), coding-agent memory notes, CI
+  receipts, paper sources and planning notes, website delivery reports, and
+  internal campaign workflows.
+- Replace cluster-specific absolute paths, user names and Slurm accounts with
+  environment variables (`SIMANY_ROOT`, `SIMANY_*_PY`, `OPENPI_DATA_HOME`,
+  `HF_HOME`, `SLURM_ACCOUNT`) and portable defaults.
+
 ## 2.0.1 — 2026-09-21
 
 PhiRIE naming and release metadata; main-branch consolidation with recoverable
@@ -19,7 +31,7 @@ See [the release report](docs/releases/v2.0.1.md) for validation and limitations
 - Preserve the existing construction, simulator, evaluation and final-experiment APIs.
 
 This software release does not certify experimental completion or paper-quality results.
-See [release details](docs/releases/v2.0.0.md) and [FINAL_EXPERIMENTS.md](FINAL_EXPERIMENTS.md).
+See [release details](docs/releases/v2.0.0.md).
 
 ### Modular feature interfaces
 

@@ -13,7 +13,7 @@ from run.icra2027 import e6_public_reconstruction as shared
 from robo.certification import public_grounding as grounding
 
 CODE=Path(__file__).resolve().parents[2]
-CONSTRUCTION_CODE='/group/worldcept/PhiRIE/code/SimAny-wt/e6-public-full'
+CONSTRUCTION_CODE=os.environ.get('SIMANY_E6_CONSTRUCTION_CODE',str(CODE/'worktrees/e6-public-full'))
 CONSTRUCTION_SHA='b2c827aa5c675ae8578a6bd1aec5c4a8f0402d99'
 KEYS={'schema_version','scope','freeze_id','source_commit','construction','discovery_runtime','rgb_runtime','protocol'}
 RUNTIME_KEYS={'sam3_source','sam3_checkpoint','sam3_python','render_python','renderer_dependency_root',

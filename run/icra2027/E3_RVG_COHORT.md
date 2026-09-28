@@ -17,8 +17,8 @@ this existing builder (substitute the reserved ID, scene ID and destination):
 
 ```bash
 python -m run.icra2027.e3_fresh_rvg_config \
-  --source-freeze-root /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1 \
-  --source-config /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml \
+  --source-freeze-root ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1 \
+  --source-config ${SIMANY_ROOT}/worktrees/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml \
   --source-commit 86613e37d7bdfcef5ad10eb5cf289051055cdec3 \
   --recipe-config configs/experiments/icra2027/e3_fresh_rvg.yaml \
   --scene-id 38d58a7a31 --freeze-id "$E3_RVG_ID" \

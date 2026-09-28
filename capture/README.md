@@ -176,7 +176,7 @@ It comes back `FAIL`, honestly: one brief `SEVERE_BLUR` window (~00:24-25),
 three `EXPOSURE_JUMP` warnings, extensive `FAST_PAN` / `NO_FRAME_OVERLAP`
 findings scattered through most of the clip (this is a single continuous
 handheld sweep, not the slower two-pass procedure above — a real
-data point that the "casual scan" framing in `plan/02_PHONE_CAPTURE_PROTOCOL.md`
+data point that the "casual scan" framing in the internal phone-capture protocol notes
 is more aspirational than this one clip achieves), no `NO_CALIBRATION_MARKER`
 (it never carried one), and `SHORT_DURATION` (28.2s vs. the 60s two-pass
 recommendation). None of that was reason to loosen a threshold — the point

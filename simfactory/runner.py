@@ -27,17 +27,14 @@ ROOT = Path(__file__).resolve().parents[1]
 # interpreter map, mirroring run/env.sh (env overrides win)
 PY = {
     "venv": os.environ.get("SIMANY_PY", str(ROOT / ".venv/bin/python")),
-    "sam3": os.environ.get("SIMANY_SAM3_PY",
-                           "/group/streetsplat/worldcept/.envs/sam3/bin/python"),
-    "gsplat": os.environ.get(
-        "SIMANY_GSPLAT_PY",
-        "/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python"),
+    "sam3": os.environ.get("SIMANY_SAM3_PY", str(ROOT / ".envs/sam3/bin/python")),
+    "gsplat": os.environ.get("SIMANY_GSPLAT_PY",
+                             str(ROOT / ".envs/mini-viewer/bin/python")),
     "sam3d": os.environ.get("SIMANY_SAM3D_PY",
                             str(ROOT / ".envs/sam3d-objects/bin/python")),
     "trellis2": os.environ.get("SIMANY_TRELLIS2_PY",
                                str(ROOT / ".envs/trellis2/bin/python")),
-    "h5": os.environ.get("SIMANY_H5_PY",
-                         "/group/worldcept/artifixer/.venv/bin/python"),
+    "h5": os.environ.get("SIMANY_H5_PY", str(ROOT / ".venv/bin/python")),
 }
 
 

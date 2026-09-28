@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/metadata_AUTOLab+84bd5053+2023-07-14-16h-55m-45s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/metadata_AUTOLab+84bd5053+2023-07-14-16h-55m-45s.json",
       "sha256": "4285e250e60569cc51eb19551f2620dbadf99977c8074e6aef9fc85eb17b6e54",
       "size_bytes": 1709
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/trajectory.h5",
       "sha256": "59c29bd49147dce2121fd1a6111ee1fd7b013ddb80c235c406a09ca10924ebbc",
       "size_bytes": 747203
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/recordings/MP4/18026681.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/recordings/MP4/18026681.mp4",
       "sha256": "ac75aa0bcefa6bf7b57c94b5d38db43319441e9cc177b5f640c8402eb63f884b",
       "size_bytes": 1931782
     }

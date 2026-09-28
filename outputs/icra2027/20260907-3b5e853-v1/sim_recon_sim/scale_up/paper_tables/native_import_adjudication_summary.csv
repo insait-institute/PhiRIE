@@ -1,2 +1,0 @@
-method,cohort_id,scope,split,classified_units,affected_instances,producer_accepted_objects,native_executed_instances,cohort_complete,all_watertight_near_threshold_nonconvex,geometry_repaired,threshold_changed,native_success_values_changed
-B0_FIXED_NATIVE,native_test_v2_48instances,L0_target_only,test,10,1,32,31,True,True,False,False,False

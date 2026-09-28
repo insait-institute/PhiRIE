@@ -19,7 +19,7 @@ Smoke (positive, changed denominator, changed source, alias, missing metric,
 nonfinite metric, wrong source, and numeric claim-field lineage checks):
 
 ```bash
-/group/worldcept/code/SimAny/.venv/bin/python -m pytest -q \
+${SIMANY_ROOT}/.venv/bin/python -m pytest -q \
   tests/test_paper_room_diagnostic.py tests/test_paper_pipeline_audit.py \
   tests/test_paper_engineering_appendix.py tests/test_paper_droid_stages.py \
   tests/test_paper_paired_uncertainty.py tests/test_paper_paired_figure.py
@@ -32,11 +32,11 @@ their original failed bootstrap job remain immutable.
 Publication requires clean committed source and exact E0 first:
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny \
-/group/worldcept/code/SimAny/.venv/bin/python -m robo.eval.paper_pipeline \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} \
+${SIMANY_ROOT}/.venv/bin/python -m robo.eval.paper_pipeline \
   --config configs/experiments/icra2027/paper_room_diagnostic_draft.yaml \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/20260906-61abf4c-v2/paper_tables \
-  --paper-root /group/worldcept/code/SimAnyRoom
+  --out ${SIMANY_ROOT}/outputs/icra2027/20260906-61abf4c-v2/paper_tables \
+  --paper-root ${PAPER_REPO_ROOT}
 ```
 
 The publication is a working draft; E3 full evaluation, E4, E6 and final scientific

@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/metadata_RAIL+d027f2ae+2023-10-24-10h-23m-40s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/metadata_RAIL+d027f2ae+2023-10-24-10h-23m-40s.json",
       "sha256": "a6ab08653e5580a7868c426782deba714799905cfc427706f0692185e8b39d31",
       "size_bytes": 1785
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/trajectory.h5",
       "sha256": "a007a76abe8f08b35275d51faa3931731015ae29627170128ebf61f40df6f6ea",
       "size_bytes": 763587
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/recordings/MP4/13062452.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/RAIL/success/2023-10-24/Tue_Oct_24_10:23:40_2023/recordings/MP4/13062452.mp4",
       "sha256": "b11f44e445a0b7abd7618e2d9e17d8739eff024b1a0ed79ebcf0112598086f8f",
       "size_bytes": 1597511
     }

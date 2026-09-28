@@ -7,14 +7,14 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e0-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e0-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e0-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e0-%j.err
 
 # E0 is deliberately CPU-only. No GPU/GRES is requested: this verification
 # must not occupy an accelerator needed by the quantitative experiments.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 cd "$ROOT"
 export TMPDIR="$ROOT/.tmp/icra2027"
 export PYTHONDONTWRITEBYTECODE=1

@@ -32,6 +32,7 @@ def test_runtime_menagerie_copy_has_exact_recursive_closure():
     assert not any(Path(row["path"]).is_absolute() for row in snapshot["files"])
 
 
+@pytest.mark.skipif(not gate.EXPECTED_OPENPI_ROOT.is_dir(), reason="sealed openpi checkout is unavailable")
 def test_openpi_resize_source_is_clean_and_pinned():
     snapshot = gate._openpi_snapshot()
     assert snapshot["commit"] == gate.EXPECTED_OPENPI_COMMIT
@@ -701,9 +702,9 @@ def test_worker_binds_split_roots_egl_openpi_and_refuses_arrays():
     path = ROOT / "run/slurm/icra2027_e4_camera_scorer_gpu.sbatch"
     text = path.read_text(encoding="utf-8")
     assert "--array" not in text
-    assert "CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot" in text
-    assert "EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny" in text
-    assert "OPENPI_ROOT=/group/worldcept/PhiRIE/code/openpi-wt/e4-policy-server" in text
+    assert "CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot" in text
+    assert "EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}" in text
+    assert "OPENPI_ROOT=${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout}/worktrees/e4-policy-server" in text
     assert 'export MUJOCO_GL=egl' in text
     assert 'export PYOPENGL_PLATFORM=egl' in text
     assert "E4_QUALIFIER_PREFLIGHT_GATE_SHA256" in text

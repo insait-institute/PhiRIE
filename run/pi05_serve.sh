@@ -8,9 +8,9 @@
 # GCS access happens at serve time.
 set -e
 export PATH="$HOME/.local/bin:$PATH"
-export OPENPI_DATA_HOME=/group/worldcept/PhiRIE/checkpoints/openpi_cache
+export OPENPI_DATA_HOME=${OPENPI_DATA_HOME:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/checkpoints/openpi_cache}
 export XLA_PYTHON_CLIENT_MEM_FRACTION=0.5
-cd /group/worldcept/PhiRIE/code/openpi
+cd "${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout (github.com/xuningy/openpi fork)}"
 # NB: tyro parses global args (--port) BEFORE the policy:checkpoint subcommand
 # Prefer a local-scratch copy of the checkpoint: orbax/zarr restore does many
 # small scattered reads, and that access pattern got stuck for 1h+ (zero
@@ -23,8 +23,8 @@ cd /group/worldcept/PhiRIE/code/openpi
 # droid_pi05_jointpos_with_web_and_sim/80000 for the sim-co-trained variant).
 # All variants share the pi05_droid_jointpos architecture/config.
 CKPT_NAME=${SIMANY_PI05_CKPT:-pi05_droid_jointpos}
-SHARED_CKPT=/group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/$CKPT_NAME
-LOCAL_CKPT=/scratch/runyi_yang/openpi_cache_local/${CKPT_NAME//\//_}
+SHARED_CKPT=${OPENPI_DATA_HOME:-${SIMANY_ROOT:-$PWD}/checkpoints/openpi_cache}/openpi-assets-simeval/$CKPT_NAME
+LOCAL_CKPT=/scratch/${USER}/openpi_cache_local/${CKPT_NAME//\//_}
 if [ ! -f "$LOCAL_CKPT/.copy_complete" ] && [ -d "$SHARED_CKPT" ]; then
   # make the node-local copy ourselves (idempotent; ~9 s for 12 GB)
   mkdir -p "$LOCAL_CKPT" \

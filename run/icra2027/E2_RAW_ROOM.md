@@ -26,7 +26,7 @@ Before execution, commit this source/config, run `run/icra2027/preflight.sh
 `e2_raw_room_freeze.yaml` plus that passing preflight log. Then:
 
 ```bash
-/group/worldcept/code/SimAny/.venv/bin/python -m run.icra2027.e2_raw_room \
+${SIMANY_ROOT}/.venv/bin/python -m run.icra2027.e2_raw_room \
   --config configs/experiments/icra2027/e2_raw_room.yaml \
   --freeze-root /absolute/shared/canonical/freeze --phase plan
 ```

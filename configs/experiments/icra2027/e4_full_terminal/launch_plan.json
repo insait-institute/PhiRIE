@@ -1,22 +1,22 @@
 {
   "all_original_scenes": 50,
   "command": [
-    "/group/worldcept/code/SimAny/.venv/bin/python3.11",
-    "/group/worldcept/code/SimAny-wt/e4-full-terminal-execution/outputs/terminal-preparation/publish.py",
+    "${SIMANY_ROOT}/.venv/bin/python3.11",
+    "${SIMANY_ROOT}/worktrees/e4-full-terminal-execution/outputs/terminal-preparation/publish.py",
     "--config",
-    "/group/worldcept/code/SimAny-wt/e4-full-terminal-execution/configs/experiments/icra2027/e4_full_terminal/execution.json",
+    "${SIMANY_ROOT}/worktrees/e4-full-terminal-execution/configs/experiments/icra2027/e4_full_terminal/execution.json",
     "--freeze-root",
-    "/group/worldcept/code/SimAny/outputs/icra2027/20260906-c3ba498-v1",
+    "${SIMANY_ROOT}/outputs/icra2027/20260906-c3ba498-v1",
     "--expected-code-commit",
     "exact committed execution checkout"
   ],
   "config": {
-    "path": "/group/worldcept/code/SimAny-wt/e4-full-terminal-execution/configs/experiments/icra2027/e4_full_terminal/execution.json",
+    "path": "${SIMANY_ROOT}/worktrees/e4-full-terminal-execution/configs/experiments/icra2027/e4_full_terminal/execution.json",
     "sha256": "5e988763b9deea12867fc17690bfdcdef9925aa24b468c18d1a7188a0657e3c7",
     "size_bytes": 19855
   },
   "driver": {
-    "path": "/group/worldcept/code/SimAny-wt/e4-full-terminal-execution/outputs/terminal-preparation/publish.py",
+    "path": "${SIMANY_ROOT}/worktrees/e4-full-terminal-execution/outputs/terminal-preparation/publish.py",
     "sha256": "36413d985644a7fdfdbb6b71e7cb87448b3d70efd13493b6b2ec312742355c7e",
     "size_bytes": 4684
   },
@@ -49,6 +49,6 @@
     ]
   },
   "source_commit": "exact committed execution checkout",
-  "source_repository": "/group/worldcept/code/SimAny-wt/e4-full-terminal-execution",
-  "stage_root": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-c3ba498-v1"
+  "source_repository": "${SIMANY_ROOT}/worktrees/e4-full-terminal-execution",
+  "stage_root": "${SIMANY_ROOT}/outputs/icra2027/20260906-c3ba498-v1"
 }

@@ -5,15 +5,15 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=00:15:00
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/%x-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/%x-%j.err
+#SBATCH --output=outputs/icra2027/slurm/%x-%j.out
+#SBATCH --error=outputs/icra2027/slurm/%x-%j.err
 
 # E1 moved to icra2027_e1_construction.sbatch once its strict, evidence-backed
 # inventory contract replaced the old placeholder CSV. This launcher now owns
 # only the dependency-light E4 synthetic contract smoke and requests no GRES.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 : "${ICRA_SMOKE:?submit with ICRA_SMOKE=e4}"
 : "${SLURM_JOB_ID:?this launcher must run under Slurm}"
 

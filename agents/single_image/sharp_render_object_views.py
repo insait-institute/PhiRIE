@@ -7,7 +7,7 @@ PinholeCameraModel.compute, all defaults) PORTED INLINE as plain numpy --
 the `sharp` package is not installed in this env (mini-viewer venv has no
 `click`/`sharp`), so rather than fight that import we hand-port the small
 amount of math actually needed, verified against the source at
-/group/worldcept/PhiRIE/code/sharp/repo/src/sharp/utils/camera.py:53-71,155-176,233-345.
+${SHARP_ROOT}/repo/src/sharp/utils/camera.py:53-71,155-176,233-345.
 This is a deliberate, documented deviation from "import sharp.utils.camera
 directly" -- the formulas are copied faithfully, not reinvented.
 
@@ -35,6 +35,8 @@ own frame-inverse of the `@ R_ZUP.T` used to build it) immediately after
 loading, before any projection -- otherwise the object's own point cloud
 would be misaligned with this script's camera poses/masking.
 """
+import os
+
 import numpy as np
 from PIL import Image, ImageDraw
 
@@ -125,7 +127,8 @@ def main():
     picks = None if args.objects is None \
         else {int(x) for x in args.objects.split(",")}
 
-    ply_path = "/group/worldcept/PhiRIE/code/sharp/outputs/DSC08561/DSC08561.ply"
+    ply_path = os.path.join(os.environ.get("SHARP_ROOT", "third_party/sharp"),
+                            "outputs/DSC08561/DSC08561.ply")
     f_px, W, H = read_camera(ply_path)
     K = np.array([[f_px, 0.0, W / 2.0], [0.0, f_px, H / 2.0], [0.0, 0.0, 1.0]])
 

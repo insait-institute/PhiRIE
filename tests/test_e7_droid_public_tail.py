@@ -61,7 +61,7 @@ def test_probe_no_reference_inputs():
     assert m.SOURCE_PROBE.index('validate_prepared(c,w,d,p,code)')<m.SOURCE_PROBE.index("r=json.loads((d/'train_receipt.json')")
 
 
-@pytest.mark.parametrize('path',['/data/ScanNetpp/scene.ply','/a/held_out_reference.json','/a/alignment_evaluation.json','/a/result.json','/a/vault/ref.ply','/a/full_cpu_summary/rows.json','/group/worldcept/PhiRIE/code/SimAny/data/recon_scenes/data/x.ply'])
+@pytest.mark.parametrize('path',['/data/ScanNetpp/scene.ply','/a/held_out_reference.json','/a/alignment_evaluation.json','/a/result.json','/a/vault/ref.ply','/a/full_cpu_summary/rows.json',str(Path(__file__).resolve().parents[1]/'data/recon_scenes/data/x.ply')])
 def test_reference_reads_rejected(path):
     with pytest.raises(PermissionError):m.enforce_public_read('open',(path,'r'))
 

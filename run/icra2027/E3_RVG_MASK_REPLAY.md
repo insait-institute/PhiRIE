@@ -21,7 +21,7 @@ raycasting replay incompatibility; exact low-level CPU instruction attribution
 was not measured. Diagnostics stopped at the first differing object; the table
 is not a count of all potentially differing masks. No true evaluation GT or
 model inference was accessed. Source diagnostic reports and script are retained
-under `/group/worldcept/code/SimAny-wt/e3-rvg-mask-replay/outputs/rvg-mask-diagnosis`.
+under `${SIMANY_ROOT}/worktrees/e3-rvg-mask-replay/outputs/rvg-mask-diagnosis`.
 
 ## New run configuration
 
@@ -61,10 +61,10 @@ before the terminal audit can be consumed by canonical inventory. Mixed or
 partially generated pools are rejected and require the full artifact audit.
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny python -m run.icra2027.e3_rvg_terminal_audit \
-  --producer-config /group/worldcept/code/SimAny-wt/e3-rvg-cohort-launch/configs/experiments/icra2027/rvg_cohort/SCENE.yaml \
-  --producer-freeze /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1 \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/20260905-d1e8e21-v1/terminal_audit/UNUSED_BATCH/SCENE.json
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} python -m run.icra2027.e3_rvg_terminal_audit \
+  --producer-config ${SIMANY_ROOT}/worktrees/e3-rvg-cohort-launch/configs/experiments/icra2027/rvg_cohort/SCENE.yaml \
+  --producer-freeze ${SIMANY_ROOT}/outputs/icra2027/20260905-d1e8e21-v1 \
+  --out ${SIMANY_ROOT}/outputs/icra2027/20260905-d1e8e21-v1/terminal_audit/UNUSED_BATCH/SCENE.json
 ```
 
 Use each exact sidecar path/hash with the existing canonical terminal-pool
@@ -89,7 +89,7 @@ from pathlib import Path
 import yaml
 new_freeze = os.environ['E3_RECOVERY_FREEZE_ID']  # already reserved, never reused
 root = Path.cwd()
-old = Path('/group/worldcept/code/SimAny-wt/e3-rvg-cohort-launch')
+old = Path('${SIMANY_ROOT}/worktrees/e3-rvg-cohort-launch')
 output = root / 'configs/experiments/icra2027/rvg_mask_recovery'
 output.mkdir(exist_ok=False)
 resources = []
@@ -109,13 +109,13 @@ freeze.update(freeze_id=new_freeze, input_roots=resources)
 Commit and publish those configs before any plan/run. On the exact clean source:
 
 ```bash
-export SIMANY_PY=/group/worldcept/code/SimAny/.venv/bin/python
+export SIMANY_PY=${SIMANY_ROOT}/.venv/bin/python
 "$SIMANY_PY" -m pytest -q tests/test_e3_fresh_rvg.py tests/test_e3_terminal_pools.py \
   --basetemp outputs/rvg-mask-smoke/pytest
 bash run/icra2027/preflight.sh --smoke
 "$SIMANY_PY" -m robo.eval.freeze \
   --config configs/experiments/icra2027/rvg_mask_recovery/freeze.yaml \
-  --out "/group/worldcept/code/SimAny/outputs/icra2027/$E3_RECOVERY_FREEZE_ID/contract"
+  --out "${SIMANY_ROOT}/outputs/icra2027/$E3_RECOVERY_FREEZE_ID/contract"
 ```
 
 Run CPU `--phase plan` for both declared scene configs through the existing

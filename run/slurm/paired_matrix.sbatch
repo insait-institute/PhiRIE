@@ -3,7 +3,7 @@
 #SBATCH --gres=gpu:a6000:1
 #SBATCH -t 6:00:00
 #SBATCH -J paired_matrix
-#SBATCH -o /group/worldcept/PhiRIE/code/SimAny/outputs/paired_matrix_%j.log
+#SBATCH -o outputs/paired_matrix_%j.log
 # Same 100G note as run/slurm/pi05_closedloop.sbatch: a served policy holds
 # its checkpoint in host RAM while jax stages it to the GPU, and the cgroup
 # default (2G) OOM-kills mid-restore. Irrelevant for POLICY=scripted_sinusoid
@@ -28,7 +28,7 @@
 #             server first, using the exact recipe
 #             run/slurm/pi05_closedloop.sbatch already uses.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 # Packages (robo/, agents/, ...) are not pip-installed into .venv, so the
 # repo root must be on PYTHONPATH for `from robo ...` -- same reasoning as

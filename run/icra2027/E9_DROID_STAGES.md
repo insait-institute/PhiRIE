@@ -17,7 +17,7 @@ unavailable counts remain null; successful processing with no discoveries is zer
 Smoke including forged source, scope, bytes, denominator and measurement negatives:
 
 ```bash
-PYTHONPATH=. /group/worldcept/code/SimAny/.venv/bin/python -m pytest -q \
+PYTHONPATH=. ${SIMANY_ROOT}/.venv/bin/python -m pytest -q \
  tests/test_paper_droid_stages.py tests/test_paper_droid_cpu.py \
  tests/test_paper_engineering_appendix.py tests/test_paper_pipeline_audit.py
 ```

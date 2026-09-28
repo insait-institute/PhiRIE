@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/metadata_IRIS+7dfa2da3+2023-04-17-16h-03m-25s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/metadata_IRIS+7dfa2da3+2023-04-17-16h-03m-25s.json",
       "sha256": "00d5545abb00d55e2856257bc6a444598579cedc9093f1315a8b3b910731d257",
       "size_bytes": 1778
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/trajectory.h5",
       "sha256": "b842a0eb3ee995ca7746d8fcf281d1d3f11deee07f665162c88713f2009ce1a2",
       "size_bytes": 1724374
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/recordings/MP4/19824535.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/IRIS/success/2023-04-17/Mon_Apr_17_16:03:25_2023/recordings/MP4/19824535.mp4",
       "sha256": "2cddf53606128bd3c5b8069e6cc1ac2cb88574525cfd3d8e86cf311cd5a3f5e2",
       "size_bytes": 6073450
     }

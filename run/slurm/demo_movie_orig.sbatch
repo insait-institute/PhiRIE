@@ -4,11 +4,11 @@
 #SBATCH --mem=100G
 #SBATCH --time=03:00:00
 #SBATCH --job-name=simany_demoOrig
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/demo_movie/jobOrig.log
+#SBATCH --output=outputs/demo_movie/jobOrig.log
 # Demo v4: objects keep their ORIGINAL scene gaussians (DEMO_OBJ_SRC=orig);
 # generated assets still drive the physics. Reuses the v3 interact pose jsons.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 OUTD=$SIMANY_ROOT/outputs/demo_movie
 export SIMANY_DEMO_SCALE=1.0 SIMANY_DEMO_OBJ_SRC=orig

@@ -2,6 +2,7 @@
 import os
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 import pytest
 
@@ -14,6 +15,7 @@ def test_candidate_launcher_copied_into_slurm_spool(tmp_path,source):
     script=spool/'slurm_script'
     shutil.copyfile(CODE/'run/icra2027/run_e4_automatic_candidates.sh',script)
     env=dict(os.environ);env.pop('E4_CODE',None)
+    env.setdefault('SIMANY_PY',sys.executable)  # reach the module's argparse with the test interpreter
     if source is not None:env['E4_CODE']=source
     result=subprocess.run(['bash',str(script),'invalid-phase'],cwd=spool,env=env,text=True,capture_output=True)
     assert result.returncode!=0 and 'No module named' not in result.stderr

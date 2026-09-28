@@ -2,11 +2,11 @@ schema_version: 1
 scope: full_e2_train_only_background_fill
 freeze_id: 20260906-0be94c7-v1
 erasure_integrity:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/dispatch/erasure_integrity.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/dispatch/erasure_integrity.json
   bytes: 50441
   sha256: de5489f855b7401d84f074a5423f21c71b270c4f07077c12366c47fd67a56093
 pilot_integrity:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-860f3fc-v2/dispatch/independent_completion_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-860f3fc-v2/dispatch/independent_completion_gate.json
   bytes: 539
   sha256: 97e47fa532074d7a78fe1e072301c243f93dba89a8b653c8406803107f4a4608
 scene_ids:
@@ -75,16 +75,16 @@ rows:
   status: COMPLETE
   action: REUSE_PILOT
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v2/fidelity/erasure/0d2ee665be/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-65c5a7e-v2/fidelity/erasure/0d2ee665be/seal.json
     bytes: 769
     sha256: 4b268db070eafec8f18fce5b5d0d651e3701d901d9860d4913600275aebe4821
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/pilot.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/pilot.yaml
     sha256: 3faf0a481e1b5ba1ee72c828d0f472b3e717ede6f8fbcd28e5c0871729e079bb
   contract:
     bytes: 13157
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-65c5a7e-v2/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-65c5a7e-v2/contract/freeze_manifest.json
     sha256: 0b65f2d9ab9163ab8721470ec8a365d76730f14244077fd3cae9b92b98fe1734
   source_commit: 7b6ffad637f2bc24a58c9a2f5f469906e2b9ac3b
   planned_objects: 29
@@ -96,23 +96,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-860f3fc-v2/fidelity/background_fill/0d2ee665be/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-860f3fc-v2/fidelity/background_fill/0d2ee665be/seal.json
     bytes: 1117
     sha256: ef4be941239017814439c9e134b8b6cc0771a477e862b837486b983ead7c5f67
 - scene_id: 13c3e046d7
   status: COMPLETE
   action: CPU_NO_OP_ZERO_ACCEPTED
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/13c3e046d7/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/13c3e046d7/seal.json
     bytes: 133
     sha256: ee20542d890a762bcff13df7a28f19a5bbbb0f67babc5c8b18d8ac71bfacc7f1
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/13c3e046d7.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/13c3e046d7.yaml
     sha256: 60969ad35c521e7028aef1ff1820f408de852437b8da6426afbf94986bba0bc2
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 1
@@ -124,23 +124,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/13c3e046d7.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/13c3e046d7.yaml
     bytes: 6361
     sha256: b0932dc5f9448ef7ba53e1c05941e8879af67c479dab1d48538f182d9cb1ac17
 - scene_id: 1ada7a0617
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/1ada7a0617/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/1ada7a0617/seal.json
     bytes: 2677
     sha256: 0aef6be009280a0f69a47cc77b8c7b73006034fe60f1c8f7dd79769989230bdd
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/1ada7a0617.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/1ada7a0617.yaml
     sha256: 4e7d6a365bfd31b973c50bf7dc3207bd5ab6dc1dc8b4f5c0ddfce43ccb979529
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 25
@@ -152,7 +152,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/1ada7a0617.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/1ada7a0617.yaml
     bytes: 6362
     sha256: c8ddb21556b0eef3323aa25291644f4eecf70c9c5e098f4a80d886ddd1733b80
 - scene_id: 21d970d8de
@@ -166,16 +166,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/25f3b7a318/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/25f3b7a318/seal.json
     bytes: 3631
     sha256: 2488135b9c0436bc2016e32785cb4ebf69a9bc1b2dc5ae75a4fd3ea20992449d
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/25f3b7a318.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/25f3b7a318.yaml
     sha256: 868562a517fd8bda3b3e05fc1ba1efd066bf39b07c3b4bcc0dd2f43a91717171
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 51
@@ -187,23 +187,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/25f3b7a318.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/25f3b7a318.yaml
     bytes: 6362
     sha256: de28c685c03f39add36eef53740f8946bbe86fd9441e33ac0c92691f35615fe8
 - scene_id: 27dd4da69e
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/27dd4da69e/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/27dd4da69e/seal.json
     bytes: 451
     sha256: f36c4eedf8b343dbf8201c8690b7f7dc708e6046e6cf129a8f109c6dcff492d4
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/27dd4da69e.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/27dd4da69e.yaml
     sha256: 9ed271ad8bfac3df8c303f2df23d0996d2a0022d615c2c1d56ad055c40a8b23f
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 7
@@ -215,23 +215,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/27dd4da69e.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/27dd4da69e.yaml
     bytes: 6361
     sha256: e943b6f5644e952cf98a48d66698e00c6a8f98a9b30a92605cee497cb667b5bd
 - scene_id: 286b55a2bf
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/286b55a2bf/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/286b55a2bf/seal.json
     bytes: 3313
     sha256: d65d2ffbf005f8e3a35192e204d7e68f3642e20a1abae9638b9a13296724691b
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/286b55a2bf.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/286b55a2bf.yaml
     sha256: 9303da742535c726366ababd01ecdba68a83cfd4217d97f25ef47e88d064062e
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 34
@@ -243,23 +243,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/286b55a2bf.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/286b55a2bf.yaml
     bytes: 6362
     sha256: bc319f5abe3ca239a7b3bd7350a7bf54d0eabe60158f180278b59898ea836cef
 - scene_id: 31a2c91c43
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/31a2c91c43/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/31a2c91c43/seal.json
     bytes: 451
     sha256: d89105c9738f67809b7bdbb40b3713ab80d593d432cb5887bbdcbc44b6f6f84b
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/31a2c91c43.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/31a2c91c43.yaml
     sha256: 4ac3992a07513d1bbad0aacc3b2072d10f982dbbd8c8cb05e0ee74dc1f34288d
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 3
@@ -271,23 +271,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/31a2c91c43.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/31a2c91c43.yaml
     bytes: 6361
     sha256: 1691973498c6f16dc46a56b3d659cc6506e957fee6417b45cd0f3b1835a0a427
 - scene_id: '3864514494'
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/3864514494/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/3864514494/seal.json
     bytes: 2359
     sha256: c736dbe43f1b1925b4b8df2e3545b709f234e25ef39770d5a6215fe35177b085
   context:
     bytes: 566212
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/3864514494.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/3864514494.yaml
     sha256: ab45d14fcec6df60e31a0f6fea64b8c2d3c417f04c396a611f23c3ee2c7f96b6
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 22
@@ -299,23 +299,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/3864514494.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/3864514494.yaml
     bytes: 6364
     sha256: 5ed37ff34d4ed608d908952cce19b8716266165048d118cf5e801cc416a84f67
 - scene_id: 38d58a7a31
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/38d58a7a31/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/38d58a7a31/seal.json
     bytes: 769
     sha256: 1b9fd8cc1f77e595b8cc456123cbec3a4812e4bac71beba31eba04c4a2e2362f
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/38d58a7a31.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/38d58a7a31.yaml
     sha256: 85e525dbd5d5ad9d941168775df21d9699abc1a90f327489470961cfb6194dcf
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 15
@@ -327,23 +327,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/38d58a7a31.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/38d58a7a31.yaml
     bytes: 6361
     sha256: d80559dd2719ae53f11938e45aab2fa746778062da0d514dbf64262bc1f898b0
 - scene_id: 3db0a1c8f3
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/3db0a1c8f3/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/3db0a1c8f3/seal.json
     bytes: 1723
     sha256: a8d04a8444707c60a37516d16dec863f613467319c4c0b172df1edc9c23a2a2a
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/3db0a1c8f3.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/3db0a1c8f3.yaml
     sha256: 44f12deeff983416f0bb6af53da544b104be8458b84a417a1284d9be444f74b4
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 54
@@ -355,7 +355,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/3db0a1c8f3.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/3db0a1c8f3.yaml
     bytes: 6362
     sha256: fe246aca47922f43d69da7106285ad1e21ce3472eda8e4227590f3b48ab802c7
 - scene_id: 3e8bba0176
@@ -383,16 +383,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/45b0dac5e3/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/45b0dac5e3/seal.json
     bytes: 1087
     sha256: 64914dda9c84fe37a9308dad52526048650929f1cfca4c8dd38b26b135241e4c
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/45b0dac5e3.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/45b0dac5e3.yaml
     sha256: c33de09c5c46d6bfd1d8f7f3e69f97d77f54f09ba8dbb641cc949a8c034e087d
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 9
@@ -404,23 +404,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/45b0dac5e3.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/45b0dac5e3.yaml
     bytes: 6362
     sha256: 88b65a043ce90a8d55705bca53c07403c84a5522f733960bbf4c8f79819a8fda
 - scene_id: 5748ce6f01
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5748ce6f01/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5748ce6f01/seal.json
     bytes: 769
     sha256: 96b908ca79a3ae528fe9b239a066d15b4b5fa93b3859b95f69f8a48e2c971007
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5748ce6f01.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5748ce6f01.yaml
     sha256: 838c36cf92a53312980571b385119b2a7a6e246ac24761b6af7e3e05ace0a081
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 17
@@ -432,23 +432,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5748ce6f01.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5748ce6f01.yaml
     bytes: 6361
     sha256: 993579044c8228c8b34c883298e99351b0de56f5a980af199f652a5bc82c8be2
 - scene_id: 578511c8a9
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/578511c8a9/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/578511c8a9/seal.json
     bytes: 769
     sha256: 0b7b2ec8c5ec49c9ec7ace7f0243c2ebe32633139ffa9ab5181c02cdb8f92344
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/578511c8a9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/578511c8a9.yaml
     sha256: 7e9c829e72dbc81c0a8aa7c0e52f5edce1fe0e8d8e191f8021e82663a2552798
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 11
@@ -460,23 +460,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/578511c8a9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/578511c8a9.yaml
     bytes: 6361
     sha256: 1676544401d55001ea68d731766b20c82df8917728eee60cc97cfae2ee20c3fe
 - scene_id: '5942004064'
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5942004064/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5942004064/seal.json
     bytes: 3631
     sha256: eff6ff991f810962f718f5eed2b5b1981297b5fa897c4cde5a64a2508c0f0e76
   context:
     bytes: 566212
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5942004064.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5942004064.yaml
     sha256: 397fe477cc6c6c5968625048448a8263ab4bf86df1936bbb82ee743234eaf1f7
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 48
@@ -488,23 +488,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5942004064.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5942004064.yaml
     bytes: 6364
     sha256: c0c90c42a3da2b19226178a2078f29980e9d3456a78023513ccdaf4a0ef280a1
 - scene_id: 5eb31827b7
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5eb31827b7/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5eb31827b7/seal.json
     bytes: 769
     sha256: 288169e8bcd7e8aaa1983d764aed305630e067ff054c3872ea33957d0f1bc5a7
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5eb31827b7.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5eb31827b7.yaml
     sha256: c1e8cde1af8794c4c461c8a039c8e6c4da32181abba41dad06533e0d7800496c
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 15
@@ -516,23 +516,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5eb31827b7.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5eb31827b7.yaml
     bytes: 6361
     sha256: b8d3bfd70df03e1f20f8cc73569b2c829eb0255c45be06a49d292f28de9f2906
 - scene_id: 5ee7c22ba0
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5ee7c22ba0/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/5ee7c22ba0/seal.json
     bytes: 2041
     sha256: 1a8c26c6690b13febf705e8a4c7122a6ea71b2eb5a0d75672d1e3b6b4e1b4249
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5ee7c22ba0.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/5ee7c22ba0.yaml
     sha256: 9e15a053abb01a1b08905d67ad7dd5f9bdba769d74d3edfc98cf0a37f8c56f05
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 46
@@ -544,7 +544,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5ee7c22ba0.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/5ee7c22ba0.yaml
     bytes: 6362
     sha256: 540b2da94fd532493287245d379c07b80e3bc5191ef23322433f8c19e89c392f
 - scene_id: 5f99900f09
@@ -558,16 +558,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/6115eddb86/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/6115eddb86/seal.json
     bytes: 2995
     sha256: 3119b8d70150068760c291636297181112878e86b054585b753eaf6549fdaaaf
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/6115eddb86.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/6115eddb86.yaml
     sha256: b4f4a328a20359b6845aca9c221385c62aaf77073eda53531dbcd9e6e0888988
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 21
@@ -579,23 +579,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/6115eddb86.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/6115eddb86.yaml
     bytes: 6362
     sha256: 2f9875dbf6e637747ac1a232f84099b2fb35db7ad8dd0d14953fc759c89638ef
 - scene_id: 7831862f02
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/7831862f02/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/7831862f02/seal.json
     bytes: 2041
     sha256: b74268c90c9496e6a285dc55cb7b955253aba6b13c3c8dac1243cf69ca6b12ef
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/7831862f02.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/7831862f02.yaml
     sha256: 38b4a6d67b659f7b87e6f0f58c60de579ffcf37683b0e952e5a80120c5614b87
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 35
@@ -607,7 +607,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/7831862f02.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/7831862f02.yaml
     bytes: 6362
     sha256: 8cfe224afa4a5c3d11488fbf5eb0ee7fe7f83c8d5ca61b2fff4fa6df26e8b692
 - scene_id: 7b6477cb95
@@ -621,16 +621,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/7bc286c1b6/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/7bc286c1b6/seal.json
     bytes: 2041
     sha256: 3182ecee04a3b6bf8227f00a89c9c903001080e3f609dfd4c2abe29355b85ff9
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/7bc286c1b6.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/7bc286c1b6.yaml
     sha256: 25b9becba4cfe2d66b5f1602b00ff528d2014051bbb6a772cb647f121a1e6e55
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 12
@@ -642,23 +642,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/7bc286c1b6.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/7bc286c1b6.yaml
     bytes: 6362
     sha256: ca22b86d596c360cbc892e8ecd86d349e38ab84022b7c2cd1682176fe013bd83
 - scene_id: 825d228aec
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/825d228aec/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/825d228aec/seal.json
     bytes: 1087
     sha256: f55afd48a46160019f130e0e3d399a2d232977a5ab610be594ea7ea7433e2459
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/825d228aec.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/825d228aec.yaml
     sha256: f7591c74b0e0254df814e6eba45f694ed49848bd852cc78334f96b8f8365802c
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 18
@@ -670,7 +670,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/825d228aec.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/825d228aec.yaml
     bytes: 6362
     sha256: cc56885e7a07414fed4316c06659363ea33bb2a8219f6a355e3455857c2fd40c
 - scene_id: 9071e139d9
@@ -684,16 +684,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/99fa5c25e1/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/99fa5c25e1/seal.json
     bytes: 1723
     sha256: 38eb5629457e9c0cf29d4f6948c4062c1f50dfc9e232e886fc02310573331a73
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/99fa5c25e1.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/99fa5c25e1.yaml
     sha256: 2dcd9b111038af2a65d66c31716ccdea35a045dfbe2ac4821f7fd715100dbd3b
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 36
@@ -705,23 +705,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/99fa5c25e1.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/99fa5c25e1.yaml
     bytes: 6362
     sha256: 283137bd3d7dc529ba3637850465c6d14c263b9e1ed1e38d469b71fc2880edc5
 - scene_id: a24f64f7fb
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a24f64f7fb/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a24f64f7fb/seal.json
     bytes: 1405
     sha256: 3199c13674376051c3103b985eb791db9f182184631c84f406f311a165b3087d
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a24f64f7fb.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a24f64f7fb.yaml
     sha256: ce8b3d098be389e7ad4f07e9cdafa87f5b19ceb3fc7cda8f110a94a3011c2595
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 15
@@ -733,23 +733,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a24f64f7fb.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a24f64f7fb.yaml
     bytes: 6362
     sha256: 980242d44c9011c5de4eca4a9523593b19356e2d31541d265026760c9aef0198
 - scene_id: a8bf42d646
   status: COMPLETE
   action: CPU_NO_OP_ZERO_ACCEPTED
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a8bf42d646/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a8bf42d646/seal.json
     bytes: 133
     sha256: dc94bdd88e62a03d1b4d6d54dde81f2c78f25d20278a729bc1cc0b3ce84bd331
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a8bf42d646.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a8bf42d646.yaml
     sha256: a8725aa2a8397c6523531d154fb4efc04635a0e1ac878f641d6cb00ca896253c
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 2
@@ -761,23 +761,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a8bf42d646.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a8bf42d646.yaml
     bytes: 6361
     sha256: fa7452600e6d0d7ee26a0439588e94fad28786f3673e14390a6bc33c5531b198
 - scene_id: a980334473
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a980334473/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/a980334473/seal.json
     bytes: 3313
     sha256: 64d8cda16d66329757e7cd41ab4d44e49c509e9321063dfac1884fc3a57e1d95
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a980334473.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/a980334473.yaml
     sha256: 951b72762816a63e720fb10e2c3b0e5b4a3ba63940fcf1526b1995b37e1a9754
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 22
@@ -789,23 +789,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a980334473.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/a980334473.yaml
     bytes: 6362
     sha256: b5cf7633fc691e61c0c4ddff398ab2e31f9c6047f1f588c77083ce3621b124f8
 - scene_id: ac48a9b736
   status: COMPLETE
   action: CPU_NO_OP_ZERO_ACCEPTED
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/ac48a9b736/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/ac48a9b736/seal.json
     bytes: 133
     sha256: 40cc0a539dcc528828d962c27d4264a0c20b4a102753e9f9df29132dfe9c4771
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/ac48a9b736.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/ac48a9b736.yaml
     sha256: 53078c77c3aa02bc29a8c5ffaa2bc6715fb265dbda0ce432ff9899693a431b6d
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 1
@@ -817,7 +817,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/ac48a9b736.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/ac48a9b736.yaml
     bytes: 6361
     sha256: 5e9a565477693d7e0114a464b9bbbf4a8bafea13af35dfc84dbf5508f81a5cd1
 - scene_id: acd95847c5
@@ -831,16 +831,16 @@ rows:
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/b0a08200c9/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/b0a08200c9/seal.json
     bytes: 2995
     sha256: 0d08b0118e6acf1cd177d1d116de9182dce398412164f76d1b7e5721d172e8c7
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/b0a08200c9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/b0a08200c9.yaml
     sha256: 13e6e0f3e2bd8808d8b6dab8aeae1f4da3e826edaff0d104eb08c6c98d8a7145
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 22
@@ -852,23 +852,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/b0a08200c9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/b0a08200c9.yaml
     bytes: 6362
     sha256: a13ae24b6f85ad01db49a8f89c19b5be7596b05e9cf3dc55bcd46e53eb703ff2
 - scene_id: bcd2436daf
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/bcd2436daf/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/bcd2436daf/seal.json
     bytes: 769
     sha256: d4896a7686046667daec262d3418c1017e6fc226e678968ad0e89183ccd99477
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/bcd2436daf.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/bcd2436daf.yaml
     sha256: 7988cba8655ac66d32dd8309fc5e7134083df184dc145fc883526211ab1b9612
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 10
@@ -880,23 +880,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/bcd2436daf.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/bcd2436daf.yaml
     bytes: 6361
     sha256: 3019aa055ae0a5944b9ffbf4da722e6adbd6eadedf73bd2d792b4446e05d1912
 - scene_id: bde1e479ad
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/bde1e479ad/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/bde1e479ad/seal.json
     bytes: 1087
     sha256: 8d83b5a37aeb804dbd22b53939938bdb3d076f9e4ca7da6da30ff66f041c0acd
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/bde1e479ad.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/bde1e479ad.yaml
     sha256: 39192421c564695d7c4ed9ee7168d1b2fcac4fc7b29aabda7b2a2c76e0a4d30f
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 30
@@ -908,23 +908,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/bde1e479ad.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/bde1e479ad.yaml
     bytes: 6362
     sha256: 5670cf858e00ecc66cdf42594dc74e3c818380b02af0e28b15049f32a24d0795
 - scene_id: c49a8c6cff
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c49a8c6cff/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c49a8c6cff/seal.json
     bytes: 3313
     sha256: 72a9e9040b39cb8f38a467656d7eb54940cd82ab9999eea30cc493090b3c767e
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c49a8c6cff.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c49a8c6cff.yaml
     sha256: 60572e9a2c5872dafde8c82727b03b85d00031e55aeb785705b1e37b4c62be4b
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 46
@@ -936,23 +936,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c49a8c6cff.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c49a8c6cff.yaml
     bytes: 6362
     sha256: eb19c64153895c4402e774c01ca2766b6cc1486826745665a07680669daba5ee
 - scene_id: c4c04e6d6c
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c4c04e6d6c/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c4c04e6d6c/seal.json
     bytes: 769
     sha256: 5ab51b5bb8dea1e796794d23895ff7f77aa0569eeb49ca2a186af5839b4e056a
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c4c04e6d6c.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c4c04e6d6c.yaml
     sha256: eb8dc7d893511c7f97b3da59a7b4c3724be617e000a09244b9728501db250c34
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 25
@@ -964,23 +964,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c4c04e6d6c.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c4c04e6d6c.yaml
     bytes: 6361
     sha256: 3c6e5921610c0d32d4335d7a12f9b9d8df26c67225d2d5e8b2de4d931dae759c
 - scene_id: c50d2d1d42
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c50d2d1d42/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c50d2d1d42/seal.json
     bytes: 3313
     sha256: e7a4e2110f45daa1e396f334374a7254ac8ec732e818dcae85ae44706524c273
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c50d2d1d42.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c50d2d1d42.yaml
     sha256: 6fd9163327ec5fb4d53e3d3c2c66a15dae8e54082ac5bcdbe24e663d11895b18
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 37
@@ -992,23 +992,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c50d2d1d42.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c50d2d1d42.yaml
     bytes: 6362
     sha256: 4030c5073fa2f3711ef5846b0a4903ca34e1b65c0b8d9880f7b08f4059bbb299
 - scene_id: c5439f4607
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c5439f4607/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/c5439f4607/seal.json
     bytes: 2995
     sha256: 76f2d1c0507b513b297e5c923956ae95c6a8444a270f199552995ba081e9c6d8
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c5439f4607.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/c5439f4607.yaml
     sha256: a9bf653bcc5342a9cc84bfdbaf49c60c943a0af72132931e56f45e9e3a1334f9
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 36
@@ -1020,23 +1020,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c5439f4607.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/c5439f4607.yaml
     bytes: 6362
     sha256: 2a382d92b8d6365b14fb6ff30b033917b624826be18825b21f74fc9af1cbb960
 - scene_id: cc5237fd77
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/cc5237fd77/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/cc5237fd77/seal.json
     bytes: 8719
     sha256: 44d8fb47808f9122aa65a98a6bba1259dbebff8626ffeb7cd36682de67a48d19
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/cc5237fd77.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/cc5237fd77.yaml
     sha256: 49610c2b2b98167ed5e7cc53528dd33b10c668271eb34c72232a27ea474fd05d
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 67
@@ -1048,23 +1048,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/cc5237fd77.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/cc5237fd77.yaml
     bytes: 6362
     sha256: dc70696ef18e9c7b2d35e7201dbd181d9793b603c38852f3d675bc70c66b09a5
 - scene_id: d755b3d9d8
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/d755b3d9d8/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/d755b3d9d8/seal.json
     bytes: 6493
     sha256: f31303dd7f0aa5cb1e45d548814b525f5f4a5c8225edbf436635a8cd3c045f85
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/d755b3d9d8.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/d755b3d9d8.yaml
     sha256: ba9e6c4390158d859acca64830dc383ffd7bc09ce2c79850fd78ae7a3b979baf
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 91
@@ -1076,23 +1076,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/d755b3d9d8.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/d755b3d9d8.yaml
     bytes: 6362
     sha256: 21c2ed445932ef0ede2bf05d9f1457d0fabb35dbb4f2c1e36f6187687527dd37
 - scene_id: e398684d27
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/e398684d27/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/e398684d27/seal.json
     bytes: 2041
     sha256: 204f4749ffdb2b0b6fecfed14db702ff6f9606351122388696ad42ebf64e3b48
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/e398684d27.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/e398684d27.yaml
     sha256: 5d5a73f900d23bfb9a0278de74797093afca85bbf3ff57cced7d78fdaa4867a3
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 37
@@ -1104,23 +1104,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/e398684d27.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/e398684d27.yaml
     bytes: 6362
     sha256: 9a18bdb7fdf84344bbe821a173629835a251b01fbcb329f7bfb3cb336b19ede1
 - scene_id: e7af285f7d
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/e7af285f7d/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/e7af285f7d/seal.json
     bytes: 1087
     sha256: 7e305fcd9f34d5ebf4bc599ae611c8fdc89dd5daad4900cb138ed25e20ebd5a5
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/e7af285f7d.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/e7af285f7d.yaml
     sha256: a6583f21da5c5d7e9f1447d325ca6f555c6a988eb235dbd5993aa765bbe0e02c
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 28
@@ -1132,23 +1132,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/e7af285f7d.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/e7af285f7d.yaml
     bytes: 6362
     sha256: 20526c42f053a8434705e0355feff14fe25ca0c01a6e7d8830446f8a3a1a6e65
 - scene_id: f2dc06b1d2
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f2dc06b1d2/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f2dc06b1d2/seal.json
     bytes: 1405
     sha256: 38f08855c7e0e2ff60d7a204f64a8f08609cbe9812fe26eb117855db5c716d11
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f2dc06b1d2.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f2dc06b1d2.yaml
     sha256: 9f6f033e9d44d803e95b3fafb2f4162d837b14d5d7389a2fd5ad90fc2761cda3
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 17
@@ -1160,23 +1160,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f2dc06b1d2.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f2dc06b1d2.yaml
     bytes: 6362
     sha256: 705b0a88933812a43c5778969ec5418f0384330972034126fe09299bccc10a20
 - scene_id: f3685d06a9
   status: COMPLETE
   action: CPU_NO_OP_ZERO_ACCEPTED
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f3685d06a9/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f3685d06a9/seal.json
     bytes: 133
     sha256: 1e46246bd60ccc5028a5b74b380fe41a028217dea342d94d22e11e3d6f1cfb99
   context:
     bytes: 566209
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f3685d06a9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f3685d06a9.yaml
     sha256: 41834f6e1b2231bafb5529fad7856d330341125368f81b51a02004c208538fd6
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 1
@@ -1188,23 +1188,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f3685d06a9.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f3685d06a9.yaml
     bytes: 6361
     sha256: 450559b26a2d05083df1e17f9ed7fb0a5a66b5820789086ff70f215e2ff6f431
 - scene_id: f3d64c30f8
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f3d64c30f8/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f3d64c30f8/seal.json
     bytes: 1723
     sha256: b37edc25692a9c38ae85622251621a838b9b9cb8da393c15a3ea8ac838ed3b54
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f3d64c30f8.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f3d64c30f8.yaml
     sha256: 1d416e79826dfee5d3cedc644873b1db37aed07af337fcad819c6cec24dc6c1b
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 36
@@ -1216,23 +1216,23 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f3d64c30f8.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f3d64c30f8.yaml
     bytes: 6362
     sha256: 6176e0b7323f2ea3efc069b191e2bbda10f8bafee8a17bba0c6dffb7f4adb7b7
 - scene_id: f9f95681fd
   status: COMPLETE
   action: RUN_FILL_GPU
   erasure_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f9f95681fd/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/fidelity/erasure/f9f95681fd/seal.json
     bytes: 1405
     sha256: c947ec0c829bc2b3a52e9f875ef1653c4fa0bf38234a4d1170eb8299c67c7302
   context:
     bytes: 566210
-    path: /group/worldcept/code/SimAny-wt/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f9f95681fd.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-erasure/configs/experiments/icra2027/e2_full_erasure/f9f95681fd.yaml
     sha256: 20d957a1a849829f88e4a25e54a8a6fccdb2ac543423f5bda968ab0e4bc36fc1
   contract:
     bytes: 60672
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-598e1d6-v1/contract/freeze_manifest.json
     sha256: 3e5f34fe72b04575d7250ee0d8bcc4d1865ded58bfc98cbbe2fd74a7aece35ab
   source_commit: 84fc45a92ed65372049e3bc7a499eaefe02d6ccb
   planned_objects: 31
@@ -1244,7 +1244,7 @@ rows:
   planned_test_views: 8
   paper_ready: false
   fill_context:
-    path: /group/worldcept/code/SimAny-wt/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f9f95681fd.yaml
+    path: ${SIMANY_ROOT}/worktrees/e2-full-fill/configs/experiments/icra2027/e2_full_fill/f9f95681fd.yaml
     bytes: 6362
     sha256: 0c3f735e533b12914668f8da859cb22998a76f620eef00fbf673ff981077c588
 - scene_id: fb5a96b1a2

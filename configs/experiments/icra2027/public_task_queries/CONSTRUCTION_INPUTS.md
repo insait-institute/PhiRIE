@@ -18,9 +18,9 @@ Use the repository environment, which provides PyYAML (the system Python does
 not). From the checkout containing this package:
 
 ```bash
-/group/worldcept/code/SimAny/.venv/bin/python \
+${SIMANY_ROOT}/.venv/bin/python \
   configs/experiments/icra2027/public_task_queries/audit_construction_inputs.py \
-  --integration-root /group/worldcept/code/SimAny-wt/icra-integration \
+  --integration-root ${SIMANY_ROOT}/worktrees/icra-integration \
   --out /tmp/e6-public-construction-input-audit.json
 ```
 

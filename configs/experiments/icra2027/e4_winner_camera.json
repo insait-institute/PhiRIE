@@ -57,16 +57,16 @@
       "size_bytes": 3186
     }
   },
-  "menagerie_root": "/group/worldcept/code/SimAny-wt/e4-winner-smoke/third_party/mujoco_menagerie",
+  "menagerie_root": "${SIMANY_ROOT}/worktrees/e4-winner-smoke/third_party/mujoco_menagerie",
   "openpi_resize_identity": {
     "commit": "2f51088169d2e2b480ce54faa737be9b0279eed4",
     "dirty": false,
     "image_tools": {
-      "path": "/group/worldcept/code/openpi-wt/e4-policy-server/packages/openpi-client/src/openpi_client/image_tools.py",
+      "path": "${OPENPI_ROOT}/worktrees/e4-policy-server/packages/openpi-client/src/openpi_client/image_tools.py",
       "sha256": "d48b4bd7f44e79fe6db8a8e07c9161144fa250be686e1245014a8b47e6171977",
       "size_bytes": 2426
     },
-    "root": "/group/worldcept/code/openpi-wt/e4-policy-server"
+    "root": "${OPENPI_ROOT}/worktrees/e4-policy-server"
   },
   "paper_ready": false,
   "producer_commit": "3d3781712bdc36f2199426b766869ecda4b51c71",

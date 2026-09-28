@@ -4,11 +4,11 @@
 #SBATCH --mem=100G
 #SBATCH --time=01:00:00
 #SBATCH --job-name=simany_demoOrig2
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/demo_movie/jobOrig2.log
+#SBATCH --output=outputs/demo_movie/jobOrig2.log
 # Re-render ONLY the interact segments: origobj membership now follows the
 # poses json (kept-set drift stranded the throw actor as a static paste-back).
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 OUTD=$SIMANY_ROOT/outputs/demo_movie
 export SIMANY_DEMO_SCALE=1.0 SIMANY_DEMO_OBJ_SRC=orig

@@ -4,13 +4,13 @@
 #SBATCH --mem=64G
 #SBATCH -t 0:40:00
 #SBATCH -J omega_validate
-#SBATCH -o /group/worldcept/PhiRIE/code/SimAny/outputs/omega_validate_%j.log
+#SBATCH -o outputs/omega_validate_%j.log
 # First-use validation of the VGGT-Omega backend (run_chunk_omega was written
 # against the published API before the gated weights were available): run it
 # on the pilot frames and score the poses against GT COLMAP, next to the
 # recorded VGGT (12.3 cm / 0.5 deg) and COLMAP (82% reg) reference numbers.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 FRAMES=$SIMANY_ROOT/outputs/video_pilot_a29cccc784/recon/frames
 OUT=$SIMANY_ROOT/outputs/video_pilot_a29cccc784/recon/recon_omega.npz

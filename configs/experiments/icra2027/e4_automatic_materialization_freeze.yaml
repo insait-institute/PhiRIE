@@ -4,7 +4,7 @@ freeze_id: 20260905-4d0787c-v4
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: e4_automatic_materialization_config
@@ -20,35 +20,35 @@ input_roots:
   kind: metadata
   required: true
 - id: materialization_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python
+  path: ${SIMANY_ROOT}/.venv/bin/python
   kind: runtime
   required: true
 - id: e3_freeze_manifest_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/contract/freeze_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/contract/freeze_manifest.json
   kind: metadata
   required: true
 - id: e3_execution_bindings_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/execution_bindings.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/execution_bindings.json
   kind: metadata
   required: true
 - id: e3_artifact_hashes_sha256
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/artifact_hashes.sha256
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/artifact_hashes.sha256
   kind: metadata
   required: true
 - id: e3_inventory_audit_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/inventory_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/inventory_audit.json
   kind: metadata
   required: true
 - id: e3_resolved_jobs_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_jobs.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_jobs.json
   kind: metadata
   required: true
 - id: e3_resolved_proposals_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_proposals.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/resolved_proposals.json
   kind: metadata
   required: true
 - id: e3_seal_json
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/seal.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v35/agentic/input_inventory/seal.json
   kind: metadata
   required: true
 - id: automatic_materialization_shell

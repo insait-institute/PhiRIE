@@ -16,6 +16,10 @@ can be restored by hand.
 | `behavior1k_datasets/` | OmniGibson asset datasets, incl. the `phiroom_custom` dataset of our converted twins | [`robo/sim/omnigibson_bridge/convert_assets.py`](../robo/sim/omnigibson_bridge/convert_assets.py) |
 | `mujoco_menagerie/` | DeepMind robot model zoo (Franka Panda, Robotiq 2F-85) | [`robo/rigs/pi05_rig.py`](../robo/rigs/pi05_rig.py) |
 
+`bddl_data/` is redistributed from the BDDL project
+([StanfordVL/bddl](https://github.com/StanfordVL/bddl)); see that repository for
+its license terms.
+
 `BEHAVIOR-1K/` is a manual clone; running
 [`robo/sim/omnigibson_bridge/install_omnigibson.sbatch`](../robo/sim/omnigibson_bridge/install_omnigibson.sbatch)
 from it installs the `behavior1k` conda env and downloads

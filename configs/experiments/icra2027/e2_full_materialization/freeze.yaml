@@ -4,31 +4,31 @@ freeze_id: 20260906-02e9d33-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: materialization_config
-  path: /group/worldcept/code/SimAny-wt/e2-full-materialization/configs/experiments/icra2027/e2_full_materialization/execution.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-materialization/configs/experiments/icra2027/e2_full_materialization/execution.yaml
   kind: experiment_config
   required: true
 - id: full_e2_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   kind: experiment_config
   required: true
 - id: factory_execution
-  path: /group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json
+  path: ${SIMANY_ROOT}/worktrees/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json
   kind: source_manifest
   required: true
 - id: full_control_gate
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json
   kind: source_manifest
   required: true
 - id: resolved_jobs
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json
   kind: source_manifest
   required: true
 - id: materialization_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  path: ${SIMANY_ROOT}/.venv/bin/python3.11
   kind: python_runtime
   required: true
 - id: background_admission_protocol

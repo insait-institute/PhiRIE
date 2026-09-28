@@ -16,7 +16,7 @@ pipeline at a reconstructed scene is just:
 CPU, any env. Usage:
     python -m agents.recon.make_scene_dir --recon recon_metric.npz \
         --frames-dir D --scene <name> \
-        --root /group/worldcept/PhiRIE/code/SimAny/data/recon_scenes
+        --root ${SIMANY_ROOT}/data/recon_scenes
     python -m agents.recon.make_scene_dir --selftest
 """
 import argparse
@@ -28,7 +28,7 @@ import numpy as np
 
 from agents.core import common as C
 
-DEFAULT_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny/data/recon_scenes")
+DEFAULT_ROOT = C.ROOT / "data/recon_scenes"
 # common.load_colmap_w2c drops blank lines and then reads every OTHER line,
 # so the POINTS2D line after each image line MUST be non-empty - a single
 # dummy observation keeps the alternation intact.

@@ -1,8 +1,0 @@
-{
-  "contract_path": "configs/experiments/icra_contract_v1.yaml",
-  "git_sha": "bff92a1",
-  "errors": [],
-  "n_protocols": 5,
-  "n_table_columns_mapped": 12,
-  "pass": true
-}

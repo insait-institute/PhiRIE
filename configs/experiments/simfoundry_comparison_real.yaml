@@ -19,19 +19,19 @@ conditions: [simany, reference, simfoundry_repro]
 
 scenes:
   - id: 45b0dac5e3_factory
-    factory_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/45b0dac5e3_factory
-    tasks_json: /group/worldcept/PhiRIE/code/SimAny/outputs/45b0dac5e3_factory/sim_export/pi05_tasks.json
+    factory_dir: ${SIMANY_ROOT}/outputs/45b0dac5e3_factory
+    tasks_json: ${SIMANY_ROOT}/outputs/45b0dac5e3_factory/sim_export/pi05_tasks.json
   - id: 578511c8a9_factory
-    factory_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/578511c8a9_factory
-    tasks_json: /group/worldcept/PhiRIE/code/SimAny/outputs/578511c8a9_factory/sim_export/pi05_tasks.json
+    factory_dir: ${SIMANY_ROOT}/outputs/578511c8a9_factory
+    tasks_json: ${SIMANY_ROOT}/outputs/578511c8a9_factory/sim_export/pi05_tasks.json
   - id: 7b6477cb95_factory
-    factory_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/7b6477cb95_factory
-    tasks_json: /group/worldcept/PhiRIE/code/SimAny/outputs/7b6477cb95_factory/sim_export/pi05_tasks.json
+    factory_dir: ${SIMANY_ROOT}/outputs/7b6477cb95_factory
+    tasks_json: ${SIMANY_ROOT}/outputs/7b6477cb95_factory/sim_export/pi05_tasks.json
   - id: 825d228aec_factory
-    factory_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/825d228aec_factory
-    tasks_json: /group/worldcept/PhiRIE/code/SimAny/outputs/825d228aec_factory/sim_export/pi05_tasks.json
+    factory_dir: ${SIMANY_ROOT}/outputs/825d228aec_factory
+    tasks_json: ${SIMANY_ROOT}/outputs/825d228aec_factory/sim_export/pi05_tasks.json
   - id: c50d2d1d42_factory
-    factory_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/c50d2d1d42_factory
-    tasks_json: /group/worldcept/PhiRIE/code/SimAny/outputs/c50d2d1d42_factory/sim_export/pi05_tasks.json
+    factory_dir: ${SIMANY_ROOT}/outputs/c50d2d1d42_factory
+    tasks_json: ${SIMANY_ROOT}/outputs/c50d2d1d42_factory/sim_export/pi05_tasks.json
 
-out_dir: /group/worldcept/PhiRIE/code/SimAny/outputs/paired_runs/simfoundry_comparison_real
+out_dir: ${SIMANY_ROOT}/outputs/paired_runs/simfoundry_comparison_real

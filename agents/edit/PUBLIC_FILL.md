@@ -31,7 +31,7 @@ user-site imports, then freeze the context in a clean source/E0 contract:
 
 ```bash
 PYTHONNOUSERSITE=1 PINNED_PYTHON -m agents.edit.inpaint_fill --runtime
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny PYTHONNOUSERSITE=1 \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} PYTHONNOUSERSITE=1 \
 PYTHONDONTWRITEBYTECODE=1 PINNED_PYTHON -m agents.edit.inpaint_fill \
   --public-context CONTEXT.yaml --contract-manifest NEW/contract/freeze_manifest.json
 ```

@@ -6,8 +6,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=64G
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e3-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e3-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e3-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e3-%j.err
 
 # Resource-split E3 driver. Inventory, control, evaluation, and aggregation
 # are CPU-only on sof1. Observation (RGB+ED Scene-Gaussian rendering) uses one
@@ -18,9 +18,9 @@
 # scene/phase is an independent ordinary Slurm job; arrays are a hard error.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 PYTHON="$ROOT/.venv/bin/python"
-MVPY=/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python
+MVPY=${SIMANY_GSPLAT_PY:-${SIMANY_ROOT:-$PWD}/.envs/mini-viewer/bin/python}
 JOBS="$ROOT/configs/experiments/icra2027/agentic_jobs.yaml"
 POLICIES="$ROOT/configs/experiments/icra2027/agentic_policies.yaml"
 ROSTER="$ROOT/configs/experiments/icra2027/construction_regimes.yaml"

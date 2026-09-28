@@ -293,7 +293,7 @@ def test_slurm_spool_routes_explicit_scene_and_full_recipe(tmp_path):
     fake.write_text('#!/bin/bash\nprintf "%s\\n" "$*" >> "$CALL_LOG"\n')
     fake.chmod(0o755)
     spool=tmp_path/'slurm_script'
-    spool.write_text(script.replace('/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python',str(fake)))
+    spool.write_text(script.replace('${SIMANY_ROOT:-$PWD}/.venv/bin/python',str(fake)))
     env=dict(os.environ,E3_GAUSSIAN_CODE=str(tmp_path),E3_GAUSSIAN_FREEZE=str(tmp_path/'freeze'),
              E3_GAUSSIAN_SCENE='09c1414f1b',E3_GAUSSIAN_CONFIG='cohort.yaml',
              E3_GAUSSIAN_PHASE='smoke-and-full',CALL_LOG=str(log))

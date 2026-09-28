@@ -5,7 +5,7 @@ output_dir: outputs/icra2027/{freeze_id}/agentic
 automatic_sources:
   scene_id: 09c1414f1b
   planned_jobs: 6
-  discovery_directory: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
+  discovery_directory: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot
   discovery_hashes:
     pilot_summary.json: 3818cffc464cd0cb76c27476185f540e499bf609d490c2addc7f3c1cd6dc4a51
     output_hashes.json: 6f4f91d2282005ed20eec2fdf00a02f1e138b05aafff6b5d340cf3d4b2eac738
@@ -26,8 +26,8 @@ automatic_sources:
       sha256: bbc002d263e09bd6233a8474718875d3dc175fea98a41ac0fde28beb0cbf6ffb
   initial_pools:
     trellis:
-      path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v28/trellis_initial/proposal_pool.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v28/trellis_initial/proposal_pool.json
       sha256: 07be7eb5226fb7f07b62a786224e1238cc91660c69db71ddefb48b2aff6b97b5
     reconviagen:
-      path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v31/rvg_initial/proposal_pool.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260904-07e8b05-v31/rvg_initial/proposal_pool.json
       sha256: acd7068de358529ebc68003822d891d4e92f1b650810aabd81ed3221de42cea7

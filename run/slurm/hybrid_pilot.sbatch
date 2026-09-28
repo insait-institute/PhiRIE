@@ -4,10 +4,10 @@
 #SBATCH --mem=100G
 #SBATCH --time=03:00:00
 #SBATCH --job-name=simany_hybrid
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/run_hybrid_pilot.log
+#SBATCH --output=outputs/run_hybrid_pilot.log
 
 # Hybrid V_mesh pilot: TRELLIS vs ReconViaGen per object, chamfer-selected.
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 export SIMANY_OUT=${SIMANY_OUT:-$SIMANY_ROOT/outputs/${SIMANY_SCENE}_factory}
 

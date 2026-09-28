@@ -12,18 +12,18 @@ measuring something else.
 ## 0. Data availability: the HDF5 source is gone
 
 `agents/recon/behavior_extract.py` reads
-`/group/worldcept/data/pointworld_behavior_restored/behavior/flows/task-XXXX/
+`${SIMANY_ROOT}/data/pointworld_behavior_restored/behavior/flows/task-XXXX/
 episode_*.hdf5`. As of 2026-08-16 that directory does not exist -- `ls`
 returns nothing. Only two things survive from before it was reclaimed:
 
 - `data/recon_scenes/data/behavior_task0020/` -- the one scene already
   extracted (the existing GAP_STUDY.md pilot).
-- `/group/worldcept/data/behavior/wds/{train,test}/*.tar` -- WebDataset
+- `${SIMANY_ROOT}/data/behavior/wds/{train,test}/*.tar` -- WebDataset
   shards of the same release (1541 train + 176 test shards, ~1.7TB).
 
 `oracle/capture_generator.py`'s `extract` subcommand reads the WDS shards
 directly (`tarfile` + `numpy` + `pickle`, no `h5py` needed -- confirmed
-against `/group/worldcept/data/behavior_datasample/README.md`, itself a
+against `${SIMANY_ROOT}/data/behavior_datasample/README.md`, itself a
 WDS-derived sample) and writes the identical scene-dir contract
 `behavior_extract.py` produces, so `run/run_behavior_recon.sh` and every
 downstream stage run against it unmodified.

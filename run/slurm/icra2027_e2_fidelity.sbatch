@@ -3,8 +3,8 @@
 #SBATCH --no-requeue
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-%j.out
-#SBATCH --error=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/slurm/e2-%j.err
+#SBATCH --output=outputs/icra2027/slurm/e2-%j.out
+#SBATCH --error=outputs/icra2027/slurm/e2-%j.err
 
 # E2 has three resource-distinct phases and therefore intentionally declares no
 # partition, GPU, CPU, memory, or time options here. Supply the exact options
@@ -15,7 +15,7 @@
 # avoiding prohibitively slow CPU LPIPS over the full image population.
 set -euo pipefail
 
-ROOT=/group/worldcept/PhiRIE/code/SimAny
+ROOT=${SIMANY_ROOT:-$PWD}
 PYTHON="$ROOT/.venv/bin/python"
 CONFIG="$ROOT/configs/experiments/icra2027/fidelity_manifest.json"
 ROSTER="$ROOT/configs/experiments/icra2027/construction_regimes.yaml"
@@ -565,9 +565,9 @@ case "$E2_PHASE" in
     unset SIMF_ROOT SIMF_SCANNETPP_ROOT SIMF_SPLATS_ROOT
     # Exact already-validated read-only CUDA environment. Generated caches and
     # every output remain pinned under SimAny by the exports above.
-    export SIMANY_GSPLAT_PY=/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python
+    export SIMANY_GSPLAT_PY=${SIMANY_GSPLAT_PY:-${SIMANY_ROOT:-$PWD}/.envs/mini-viewer/bin/python}
     source "$ROOT/run/env.sh"
-    [[ "$ROOT" == /group/worldcept/PhiRIE/code/SimAny ]] || {
+    [[ "$ROOT" == ${SIMANY_ROOT:-$PWD} ]] || {
       echo "run/env.sh changed the pinned SimAny root: $ROOT" >&2
       exit 2
     }

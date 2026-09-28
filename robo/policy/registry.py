@@ -4,7 +4,7 @@ contract, and construct runnable policy clients.
 
 Task 08 (plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md). Per the repo audit
 behind this task, exactly two real checkpoints exist locally under
-`/group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/` (`pi05_droid_jointpos`
+`${OPENPI_DATA_HOME}/openpi-assets-simeval/` (`pi05_droid_jointpos`
 and `droid_pi05_jointpos_with_web_and_sim/80000`), plus the checkpoint-free
 `scripted_sinusoid` smoke test -- these three are `configs/experiments/
 frozen_fields.yaml`'s `policies` list verbatim. The plan file's aspirational
@@ -259,7 +259,7 @@ class PolicyRegistry:
                 f"exists (checkpoint_uri={entry.checkpoint_uri!r}). Per the "
                 f"repo audit behind Task 08, this checkpoint has never been "
                 f"downloaded to this cluster -- populate "
-                f"/group/worldcept/PhiRIE/checkpoints/openpi_cache/ (and give the entry a real "
+                "$OPENPI_DATA_HOME/ (and give the entry a real "
                 f"checkpoint_path + client_kind) before requesting a "
                 f"runnable client for it.")
 

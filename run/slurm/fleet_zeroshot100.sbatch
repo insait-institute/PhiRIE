@@ -5,12 +5,12 @@
 #SBATCH --time=03:50:00
 #SBATCH --array=0-7
 #SBATCH --job-name=simany_zs100
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/fleet/zs100_slurm_%a.log
+#SBATCH --output=outputs/fleet/zs100_slurm_%a.log
 # Zero-shot 100-scene fleet: fully automatic mode over the manipulation-rich
 # scene set picked by agents/eval/select_manip_scenes.py (disjoint from the
 # 50-scene benchmark split). ~17 min/scene on one A6000; RESUME=1 makes
 # re-submission cheap. debug QoS runs at most 4 array shards concurrently.
-cd /group/worldcept/PhiRIE/code/SimAny
+cd ${SIMANY_ROOT:-$PWD}
 mkdir -p outputs/fleet
 mapfile -t SCENES < data/zeroshot_100_scenes.txt
 STRIDE=${SLURM_ARRAY_TASK_COUNT:-8}

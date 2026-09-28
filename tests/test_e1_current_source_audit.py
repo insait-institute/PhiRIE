@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import pytest
 
-spec=importlib.util.spec_from_file_location('e1_source_audit',Path('plan/icra2027/01_construction_scale/audit_current_sources.py'))
+spec=importlib.util.spec_from_file_location('e1_source_audit',Path(__file__).resolve().parents[1]/'run/icra2027/e1_audit_current_sources.py')
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 
 

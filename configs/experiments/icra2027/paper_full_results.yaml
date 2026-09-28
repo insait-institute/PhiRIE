@@ -2,22 +2,22 @@ freeze_id: 20260906-8cae8a0-v1
 mode: preliminary_audit
 audited_artifacts:
   construction:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-3e8ab6d-v1/construction/table/construction_table.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-3e8ab6d-v1/construction/table/construction_table.json
     sha256: ca7e35b1e4ae8b081a7cbf6441c7e6c5c9841e4cb43a7fc15d8b978801645d34
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-3e8ab6d-v1/construction/seal.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-3e8ab6d-v1/construction/seal.json
       sha256: 54a0c89063250a4b85667da3dd43d32fd315465cbc265fc9ecf1a27a44702076
   fidelity:
-    path: /group/worldcept/code/SimAny-wt/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
+    path: ${SIMANY_ROOT}/worktrees/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
     sha256: 12c2ede86faa7bb4d44c0be81eb275e722a94867829216517a7cd4e1e0a48871
     completion_receipt:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
       sha256: d9940fe16964a17f00430f0dad6ba0d4d393f8dc0c3b6f2a0f3e54dc0df9bdc8
   agentic:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/agentic/agentic_ablation.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-357caca-v1/agentic/agentic_ablation.json
     sha256: 829eb6973fc9ebf834e2779b1a9bf5d002c6b319c142145f7e4984c18e286335
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-357caca-v1/independent_evaluation_completion_audit.json
       sha256: 68d6f8cc9d3b0a7bbd05c7243f9de0e1f1b3821f12b8cb428c20a6ba30b24ecb
 claim_decisions:
   AGENTIC_TITLE_CLAIM:
@@ -254,57 +254,57 @@ claim_decisions:
     paper_file: paper_sections/04_results.tex
 engineering_appendix:
   trellis2_geometry:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
     sha256: 91bc5a018b8440c1ce5f5dac0aee33b35d60b1bb28aebb96445ec2bba32717f8
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
       sha256: 55332d82800a8ecfec2f193a33ab63e635858eea58e1f28333856ab49c64f645
   droid_cpu_alignment:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/workspaces.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/workspaces.json
     sha256: 72d85f62dcce638116af4aa94b4b1638d4a391189b79d7ab6b7d26c36ecaec4c
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/full_cpu_completion_audit.json
       sha256: 545bf2bcdce90ff0a19967a089b7c3c5f2b52234e8ad5acd18db2b5e4a1cd536
   droid_public_construction:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
     sha256: 6f1aa64ae7b02aeb3e382f917759a03228685d41a2428d70fa471d287261fde6
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
       sha256: 6f1aa64ae7b02aeb3e382f917759a03228685d41a2428d70fa471d287261fde6
     gaussian_completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1/full_gaussian_completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-dba8e6b-v1/full_gaussian_completion_audit.json
       sha256: 1f613e32f39a6ee1b0ac7ceaf149f0b5e25083237d6c1361fc000a2d2efcee1d
   task_support_closure:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
     sha256: 4207c4ac08c97d06faebd69baa9b02c392b4b1b1c26df0ebb7af443e81fdad89
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-047bd5d-v1/validity_independent_qa.json
       sha256: 4207c4ac08c97d06faebd69baa9b02c392b4b1b1c26df0ebb7af443e81fdad89
   full_qualification:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-b9bdcf3-v1/full_qualification/gate.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-b9bdcf3-v1/full_qualification/gate.json
     sha256: 9c0429ab5d58a15d890c7fbc23b432062126f79cc2135c40edc3ba3fa6f5e7d4
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-b9bdcf3-v1/completion_audit.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-b9bdcf3-v1/completion_audit.json
       sha256: 8142867d109474b579ce3073fb88be4c1a1b094f25b2dbf42826081136cae3d7
   full_appearance:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-b689700-v1/fidelity/public_factorized/metrics/table/fidelity_table.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260906-b689700-v1/fidelity/public_factorized/metrics/table/fidelity_table.json
     sha256: d99f0f11bde74fff8959548c874bbdff8fadb2ef8b5eb4eb1e900d3ec024ed06
     completion_audit:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-b689700-v1/fidelity/public_factorized/metrics/seal.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-b689700-v1/fidelity/public_factorized/metrics/seal.json
       sha256: 860c5f7918a1763256e4fed82309959bb14e9321bbf1f10c659471895905b5de
     producer:
-      path: /group/worldcept/code/SimAny-wt/e2-render-reuse-fix
+      path: ${SIMANY_ROOT}/worktrees/e2-render-reuse-fix
       commit: 7a1f85b1414645c5416f8c824c57e738220c40f8
-      python: /group/worldcept/code/SimAny/.venv/bin/python
+      python: ${SIMANY_ROOT}/.venv/bin/python
     config:
-      path: /group/worldcept/code/SimAny-wt/e2-render-reuse-fix/configs/experiments/icra2027/e2_full_render/evaluation.yaml
+      path: ${SIMANY_ROOT}/worktrees/e2-render-reuse-fix/configs/experiments/icra2027/e2_full_render/evaluation.yaml
       sha256: 428f3269eab35c9e295cc9c28e44400f9851be4957797969f3dcccf82b95ae33
     contract:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-b689700-v1/contract/freeze_manifest.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260906-b689700-v1/contract/freeze_manifest.json
       sha256: dd54fb72e7b02272f2c5dc23b7d0bebd7bb0458d2b911f10d5008dd052225534
 omit_unmeasured_object_table: true
 agentic_paired_uncertainty:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-357caca-v1/agentic/agentic_paired_uncertainty.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-357caca-v1/agentic/agentic_paired_uncertainty.json
   sha256: f3919685496077ead6e300db5b4809f2fac62951c376a79647cd4d50a31cc8c8
 agentic_paired_uncertainty_figure: true
 concise_captions: true

@@ -4,7 +4,7 @@
 #SBATCH --mem=100G
 #SBATCH --time=03:50:00
 #SBATCH --job-name=simany_droid_recon
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/droid_recon_%j.log
+#SBATCH --output=outputs/droid_recon_%j.log
 # DROID raw episode -> reconstructed + FK-aligned scene, end to end.
 #   sbatch --export=ALL,EPISODE=IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023 \
 #       run/slurm/droid_recon.sbatch
@@ -17,9 +17,9 @@
 # (this one) or via `bash run/run_droid_recon.sh`, never --wrap or `sh`.
 # For --partition=batch longer/unattended runs, add --exclude=msp3-[0-7]
 # when requesting h200 GPUs (msp3 nodes do not reliably mount
-# /group/worldcept - see docs/DROID_PROTOCOL.md).
+# ${PHIRIE_WORKSPACE:-$HOME} - see docs/DROID_PROTOCOL.md).
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 [ -n "$EPISODE" ] || { echo "set EPISODE=<lab>/success/<date>/<ts>"; exit 1; }
 export EPISODE
 bash "$SIMANY_ROOT/run/run_droid_recon.sh"

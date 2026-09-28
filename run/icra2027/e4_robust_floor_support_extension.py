@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -25,7 +26,7 @@ from typing import Any, Mapping, Sequence
 CODE_ROOT = Path(__file__).resolve().parents[2]
 BASE_RUNNER = CODE_ROOT / "run/icra2027/e4_robust_floor_support_diagnostic.py"
 WINNER_REGISTRY = CODE_ROOT / "run/icra2027/e4_robust_floor_support_winners.py"
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 EXPECTED_E3_ROOT = Path(
     "outputs/icra2027/"
     "icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic"

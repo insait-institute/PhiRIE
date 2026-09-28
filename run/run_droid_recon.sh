@@ -34,7 +34,7 @@ if [[ "${1:-}" == "--prospective-config" ]]; then
 fi
 
 SIMANY_ROOT=${SIMANY_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
-RAW_ROOT=${RAW_ROOT:-/group/worldcept/PhiRIE/data/droid/raw}
+RAW_ROOT=${RAW_ROOT:-${SIMANY_ROOT:-$PWD}/data/droid/raw}
 EPISODE=${EPISODE:?set EPISODE=<lab>/success/<date>/<ts> (path under $RAW_ROOT)}
 EP_DIR=$EPISODE
 [ -d "$EP_DIR" ] || EP_DIR=$RAW_ROOT/$EPISODE
@@ -62,7 +62,7 @@ mkdir -p "$SIMANY_OUT" "$SIMANY_SPLATS_ROOT"
 
 # h5py is in none of the three SimAny envs (docs/ENVIRONMENTS.md); the
 # artifixer venv has h5py+numpy and droid_extract is CPU-only.
-H5PY_BIN=${SIMANY_H5_PY:-/group/worldcept/artifixer/.venv/bin/python}
+H5PY_BIN=${SIMANY_H5_PY:-${SIMANY_H5_PY:-python3}}
 
 CAMERA=${CAMERA:-wrist}
 FRAMES=$SD/${CAMERA}_frames

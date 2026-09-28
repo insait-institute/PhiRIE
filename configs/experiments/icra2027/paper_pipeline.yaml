@@ -2,13 +2,13 @@ freeze_id: 20260904-07e8b05-v5
 mode: preliminary_audit
 audited_artifacts:
   construction:
-    path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
     sha256: 46dced81824efb92c9dac2b57d970438715ee63ad22d157754243dc062d36d72
   fidelity:
-    path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e2-2c7ed67df534-full/fidelity/table-reval-2f3ca585f30a-20260904T121220Z/fidelity_table.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e2-2c7ed67df534-full/fidelity/table-reval-2f3ca585f30a-20260904T121220Z/fidelity_table.json
     sha256: b2e281a65ca82b7e9504fb6dd3d96099fafa8d100a843a1c2da0b0ff22653f40
   agentic:
-    path: /group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic/agentic_ablation.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic/agentic_ablation.json
     sha256: ff5d39ec043bab30ad02dce5879eb8164dc23bdda568b51757ce652614de31fd
 claim_decisions:
   AGENTIC_TITLE_CLAIM:

@@ -8,6 +8,8 @@ from run.icra2027 import e6_public_reconstruction as e6
 
 @pytest.fixture
 def roster(tmp_path):
+    if not e6.PUBLIC.is_dir():
+        pytest.skip('public RGB scene tree is unavailable (set SIMANY_ROOT)')
     sources=e6.read(e6.CODE/'configs/experiments/icra2027/public_task_queries/sources.json')
     queries=e6.read(e6.CODE/'configs/experiments/icra2027/public_task_queries/queries.json')['queries']
     index={s['source_id']:s for row in sources['scenes'] for s in row['sources']}

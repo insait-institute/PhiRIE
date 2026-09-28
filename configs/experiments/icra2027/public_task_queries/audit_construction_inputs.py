@@ -9,6 +9,7 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 from collections import Counter
 from pathlib import Path
 
@@ -122,7 +123,8 @@ def compose_report(sources, roster, expansion, config, input_hashes):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--integration-root", type=Path,
-                        default=Path("/group/worldcept/PhiRIE/code/SimAny-wt/icra-integration"))
+                        default=Path(os.environ.get("SIMANY_INTEGRATION_ROOT",
+                                                    Path(__file__).resolve().parents[4] / "worktrees/icra-integration")))
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
     try:

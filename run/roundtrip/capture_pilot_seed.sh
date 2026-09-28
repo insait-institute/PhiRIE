@@ -5,9 +5,9 @@ seed=${1:?usage: capture_pilot_seed.sh SEED NEW_STAGE_ROOT}
 stage=${2:?new immutable stage root required}
 case "$seed" in 0|1|2|3|4) ;; *) exit 2;; esac
 cd "$(dirname "${BASH_SOURCE[0]}")/../.."
-python_native=/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/.venv-native/bin/python
-pilot=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260906-4ee6462-v2/sim_recon_sim/reference/pilot
-identity=/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260906-67ee364-v1/sim_recon_sim/reference/identity/identity_report.json
+python_native=${SIMANY_ROOT:-$PWD}/worktrees/sr0-native/.venv-native/bin/python
+pilot=${SIMANY_ROOT:-$PWD}/outputs/icra2027/20260906-4ee6462-v2/sim_recon_sim/reference/pilot
+identity=${SIMANY_ROOT:-$PWD}/outputs/icra2027/20260906-67ee364-v1/sim_recon_sim/reference/identity/identity_report.json
 source run/roundtrip/native_env.sh
 capture_id=$("$python_native" - "$pilot/canonical_seed$seed/canonical_state.json" <<'PY'
 import sys,hashlib

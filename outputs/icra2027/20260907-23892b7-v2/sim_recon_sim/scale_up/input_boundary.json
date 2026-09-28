@@ -1,6 +1,0 @@
-{
-  "primary": "snapshot013:2390terminal,1340executed,1040constructor nonrollouts,10CODE_FAILED,10NOT_SCHEDULED",
-  "scope": "snapshot0412:1200terminal,600executed,600constructor nonrollouts",
-  "paper_transfer": false,
-  "configuration_retry": "Previous v1 input_boundary mistakenly string instead of path/hash; no evaluation performed; old error log preserved."
-}

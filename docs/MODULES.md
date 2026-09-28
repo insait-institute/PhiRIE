@@ -112,7 +112,7 @@ claim; its `scientific_validation` field is `NOT_RUN`.
 
 The example preflight recipe is CPU-only and uses the existing authoritative campaign
 preflight. Scientific dispatch, admission, collection and freeze provenance continue to
-use [FINAL_EXPERIMENTS.md](../FINAL_EXPERIMENTS.md); do not create a second campaign ledger.
+use the campaign tooling in `robo/campaign/` and `run/campaign/`; do not create a second campaign ledger.
 
 ## Requested demo feature map
 

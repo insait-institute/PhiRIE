@@ -7,9 +7,12 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import os
 from pathlib import Path
 import shlex
+import shutil
 import subprocess
+import sys
 import yaml
 from robo.manifest.hash import canonical_hash
 from robo.roundtrip.matrix import read_rows,save_new,sha
@@ -73,12 +76,12 @@ def prepare(*,primary,bindings,admission,subset,base_config,scope_dev_receipt,co
         public_phrase=task_role_prompt((capture/'task_instruction.txt').read_text(),config['object_role'],config['target_prompt'],config.get('component_kind'))
         validate_config(config);config_path=out/'configs'/f'{row["instance_slot_id"]}.json';save_new(config_path,config)
         artifact=out/'destination_builds'/row['instance_slot_id'];receipt=out/'dispatch'/f'{row["instance_slot_id"]}_isolation.json'
-        argv=['/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python','run/sim_recon_sim/build_isolated.py','--code',str(code),
+        argv=[sys.executable,'run/sim_recon_sim/build_isolated.py','--code',str(code),
               '--config',str(config_path),'--capture',str(capture),'--out',str(artifact),'--receipt',str(receipt),
-              '--forbidden',str(Path(b['bundle_dir']).parent),'--forbidden','/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/third_party',
-              '--bubblewrap','/group/worldcept/PhiRIE/code/SimAny-wt/sr1-capture/outputs/sr1-isolation-runtime/root/usr/bin/bwrap']
+              '--forbidden',str(Path(b['bundle_dir']).parent),'--forbidden',os.environ.get('SIMANY_NATIVE_THIRD_PARTY',str(Path(code)/'third_party')),
+              '--bubblewrap',os.environ.get('SIMANY_BWRAP',shutil.which('bwrap') or 'bwrap')]
         script=out/'dispatch'/f'build_{row["instance_slot_id"]}.sh';script.parent.mkdir(exist_ok=True)
-        script.write_text('#!/usr/bin/env bash\nset -euo pipefail\ncd '+shlex.quote(str(code))+'\nexport TMPDIR=/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/outputs/sr0-setup/tmp\nexec '+shlex.join(argv)+'\n')
+        script.write_text('#!/usr/bin/env bash\nset -euo pipefail\ncd '+shlex.quote(str(code))+'\nexport TMPDIR=${TMPDIR:-/tmp}\nexec '+shlex.join(argv)+'\n')
         construction.append({'canonical_instance_id':cid,'instance_slot_id':row['instance_slot_id'],'task_id':row['task_id'],
             'layout_id':row['layout_id'],'generation_seed':row['generation_seed'],'capture_public':str(capture),
             'capture_manifest_sha256':b['capture_manifest_sha256'],'public_prompt':public_phrase,'config':str(config_path),

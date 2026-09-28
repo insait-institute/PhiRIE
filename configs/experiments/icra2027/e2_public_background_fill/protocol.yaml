@@ -46,8 +46,8 @@ scheduler_by_scene:
     gpus: 0
     reason: Existing predeclared no-plane gate closes before GPU work
 runtime_env:
-  SIMANY_FILL_DEPENDENCY_OVERLAY: /group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
-  PYTHONPATH: <exact executing checkout>:/group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  SIMANY_FILL_DEPENDENCY_OVERLAY: ${SIMANY_ROOT}/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  PYTHONPATH: <exact executing checkout>:${SIMANY_ROOT}/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
   PYTHONNOUSERSITE: '1'
   PYTHONDONTWRITEBYTECODE: '1'
 supersedes_failed_readiness_freeze: 20260906-f203ef7-v1

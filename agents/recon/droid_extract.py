@@ -33,15 +33,16 @@ align_to_traj.py resolves the true constant offset by residual search.
 Env: h5py is in NONE of the three SimAny envs - run under the artifixer venv
 (h5py + numpy; ffmpeg/ffprobe are system binaries), from the repo root:
 
-  /group/worldcept/artifixer/.venv/bin/python -m agents.recon.droid_extract \
+  ${SIMANY_H5_PY} -m agents.recon.droid_extract \
       --episode IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023 \
       --scene-name droid_iprl_0824 \
-      --root /group/worldcept/PhiRIE/code/SimAny/data/recon_scenes
+      --root ${SIMANY_ROOT}/data/recon_scenes
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -49,7 +50,8 @@ import numpy as np
 
 from agents.core.common import save_json
 
-RAW_ROOT = Path("/group/worldcept/PhiRIE/data/droid/raw")
+RAW_ROOT = Path(os.environ.get("SIMANY_DROID_RAW_ROOT",
+                                Path(__file__).resolve().parents[2] / "data/droid/raw"))
 FFMPEG = "/usr/bin/ffmpeg"
 FFPROBE = "/usr/bin/ffprobe"
 

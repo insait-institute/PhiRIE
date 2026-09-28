@@ -24,7 +24,7 @@ if [[ "${SIMANY_CHECKPOINT_CACHE_ROOT}" != /scratch/* ]]; then
 fi
 
 SIMANY_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-OPENPI_PYTHON=${SIMANY_OPENPI_PYTHON:-/group/worldcept/PhiRIE/code/openpi/.venv/bin/python}
+OPENPI_PYTHON=${SIMANY_OPENPI_PYTHON:-${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout}/.venv/bin/python}
 if [[ ! -x "$OPENPI_PYTHON" ]]; then
   echo "[pi05_serve_bound] OpenPI Python is not executable: $OPENPI_PYTHON" >&2
   exit 2
@@ -50,7 +50,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-export OPENPI_DATA_HOME=/group/worldcept/PhiRIE/checkpoints/openpi_cache
+export OPENPI_DATA_HOME=${OPENPI_DATA_HOME:-${SIMANY_ROOT:-$PWD}/checkpoints/openpi_cache}
 export XLA_PYTHON_CLIENT_MEM_FRACTION=${XLA_PYTHON_CLIENT_MEM_FRACTION:-0.5}
 export PYTHONPATH="$SIMANY_OPENPI_ROOT/src:$SIMANY_OPENPI_ROOT/packages/openpi-client/src:$SIMANY_ROOT"
 

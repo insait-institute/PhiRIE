@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH --account=runyi_yang
 #SBATCH --partition=batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -29,6 +28,6 @@ scontrol show job "$SLURM_JOB_ID"
 if [[ "$E3_RVG_PHASE" == run ]]; then
   nvidia-smi --query-gpu=uuid,name,memory.total,memory.used --format=csv,noheader
 fi
-/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python -m run.icra2027.e3_rvg_generation_pilot \
+${SIMANY_ROOT:-$PWD}/.venv/bin/python -m run.icra2027.e3_rvg_generation_pilot \
  --config "$E3_RVG_CONFIG" \
  --freeze-root "$E3_RVG_FREEZE" --phase "$E3_RVG_PHASE"

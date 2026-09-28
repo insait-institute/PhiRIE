@@ -25,7 +25,7 @@ from typing import Any, Mapping, Sequence
 
 
 CODE_ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 SCANNETPP_ROOT = Path("/data/ScanNetpp")
 SPLATS_ROOT = Path("/data/ScanNetppv2_gsplat/splats")
 PILOT_SCENES = ("3db0a1c8f3", "d755b3d9d8")

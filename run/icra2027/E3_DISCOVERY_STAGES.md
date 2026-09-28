@@ -8,7 +8,7 @@ rendering, TSDF integration, segmentation, preparation, frame selection or thres
 Each scene uses the existing config and launcher, in this order:
 
 ```bash
-python -m run.icra2027.e3_auto_discovery_pilot --config configs/experiments/icra2027/e3_discovery_stages.yaml --freeze-root /group/worldcept/code/SimAny/outputs/icra2027/20260905-4ff0d0e-v1 --scene-id 09c1414f1b --phase plan
+python -m run.icra2027.e3_auto_discovery_pilot --config configs/experiments/icra2027/e3_discovery_stages.yaml --freeze-root ${SIMANY_ROOT}/outputs/icra2027/20260905-4ff0d0e-v1 --scene-id 09c1414f1b --phase plan
 # Submit run/icra2027/e3_fresh_discovery.sbatch with explicit E3_DISCOVERY_CODE,
 # E3_DISCOVERY_FREEZE, E3_DISCOVERY_CONFIG and E3_DISCOVERY_SCENE exports.
 # E3_DISCOVERY_PHASE=run-render: one GPU, 32 GiB host memory, 15 minutes.
@@ -31,7 +31,7 @@ training receipts; it is not regenerated.
 Smoke (including mutation, missing dependency, failure and overwrite checks):
 
 ```bash
-CUDA_VISIBLE_DEVICES='' MUJOCO_GL=egl TMPDIR="$PWD/.t" /group/worldcept/code/SimAny/.venv/bin/python -m pytest -q tests/test_e3_discovery_stages.py tests/test_e3_discovery_cohort.py tests/test_e3_auto_discovery_pilot.py tests/test_training_views.py --basetemp=.t/s
+CUDA_VISIBLE_DEVICES='' MUJOCO_GL=egl TMPDIR="$PWD/.t" ${SIMANY_ROOT}/.venv/bin/python -m pytest -q tests/test_e3_discovery_stages.py tests/test_e3_discovery_cohort.py tests/test_e3_auto_discovery_pilot.py tests/test_training_views.py --basetemp=.t/s
 ```
 
 The remaining 49 discovery units wait for the real first-scene staged pilot.

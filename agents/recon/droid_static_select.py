@@ -43,7 +43,7 @@ NOT do:
    replacement for that).
 
 CPU, numpy + opencv + PIL only - runs in ANY of the three SimAny envs, and
-also under /group/worldcept/artifixer/.venv (same env droid_extract.py
+also under ${SIMANY_H5_ENV} (same env droid_extract.py
 uses).
 
 Usage:

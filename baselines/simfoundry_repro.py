@@ -95,8 +95,8 @@ OPTIONAL_RENDER_STAGE = ("s8 gsplat renders", "agents.render.s8_render",
 # run_sam3()/run_gs() bash functions.
 _INTERPRETER_DEFAULTS = {
     "SIMANY_PY": str(ROOT / ".venv" / "bin" / "python"),
-    "SIMANY_SAM3_PY": "/group/streetsplat/worldcept/.envs/sam3/bin/python",
-    "SIMANY_GSPLAT_PY": "/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python",
+    "SIMANY_SAM3_PY": str(ROOT / ".envs" / "sam3" / "bin" / "python"),
+    "SIMANY_GSPLAT_PY": str(ROOT / ".envs" / "mini-viewer" / "bin" / "python"),
 }
 
 # Same honesty contract as raw_reconstruction.py: this ablation's config

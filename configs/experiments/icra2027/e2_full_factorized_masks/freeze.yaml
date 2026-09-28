@@ -4,48 +4,48 @@ freeze_id: 20260906-02e9d33-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: mask_context
-  path: /group/worldcept/code/SimAny-wt/e2-full-background/configs/experiments/icra2027/e2_full_factorized_masks/pilot.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-background/configs/experiments/icra2027/e2_full_factorized_masks/pilot.yaml
   kind: experiment_config
   required: true
 - id: mask_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-full-background/configs/experiments/icra2027/e2_full_factorized_masks/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-background/configs/experiments/icra2027/e2_full_factorized_masks/protocol.yaml
   kind: experiment_config
   required: true
 - id: full_e2_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/protocol.yaml
   kind: experiment_config
   required: true
 - id: preparation_gate
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/dispatch/independent_completion_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v3/dispatch/independent_completion_gate.json
   kind: source_manifest
   required: true
 - id: preparation_seal
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint/seal.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v3/fidelity/removal/09c1414f1b/inpaint/seal.json
   kind: source_manifest
   required: true
 - id: preparation_context
-  path: /group/worldcept/code/SimAny-wt/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/preparation_pilot.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-full-factorized/configs/experiments/icra2027/e2_full_factorized/preparation_pilot.yaml
   kind: experiment_config
   required: true
 - id: preparation_contract
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v3/contract/freeze_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v3/contract/freeze_manifest.json
   kind: source_manifest
   required: true
 - id: sam3_python
-  path: /group/worldcept/code/SimAny/.envs/sam3d-objects/bin/python3.11
+  path: ${SIMANY_ROOT}/.envs/sam3d-objects/bin/python3.11
   kind: python_runtime
   required: true
 - id: sam3_source
-  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
+  path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/sam3-source-8e451d5eb43c817b64ae7577fb7b9ae223db88a9
   kind: large_directory
   required: true
 checkpoint_roots:
 - id: sam3_checkpoint
-  path: /group/worldcept/code/SimAny/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
+  path: ${SIMANY_ROOT}/.cache/icra2027/e2-replacements/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt
   kind: checkpoint
   required: true
 hardware:

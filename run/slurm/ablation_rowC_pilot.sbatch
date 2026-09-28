@@ -4,9 +4,9 @@
 #SBATCH --mem=100G
 #SBATCH --time=01:30:00
 #SBATCH --job-name=simany_rowC_pilot
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/ablation_rowC_pilot.log
+#SBATCH --output=outputs/ablation_rowC_pilot.log
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 S=c50d2d1d42
 OUT=$SIMANY_ROOT/outputs/${S}_rowC2

@@ -48,7 +48,8 @@ from robo.eval import e4_region_pilot as cpu_pilot
 
 SCHEMA_VERSION = 1
 CODE_ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
+EXPECTED_SLURM_ACCOUNT = os.environ.get("SIMANY_EXPECTED_SLURM_ACCOUNT", "phirie")
 EXPECTED_CPU_FREEZE_ID = (
     "icra2027-contract-v1-e4-0dda134578b2-region-cpu-prep1-20260904T135257Z"
 )
@@ -56,16 +57,14 @@ EXPECTED_CPU_PRODUCER_COMMIT = "0dda134578b25cd12d1791193bb437c6d310776f"
 EXPECTED_CPU_GATE_SHA256 = "b4bb242ace4ce641051e58df003d126a1383ae0ddd003e3fe4dce3e0493ef355"
 EXPECTED_CPU_CONFIG_SHA256 = "fea0c39c9fd789122e75721d9283f1d1c254835e8640c67267271d785d9f5b26"
 EXPECTED_MENAGERIE_ROOT = CODE_ROOT / "third_party" / "mujoco_menagerie"
-MENAGERIE_COPY_SOURCE_ROOT = Path(
-    "/group/worldcept/PhiRIE/code/SimAny/third_party/mujoco_menagerie"
-)
+MENAGERIE_COPY_SOURCE_ROOT = EXPECTED_EVIDENCE_ROOT / "third_party" / "mujoco_menagerie"
 EXPECTED_MENAGERIE_COMMIT = "71f066ad0be9cd271f7ed58c030243ef157af9f4"
 EXPECTED_MENAGERIE_CLOSURE_SHA256 = (
     "a275b73fb3d0b5fc52abbeb1cd58577c01a447c13ff5ba8d3f51199f27e7e46f"
 )
 EXPECTED_MENAGERIE_FILE_COUNT = 94
 EXPECTED_MENAGERIE_SIZE_BYTES = 40_901_071
-EXPECTED_OPENPI_ROOT = Path("/group/worldcept/PhiRIE/code/openpi-wt/e4-policy-server")
+EXPECTED_OPENPI_ROOT = Path(os.environ.get("SIMANY_EXPECTED_OPENPI_ROOT", "/opt/phirie/evidence/openpi-wt/e4-policy-server"))
 EXPECTED_OPENPI_COMMIT = "2f51088169d2e2b480ce54faa737be9b0279eed4"
 EXPECTED_OPENPI_IMAGE_TOOLS_SHA256 = (
     "d48b4bd7f44e79fe6db8a8e07c9161144fa250be686e1245014a8b47e6171977"
@@ -1011,7 +1010,7 @@ def _gpu_runtime_attestation(profile: Mapping[str, str] | None = None) -> dict[s
         "MUJOCO_GL": "egl",
         "PYOPENGL_PLATFORM": "egl",
         "SLURMD_NODENAME": profile["node"],
-        "SLURM_JOB_ACCOUNT": "runyi_yang",
+        "SLURM_JOB_ACCOUNT": EXPECTED_SLURM_ACCOUNT,
         "SLURM_JOB_PARTITION": "batch",
         "SLURM_JOB_QOS": "normal",
         "SLURM_CPUS_PER_TASK": "4",
@@ -1073,7 +1072,7 @@ def _gpu_runtime_attestation(profile: Mapping[str, str] | None = None) -> dict[s
         "pyopengl_platform": "egl",
         "qualifier_preflight_gate_sha256": qualifier_preflight_sha256,
         "slurm_profile": {
-            "account": "runyi_yang",
+            "account": EXPECTED_SLURM_ACCOUNT,
             "cpus_per_task": 4,
             "gres": profile["gres"],
             "mem": "32G",

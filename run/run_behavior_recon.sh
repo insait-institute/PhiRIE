@@ -41,7 +41,7 @@ mkdir -p "$SIMANY_OUT" "$SIMANY_SPLATS_ROOT"
 
 # h5py is in none of the three SimAny envs (docs/ENVIRONMENTS.md); the
 # artifixer venv has h5py+cv2+numpy and this stage is CPU-only.
-H5PY_BIN=${SIMANY_H5_PY:-/group/worldcept/artifixer/.venv/bin/python}
+H5PY_BIN=${SIMANY_H5_PY:-${SIMANY_H5_PY:-python3}}
 
 STATIC_FLAG=""
 [ "$STATIC_ONLY" = "1" ] && STATIC_FLAG="--static-only"

@@ -23,11 +23,11 @@ After the tested source/config commit is merged and its exact-source E0 smoke
 passes, create a new contract from `trellis2_geometry_pilot/freeze.yaml`, then run:
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny \
-  /group/worldcept/code/SimAny/.venv/bin/python -m run.icra2027.e3_trellis2_mesh_probe \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} \
+  ${SIMANY_ROOT}/.venv/bin/python -m run.icra2027.e3_trellis2_mesh_probe \
   --geometry-config configs/experiments/icra2027/trellis2_geometry_pilot/evaluation.json \
-  --contract /group/worldcept/code/SimAny/outputs/icra2027/RESERVED_ID/contract/freeze_manifest.json \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/RESERVED_ID/trellis2_geometry
+  --contract ${SIMANY_ROOT}/outputs/icra2027/RESERVED_ID/contract/freeze_manifest.json \
+  --out ${SIMANY_ROOT}/outputs/icra2027/RESERVED_ID/trellis2_geometry
 ```
 
 `RESERVED_ID` is the checked-in `evaluation.json` freeze_id. Use one ordinary

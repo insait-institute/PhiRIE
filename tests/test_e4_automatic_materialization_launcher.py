@@ -109,6 +109,7 @@ def test_slurm_spool_copy_uses_explicit_frozen_source(tmp_path):
     script = spool/'slurm_script'
     shutil.copyfile(launcher.CODE/'run/icra2027/run_e4_automatic_materialization.sh', script)
     env = dict(os.environ, E4_CODE=str(launcher.CODE))
+    env.setdefault('SIMANY_PY', sys.executable)  # reach the module's argparse with the test interpreter
     # Invalid phase reaches the real module's argparse without touching a freeze.
     result = subprocess.run(['bash', str(script), 'not-a-phase'], cwd=spool,
                             env=env, text=True, capture_output=True)

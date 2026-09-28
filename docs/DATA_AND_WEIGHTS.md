@@ -86,7 +86,7 @@ already sit in the HF hub cache:
 
 Cluster gotcha: on hala, `~/.cache` is a symlink to **node-local**
 `/scratch`, so these caches are invisible from other nodes. When running
-HF-cached stages off-hala, set `HF_HOME` to a `/group/worldcept`-hosted path
+HF-cached stages off-hala, set `HF_HOME` to a shared-storage path
 holding the needed checkpoints.
 
 ### LaMa (image-inpainting fallback)
@@ -101,10 +101,10 @@ holding the needed checkpoints.
 The closed-loop evaluation ([`robo/eval/pi05_eval.py`](../robo/eval/pi05_eval.py))
 talks to an openpi websocket policy server started by
 [`run/pi05_serve.sh`](../run/pi05_serve.sh). That script runs from the openpi
-fork at `/group/worldcept/code/openpi` (github.com/xuningy/openpi — it has
+fork at `${OPENPI_ROOT}` (github.com/xuningy/openpi — it has
 the `pi05_droid_jointpos` config that mainline openpi lacks) and sets
-`OPENPI_DATA_HOME=/group/worldcept/openpi_cache`. Checkpoints, predownloaded
-under `/group/worldcept/openpi_cache/openpi-assets-simeval/`:
+`OPENPI_DATA_HOME=${OPENPI_DATA_HOME}`. Checkpoints, predownloaded
+under `${OPENPI_DATA_HOME}/openpi-assets-simeval/`:
 
 - `pi05_droid_jointpos/` — the zero-shot DROID joint-position policy
   (12.4 GB), the default.

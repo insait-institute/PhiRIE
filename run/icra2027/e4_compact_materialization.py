@@ -24,7 +24,7 @@ CODE = Path(__file__).resolve().parents[2]
 SOURCE_COMMIT = "e2185a8809e9bd3462b3c0449a5367cdf95d18b4"
 SOURCE_FREEZE = "20260905-61d8ba4-v1"
 SOURCE_CONTRACT = "f80aabb0ee4326b5be667dbd82802917263a5f14f574bd70908ec4559aedfb2a"
-DEFAULT_SOURCE = Path("/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027") / SOURCE_FREEZE / "agentic"
+DEFAULT_SOURCE = Path(os.environ.get("SIMANY_EVIDENCE_ROOT", CODE)) / "outputs/icra2027" / SOURCE_FREEZE / "agentic"
 SCENES = {"27dd4da69e": 7, "40aec5fffa": 10}
 FIXED_TASKS = ["27dd4da69e__obj_1001_to_region", "27dd4da69e__obj_1001_to_obj_1000",
                "40aec5fffa__obj_1001_to_region", "40aec5fffa__obj_1001_to_obj_1005"]

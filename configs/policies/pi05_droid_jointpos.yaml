@@ -6,8 +6,8 @@
 # status: verified -- docs/ROBOT.md's honest results section cites pi0.5
 # zero-shot scoring 28% (nonzero-episode rate) on RoboLab-120 as the public
 # baseline to calibrate against; this repo's own closed-loop pooled nonzero
-# rate on c50d2d1d42 composite (13/47 = 0.28, coding_agents/memory/
-# pi05-droid-sim-eval.md, 2026-08-04 entry, post the 2026-08-01
+# rate on c50d2d1d42 composite (13/47 = 0.28, internal sim-eval notes,
+# 2026-08-04 entry, post the 2026-08-01
 # base-placement geometry fix) independently lands on the same order of
 # magnitude with the SAME checkpoint bytes -- not an exact number
 # reproduction (different task suite/scene/camera), but a real, documented
@@ -19,7 +19,7 @@ policies:
     client_kind: pi05_server
 
     checkpoint_uri: gs://openpi-assets-simeval/pi05_droid_jointpos
-    checkpoint_path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/pi05_droid_jointpos
+    checkpoint_path: ${OPENPI_DATA_HOME}/openpi-assets-simeval/pi05_droid_jointpos
     # Computed via robo.manifest.hash.hash_checkpoint_path on 2026-08-16
     # against the path above (26 files: assets/, params/). This is a
     # path+size+mtime fingerprint, NOT a cryptographic content hash of the
@@ -65,7 +65,7 @@ policies:
       docs/ROBOT.md "Results (honest, as of 2026-08-04)": pi0.5 zero-shot
       scores 28% on RoboLab-120 (external baseline); this repo's own pooled
       c50d2d1d42 composite nonzero rate is 13/47 = 0.28 with the same
-      checkpoint (coding_agents/memory/pi05-droid-sim-eval.md, 2026-08-04).
+      checkpoint (internal sim-eval notes, 2026-08-04).
     notes: >-
       Variance dominates at this sample size (docs/ROBOT.md: detecting a
       +0.15 nonzero-rate change needs ~158 episodes/arm at 80% power) --

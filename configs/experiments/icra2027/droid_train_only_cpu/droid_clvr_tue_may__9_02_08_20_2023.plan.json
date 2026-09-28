@@ -1,19 +1,19 @@
 {
   "camera": "wrist",
-  "episode": "/group/worldcept/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023",
+  "episode": "${SIMANY_ROOT}/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023",
   "inputs": {
     "metadata": {
-      "path": "/group/worldcept/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/metadata_CLVR+236539bc+2023-05-09-02h-08m-20s.json",
+      "path": "${SIMANY_ROOT}/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/metadata_CLVR+236539bc+2023-05-09-02h-08m-20s.json",
       "sha256": "a3daea75ef4b1d50794f154e8b38be63e937e2c3ef64e838db144734ba9fb513",
       "size_bytes": 1770
     },
     "trajectory": {
-      "path": "/group/worldcept/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/trajectory.h5",
+      "path": "${SIMANY_ROOT}/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/trajectory.h5",
       "sha256": "7bbba57a42f3dcbeb853420e4a257906878cb57e87c9f8ec3e5b04ab763a38a7",
       "size_bytes": 1071936
     },
     "video": {
-      "path": "/group/worldcept/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/recordings/MP4/16787047.mp4",
+      "path": "${SIMANY_ROOT}/data/droid/raw/CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/recordings/MP4/16787047.mp4",
       "sha256": "24ba186a53591ff992918dcfc7d7a0d1e7eccda9be1ac453212a71b14416bd6c",
       "size_bytes": 1309618
     }

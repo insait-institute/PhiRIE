@@ -5,7 +5,7 @@
 #SBATCH --time=03:50:00
 #SBATCH --array=0-7
 #SBATCH --job-name=simany_autofleet
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/fleet/auto_slurm_%a.log
+#SBATCH --output=outputs/fleet/auto_slurm_%a.log
 
 mkdir -p outputs/fleet
 mapfile -t SCENES < /data/ScanNetpp/splits/nvs_sem_val.txt

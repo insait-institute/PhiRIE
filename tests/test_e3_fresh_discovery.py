@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 from pathlib import Path
 import numpy as np
 import pytest
@@ -10,7 +11,7 @@ from run.icra2027 import e3_trellis_generation_pilot as generation
 
 def real_inputs():
     config=yaml.safe_load((auto.CODE/'configs/experiments/icra2027/e3_fresh_discovery.yaml').read_text())
-    source=Path('/group/worldcept/PhiRIE/code/SimAny/outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot/input_manifest.json')
+    source=Path(os.environ.get('SIMANY_EVIDENCE_ROOT','/nonexistent'))/'outputs/icra2027/20260904-07e8b05-v21/auto_discovery_pilot/input_manifest.json'
     if not source.exists(): pytest.skip('local source unavailable')
     manifest=json.loads(source.read_text())
     frozen_root = Path(config['gaussian_provenance']['freeze_root'])

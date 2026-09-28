@@ -99,5 +99,5 @@ Reproducible command after its own source/E0 publication:
 ```bash
 python -m run.icra2027.e2_public_factorized --phase metrics \
   --config configs/experiments/icra2027/e2_common_view_analysis/evaluation.yaml \
-  --contract /group/worldcept/code/SimAny/outputs/icra2027/20260906-0281856-v1/contract/freeze_manifest.json
+  --contract ${SIMANY_ROOT}/outputs/icra2027/20260906-0281856-v1/contract/freeze_manifest.json
 ```

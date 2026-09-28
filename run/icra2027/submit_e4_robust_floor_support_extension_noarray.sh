@@ -2,16 +2,16 @@
 # Submit the exact 33-job, four-scene robust-floor/support CPU extension.
 set -euo pipefail
 
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_robust_floor_support_extension_cpu.sbatch"
 SWEEP_SCRIPT="$CODE_ROOT/run/icra2027/e4_robust_floor_support_extension.py"
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
 EXTERNAL_SWEEP_ID=icra2027-contract-v1-e4-8c7b796b3f25-robust-floor-support-20260904T192849Z
 EXTERNAL_AGGREGATE_MANIFEST_SHA256=7d12d1cf7c212c97da0f97596970c0da983f450a89da7abe17035a98b4a7d5a6
 EXTERNAL_COMPARISON_MANIFEST_SHA256=99b979ded06854426f2cab4942086401ef6a27f7b0c499ca4f80a1f341c0bc19
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 CPU_NODELIST='sof1-h200-[0-7]'
 SETFACL=/usr/bin/setfacl
 GETFACL=/usr/bin/getfacl

@@ -1,7 +1,7 @@
 # Task 14 oracle-causal benchmark: scene/task manifest.
 #
 # wds_shard_hints discovered by sampling ~15 shards spread across
-# /group/worldcept/PhiRIE/data/behavior/wds/train/ on 2026-08-16 (see
+# ${SIMANY_ROOT}/data/behavior/wds/train/ on 2026-08-16 (see
 # docs/ORACLE_PROTOCOL.md "data availability" section for why WDS shards are
 # used instead of the HDF5 tree agents/recon/behavior_extract.py expects --
 # that tree no longer exists on disk). oracle/capture_generator.py falls

@@ -42,4 +42,4 @@ For releases, run `tools/release/verify.py`, build the Python distributions, and
 a full source archive that includes the bundled PhiView source. Tag the exact merged main
 commit. Publish the manifest, validation receipt and checksums with the archives.
 Unavailable hosted CI must be reported explicitly with local evidence; it is never a
-passing check. Research claims remain governed by `FINAL_EXPERIMENTS.md`.
+passing check. Research claims remain governed by the final-experiment protocol in `robo/campaign/finalize.py`.

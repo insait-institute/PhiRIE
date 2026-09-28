@@ -4,9 +4,9 @@
 #SBATCH --mem=100G
 #SBATCH --time=03:00:00
 #SBATCH --job-name=simany_demoA
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/demo_movie/jobA.log
+#SBATCH --output=outputs/demo_movie/jobA.log
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 OUTD=$SIMANY_ROOT/outputs/demo_movie
 mkdir -p "$OUTD"

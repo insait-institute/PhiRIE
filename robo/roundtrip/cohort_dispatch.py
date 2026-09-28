@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import shlex
 import subprocess
-from robo.roundtrip.matrix import (read_rows,save_new,sha,canonical_hash,commands_for_units,
+from robo.roundtrip.matrix import (NATIVE_PYTHON,read_rows,save_new,sha,canonical_hash,commands_for_units,
                                   validate_terminal,IDENTITY_FIELDS)
 from robo.roundtrip.local_policy_instance import preflight_engine
 from robo.manifest.hash import git_snapshot
@@ -131,7 +131,7 @@ def dispatch_ready(planned,bindings,b0_root,context_paths,out,*,worker_root,work
             if path.exists():validate_terminal(unit,json.loads(path.read_text()))
             else:save_new(path,terminal)
         commands=commands_for_units(units,list(by_method.values()),host='localhost',port=8017,
-            python_native='/group/worldcept/PhiRIE/code/SimAny-wt/sr0-native/.venv-native/bin/python')
+            python_native=NATIVE_PYTHON)
         preflight_engine(units,commands,worker_root,METHODS,10)
         # Immutable per-instance snapshot; canonical planned config paths stay fixed.
         if not (current/'planned_units.jsonl').exists():

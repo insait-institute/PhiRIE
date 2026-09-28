@@ -5,7 +5,7 @@
 # pi05_server / robo.policy.clients.pi05_client.Pi05PolicyClient.
 #
 # status: verified, as of 2026-08-16. Previously exploratory: per
-# coding_agents/memory/pi05-droid-sim-eval.md (last touched 2026-08-04), this
+# the internal sim-eval notes (last touched 2026-08-04), this
 # checkpoint had never actually been run through robo/eval/pi05_eval.py in
 # this repo despite being downloaded and wired since 2026-08-01. Closed-loop
 # verification (Task 08 follow-up, 2026-08-16, SLURM job 707333, debug
@@ -33,7 +33,7 @@ policies:
     client_kind: pi05_server
 
     checkpoint_uri: gs://openpi-assets-simeval/droid_pi05_jointpos_with_web_and_sim
-    checkpoint_path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/droid_pi05_jointpos_with_web_and_sim/80000
+    checkpoint_path: ${OPENPI_DATA_HOME}/openpi-assets-simeval/droid_pi05_jointpos_with_web_and_sim/80000
     # Computed via robo.manifest.hash.hash_checkpoint_path on 2026-08-16
     # against the path above (20 files under 80000/: assets/, params/).
     checkpoint_hash: "0e6e21f8c309ae3b03f7fdce967d2e7f4c4a7cf0f76a5a3910ccf1d480f90dee"
@@ -41,7 +41,7 @@ policies:
     # 8-dim action head and need the pi05_droid_jointpos_sim config (added
     # to our openpi fork 2026-08-01)" -- distinct from the base config
     # above, confirmed present at
-    # /group/worldcept/PhiRIE/code/openpi/src/openpi/training/config.py:701.
+    # ${OPENPI_ROOT}/src/openpi/training/config.py:701.
     training_config: pi05_droid_jointpos_sim
 
     model_action_convention: joint_delta_chunk_15x8
@@ -79,7 +79,7 @@ policies:
       Downloaded 2026-08-01 (12 GB, anonymous GCS HTTPS) and wired into
       run/pi05_serve.sh. Verified 2026-08-16 via a real robo.eval.pi05_eval
       closed-loop run (job 707333, see published_real_score_ref) after
-      coding_agents/memory/pi05-droid-sim-eval.md (2026-08-04) flagged it as
+      the internal sim-eval notes (2026-08-04) flagged it as
       the top-ranked UNTRIED lever for the wrist-camera near-field failure
       mode. The other untried lever noted there -- depth-compositing the
       MuJoCo table into the wrist view -- remains open and unrelated to this

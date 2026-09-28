@@ -13,11 +13,11 @@ is not run. The generated counts point to exact original QA fields.
 Run from a clean source after focused tests and the exact E0 smoke:
 
 ```sh
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny \
-/group/worldcept/code/SimAny/.venv/bin/python -m robo.eval.paper_pipeline \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} \
+${SIMANY_ROOT}/.venv/bin/python -m robo.eval.paper_pipeline \
   --config configs/experiments/icra2027/paper_full_controller_draft.yaml \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/20260906-c2b7fa0-v1/paper_tables \
-  --paper-root /group/worldcept/code/SimAnyRoom
+  --out ${SIMANY_ROOT}/outputs/icra2027/20260906-c2b7fa0-v1/paper_tables \
+  --paper-root ${PAPER_REPO_ROOT}
 ```
 
 The fixed cohort supports narrow evidence-selection and bounded-registration

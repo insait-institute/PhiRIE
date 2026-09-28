@@ -9,7 +9,7 @@ candidate layout factory_hybrid consumes, mirroring obj_XX/rvg/):
 ENV: this module does NOT run under the pipeline .venv. It needs the
 dedicated SAM 3D Objects env (torch 2.5.1+cu121, pytorch3d, kaolin,
 flash-attn, built per third_party/sam-3d-objects/doc/setup.md):
-  /group/worldcept/PhiRIE/code/SimAny/.envs/sam3d-objects/bin/python
+  ${SIMANY_ROOT}/.envs/sam3d-objects/bin/python
 Launch from the repo root via run/env.sh's `run_sam3d models.s4_sam3d`
 (SIMANY_SCENE/SIMANY_OUT selected exactly like s4_trellis). GPU required
 (~17.5 GB peak on the factory crops -> fits the A6000 with headroom).

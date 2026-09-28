@@ -4,36 +4,36 @@ freeze_id: 20260906-65c5a7e-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: erasure_context
-  path: /group/worldcept/code/SimAny-wt/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/pilot.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/pilot.yaml
   kind: experiment_config
   required: true
 - id: erasure_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_erasure/protocol.yaml
   kind: experiment_config
   required: true
 - id: mask_integrity
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-75431a4-v1/dispatch/independent_completion_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-75431a4-v1/dispatch/independent_completion_gate.json
   kind: source_manifest
   required: true
 - id: mask_seal
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-75431a4-v1/fidelity/removal_masks/0d2ee665be/seal.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-75431a4-v1/fidelity/removal_masks/0d2ee665be/seal.json
   kind: source_manifest
   required: true
 - id: prefix_protocol
-  path: /group/worldcept/code/SimAny-wt/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_pilot/protocol.yaml
+  path: ${SIMANY_ROOT}/worktrees/e2-model-pilot-erase/configs/experiments/icra2027/e2_full_model_pilot/protocol.yaml
   kind: experiment_config
   required: true
 - id: lama_python
-  path: /group/worldcept/code/SimAny/.venv/bin/python3.11
+  path: ${SIMANY_ROOT}/.venv/bin/python3.11
   kind: python_runtime
   required: true
 checkpoint_roots:
 - id: lama_checkpoint
-  path: /group/worldcept/code/SimAny/outputs/e2-runtime-lama-v1/big-lama.pt
+  path: ${SIMANY_ROOT}/outputs/e2-runtime-lama-v1/big-lama.pt
   kind: checkpoint
   required: true
 hardware:

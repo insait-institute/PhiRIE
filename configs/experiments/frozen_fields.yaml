@@ -41,11 +41,11 @@ observation_preprocessing:
 
 policies:
   - id: pi05_droid_jointpos
-    checkpoint_path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/
+    checkpoint_path: ${OPENPI_DATA_HOME}/openpi-assets-simeval/
     config: pi05_droid_jointpos
     action_output: joint_delta_chunk_15x8
   - id: droid_pi05_jointpos_with_web_and_sim
-    checkpoint_path: /group/worldcept/PhiRIE/checkpoints/openpi_cache/openpi-assets-simeval/droid_pi05_jointpos_with_web_and_sim/80000
+    checkpoint_path: ${OPENPI_DATA_HOME}/openpi-assets-simeval/droid_pi05_jointpos_with_web_and_sim/80000
     config: pi05_droid_jointpos_sim
     action_output: joint_delta_chunk_15x8
   - id: scripted_sinusoid

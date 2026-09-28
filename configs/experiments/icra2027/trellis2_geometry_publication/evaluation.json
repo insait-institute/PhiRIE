@@ -5,44 +5,44 @@
   "paper_ready": false,
   "freeze_id": "20260905-a8ab431-v1",
   "construction_source": {
-    "code_root": "/group/worldcept/code/SimAny-wt/e3-trellis2",
+    "code_root": "${SIMANY_ROOT}/worktrees/e3-trellis2",
     "code_commit": "ab791010af88b0a0b9e402d0e1f4214ca9c75445",
     "config": {
-      "path": "/group/worldcept/code/SimAny-wt/e3-trellis2/configs/experiments/icra2027/trellis2_pilot/pilot.yaml",
+      "path": "${SIMANY_ROOT}/worktrees/e3-trellis2/configs/experiments/icra2027/trellis2_pilot/pilot.yaml",
       "bytes": 4276,
       "mtime_ns": 1788638383644067046,
       "sha256": "9b5e93aa3d5a545566f7e79031043644987a37648e1a5f08bcd6c0a1153520a0"
     },
     "e0": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-45e46f7-v2/contract/freeze_manifest.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-45e46f7-v2/contract/freeze_manifest.json",
       "bytes": 9459,
       "mtime_ns": 1788638693868614653,
       "sha256": "7aaa7f45ef71259ea34dff24d493a8b79b628eb08b854f51e39ec2fb3e425a9b"
     },
     "probe_seal": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-45e46f7-v2/trellis2_initial/38d58a7a31/mesh_probe/seal.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-45e46f7-v2/trellis2_initial/38d58a7a31/mesh_probe/seal.json",
       "bytes": 42996,
       "mtime_ns": 1788641147053535383,
       "sha256": "3568cfae30a358b79f579ca2515add48eec5cc2120176b7fc14c29e6f924c0d1"
     },
     "completion_audit": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-45e46f7-v2/trellis2_pilot_completion_audit.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-45e46f7-v2/trellis2_pilot_completion_audit.json",
       "bytes": 1894,
       "mtime_ns": 1788641396015117688,
       "sha256": "93ebd3486d5e167aba45117cc0cda022205327e19438433fa1ef9d5c39ead21c"
     }
   },
   "reference_source": {
-    "code_root": "/group/worldcept/code/SimAny-wt/e3-evaluation-matching",
+    "code_root": "${SIMANY_ROOT}/worktrees/e3-evaluation-matching",
     "code_commit": "40923fc30aeb1fbe8812ccaa02060a96cb3567b7",
     "manifest": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/evaluation_matching/evaluation_references.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/evaluation_matching/evaluation_references.json",
       "bytes": 22462,
       "mtime_ns": 1788628821016947886,
       "sha256": "ee3a41072dfd1ac155e7585e548a3a779afa9c973ba0065f1ce398568cada386"
     },
     "completion_audit": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/independent_evaluation_completion_audit.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/independent_evaluation_completion_audit.json",
       "bytes": 10244,
       "mtime_ns": 1788629755294744061,
       "sha256": "d83a6d59dacf76c91778d4fcff14c6382f21b18f55582d056d05acc7aa233f44"
@@ -54,19 +54,19 @@
     "source_commit": "c9acff8cde986f6491aede60923539dfa4763ec0",
     "classification": "code_bug_shared_evidence_publication_boundary",
     "receipt": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-521411f-v1/dispatch/submission.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-521411f-v1/dispatch/submission.json",
       "bytes": 3045,
       "mtime_ns": 1788651372856920277,
       "sha256": "ceb6fca482637c19be1d1998f2ca49f2164ca3f8d301134eeb456905edd100af"
     },
     "error_log": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260905-521411f-v1/dispatch/pilot-832575.err",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260905-521411f-v1/dispatch/pilot-832575.err",
       "bytes": 2139,
       "mtime_ns": 1788651382167446267,
       "sha256": "5c31ebc45a2d795f18641ca2b428fffc544c68c21f7b84cac27c370f8be25b35"
     },
     "scheduler": {
-      "path": "/group/worldcept/code/SimAny-wt/e2-trellis2-geometry-publication/outputs/trellis2-geometry-publication/previous_attempt_scheduler.json",
+      "path": "${SIMANY_ROOT}/worktrees/e2-trellis2-geometry-publication/outputs/trellis2-geometry-publication/previous_attempt_scheduler.json",
       "bytes": 119,
       "mtime_ns": 1788651578673354597,
       "sha256": "51a27315af64ebbc84c67ca8e7fe33978d7343ce31677050a560b8b12eb720bb"

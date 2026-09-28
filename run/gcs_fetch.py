@@ -5,7 +5,7 @@ Used for droid_100 (gs://gresearch/robotics/droid_100) and openpi
 checkpoints (gs://openpi-assets/...), whose buckets allow anonymous reads.
 
 Usage: python run/gcs_fetch.py --bucket gresearch --prefix robotics/droid_100 \
-           --dest /group/worldcept/PhiRIE/data/droid [--list-only] [--max-gb 50]
+           --dest ${SIMANY_ROOT}/data/droid [--list-only] [--max-gb 50]
 """
 import argparse
 import json

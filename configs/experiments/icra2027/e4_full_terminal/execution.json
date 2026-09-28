@@ -1,6 +1,6 @@
 {
   "compatibility": {
-    "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/dispatch/sof5_compatibility_authorization.json",
+    "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/dispatch/sof5_compatibility_authorization.json",
     "sha256": "599eb74cfca8fc9487c2705a64fa519fee7868a8d03fcccce2ba26b415648b15",
     "size_bytes": 4468
   },
@@ -14,7 +14,7 @@
       "job_id": "833828",
       "job_name": "e4-full-pilot",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "0d2ee665be": {
       "elapsed_seconds": 2181,
@@ -23,7 +23,7 @@
       "job_id": "834100",
       "job_name": "e4-full-0d2ee665be",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "13c3e046d7": {
       "elapsed_seconds": 14,
@@ -32,7 +32,7 @@
       "job_id": "834101",
       "job_name": "e4-full-13c3e046d7",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "1ada7a0617": {
       "elapsed_seconds": 11,
@@ -41,7 +41,7 @@
       "job_id": "834102",
       "job_name": "e4-full-1ada7a0617",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "21d970d8de": {
       "elapsed_seconds": 11,
@@ -50,7 +50,7 @@
       "job_id": "834103",
       "job_name": "e4-full-21d970d8de",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "25f3b7a318": {
       "elapsed_seconds": 1959,
@@ -59,7 +59,7 @@
       "job_id": "834104",
       "job_name": "e4-full-25f3b7a318",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "27dd4da69e": {
       "elapsed_seconds": 518,
@@ -68,7 +68,7 @@
       "job_id": "834310",
       "job_name": "e4-full-27dd4da69e",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "286b55a2bf": {
       "elapsed_seconds": 1320,
@@ -77,7 +77,7 @@
       "job_id": "834311",
       "job_name": "e4-full-286b55a2bf",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "31a2c91c43": {
       "elapsed_seconds": 1310,
@@ -86,7 +86,7 @@
       "job_id": "834312",
       "job_name": "e4-full-31a2c91c43",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "3864514494": {
       "elapsed_seconds": 1312,
@@ -95,7 +95,7 @@
       "job_id": "834313",
       "job_name": "e4-full-3864514494",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "38d58a7a31": {
       "elapsed_seconds": 11,
@@ -104,7 +104,7 @@
       "job_id": "834109",
       "job_name": "e4-full-38d58a7a31",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "3db0a1c8f3": {
       "elapsed_seconds": 669,
@@ -113,7 +113,7 @@
       "job_id": "834314",
       "job_name": "e4-full-3db0a1c8f3",
       "state": "FAILED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "3e8bba0176": {
       "elapsed_seconds": 1416,
@@ -122,7 +122,7 @@
       "job_id": "834315",
       "job_name": "e4-full-3e8bba0176",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "3f15a9266d": {
       "elapsed_seconds": 1473,
@@ -131,7 +131,7 @@
       "job_id": "834316",
       "job_name": "e4-full-3f15a9266d",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "40aec5fffa": {
       "elapsed_seconds": 1326,
@@ -140,7 +140,7 @@
       "job_id": "834317",
       "job_name": "e4-full-40aec5fffa",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "45b0dac5e3": {
       "elapsed_seconds": 620,
@@ -149,7 +149,7 @@
       "job_id": "834318",
       "job_name": "e4-full-45b0dac5e3",
       "state": "FAILED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "5748ce6f01": {
       "elapsed_seconds": 11,
@@ -158,7 +158,7 @@
       "job_id": "834115",
       "job_name": "e4-full-5748ce6f01",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "578511c8a9": {
       "elapsed_seconds": 599,
@@ -167,7 +167,7 @@
       "job_id": "834569",
       "job_name": "e4-full-578511c8a9",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "5942004064": {
       "elapsed_seconds": 656,
@@ -176,7 +176,7 @@
       "job_id": "834320",
       "job_name": "e4-full-5942004064",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "5eb31827b7": {
       "elapsed_seconds": 633,
@@ -185,7 +185,7 @@
       "job_id": "834321",
       "job_name": "e4-full-5eb31827b7",
       "state": "FAILED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "5ee7c22ba0": {
       "elapsed_seconds": 1316,
@@ -194,7 +194,7 @@
       "job_id": "834322",
       "job_name": "e4-full-5ee7c22ba0",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "5f99900f09": {
       "elapsed_seconds": 1330,
@@ -203,7 +203,7 @@
       "job_id": "834323",
       "job_name": "e4-full-5f99900f09",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "6115eddb86": {
       "elapsed_seconds": 638,
@@ -212,7 +212,7 @@
       "job_id": "834324",
       "job_name": "e4-full-6115eddb86",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "7831862f02": {
       "elapsed_seconds": 633,
@@ -221,7 +221,7 @@
       "job_id": "834325",
       "job_name": "e4-full-7831862f02",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "7b6477cb95": {
       "elapsed_seconds": 680,
@@ -230,7 +230,7 @@
       "job_id": "834326",
       "job_name": "e4-full-7b6477cb95",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "7bc286c1b6": {
       "elapsed_seconds": 1284,
@@ -239,7 +239,7 @@
       "job_id": "834327",
       "job_name": "e4-full-7bc286c1b6",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "825d228aec": {
       "elapsed_seconds": 1364,
@@ -248,7 +248,7 @@
       "job_id": "834328",
       "job_name": "e4-full-825d228aec",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "9071e139d9": {
       "elapsed_seconds": 1531,
@@ -257,7 +257,7 @@
       "job_id": "834594",
       "job_name": "e4-full-9071e139d9",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "99fa5c25e1": {
       "elapsed_seconds": 1791,
@@ -266,7 +266,7 @@
       "job_id": "834330",
       "job_name": "e4-full-99fa5c25e1",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "a24f64f7fb": {
       "elapsed_seconds": 649,
@@ -275,7 +275,7 @@
       "job_id": "834331",
       "job_name": "e4-full-a24f64f7fb",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "a8bf42d646": {
       "elapsed_seconds": 11,
@@ -284,7 +284,7 @@
       "job_id": "834129",
       "job_name": "e4-full-a8bf42d646",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "a980334473": {
       "elapsed_seconds": 758,
@@ -293,7 +293,7 @@
       "job_id": "834332",
       "job_name": "e4-full-a980334473",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "ac48a9b736": {
       "elapsed_seconds": 11,
@@ -302,7 +302,7 @@
       "job_id": "834131",
       "job_name": "e4-full-ac48a9b736",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "acd95847c5": {
       "elapsed_seconds": 1381,
@@ -311,7 +311,7 @@
       "job_id": "834333",
       "job_name": "e4-full-acd95847c5",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "b0a08200c9": {
       "elapsed_seconds": 708,
@@ -320,7 +320,7 @@
       "job_id": "834334",
       "job_name": "e4-full-b0a08200c9",
       "state": "FAILED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "bcd2436daf": {
       "elapsed_seconds": 1469,
@@ -329,7 +329,7 @@
       "job_id": "834335",
       "job_name": "e4-full-bcd2436daf",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "bde1e479ad": {
       "elapsed_seconds": 11,
@@ -338,7 +338,7 @@
       "job_id": "834135",
       "job_name": "e4-full-bde1e479ad",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "c49a8c6cff": {
       "elapsed_seconds": 1320,
@@ -347,7 +347,7 @@
       "job_id": "834336",
       "job_name": "e4-full-c49a8c6cff",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "c4c04e6d6c": {
       "elapsed_seconds": 11,
@@ -356,7 +356,7 @@
       "job_id": "834137",
       "job_name": "e4-full-c4c04e6d6c",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "c50d2d1d42": {
       "elapsed_seconds": 817,
@@ -365,7 +365,7 @@
       "job_id": "834337",
       "job_name": "e4-full-c50d2d1d42",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "c5439f4607": {
       "elapsed_seconds": 1090,
@@ -374,7 +374,7 @@
       "job_id": "834653",
       "job_name": "e4-full-c5439f4607",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "cc5237fd77": {
       "elapsed_seconds": 1509,
@@ -383,7 +383,7 @@
       "job_id": "834339",
       "job_name": "e4-full-cc5237fd77",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "d755b3d9d8": {
       "elapsed_seconds": 1529,
@@ -392,7 +392,7 @@
       "job_id": "834340",
       "job_name": "e4-full-d755b3d9d8",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "e398684d27": {
       "elapsed_seconds": 591,
@@ -401,7 +401,7 @@
       "job_id": "834341",
       "job_name": "e4-full-e398684d27",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "e7af285f7d": {
       "elapsed_seconds": 1456,
@@ -410,7 +410,7 @@
       "job_id": "834342",
       "job_name": "e4-full-e7af285f7d",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "f2dc06b1d2": {
       "elapsed_seconds": 766,
@@ -419,7 +419,7 @@
       "job_id": "834343",
       "job_name": "e4-full-f2dc06b1d2",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "f3685d06a9": {
       "elapsed_seconds": 656,
@@ -428,7 +428,7 @@
       "job_id": "834344",
       "job_name": "e4-full-f3685d06a9",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "f3d64c30f8": {
       "elapsed_seconds": 1416,
@@ -437,7 +437,7 @@
       "job_id": "834345",
       "job_name": "e4-full-f3d64c30f8",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "f9f95681fd": {
       "elapsed_seconds": 1218,
@@ -446,7 +446,7 @@
       "job_id": "834346",
       "job_name": "e4-full-f9f95681fd",
       "state": "COMPLETED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     },
     "fb5a96b1a2": {
       "elapsed_seconds": 708,
@@ -455,7 +455,7 @@
       "job_id": "834347",
       "job_name": "e4-full-fb5a96b1a2",
       "state": "FAILED",
-      "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+      "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
     }
   },
   "paper_ready": false,
@@ -486,18 +486,18 @@
         "job_name": "e4-full-578511c8a9",
         "logs": {
           "err": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/578511c8a9-834319.err",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/578511c8a9-834319.err",
             "sha256": "c1dd9044bfdcd2e2bea9792336c86ff84343fb90dace3364bc0a9f3aad8ce0f1",
             "size_bytes": 2685
           },
           "out": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/578511c8a9-834319.out",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/578511c8a9-834319.out",
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "size_bytes": 0
           }
         },
         "state": "OUT_OF_MEMORY",
-        "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+        "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
       }
     ],
     "5942004064": [],
@@ -518,18 +518,18 @@
         "job_name": "e4-full-9071e139d9",
         "logs": {
           "err": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/9071e139d9-834329.err",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/9071e139d9-834329.err",
             "sha256": "ff15540effce96ef221f7b5cec8591ed48c30b8513461a143662c7c99a4e5e0b",
             "size_bytes": 2685
           },
           "out": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/9071e139d9-834329.out",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/9071e139d9-834329.out",
             "sha256": "6d92318833b76362fabd5b66c38ea181300c7ba0f8ab7cdba41c701c3d447ffb",
             "size_bytes": 24574
           }
         },
         "state": "OUT_OF_MEMORY",
-        "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+        "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
       }
     ],
     "99fa5c25e1": [],
@@ -553,18 +553,18 @@
         "job_name": "e4-full-c5439f4607",
         "logs": {
           "err": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/c5439f4607-834338.err",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/c5439f4607-834338.err",
             "sha256": "07ad330cb259453fefb97559c1204e0028222fab125ece893571c72513ec6c76",
             "size_bytes": 2685
           },
           "out": {
-            "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/logs/c5439f4607-834338.out",
+            "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/logs/c5439f4607-834338.out",
             "sha256": "e9fadfd40c84b9e0901607b14f9026cdafc369aeee0fef9ace296a1f515ab056",
             "size_bytes": 6156
           }
         },
         "state": "OUT_OF_MEMORY",
-        "work_directory": "/group/worldcept/code/SimAny-wt/e4-full-execution"
+        "work_directory": "${SIMANY_ROOT}/worktrees/e4-full-execution"
       }
     ],
     "cc5237fd77": [],
@@ -581,30 +581,30 @@
   "scope": "full_discovery_terminal_audit_config",
   "source": {
     "code_commit": "553db0575241a6858921b6d648d24c29392161fd",
-    "code_root": "/group/worldcept/code/SimAny-wt/e4-full-execution",
+    "code_root": "${SIMANY_ROOT}/worktrees/e4-full-execution",
     "config": {
-      "path": "/group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json",
+      "path": "${SIMANY_ROOT}/worktrees/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json",
       "sha256": "e252c76307ad1d342922d4746cd1641507b61fa61f982bd925470d377627c58b",
       "size_bytes": 107686
     },
     "e0": {
-      "path": "/group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/contract/freeze_manifest.json",
+      "path": "${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/contract/freeze_manifest.json",
       "sha256": "3b2cbe18c683bab48b8e01e563f6b002f4d4b583ece0888a4f00e2d71dda7414",
       "size_bytes": 11192
     },
     "environment": {
-      "path": "/group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/environment.sh",
+      "path": "${SIMANY_ROOT}/worktrees/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/environment.sh",
       "sha256": "bc6a86684873f5eeecba92157f39aea2b16afe381f9d6a1ab73d71d84c5834a2",
       "size_bytes": 608
     },
     "freeze_id": "20260906-0e7579a-v1",
     "osmesa_environment": {
-      "path": "/group/worldcept/code/SimAny/outputs/test-headless-setup/env.sh",
+      "path": "${SIMANY_ROOT}/outputs/test-headless-setup/env.sh",
       "sha256": "f136844350f612b5697ccc88c3a06bf89121f7650e814a75282f8dcf61e9f9b2",
       "size_bytes": 203
     },
     "runtime": {
-      "path": "/group/worldcept/code/SimAny/.venv/bin/python3.11",
+      "path": "${SIMANY_ROOT}/.venv/bin/python3.11",
       "sha256": "88c575ae4c1310e329eaf6f17bce52709270d365bffd64e27883900912835f15",
       "size_bytes": 25548416
     }

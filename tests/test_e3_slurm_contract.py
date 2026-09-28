@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import subprocess
+import os
 from pathlib import Path
 
 import pytest
@@ -15,10 +16,9 @@ LAUNCHER = ROOT / "run/slurm/icra2027_e3_agentic.sbatch"
 SUBMITTER = ROOT / "run/icra2027/submit_e3_noarray.sh"
 MONITOR = ROOT / "run/icra2027/monitor_e3_noarray.sh"
 ROSTER = ROOT / "configs/experiments/icra2027/construction_regimes.yaml"
-PLAN = ROOT / "plan/icra2027/03_agentic_ablation/README.md"
 JOBS = ROOT / "configs/experiments/icra2027/agentic_jobs.yaml"
 POLICIES = ROOT / "configs/experiments/icra2027/agentic_policies.yaml"
-MVPY = Path("/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python")
+MVPY = Path(os.environ.get("SIMANY_GSPLAT_PY", "/nonexistent/mini-viewer/bin/python"))
 
 
 @pytest.fixture(scope="module")
@@ -87,7 +87,7 @@ def test_launcher_exposes_gt_isolated_phases(launcher_text: str) -> None:
 def test_launcher_keeps_gpu_and_cpu_environments_separate(
     launcher_text: str,
 ) -> None:
-    assert "MVPY=/group/worldcept/code/affordancept/.envs/mini-viewer/bin/python" in launcher_text
+    assert "MVPY=${SIMANY_GSPLAT_PY:-${SIMANY_ROOT:-$PWD}/.envs/mini-viewer/bin/python}" in launcher_text
     assert "EXEC_PYTHON=\"$MVPY\"" in launcher_text
     assert "EXEC_PYTHON=\"$PYTHON\"" in launcher_text
     assert "gcp-eu1-a100-80g-qrfh" in launcher_text
@@ -221,7 +221,7 @@ def test_launcher_fail_closes_on_empty_sealed_pilot_shard(
 def test_launcher_runtime_and_cache_paths_stay_in_repository(
     launcher_text: str,
 ) -> None:
-    assert "ROOT=/group/worldcept/PhiRIE/code/SimAny" in launcher_text
+    assert "ROOT=${SIMANY_ROOT:-$PWD}" in launcher_text
     assert 'RUNTIME="$ROOT/outputs/icra2027/' in launcher_text
     assert 'export TMPDIR="$RUNTIME/tmp"' in launcher_text
     assert 'export XDG_CACHE_HOME="$RUNTIME/xdg"' in launcher_text
@@ -360,21 +360,6 @@ def test_rgb_ed_pilot_is_a_frozen_one_object_scene() -> None:
         str(row["scene_id"]): row for row in jobs["population"]["scene_snapshots"]
     }
     assert snapshots["5748ce6f01"]["accepted_jobs"] == 1
-
-
-def test_plan_documents_noarray_pilot_dag() -> None:
-    text = PLAN.read_text(encoding="utf-8")
-    assert "154 ordinary jobs" in text
-    assert "5748ce6f01" in text
-    assert "other 49 GPU `observe` jobs" in text
-    assert "pilot `evaluate` succeeds" in text
-    assert "four-hour time limit" in text
-    assert "no real proposal" in text
-    assert "E3_REQUIRE_NONEMPTY_PROPOSALS=1" in text
-    assert "51 GPU jobs and 103 CPU jobs" in text
-    assert "E3_GPU_PROFILE=hala-a6000" in text
-    assert "NVIDIA RTX A6000" in text
-    assert "compute capability 8.6" in text
 
 
 @pytest.mark.parametrize(

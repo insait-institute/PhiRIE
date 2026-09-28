@@ -14,19 +14,19 @@ Policy canonical digest:
 copies of the executed pilot configs. The original three GT files' content
 hashes appear in `matching.yaml`; no GT geometry metric or matching has run.
 The config's absolute population-roster anchor lives in the retained
-`/group/worldcept/code/SimAny-wt/e3-evaluation-matching` worktree and must remain
+`${SIMANY_ROOT}/worktrees/e3-evaluation-matching` worktree and must remain
 available and byte-identical. Do not retarget it after freezing.
 
 Only after this source/config commit is merged, pushed and checked out cleanly,
 run the central preflight and create E0 from that exact source. No GPU required.
 
 ```bash
-export SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny
-export SIMANY_PY=/group/worldcept/code/SimAny/.venv/bin/python
+export SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT}
+export SIMANY_PY=${SIMANY_ROOT}/.venv/bin/python
 bash run/icra2027/preflight.sh --smoke
 "$SIMANY_PY" -m robo.eval.freeze \
   --config configs/experiments/icra2027/e3_matching_pilot_38d/freeze.yaml \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/contract
+  --out ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/contract
 ```
 
 Then execute only the declared matching pilot, recording its manifest SHA256:
@@ -34,8 +34,8 @@ Then execute only the declared matching pilot, recording its manifest SHA256:
 ```bash
 "$SIMANY_PY" -m agents.eval.eval_vs_gt \
   --matching-config configs/experiments/icra2027/e3_matching_pilot_38d/matching.yaml \
-  --contract-manifest /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/contract/freeze_manifest.json \
-  --out /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/evaluation_matching
+  --contract-manifest ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/contract/freeze_manifest.json \
+  --out ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/evaluation_matching
 ```
 
 Use the evaluator and aggregation commands in
@@ -46,7 +46,7 @@ Use the evaluator and aggregation commands in
 - `SCENE=38d58a7a31`
 - `JOBS=configs/experiments/icra2027/e3_matching_pilot_38d/construction_jobs.yaml`
 - `POLICIES=configs/experiments/icra2027/e3_matching_pilot_38d/construction_policies.yaml`
-- `EVAL_CONTRACT=/group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/contract/freeze_manifest.json`
+- `EVAL_CONTRACT=${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/contract/freeze_manifest.json`
 
 The full 50-scene evaluation still requires a separate frozen config and its own
 pilot gate. Preserve unmatched jobs and negative geometry/stability results.

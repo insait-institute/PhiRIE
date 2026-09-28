@@ -11,25 +11,25 @@ pilot_rule: first_lexicographic_scene_before_background_outcomes
 missing_background_policy: retain_all_eight_missing_views_no_raw_fallback
 quality_support: all_common_available_views_after_complete_coverage_accounting
 construction_gate:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-859f51d-v1/dispatch/full50_control_integrity_gate.json
   sha256: 2a5c0285bf734d20dc803c21d2bd10920ebe118e0404fd1efde0730f64d21252
   size_bytes: 22799
 resolved_jobs:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-859f51d-v1/agentic/input_inventory/resolved_jobs.json
   bytes: 1576788
   mtime_ns: 1788645093958878185
   sha256: 266b37a3319b63b3fe69133ad2c7e93c0cda2497a0ef83d38b0b9ca3ac1006cb
 camera_bank:
-  path: /group/worldcept/code/SimAny-wt/e2-camera-bank/outputs/icra2027/audits/e2-camera-bank-20260905/camera_bank.json
+  path: ${SIMANY_ROOT}/worktrees/e2-camera-bank/outputs/icra2027/audits/e2-camera-bank-20260905/camera_bank.json
   bytes: 33656
   mtime_ns: 1788621785867730314
   sha256: d3c9d7b2d77e2535de3ef5c9770a1362eb2818032f0b28cd09768792b3e532c4
 factory_execution:
-  path: /group/worldcept/code/SimAny-wt/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json
+  path: ${SIMANY_ROOT}/worktrees/e4-full-execution/configs/experiments/icra2027/e4_full_qualification/execution.json
   bytes: 107686
   mtime_ns: 1788667911327430190
   sha256: e252c76307ad1d342922d4746cd1641507b61fa61f982bd925470d377627c58b
-factory_freeze_root: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1
+factory_freeze_root: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1
 scene_ids:
 - 09c1414f1b
 - 0d2ee665be

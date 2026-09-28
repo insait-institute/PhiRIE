@@ -19,19 +19,19 @@ protocol:
   duplicate_rule: retain_and_diagnose
   unmatched_rule: null_geometry_keep_planned_job
 population_roster:
-  path: /group/worldcept/code/SimAny-wt/e3-evaluation-matching/configs/experiments/icra2027/construction_regimes.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-evaluation-matching/configs/experiments/icra2027/construction_regimes.yaml
   size_bytes: 2046
   sha256: 3bf4da5aa0e6fbb3d044a9e9050174332438e82dcd96a30de86c2d497085517e
 scenes:
 - scene_id: 38d58a7a31
   planned_jobs: 15
-  construction_root: /group/worldcept/code/SimAny/outputs/icra2027/20260905-33bd974-v1/agentic
+  construction_root: ${SIMANY_ROOT}/outputs/icra2027/20260905-33bd974-v1/agentic
   control_seal:
-    path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-33bd974-v1/agentic/control/38d58a7a31/seal.json
+    path: ${SIMANY_ROOT}/outputs/icra2027/20260905-33bd974-v1/agentic/control/38d58a7a31/seal.json
     size_bytes: 11836
     sha256: b888f50305886bc8cf5c3713991cb97c1b1bc17e00d937830083d45cd9ed13ef
   discovery:
-    source_pilot: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31
+    source_pilot: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/auto_discovery_pilot/38d58a7a31
     source_summary_sha256: 6784e11f7529cb63f684daaa77b4549fa935a70d36db4ebe89c2edc88d406a2f
     source_output_hashes_sha256: 0822381957025b1fdfae1be1c365b073fa881ca7ce8bd167a3bc7315bd31792a
     source_gaussian_training_provenance: FRESH_OFFICIAL_TRAIN_ONLY
@@ -42,13 +42,13 @@ scenes:
       pilot_summary.json: 6784e11f7529cb63f684daaa77b4549fa935a70d36db4ebe89c2edc88d406a2f
       postrun_audit.json: f79106b4f3da7172d7f598074036ab11521fec3cc18d0656b6688826ee0b6906
     source_discovery_config:
-      path: /group/worldcept/code/SimAny-wt/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
+      path: ${SIMANY_ROOT}/worktrees/e3-discovery-hala/configs/experiments/icra2027/e3_discovery_hala.yaml
       bytes: 9678
       mtime_ns: 1788599841893682554
       sha256: e470304281f03c0051af95ddb61975142be6b4fdb4ed9522aae69caa7f7b9081
     source_discovery_commit: 86613e37d7bdfcef5ad10eb5cf289051055cdec3
     source_discovery_contract:
-      path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
+      path: ${SIMANY_ROOT}/outputs/icra2027/20260905-76c15d5-v1/contract/freeze_manifest.json
       bytes: 10053
       mtime_ns: 1788599945922128577
       sha256: e7d5111806d7ca1521b1db878c1ddb002c8d3edb3505f375a147d6a512d9ebd5

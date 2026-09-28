@@ -4,12 +4,12 @@ set -euo pipefail
 umask 077
 
 export PATH=/usr/local/bin:/usr/bin:/bin
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 SWEEP_SCRIPT="$CODE_ROOT/run/icra2027/e4_robust_floor_support_extension.py"
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 SETFACL=/usr/bin/setfacl
 GETFACL=/usr/bin/getfacl
 

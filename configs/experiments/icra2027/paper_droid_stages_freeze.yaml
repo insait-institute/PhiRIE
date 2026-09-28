@@ -4,7 +4,7 @@ freeze_id: 20260906-0a444b8-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: paper_droid_stages_draft
@@ -12,71 +12,71 @@ input_roots:
   kind: experiment_config
   required: true
 - id: construction_source
-  path: /group/worldcept/code/SimAny/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/icra2027-contract-v1-e1-c22afef-v1/construction/table/construction_table.json
   kind: metadata
   required: true
 - id: fidelity_source
-  path: /group/worldcept/code/SimAny-wt/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
+  path: ${SIMANY_ROOT}/worktrees/e2-camera-bank/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate/table/fidelity_table.json
   kind: metadata
   required: true
 - id: fidelity_completion_receipt
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-3ff95f4-v2/raw_room/aggregate_receipt.json
   kind: metadata
   required: true
 - id: agentic_source
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/agentic/agentic_ablation.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/agentic/agentic_ablation.json
   kind: metadata
   required: true
 - id: agentic_completion_audit
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-1577027-v1/independent_evaluation_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-1577027-v1/independent_evaluation_completion_audit.json
   kind: metadata
   required: true
 - id: trellis2_geometry_source
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-a8ab431-v1/trellis2_geometry/geometry.json
   kind: metadata
   required: true
 - id: trellis2_geometry_completion_audit
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-a8ab431-v1/independent_geometry_completion_audit.json
   kind: metadata
   required: true
 - id: e4_planning_source
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/planned_coverage/handoff.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-e890df8-v1/planned_coverage/handoff.json
   kind: metadata
   required: true
 - id: e4_planning_completion_audit
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/independent_qa.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-e890df8-v1/independent_qa.json
   kind: metadata
   required: true
 - id: e4_planning_publication_receipt
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260905-e890df8-v1/publication_receipt.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260905-e890df8-v1/publication_receipt.json
   kind: metadata
   required: true
 - id: droid_cpu_workspaces
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/workspaces.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/workspaces.json
   kind: metadata
   required: true
 - id: droid_cpu_completion
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/full_cpu_completion_audit.json
   kind: metadata
   required: true
 - id: droid_cpu_canonical_summary
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/real_world_table.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/full_cpu_summary/real_world_table.json
   kind: metadata
   required: true
 - id: droid_cpu_outlier_diagnostic
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f881b55-v1/alignment_outlier_diagnostic.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f881b55-v1/alignment_outlier_diagnostic.json
   kind: metadata
   required: true
 - id: droid_gaussian_completion
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-dba8e6b-v1/full_gaussian_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-dba8e6b-v1/full_gaussian_completion_audit.json
   kind: metadata
   required: true
 - id: droid_tail_completion
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f68957d-v1/full_public_tail_completion_audit.json
   kind: metadata
   required: true
 - id: droid_tail_failure_classification
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-f68957d-v1/rpl_empty_tsdf_classification.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-f68957d-v1/rpl_empty_tsdf_classification.json
   kind: metadata
   required: true
 checkpoint_roots: []

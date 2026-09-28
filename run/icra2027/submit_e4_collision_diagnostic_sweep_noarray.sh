@@ -3,13 +3,13 @@
 # 16 common builds, 32 policy evaluations, 16 afterany comparisons, 1 aggregate.
 set -euo pipefail
 
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 LAUNCHER="$CODE_ROOT/run/slurm/icra2027_e4_collision_diagnostic_cpu.sbatch"
 SWEEP_SCRIPT="$CODE_ROOT/run/icra2027/e4_collision_diagnostic_sweep.py"
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 CPU_NODELIST='sof1-h200-[0-7]'
 SETFACL=/usr/bin/setfacl
 GETFACL=/usr/bin/getfacl

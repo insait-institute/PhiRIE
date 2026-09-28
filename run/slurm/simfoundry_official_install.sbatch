@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --time=08:00:00
 #SBATCH --job-name=simfoundry_install
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/simfoundry_official/install_%j.log
+#SBATCH --output=outputs/simfoundry_official/install_%j.log
 
 # Stage 2 of the official-SimFoundry integration attempt (docs/BASELINES.md
 # "CORRECTED 2026-08-31", docs/ICRA_RESEARCH_CONTRACT.md correction #14).
@@ -82,11 +82,11 @@ echo "=== $(date -u) preflight ==="
 command -v mamba && mamba --version
 nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
 which nvcc && nvcc --version | tail -1
-df -h /group/worldcept | tail -1
+df -h "${PHIRIE_WORKSPACE:-$HOME}" | tail -1
 echo "PIP_CONFIG_FILE=${PIP_CONFIG_FILE} (site pip.conf bypassed -- dead NGC extra index)"
 getent hosts pypi.ngc.nvidia.com >/dev/null 2>&1 && echo "NOTE: pypi.ngc.nvidia.com resolves again -- site pip.conf may be usable now" || echo "confirmed: pypi.ngc.nvidia.com still dead (expected)"
 
-cd /group/worldcept/PhiRIE/code/SimAny/third_party/SimFoundry
+cd ${SIMANY_ROOT:-$PWD}/third_party/SimFoundry
 
 MAX_ATTEMPTS=4
 RETRY_SLEEP_S=180

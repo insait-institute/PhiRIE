@@ -4,12 +4,12 @@
 set -euo pipefail
 
 export PATH=/usr/local/bin:/usr/bin:/bin
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 SCANNETPP_ROOT=/data/ScanNetpp
 SPLATS_ROOT=/data/ScanNetppv2_gsplat/splats
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 EXPECTED_E3_ROOT=outputs/icra2027/icra2027-contract-v1-e3-48fa807844ef-prelim-full-hala-r2/agentic
 
 : "${E4_FREEZE_ID:?E4_FREEZE_ID is required}"
@@ -238,14 +238,14 @@ from pathlib import Path
 import robo.eval.e3_factory_materializer as materializer
 import robo.eval.e4_region_pilot as pilot
 
-expected = Path("/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot")
+expected = Path("${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot")
 for module in (materializer, pilot):
     observed = Path(module.__file__).resolve(strict=True)
     if expected not in observed.parents:
         raise SystemExit(f"wrong E4 import origin: {module.__name__} -> {observed}")
 if materializer.CODE_ROOT != expected or pilot.CODE_ROOT != expected:
     raise SystemExit("E4 module CODE_ROOT differs from isolated worktree")
-if materializer.REPOSITORY_ROOT != Path("/group/worldcept/PhiRIE/code/SimAny"):
+if materializer.REPOSITORY_ROOT != Path("${SIMANY_ROOT:-$PWD}"):
     raise SystemExit("materializer evidence root differs")
 PY
 

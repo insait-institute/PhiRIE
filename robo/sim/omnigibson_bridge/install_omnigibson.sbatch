@@ -7,7 +7,7 @@
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=8
 #SBATCH --export=NONE
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/logs/og_install_%j.log
+#SBATCH --output=outputs/logs/og_install_%j.log
 
 # --export=NONE + this hard reset is load-bearing: the interactive session
 # that submits this job carries a stray venv (.venv-pointworld-data)
@@ -19,13 +19,12 @@
 # submitting shell had polluted.
 unset PYTHONPATH PYTHONHOME
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
-export HOME=/home/runyi_yang
 
 set -ex
-REPO=/group/worldcept/PhiRIE/code/SimAny/third_party/BEHAVIOR-1K
+REPO=${SIMANY_ROOT:-$PWD}/third_party/BEHAVIOR-1K
 cd "$REPO"
 
-CONDA_BASE=/group/streetsplat/miniconda3
+CONDA_BASE=${CONDA_ROOT:-$HOME/miniconda3}
 source "$CONDA_BASE/etc/profile.d/conda.sh"
 conda activate behavior1k
 echo "[install] active env: $CONDA_PREFIX"
@@ -48,7 +47,7 @@ python -c "import sys; print('python', sys.version)"
 
 echo "=== SMOKE TEST ==="
 set +e
-OMNIGIBSON_HEADLESS=1 python /group/worldcept/PhiRIE/code/SimAny/robo/sim/omnigibson_bridge/smoke_test.py
+OMNIGIBSON_HEADLESS=1 python ${SIMANY_ROOT:-$PWD}/robo/sim/omnigibson_bridge/smoke_test.py
 SMOKE_RC=$?
 set -e
 echo "=== SMOKE TEST EXIT CODE: $SMOKE_RC ==="

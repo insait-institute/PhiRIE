@@ -4,7 +4,7 @@ freeze_id: 20260906-313ec4a-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: frozen_fields
@@ -24,15 +24,15 @@ input_roots:
   kind: experiment_config
   required: true
 - id: original_publication
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_publication/receipt.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_publication/receipt.json
   kind: metadata
   required: true
 - id: original_table_provenance
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/paper_table_provenance.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/paper_table_provenance.json
   kind: metadata
   required: true
 - id: original_claim_ledger
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/claim_ledger.csv
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-6dcb0e7-v2/paper_tables/claim_ledger.csv
   kind: metadata
   required: true
 checkpoint_roots: []

@@ -7,7 +7,7 @@ path never loads GT aliases, TEST images, alternative checkpoints, or a fallback
 segmenter. It produces masks, not an erased image or cleaned Gaussian background.
 
 ```bash
-SIMANY_EVIDENCE_ROOT=/group/worldcept/code/SimAny PYTHONDONTWRITEBYTECODE=1 \
+SIMANY_EVIDENCE_ROOT=${SIMANY_ROOT} PYTHONDONTWRITEBYTECODE=1 \
 PINNED_SAM3_PYTHON -m agents.edit.inpaint_masks \
   --public-context configs/experiments/icra2027/NEW/masks_SCENE.yaml \
   --contract-manifest outputs/icra2027/NEW/contract/freeze_manifest.json

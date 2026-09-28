@@ -1,13 +1,13 @@
 # DROID reconstruction track (plan Task 16 / contract track `droid_replay`) —
 # frozen, stratified episode list.
 #
-# Frozen: 2026-08-16. Source pool: /group/worldcept/PhiRIE/data/droid/raw (raw DROID
+# Frozen: 2026-08-16. Source pool: ${SIMANY_ROOT}/data/droid/raw (raw DROID
 # release, fetched by run/fetch_droid_raw.py from the episodes referenced in
 # the local droid_100 RLDS shards). Re-generate the pool summary with:
 #   .venv/bin/python -c "
 #   import json,glob
 #   from pathlib import Path
-#   for mp in sorted(Path('/group/worldcept/PhiRIE/data/droid/raw').glob('*/*/*/*/metadata_*.json')):
+#   for mp in sorted(Path('${SIMANY_ROOT}/data/droid/raw').glob('*/*/*/*/metadata_*.json')):
 #       print(json.loads(mp.read_text())['uuid'])"
 #
 # WHY freeze this list at all (rather than pick episodes ad hoc per run):

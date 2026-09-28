@@ -4,18 +4,18 @@
 set -euo pipefail
 
 export PATH=/usr/local/bin:/usr/bin:/bin
-CODE_ROOT=/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot
-EVIDENCE_ROOT=/group/worldcept/PhiRIE/code/SimAny
-PYTHON=/group/worldcept/PhiRIE/code/SimAny/.venv/bin/python
+CODE_ROOT=${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot
+EVIDENCE_ROOT=${SIMANY_ROOT:-$PWD}
+PYTHON=${SIMANY_ROOT:-$PWD}/.venv/bin/python
 MENAGERIE_ROOT="$CODE_ROOT/third_party/mujoco_menagerie"
-OPENPI_ROOT=/group/worldcept/PhiRIE/code/openpi-wt/e4-policy-server
+OPENPI_ROOT=${OPENPI_ROOT:?set OPENPI_ROOT to the openpi checkout}/worktrees/e4-policy-server
 OPENPI_CLIENT_SRC="$OPENPI_ROOT/packages/openpi-client/src"
 OPENPI_COMMIT=2f51088169d2e2b480ce54faa737be9b0279eed4
 CPU_FREEZE_ID=icra2027-contract-v1-e4-0dda134578b2-region-cpu-prep1-20260904T135257Z
 CPU_PRODUCER_COMMIT=0dda134578b25cd12d1791193bb437c6d310776f
 CPU_GATE_SHA256=b4bb242ace4ce641051e58df003d126a1383ae0ddd003e3fe4dce3e0493ef355
 MENAGERIE_SOURCE_COMMIT=71f066ad0be9cd271f7ed58c030243ef157af9f4
-ACCOUNT=runyi_yang
+ACCOUNT=${SLURM_ACCOUNT:-phirie}
 GPU_NODE=gcp-eu1-a100-80g-qrfh
 EXPECTED_TIME=01:00:00
 EXPECTED_MEM_MB=32768
@@ -253,11 +253,11 @@ cd "$CODE_ROOT"
 from pathlib import Path
 import robo.eval.e4_camera_scorer_gate as gate
 
-expected = Path("/group/worldcept/PhiRIE/code/SimAny-wt/e4-paired-pilot")
+expected = Path("${SIMANY_ROOT:-$PWD}/worktrees/e4-paired-pilot")
 observed = Path(gate.__file__).resolve(strict=True)
 if expected not in observed.parents or gate.CODE_ROOT != expected:
     raise SystemExit(f"wrong camera gate import origin: {observed}")
-if gate.EXPECTED_EVIDENCE_ROOT != Path("/group/worldcept/PhiRIE/code/SimAny"):
+if gate.EXPECTED_EVIDENCE_ROOT != Path("${SIMANY_ROOT:-$PWD}"):
     raise SystemExit("camera gate evidence root differs")
 PY
 

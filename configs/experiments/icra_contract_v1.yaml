@@ -69,7 +69,7 @@ protocols:
                           # SAM3+TRELLIS+CoACD+gsplat) job hit TWO node-locality cache bugs in a
                           # row on H200/GCP nodes (SAM3 ckpt, then TRELLIS+dinov2 -- both cached
                           # under hala-local ~/.cache, invisible elsewhere); both fixed 2026-08-16
-                          # by copying to /group/worldcept/hf_cache + /group/worldcept/torch_hub_cache
+                          # by copying to ${HF_HOME} + ${TORCH_HOME}
                           # and exporting HF_HOME/TORCH_HOME in oracle_matrix.sbatch; verified via a
                           # standalone srun before resubmitting as job 708586. NOTE: the previously-
                           # cited "7/7 BDDL" number for behavior_task-0020 was found to be a general

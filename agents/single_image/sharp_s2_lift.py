@@ -28,6 +28,8 @@ original-photo path below. Idempotent/rerunnable; skips rewriting rgba.png
 if it already exists so s4_trellis.py's mtime-based cache stays valid
 across reruns of this stage alone.
 """
+import os
+
 import cv2
 import numpy as np
 from PIL import Image
@@ -35,7 +37,8 @@ from PIL import Image
 from agents.core import common as C
 from agents.single_image.sharp_ply_meta import R_ZUP
 
-ORIG_JPG = "/group/worldcept/PhiRIE/code/sharp/inputs/DSC08561/DSC08561.JPG"
+ORIG_JPG = os.path.join(os.environ.get("SHARP_ROOT", "third_party/sharp"),
+                        "inputs/DSC08561/DSC08561.JPG")
 
 MIN_PTS = 200
 MAX_EXTENT = 0.9   # metres; larger detections (monitors, desks) are skipped

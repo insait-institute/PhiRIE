@@ -26,26 +26,29 @@ released scene_mesh points, overlap test in the world frame):
     keep --episodes 1 if ghosting of the task object hurts the splat).
 
 Env: none of the three SimAny envs ships h5py; run with any python that has
-h5py + numpy + cv2 (verified: /group/worldcept/artifixer/.venv/bin/python),
+h5py + numpy + cv2 (verified: ${SIMANY_H5_PY}),
 from the repo root so `agents` resolves:
 
-  /group/worldcept/artifixer/.venv/bin/python -m agents.recon.behavior_extract \
+  ${SIMANY_H5_PY} -m agents.recon.behavior_extract \
       --task task-0000 --episodes 3 --static-only \
       --scene-name behavior_task0000 \
-      --root /group/worldcept/PhiRIE/code/SimAny/data/recon_scenes
+      --root ${SIMANY_ROOT}/data/recon_scenes
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
 
 from agents.core.common import quat_to_rot_wxyz, save_json
 
-FLOWS_ROOT = Path("/group/worldcept/data/pointworld_behavior_restored/"
-                  "behavior/flows")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+FLOWS_ROOT = Path(os.environ.get(
+    "SIMANY_BEHAVIOR_FLOWS_ROOT",
+    REPO_ROOT / "data/pointworld_behavior_restored/behavior/flows"))
 
 # camera_head has fx=90.67 while left/right share fx=136; the scene contract
 # carries ONE PINHOLE camera (transforms_undistorted.json), so the default

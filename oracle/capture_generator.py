@@ -11,9 +11,9 @@ Two subcommands:
             run/run_behavior_recon.sh) runs against it unmodified.
 
             WHY NOT behavior_extract.py's own HDF5 path: its source
-            (`/group/worldcept/data/pointworld_behavior_restored/behavior/
+            (`${SIMANY_ROOT}/data/pointworld_behavior_restored/behavior/
             flows/`) no longer exists on disk (verified 2026-08-16: `ls`
-            returns nothing; only `/group/worldcept/PhiRIE/data/behavior/wds/`
+            returns nothing; only `${SIMANY_ROOT}/data/behavior/wds/`
             (WebDataset shards) and the one already-extracted
             `data/recon_scenes/data/behavior_task0020/` scene dir survive
             from before the restored HDF5 tree was reclaimed).
@@ -101,7 +101,7 @@ from agents.recon.behavior_extract import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_WDS_ROOT = "/group/worldcept/PhiRIE/data/behavior/wds"
+DEFAULT_WDS_ROOT = str(ROOT / "data" / "behavior" / "wds")
 DEFAULT_CAMERAS = "left,right"
 MIN_LANDMARKS_FOR_REGISTRATION = 3
 REGISTRATION_INLIER_TOL_M = 0.05

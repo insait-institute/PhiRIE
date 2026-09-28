@@ -15,10 +15,8 @@ success while sim dynamics cost ~0 — and photoreal renders are exactly what th
 SimAny asset pipeline produces.
 
 Related pages: [ENVIRONMENTS.md](ENVIRONMENTS.md) (the three python envs),
-[CONTRIBUTIONS.md](CONTRIBUTIONS.md). Full experiment history:
-[`coding_agents/memory/pi05-droid-sim-eval.md`](../coding_agents/memory/pi05-droid-sim-eval.md)
-and
-[`coding_agents/memory/pi05-zero-score-root-cause.md`](../coding_agents/memory/pi05-zero-score-root-cause.md).
+[CONTRIBUTIONS.md](CONTRIBUTIONS.md). The full experiment history lives in internal pi0.5 sim-eval and zero-score
+root-cause notes that are not part of this repository.
 
 ## Components
 
@@ -63,8 +61,7 @@ per (graspable, receptacle) pair (or move-to-region when the scene has no
 receptacle). Base placement enforces a radius **and** frontal-cone workspace
 (0.25–0.80 m, ±60°, preferring the 0.35–0.65 m annulus) — the original
 radius-only test admitted targets up to 143° behind the arm and was the root
-cause of the early all-zero runs (see
-[pi05-zero-score-root-cause](../coding_agents/memory/pi05-zero-score-root-cause.md)).
+cause of the early all-zero runs (see the internal zero-score root-cause notes).
 
 `TaskScorer` gives staged credit, 0.25 per stage
 (grasp → lift → hover → place); success = place held for 1 s.
@@ -133,10 +130,10 @@ srun -p debug --gres=gpu:a6000:1 --mem=100G --time=240 bash run/pi05_serve.sh
 ```
 
 [`run/pi05_serve.sh`](../run/pi05_serve.sh) launches the openpi websocket
-server (default port 8000) from the checkout at `/group/worldcept/code/openpi`
+server (default port 8000) from the checkout at `${OPENPI_ROOT}`
 — a fork of `github.com/xuningy/openpi`, which has the `pi05_droid_jointpos`
 config (mainline does not). The checkpoint is pre-downloaded to
-`/group/worldcept/openpi_cache/openpi-assets-simeval/` (12.4 GB), so no GCS
+`${OPENPI_DATA_HOME}/openpi-assets-simeval/` (12.4 GB), so no GCS
 access happens at serve time.
 
 - `SIMANY_PI05_CKPT` selects the checkpoint subpath (default
@@ -147,7 +144,7 @@ access happens at serve time.
   reads, and that pattern stalled for 1 h+ (zero progress, no error) against
   the CephFS-hosted copy — while a plain rsync of the same 12 GB finished in
   seconds. The script therefore rsyncs the checkpoint to node-local
-  `/scratch/runyi_yang/openpi_cache_local/` (gated on a `.copy_complete`
+  `/scratch/${USER}/openpi_cache_local/` (gated on a `.copy_complete`
   marker) and serves from there; restore drops to 15.4 s. `/scratch` is
   node-local, so the copy only helps on the node that made it.
 
@@ -198,9 +195,8 @@ MUJOCO_GL=egl SIMANY_SCENE=<scene> SIMANY_OUT=outputs/<scene>_factory \
 
 ## Results (honest, as of 2026-08-04)
 
-Numbers below are quoted from
-[pi05-droid-sim-eval](../coding_agents/memory/pi05-droid-sim-eval.md) and
-[pi05-zero-score-root-cause](../coding_agents/memory/pi05-zero-score-root-cause.md).
+Numbers below are quoted from the internal pi0.5 sim-eval and zero-score
+root-cause notes.
 
 **Calibrate expectations first:** pi0.5 zero-shot in sim is weak everywhere —
 it scores 28% on RoboLab-120 — so low absolute numbers are the normal regime,

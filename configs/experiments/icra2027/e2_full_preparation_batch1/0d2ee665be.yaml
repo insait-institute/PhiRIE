@@ -4,11 +4,11 @@ freeze_id: 20260906-e7c60da-v2
 scene_id: 0d2ee665be
 policy_id: A4
 materialization_manifest:
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/0d2ee665be/materialized/A4/materialization_manifest.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-0e7579a-v1/automatic_candidates/0d2ee665be/materialized/A4/materialization_manifest.json
   bytes: 28793
   sha256: 140e09330c3945c6366c02820bd4a01673fae868eaac1dff3f8c960dddfdcd97
 generation_config:
-  path: /group/worldcept/code/SimAny-wt/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/0d2ee665be.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-generation-cohort/configs/experiments/icra2027/trellis_cohort/0d2ee665be.yaml
   bytes: 3132
   sha256: 26fb25fdfb6377b93ff91282bb7c5cd6113ad94507d93f9ddd8e1354f807b9f7
 seed: 0

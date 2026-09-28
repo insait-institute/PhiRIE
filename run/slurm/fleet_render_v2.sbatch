@@ -5,14 +5,14 @@
 #SBATCH --time=03:00:00
 #SBATCH --array=0-7
 #SBATCH --job-name=simany_render_v2
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/fleet/render_v2_%a.log
+#SBATCH --output=outputs/fleet/render_v2_%a.log
 
 # Re-run appearance eval with the OFFICIAL ScanNet++ dslr train/test split
 # (render_metrics_v2.json; legacy linspace numbers in render_metrics.json kept
 # for provenance). Covers BOTH the GT-driven (*_factory) and automatic (*_auto)
 # fleets - the latter had no render metrics at all before this.
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 mapfile -t SCENES < /data/ScanNetpp/splits/nvs_sem_val.txt
 STRIDE=${SLURM_ARRAY_TASK_COUNT:-8}

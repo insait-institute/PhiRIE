@@ -4,11 +4,11 @@ freeze_id: 20260905-45e46f7-v2
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: e3_trellis2_config
-  path: /group/worldcept/code/SimAny-wt/e3-trellis2/configs/experiments/icra2027/trellis2_pilot/pilot.yaml
+  path: ${SIMANY_ROOT}/worktrees/e3-trellis2/configs/experiments/icra2027/trellis2_pilot/pilot.yaml
   kind: experiment_config
   required: true
 checkpoint_roots: []

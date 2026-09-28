@@ -23,7 +23,7 @@ task suite).
 ## How to launch
 
 ```bash
-cd /group/worldcept/code/SimAny
+cd /path/to/PhiRIE
 
 # one clip, via slurm (A6000 debug partition, ~4 h budget):
 sbatch --export=ALL,VIDEO=$PWD/videos/myroom.mp4 run/slurm/video2sim.sbatch

@@ -4,12 +4,12 @@
 #SBATCH --mem=64G
 #SBATCH --time=00:30:00
 #SBATCH --job-name=simany_replay
-#SBATCH --output=/group/worldcept/PhiRIE/code/SimAny/outputs/demo_sessions/replay_%j.log
+#SBATCH --output=outputs/demo_sessions/replay_%j.log
 # Render a viewer-recorded take photoreal (objects = original scene splats).
 #   sbatch --export=ALL,TAKE=outputs/demo_sessions/<set>/take_X.json run/slurm/replay_take.sbatch
 # Optional: SCALE=1.0 (default, full 1752x1168), SMOOTH=0.6, CAPTION="..."
 set -e
-SIMANY_ROOT=/group/worldcept/PhiRIE/code/SimAny
+SIMANY_ROOT=${SIMANY_ROOT:-$PWD}
 source "$SIMANY_ROOT/run/env.sh"
 [ -n "$TAKE" ] || { echo "set TAKE=<take json>"; exit 1; }
 SET_DIR=$(basename "$(dirname "$TAKE")")           # e.g. c50d2d1d42_factory

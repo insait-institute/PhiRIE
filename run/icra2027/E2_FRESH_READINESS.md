@@ -9,7 +9,7 @@ validators and E2 camera selector. It does not invoke a model or evaluator.
 Run from a clean checkout, choosing a new output file:
 
 ```bash
-/group/worldcept/code/SimAny/.venv/bin/python -m run.icra2027.e2_fresh_readiness \
+${SIMANY_ROOT}/.venv/bin/python -m run.icra2027.e2_fresh_readiness \
   --config configs/experiments/icra2027/e2_fresh_readiness.json \
   --out /absolute/new/path/readiness.json
 ```
@@ -41,7 +41,7 @@ Focused CPU checks (the existing export tests require a repository-local temp):
 
 ```bash
 mkdir -p .tmp
-/group/worldcept/code/SimAny/.venv/bin/python -m pytest -q \
+${SIMANY_ROOT}/.venv/bin/python -m pytest -q \
   tests/test_e2_fresh_readiness.py tests/test_fidelity_room_export.py \
   --basetemp .tmp/e2-fresh-readiness-tests
 ```

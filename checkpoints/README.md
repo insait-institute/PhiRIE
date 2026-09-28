@@ -18,7 +18,7 @@ Most large weights do **not** live here:
 
 - TRELLIS and the other neural-model checkpoints are resolved from the
   Hugging Face hub cache.
-- pi0.5 policy checkpoints live in `/group/worldcept/openpi_cache`
+- pi0.5 policy checkpoints live in `$OPENPI_DATA_HOME` (default `checkpoints/openpi_cache/`)
   (see [`../run/pi05_serve.sh`](../run/pi05_serve.sh)).
 
 See [`../docs/DATA_AND_WEIGHTS.md`](../docs/DATA_AND_WEIGHTS.md) for details.

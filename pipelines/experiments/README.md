@@ -27,6 +27,6 @@ bash run/phiroom.sh run experiments preflight -- --help
 Set runtime paths and scene context using `--config configs/runtime.local.json`.
 See [module interfaces](../../docs/MODULES.md) for composition and validation.
 
-`finalize` remains the authoritative experimental workflow in
-[FINAL_EXPERIMENTS.md](../../FINAL_EXPERIMENTS.md). Operational receipts from the
+`finalize` remains the authoritative experimental workflow
+(`robo/campaign/finalize.py`, `run/campaign/finalize.sh`). Operational receipts from the
 module runner are not scientific evidence or a replacement campaign ledger.

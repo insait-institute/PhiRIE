@@ -31,7 +31,7 @@ Why they cannot be merged:
 
 - `.venv-mc` is a separate env for the MaskClustering baseline
   (`agents/baselines/maskclustering.py`), which pins incompatible deps.
-- Batch/H200 nodes (`msp3-*`) do **not** mount `/group/worldcept` or the shared
+- Batch/H200 nodes (`msp3-*`) do **not** mount the shared group storage or the shared
   home, so they cannot run this pipeline at all; every measured number is
   A6000.
 - `debug` QoS allows at most 4 concurrent GPU jobs per user.

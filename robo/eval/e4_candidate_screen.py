@@ -39,7 +39,7 @@ from robo.eval import e4_region_pilot as sealed_cpu
 
 SCHEMA_VERSION = 1
 CODE_ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_EVIDENCE_ROOT = Path("/group/worldcept/PhiRIE/code/SimAny")
+EXPECTED_EVIDENCE_ROOT = Path(os.environ.get("SIMANY_EXPECTED_EVIDENCE_ROOT", "/opt/phirie/evidence/SimAny"))
 SCANNETPP_ROOT = Path("/data/ScanNetpp")
 SPLATS_ROOT = Path("/data/ScanNetppv2_gsplat/splats")
 EXPECTED_E3_ROOT = Path(

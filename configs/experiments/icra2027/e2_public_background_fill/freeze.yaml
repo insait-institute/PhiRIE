@@ -4,7 +4,7 @@ freeze_id: 20260906-4cf66bf-v1
 code_commit: auto
 git_dirty: false
 created_utc: auto
-paper_repository: /group/worldcept/code/SimAnyRoom
+paper_repository: ${PAPER_REPO_ROOT}
 paper_commit_before_update: auto
 input_roots:
 - id: public_fill_27dd4da69e
@@ -12,7 +12,7 @@ input_roots:
   kind: experiment_config
   required: true
 - id: erasure_integrity_27dd4da69e
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-472a6d7-v1/dispatch/erasure_integrity_27dd4da69e.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-472a6d7-v1/dispatch/erasure_integrity_27dd4da69e.json
   kind: source_manifest
   required: true
 - id: public_fill_40aec5fffa
@@ -20,11 +20,11 @@ input_roots:
   kind: experiment_config
   required: true
 - id: erasure_integrity_40aec5fffa
-  path: /group/worldcept/code/SimAny/outputs/icra2027/20260906-472a6d7-v1/dispatch/erasure_integrity_40aec5fffa.json
+  path: ${SIMANY_ROOT}/outputs/icra2027/20260906-472a6d7-v1/dispatch/erasure_integrity_40aec5fffa.json
   kind: source_manifest
   required: true
 - id: fill_dependency_overlay
-  path: /group/worldcept/code/SimAny/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
+  path: ${SIMANY_ROOT}/.cache/icra2027/e3-gaussian-runtime-py310-pydantic-2.13.4
   kind: large_directory
   required: true
 - id: compact_fill_protocol
@@ -32,11 +32,11 @@ input_roots:
   kind: experiment_config
   required: true
 - id: fill_runtime_receipt
-  path: /group/worldcept/code/SimAny-wt/e2-public-fill-overlay/outputs/fill-runtime-preflight/result.json
+  path: ${SIMANY_ROOT}/worktrees/e2-public-fill-overlay/outputs/fill-runtime-preflight/result.json
   kind: source_manifest
   required: true
 - id: fill_python
-  path: /group/worldcept/code/affordancept/.envs/mini-viewer/bin/python3.10
+  path: ${SIMANY_GSPLAT_PY}3.10
   kind: python_runtime
   required: true
 checkpoint_roots: []

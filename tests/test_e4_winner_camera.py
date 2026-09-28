@@ -27,6 +27,8 @@ def test_winner_input_drift_fails_before_render(mutation):
 
 
 def test_winner_changed_cpu_cell_rejected(monkeypatch):
+    if not gate.EXPECTED_EVIDENCE_ROOT.is_dir():
+        pytest.skip('sealed evidence root is unavailable')
     from robo.eval import harness_validation
     original = harness_validation.read_jsonl
     def changed(path):
