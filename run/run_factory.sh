@@ -1,6 +1,6 @@
 #!/bin/bash
 # GT-driven asset factory (benchmark mode): one scene, all whitelist objects.
-# This is the mode the paper's row A / "GT-driven" column is measured on.
+# This is the "GT-driven" reference mode.
 set -e
 source "$(dirname "${BASH_SOURCE[0]}")/env.sh"
 export SIMANY_OUT=${SIMANY_OUT:-$ROOT/outputs/${SIMANY_SCENE}_factory}
@@ -15,7 +15,7 @@ done_skip "$SIMANY_OUT/objects/.masks_refined" || {
   touch "$SIMANY_OUT/objects/.masks_refined"; }
 
 stage_timed "s4 TRELLIS image-to-3D"
-run models.s4_trellis
+run agents.models.s4_trellis
 
 stage_timed "factory_align (register to GT submesh + tiers)"
 run agents.assets.factory_align

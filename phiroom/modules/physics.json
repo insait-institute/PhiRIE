@@ -1,6 +1,5 @@
 {
   "id": "physics",
-  "branch": "module/physics-v2",
   "description": "Physical annotation and collision geometry",
   "inputs": [
     "registered object assets"

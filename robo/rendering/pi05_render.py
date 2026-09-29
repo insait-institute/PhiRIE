@@ -148,7 +148,6 @@ class CompositeObs:
 
     # camera helpers -------------------------------------------------------
     def _cam_K_w2c(self, cam_name):
-        import mujoco
         m, d = self.env.model, self.env.data
         cid = m.camera(cam_name).id
         fovy = np.radians(m.cam_fovy[cid])
@@ -162,7 +161,6 @@ class CompositeObs:
         return K, np.linalg.inv(c2w_cv)
 
     def render(self, cam_name):
-        import mujoco
         K, w2c = self._cam_K_w2c(cam_name)
         parts = [self.bg]
         for name, gs in self.canon.items():

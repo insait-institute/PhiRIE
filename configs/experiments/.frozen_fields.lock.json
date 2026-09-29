@@ -1,4 +1,0 @@
-{
-  "hash": "bb73c7af7e3df04928d28fa024ccedfd279425d4e6128fa9c6b6095f0d1f9111",
-  "reason": "Open-source release: checkpoint_path values now use the OPENPI_DATA_HOME placeholder instead of a cluster path; control, camera, action, split and metric definitions unchanged. Prior hash 78b3959bae67c24b6c871445727c53472d1998084cdb747d7d51febbbe3c2f4e remains in Git history."
-}

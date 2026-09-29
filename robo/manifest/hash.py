@@ -3,9 +3,8 @@
 Hashing contract: every hash in this module is sha256 over a canonical JSON
 encoding (sorted keys, compact separators, NaN/Infinity rejected) so the same
 semantic content hashes identically regardless of key order or float-repr
-noise picked up from a YAML<->JSON round trip. Style mirrors
-`agents/eval/validate_contract.py`'s `_canonical_hash()`, generalized into a
-reusable module because Task 01's manifests need several hash "flavors"
+noise picked up from a YAML<->JSON round trip. Kept as a reusable module
+because the manifests need several hash "flavors"
 (whole-manifest content hash, config-subsection hash, checkpoint fingerprint).
 """
 from __future__ import annotations
@@ -29,7 +28,7 @@ def canonical_json_bytes(obj: Any) -> bytes:
     """Sorted-key, compact JSON encoding.
 
     `allow_nan=False` makes a NaN/Infinity anywhere in `obj` raise
-    ValueError at encode time (Task 01 spec: "reject NaN") instead of
+    ValueError at encode time ("reject NaN") instead of
     silently emitting the non-standard `NaN`/`Infinity` JSON tokens that
     `json.dumps` produces by default.
     """
@@ -98,17 +97,16 @@ def hash_checkpoint_path(path: "str | os.PathLike") -> str:
     """Fingerprint a policy checkpoint file or directory WITHOUT reading its
     bytes.
 
-    LIMITATION (deliberate, per plan/01_EXPERIMENT_MANIFEST.md step 4 and the
-    task brief: "don't hash multi-GB checkpoint bytes directly, that's too
-    slow"): this hashes the sorted list of `(relative_path, size_bytes,
+    LIMITATION (deliberate: hashing multi-GB checkpoint bytes directly is
+    too slow): this hashes the sorted list of `(relative_path, size_bytes,
     mtime_ns)` tuples for every file under `path` (or just the one file),
     NOT the file contents. Consequences:
       - a byte-identical rewrite that happens to preserve both size AND
-        mtime is invisible to this hash -- in practice checkpoints on this
-        cluster are written once by a training/export job and never edited
-        in place, so this is a reliable "did the checkpoint on disk change"
-        signal for this pipeline, but it is not a cryptographic content hash
-        and must not be described as one in the paper.
+        mtime is invisible to this hash -- in practice checkpoints are
+        written once by a training/export job and never edited in place,
+        so this is a reliable "did the checkpoint on disk change" signal
+        for this pipeline, but it is not a cryptographic content hash and
+        must not be described as one.
       - touching/replacing a checkpoint file (even with identical bytes)
         changes mtime and therefore the hash, which is the intended
         conservative direction (false positives on "changed" are safe;
@@ -135,7 +133,7 @@ def hash_checkpoint_path(path: "str | os.PathLike") -> str:
 
 def hash_config_section(section: Any) -> str:
     """Semantic alias of canonical_hash for a config sub-tree (e.g. the
-    'control' or 'cameras' block of configs/experiments/frozen_fields.yaml).
+    'control' or 'cameras' block of configs/policies/frozen_fields.yaml).
 
     Kept as a separate name (rather than call sites doing
     `canonical_hash(frozen["control"])` directly) so `controller_config_hash`
@@ -144,22 +142,22 @@ def hash_config_section(section: Any) -> str:
     return canonical_hash(section)
 
 
-# Prefixes that make a path meaningless off this specific cluster mount
-# layout. Not exhaustive, but covers every path convention actually used in
-# this repo (see agents/core/common.py, run/env.sh).
-_CLUSTER_PATH_PREFIXES = ("/group/", "/data/", "/home/", "/tmp/", "/scratch/")
+# Prefixes that make a path meaningless off the machine it was written on.
+# Not exhaustive, but covers every path convention actually used in this
+# repo (see agents/core/common.py, run/env.sh).
+_MACHINE_PATH_PREFIXES = ("/group/", "/data/", "/home/", "/mnt/", "/tmp/")
 
 
 def find_semantic_issues(obj: Any, _path: str = "$") -> list[str]:
     """Recursively walk `obj` (typically a manifest's `model_dump()` dict)
     and collect human-readable warnings for the non-hash-breaking hazards
-    Task 01 calls out:
+    worth flagging:
 
     - non-finite floats: canonical_hash() already hard-rejects these
       (raises ValueError from `json.dumps(allow_nan=False)`); this walk runs
       first so `validate` can report exactly WHERE before that happens.
-    - absolute cluster-specific paths: legal (checkpoint_path in
-      frozen_fields.yaml is necessarily absolute on this cluster) but
+    - absolute machine-specific paths: legal (checkpoint_path in
+      frozen_fields.yaml is necessarily absolute) but
       flagged as a warning, since a manifest containing them cannot be
       replayed as-is on a different mount layout.
     """
@@ -168,8 +166,8 @@ def find_semantic_issues(obj: Any, _path: str = "$") -> list[str]:
         if math.isnan(obj) or math.isinf(obj):
             issues.append(f"{_path}: non-finite float {obj!r}")
     elif isinstance(obj, str):
-        if obj.startswith(_CLUSTER_PATH_PREFIXES):
-            issues.append(f"{_path}: absolute cluster-specific path {obj!r}")
+        if obj.startswith(_MACHINE_PATH_PREFIXES):
+            issues.append(f"{_path}: absolute machine-specific path {obj!r}")
     elif isinstance(obj, dict):
         for k, v in obj.items():
             issues.extend(find_semantic_issues(v, f"{_path}.{k}"))

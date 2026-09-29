@@ -85,7 +85,6 @@ def main():
     from omnigibson.object_states import Inside, OnTop, Open
     from omnigibson.utils.asset_utils import get_all_object_category_models, get_dataset_path
     from omnigibson.utils.bddl_utils import evaluate_bddl_predicate, PREDICATE_TO_STATE
-    import bddl.predicates as bp
     from bddl.activity import (
         Conditions, get_object_scope, get_goal_conditions,
         evaluate_goal_conditions, get_natural_goal_conditions,
@@ -126,7 +125,6 @@ def main():
     scene.add_object(obj=fixture)
     fixture.set_position_orientation(position=th.tensor([0.0, 0.0, 0.0]))
     fx_lo, fx_hi = fixture.aabb
-    fx_top_z = float(fx_hi[2])
     fx_cx, fx_cy = float((fx_lo[0] + fx_hi[0]) / 2), float((fx_lo[1] + fx_hi[1]) / 2)
 
     # ---- 2. our (or baseline) movable objects: import -> place -> drop ----

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Fully automatic mode (the paper's headline "Automatic (no GT)" column):
+# Fully automatic mode ("Automatic (no GT)"):
 # posed images + mesh + gaussians -> sim-ready scene. NO semantic annotations.
 # Outputs MuJoCo MJCF + Isaac URDF manifest.
 set -e
@@ -20,7 +20,7 @@ done_skip "$SIMANY_OUT/objects/.masks_refined" || {
   touch "$SIMANY_OUT/objects/.masks_refined"; }
 
 stage_timed "s4 TRELLIS image-to-3D"
-run models.s4_trellis
+run agents.models.s4_trellis
 
 stage_timed "factory_align (register to own extraction)"
 run agents.assets.factory_align

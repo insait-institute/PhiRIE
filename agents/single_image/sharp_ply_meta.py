@@ -14,7 +14,6 @@ matches the projection the Gaussians were actually placed under.
 """
 from __future__ import annotations
 
-from pathlib import Path
 
 import numpy as np
 

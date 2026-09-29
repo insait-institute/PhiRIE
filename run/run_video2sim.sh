@@ -1,11 +1,12 @@
 #!/bin/bash
 # Video -> simulation, fully automatic (no dataset, no GT): a casual phone
 # video becomes an emulated ScanNet++-style scene dir + trained 3DGS splat,
-# then runs the AUTO+derived-mesh pipeline inline (same stage list as
-# run/slurm/ablation_rowC_scene.sbatch, plus export_mjcf --test as in
-# run/run_auto.sh, plus a pi05_tasks suite; GT-only eval stages skipped).
+# then runs the AUTO+derived-mesh pipeline inline (derive mesh from the
+# splat -> auto_segment -> factory_prepare/refine_masks -> TRELLIS ->
+# factory_align -> s6 physics -> factory_report, plus export_mjcf --test as
+# in run/run_auto.sh, plus a pi05_tasks suite; GT-only eval stages skipped).
 #
-# Usage (from anywhere; GPU node with the three envs, see docs/ENVIRONMENTS.md):
+# Usage (from anywhere; GPU machine with the three envs, see docs/ENVIRONMENTS.md):
 #   bash run/run_video2sim.sh --video /path/to/clip.mp4   # one video
 #   VIDEO=/path/to/clip.mp4 bash run/run_video2sim.sh     # same, via env
 #   bash run/run_video2sim.sh                             # every videos/*.mp4
@@ -93,16 +94,16 @@ if ! done_skip "$RECON_DIR/recon.npz"; then
       if ! run agents.recon.colmap_poses --images-dir "$FRAMES" \
              --out "$RECON_DIR/recon.npz" --workdir "$RECON_DIR/colmap"; then
         echo "[video2sim] COLMAP failed - falling back to feed-forward"
-        run models.vggt_scene --images-dir "$FRAMES" \
+        run agents.models.vggt_scene --images-dir "$FRAMES" \
           --out "$RECON_DIR/recon.npz" --backend omega || \
-        run models.vggt_scene --images-dir "$FRAMES" \
+        run agents.models.vggt_scene --images-dir "$FRAMES" \
           --out "$RECON_DIR/recon.npz" --backend vggt
       fi ;;
     omega)
-      run models.vggt_scene --images-dir "$FRAMES" \
+      run agents.models.vggt_scene --images-dir "$FRAMES" \
         --out "$RECON_DIR/recon.npz" --backend omega ;;
     *)
-      run models.vggt_scene --images-dir "$FRAMES" \
+      run agents.models.vggt_scene --images-dir "$FRAMES" \
         --out "$RECON_DIR/recon.npz" --backend vggt ;;
   esac
 fi
@@ -128,8 +129,8 @@ done_skip "$SPLAT" || \
   run_gs agents.recon.gsplat_train --scene-dir "$SD" --init-ply "$INIT_PLY" \
     --out "$SPLAT" --iters "$GS_ITERS"
 
-# ---- 2) AUTO + derived-mesh pipeline (mirrors ablation_rowC_scene.sbatch,
-# ---- then export_mjcf as in run_auto.sh, plus pi05_tasks) ------------------
+# ---- 2) AUTO + derived-mesh pipeline (derive mesh -> auto_segment -> the
+# ---- factory stages, then export_mjcf as in run_auto.sh, plus pi05_tasks) --
 stage_timed "derive mesh: render (splat depth, mini-viewer env)"
 done_skip "$SIMANY_OUT/derived_mesh.ply" || \
   run_gs agents.discover.derive_mesh_from_splat render
@@ -152,7 +153,7 @@ done_skip "$SIMANY_OUT/objects/.masks_refined" || {
   touch "$SIMANY_OUT/objects/.masks_refined"; }
 
 stage_timed "s4 TRELLIS image-to-3D"
-run models.s4_trellis
+run agents.models.s4_trellis
 
 stage_timed "factory_align (register to own extraction)"
 run agents.assets.factory_align

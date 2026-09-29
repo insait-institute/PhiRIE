@@ -1,5 +1,4 @@
-"""robo.policy: policy/control/checkpoint registry (Task 08,
-plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md).
+"""robo.policy: policy/control/checkpoint registry.
 
 Runs a non-degenerate matrix of policies whose checkpoint bytes correspond
 to real-world results, with identical preprocessing/control across every

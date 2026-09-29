@@ -5,7 +5,6 @@ Headless EGL rendering (MUJOCO_GL=egl on a GPU node).
 Usage: mujoco_video.py [--xml PATH] [--out PATH]
 """
 import argparse
-import json
 
 import numpy as np
 

@@ -1,6 +1,5 @@
 {
   "id": "simulation",
-  "branch": "module/simulation-v2",
   "description": "Simulation scene export and dynamics",
   "inputs": [
     "accepted assets and physical metadata"

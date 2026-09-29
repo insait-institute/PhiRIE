@@ -1,6 +1,6 @@
 # Robot layer (`robo/`)
 
-Closed-loop evaluation of a real robot policy inside SimAny digital twins,
+Closed-loop evaluation of a real robot policy inside PhiRIE digital twins,
 in the style of RoboLab (arXiv:2604.09860) and PolaRiS (arXiv:2512.16881):
 pi0.5 (openpi `pi05_droid_jointpos`, a DROID joint-position policy) drives a
 Franka Panda + Robotiq 2F-85 rig in our exported MuJoCo scenes on a
@@ -12,11 +12,11 @@ inpainted background splat, adds every object's generated asset gaussians posed
 from the *live* simulation state, and masks the MuJoCo-rendered robot in on top
 via segmentation. PolaRiS reports that the visual real2sim gap costs ~25%
 success while sim dynamics cost ~0 — and photoreal renders are exactly what the
-SimAny asset pipeline produces.
+asset pipeline produces.
 
-Related pages: [ENVIRONMENTS.md](ENVIRONMENTS.md) (the three python envs),
-[CONTRIBUTIONS.md](CONTRIBUTIONS.md). The full experiment history lives in internal pi0.5 sim-eval and zero-score
-root-cause notes that are not part of this repository.
+Related pages: [ENVIRONMENTS.md](ENVIRONMENTS.md) (python environments),
+[DATA_AND_WEIGHTS.md](DATA_AND_WEIGHTS.md) (policy checkpoints),
+[PIPELINE.md](PIPELINE.md) (how the scenes are built).
 
 ## Components
 
@@ -32,7 +32,8 @@ model with the exact openpi `droid_policy` observation dict:
 | `observation/joint_position` | float (7,), absolute rad |
 | `observation/gripper_position` | float (1,), 0 = open .. 1 = closed |
 
-Control contract:
+Control contract (frozen in
+[`configs/policies/frozen_fields.yaml`](../configs/policies/frozen_fields.yaml)):
 
 - 15 Hz control, physics `dt = 1/600` s, 40 substeps per control tick.
 - Actions per tick: (8,) = **absolute** joint-position targets (7) + gripper
@@ -44,13 +45,13 @@ Control contract:
 ### `robo/rigs` — Panda + Robotiq 2F-85 rig
 
 [`pi05_rig.py`](../robo/rigs/pi05_rig.py) assembles, via MjSpec, the Menagerie
-`panda_nohand` + `robotiq_2f85` (from `third_party/mujoco_menagerie`, SERL
-−90° z mount quat) into an exported `scene.xml`, adds a ZED-like external
-camera and a wrist camera, and a solid tabletop collision box — the exported
-scene only carries per-object support shims, so the arm needs a real tabletop
-to sweep against. DROID reset pose: `[0, -pi/5, 0, -4pi/5, 0, 3pi/5, 0]`.
-Robot mesh paths are absolutized before attach so the scene compiler's
-`meshdir` does not swallow them.
+`panda_nohand` + `robotiq_2f85` (from `third_party/mujoco_menagerie`, override
+`SIMANY_MUJOCO_MENAGERIE_ROOT`; SERL −90° z mount quat) into an exported
+`scene.xml`, adds a ZED-like external camera and a wrist camera, and a solid
+tabletop collision box — the exported scene only carries per-object support
+shims, so the arm needs a real tabletop to sweep against. DROID reset pose:
+`[0, -pi/5, 0, -4pi/5, 0, 3pi/5, 0]`. Robot mesh paths are absolutized before
+attach so the scene compiler's `meshdir` does not swallow them.
 
 ### `robo/tasks` — suite generation + staged scoring
 
@@ -59,9 +60,8 @@ Robot mesh paths are absolutized before attach so the scene compiler's
 robot at the table edge, and emits `sim_export/pi05_tasks.json` with one task
 per (graspable, receptacle) pair (or move-to-region when the scene has no
 receptacle). Base placement enforces a radius **and** frontal-cone workspace
-(0.25–0.80 m, ±60°, preferring the 0.35–0.65 m annulus) — the original
-radius-only test admitted targets up to 143° behind the arm and was the root
-cause of the early all-zero runs (see the internal zero-score root-cause notes).
+(0.25–0.80 m, ±60°, preferring the 0.35–0.65 m annulus); a radius-only test
+admits targets far behind the arm and produces all-zero runs.
 
 `TaskScorer` gives staged credit, 0.25 per stage
 (grasp → lift → hover → place); success = place held for 1 s.
@@ -76,24 +76,59 @@ python -m robo.tasks.pi05_tasks --out-dir outputs/<scene>_factory [--max-tasks 1
 per camera and tick: `inpaint/clean_background.ply` (falls back to the raw
 scene splat, with object ghosting) + each object's canonical `trellis_gs.ply`
 transformed by its live MuJoCo body pose (scale from `aligned.json`), then the
-MuJoCo robot masked in via segmentation rendering (SIMPLER-style
+MuJoCo robot masked in via segmentation rendering
+([`mujoco_masks.py`](../robo/rendering/mujoco_masks.py); SIMPLER-style
 green-screening, but sim-over-splat). Needs GPU (gsplat/torch) +
 `MUJOCO_GL=egl`, and `SIMANY_SCENE`/`SIMANY_OUT` set for the scene being
 evaluated. Roughly 0.28 s per two-camera tick at 640×360.
 
-### `robo/eval` — websocket policy client
+Optional observation treatments: [`harmonizer_client.py`](../robo/rendering/harmonizer_client.py)
+talks to the `tools.harmonizer.server` socket service
+([tools/README.md](../tools/README.md)); [`robot_restore.py`](../robo/rendering/robot_restore.py)
+copies the eroded robot core back from the raw simulator image after a
+full-frame enhancement; [`color_match.py`](../robo/rendering/color_match.py) is
+a deterministic background-fitted RGB affine baseline.
+
+### `robo/policy` and `robo/manifest` — policy registry and run manifests
+
+[`robo/policy/registry.py`](../robo/policy/registry.py) loads
+`configs/policies/*.yaml` (`pi05_droid_jointpos`, `pi05_droid_jointpos_sim`,
+`scripted_sinusoid`) into typed entries with pinned checkpoint identities and
+constructs the matching clients (`robo/policy/clients/`), all normalized to the
+control contract in [`control_contract.py`](../robo/policy/control_contract.py).
+[`robo/policy/bound_server.py`](../robo/policy/bound_server.py)
+(`run/pi05_serve_bound.sh`) serves exactly one registry policy with a
+fail-closed runtime identity receipt. [`robo/manifest`](../robo/manifest)
+defines the rollout manifest schema and hashes
+(`python -m robo.manifest.io validate configs/evaluation/example_manifest.yaml`,
+`... diff a.yaml b.yaml`).
+
+### `robo/eval` — policy client and metrics
 
 [`pi05_eval.py`](../robo/eval/pi05_eval.py) runs episodes against an openpi
 websocket policy server. The model predicts joint *deltas*; the server-side
 `AbsoluteActions` transform returns a chunk of shape (15, 8) of **absolute**
 joint positions + gripper [0,1]; the client executes the full 15-step chunk at
 15 Hz, then requeries (RoboLab default). It warms up once after connect and
-reconnect-retries around the JAX jit window (see gotchas). Key flags:
-`--tasks`, `--out`, `--obs raster|composite`, `--episodes`, `--jitter`,
-`--time-limit`, `--video`, `--task-filter`, `--port`, `--debug-obs`, and the
-demo-only overrides `--ext-cam-frame`, `--demo-declutter`, `--render-wh`
+reconnect-retries around the JAX jit window (see gotchas). Flags:
+`--tasks`, `--out`, `--policy server|scripted`, `--host`, `--port`,
+`--checkpoint-path` (provenance only), `--open-loop-horizon`, `--episodes`,
+`--variant vague|default|specific`, `--jitter`, `--seed`, `--video`,
+`--task-filter`, `--time-limit`, `--debug-obs`, `--obs raster|composite`, and
+the demo-only overrides `--ext-cam-frame`, `--demo-declutter`, `--render-wh`
 (these change what the policy sees — never use them for benchmark numbers).
-A `--policy scripted` sinusoidal policy exists as an env/scorer smoke test.
+`--policy scripted` is a sinusoidal policy for env/scorer smoke tests. Each run
+writes `results.json`, per-episode logs
+([`episode_log.py`](../robo/eval/episode_log.py)) and, with `--video`, mp4s.
+
+Offline metrics: [`fidelity_metrics.py`](../robo/eval/fidelity_metrics.py)
+(`--manifest`, `--out`) scores held-out appearance and metric geometry from a
+manifest such as
+[`configs/evaluation/fidelity_manifest.template.json`](../configs/evaluation/fidelity_manifest.template.json);
+[`harmony_visual_metrics.py`](../robo/eval/harmony_visual_metrics.py) scores
+visual quality, task-mask preservation, temporal consistency and latency of
+harmonized observations from
+[`configs/evaluation/harmony_visual_manifest.template.json`](../configs/evaluation/harmony_visual_manifest.template.json).
 
 ### `robo/sim` — export and settling
 
@@ -103,13 +138,17 @@ A `--policy scripted` sinusoidal policy exists as an env/scorer smoke test.
   collision = the CoACD convex parts (exact under MuJoCo's convexification);
   the scan background is visual-only plus one *private* static support shim
   per object on its own collision channel, so shims never touch other objects
-  or the robot.
+  or the robot. [`room_collision.py`](../robo/sim/room_collision.py) is the
+  full-room alternative: a floor plane, validated support/wall boxes and a
+  CoACD decomposition of the remaining room mesh on one shared collision
+  channel.
 - [`export_omnigibson.py`](../robo/sim/export_omnigibson.py) — packages
   s6-sim-ready objects (CoACD parts + URDF + physics.json) for
   BEHAVIOR-1K/OmniGibson and maps labels to BDDL WordNet synsets; the actual
   URDF→USD conversion runs in
   [`omnigibson_bridge/import_and_run.py`](../robo/sim/omnigibson_bridge/import_and_run.py)
-  inside a live Isaac Sim process.
+  inside a live Isaac Sim process
+  (`omnigibson_bridge/install_omnigibson.sh` installs the environment).
 - [`s7_sim.py`](../robo/sim/s7_sim.py) — composes the twin in PyBullet,
   settles (velocity-zeroing until poses converge), runs a dynamics demo for
   s8 rendering.
@@ -121,64 +160,58 @@ A `--policy scripted` sinusoidal policy exists as an env/scorer smoke test.
   [`interface/viewer.py`](../interface/viewer.py): 4 s gravity dynamics from
   user-edited poses, returned as a 30 fps link-frame trajectory.
 
+### `robo/simfactory` — YAML pipeline runner
+
+[`runner.py`](../robo/simfactory/runner.py) (`simfactory run <config.yaml>`
+console script, or `bash run/phiroom.sh run construction factory -- run <config.yaml>`;
+`simfactory list` prints every block and registered backend) parses a YAML
+config, resolves one backend per block from
+[`registry.py`](../robo/simfactory/registry.py) (`blocks/`: segmentation,
+generation, reconstruction, inpainting, simulation, evaluation) and runs the
+blocks in pipeline order with the `SIMANY_*` environment the underlying
+modules expect.
+
 ## Running it
 
 ### 1. Serve the policy
 
-```bash
-srun -p debug --gres=gpu:a6000:1 --mem=100G --time=240 bash run/pi05_serve.sh
-```
-
-[`run/pi05_serve.sh`](../run/pi05_serve.sh) launches the openpi websocket
-server (default port 8000) from the checkout at `${OPENPI_ROOT}`
-— a fork of `github.com/xuningy/openpi`, which has the `pi05_droid_jointpos`
-config (mainline does not). The checkpoint is pre-downloaded to
-`${OPENPI_DATA_HOME}/openpi-assets-simeval/` (12.4 GB), so no GCS
-access happens at serve time.
-
-- `SIMANY_PI05_CKPT` selects the checkpoint subpath (default
-  `pi05_droid_jointpos`; e.g. `droid_pi05_jointpos_with_web_and_sim/80000` for
-  the sim-co-trained variant, which also needs
-  `SIMANY_PI05_CONFIG=pi05_droid_jointpos_sim`).
-- **The `/scratch` copy trick:** orbax/zarr restore does many small scattered
-  reads, and that pattern stalled for 1 h+ (zero progress, no error) against
-  the CephFS-hosted copy — while a plain rsync of the same 12 GB finished in
-  seconds. The script therefore rsyncs the checkpoint to node-local
-  `/scratch/${USER}/openpi_cache_local/` (gated on a `.copy_complete`
-  marker) and serves from there; restore drops to 15.4 s. `/scratch` is
-  node-local, so the copy only helps on the node that made it.
-
-### 2. Closed-loop eval (server + client on one A6000)
+On a GPU machine with the openpi fork checked out (`OPENPI_ROOT`) and the
+checkpoint under `${OPENPI_DATA_HOME}/openpi-assets-simeval/`
+([DATA_AND_WEIGHTS.md](DATA_AND_WEIGHTS.md)):
 
 ```bash
-sbatch [--export=SCENES="c50d2d1d42",OBS=composite,EXTRA="--episodes 5 --jitter 0.02 --time-limit 32"] \
-    run/slurm/pi05_closedloop.sbatch
+export OPENPI_ROOT=/path/to/openpi
+bash run/pi05_serve.sh            # websocket server on port 8000
 ```
 
-[`run/slurm/pi05_closedloop.sbatch`](../run/slurm/pi05_closedloop.sbatch)
-knobs: `SCENES` (space-separated scene ids), `OBS` (`raster` | `composite`),
-`EXTRA` (extra `pi05_eval.py` args), `RUN` (run-name prefix). Results land in
-`outputs/pi05_runs/`. Details baked into the script, learned the hard way:
+[`run/pi05_serve.sh`](../run/pi05_serve.sh) launches openpi's
+`scripts/serve_policy.py` with `--policy.dir` pointing at the local checkpoint,
+so no network access happens at serve time. `SIMANY_PI05_CKPT` selects the
+checkpoint subpath (default `pi05_droid_jointpos`; e.g.
+`droid_pi05_jointpos_with_web_and_sim/80000` for the sim-co-trained variant,
+which also needs `SIMANY_PI05_CONFIG=pi05_droid_jointpos_sim`). Extra
+arguments (for example `--port 8001`) are passed through to `serve_policy.py`
+before the `policy:checkpoint` subcommand. JAX stages the ~12 GB checkpoint
+through host RAM while restoring, so the machine needs generous memory. About
+8 GB of GPU memory suffices for inference.
 
-- unique `--port` per job (`8000 + SLURM_JOB_ID % 1000`) — concurrent jobs
-  share the node's localhost; tyro also wants `--port` *before*
-  `policy:checkpoint`;
-- `#SBATCH --mem=100G` — the server holds the 12 GB checkpoint in host RAM
-  while JAX stages it; the 2G cgroup default OOM-kills it mid-restore;
-- `TORCH_CUDA_ARCH_LIST="8.6;9.0+PTX"` pinned unconditionally so the login
-  profile cannot leak an H200 setting and force a gsplat JIT rebuild;
-- composite mode loops one scene per process (see gotchas); raster mode passes
-  all suites to a single client.
+### 2. Closed-loop evaluation
 
-Direct invocation (e.g. for a variant output dir the sbatch cannot address):
+With the server running (same machine or `--host`), in the main environment:
 
 ```bash
 source run/env.sh
-MUJOCO_GL=egl SIMANY_SCENE=<scene> SIMANY_OUT=outputs/<scene>_factory \
-  .venv/bin/python -m robo.eval.pi05_eval \
+export SIMANY_SCENE=<scene> SIMANY_OUT=outputs/<scene>_factory
+MUJOCO_GL=egl python -m robo.eval.pi05_eval \
   --tasks outputs/<scene>_factory/sim_export/pi05_tasks.json \
-  --out outputs/pi05_runs/<run> --obs composite --video --time-limit 32
+  --obs composite --out outputs/pi05_runs/<run> \
+  --episodes 5 --jitter 0.02 --time-limit 32 --video
 ```
+
+`--obs raster` runs the gray MuJoCo observations instead and accepts several
+`--tasks` suites in one process; composite mode is one scene per process (see
+gotchas). Use a distinct `--port` per server when several run on one host.
+The same call is available as `bash run/phiroom.sh run robotics evaluate -- ...`.
 
 ### 3. Prerequisites for a new scene
 
@@ -187,72 +220,27 @@ MUJOCO_GL=egl SIMANY_SCENE=<scene> SIMANY_OUT=outputs/<scene>_factory \
    `exclude_objects` is silently always empty.
 2. `python -m robo.tasks.pi05_tasks --out-dir outputs/<scene>_factory`.
 3. Composite observations additionally require
-   `outputs/<scene>_factory/inpaint/clean_background.ply`. Six scenes have it:
-   **27dd4da69e, 45b0dac5e3, 578511c8a9, 7b6477cb95, 825d228aec, c50d2d1d42**.
-   Widen the pool with [`run/run_inpaint.sh`](../run/run_inpaint.sh) /
-   [`run/slurm/inpaint_scene.sbatch`](../run/slurm/inpaint_scene.sbatch)
-   (hours per scene).
+   `outputs/<scene>_factory/inpaint/clean_background.ply`, produced by
+   [`run/run_inpaint.sh`](../run/run_inpaint.sh) (hours per scene). Without
+   it the raw scene splat is used and removed objects leave ghosts.
 
-## Results (honest, as of 2026-08-04)
-
-Numbers below are quoted from the internal pi0.5 sim-eval and zero-score
-root-cause notes.
-
-**Calibrate expectations first:** pi0.5 zero-shot in sim is weak everywhere —
-it scores 28% on RoboLab-120 — so low absolute numbers are the normal regime,
-not a SimAny defect.
-
-- **Baseline (pre geometry fix): all zero.** Every early run scored 0.0 — 32
-  episodes across raster and composite, zero successes. Root cause was a
-  base-placement bug (isotropic reachability with no frontal cone, so targets
-  were admitted up to 143° behind the arm), fixed 2026-08-01 in
-  `pi05_tasks.py`.
-- **After the fix:** first nonzero episode ever in raster (d755 cup, grasp,
-  0.25), and the first lift ever in the photoreal composite (c50 mug,
-  grasp+lift, 0.50, `ee_dist_min` 2.7 cm).
-- **Current per-scene summary** (episodes / nonzero / lifts / best ee-distance):
-
-  | scene | mode | eps | nz | lifts | ee_best |
-  |---|---|---|---|---|---|
-  | c50d2d1d42 | composite | 10 | **4** | **2** | 0.027 |
-  | d755b3d9d8 | raster | 10 | 5 | 0 | 0.010 |
-  | f3d64c30f8 | raster | 15 | 3 | 1 | 0.014 |
-  | c50d2d1d42 | raster | 15 | 2 | 2 | 0.016 |
-  | 45b0dac5e3 | composite | 18 | 0 | 0 | 0.041 |
-  | 825d228aec | composite | 18 | 0 | 0 | 0.078 |
-
-  c50d2d1d42 composite (4/10 nonzero, 2 lifts) is the only configuration that
-  works, and it is a **favourable outlier**, not the typical case: composite
-  scored 0/36 outside c50d2d1d42 (45b0dac5e3 and 825d228aec, 18 episodes
-  each), even though 825d228aec — one of the two newly inpainted scenes — was
-  best-in-class on jaw fit, bearing, and inpaint quality. Those pre-selection
-  criteria were falsified; scene-hunting is a dead end. Pooled over all 47 c50
-  composite episodes after the geometry fix: nonzero rate 13/47 = 0.28, mean
-  staged score 0.106, per-run means spanning 0.000–0.500.
-- **Variance dominates.** From the 0.28 base rate, detecting a +0.15 change in
-  nonzero rate needs ~158 episodes per arm (80% power, α 0.05); +0.25 needs
-  60; +0.40 needs 24. n=2 is pure noise and n=5 is barely a hint — match
-  `--episodes`/`--jitter` and pin the camera before calling any A/B. Prefer
-  physics metrics (penetration, settle drift) for verifying sim changes.
-- **Demo clip (score 0.50, grasp+lift, `ee_dist_min` 4.0 cm):**
-  `outputs/pi05_runs/demo_final/c50_mug_grasp_lift_720p.mp4`, rendered with
-  `--task-filter obj_09 --ext-cam-frame DSC01594 --render-wh 1280 720
-  --time-limit 32` (no declutter), ext pane cropped in post. **Caveat:** the
-  exterior camera materially changes the score — same task, same everything
-  else: DSC01594 = 0.50, DSC01593 = 0.25, DSC01616 = 0.00. Pick camera and
-  report score together, and never present a demo-flag run as a benchmark
-  number.
+Absolute success rates of pi0.5 zero-shot in simulation are low everywhere
+(RoboLab reports 28% on RoboLab-120), so expect low numbers, match
+`--episodes`/`--jitter` and pin the exterior camera before comparing two
+configurations, and prefer physics metrics (penetration, settle drift) for
+verifying simulation changes. The exterior camera materially changes the
+score of a given task, so report camera and score together.
 
 ## Known gotchas
 
 - **First inference = JAX jit (minutes), and the websockets 20 s keepalive
   kills the connection meanwhile.** The client reconnect-retries (RoboLab's
-  client does the same); expect ~3 reconnects on the first infer, and the
+  client does the same); expect a few reconnects on the first infer, and the
   server-side handshake tracebacks during that window are noise. The retry cap
   is 5 — do not lower it.
 - **Composite mode is one scene per process.** `agents/core/common.py` binds
-  `SIMANY_SCENE`/`SIMANY_OUT` at import time; `pi05_eval` asserts a single
-  suite in composite mode, and the sbatch loops scenes in separate processes.
+  `SIMANY_SCENE`/`SIMANY_OUT` at import time, and `pi05_eval` asserts a single
+  suite in composite mode; loop scenes in separate processes.
 - **Wrist near-field splat mush.** The scene splat was never trained at
   10–30 cm, so the wrist camera's near field renders as beige mush (the
   TRELLIS object splats themselves look fine up close). Known open issue;
@@ -265,3 +253,6 @@ not a SimAny defect.
 - **Pass `--time-limit 32` explicitly.** The suite default is 16 s, which is
   too short; the 32 s setting silently reverts unless passed on the command
   line.
+- **Keep `TORCH_CUDA_ARCH_LIST` consistent** between the machine that built
+  the gsplat JIT cache and the evaluation run, or gsplat rebuilds from scratch
+  (`run/env.sh` pins `"8.6;9.0+PTX"`).

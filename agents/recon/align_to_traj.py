@@ -1,6 +1,6 @@
 """Umeyama-align a COLMAP/VGGT reconstruction to the DROID FK trajectory.
 
-Takes recon.npz (agents/recon/colmap_poses.py or models/vggt_scene.py; poses
+Takes recon.npz (agents/recon/colmap_poses.py or agents/models/vggt_scene.py; poses
 in an arbitrary SfM frame at arbitrary scale) and gt/droid_traj.json
 (agents/recon/droid_extract.py; FK wrist-camera c2w in the ROBOT BASE frame,
 metric) and solves the similarity transform mapping SfM camera centers onto
@@ -66,136 +66,6 @@ def rot_angle_deg(Ra, Rb):
     return float(np.degrees(np.arccos(np.clip(c, -1.0, 1.0))))
 
 
-def train_solution(rec, train, plan):
-    """Prospective fit: every offset/crosscheck sees TRAIN FK only."""
-    from agents.recon.droid_extract import validate_frame_plan
-    from agents.eval.droid_alignment_eval import residual_metrics
-    validate_frame_plan(plan)
-    if (set(train) != {'schema_version', 'role', 'plan', 'fk_by_index'}
-            or train['schema_version'] != 1 or train['role'] != 'train_only'):
-        raise ValueError('constructor requires sparse TRAIN-only evidence')
-    split = plan['split']
-    if set(train['fk_by_index']) != {str(i) for i in split['train_fk_indices']}:
-        raise ValueError('TRAIN FK roster differs or contains reference evidence')
-    fk = {int(i): np.asarray(v, np.float64) for i, v in train['fk_by_index'].items()}
-    if any(v.shape != (4, 4) or not np.isfinite(v).all() for v in fk.values()):
-        raise ValueError('invalid TRAIN camera poses')
-    names = [str(n) for n in rec['names']]
-    ids = [int(Path(n).stem.split('_')[1]) for n in names]
-    if (len(ids) != len(set(ids)) or any(n != f'frame_{i:06d}.jpg' for n, i in zip(names, ids))
-            or not set(ids).issubset(split['rgb_indices'])):
-        raise ValueError('reconstruction frame roster differs')
-    rows = np.asarray([i for i, idx in enumerate(ids) if idx in split['train_video_indices']], int)
-    # All offset hypotheses retain100% of registered TRAIN rows because the
-    # metadata margins were fixed first (legacy offset-overlap gate is90%).
-    # Missing SfM poses remain reported; do not introduce a new coverage gate.
-    if len(rows) < 10:
-        raise ValueError('insufficient preregistered TRAIN pose coverage')
-    if rec['w2c'].shape != (len(ids), 4, 4) or not np.isfinite(rec['w2c']).all():
-        raise ValueError('invalid reconstruction camera poses')
-    centers = np.linalg.inv(rec['w2c'].astype(np.float64))[:, :3, 3]
-    if np.linalg.matrix_rank(centers[rows] - centers[rows].mean(0)) < 2:
-        raise ValueError('degenerate TRAIN camera-center geometry')
-    best = None
-    for off in split['offsets']:
-        dst = np.asarray([fk[ids[i] + off][:3, 3] for i in rows])
-        s, R, t = umeyama(centers[rows], dst)
-        residual = dst - (s * centers[rows] @ R.T + t)
-        rms = float(np.sqrt((residual ** 2).sum(1).mean()))
-        if not np.isfinite([s, rms]).all() or s <= 0:
-            raise ValueError('degenerate TRAIN similarity')
-        if best is None or rms < best['rms']:
-            best = {'offset': off, 'scale': s, 'rotation': R.tolist(),
-                    'translation': t.tolist(), 'rms': rms}
-    s, R, t = best['scale'], np.asarray(best['rotation']), np.asarray(best['translation'])
-    idx = np.asarray(ids) + best['offset']
-    # A sparse mapping is sufficient: residual_metrics only indexes rows.
-    metrics = residual_metrics(rec, fk, idx, rows, s, R, t)
-    if best['rms'] > MAX_RMS_M:
-        raise ValueError('TRAIN center RMS exceeds unchanged0.10m constructor gate')
-    return {'frame_offset': best['offset'], 'scale': s, 'R': R.tolist(), 't': t.tolist(),
-            'train_video_indices_used': [ids[i] for i in rows],
-            'planned_train_frames': len(split['train_video_indices']),
-            'missing_train_video_indices': sorted(set(split['train_video_indices']) - set(ids)),
-            'train_metrics': metrics, 'max_rms_m': MAX_RMS_M}
-
-
-def apply_train_solution(rec, fit):
-    """Apply the existing scale-then-rigid reconstruction transform."""
-    s, R, t = fit['scale'], np.asarray(fit['R']), np.asarray(fit['t'])
-    transform = np.eye(4); transform[:3, :3] = R; transform[:3, 3] = t
-    w2c = rec['w2c'].astype(np.float64).copy(); w2c[:, :3, 3] *= s
-    return dict(rec, w2c=w2c @ np.linalg.inv(transform),
-        points=(rec['points'].astype(np.float64) * s @ R.T + t).astype(np.float32),
-        depth=(rec['depth'].astype(np.float32) * s).astype(np.float16),
-        metric_scale=np.float64(s), T_align=transform, frame_offset=np.int64(fit['frame_offset']))
-
-
-def align_train_only(recon_path, train_path, plan_path, destination):
-    import sys
-    from agents.recon.droid_extract import input_identity, verify_input, validate_frame_plan
-    from agents.recon.colmap_poses import write_new_json
-    from robo.manifest.hash import canonical_hash, git_snapshot
-    recon_path, train_path, plan_path, destination = map(Path, (recon_path, train_path, plan_path, destination))
-    if destination.exists():
-        raise FileExistsError('immutable TRAIN fit already exists')
-    plan = validate_frame_plan(json.loads(plan_path.read_text()))
-    train = json.loads(train_path.read_text())
-    if train['plan'] != input_identity(plan_path):
-        raise ValueError('TRAIN plan identity mismatch')
-    verify_input(train['plan'])
-    rec = dict(np.load(recon_path, allow_pickle=False))
-    fit = train_solution(rec, train, plan)
-    aligned = apply_train_solution(rec, fit)
-    destination.mkdir(parents=True, exist_ok=False)
-    np.savez_compressed(destination / 'recon_base.npz', **aligned)
-    report = {'schema_version': 1, 'scope': 'droid_train_only_frozen_fit',
-              'source': git_snapshot(Path(__file__).resolve().parents[2]),
-              'runtime': {'invocation': sys.executable, 'numpy_version': np.__version__,
-                          'python': input_identity(Path(sys.executable).resolve())},
-              'plan': input_identity(plan_path), 'train': input_identity(train_path),
-              'recon': input_identity(recon_path), 'solution': fit,
-              'aligned': input_identity(destination / 'recon_base.npz')}
-    write_new_json(destination / 'fit.json', report)
-    write_new_json(destination / 'seal.json', {'fit_sha256': input_identity(destination / 'fit.json')['sha256'],
-                                            'fit_digest': canonical_hash(report)})
-    return report
-
-
-def validate_train_fit(directory):
-    from agents.recon.droid_extract import input_identity, verify_input, validate_frame_plan
-    from robo.manifest.hash import canonical_hash, git_snapshot
-    directory = Path(directory)
-    report = json.loads((directory / 'fit.json').read_text())
-    seal = json.loads((directory / 'seal.json').read_text())
-    if (report.get('scope') != 'droid_train_only_frozen_fit' or
-            seal != {'fit_sha256': input_identity(directory / 'fit.json')['sha256'],
-                     'fit_digest': canonical_hash(report)}):
-        raise ValueError('missing or altered TRAIN fit seal')
-    code = git_snapshot(Path(__file__).resolve().parents[2])
-    if report['source']['commit'] != code['commit'] or report['source']['dirty'] or code['dirty']:
-        raise ValueError('TRAIN fit requires original clean source')
-    if report['runtime']['numpy_version'] != np.__version__:
-        raise ValueError('TRAIN replay requires original NumPy runtime')
-    verify_input(report['runtime']['python'])
-    if Path(report['aligned']['path']) != directory.absolute() / 'recon_base.npz':
-        raise ValueError('aligned artifact path changed')
-    for key in ('plan', 'train', 'recon', 'aligned'):
-        verify_input(report[key])
-    plan = validate_frame_plan(json.loads(Path(report['plan']['path']).read_text()))
-    train = json.loads(Path(report['train']['path']).read_text())
-    if train['plan'] != report['plan']:
-        raise ValueError('TRAIN plan identity mismatch')
-    rec = dict(np.load(report['recon']['path'], allow_pickle=False))
-    if train_solution(rec, train, plan) != report['solution']:
-        raise ValueError('TRAIN fit replay differs')
-    aligned = dict(np.load(report['aligned']['path'], allow_pickle=False))
-    expected = apply_train_solution(rec, report['solution'])
-    if set(aligned) != set(expected) or any(not np.array_equal(aligned[k], expected[k]) for k in expected):
-        raise ValueError('aligned reconstruction differs from frozen TRAIN transform')
-    return report
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--recon", required=True, type=Path)
@@ -203,14 +73,7 @@ def main():
     ap.add_argument("--out", required=True, type=Path)
     ap.add_argument("--max-offset", type=int, default=MAX_OFFSET)
     ap.add_argument("--max-rms-m", type=float, default=MAX_RMS_M)
-    ap.add_argument('--frame-plan', type=Path)
     args = ap.parse_args()
-
-    if args.frame_plan:
-        if args.max_offset != MAX_OFFSET or args.max_rms_m != MAX_RMS_M:
-            ap.error('prospective alignment thresholds are frozen')
-        align_train_only(args.recon, args.traj, args.frame_plan, args.out)
-        return
 
     rec = dict(np.load(args.recon, allow_pickle=False))
     traj = json.loads(args.traj.read_text())

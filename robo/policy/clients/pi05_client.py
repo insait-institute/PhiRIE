@@ -31,8 +31,8 @@ to switch between them.
 
 Test/replay support: the real `openpi_client.websocket_client_policy.
 WebsocketClientPolicy` is only importable/reachable with a live server on
-the network. For deterministic trace tests (no server, no network -- see
-tests/test_control_contract.py), pass `connector=some_callable` at
+the network. For deterministic trace replays (no server, no network),
+pass `connector=some_callable` at
 construction; `some_callable()` must return an object exposing
 `.infer(request_dict) -> {"actions": ndarray}`, exactly the
 `WebsocketClientPolicy.infer` surface. This is the one seam this module

@@ -1,0 +1,35 @@
+{
+  "id": "construction",
+  "description": "Scene construction launchers and the SimFactory YAML pipeline runner",
+  "inputs": [
+    "prepared scene directory (posed images, mesh, splat) or a SimFactory YAML recipe"
+  ],
+  "outputs": [
+    "per-scene construction tree under outputs/ (objects, physics, simulator exports, reports)"
+  ],
+  "tools": [
+    "SimFactory"
+  ],
+  "actions": {
+    "factory": {
+      "target": "robo.simfactory.runner",
+      "runtime": "control",
+      "gpu": false,
+      "args": []
+    },
+    "construct-auto": {
+      "kind": "shell",
+      "target": "run/run_auto.sh",
+      "runtime": "control",
+      "gpu": true,
+      "args": []
+    },
+    "construct-gt": {
+      "kind": "shell",
+      "target": "run/run_factory.sh",
+      "runtime": "control",
+      "gpu": true,
+      "args": []
+    }
+  }
+}

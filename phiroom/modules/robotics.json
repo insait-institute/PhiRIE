@@ -1,6 +1,5 @@
 {
   "id": "robotics",
-  "branch": "module/robotics-v2",
   "description": "Robot task construction and policy evaluation",
   "inputs": [
     "simulation scene; task targets; policy checkpoint when evaluating"

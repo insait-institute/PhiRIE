@@ -13,18 +13,18 @@ Success is checked the same way as the Tier-2 validation: real
 evaluate_bddl_predicate(Inside, obj, fixture) after the sequence, using
 OmniGibson's own checker.
 
-Usage (headless, no camera - pose-only verification, works on hala):
+Usage (headless, no camera - pose-only verification, works on any
+supported NVIDIA driver):
   OMNIGIBSON_HEADLESS=1 python robot_pick_place_demo.py
 
-Usage (with camera capture, needs a driver where Isaac Sim rendering
-actually boots - NOT hala, see omnigibson_5_1_0.kit's segfault writeup):
+Usage (with camera capture, needs an NVIDIA driver where Isaac Sim
+rendering actually boots - see headless_stubs.py for the driver caveat):
   OMNIGIBSON_HEADLESS=1 python robot_pick_place_demo.py --render --out-dir /path/to/frames
 """
 import argparse
 import json
 import os
 import sys
-import time
 from pathlib import Path
 
 os.environ.setdefault("OMNIGIBSON_HEADLESS", "1")
@@ -123,8 +123,8 @@ def main():
     # (the class default) - normalized ([-1,1]) input is fundamentally
     # incompatible with absolute_pose mode's raw world/base-frame targets,
     # so action_normalize=False is required here, not optional. Controllers
-    # are set via reload_controllers() (matching tests/test_controllers.py's
-    # own pattern), called after the robot is initialized.
+    # are set via reload_controllers() (matching OmniGibson's own controller
+    # test pattern), called after the robot is initialized.
     robot = Robot(
         name="robot0", model="fetch", fixed_base=True, grasping_mode="sticky",
         action_normalize=False,

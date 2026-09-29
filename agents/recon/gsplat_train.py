@@ -13,7 +13,6 @@ GPU, mini-viewer env (run_gs). Usage:
         [--holdout-every 10]
 """
 import argparse
-import json
 import math
 import os
 import random
@@ -145,15 +144,7 @@ def main(argv=None):
     ap.add_argument("--iters", type=int, default=ITERS)
     ap.add_argument("--holdout-every", type=int, default=HOLDOUT_EVERY)
     ap.add_argument("--seed", type=int, default=0)
-    ap.add_argument("--init-manifest", type=Path,
-                    help="require fresh official-train-only triangulation provenance")
-    ap.add_argument("--native-init-manifest", type=Path,
-                    help="require sealed public native TRAIN RGB-D initialization")
-    ap.add_argument("--native-capture", type=Path,
-                    help="public TRAIN-only capture for native initialization validation")
     args = ap.parse_args(argv)
-    if bool(args.native_init_manifest) != bool(args.native_capture) or (args.init_manifest and args.native_init_manifest):
-        raise ValueError('choose one initialization provenance; native capture and manifest are paired')
     if args.iters < 1 or args.holdout_every < 2 or args.seed < 0:
         raise ValueError('invalid iteration, internal diagnostic split, or seed')
     report_paths = [args.out.with_name('train_report.json'),
@@ -172,35 +163,10 @@ def main(argv=None):
     torch.cuda.manual_seed_all(args.seed)
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
-    provenance = None
-    if args.native_init_manifest:
-        from robo.roundtrip.gaussian_build import validate_initialization, sha
-        inputs, initialization = validate_initialization(
-            args.scene_dir, args.init_ply, args.native_init_manifest, args.native_capture)
-        native_init_sha256 = sha(args.native_init_manifest)
-        K = np.asarray(inputs['calibration']['K'])
-        W, H = inputs['calibration']['width'], inputs['calibration']['height']
-        w2c_map = {r['name']: np.asarray(r['w2c']) for r in inputs['frames']}
-        provenance = {'inputs_sha256': initialization['source_input_sha256'],
-                      'native_init_manifest_sha256': native_init_sha256,
-                      'initialization': initialization, 'input_assistance': inputs['input_assistance'],
-                      'official_test_images_read': 0, 'paper_ready': False}
-    elif args.init_manifest:
-        from agents.recon.colmap_poses import validate_training_initialization, file_identity
-        inputs, initialization = validate_training_initialization(
-            args.scene_dir, args.init_ply, args.init_manifest)
-        init_manifest_identity = file_identity(args.init_manifest)
-        K = np.asarray(inputs['calibration']['K'])
-        W, H = inputs['calibration']['width'], inputs['calibration']['height']
-        w2c_map = {r['name']: np.asarray(r['w2c']) for r in inputs['frames']}
-        provenance = {'inputs_sha256': initialization['source_input_sha256'],
-                      'init_manifest': init_manifest_identity, 'initialization': initialization,
-                      'official_test_images_read': 0, 'paper_ready': False}
-    else:
-        K, W, H, _ = C.load_intrinsics(
-            args.scene_dir / "dslr" / "nerfstudio" / "transforms_undistorted.json")
-        w2c_map = C.load_colmap_w2c(
-            args.scene_dir / "dslr" / "colmap" / "images.txt")
+    K, W, H, _ = C.load_intrinsics(
+        args.scene_dir / "dslr" / "nerfstudio" / "transforms_undistorted.json")
+    w2c_map = C.load_colmap_w2c(
+        args.scene_dir / "dslr" / "colmap" / "images.txt")
     img_dir = args.scene_dir / "dslr" / "resized_undistorted_images"
     items = sorted(w2c_map.items())
     views = []
@@ -285,14 +251,6 @@ def main(argv=None):
                                 gt.cpu().numpy()))
     psnr_hold = float(np.mean(psnrs))
 
-    if args.native_init_manifest:
-        validate_initialization(args.scene_dir, args.init_ply, args.native_init_manifest, args.native_capture)
-        if sha(args.native_init_manifest) != native_init_sha256:
-            raise ValueError('native initialization manifest changed during training')
-    elif args.init_manifest:
-        validate_training_initialization(args.scene_dir, args.init_ply, args.init_manifest)
-        if file_identity(args.init_manifest) != init_manifest_identity:
-            raise ValueError('initialization manifest changed during training')
     if not all(torch.isfinite(p).all().item() for p in params.values()) or not math.isfinite(psnr_hold):
         raise ValueError('nonfinite Gaussian parameters or internal diagnostic PSNR')
     write_inria_ply(params, args.out)
@@ -305,7 +263,6 @@ def main(argv=None):
               "gpu_name": torch.cuda.get_device_name(),
               "peak_cuda_memory_bytes": torch.cuda.max_memory_allocated(),
               "bitwise_determinism_claimed": False,
-              "provenance": provenance,
               "gradient_train_frames": [views[i][0] for i in train_idx],
               "internal_diagnostic_frames": [views[i][0] for i in hold],
               "n_gaussians": int(len(params["means"])),

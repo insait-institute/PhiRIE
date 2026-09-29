@@ -1,4 +1,4 @@
-# Minimal CPU dependencies for the paper-code harness and tests.
+# Minimal CPU dependencies for the control CLI and the scoring metrics.
 # The recommended, locked environment is envs/control:
 #   uv sync --project envs/control --locked
 numpy>=1.26
@@ -6,7 +6,6 @@ Pillow>=10.0
 PyYAML>=6.0
 pydantic>=2.7
 scipy>=1.11
-pytest>=8.0
 # Optional paper metrics / media:
 # torch>=2.4
 # torchmetrics>=1.4

@@ -1,6 +1,5 @@
 {
   "id": "rendering",
-  "branch": "module/rendering-v2",
   "description": "Composite rendering and observation harmonization",
   "inputs": [
     "Gaussian scene; object transforms; camera poses"
@@ -20,7 +19,7 @@
       "args": []
     },
     "harmonizer": {
-      "target": "integrations.harmonizer.server",
+      "target": "tools.harmonizer.server",
       "runtime": "gsplat",
       "gpu": true,
       "args": []

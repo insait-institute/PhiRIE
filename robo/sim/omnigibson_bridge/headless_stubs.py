@@ -1,16 +1,17 @@
-"""Shared workarounds for running OmniGibson/Isaac Sim 5.1.0 headless on this
-cluster's driver (595.58.03, outside Isaac Sim 5.1's validated 580.65.06).
+"""Shared workarounds for running OmniGibson/Isaac Sim 5.1.0 headless on an
+NVIDIA driver outside Isaac Sim 5.1's validated range (observed with driver
+595.58.03; Isaac Sim 5.1 validates 580.65.06).
 
-Root cause (see omnigibson_5_1_0.kit's comment for the fuller writeup): any
-Kit extension that touches the UI/menu/viewport machinery
+Root cause: any Kit extension that touches the UI/menu/viewport machinery
 (omni.kit.menu.utils, omni.kit.widget.viewport's Hydra-engine init, the
 viewport menubar's USD watcher) segfaults natively at stage-creation or
-stage-open time on this driver, even with headless=True - "headless" only
+stage-open time on such a driver, even with headless=True - "headless" only
 suppresses the native window, it doesn't skip loading/initializing those
-extensions. We deliberately excluded them all from omnigibson_5_1_0.kit's
-[dependencies], which means the handful of OmniGibson code paths that
-casually reach for one of them (semantic labels, debug colors, the viewport
-USD watcher used during og.clear()) need a stand-in. None of these are used
+extensions. We deliberately exclude them all from the trimmed
+omnigibson_5_1_0.kit [dependencies], which means the handful of OmniGibson
+code paths that casually reach for one of them (semantic labels, debug
+colors, the viewport USD watcher used during og.clear()) need a stand-in.
+None of these are used
 for pose-based BDDL predicate checks, so every stub here is a safe no-op for
 this validation's purposes - just enough surface for the call sites that
 still reach for them to succeed instead of crashing.

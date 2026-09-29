@@ -2,17 +2,15 @@
 `PolicyEntry` records, verify their pinned checkpoint hashes and control
 contract, and construct runnable policy clients.
 
-Task 08 (plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md). Per the repo audit
-behind this task, exactly two real checkpoints exist locally under
+Two real checkpoints are expected locally under
 `${OPENPI_DATA_HOME}/openpi-assets-simeval/` (`pi05_droid_jointpos`
 and `droid_pi05_jointpos_with_web_and_sim/80000`), plus the checkpoint-free
-`scripted_sinusoid` smoke test -- these three are `configs/experiments/
-frozen_fields.yaml`'s `policies` list verbatim. The plan file's aspirational
-matrix (pi0-FAST, pi0, pi0-100k, PaliGemma-binning) is represented as
-registry entries with `status: unavailable` in
-`configs/policies/unavailable_stubs.yaml` rather than working adapters --
-`make_client` on any of those raises `PolicyUnavailableError` naming the
-missing checkpoint, never a generic crash.
+`scripted_sinusoid` smoke test -- these three are `configs/policies/
+frozen_fields.yaml`'s `policies` list verbatim. Policies without a local
+checkpoint can be declared as registry entries with `status: unavailable`
+rather than working adapters -- `make_client` on any of those raises
+`PolicyUnavailableError` naming the missing checkpoint, never a generic
+crash.
 """
 from __future__ import annotations
 
@@ -24,6 +22,7 @@ from pydantic import BaseModel, ConfigDict
 
 from robo.manifest import hash as manifest_hash
 from robo.policy.control_contract import (
+    FROZEN_FIELDS_PATH,
     ControlContract,
     ControlContractMismatchError,
     validate_against_frozen,
@@ -46,9 +45,8 @@ class UnknownPolicyError(PolicyRegistryError, KeyError):
 
 class PolicyUnavailableError(PolicyRegistryError):
     """`make_client` called on a `status: unavailable` policy (no local
-    checkpoint). Always names the missing checkpoint URI, per Task 08's
-    test requirement that this be a clear, specific error rather than a
-    generic crash somewhere downstream."""
+    checkpoint). Always names the missing checkpoint URI so this is a clear,
+    specific error rather than a generic crash somewhere downstream."""
 
 
 class CheckpointHashMismatchError(PolicyRegistryError):
@@ -57,8 +55,8 @@ class CheckpointHashMismatchError(PolicyRegistryError):
     match `robo.manifest.hash.hash_checkpoint_path` computed fresh against
     `checkpoint_path` right now -- the checkpoint on disk changed size or
     mtime since the config was pinned, so this run must not silently enter
-    the main benchmark matrix (Task 08 acceptance criteria / plan/08 tests:
-    'Hash mismatch prevents a run from entering the main matrix')."""
+    the main benchmark matrix (a hash mismatch prevents a run from entering
+    the main matrix)."""
 
 
 # ---------------------------------------------------------- entry schema --
@@ -111,7 +109,7 @@ class PolicyEntry(BaseModel):
     model_action_convention: str | None = None
     # What the CLIENT hands to the environment, downstream of any
     # server-side transform (e.g. openpi's AbsoluteActions). This IS
-    # validated against configs/experiments/frozen_fields.yaml.
+    # validated against configs/policies/frozen_fields.yaml.
     env_action_convention: Literal["absolute_joint_position", "joint_delta"] = (
         "absolute_joint_position"
     )
@@ -137,7 +135,7 @@ class PolicyEntry(BaseModel):
     image_preprocessing: ImagePreprocessing = ImagePreprocessing()
     language_template: str = "{instruction}"
 
-    # --- provenance / paper-facing bookkeeping ----------------------------
+    # --- provenance / reporting bookkeeping -------------------------------
     published_real_score_ref: str | None = None
     notes: str = ""
 
@@ -154,9 +152,13 @@ class PolicyRegistry:
     def from_config_dir(cls, config_dir: "str | Path" = DEFAULT_CONFIG_DIR) -> "PolicyRegistry":
         """Load every `*.yaml` file under `config_dir`. Each file's
         top-level `policies:` key is a list of `PolicyEntry`-shaped dicts
-        (see `configs/policies/*.yaml` for the four real files)."""
+        (see `configs/policies/*.yaml`). The frozen control contract
+        (`frozen_fields.yaml`) lives in the same directory but is not a
+        registry file, so it is skipped."""
         entries: dict[str, PolicyEntry] = {}
         for path in sorted(Path(config_dir).glob("*.yaml")):
+            if path.name == FROZEN_FIELDS_PATH.name:
+                continue
             doc = yaml.safe_load(path.read_text()) or {}
             raw_entries = doc.get("policies", [])
             for raw in raw_entries:
@@ -241,11 +243,10 @@ class PolicyRegistry:
         Order of checks, each with a specific, named error rather than a
         downstream crash:
           1. `status`/`client_kind` unavailable -> `PolicyUnavailableError`
-             naming the missing checkpoint (never a generic exception --
-             Task 08 test requirement).
+             naming the missing checkpoint (never a generic exception).
           2. pinned checkpoint hash mismatch -> `CheckpointHashMismatchError`.
           3. (if `strict_contract`, the default) control-contract mismatch
-             against `configs/experiments/frozen_fields.yaml` ->
+             against `configs/policies/frozen_fields.yaml` ->
              `ControlContractMismatchError`.
 
         Remaining `**kwargs` are forwarded to the client class's
@@ -256,9 +257,8 @@ class PolicyRegistry:
         if entry.status == "unavailable" or entry.client_kind == "unavailable":
             raise PolicyUnavailableError(
                 f"policy {policy_id!r} is unavailable: no local checkpoint "
-                f"exists (checkpoint_uri={entry.checkpoint_uri!r}). Per the "
-                f"repo audit behind Task 08, this checkpoint has never been "
-                f"downloaded to this cluster -- populate "
+                f"exists (checkpoint_uri={entry.checkpoint_uri!r}). This "
+                f"checkpoint has not been downloaded locally -- populate "
                 "$OPENPI_DATA_HOME/ (and give the entry a real "
                 f"checkpoint_path + client_kind) before requesting a "
                 f"runnable client for it.")
@@ -285,7 +285,7 @@ class PolicyRegistry:
             if issues:
                 raise ControlContractMismatchError(
                     f"policy {policy_id!r} fails control-contract "
-                    f"validation against configs/experiments/"
+                    f"validation against configs/policies/"
                     f"frozen_fields.yaml: " + "; ".join(issues))
 
         from robo.policy.clients import CLIENT_KIND_TO_CLASS
@@ -306,7 +306,7 @@ def load_default_registry(config_dir: "str | Path" = DEFAULT_CONFIG_DIR) -> Poli
     """Cache-and-return a `PolicyRegistry` loaded from `config_dir`
     (default `configs/policies/`). Separate from `PolicyRegistry.
     from_config_dir` so repeated calls in one process don't re-parse every
-    yaml file, while tests/`from_config_dir` callers that want a fresh,
+    yaml file, while `from_config_dir` callers that want a fresh,
     uncached load still can."""
     global _DEFAULT_REGISTRY
     if _DEFAULT_REGISTRY is None or Path(config_dir) != DEFAULT_CONFIG_DIR:

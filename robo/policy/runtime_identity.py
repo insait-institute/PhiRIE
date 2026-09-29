@@ -117,7 +117,7 @@ def verify_checkpoint(
 def runtime_checkpoint_path(
     cache_root: str | Path, policy_id: str, checkpoint_fingerprint: str,
 ) -> Path:
-    """Return the deterministic node-local path for one sealed checkpoint."""
+    """Return the deterministic cache path for one sealed checkpoint."""
     root = Path(cache_root).expanduser()
     if not root.is_absolute():
         raise PolicyRuntimeIdentityError("checkpoint_cache_root must be absolute")
@@ -131,7 +131,7 @@ def stage_checkpoint(
     *, source_path: str | Path, checkpoint_fingerprint: str,
     cache_root: str | Path, policy_id: str,
 ) -> Path:
-    """Copy a checkpoint to local scratch with locking and full verification.
+    """Copy a checkpoint into the cache root with locking and full verification.
 
     A receipt or sentinel is never trusted.  Every reuse fingerprints the
     complete destination.  A corrupt prior destination is moved aside for
@@ -242,7 +242,7 @@ def build_server_identity(
 
 
 def expected_server_identity_from_config(config: Mapping[str, Any]) -> dict[str, Any]:
-    """Build the expected server identity from an E4 harness contract."""
+    """Build the expected server identity from a serving contract config."""
     contract = config.get("contract")
     if not isinstance(contract, Mapping):
         raise PolicyRuntimeIdentityError("harness contract is missing")
@@ -286,7 +286,7 @@ def validate_server_identity(
 ) -> dict[str, Any]:
     """Validate a websocket/health identity and return an isolated copy.
 
-    ``expected`` is an exact full identity generated from the harness config.
+    ``expected`` is an exact full identity generated from the serving contract.
     ``expected_policy`` is the registry-level subset used by legacy callers;
     it still prevents a server for another checkpoint or training config from
     being accepted.

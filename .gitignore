@@ -10,27 +10,17 @@ __pycache__/
 *.egg-info/
 
 # ---- vendored third-party checkouts (re-clone via run/setup_env.sh) ----
-# bddl_data is the exception: it backs agents/eval/behavior1k_coverage
-# (paper Sec V.H); READMEs stay tracked so the layout is documented.
 third_party/*
-!third_party/bddl_data/
 !third_party/README.md
 
-# ---- data, weights and run products (contents live on the cluster) ----
+# ---- data, weights and run products (never tracked) ----
 outputs/
 data/*
 !data/README.md
-!data/zeroshot_100_scenes.txt
-!data/zeroshot_100_scenes.json
-checkpoints/*
-!checkpoints/README.md
+checkpoints/
 weights
 *.log
 MUJOCO_LOG.TXT
-
-# ---- regenerated-on-demand test scratch (see tests/data/phone/make_fixtures.py) ----
-tests/data/phone/_canvas.png
-tests/data/phone/_marker.png
 
 # ---- large binaries ----
 *.ply
@@ -40,8 +30,6 @@ tests/data/phone/_marker.png
 *.safetensors
 *.pt
 *.pth
-
-slurm-*.out
 
 /configs/runtime.local.json
 

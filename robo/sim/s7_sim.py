@@ -135,8 +135,9 @@ def build_background(
             raise ValueError("automatic background requires explicit automatic namespace and AUTO=1")
 
     # The public Open3D package eagerly imports its optional Dash/Flask UI
-    # stack.  Slurm execution deliberately disables user-site leakage, so use
-    # the repository-validated CPU pybind backend directly for geometry/I/O.
+    # stack.  The launchers set PYTHONNOUSERSITE=1 where user-site packages
+    # would leak in, so use the repository-validated CPU pybind backend
+    # directly for geometry/I/O.
     o3d = open3d_registration_backend()
 
     if len(objects) != len(aligneds):

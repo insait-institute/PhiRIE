@@ -1,32 +1,26 @@
-# Task 08. The sim-co-trained variant frozen_fields.yaml names as
+# The sim-co-trained variant frozen_fields.yaml names as
 # `droid_pi05_jointpos_with_web_and_sim`. Same wire contract as
 # pi05_droid_jointpos.yaml (both served by run/pi05_serve.sh with only
 # --policy.config/--policy.dir differing) -- shares client_kind:
 # pi05_server / robo.policy.clients.pi05_client.Pi05PolicyClient.
 #
-# status: verified, as of 2026-08-16. Previously exploratory: per
-# the internal sim-eval notes (last touched 2026-08-04), this
-# checkpoint had never actually been run through robo/eval/pi05_eval.py in
-# this repo despite being downloaded and wired since 2026-08-01. Closed-loop
-# verification (Task 08 follow-up, 2026-08-16, SLURM job 707333, debug
-# partition on hala) ran it for real: `SIMANY_PI05_CKPT=
-# droid_pi05_jointpos_with_web_and_sim/80000 SIMANY_PI05_CONFIG=
-# pi05_droid_jointpos_sim` served via run/pi05_serve.sh, evaluated with
-# robo/eval/pi05_eval.py (raster obs, scene c50d2d1d42, 3 tasks x 10
-# episodes = 30 total, --time-limit 32). Result: 5/30 nonzero (16.7%), 2
-# clean grasp+lift episodes (score 0.50), 3 grasp-only (score 0.25), 0/30
-# full "place" success, mean staged score 0.058 -- see
-# outputs/pi05_runs/verify0816_sim_raster/results.json. This is
+# status: verified, as of 2026-08-16, by a closed-loop run in this repo:
+# `SIMANY_PI05_CKPT=droid_pi05_jointpos_with_web_and_sim/80000
+# SIMANY_PI05_CONFIG=pi05_droid_jointpos_sim` served via run/pi05_serve.sh,
+# evaluated with robo/eval/pi05_eval.py (raster obs, scene c50d2d1d42,
+# 3 tasks x 10 episodes = 30 total, --time-limit 32). Result: 5/30 nonzero
+# (16.7%), 2 clean grasp+lift episodes (score 0.50), 3 grasp-only (score
+# 0.25), 0/30 full "place" success, mean staged score 0.058. This is
 # non-degenerate, staged behavior consistent with the rubric (partial credit
 # scales with how far the manipulation got) and the same order of magnitude
 # as pi05_droid_jointpos's own same-scene raster baseline (docs/ROBOT.md:
 # 2/15 nonzero, 2 lifts) -- i.e. checkpoint-to-behavior correspondence is
-# now real-run-verified per Task 08 step 6, not a rubber-stamp. It is NOT a
-# match to a published real-world score (none exists for this bespoke
-# sim-co-trained variant); see published_real_score_ref below for exactly
-# what "verified" means here. The one JAX-jit-warmup websocket disconnect
-# (2 reconnects) during first inference was the documented docs/ROBOT.md
-# gotcha, not a failure -- the client's retry logic recovered as designed.
+# real-run-verified, not a rubber-stamp. It is NOT a match to a published
+# real-world score (none exists for this bespoke sim-co-trained variant);
+# see published_real_score_ref below for exactly what "verified" means
+# here. The one JAX-jit-warmup websocket disconnect (2 reconnects) during
+# first inference was the documented docs/ROBOT.md gotcha, not a failure --
+# the client's retry logic recovered as designed.
 policies:
   - id: droid_pi05_jointpos_with_web_and_sim
     status: verified
@@ -67,20 +61,17 @@ policies:
     published_real_score_ref: >-
       No published real-world score exists for this bespoke sim-co-trained
       variant, so "verified" here means real-run-verified-in-this-repo, not
-      matched to an external number. Citable run:
-      outputs/pi05_runs/verify0816_sim_raster/results.json (SLURM job
-      707333, 2026-08-16, raster obs, scene c50d2d1d42, 30 episodes across 3
-      tasks x10) -- 5/30 nonzero (16.7%), 2 grasp+lift (0.50), 3 grasp-only
-      (0.25), 0/30 full success, mean staged score 0.058. Order-of-magnitude
+      matched to an external number. Reference run: 2026-08-16, raster obs,
+      scene c50d2d1d42, 30 episodes across 3 tasks x10 -- 5/30 nonzero
+      (16.7%), 2 grasp+lift (0.50), 3 grasp-only (0.25), 0/30 full success,
+      mean staged score 0.058. Order-of-magnitude
       match to pi05_droid_jointpos's own same-scene raster baseline
       (docs/ROBOT.md: 2/15 nonzero, 2 lifts) confirms non-degenerate
       checkpoint-to-behavior correspondence.
     notes: >-
       Downloaded 2026-08-01 (12 GB, anonymous GCS HTTPS) and wired into
       run/pi05_serve.sh. Verified 2026-08-16 via a real robo.eval.pi05_eval
-      closed-loop run (job 707333, see published_real_score_ref) after
-      the internal sim-eval notes (2026-08-04) flagged it as
-      the top-ranked UNTRIED lever for the wrist-camera near-field failure
-      mode. The other untried lever noted there -- depth-compositing the
-      MuJoCo table into the wrist view -- remains open and unrelated to this
-      status change.
+      closed-loop run (see published_real_score_ref); it was tried as the
+      top-ranked lever for the wrist-camera near-field failure mode. The
+      other untried lever -- depth-compositing the MuJoCo table into the
+      wrist view -- remains open and unrelated to this status change.

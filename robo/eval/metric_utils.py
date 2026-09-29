@@ -1,4 +1,4 @@
-"""Small dependency-light utilities shared by paper table generators."""
+"""Small dependency-light utilities shared by the metric table generators."""
 from __future__ import annotations
 
 import csv

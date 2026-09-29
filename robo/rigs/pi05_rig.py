@@ -132,7 +132,7 @@ def load_rig_spec(menagerie_root=None):
     # aimed well past the fingertips so the workspace stays in frame.
     # A first attempt offset sideways behind the (wide) actuator housing
     # and aimed just past the pinch point - the housing filled >50% of the
-    # frame at every arm pose tested (see docs/DEMO_STORYBOARD-style debug
+    # frame at every arm pose tested (see the debug
     # dumps in outputs/pi05_runs/dbg1_*/*_wr224.png), plausibly enough of a
     # distribution shift from real DROID wrist framing to explain the
     # near-zero commanded joint deltas seen in closed-loop eval. Verified

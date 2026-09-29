@@ -1,6 +1,5 @@
 {
   "id": "registration",
-  "branch": "module/registration-v2",
   "description": "Metric asset alignment and candidate selection",
   "inputs": [
     "generated assets; observed object geometry"

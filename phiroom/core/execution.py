@@ -50,26 +50,25 @@ def plan(
         file = root / target
         argv = ["bash", str(file)]
     elif kind == "phiview":
-        file = root / "integrations/phiview/physicalview/cli.py"
+        file = root / "tools/phiview/physicalview/cli.py"
         argv = ["bash", str(root / "run/phiview.sh")]
     else:
         raise ValueError(f"unknown command kind: {kind}")
     if not file.is_file():
         raise ValueError(
-            f"missing implementation: {file}; initialize submodules if needed"
+            f"missing implementation: {file}"
         )
     if any(not isinstance(v, str) or "\0" in v for v in args):
         raise ValueError("backend arguments must be strings without NUL characters")
     exports = {"SIMANY_ROOT": str(root), "PYTHONNOUSERSITE": "1", **cfg.get("env", {})}
     exports["SIMANY_ROOT"] = str(root)
-    # Legacy shell launchers and preflight consume these same aliases.
-    if kind == "shell" or target == "simfactory.runner":
+    # Shell launchers and the SimFactory runner consume these same aliases.
+    if kind == "shell" or target == "robo.simfactory.runner":
         from phiroom.core.runtime import RUNTIMES
 
         exports.update(
             {key: interpreter(alias, root, cfg) for alias, (key, _) in RUNTIMES.items()}
         )
-        exports["SIMANY_CAMPAIGN_PY"] = interpreter("control", root, cfg)
 
     def paths(values):
         if any(not isinstance(v, str) or not v for v in values):

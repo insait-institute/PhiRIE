@@ -19,20 +19,6 @@
 #        >=2-frame confirmation merge), RESUME=1 skips finished stages.
 set -e
 
-# Explicit prospective CPU stage. Historical behavior below is unchanged;
-# this branch never invokes backend fallback, splat training or the AUTO tail.
-if [[ "${1:-}" == "--prospective-config" ]]; then
-  [[ $# == 6 && "$3" == "--stage-root" && "$5" == "--workspace" ]] || {
-    echo 'usage: run/run_droid_recon.sh --prospective-config CONFIG --stage-root FREEZE_ROOT --workspace ID' >&2
-    exit 2
-  }
-  CODE_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-  cd "$CODE_ROOT"
-  exec "${SIMANY_PY:-$CODE_ROOT/.venv/bin/python}" -m robo.eval.real_world_records \
-    --config "$2" --stage-root "$4" --prospective-workspace "$6" \
-    --freeze-id "$(basename "$4")" --out "$4/real_world" --repo-root "$CODE_ROOT"
-fi
-
 SIMANY_ROOT=${SIMANY_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
 RAW_ROOT=${RAW_ROOT:-${SIMANY_ROOT:-$PWD}/data/droid/raw}
 EPISODE=${EPISODE:?set EPISODE=<lab>/success/<date>/<ts> (path under $RAW_ROOT)}
@@ -92,16 +78,16 @@ if ! done_skip "$RECON_DIR/recon.npz"; then
       if ! run agents.recon.colmap_poses --images-dir "$FRAMES" \
              --out "$RECON_DIR/recon.npz" --workdir "$RECON_DIR/colmap"; then
         echo "[droid_recon] COLMAP failed - falling back to feed-forward"
-        run models.vggt_scene --images-dir "$FRAMES" \
+        run agents.models.vggt_scene --images-dir "$FRAMES" \
           --out "$RECON_DIR/recon.npz" --backend omega || \
-        run models.vggt_scene --images-dir "$FRAMES" \
+        run agents.models.vggt_scene --images-dir "$FRAMES" \
           --out "$RECON_DIR/recon.npz" --backend vggt
       fi ;;
     omega)
-      run models.vggt_scene --images-dir "$FRAMES" \
+      run agents.models.vggt_scene --images-dir "$FRAMES" \
         --out "$RECON_DIR/recon.npz" --backend omega ;;
     *)
-      run models.vggt_scene --images-dir "$FRAMES" \
+      run agents.models.vggt_scene --images-dir "$FRAMES" \
         --out "$RECON_DIR/recon.npz" --backend vggt ;;
   esac
 fi
@@ -160,7 +146,7 @@ done_skip "$SIMANY_OUT/objects/.masks_refined" || {
   touch "$SIMANY_OUT/objects/.masks_refined"; }
 
 stage_timed "s4 TRELLIS image-to-3D"
-run models.s4_trellis
+run agents.models.s4_trellis
 
 stage_timed "factory_align (register to own extraction)"
 run agents.assets.factory_align

@@ -1,6 +1,5 @@
 {
   "id": "baselines",
-  "branch": "module/baselines-v2",
   "description": "Single-image and comparison methods",
   "inputs": [
     "single image or reconstructed scene as required by backend"

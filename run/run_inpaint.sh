@@ -1,11 +1,11 @@
 #!/bin/bash
 # Gaussian-native object removal + background completion for a factory scene.
-# Produces clean_background.ply (drop-in Inria ply). Run on a GPU node.
+# Produces clean_background.ply (drop-in Inria ply). Run on a GPU machine.
 set -e
 source "$(dirname "${BASH_SOURCE[0]}")/env.sh"
 export SIMANY_OUT=${SIMANY_OUT:-$ROOT/outputs/${SIMANY_SCENE}_factory}
 
-# LaMa fallback weights (prefetched; GPU nodes may lack egress)
+# LaMa fallback weights (prefetched; GPU machines may lack egress)
 BL=$(ls ~/.cache/torch/hub/checkpoints/*lama*.pt 2>/dev/null | head -1)
 [ -n "$BL" ] && export LAMA_MODEL="$BL"
 

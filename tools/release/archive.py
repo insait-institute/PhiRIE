@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an exact Git source ZIP including bundled or submodule PhiView files."""
+"""Build an exact Git source ZIP of a committed tree (PhiView source is bundled)."""
 
 import argparse
 import hashlib
@@ -18,17 +18,10 @@ def git(*argv, cwd=ROOT):
 
 def build(ref, out, prefix):
     sha = git("rev-parse", "--verify", ref + "^{commit}")
-    entry = git("ls-tree", sha, "integrations/phiview").split()
-    is_submodule = entry[:2] == ["160000", "commit"]
-    if is_submodule:
-        child = entry[2]
-    elif entry[:2] == ["040000", "tree"]:
-        manifest = json.loads(
-            git("show", sha + ":integrations/phiview/SOURCE_PROVENANCE.json")
-        )
-        child = manifest["commit"]
-    else:
-        raise ValueError("reference has no bundled or submodule PhiView source")
+    entry = git("ls-tree", sha, "tools/phiview").split()
+    if entry[:2] != ["040000", "tree"]:
+        raise ValueError("reference has no bundled PhiView source")
+    child = json.loads(git("show", sha + ":tools/phiview/SOURCE_PROVENANCE.json"))["commit"]
     if not prefix or "/" in prefix or "\\" in prefix or prefix in {".", ".."}:
         raise ValueError("prefix must be one directory name")
     out = Path(out).absolute()
@@ -36,7 +29,7 @@ def build(ref, out, prefix):
         raise ValueError(f"archive already exists: {out}")
     out.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="archive-", dir=out.parent) as tmp:
-        parent_zip, child_zip = Path(tmp) / "parent.zip", Path(tmp) / "child.zip"
+        parent_zip = Path(tmp) / "parent.zip"
         subprocess.run(
             [
                 "git",
@@ -50,32 +43,6 @@ def build(ref, out, prefix):
             cwd=ROOT,
             check=True,
         )
-        if is_submodule:
-            subprocess.run(
-                [
-                    "git",
-                    "archive",
-                    "--format=zip",
-                    f"--prefix={prefix}/integrations/phiview/",
-                    "-o",
-                    str(child_zip),
-                    child,
-                ],
-                cwd=ROOT / "integrations/phiview",
-                check=True,
-            )
-            with (
-                zipfile.ZipFile(parent_zip, "a") as archive,
-                zipfile.ZipFile(child_zip) as viewer,
-            ):
-                names = set(archive.namelist())
-                for info in viewer.infolist():
-                    if info.filename in names:
-                        if info.is_dir():
-                            continue
-                        raise ValueError(f"duplicate file: {info.filename}")
-                    archive.writestr(info, viewer.read(info))
-                    names.add(info.filename)
         with zipfile.ZipFile(parent_zip) as archive:
             if archive.testzip() is not None:
                 raise ValueError("ZIP CRC verification failed")
@@ -83,8 +50,8 @@ def build(ref, out, prefix):
                 "pyproject.toml",
                 "envs/control/uv.lock",
                 "phiroom/cli.py",
-                "integrations/phiview/physicalview/web/phiview.html",
-                "integrations/phiview/uv.lock",
+                "tools/phiview/physicalview/web/phiview.html",
+                "tools/phiview/uv.lock",
             ):
                 archive.getinfo(prefix + "/" + path)
             files = sum(not i.is_dir() for i in archive.infolist())

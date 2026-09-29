@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Verify module entry points, versions, and bundled or submodule PhiView source."""
+"""Verify module entry points, version agreement and the bundled PhiView source."""
 
 import argparse
 import hashlib
 import json
-import subprocess
 import sys
 from pathlib import Path
 
@@ -35,48 +34,25 @@ def verify_bundled_source(directory):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--skip-submodule",
-        action="store_true",
-        help="parent-only CI; explicitly leaves submodule validation NOT_RUN",
-    )
-    args = parser.parse_args()
+    parser.parse_args()
     project = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]
     if project["version"] != __version__:
         raise SystemExit("package and CLI versions differ")
     modules = catalog()
-    bundled = (ROOT / "integrations/phiview/SOURCE_PROVENANCE.json").is_file()
     count = 0
     for name, block in modules.items():
-        if not (ROOT / "pipelines" / name / "README.md").is_file():
+        if not (ROOT / "phiroom" / "pipelines" / name / "README.md").is_file():
             raise SystemExit(f"module guide missing: {name}")
-        for action, spec in block["actions"].items():
-            if args.skip_submodule and not bundled and spec.get("kind") == "phiview":
-                continue
+        for action in block["actions"]:
             plan(name, action, [], ROOT, {})
             count += 1
     result = {
         "version": __version__,
         "modules": len(modules),
         "actions_checked": count,
-        "submodule": "NOT_RUN",
         "gpu_execution": "NOT_RUN",
+        "bundled_phiview": verify_bundled_source(ROOT / "tools/phiview"),
     }
-    if bundled:
-        result["bundled_phiview"] = verify_bundled_source(ROOT / "integrations/phiview")
-        result["submodule"] = "NOT_APPLICABLE: PhiView source is bundled"
-    elif not args.skip_submodule:
-
-        def git(*argv, cwd=ROOT):
-            return subprocess.check_output(["git", *argv], cwd=cwd, text=True).strip()
-
-        entry = git("ls-tree", "HEAD", "integrations/phiview").split()
-        actual = git("rev-parse", "HEAD", cwd=ROOT / "integrations/phiview")
-        if entry[:2] != ["160000", "commit"] or entry[2] != actual:
-            raise SystemExit("PhiView is not checked out at the committed gitlink")
-        if git("status", "--porcelain", cwd=ROOT / "integrations/phiview"):
-            raise SystemExit("PhiView checkout is dirty")
-        result["submodule"] = {"status": "passed", "commit": actual}
     print(json.dumps(result, indent=2))
 
 

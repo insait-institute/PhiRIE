@@ -6,7 +6,7 @@ the dataset mesh's raycast depth to within ~2mm median, ratio 1.0000 (no
 scale bug) - see outputs/depth_check2.log.
 
 Two subcommands because gsplat and open3d don't reliably coexist in one
-env on this cluster (gsplat: mini-viewer env; open3d/TSDF: .venv):
+environment (gsplat: mini-viewer env; open3d/TSDF: .venv):
   render  (mini-viewer env, GPU) -> per-view color/depth/alpha/pose npz
   fuse    (.venv env, GPU for splat load but TSDF itself is CPU) -> mesh.ply
 
@@ -52,23 +52,13 @@ def seg_render(args):
     stride = getattr(args, "frame_stride", STRIDE)
     if stride < 1: raise ValueError("render frame stride must be positive")
     views_dir = C.OUT / "mesh_derive"
-    strict_split = getattr(args, "train_split", None)
-    if getattr(args, "max_train_frames", None) is not None and not strict_split:
-        raise ValueError("training frame limit requires an official split")
-    if strict_split and views_dir.exists():
-        raise FileExistsError("training-only render refuses an existing depth directory")
     views_dir.mkdir(parents=True, exist_ok=True)
     # clear stale views: a prior denser-STRIDE run leaves higher-index files
     # that fuse's glob would silently integrate at incompatible settings
     for f in views_dir.glob("view_*.npz"):
         f.unlink()
     K, W, H, _, w2c_all = reconstruction_cameras(args)
-    if strict_split:
-        from agents.discover.training_views import select_training_views, write_training_manifest
-        w2c_all, manifest = select_training_views(w2c_all, strict_split, stride, getattr(args, "max_train_frames", None))
-        write_training_manifest(views_dir / "training_views.json", manifest)
-    else:
-        w2c_all = w2c_all[::stride]
+    w2c_all = w2c_all[::stride]
     splat = getattr(args, "splat_ply", None)
     gs = C.load_gaussians(splat) if splat else C.load_gaussians()
 
@@ -112,25 +102,6 @@ def seg_fuse(args):
     if not files:
         raise SystemExit(f"[dm] no rendered views in {views_dir} - run "
                          "'render' first (mini-viewer env)")
-    manifest_path = views_dir / "training_views.json"
-    strict_split = getattr(args, "train_split", None)
-    if strict_split and not manifest_path.is_file():
-        raise ValueError("training-only fusion requires a render training-view manifest")
-    if manifest_path.exists():
-        import json
-        from agents.discover.training_views import validate_fusion_frames
-        if (C.OUT / "derived_mesh.ply").exists():
-            raise FileExistsError("training-only fusion refuses an existing derived mesh")
-        def frame_name(path):
-            with np.load(path, allow_pickle=False) as data:
-                return str(data["fname"].item())
-        manifest = json.loads(manifest_path.read_text())
-        if strict_split:
-            from pathlib import Path
-            if str(Path(strict_split).resolve()) != manifest["split"]["path"]:
-                raise ValueError("fusion and rendering declare different official splits")
-        validate_fusion_frames(files, manifest, frame_name)
-
     K, W, H, _, _ = reconstruction_cameras(args)
     Ks = np.asarray(K, dtype=np.float64).copy()
     Ks[:2] *= SCALE
@@ -173,11 +144,8 @@ def main():
     render_parser.add_argument("--frame-stride", type=int, default=STRIDE)
     render_parser.add_argument("--scene-dir", type=str)
     render_parser.add_argument("--splat-ply", type=str)
-    render_parser.add_argument("--max-train-frames", type=int)
-    render_parser.add_argument("--train-split", help="official train_test_lists.json; filter before stride")
     fuse_parser = sp.add_parser("fuse")
     fuse_parser.add_argument("--scene-dir", type=str)
-    fuse_parser.add_argument("--train-split", help="require the matching training-only render manifest")
     args = ap.parse_args()
     {"render": seg_render, "fuse": seg_fuse}[args.cmd](args)
 

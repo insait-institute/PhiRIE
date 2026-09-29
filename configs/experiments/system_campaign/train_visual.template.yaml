@@ -1,9 +1,0 @@
-train_pairs: /RESOLVE/same-state-training-pairs.jsonl
-dev_pairs: /RESOLVE/heldout-scene-dev-pairs.jsonl
-device: cuda
-seed: 2027
-width: 32
-bound: 0.12549019607843137 # 32/255, freeze on DEV
-lr: 0.0001
-epochs: 10
-gradient_weight: 0.1

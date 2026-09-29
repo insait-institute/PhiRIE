@@ -1,10 +1,10 @@
 # videos/ — drop a phone video, get a simulatable scene
 
 Any `*.mp4` dropped here can be turned into a sim-ready scene with **no
-dataset, no GT, no poses**: video → VGGT reconstruction → metric scale +
-z-up → emulated ScanNet++-style scene dir → 3DGS training → the AUTO
-pipeline (derived mesh, SAM3 discovery, TRELLIS assets, physics, MJCF +
-task suite).
+dataset, no GT, no poses**: video → frame extraction → camera poses (COLMAP,
+with a feed-forward VGGT fallback) → metric scale + z-up → emulated
+ScanNet++-style scene dir → 3DGS training → the automatic pipeline (derived
+mesh, SAM3 discovery, TRELLIS assets, physics, MJCF + task suite).
 
 ## What to record
 
@@ -20,23 +20,30 @@ task suite).
 - **Show the floor** — metric up-axis alignment RANSACs the floor plane;
   a clip that never sees the floor will abort at the `metricize` stage.
 
+[capture/README.md](../capture/README.md) describes a two-pass filming
+procedure and a validator that scores blur, motion and coverage before the
+GPU stages run.
+
 ## How to launch
+
+On a GPU machine with the three environments set up
+([docs/ENVIRONMENTS.md](../docs/ENVIRONMENTS.md)):
 
 ```bash
 cd /path/to/PhiRIE
 
-# one clip, via slurm (A6000 debug partition, ~4 h budget):
-sbatch --export=ALL,VIDEO=$PWD/videos/myroom.mp4 run/slurm/video2sim.sbatch
-
-# every videos/*.mp4, sequentially, one job:
-sbatch run/slurm/video2sim.sbatch
-
-# or directly on a GPU node that has the three envs:
+# one clip:
 bash run/run_video2sim.sh --video videos/myroom.mp4
+
+# every videos/*.mp4, sequentially:
+bash run/run_video2sim.sh
 ```
 
-`RESUME=1` re-runs skip stages whose outputs already exist. Logs land in
-`outputs/video2sim_<jobid>.log`; per-stage wall times in
+Knobs: `RESUME=1` re-runs skip stages whose outputs already exist;
+`POSE_BACKEND=colmap|omega|vggt` (default `colmap`, with feed-forward
+fallback when too few frames register); `MAX_FRAMES` (default 240);
+`GS_ITERS` (default 30000); `SIMANY_OUT` overrides the output directory.
+Progress is printed to the terminal, and per-stage wall times go to
 `outputs/video_<name>/timings.txt`.
 
 ## Where results land
@@ -59,8 +66,8 @@ Scene name = sanitized video basename (`my room.mp4` → `my_room`).
 
 - **Rigid objects only** — articulated/deformable things become static or
   single rigid bodies.
-- **Metric scale from monodepth**, roughly ±10 %; don't trust absolute
-  sizes for tight-tolerance manipulation.
+- **Metric scale from monodepth** when the feed-forward backend is used,
+  roughly ±10 %; don't trust absolute sizes for tight-tolerance manipulation.
 - **z-up assumes a visible floor**; scenes without one abort rather than
   guess (rerecord with the floor in frame).
 - Objects outside the discovery vocabulary (`agents/core/common.py`

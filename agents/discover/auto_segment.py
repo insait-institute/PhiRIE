@@ -85,8 +85,6 @@ def main():
     ap.add_argument("--scene-dir", required=True)
     ap.add_argument("--out-dir", required=True)
     ap.add_argument("--frame-stride", type=int, default=FRAME_STRIDE)
-    ap.add_argument("--max-train-frames", type=int)
-    ap.add_argument("--train-split", help="official train_test_lists.json; filter before stride")
     ap.add_argument("--mesh-path", default="",
                     help="override the scan mesh raycasted against (ablation: "
                          "a self-derived mesh instead of the dataset's own). "
@@ -94,8 +92,6 @@ def main():
                          "array - common.load_auto_instances() must read the "
                          "same file (PIPELINE_MESH_PLY / SIMANY_MESH_SRC).")
     args = ap.parse_args()
-    if args.max_train_frames is not None and not args.train_split:
-        raise ValueError("training frame limit requires an official split")
     sd, out = Path(args.scene_dir), Path(args.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     mesh_path = Path(args.mesh_path) if args.mesh_path else \
@@ -108,14 +104,7 @@ def main():
                   [0, meta["fl_y"], meta["cy"]], [0, 0, 1]])
     W, H = int(meta["w"]), int(meta["h"])
     w2c_all = sorted(parse_colmap(sd / "dslr" / "colmap" / "images.txt").items())
-    if args.train_split:
-        from agents.discover.training_views import select_training_views, write_training_manifest
-        if (out / "auto_instances.npz").exists():
-            raise FileExistsError("training-only discovery refuses existing instances")
-        frames, frame_manifest = select_training_views(w2c_all, args.train_split, args.frame_stride, args.max_train_frames)
-        write_training_manifest(out / "discovery_training_views.json", frame_manifest)
-    else:
-        frames = w2c_all[::args.frame_stride]
+    frames = w2c_all[::args.frame_stride]
 
     mesh = o3d.io.read_triangle_mesh(str(mesh_path))
     verts = np.asarray(mesh.vertices)

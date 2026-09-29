@@ -3,7 +3,7 @@
 #   source "$(dirname "${BASH_SOURCE[0]}")/env.sh"
 #
 # Every path below can be overridden from the outside, so nothing in the
-# pipeline hardcodes a cluster location any more.
+# pipeline hardcodes a machine-specific location.
 
 # Repo root, derived from this file so the tree can be moved or cloned.
 SIMANY_ROOT=${SIMANY_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
@@ -19,7 +19,7 @@ VENV=${SIMANY_PY:-$ROOT/.venv/bin/python}
 SAM3PY=${SIMANY_SAM3_PY:-$ROOT/.envs/sam3/bin/python}
 MVPY=${SIMANY_GSPLAT_PY:-$ROOT/.envs/mini-viewer/bin/python}
 QWEN_PY=${QWEN_PY:-$VENV}   # override with SAM3PY on nodes with torch>=2.5 + VRAM
-# SAM 3D Objects (models.s4_sam3d): torch 2.5.1+cu121 + pytorch3d/kaolin,
+# SAM 3D Objects (agents.models.s4_sam3d): torch 2.5.1+cu121 + pytorch3d/kaolin,
 # built per third_party/sam-3d-objects/doc/setup.md into its own conda env
 SAM3D_PY=${SIMANY_SAM3D_PY:-$ROOT/.envs/sam3d-objects/bin/python}
 
@@ -38,7 +38,7 @@ IMG=$SD/dslr/resized_undistorted_images                     # posed RGB frames
 export HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-1}
 # HF_HOME / TORCH_HOME are honoured as-is. Point them at a shared cache when
 # the compute node cannot see the default per-user cache directory.
-# gsplat's JIT fallback prefers gcc<=13, but hala only ships gcc-14: probe for
+# gsplat's JIT fallback prefers gcc<=13, but some hosts only ship gcc-14: probe for
 # the newest usable one instead of hardcoding (a missing $CXX kills even
 # cache-reuse loads — torch verifies the compiler before checking the cache).
 for _gxx in g++-12 g++-13; do
@@ -55,7 +55,7 @@ export NVCC_APPEND_FLAGS=${NVCC_APPEND_FLAGS:--allow-unsupported-compiler}
 export TORCH_CUDA_ARCH_LIST=${TORCH_CUDA_ARCH_LIST:-"8.6;9.0+PTX"}
 
 # Stages are modules: `run <package>.<module> [args...]` from the repo root,
-# e.g. `run agents.assets.s5_align` or `run_sam3 models.s1_segment`.
+# e.g. `run agents.assets.s5_align` or `run_sam3 agents.models.s1_segment`.
 # `python -m` puts the repo root on sys.path, which is why we cd there.
 cd "$ROOT"
 run()      { local m=$1; shift; $VENV      -m "$m" "$@"; }

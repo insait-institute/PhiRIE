@@ -1,35 +1,36 @@
-# The SimAny generation pipeline
+# The construction pipeline
 
 How posed RGB images + a scan mesh + a 3D Gaussian splat become a
-simulation-ready digital twin, stage by stage. Environment details (why three
-python envs exist and what runs where) are in [ENVIRONMENTS.md](ENVIRONMENTS.md);
-audited results live in [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and
-[BASELINES.md](BASELINES.md).
+simulation-ready digital twin, stage by stage. Environment details (which
+python environments exist and what runs where) are in
+[ENVIRONMENTS.md](ENVIRONMENTS.md); the code map and every environment
+variable are in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 Every stage is a python module run from the repo root (`python -m
 agents.assets.s5_align`), normally via the helpers defined in
 [`run/env.sh`](../run/env.sh): `run` (main `.venv`), `run_sam3` (sam3 env),
-`run_gs` (mini-viewer/gsplat env), `run_qwen` (`QWEN_PY`, defaults to the main
-venv). Scene selection and paths come from `SIMANY_*` environment variables
+`run_gs` (gsplat env), `run_qwen` (`QWEN_PY`, defaults to the main venv).
+Scene selection and paths come from `SIMANY_*` environment variables
 (`SIMANY_SCENE`, `SIMANY_OUT`, `SIMANY_SCANNETPP_ROOT`, `SIMANY_SPLATS_ROOT`,
 ...); the legacy `SIMF_*` prefix is still read with a deprecation warning.
 `RESUME=1` makes the guarded early stages skip themselves when their output
 already exists (stages wrapped in `done_skip`; the generation stages always
-run, though s4 keeps its own mtime cache).
+run, though s4 keeps its own mtime cache). The same stages are also exposed
+as module actions of the `phiroom` CLI ([MODULES.md](MODULES.md)).
 
-## 1. The four modes
+## 1. The launchers
 
-### [`run/run_factory.sh`](../run/run_factory.sh) — GT-driven benchmark
+### [`run/run_factory.sh`](../run/run_factory.sh) — GT-driven
 
 Uses ScanNet++ GT instance annotations to enumerate objects (perception of
-each object is still image-based). This is the paper's "GT-driven" column /
-ablation row A. Output: `outputs/<scene>_factory`.
+each object is still image-based). This is the "GT-driven" configuration.
+Output: `outputs/<scene>_factory`.
 
 | # | stage | module | env helper |
 |---|---|---|---|
 | 1 | GT enumerate + best-view crops | `agents.discover.factory_prepare` | `run` |
 | 2 | SAM3 mask refinement | `agents.discover.factory_refine_masks` | `run_sam3` |
-| 3 | TRELLIS image-to-3D | `models.s4_trellis` | `run` |
+| 3 | TRELLIS image-to-3D | `agents.models.s4_trellis` | `run` |
 | 4 | register to GT submesh + tiers | `agents.assets.factory_align` | `run` |
 | 5 | CoACD + physics + URDF | `agents.assets.s6_physics` | `run` |
 | 6 | drop test + yield report | `agents.eval.factory_report` | `run` |
@@ -38,15 +39,15 @@ ablation row A. Output: `outputs/<scene>_factory`.
 ### [`run/run_auto.sh`](../run/run_auto.sh) — fully automatic (no GT)
 
 Sets `SIMANY_AUTO=1`. Posed images + mesh + gaussians in, MJCF + Isaac
-manifest out; no semantic annotations anywhere. The paper's headline
-"Automatic (no GT)" column / row B. Output: `outputs/<scene>_auto`.
+manifest out; no semantic annotations anywhere. This is the default
+"Automatic (no GT)" configuration. Output: `outputs/<scene>_auto`.
 
 | # | stage | module | env helper |
 |---|---|---|---|
 | 1 | SAM3 multi-frame discovery | `agents.discover.auto_segment` | `run_sam3` |
 | 2 | instances + best-view crops | `agents.discover.factory_prepare` | `run` |
 | 3 | SAM3 mask refinement | `agents.discover.factory_refine_masks` | `run_sam3` |
-| 4 | TRELLIS image-to-3D | `models.s4_trellis` | `run` |
+| 4 | TRELLIS image-to-3D | `agents.models.s4_trellis` | `run` |
 | 5 | register to own extraction | `agents.assets.factory_align` | `run` |
 | 6 | CoACD + physics + URDF | `agents.assets.s6_physics` | `run` |
 | 7 | drop test + yield report | `agents.eval.factory_report` | `run` |
@@ -54,22 +55,35 @@ manifest out; no semantic annotations anywhere. The paper's headline
 
 Because `auto_segment` emits the same per-instance contract that
 `load_gt_instances()` provides, stages 2-7 run byte-identically in both modes
-— that is what makes the GT-vs-automatic ablation a controlled comparison.
+— that is what makes the GT-vs-automatic comparison controlled.
 
-### [`run/run_simfoundry.sh`](../run/run_simfoundry.sh) — SimFoundry-reproduction baseline (single-frame zero-shot)
+### [`run/run_video2sim.sh`](../run/run_video2sim.sh) — from a phone video
 
-One representative frame, monocular metric depth, no GT: the paper-faithful
+No dataset, no GT, no poses: `agents.recon.frames` extracts frames,
+`agents.recon.colmap_poses` estimates poses (feed-forward fallback:
+`agents.models.vggt_scene`; `POSE_BACKEND=colmap|omega|vggt`),
+`agents.recon.metricize` fixes metric scale and z-up, `agents.recon.make_scene_dir`
+writes a ScanNet++-style scene directory under `data/recon_scenes/`, and
+`agents.recon.gsplat_train` trains the splat. The automatic chain above then
+runs against a mesh derived from the splat (`SIMANY_MESH_SRC=derived`,
+`agents.discover.derive_mesh_from_splat`), followed by `robo.tasks.pi05_tasks`.
+Output: `outputs/video_<name>`. See [videos/README.md](../videos/README.md).
+`run/run_droid_recon.sh` and `run/run_behavior_recon.sh` feed DROID episodes
+and BEHAVIOR clips through the same chain.
+
+### [`run/run_simfoundry.sh`](../run/run_simfoundry.sh) — single-frame baseline
+
+One representative frame, monocular metric depth, no GT: the faithful
 reproduction of the prior SimFoundry system (arXiv:2606.28276) that this
-project began from, kept as a baseline. The paper's ablation row D. Output:
-`outputs/<scene>`. (Formerly `run_scene.sh`.)
+project began from, kept as a baseline. Output: `outputs/<scene>`.
 
 | # | stage | module | env helper |
 |---|---|---|---|
 | 1 | s0 select frame | `agents.discover.s0_select_frame` | `run` |
-| 2 | s1 SAM3 segmentation | `models.s1_segment` | `run_sam3` |
-| 3 | s2 DA3 metric depth | `models.s2_depth` | `run` |
+| 2 | s1 SAM3 segmentation | `agents.models.s1_segment` | `run_sam3` |
+| 3 | s2 DA3 metric depth | `agents.models.s2_depth` | `run` |
 | 4 | s3 lift objects | `agents.discover.s3_lift` | `run` |
-| 5 | s4 TRELLIS image-to-3D | `models.s4_trellis` | `run` |
+| 5 | s4 TRELLIS image-to-3D | `agents.models.s4_trellis` | `run` |
 | 6 | s5 pose alignment + F1 eval | `agents.assets.s5_align` | `run` |
 | 7 | s6 CoACD + physics + URDF | `agents.assets.s6_physics` | `run` |
 | 8 | s7 PyBullet settle + dynamics | `robo.sim.s7_sim` | `run` |
@@ -93,20 +107,20 @@ section 4.
 
 ### s0 — representative frame selection (`agents/discover/s0_select_frame.py`)
 
-Zero-shot mode only. ScanNet++ DSLR captures walk the room, so instead of
+Single-frame mode only. ScanNet++ DSLR captures walk the room, so instead of
 "frame 0" it picks the frame that sees the most target objects, by projecting
 GT centroids with a mesh occlusion check. GT is used only to choose the frame;
-perception never sees it. Main venv. Writes `frame/rep_frame.json` + a copy of
-the chosen image.
+perception never sees it (`--no-gt` / `SIMANY_NO_GT=1` picks without GT). Main
+venv. Writes `frame/rep_frame.json` + a copy of the chosen image.
 
-### s1 — SAM3 segmentation (`models/s1_segment.py`)
+### s1 — SAM3 segmentation (`agents/models/s1_segment.py`)
 
 Text-prompted instance segmentation on the representative frame. Standalone on
 purpose (no `common.py` import) because it must run under the sam3 env, whose
 torch version differs from the main venv. Input: the image + class prompts;
 output: `masks/masks.npz` (masks, labels, scores) + an overlay image.
 
-### s2 — metric depth (`models/s2_depth.py`)
+### s2 — metric depth (`agents/models/s2_depth.py`)
 
 Monocular metric depth on the representative frame with DA3METRIC-LARGE
 (Depth Anything 3). DA3 outputs canonical depth for a focal-300px camera; the
@@ -123,22 +137,29 @@ writes `obj_XX/rgba.png` (the TRELLIS input crop), `points.ply` (the alignment
 target for s5), and `meta.json`; each instance is also matched to a GT object
 for evaluation and background carving only. Main venv.
 
-### s4 — TRELLIS image-to-3D (`models/s4_trellis.py`)
+### s4 — TRELLIS image-to-3D (`agents/models/s4_trellis.py`)
 
-Generates one asset per object from `obj_XX/rgba.png` — the paper's `V_mesh`
-slot. Outputs, all in the same canonical z-up ~[-0.5,0.5]^3 frame:
-`trellis_mesh.ply` (vertex-colored FlexiCubes mesh), `mesh_sim.ply/.obj`
-(<=40k-triangle decimation for collision/sim), and `trellis_gs.ply`
-(gaussians). Main venv, GPU.
+Generates one asset per object from `obj_XX/rgba.png`. Outputs, all in the
+same canonical z-up ~[-0.5,0.5]^3 frame: `trellis_mesh.ply` (vertex-colored
+FlexiCubes mesh), `mesh_sim.ply/.obj` (<=40k-triangle decimation for
+collision/sim), and `trellis_gs.ply` (gaussians). Main venv, GPU.
+`SIMANY_TRELLIS_MODEL` selects the weights (default
+`microsoft/TRELLIS-image-large`).
 
-### s4 alternative — ReconViaGen (`models/s4_reconviagen.py`)
+### s4 alternatives — ReconViaGen, TRELLIS.2, SAM 3D Objects
 
-Multi-view alternative for the `V_mesh` slot: per object, collect up to 12
-occlusion-aware masked crops across the DSLR trajectory and run
-VGGT-conditioned TRELLIS (ReconViaGen, arXiv 2510.23306), saving
-`rvg/` mesh + gaussians. Registered and F1-scored identically to the TRELLIS
-asset for a head-to-head comparison; the hybrid stage (section 3) arbitrates.
-Main venv, GPU.
+- `agents/models/s4_reconviagen.py`: multi-view alternative; per object,
+  collect up to 12 occlusion-aware masked crops across the DSLR trajectory and
+  run VGGT-conditioned TRELLIS (ReconViaGen, arXiv 2510.23306), saving `rvg/`
+  mesh + gaussians. Registered and F1-scored identically to the TRELLIS asset
+  for a head-to-head comparison; the hybrid stage (section 3) arbitrates.
+  Main venv, GPU.
+- `agents/models/s4_trellis2.py`: offline TRELLIS.2 mesh/PBR producer (no
+  gaussian output) in its own `trellis2` runtime; source, model and decoder
+  paths come from `SIMANY_TRELLIS2_*`, `SIMANY_DINOV3_MODEL` and
+  `SIMANY_SS_DECODER`.
+- `agents/models/s4_sam3d.py`: SAM 3D Objects (single image + mask -> 3D)
+  into `obj_XX/sam3d/`, in its own `sam3d` runtime (`run_sam3d`).
 
 ### s5 — Sim(3) registration (`agents/assets/s5_align.py`)
 
@@ -146,18 +167,17 @@ Registers each canonical asset into the metric scene: 3-DoF translation +
 3-DoF rotation + isotropic scale, with an upright (z-up) prior. Yaw candidates
 every 10 degrees are scored by clipped-mean one-way chamfer, refined by ICP,
 upright re-snap, then alternating scale polish and translation refinement.
-Also evaluates F1@2/4cm against the GT instance mesh. Main venv, CPU;
-dataset-free stress tests live in
-[`tests/test_align_synthetic.py`](../tests/test_align_synthetic.py).
+Also evaluates F1@2/4cm against the GT instance mesh when GT exists. Main
+venv, CPU.
 
 ### s6 — physics annotation (`agents/assets/s6_physics.py`)
 
 Makes each asset sim-ready: CoACD convex decomposition of `mesh_sim.ply` into
 `collision/part_*.obj` (<=16 parts, more for large objects), physical
-parameters (mass/friction/restitution) from a local VLM (Qwen2.5-7B-Instruct
-stands in for the paper's Gemini `V_scene` slot) with a density-table fallback,
-and `object.urdf` in the canonical frame with the registration scale baked
-into `<mesh scale>`. Main venv.
+parameters (mass/friction/restitution) from a local VLM
+(`Qwen/Qwen2.5-7B-Instruct`) with a density-table fallback, and `object.urdf`
+in the canonical frame with the registration scale baked into `<mesh scale>`.
+Main venv.
 
 ### s7 — PyBullet compose + settle (`robo/sim/s7_sim.py`)
 
@@ -173,8 +193,8 @@ trajectories for s8. Main venv.
 Renders the twin with gsplat: background scene splat + per-object TRELLIS
 gaussians transformed by the settled or per-frame simulated poses, composited
 into the real scene. Outputs `render/photo_vs_twin.png`, `physics.mp4`,
-`asset_gallery.png`, per-object turntables, `stats.json`. Mini-viewer env,
-GPU. The general-purpose version,
+`asset_gallery.png`, per-object turntables, `stats.json`. Gsplat env, GPU. The
+general-purpose version,
 [`agents/render/gsplat_sim_render.py`](../agents/render/gsplat_sim_render.py),
 consumes a pose log from any simulator (MuJoCo/Isaac/PyBullet) and renders
 video with the clean background splat when it exists.
@@ -195,7 +215,7 @@ Enumerates instances (GT annotations in factory mode, `auto_instances.npz`
 under `SIMANY_AUTO=1`), applies a whitelist and size gate, and for each
 instance scores every DSLR frame by visibility (mesh raycast occlusion),
 projected pixel area, and crop sharpness to cut the best-view RGBA crop with
-an occlusion-aware mask. Writes the same layout the zero-shot stages use
+an occlusion-aware mask. Writes the same layout the single-frame stages use
 (`objects/objects.json` + `obj_XX/{rgba.png, gt_points.ply, meta.json}`), so
 s4/s6 run unchanged. Main venv.
 
@@ -211,25 +231,25 @@ env, GPU.
 
 Registers assets to their instance submesh with the same validated
 `align_object` as s5 — complete-to-complete registration, much better
-conditioned than the zero-shot partial-depth case. Assigns quality tiers on
+conditioned than the single-frame partial-depth case. Assigns quality tiers on
 the free F1: A (F1@20mm >= 0.40), B (F1@40mm >= 0.20), C (rejected), with F1
 evidence outranking the size heuristic because scan-incomplete GT inflates
 extents. Writes `aligned.json` per object. Main venv.
 
 ### factory_hybrid (`agents/assets/factory_hybrid.py`)
 
-Dual-generation winner selection for the `V_mesh` slot; see section 3. Main
-venv, GPU.
+Dual-generation winner selection; see section 3. Main venv, GPU.
 
 ### derive_mesh_from_splat (`agents/discover/derive_mesh_from_splat.py`)
 
-Ablation rung C (`SIMANY_MESH_SRC=derived`): build a scan-mesh substitute from
-the trained splat only, via rendered-depth TSDF fusion (5 mm voxel / 2 cm
-truncation, chosen so small objects are not smoothed into their support
-surface). Two subcommands because gsplat and open3d do not coexist in one env
-here: `render` (mini-viewer env, GPU) then `fuse` (main venv).
+`SIMANY_MESH_SRC=derived`: build a scan-mesh substitute from the trained splat
+only, via rendered-depth TSDF fusion (5 mm voxel / 2 cm truncation, chosen so
+small objects are not smoothed into their support surface). Two subcommands
+because gsplat and open3d do not coexist in one env: `render` (gsplat env,
+GPU) then `fuse` (main venv). This is what the video, DROID and BEHAVIOR
+launchers use instead of a dataset mesh.
 
-## 3. Hybrid V_mesh selection (`agents/assets/factory_hybrid.py`)
+## 3. Hybrid candidate selection (`agents/assets/factory_hybrid.py`)
 
 Single-view TRELLIS and multi-view ReconViaGen fail on different objects, so
 the hybrid stage generates both and lets the registration residual arbitrate
@@ -255,12 +275,14 @@ per object, with no category rules:
 
 The stage is additive and idempotent: originals live on under `obj_XX/trellis/`
 and `obj_XX/rvg/`, and a TRELLIS win restores the snapshot. A per-scene
-summary goes to `objects/hybrid_all.json`.
+summary goes to `objects/hybrid_all.json`. `SIMANY_HYBRID_CANDIDATES`
+(default `trellis,rvg`) selects which candidates take part, so the TRELLIS.2
+and SAM 3D Objects outputs can be arbitrated the same way.
 
-Measured effect ([CONTRIBUTIONS.md](CONTRIBUTIONS.md)): the residual gate
-lifts pooled F1@20 mm from 0.708 to 0.783 over 457 objects, picks multi-view
-for 53% of them, and catches all 18 multi-view collapses (F1 < 0.1) — within
-0.006 of the oracle that always picks the better asset.
+Measured effect (paper): the residual gate lifts pooled F1@20 mm from 0.708
+to 0.783 over 457 objects, picks multi-view for 53% of them, and catches all
+18 multi-view collapses (F1 < 0.1) — within 0.006 of the oracle that always
+picks the better asset.
 
 ## 4. Gaussian-native editing (`agents/edit/`)
 
@@ -271,7 +293,7 @@ background — in Gaussian space, no retraining.
 **Removal** (`inpaint_prepare.py` + `inpaint_masks.py` + the vote in
 `inpaint_fill.py`) unions three selectors:
 
-1. scene-splat gaussians within 3 cm of the GT instance surface;
+1. scene-splat gaussians within 3 cm of the instance surface;
 2. gaussians within 2.4 cm of the *registered asset* surface — the scan
    misses transparent parts (bottle bodies), the asset covers the full extent;
 3. a multi-view mask vote: transparent objects are modeled by the splat as
@@ -289,22 +311,20 @@ leaves ghosts of parts the scan never captured.
 related views. Preferred backend: Qwen-Image-Edit-2509
 (`QwenImageEditPlusPipeline`; it has no mask input, so the paste step
 composites only inside the mask and pixels outside stay bit-identical). It
-needs torch >= 2.5, i.e. the sam3 env (`QWEN_PY=$SAM3PY`), and on 48 GB GPUs
-like the A6000 additionally `SIMANY_QWEN=force` to enable sequential CPU
-offload; `SIMANY_QWEN=0` disables it. Fallback: LaMa on CPU. The measured
-supervisor comparison, LaMa vs Qwen ([BASELINES.md](BASELINES.md)):
-keyboard-desk 34.3 vs 23.9 dB; elsewhere 19.4 vs 20.5.
+needs torch >= 2.5, i.e. the sam3 env (`QWEN_PY=$SIMANY_SAM3_PY`), and on
+48 GB GPUs additionally `SIMANY_QWEN=force` to enable sequential CPU offload;
+`SIMANY_QWEN=0` disables it. Fallback: LaMa on CPU. Measured LaMa vs Qwen on
+the supervising views: keyboard-desk 34.3 vs 23.9 dB; elsewhere 19.4 vs 20.5.
 
-**Fill + refinement** (`inpaint_fill.py`, mini-viewer env, GPU): carve the
+**Fill + refinement** (`inpaint_fill.py`, gsplat env, GPU): carve the
 removal set out of the splat, seed new thin normal-oriented gaussian disks on
 the MAD-trimmed support plane (fitted by `inpaint_prepare.py` through the
 scan-mesh ring around the footprint) on a 5 mm grid, colors initialized by
 projecting each fill point into its object's best inpainted view (kNN
 neighbor-gaussian colors only as a fallback), then optimize only the new
-gaussians
-(position/scale/opacity/color, orientation frozen to the plane) with an L1
-loss inside the removal masks against the per-frame composited inpainted
-images, via differentiable gsplat rendering. Output:
+gaussians (position/scale/opacity/color, orientation frozen to the plane)
+with an L1 loss inside the removal masks against the per-frame composited
+inpainted images, via differentiable gsplat rendering. Output:
 `inpaint/clean_background.ply` (carved + filled, Inria format) plus
 before/hole/filled comparison renders.
 
@@ -318,10 +338,10 @@ one photo; everything downstream is the standard machinery.
   image size inside the .ply itself; `sharp_ply_meta.py` reads K/W/H back out
   rather than re-deriving them, so projections match how the gaussians were
   placed.
-- `sharp_render_depth.py` (mini-viewer env) renders the splat from that
-  identity pose to recover RGB + depth + alpha exactly matching the photo —
-  the stand-in for s2.
-- `models.s1_segment` runs on the photo as usual (sam3 env), then
+- `sharp_render_depth.py` (gsplat env) renders the splat from that identity
+  pose to recover RGB + depth + alpha exactly matching the photo — the
+  stand-in for s2.
+- `agents.models.s1_segment` runs on the photo as usual (sam3 env), then
   `sharp_s2_lift.py` (main venv, CPU) mirrors `s3_lift.py`'s gates and
   outputs, sourcing depth from the splat render, with all GT fields null.
 - Frame caveat: SHARP's splat frame is OpenCV camera convention (y-down,
@@ -330,36 +350,37 @@ one photo; everything downstream is the standard machinery.
   assumes a roughly level, non-tilted photo — no per-frame gravity estimation.
   `meta.json`'s centroid/extent stay in the original camera frame on purpose.
 - Then the same s4 -> s5 -> hybrid machinery: `sharp_render_object_views.py`
-  (mini-viewer env) renders 12 small-disparity views of the splat per object
-  for ReconViaGen conditioning, and `sharp_hybrid.py` runs the verbatim
+  (gsplat env) renders 12 small-disparity views of the splat per object for
+  ReconViaGen conditioning, and `sharp_hybrid.py` runs the verbatim
   `factory_hybrid` sym_score arbitration with the object's own lifted
   `points.ply` as the target — no GT exists for this input, so its "F1"
   numbers are relabeled fit@20/40mm ("how well does the registered mesh
   explain the one observed view"), not reconstruction accuracy.
 
 There is no `run/` launcher for this variant; the stages are invoked
-individually.
+individually (or through the `baselines` module of the `phiroom` CLI).
 
 ## 6. Baselines (`agents/baselines/`)
 
 - [`flashsplat.py`](../agents/baselines/flashsplat.py) — FlashSplat
   (ECCV 2024) optimal per-gaussian mask assignment, as a removal-set baseline.
-  Their custom CUDA rasterizer fork is unbuildable here, so this is an
+  Their custom CUDA rasterizer fork has no prebuilt wheels, so this is an
   equivalent reimplementation on gsplat: rendering is linear in per-gaussian
   colors, so one backward pass through a 2-channel dummy color recovers their
-  inside/outside blending-weight counts exactly. Measured: union IoU 0.649 vs
-  our final removal set (recall 0.87), single pilot scene.
+  inside/outside blending-weight counts exactly (`--selftest` checks it
+  against a float64 reference). Measured: union IoU 0.649 vs our final removal
+  set (recall 0.87), single pilot scene.
 - [`maskclustering.py`](../agents/baselines/maskclustering.py) —
   MaskClustering (CVPR 2024) discovery baseline on the same protocol as
   `auto_segment` (images + poses + mesh, no GT); subcommands `prepare` (build
-  their dataset layout, mesh-raycast depth), `srun` (print the GPU commands),
-  `convert` (map their output back to the `auto_instances.npz` contract for
-  `eval_instances`). Measured at a matched 28-frame budget with the same SAM3
-  masks: F1@IoU0.25 0.605 (ours) vs 0.571, F1@IoU0.5 0.419 vs 0.286, single
-  scene.
+  their dataset layout, mesh-raycast depth), `gpu-commands` (print the GPU
+  commands to run in the MaskClustering checkout), `convert` (map their output
+  back to the `auto_instances.npz` contract for `eval_instances`). Measured at
+  a matched 28-frame budget with the same SAM3 masks: F1@IoU0.25 0.605 (ours)
+  vs 0.571, F1@IoU0.5 0.419 vs 0.286, single scene.
 - [`mc_masks.py`](../agents/baselines/mc_masks.py) — substitutes SAM3 for
-  Cropformer (unbuildable CUDA op) as MaskClustering's 2D segmenter, which
-  also isolates the 3D-aggregation comparison. Sam3 env.
+  Cropformer as MaskClustering's 2D segmenter, which also isolates the
+  3D-aggregation comparison. Sam3 env.
 
 ## 7. Evaluation (`agents/eval/`)
 
@@ -372,9 +393,8 @@ individually.
   and recomputes F1@20/40mm against the real GT submesh.
 - [`factory_eval_render.py`](../agents/eval/factory_eval_render.py) —
   PSNR/SSIM/LPIPS on up to 8 held-out frames from the official DSLR test
-  split: background splat alone (the SceneSplat/GaussianWorld baseline) vs the
-  composite twin, plus clean-background variants when
-  `inpaint/clean_background.ply` exists. Mini-viewer env, GPU.
+  split: background splat alone vs the composite twin, plus clean-background
+  variants when `inpaint/clean_background.ply` exists. Gsplat env, GPU.
 - [`factory_report.py`](../agents/eval/factory_report.py) — sim-readiness QA:
   drop each asset on a plane in PyBullet, settle, 2 s free dynamics; "stable"
   if it neither sinks nor walks (<3 cm drift). Emits `report.json` + a contact
@@ -382,22 +402,17 @@ individually.
 - [`verify_removal_render.py`](../agents/eval/verify_removal_render.py) /
   [`verify_removal_check.py`](../agents/eval/verify_removal_check.py) — the
   supervision-independent verification battery for the edited scene: stage 1
-  (mini-viewer env) renders the clean background with alpha/expected-depth and
+  (gsplat env) renders the clean background with alpha/expected-depth and
   checks hole coverage, support-plane depth residual, and held-out-view
   photometric consistency; stage 2 (sam3 env) re-runs SAM3 with each removed
   object's own prompt on the clean renders — success is no residual
   detection. Failures become a re-processing worklist.
-- [`aggregate_results.py`](../agents/eval/aggregate_results.py) — folds the
-  50-scene validation fleet (`outputs/<scene>_factory/{report.json,
-  render_metrics.json, timings.txt}`) into `outputs/val_summary.json` and a
-  markdown table: render quality, tier yield, drop-test stability, per-stage
-  time.
-- [`behavior1k_coverage.py`](../agents/eval/behavior1k_coverage.py) —
-  BEHAVIOR-1K coverage: for each of the 1018 BDDL activities, how much of its
-  object/room requirement the SimAny vocabulary (or the objects actually
-  discovered in the 50 processed scenes) can satisfy. Pure text parsing, no
-  GPU.
-- [`make_paper_tables.py`](../agents/eval/make_paper_tables.py) — regenerates
-  every LaTeX data table for the paper from the on-disk results, so the paper
-  never drifts from the measurements. The tables are written to
-  `docs/paper/tables/` (the module's default `--out`).
+- [`build_audit.py`](../agents/eval/build_audit.py) — ground-truth-free build
+  audit: one consolidated JSON plus a readable report per build, assembled
+  from the outputs of the QA components above without re-running them.
+- [`droid_alignment_eval.py`](../agents/eval/droid_alignment_eval.py) —
+  held-out validation of the DROID forward-kinematics-to-SfM alignment
+  produced by `agents.recon.align_to_traj`.
+
+Robot-side metrics (`robo/eval/fidelity_metrics.py`,
+`robo/eval/harmony_visual_metrics.py`) are described in [ROBOT.md](ROBOT.md).

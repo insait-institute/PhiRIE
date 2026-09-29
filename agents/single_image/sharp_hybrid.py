@@ -40,9 +40,7 @@ from agents.core import common as C
 # of the plain-TRELLIS repo would shadow the RVG fork's `trellis` package
 # (factory_hybrid.py:52-53).
 from agents.assets.factory_hybrid import (snapshot_trellis, make_align_record, sample_mesh,
-                            registered_residual, build_sim_mesh, load_physics,
-                            materialize_rvg, materialize_trellis, copy_atomic,
-                            CANON_FILES)
+                            registered_residual, materialize_rvg, materialize_trellis, copy_atomic)
 from agents.assets.s5_align import apply_T, sym_score
 
 N_VIEWS = 12

@@ -28,7 +28,7 @@ def source_root(root: str | None = None) -> Path:
     for candidate in candidates:
         if candidate:
             path = Path(candidate).expanduser().absolute()
-            if (path / "run/campaign/final_preflight.sh").is_file():
+            if (path / "run/phiroom.sh").is_file():
                 return path
             if candidate == candidates[0]:
                 raise ValueError(f"PhiRoom source root missing at {path}")

@@ -1,6 +1,5 @@
 {
   "id": "reconstruction",
-  "branch": "module/reconstruction-v2",
   "description": "Metric reconstruction and original Gaussian splats",
   "inputs": [
     "RGB frames; poses or video; initialization PLY"
@@ -27,7 +26,7 @@
       "args": []
     },
     "feedforward": {
-      "target": "models.vggt_scene",
+      "target": "agents.models.vggt_scene",
       "runtime": "main",
       "gpu": true,
       "args": []

@@ -9,10 +9,10 @@ required evidence exists; absent evidence stays null rather than being guessed.
 from __future__ import annotations
 
 import argparse
-import csv
 import contextlib
 import hashlib
 import json
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -332,6 +332,29 @@ def render_latex(rows: list[dict]) -> str:
     return "\n".join(lines)
 
 
+@contextlib.contextmanager
+def _atomic_directory(destination: str | Path):
+    """Publish ``destination`` atomically: write into ``<destination>.staging``
+    and rename it into place once every file has been written."""
+    final = Path(destination)
+    if final.exists() or final.is_symlink():
+        raise FileExistsError(f"refusing to overwrite immutable output: {final}")
+    final.parent.mkdir(parents=True, exist_ok=True)
+    staging = final.with_name(f"{final.name}.staging")
+    if staging.is_dir() and not staging.is_symlink():
+        shutil.rmtree(staging)
+    staging.mkdir()
+    try:
+        yield staging
+        if final.exists() or final.is_symlink():
+            raise FileExistsError(f"output appeared during publication: {final}")
+        staging.rename(final)
+    except Exception:
+        if staging.exists() and not staging.is_symlink():
+            shutil.rmtree(staging)
+        raise
+
+
 def generate(manifest_path: str | Path, out_dir: str | Path,
              lpips_device="cpu") -> dict:
     manifest_bytes = Path(manifest_path).read_bytes()
@@ -360,7 +383,6 @@ def generate(manifest_path: str | Path, out_dir: str | Path,
             "scope": "planned_aligned_visual_frames_not_service_or_policy_certification",
         } if strict else {})}
     if strict:
-        from robo.eval.agentic_ablation import _atomic_directory
         publication = _atomic_directory(out_dir)
     else:
         Path(out_dir).mkdir(parents=True, exist_ok=True)

@@ -1,6 +1,5 @@
-"""Held-out validation of the DROID FK<->SfM alignment (plan Task 16 step 3:
-"Validate FK/camera calibration and Umeyama alignment on held-out trajectory
-points").
+"""Held-out validation of the DROID FK<->SfM alignment: validate the FK/camera
+calibration and the Umeyama alignment on held-out trajectory points.
 
 agents/recon/align_to_traj.py fits its similarity transform (scale s,
 rotation R, translation t) on the SAME frames it then reports residuals for
@@ -26,8 +25,8 @@ This script:
      point cloud is what a moving manipulandum/arm baked into the static
      splat's geometry looks like - see run_droid_recon.sh's "dynamic-scene
      caveat" and agents/recon/droid_static_select.py's masking).
-  5. Applies a documented pass/fail gate and writes a report that a fleet
-     run can aggregate (agents/eval/aggregate_results.py-style).
+  5. Applies a documented pass/fail gate and writes a report that a batch
+     run over many episodes can aggregate.
 
 CPU, numpy-only, main .venv (same requirements as align_to_traj.py). Usage:
     python -m agents.eval.droid_alignment_eval \\
@@ -53,7 +52,7 @@ N_REPROJ_HELDOUT = None  # None = evaluate every held-out frame (small sets)
 # worse than in-sample, and this is a diagnostic report, not an abort switch
 # (a failing episode here still gets a splat and a scene, just flagged as
 # replay evidence with a quantified, questionable alignment - never silently
-# dropped, per docs/ICRA_RESEARCH_CONTRACT.md's no-fabrication rule).
+# dropped).
 GATE_CENTER_RMS_M = 0.15
 GATE_ROTATION_DEG = 20.0
 
@@ -105,58 +104,11 @@ def residual_metrics(rec, fk_all, idx, rows, s, R, t):
     }
 
 
-def evaluate_sealed_fit(fit_directory, reference_path, destination=None):
-    """Evaluate the constructor's frozen transform, with no correspondence fit."""
-    from agents.recon.align_to_traj import validate_train_fit
-    from agents.recon.droid_extract import input_identity, verify_input, validate_frame_plan
-    from agents.recon.colmap_poses import write_new_json
-    fit_directory, reference_path = map(Path, (fit_directory, reference_path))
-    destination = Path(destination) if destination is not None else None
-    if destination is not None and destination.exists():
-        raise FileExistsError('immutable alignment evaluation already exists')
-    fit = validate_train_fit(fit_directory)  # MUST precede reference values.
-    ref = json.loads(reference_path.read_text())
-    if (set(ref) != {'schema_version', 'role', 'plan', 'fit', 'fk_by_index'}
-            or ref['schema_version'] != 1 or ref['role'] != 'held_out_only'
-            or ref['fit'] != input_identity(fit_directory / 'fit.json') or ref['plan'] != fit['plan']):
-        raise ValueError('reference/constructor binding differs')
-    verify_input(ref['fit']); verify_input(ref['plan'])
-    plan = validate_frame_plan(json.loads(Path(ref['plan']['path']).read_text()))
-    if set(ref['fk_by_index']) != {str(i) for i in plan['split']['held_out_fk_indices']}:
-        raise ValueError('reference roster differs or overlaps TRAIN hypotheses')
-    fk = {int(i): np.asarray(v, np.float64) for i, v in ref['fk_by_index'].items()}
-    if any(v.shape != (4, 4) or not np.isfinite(v).all() for v in fk.values()):
-        raise ValueError('invalid reference FK pose')
-    rec = dict(np.load(fit['recon']['path'], allow_pickle=False))
-    ids = [int(Path(str(n)).stem.split('_')[1]) for n in rec['names']]
-    held = plan['split']['held_out_video_indices']
-    rows = np.asarray([i for i, idx in enumerate(ids) if idx in held], int)
-    solution = fit['solution']; off = solution['frame_offset']
-    metrics = (residual_metrics(rec, fk, np.asarray(ids) + off, rows,
-               solution['scale'], np.asarray(solution['R']), np.asarray(solution['t']))
-               if len(rows) >= 5 else None)
-    passed = (metrics['center_rms_m'] < GATE_CENTER_RMS_M and
-              metrics['rotation_residual_deg']['median'] < GATE_ROTATION_DEG) if metrics else None
-    result = {'schema_version': 1, 'scope': 'droid_independent_kinematic_alignment',
-        'fit': input_identity(fit_directory / 'fit.json'), 'reference': input_identity(reference_path),
-        'plan': fit['plan'], 'frame_offset': off,
-        'planned_reference_frames': len(held), 'evaluated_reference_frames': len(rows),
-        'missing_reference_frames': sorted(set(held) - set(ids)),
-        'held_out_metrics': metrics,
-        'gate': {'center_rms_m': GATE_CENTER_RMS_M, 'rotation_deg': GATE_ROTATION_DEG,
-                 'passed': passed}, 'construction_reopened': False,
-        'note': 'Held-out robot kinematics only; RGB may enter SfM. No image-fidelity claim.'}
-    if destination is not None:
-        write_new_json(destination, result)
-    return result
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--sealed-fit', type=Path)
-    ap.add_argument("--recon", type=Path,
+    ap.add_argument("--recon", required=True, type=Path,
                     help="recon.npz (pre-alignment; agents/recon/"
-                         "colmap_poses.py or models/vggt_scene.py output)")
+                         "colmap_poses.py or agents/models/vggt_scene.py output)")
     ap.add_argument("--traj", required=True, type=Path)
     ap.add_argument("--align-report", type=Path, default=None,
                     help="align_to_traj.py's align_report.json, for the "
@@ -168,12 +120,6 @@ def main():
     ap.add_argument("--max-offset", type=int, default=MAX_OFFSET)
     args = ap.parse_args()
 
-    if args.sealed_fit:
-        evaluate_sealed_fit(args.sealed_fit, args.traj, args.out)
-        return
-    if args.recon is None:
-        ap.error('--recon is required for the legacy diagnostic')
-
     rec = dict(np.load(args.recon, allow_pickle=False))
     traj = json.loads(args.traj.read_text())
     fk_all = np.asarray(traj["full"]["c2w_base"], np.float64)
@@ -184,8 +130,6 @@ def main():
     w2c = rec["w2c"].astype(np.float64)
     c2w = np.linalg.inv(w2c)
     cen_sfm = c2w[:, :3, 3]
-    K = rec["K"].astype(np.float64)
-    W, H = int(rec["frame_wh"][0]), int(rec["frame_wh"][1])
 
     # ---- resolve the same constant offset align_to_traj.py would (in-
     # sample, over ALL frames) - this is just correspondence resolution, not

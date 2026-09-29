@@ -1,7 +1,7 @@
 """robo.policy.clients: adapters normalizing each real policy-serving
 backend onto robo.policy.control_contract.PolicyClient (one
 environment-facing 8-dim action schema, explicit warmup(), schema-validated
-__call__), per Task 08 step 2.
+__call__).
 
 `CLIENT_KIND_TO_CLASS` maps a `robo.policy.registry.PolicyEntry.client_kind`
 string to the class implementing it; `PolicyRegistry.make_client` uses this

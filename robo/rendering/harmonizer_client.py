@@ -60,7 +60,7 @@ def _decode_png(value: str) -> np.ndarray:
 
 
 class SocketHarmonizerClient:
-    """Length-prefixed JSON client for ``integrations/harmonizer/server.py``."""
+    """Length-prefixed JSON client for ``tools/harmonizer/server.py``."""
 
     def __init__(self, socket_path: str, timeout_s: float = 30.0):
         self.socket_path = socket_path

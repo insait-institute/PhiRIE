@@ -1,6 +1,5 @@
 {
   "id": "datasets",
-  "branch": "module/datasets-v2",
   "description": "Native dataset preparation",
   "inputs": [
     "DROID episode or BEHAVIOR task; dataset paths"

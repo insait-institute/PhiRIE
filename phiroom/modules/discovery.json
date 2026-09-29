@@ -1,6 +1,5 @@
 {
   "id": "discovery",
-  "branch": "module/discovery-v2",
   "description": "Automatic object discovery and mask refinement",
   "inputs": [
     "scene images and reconstructed geometry"

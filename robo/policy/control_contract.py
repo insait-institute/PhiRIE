@@ -2,8 +2,8 @@
 contract every policy client under robo/policy/clients/ must normalize to,
 plus the `PolicyClient` interface that enforces it.
 
-Task 08 (plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md). Source of truth for
-every numeric value here: `configs/experiments/frozen_fields.yaml` (the
+Source of truth for
+every numeric value here: `configs/policies/frozen_fields.yaml` (the
 machine-readable frozen contract) and `docs/ROBOT.md` (the documented real
 gotchas frozen_fields.yaml doesn't spell out: gripper direction, chunk
 size, temporal aggregation, image resize, the JAX-jit warmup window).
@@ -26,9 +26,8 @@ module's `Pi05PolicyClient`) ever sees it. So:
     wrong half of the pipeline. Only `env_action_convention` is frozen.
 
 Every value in `FROZEN_CONTROL_CONTRACT` must stay byte-identical across
-every condition being compared, per docs/ICRA_RESEARCH_CONTRACT.md section
-5; changing one requires a new frozen_fields.yaml version and a change-log
-entry there, not a silent edit here.
+every condition being compared; changing one requires a new
+frozen_fields.yaml version, not a silent edit here.
 """
 from __future__ import annotations
 
@@ -41,7 +40,7 @@ import numpy as np
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-FROZEN_FIELDS_PATH = ROOT / "configs" / "experiments" / "frozen_fields.yaml"
+FROZEN_FIELDS_PATH = ROOT / "configs" / "policies" / "frozen_fields.yaml"
 
 # 7 absolute joint targets + 1 gripper command, per frozen_fields.yaml
 # `control.action_dim` -- the ONE environment-facing action schema every
@@ -59,9 +58,8 @@ class ControlContractError(Exception):
 
 class ControlContractMismatchError(ControlContractError):
     """A policy config disagrees with the frozen control contract
-    (configs/experiments/frozen_fields.yaml) on a field that
-    docs/ICRA_RESEARCH_CONTRACT.md section 5 requires byte-identical across
-    every condition being compared."""
+    (configs/policies/frozen_fields.yaml) on a field that must be
+    byte-identical across every condition being compared."""
 
 
 class PolicyNotWarmedUpError(ControlContractError):
@@ -121,13 +119,12 @@ def load_frozen_control_contract(
     path: "str | Path" = FROZEN_FIELDS_PATH,
 ) -> ControlContract:
     """Build the canonical `ControlContract` from
-    configs/experiments/frozen_fields.yaml's `control` section, falling
+    configs/policies/frozen_fields.yaml's `control` section, falling
     back to `ControlContract()`'s hardcoded defaults (with a loud warning,
     never a silent one) if the file is missing or malformed -- mirrors
     robo/eval/pi05_eval.py::_frozen_config_hashes()'s fallback so this
     module degrades the same way the eval script already does rather than
-    crashing at import time if frozen_fields.yaml is mid-edit by another
-    task's agent.
+    crashing at import time if frozen_fields.yaml is mid-edit.
     """
     try:
         frozen = yaml.safe_load(Path(path).read_text())
@@ -228,7 +225,7 @@ def assert_matches_frozen(entry: Any, frozen: "ControlContract | None" = None) -
         raise ControlContractMismatchError(
             f"policy config {getattr(entry, 'id', '<unknown>')!r} fails "
             f"control-contract validation against "
-            f"configs/experiments/frozen_fields.yaml: {joined}")
+            f"configs/policies/frozen_fields.yaml: {joined}")
 
 
 def validate_env_action(
@@ -284,9 +281,8 @@ class PolicyClient(abc.ABC):
     """Common interface every adapter under robo/policy/clients/ normalizes
     to. All clients speak the SAME environment-facing action schema
     (`ACTION_DIM` = 8: 7 absolute joint targets + 1 gripper in [0, 1]),
-    whatever the underlying model predicts internally, per Task 08 step 2
-    ("normalize all clients to one environment-facing action schema
-    without changing model behavior").
+    whatever the underlying model predicts internally (one environment-facing
+    action schema for all clients, without changing model behavior).
 
     Subclasses implement `_act`, `_warmup_impl`, and `reset`; this base
     class enforces two things every subclass would otherwise have to
@@ -364,7 +360,7 @@ def run_trace(
     *,
     warmup_obs: "Mapping | None" = None,
 ) -> list[np.ndarray]:
-    """Deterministic observation -> action trace replay (Task 08 step 5).
+    """Deterministic observation -> action trace replay.
 
     Feeds `observations` through `client` in order -- `client.reset()`
     first, then an optional `warmup()` if `warmup_obs` is given and the
@@ -374,14 +370,13 @@ def run_trace(
     Determinism is a property of the underlying client, not of this
     function: `ScriptedPolicyClient` is deterministic by construction, and
     `Pi05PolicyClient` is deterministic when wired to a fixed-response
-    `connector` (see tests/test_control_contract.py and
-    robo/policy/clients/pi05_client.py), which is exactly what makes this
-    usable for golden-trace tests without a live openpi server.
+    `connector` (see robo/policy/clients/pi05_client.py), which is exactly
+    what makes this usable for golden-trace replays without a live openpi
+    server.
 
-    This is the intended reuse point for other run-time consumers (e.g. the
-    paired rollout runner, robo/eval/paired_runner.py) that want a policy's
-    action trace against a fixed observation sequence without re-deriving
-    the per-client call protocol themselves.
+    This is the intended reuse point for other run-time consumers that want
+    a policy's action trace against a fixed observation sequence without
+    re-deriving the per-client call protocol themselves.
     """
     if warmup_obs is not None and not client.warmed_up:
         client.warmup(warmup_obs, prompt)

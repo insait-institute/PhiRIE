@@ -1,7 +1,6 @@
 """Exact MuJoCo robot masks from segmentation rendering."""
 from __future__ import annotations
 
-from functools import lru_cache
 from typing import Iterable
 
 import numpy as np

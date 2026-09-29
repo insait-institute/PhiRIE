@@ -1,6 +1,5 @@
 """Unified robot/metric-scale alignment: T_base<-scan plus scale, with
-uncertainty and a held-out residual, across the four modes in
-plan/04_METRIC_SCALE_ROBOT_ALIGNMENT.md:
+uncertainty and a held-out residual, across four modes:
 
   1. fiducial   - ChArUco/fiducial correspondences (scan frame <-> known
                   robot/world positions), robust weighted Sim(3)/SE(3).
@@ -304,9 +303,8 @@ def evaluate_correspondence_residual(T, src, dst, weights=None) -> dict:
 
 def weighted_umeyama(src, dst, weights=None, *, allow_scale: bool = True):
     """Weighted generalization of agents/recon/align_to_traj.py's `umeyama`
-    (reduces to it exactly at uniform weights - verified by
-    tests/test_robot_alignment_synthetic.py indirectly through the
-    recovery test). `allow_scale=False` gives a weighted Kabsch/SE(3) fit
+    (reduces to it exactly at uniform weights). `allow_scale=False` gives a
+    weighted Kabsch/SE(3) fit
     (s fixed to 1), used by mode 3 once scale has already been pinned down
     by a known dimension."""
     src = np.asarray(src, dtype=np.float64)
@@ -378,8 +376,7 @@ def fit_sim3_robust(src, dst, weights=None, *, allow_scale: bool = True,
     check, then optional RANSAC (gross-outlier rejection) into optional
     Huber IRLS (moderate-noise robustness). `robust=False` disables BOTH
     (a single plain weighted_umeyama on 100% of the data) - this is the
-    "naive" baseline tests/test_robot_alignment_synthetic.py compares
-    against to show the robust path actually helps under outliers."""
+    "naive" baseline the robust path is compared against under outliers."""
     src = np.asarray(src, dtype=np.float64)
     dst = np.asarray(dst, dtype=np.float64)
     n = len(src)
@@ -803,8 +800,8 @@ _MODE_FUNCS = {
 
 
 def align(mode: str, **kwargs) -> AlignmentResult:
-    """One entry point for all four modes; see plan/04_METRIC_SCALE_ROBOT_
-    ALIGNMENT.md. `mode` in {"fiducial","surveyed","dimensions","droid_fk"}."""
+    """One entry point for all four modes; `mode` in
+    {"fiducial","surveyed","dimensions","droid_fk"}."""
     fn = _MODE_FUNCS.get(mode)
     if fn is None:
         raise ValueError(f"unknown alignment mode {mode!r}; choose one of "

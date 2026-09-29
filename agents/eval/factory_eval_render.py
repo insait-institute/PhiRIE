@@ -11,7 +11,6 @@ missing) -- compare against the GT photo:
 PSNR / SSIM / LPIPS(alex). Writes render_metrics_v2.json + one comparison jpg.
 """
 import json
-from pathlib import Path
 
 import numpy as np
 from PIL import Image

@@ -1,7 +1,8 @@
 #!/bin/bash
 # PointWorld-BEHAVIOR -> SimAny: extract posed clip frames + GT depth from the
 # restored HDF5 episodes, train 3DGS on the emulated scene, then the same
-# GT-free AUTO tail as run/slurm/ablation_rowC_scene.sbatch. The stage list is
+# GT-free AUTO tail as run/run_video2sim.sh (auto_segment -> factory stages
+# -> export_mjcf --test -> pi05_tasks). The stage list is
 # duplicated here on purpose (run_video2sim.sh was built in parallel; keeping
 # the tail inline avoids a cross-script dependency). The generation-gap eval
 # additionally uses <scene>/gt/ written by behavior_extract.
@@ -94,7 +95,7 @@ else
     run agents.discover.derive_mesh_from_splat fuse && sync; }
 fi
 
-# ---- AUTO tail (mirrors ablation_rowC_scene.sbatch + run_auto.sh) ----------
+# ---- AUTO tail (mirrors run_video2sim.sh + run_auto.sh) --------------------
 stage_timed "auto_segment (SAM3, against derived mesh)"
 done_skip "$SIMANY_OUT/auto_instances.npz" || \
   run_sam3 agents.discover.auto_segment --scene-dir "$SD" \
@@ -111,7 +112,7 @@ done_skip "$SIMANY_OUT/objects/.masks_refined" || {
   touch "$SIMANY_OUT/objects/.masks_refined"; }
 
 stage_timed "s4 TRELLIS image-to-3D"
-run models.s4_trellis
+run agents.models.s4_trellis
 
 stage_timed "factory_align"
 run agents.assets.factory_align

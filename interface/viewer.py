@@ -19,7 +19,6 @@ import argparse
 import json
 import os
 import subprocess
-import sys
 import time
 from pathlib import Path
 
@@ -30,7 +29,7 @@ import viser
 from agents.core import common as C  # noqa: E402  (scene-independent helpers only)
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-VENV_PY = str(REPO_ROOT / ".venv" / "bin" / "python")
+VENV_PY = os.environ.get("SIMANY_PY", str(REPO_ROOT / ".venv" / "bin" / "python"))
 SPLATS = Path(os.environ.get("SIMANY_SPLATS_ROOT", "/data/ScanNetppv2_gsplat/splats"))
 
 _splat_cache = {}
@@ -97,7 +96,7 @@ def main():
             return None
 
     def share_watchdog():
-        # the share.viser.studio relay keeps dying from this cluster;
+        # the share.viser.studio relay tunnel can die behind some networks;
         # probe it and re-tunnel automatically, latest URL in SHARE_URL.txt
         import urllib.request
         while True:

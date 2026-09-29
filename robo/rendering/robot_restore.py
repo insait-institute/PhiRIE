@@ -1,4 +1,4 @@
-"""Robot-preserving full-frame enhancement (paper Option C).
+"""Robot-preserving full-frame enhancement (Option C: robot core preserved).
 
 The eroded robot core is copied byte-for-byte from the raw simulator image.
 Only a narrow boundary band is feathered, while all non-robot pixels come from

@@ -17,13 +17,13 @@ GT-FREE FALLBACK: when GT instance files aren't available (no
 `recon_scenes`/BEHAVIOR layout never has them) or an explicit `--no-gt` /
 SIMANY_NO_GT=1 override is set, the F1-against-GT computation is skipped
 entirely -- `C.load_gt_instances()` is never called -- and each object's
-`eval` field is reported as an explicit `not_applicable` entry (same
-value/status/reason shape as `baselines/raw_reconstruction.py`'s
-NA_METRICS/`_na()`), never a fabricated number. The Sim(3) pose-alignment
+`eval` field is reported as an explicit `not_applicable` entry (a
+value/status/reason triple), never a fabricated number. The Sim(3) pose-alignment
 part above (`align_object`) does not depend on GT at all and still runs
 and reports real chamfer/scale/size-sanity numbers in this mode.
 """
 import argparse
+import hashlib
 import importlib.util
 import json
 import sys
@@ -58,7 +58,7 @@ SIGNED_SOURCE_UP_HYPOTHESES = (
                     dtype=np.float64)),
 )
 
-# Same honesty contract as baselines/raw_reconstruction.py's NA_METRICS/_na():
+# Honesty contract for unsupported cells:
 # an unsupported cell is reported not_applicable with a real reason, never a
 # fabricated number.
 GT_NOT_APPLICABLE_REASON = (
@@ -331,12 +331,20 @@ def f1_eval(gen_pts, gt_pts, taus=(0.02, 0.04)):
 _MESH_CACHE = {}
 
 
+def _sha256_file(path, chunk_size=8 * 1024 * 1024):
+    """Hex SHA256 of a file's bytes, read in chunks."""
+    h = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(chunk_size), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
 def scene_mesh_arrays(*, mesh_sha256=None):
     # Static exporters may supply the digest they have just authenticated;
     # other callers hash the actual mesh before sharing a process-local cache.
-    from agents.orchestrator.artifact import sha256_file
     mesh_path = Path(getattr(C, "PIPELINE_MESH_PLY", C.MESH_PLY)).resolve()
-    digest = sha256_file(mesh_path) if mesh_sha256 is None else mesh_sha256
+    digest = _sha256_file(mesh_path) if mesh_sha256 is None else mesh_sha256
     if not isinstance(digest, str) or len(digest) != 64:
         raise ValueError("scene mesh cache requires a content SHA256")
     cache_key = (str(C.SCENE_ID), str(mesh_path), digest)

@@ -1,5 +1,5 @@
 """Aggregate the 7-task x 2-arm OmniGibson validation results into a single
-paper-level comparison table (JSON + Markdown).
+summary comparison table (JSON + Markdown).
 
 Run with any Python (no OmniGibson/GPU needed):
   python3 aggregate_results.py
@@ -27,7 +27,7 @@ def load(task, arm):
 def n_objects_placed(d):
     """Count of movable objects whose real-checker literal (or, for tasks
     with no real literal at all, whose placement sampler) succeeded - the
-    per-object granularity a paper table needs beyond just the aggregate
+    per-object granularity a results table needs beyond just the aggregate
     goal pass/fail bit."""
     if d["placement_sampler_log"]:
         return sum(1 for v in d["placement_sampler_log"].values() if v), len(d["placement_sampler_log"])
@@ -78,7 +78,7 @@ def main():
 
     # ---- Markdown table -----------------------------------------------
     lines = [
-        "# OmniGibson / BEHAVIOR-1K validation - paper-level comparison",
+        "# OmniGibson / BEHAVIOR-1K validation - summary comparison",
         "",
         f"**{n_ours_pass}/{n_tasks} tasks pass with ours (CoACD collision) vs "
         f"{n_base_pass}/{n_tasks} with baseline (single convex-hull collision)**, "
@@ -106,7 +106,7 @@ def main():
         "BEHAVIOR-1K dataset or our custom reconstruction pipeline.",
         "- \"Scripted\" literals (Filled/Covered/Contains/Folded) are substance/cloth "
         "predicates outside our rigid-body reconstruction's scope by design (matches "
-        "the paper's own stated limitation) - their truth value is asserted, not "
+        "a stated limitation of this pipeline) - their truth value is asserted, not "
         "measured, and is identical for both arms (not a comparison axis).",
         "- Objects are placed via OmniGibson's own `object_states.Inside/OnTop.set_value()` "
         "rejection-sampling primitive (the same one BehaviorTask's init-sampler uses), "

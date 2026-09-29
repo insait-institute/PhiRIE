@@ -26,6 +26,6 @@ try_one() {
 export -f try_one
 export PY
 
-find agents models robo interface tests -name "*.py" -not -path "*__pycache__*" \
+find agents robo interface capture -name "*.py" -not -path "*__pycache__*" \
   | sed 's|/|.|g; s|\.py$||; s|\.__init__$||' | sort -u \
   | xargs -P 6 -I{} bash -c 'try_one {}' | sort

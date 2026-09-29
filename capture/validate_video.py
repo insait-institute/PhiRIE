@@ -11,10 +11,8 @@ Deliberately video-only: this module reads pixels, ffprobe stream metadata,
 and (optionally) device/pose sidecar metadata written by
 `capture/extract_metadata.py`. It has no code path that can accept task
 labels, object annotations, or per-object identity of any kind -- there are
-none at capture time, and none should ever be threaded in here (see
-`tests/test_capture_validation.py::test_no_task_label_input_path`, which
-asserts this from the function signatures and source text, not just by
-convention).
+none at capture time, and none should ever be threaded in here (a
+deliberate property of the function signatures, not just a convention).
 
 Usage:
     python -m capture.validate_video VIDEO.mp4 \
@@ -234,7 +232,7 @@ def baseline_px(frame_a: OrbFrame, frame_b: OrbFrame, min_good_matches: int) -> 
     be a large fraction of a second apart (see `sample_frames`), and dense
     flow's local search window saturates and silently UNDER-reports large
     displacements once they exceed it -- verified empirically against the
-    fixtures in tests/data/phone/ (see capture/README.md), where it made a
+    synthetic phone-clip fixtures (see capture/README.md), where it made a
     fast pan measure LOWER than a moderate one. Sparse feature matching has
     no such window; a correspondence is a correspondence at any offset.
     """

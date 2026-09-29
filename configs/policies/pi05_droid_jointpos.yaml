@@ -1,5 +1,5 @@
-# Task 08 (plan/08_POLICY_CONTROL_CHECKPOINT_MATRIX.md). One of the three
-# policies configs/experiments/frozen_fields.yaml actually names. Loaded by
+# One of the three
+# policies configs/policies/frozen_fields.yaml actually names. Loaded by
 # robo.policy.registry.PolicyRegistry.from_config_dir() into a
 # robo.policy.registry.PolicyEntry (see that module for full field docs).
 #
@@ -12,7 +12,7 @@
 # magnitude with the SAME checkpoint bytes -- not an exact number
 # reproduction (different task suite/scene/camera), but a real, documented
 # checkpoint-to-behavior correspondence check, which is what "verified"
-# means in this registry (Task 08 step 6).
+# means in this registry.
 policies:
   - id: pi05_droid_jointpos
     status: verified
@@ -35,7 +35,7 @@ policies:
     model_action_convention: joint_delta_chunk_15x8
     # What the client hands to the environment, downstream of openpi's
     # server-side AbsoluteActions transform (docs/ROBOT.md). THIS is
-    # checked against configs/experiments/frozen_fields.yaml's
+    # checked against configs/policies/frozen_fields.yaml's
     # control.action_convention.
     env_action_convention: absolute_joint_position
     action_dim: 8
@@ -76,7 +76,7 @@ policies:
       every scene. Exterior camera choice materially changes per-episode
       score (docs/ROBOT.md demo clip caveat) -- pin the camera and report
       it alongside any number quoted from this policy.
-      NOTE on checkpoint_path vs configs/experiments/frozen_fields.yaml:
+      NOTE on checkpoint_path vs configs/policies/frozen_fields.yaml:
       that file lists this policy's checkpoint_path as the PARENT directory
       (.../openpi-assets-simeval/, which also contains the sibling
       with_web_and_sim checkpoint), while its sibling entry points at its

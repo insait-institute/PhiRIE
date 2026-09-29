@@ -2,7 +2,7 @@
 # SimAny environment setup.
 # Installs everything into the repo-local .venv (conda-created python 3.11).
 # torch 2.4.1+cu124 is chosen to match the prebuilt gsplat wheel (pt24cu124),
-# same combo as the known-good mini-viewer env on this cluster.
+# same combo as the known-good mini-viewer env.
 set -x
 # Repo root derived from this file's location, so the tree can be moved/cloned.
 ROOT=${SIMANY_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}

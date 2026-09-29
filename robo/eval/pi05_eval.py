@@ -31,19 +31,19 @@ from robo.manifest import io as manifest_io
 from robo.manifest.schema import ObservationPreprocessing, RolloutManifest, StagedProgress
 from robo.tasks import pi05_tasks
 
-# --- Task 01 (robo.manifest) provenance wiring --------------------------
+# --- robo.manifest provenance wiring ------------------------------------
 ROOT = Path(__file__).resolve().parents[2]
-FROZEN_FIELDS_PATH = ROOT / "configs" / "experiments" / "frozen_fields.yaml"
-# Bump this if configs/experiments/frozen_fields.yaml's `rubric` section
-# (stages/credit-per-stage) ever changes -- docs/ICRA_RESEARCH_CONTRACT.md
-# section 5 requires a new version rather than a silent redefinition.
+FROZEN_FIELDS_PATH = ROOT / "configs" / "policies" / "frozen_fields.yaml"
+# Bump this if configs/policies/frozen_fields.yaml's `rubric` section
+# (stages/credit-per-stage) ever changes -- a new version, never a silent
+# redefinition.
 RUBRIC_VERSION = "staged_0.25_per_stage_v1"
 
 
 def _frozen_config_hashes():
     """(controller_config_hash, camera_config_hash, action_convention,
     action_dim) for RolloutManifest, sourced from
-    configs/experiments/frozen_fields.yaml when present (the actual frozen
+    configs/policies/frozen_fields.yaml when present (the actual frozen
     contract every table comparison must match), else from this file's own
     hardcoded conventions (matches robo/rigs/pi05_rig.py) with a loud
     warning -- eval still runs, but the manifest says so.
@@ -310,7 +310,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     rng = np.random.RandomState(args.seed)
 
-    # --- Task 01 (robo.manifest): per-run provenance, computed once -------
+    # --- robo.manifest: per-run provenance, computed once -----------------
     git_snap = manifest_hash.git_snapshot()
     controller_config_hash, camera_config_hash, action_convention, action_dim = \
         _frozen_config_hashes()
@@ -400,7 +400,7 @@ def main():
                         video_path, frames, fps=pi05_env.rig.CONTROL_HZ,
                         quality=8, macro_block_size=None)
 
-                # --- Task 01 (robo.manifest): emit alongside results.json.
+                # --- robo.manifest: emit alongside results.json.
                 # Never overwrites a completed manifest with different
                 # content (manifest_io.write_manifest's guard) -- a rerun
                 # of the exact same config into the same --out is an

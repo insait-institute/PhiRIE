@@ -1,6 +1,5 @@
 {
   "id": "capture",
-  "branch": "module/capture-v2",
   "description": "Video metadata and capture quality",
   "inputs": [
     "video file",

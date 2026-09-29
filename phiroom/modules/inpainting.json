@@ -1,9 +1,8 @@
 {
   "id": "inpainting",
-  "branch": "module/inpainting-v2",
-  "description": "Public-contract object removal and scene completion",
+  "description": "Object removal and scene completion",
   "inputs": [
-    "public context JSON; contract manifest; explicit removal selection"
+    "factory scene with registered assets; explicit removal selection"
   ],
   "outputs": [
     "removal masks; completed views; clean background Gaussian scene"

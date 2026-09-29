@@ -1,5 +1,5 @@
 """Post-install sanity check: can Isaac Sim actually boot headless on this
-node, and does OmniGibson's own object-state machinery work at all (that's
+machine, and does OmniGibson's own object-state machinery work at all (that's
 the piece the whole validation depends on, per the Inside/OnTop == pure
 kinematic-state finding from BEHAVIOR-1K's bddl_utils.py).
 
@@ -27,14 +27,15 @@ print("[smoke] gm.HEADLESS =", gm.HEADLESS)
 
 # We only need physics + pose-based BDDL predicates (Inside/OnTop/...), no
 # rendering - the default viewer camera setup pulls in a viewport/Hydra
-# render pipeline that segfaults on this cluster's driver (see
-# omnigibson_5_1_0.kit's comment). Skip it entirely rather than chase every
+# render pipeline that segfaults on NVIDIA drivers outside Isaac Sim's
+# validated range (see headless_stubs.py). Skip it entirely rather than
+# chase every
 # rendering-extension dependency.
 gm.RENDER_VIEWER_CAMERA = False
 
 # omni.replicator.core (needed for ground-plane semantic labeling, random
 # debug colors on primitives, etc.) pulls in omni.kit.widget.viewport, whose
-# Hydra-engine init segfaults on this cluster's driver at stage-creation
+# Hydra-engine init segfaults on such drivers at stage-creation
 # time - same root cause as the earlier menu segfault, just a different
 # extension tripping it. None of this is needed for BDDL pose checks, so
 # stub the whole module rather than chasing every call site individually.
@@ -66,7 +67,7 @@ _og_sim_mod.add_semantic_label = lambda *args, **kwargs: None
 og.launch()
 print("[smoke] og.launch() OK - Isaac Sim booted headless")
 
-from omnigibson.object_states import OnTop, Inside  # noqa: E402
+from omnigibson.object_states import OnTop, Inside  # noqa: E402,F401  (import check only)
 from omnigibson.scenes.scene_base import Scene  # noqa: E402
 
 print("[smoke] OnTop/Inside importable")

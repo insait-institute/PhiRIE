@@ -1,4 +1,4 @@
-"""Task 05: ground-truth-free build audit -- one consolidated JSON + a
+"""Ground-truth-free build audit -- one consolidated JSON + a
 human-readable report per build, assembled from the outputs of the existing,
 disparate QA components rather than re-running any of their computation:
 
@@ -25,17 +25,17 @@ and, defensively (read with .get(), degrade to "not_applicable" when absent),
 two artifacts from tasks that have not landed yet at the time this module was
 written:
 
-  - robo/sim/room_collision.py (Task 06)   room_collision_report.json
+  - robo/sim/room_collision.py             room_collision_report.json
       EXPECTED fields: coverage_fraction, penetration_max_mm,
       disconnected_components, settle_drift_mm
-  - agents/recon/robot_align.py / alignment_report.py (Task 04)
+  - agents/recon/robot_align.py / alignment_report.py
                                             alignment_report.json
-      EXPECTED fields (plan/04_METRIC_SCALE_ROBOT_ALIGNMENT.md "Outputs"):
+      EXPECTED fields:
       scale_factor, scale_ci, rotation_residual_deg, translation_residual_mm,
       reprojection_residual_px, floor_normal_error_deg, table_height_error_mm,
       held_out_error_m
 
-Full field-by-field documentation: docs/BUILD_AUDIT_SCHEMA.md
+Field-by-field documentation: the CHECKS table and threshold comments below.
 
 THE ONE INVARIANT THAT MATTERS: every check result is exactly one of
 pass / warning / fail / not_applicable. Missing evidence is ALWAYS
@@ -77,8 +77,8 @@ _STATUS_ORDER = (STATUS_PASS, STATUS_WARNING, STATUS_FAIL, STATUS_NA)
 
 # --------------------------------------------------------------------------
 # Thresholds. Two provenance classes, both cited inline; full rationale for
-# the "new" ones lives in docs/BUILD_AUDIT_SCHEMA.md's Thresholds section
-# per the task instruction to never leave an unexplained magic number.
+# the "new" ones is recorded next to each threshold below
+# so that no magic number is left unexplained.
 # --------------------------------------------------------------------------
 
 # -- reused verbatim from already-frozen pipeline thresholds (not new) ----
@@ -88,9 +88,9 @@ TIER_A_F1_20 = 0.40               # agents/assets/factory_align.py
 TIER_B_F1_40 = 0.20               # agents/assets/factory_align.py
 SIZE_RATIO_RANGE = (0.4, 2.5)     # agents/assets/factory_align.py SIZE_RATIO_RANGE
 REDETECTION_FAIL_SCORE = 0.5      # agents/eval/verify_removal_check.py removed_ok
-BG_PSNR_INCLUSION_DB = 26.0       # docs/GAP_STUDY.md zeroshot-100 scene-inclusion bar
+BG_PSNR_INCLUSION_DB = 26.0       # scene-inclusion bar used for the zero-shot scene set
 
-# -- new thresholds authored for this audit; see docs/BUILD_AUDIT_SCHEMA.md --
+# -- new thresholds authored for this audit --
 REG_RESIDUAL_WARN_MM = 20.0
 REG_RESIDUAL_FAIL_MM = 40.0
 CANDIDATE_DISAGREEMENT_WARN_MM = 10.0
@@ -112,8 +112,8 @@ TWIN_PSNR_FAIL_DB = 20.0
 PSNR_DELTA_WARN_DB = 4.0
 PSNR_DELTA_FAIL_DB = 8.0
 SCALE_SANITY_INNER_MARGIN_FRAC = 0.10   # warn within 10% of the SIZE_RATIO_RANGE edge
-# room_collision (Task 06) forward-declared thresholds, inactive until that
-# component lands -- see docs/BUILD_AUDIT_SCHEMA.md
+# room_collision forward-declared thresholds, inactive until that
+# component lands
 ROOM_COVERAGE_WARN_FRAC = 0.85
 ROOM_COVERAGE_FAIL_FRAC = 0.50
 ROOM_DISCONNECTED_WARN_N = 1
@@ -558,7 +558,7 @@ def check_duplicate_instances(raw: dict) -> dict:
 
     # GT-free fallback: same label + near-identical world position among
     # accepted objects is a heuristic duplicate signal, not authoritative,
-    # hence capped at "warning" (never "fail") -- see docs/BUILD_AUDIT_SCHEMA.md.
+    # hence capped at "warning" (never "fail").
     accepted = [
         (oid, meta, raw["aligned"][oid]) for oid, meta in raw["objects_meta"].items()
         if raw["aligned"].get(oid) and not raw["aligned"][oid].get("rejected")

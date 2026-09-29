@@ -6,8 +6,8 @@ the baseline comparison cleaner anyway (isolates the 3D aggregation method).
 Writes third_party/MaskClustering/data/scannetpp/data/<seq>/output/mask/
 frame_%06d.png (uint16 instance-id maps, 0 = background).
 
-sam3 env. Usage: baseline_mc_masks.py --seq c50d2d1d42 [--stride N]
-NB frame density is normally set by baseline_maskclustering.py prepare
+sam3 env. Usage: python -m agents.baselines.mc_masks --seq c50d2d1d42 [--stride N]
+NB frame density is normally set by `agents.baselines.maskclustering prepare`
 --stride (which builds the rgb dir); a matched-density run vs auto_segment
 (FRAME_STRIDE=12) should prepare a fresh seq with --stride 12, since
 MaskClustering expects a mask png for every prepared frame.

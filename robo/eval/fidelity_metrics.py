@@ -1,6 +1,6 @@
-"""Strict held-out appearance and metric-geometry evaluation for Table II.
+"""Strict held-out appearance and metric-geometry evaluation (fidelity tables).
 
-The evaluator consumes source artifacts, never pre-computed paper numbers.  A
+The evaluator consumes source artifacts, never pre-computed numbers.  A
 non-empty record is fail-closed: image pairs are exact, object masks are
 non-empty, generator inputs are disjoint from evaluation views, and geometry
 registration evidence is independent from the evaluation surface.  Empty

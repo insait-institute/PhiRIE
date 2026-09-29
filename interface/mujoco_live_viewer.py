@@ -12,9 +12,7 @@ Run under the mini-viewer env (has viser + mujoco):
 """
 import argparse
 import json
-import sys
 import time
-from pathlib import Path
 
 import numpy as np
 import viser

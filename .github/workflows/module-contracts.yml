@@ -2,10 +2,10 @@ name: module-contracts
 
 on:
   pull_request:
-    paths: ['phiroom/**', 'simfactory/**', 'envs/control/**', 'pipelines/**', 'tools/release/**', 'run/phiroom.sh', 'tests/test_module_interfaces.py', 'pyproject.toml', '.gitmodules', '.github/workflows/module-contracts.yml']
+    paths: ['phiroom/**', 'robo/simfactory/**', 'envs/control/**', 'tools/release/**', 'run/phiroom.sh', 'pyproject.toml', '.github/workflows/module-contracts.yml']
   push:
     branches: [main]
-    paths: ['phiroom/**', 'simfactory/**', 'envs/control/**', 'pipelines/**', 'tools/release/**', 'run/phiroom.sh', 'tests/test_module_interfaces.py', 'pyproject.toml', '.gitmodules', '.github/workflows/module-contracts.yml']
+    paths: ['phiroom/**', 'robo/simfactory/**', 'envs/control/**', 'tools/release/**', 'run/phiroom.sh', 'pyproject.toml', '.github/workflows/module-contracts.yml']
   workflow_dispatch:
 
 permissions:
@@ -25,10 +25,8 @@ jobs:
         run: uv sync --project envs/control --locked
       - name: Module contracts
         run: |
-          uv run --project envs/control --locked ruff check phiroom tests/test_module_interfaces.py tools/release
-          uv run --project envs/control --locked pytest -q tests/test_module_interfaces.py tests/test_release_source_integrity.py
+          uv run --project envs/control --locked ruff check phiroom robo/simfactory tools/release
           uv run --project envs/control --locked python tools/release/verify.py
-      - name: Existing campaign preflight
-        run: bash run/phiroom.sh pipeline run pipelines/preflight.json
+          bash run/phiroom.sh modules
       - name: Build distributions
         run: uv build

@@ -1,13 +1,12 @@
-"""Typed manifest schemas for Task 01 (plan/01_EXPERIMENT_MANIFEST.md).
+"""Typed manifest schemas for scene builds and policy rollouts.
 
-pydantic 2.13.4 is already vendored in .venv (checked before writing this --
-see the task brief), so these are pydantic BaseModel subclasses rather than
+These are pydantic BaseModel subclasses rather than
 hand-validated dataclasses; that gets us field-level type coercion, explicit
 `extra="forbid"` typo-catching, and JSON-mode dumping for free instead of
 reimplementing all three.
 
-Two manifest kinds, both carrying the eight fields
-`docs/ICRA_RESEARCH_CONTRACT.md` / plan/01 require on "every output":
+Two manifest kinds, both carrying the eight provenance fields required on
+every output:
 `scene_build_commit`, `scene_manifest_hash`, `policy_checkpoint_hash`,
 `controller_config_hash`, `camera_config_hash`, `task_id`,
 `initial_state_id`, `rollout_seed`.
@@ -22,7 +21,7 @@ Two manifest kinds, both carrying the eight fields
     All eight fields are required and non-null (enforced by validators
     below) because these are exactly the fields the mujoco_paired /
     oracle_causal protocols need frozen-and-identical across the conditions
-    being compared (configs/experiments/frozen_fields.yaml).
+    being compared (configs/policies/frozen_fields.yaml).
 """
 from __future__ import annotations
 
@@ -52,8 +51,7 @@ class CaptureInputs(BaseModel):
 
 class ScaleAlignmentResiduals(BaseModel):
     """How far the reconstructed scene's metric frame drifted from its
-    registration target (laser scan / colmap), per docs/ICRA_RESEARCH_CONTRACT.md
-    provenance requirements."""
+    registration target (laser scan / colmap), recorded for provenance."""
 
     model_config = _STRICT
 
@@ -100,7 +98,7 @@ class VerificationResults(BaseModel):
 
 
 class ObservationPreprocessing(BaseModel):
-    """configs/experiments/frozen_fields.yaml: observation_preprocessing.
+    """configs/policies/frozen_fields.yaml: observation_preprocessing.
     'composite mode is one scene per process; never mix modes within one
     comparison' -- `mode` is exactly the `--obs raster|composite` flag on
     robo/eval/pi05_eval.py."""
@@ -115,7 +113,7 @@ class ObservationPreprocessing(BaseModel):
 class StagedProgress(BaseModel):
     """Mirrors robo/tasks/pi05_tasks.py TaskScorer.stages exactly (one
     target's {grasp,lift,hover,place} dict) -- 0.25 credit/stage per
-    configs/experiments/frozen_fields.yaml: rubric."""
+    configs/policies/frozen_fields.yaml: rubric."""
 
     model_config = _STRICT
 
@@ -207,7 +205,7 @@ class RolloutManifest(ManifestBase):
 
 
 # Fields the mujoco_paired / oracle_causal protocols require byte-identical
-# between the conditions being compared (configs/experiments/frozen_fields.yaml:
+# between the conditions being compared (configs/policies/frozen_fields.yaml:
 # control rate+action convention+robot reset pose -> controller_config_hash;
 # camera intrinsics/extrinsics -> camera_config_hash; rubric -> rubric_version).
 # `python -m robo.manifest.io diff` restricts its output to this set by

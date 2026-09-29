@@ -1,10 +1,10 @@
-"""Read/write/diff helpers for robo.manifest schemas (Task 01).
+"""Read/write/diff helpers for robo.manifest schemas.
 
-Fast-validation entrypoint (plan/01_EXPERIMENT_MANIFEST.md):
-    python -m robo.manifest.io validate configs/experiments/example_manifest.yaml
+Fast-validation entrypoint:
+    python -m robo.manifest.io validate configs/evaluation/example_manifest.yaml
 
-Frozen-field diff CLI (implementation step 6: "manifest diff CLI
-highlighting only declared independent variables between methods"):
+Frozen-field diff CLI (highlights only the declared frozen fields that
+differ between two manifests):
     python -m robo.manifest.io diff <manifest_a> <manifest_b> [--all-fields]
 """
 from __future__ import annotations
@@ -25,7 +25,6 @@ from robo.manifest.hash import (
 from robo.manifest.schema import (
     FROZEN_ROLLOUT_FIELDS,
     MANIFEST_KIND_TO_CLASS,
-    ManifestBase,
     RolloutManifest,
     SceneBuildManifest,
 )
@@ -101,8 +100,8 @@ def write_manifest(
     allow_overwrite_if_same: bool = True,
 ) -> Path:
     """Write `manifest` to `dir_path/filename`, refusing to clobber a
-    DIFFERENT manifest already there ("never overwrite a completed output
-    directory", plan/01_EXPERIMENT_MANIFEST.md).
+    DIFFERENT manifest already there (never overwrite a completed output
+    directory).
 
     Semantics of `allow_overwrite_if_same`:
       - An existing manifest with a DIFFERENT content_hash always raises

@@ -1,18 +1,15 @@
 """robo.eval.episode_log: outcome taxonomy, deterministic ID derivation, and
-the append-only per-episode ledger for the mujoco_paired protocol runner
-(robo/eval/paired_runner.py, Task 09,
-plan/09_PAIRED_ROLLOUT_RUNNER.md). See docs/MUJOCO_PAIRED_PROTOCOL.md for
-the full design rationale.
+the append-only per-episode ledger for paired policy rollouts.
 
-This module owns three things paired_runner.py needs and would otherwise
+This module owns three things an episode runner needs and would otherwise
 reimplement ad hoc:
 
-  1. `Outcome` + `classify_exception` -- Task 09 step 7's requirement that
+  1. `Outcome` + `classify_exception` -- the requirement that
      environment crash, build failure, policy timeout, safety termination,
      and task failure are DISTINCT categories, never collapsed into one
      generic "failure" bucket. Every outcome funnels through
      `classify_exception`, so the taxonomy lives in exactly one place.
-  2. `ResetState` + `derive_reset_seed` -- Task 09 step 1's single most
+  2. `ResetState` + `derive_reset_seed` -- the single most
      important invariant: reset states are generated ONCE and every
      condition (reference/simany) consumes the SAME persisted list,
      including the SAME per-episode jitter seed. `derive_reset_seed` is a
@@ -39,7 +36,7 @@ from pathlib import Path
 class Outcome(str, Enum):
     """Every planned episode ends in exactly one of these six values.
     SUCCESS and TASK_FAILURE are ordinary rollout endings (the scorer ran
-    to completion); the other four are Task 09 step 7's required DISTINCT
+    to completion); the other four are the required DISTINCT
     failure categories:
 
       - BUILD_FAILURE: the scene/env could not even be constructed
@@ -65,7 +62,7 @@ class Outcome(str, Enum):
     ENV_CRASH = "env_crash"
 
 
-#: The five outcomes Task 09 step 7 requires to be independently
+#: The five outcomes that must be independently
 #: distinguishable (SUCCESS is deliberately excluded -- it is not a
 #: failure category, it is the thing every failure category is
 #: distinguished FROM).
@@ -115,7 +112,7 @@ def classify_exception(exc: BaseException) -> Outcome:
 
 def derive_reset_seed(base_seed: int, task_id: str, ep: int) -> int:
     """One deterministic uint32 seed per (base_seed, task_id, ep), shared
-    byte-for-byte by EVERY condition -- Task 09 step 1's core invariant.
+    byte-for-byte by EVERY condition -- the core invariant.
 
     A plain running `np.random.RandomState` threaded across a whole suite
     (what robo/eval/pi05_eval.py does today: one `rng` object advanced by
@@ -135,8 +132,7 @@ def derive_reset_seed(base_seed: int, task_id: str, ep: int) -> int:
 
 @dataclasses.dataclass(frozen=True)
 class ResetState:
-    """One planned reset. Generated ONCE for the whole matrix (Task 09
-    step 1, see robo.eval.paired_runner.plan_reset_states) and then shared
+    """One planned reset. Generated ONCE for the whole matrix and then shared
     read-only by every condition -- no condition may resample this."""
 
     reset_state_id: str
@@ -179,7 +175,7 @@ class EpisodeRecord:
     """One ledger line. `stages`/`score`/`success` are the scorer's own
     output (robo/tasks/pi05_tasks.py TaskScorer.summary()) when the
     episode reached SUCCESS/TASK_FAILURE; for the four exception-derived
-    outcomes they are the zeroed placeholder Task 09 step 2 requires so a
+    outcomes they are the zeroed placeholder required so a
     build failure still occupies exactly one row with a well-defined
     (non-missing) score, not a null/absent one."""
 
@@ -219,10 +215,10 @@ class EpisodeLedger:
 
       (a) RESUME -- which episode_ids are already terminal, so a
           restarted matrix run continues at the next incomplete episode
-          without duplicating or reordering IDs (Task 09 step 5); and
+          without duplicating or reordering IDs; and
       (b) COVERAGE -- every planned episode gets exactly one line here
           regardless of outcome, so a build failure is counted just like
-          a success or an ordinary task failure (Task 09 step 2).
+          a success or an ordinary task failure.
 
     Appends are flushed immediately (no buffering) so a process crash
     right after a line is written never loses that line, and a crash
@@ -264,7 +260,7 @@ class EpisodeLedger:
 def write_timeseries(path: "str | Path", ticks: "list[dict]") -> None:
     """gzip-compressed JSON array of one dict per control tick (joint
     position, gripper position, action, per-object pose, contacts, staged-
-    rubric booleans) -- Task 09 step 4's "full state/contact/rubric time
+    rubric booleans) -- the "full state/contact/rubric time
     series," not just the final staged-score summary
     robo/eval/pi05_eval.py's results.json captures today."""
     path = Path(path)
@@ -282,7 +278,7 @@ def read_timeseries(path: "str | Path") -> "list[dict]":
 
 def check_degenerate(records: "list[EpisodeRecord]", min_n: int = 4,
                       max_score: float = 1.0) -> "str | None":
-    """Task 09 step 6: a loud diagnostic for the historical all-zero
+    """A loud diagnostic for the historical all-zero
     failure mode (docs/ROBOT.md: "Baseline (pre geometry fix): all zero --
     32 episodes across raster and composite, zero successes"). Only looks
     at episodes that actually ran the scorer (SUCCESS/TASK_FAILURE) --
@@ -303,7 +299,7 @@ def check_degenerate(records: "list[EpisodeRecord]", min_n: int = 4,
         return None
     scores = [r.score for r in scored]
     if all(s == 0.0 for s in scores):
-        msg = (f"[paired_runner] DEGENERATE RUN WARNING: all {len(scored)} "
+        msg = (f"[episode_log] DEGENERATE RUN WARNING: all {len(scored)} "
                f"scored episodes scored exactly 0.0 -- this is the historical "
                f"failure mode documented in docs/ROBOT.md ('Baseline (pre "
                f"geometry fix): all zero'). Data is PRESERVED, not discarded; "
@@ -311,7 +307,7 @@ def check_degenerate(records: "list[EpisodeRecord]", min_n: int = 4,
         print(msg, flush=True)
         return msg
     if all(s == max_score for s in scores):
-        msg = (f"[paired_runner] DEGENERATE RUN WARNING: all {len(scored)} "
+        msg = (f"[episode_log] DEGENERATE RUN WARNING: all {len(scored)} "
                f"scored episodes scored exactly {max_score} (max) -- a "
                f"saturated rubric is just as suspicious as all-zero (it hides "
                f"any real behavior difference between conditions/policies). "

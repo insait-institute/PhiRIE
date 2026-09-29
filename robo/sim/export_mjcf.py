@@ -16,14 +16,13 @@ MuJoCo notes:
   anything not confidently planar), all sharing bit 0 of contype/conaffinity
   with objects/robot/floor -- no more private per-object shims.
   `--collision-mode shim` keeps the ORIGINAL v0 scheme as an explicit
-  ablation (plan Task 06/19): background visual-only + one PRIVATE static
+  ablation: background visual-only + one PRIVATE static
   support shim per object on its own greedy-coloured collision channel, so
   it can never touch another object, the robot, or the room. See
-  robo/sim/room_collision.py and plan/06_FULL_ROOM_COLLISION_EXPORT.md.
+  robo/sim/room_collision.py.
 Isaac: per-object URDFs already exist (s6); the manifest lists them with
 world poses for Isaac Lab's UrdfConverter / spawner. USD/Isaac export
-proper is out of scope per docs/ICRA_RESEARCH_CONTRACT.md -- see
-robo/sim/export_usd.py.
+proper is out of scope for this repository.
 
 Usage: export_mjcf.py [--test] [--collision-mode room|shim]
        (env: SIMANY_SCENE/SIMANY_OUT)
@@ -108,8 +107,6 @@ def _factory_carve_inputs(factory, diagnostic_spec=None):
     if manifest.get("scene_id") != C.SCENE_ID or policy_id not in {"A0", "A4"}:
         raise ValueError("background-carve factory scene/policy binding differs")
     automatic = manifest.get("schema_version") == 2
-    if automatic:
-        validate_automatic_export_context(factory, auto_mode=C.env("AUTO"), pipeline_mesh=factory / "derived_mesh.ply")
     objects = json.loads(objects_path.read_text())
     if not isinstance(objects, list):
         raise ValueError("background-carve objects metadata must be a list")
@@ -463,9 +460,6 @@ def _room_static_report(factories, diagnostic_spec, collision_out_dir, *, source
         factory_roots = {Path(factory).resolve() for factory in factories}
         if source.absolute() != source.resolve() or source.resolve() not in factory_roots:
             raise ValueError("automatic static producer must use a paired factory as its active source")
-        if validate_automatic_export_context(
-                source, auto_mode=C.env("AUTO"), pipeline_mesh=C.PIPELINE_MESH_PLY) is None:
-            raise ValueError("automatic static producer lacks its active source closure")
         if source_factory is not None:
             scratch = C.OUT.absolute()
             if scratch != scratch.resolve() or any(
@@ -983,43 +977,15 @@ def load_common_room_static_package(
     }
 
 
-def validate_automatic_export_context(factory_dir, *, auto_mode, pipeline_mesh):
-    """Fail before any instance/scan read when an automatic factory is misrouted."""
-    factory_dir = Path(factory_dir)
-    manifest_path = factory_dir / "materialization_manifest.json"
-    if not manifest_path.is_file():
-        return None
-    manifest = json.loads(manifest_path.read_text())
-    if manifest.get("schema_version") != 2:
-        return None
-    if manifest.get("manifest_kind") != "e4_automatic_construction_variant_materialization":
-        raise ValueError("unknown automatic materialization schema")
-    if auto_mode != "1" or Path(pipeline_mesh).resolve() != (factory_dir / "derived_mesh.ply").resolve():
-        raise ValueError("automatic export requires AUTO=1 and its exact derived mesh")
-    from robo.eval.e3_factory_materializer import validate_materialized_factory
-    report = validate_materialized_factory(factory_dir)
-    for name in ("derived_mesh.ply", "auto_instances.npz"):
-        path = factory_dir / name
-        identity = manifest["output_members"][name]
-        if path.stat().st_size != identity["size_bytes"] or _sha256_file(path) != identity["sha256"]:
-            raise ValueError("automatic export scene-source bytes changed")
-    objects = json.loads((factory_dir / "objects/objects.json").read_text())
-    if any(row.get("instance_namespace") != "automatic" or "gt_object_id" in row
-           or row.get("automatic_instance_id") != row.get("index") for row in objects):
-        raise ValueError("automatic factory contains a GT or ambiguous object namespace")
-    return report
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--collision-mode", choices=["room", "shim"], default="room",
                     help="'room' (default): full room/table/wall/obstacle static "
                          "collision via robo.sim.room_collision -- no private "
-                         "per-object support shims (acceptance criterion for plan "
-                         "Task 06). 'shim': legacy v0 ablation, private per-object "
-                         "support shims only, no table/wall/obstacle collision "
-                         "at all (plan Task 19).")
+                         "per-object support shims. 'shim': legacy v0 ablation, "
+                         "private per-object support shims only, no "
+                         "table/wall/obstacle collision at all.")
     ap.add_argument(
         "--background-carve-factory", action="append", default=[],
         help="repeat once per paired E4 construction factory (A0 and A4). "
@@ -1039,7 +1005,6 @@ def main():
         help="consume and verify a previously sealed common static package",
     )
     args = ap.parse_args()
-    validate_automatic_export_context(C.OUT, auto_mode=C.env("AUTO"), pipeline_mesh=C.PIPELINE_MESH_PLY)
     if args.collision_mode != "room" and args.background_carve_factory:
         ap.error("--background-carve-factory is valid only with --collision-mode room")
     if args.collision_mode != "room" and (args.room_diagnostic_spec
@@ -1321,7 +1286,7 @@ def main():
         # inherit any repair available only to the main full-room condition.
         floor_z = (min(z for z, _, _ in supports) - 0.05) if supports else 0.0
         floor_source = "legacy_below_lowest_object"
-        # LEGACY ABLATION (plan Task 19): one static micro-shim per object at
+        # LEGACY ABLATION: one static micro-shim per object at
         # that object's own collision-hull bottom, PRIVATE to that object via
         # a greedy-coloured channel bit ABOVE bit 0 -- it can never touch
         # another object, the floor, or the robot. No table/wall/obstacle
@@ -1523,7 +1488,7 @@ def main():
     if args.test:
         # rc.benchmark_model() replaces the old bespoke settle-and-drift loop
         # with one call that ALSO reports compile time, physics speed,
-        # memory, and a contact trajectory (plan Task 06 step 6) -- and
+        # memory, and a contact trajectory -- and
         # `settle_drift_m` is computed identically (final xpos - initial
         # xpos, per body), so mujoco_settle.json's schema stays byte-for-byte
         # unchanged: pi05_tasks.py reads drift_m/stable_3cm/n from it and

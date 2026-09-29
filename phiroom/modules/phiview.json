@@ -1,6 +1,5 @@
 {
   "id": "phiview",
-  "branch": "module/phiview-v2",
   "description": "Image-only browser and server-side interactive demo",
   "inputs": [
     "original full-resolution Gaussian scene; prepared assets; local viewer config"

@@ -1,9 +1,9 @@
 """Metricize a VGGT reconstruction: metric scale + z-up + floor at z=0.
 
-Brings models/vggt_scene.py output into the pipeline's world convention
+Brings agents/models/vggt_scene.py output into the pipeline's world convention
 (metric, z-up, floor near z=0 - the frame every downstream stage assumes):
 
-1. Scale: DA3METRIC-LARGE (same model/loading as models/s2_depth) on evenly
+1. Scale: DA3METRIC-LARGE (same model/loading as agents/models/s2_depth) on evenly
    spaced frames; scale = median over pixels+frames of metric/vggt depth
    ratios after per-frame percentile trimming.
 2. Up-axis: the mean camera-image-up direction is the prior (3.7 deg from
@@ -28,7 +28,7 @@ os.environ.setdefault("HF_HUB_OFFLINE", "1")
 import numpy as np
 
 N_CAL_FRAMES = 7        # >=5 per contract; odd so the median is a real frame
-DA3_PROC_RES = 1008     # matches models/s2_depth's validated recipe
+DA3_PROC_RES = 1008     # matches agents/models/s2_depth's validated recipe
 DA3_CANON_FOCAL = 300.0 # DA3METRIC canonical camera focal (px)
 TRIM_LO, TRIM_HI = 20, 80  # per-frame ratio percentile trim: kills sky /
                            # reflections / VGGT edge bleed before the median
@@ -49,7 +49,7 @@ def da3_metric_depth(model, img_path, K, W):
     """One frame -> metric depth at DA3's processing resolution.
 
     DA3METRIC outputs canonical depth for a focal-300px camera:
-    metric = canonical * (f_processed / 300)  (see models/s2_depth)."""
+    metric = canonical * (f_processed / 300)  (see agents/models/s2_depth)."""
     pred = model.inference([str(img_path)], process_res=DA3_PROC_RES,
                            process_res_method="upper_bound_resize")
     canonical = pred.depth[0].astype(np.float64)

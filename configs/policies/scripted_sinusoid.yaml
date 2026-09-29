@@ -8,7 +8,7 @@
 # a scripted control policy to match against; its entire behavior is the
 # closed-form sinusoid formula in robo/policy/clients/scripted_client.py,
 # so "verified" here means "verified to match its own deterministic
-# specification" (see tests/test_control_contract.py's golden-trace test),
+# specification",
 # not "verified against a real-world checkpoint" -- the latter claim simply
 # doesn't apply to a checkpoint-free control policy.
 policies:

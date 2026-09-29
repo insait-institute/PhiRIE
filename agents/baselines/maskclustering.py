@@ -17,19 +17,19 @@ depth -- so ScanNet++ DSLR (no depth at all) is fully supported: we ray-cast
 the scan mesh (common.mesh_zdepth) exactly as they render iPhone depth.
 
 This adapter does three things:
-  prepare  : build one scene's inputs in the layout above (CPU: mesh raycast).
-  srun     : print the exact GPU commands to run (Cropformer + clustering);
-             it does NOT execute them (GPU is driven by the main session).
-  convert  : map MaskClustering's class-agnostic output (masks over the
-             downsampled scene point cloud) back to mesh-vertex index sets and
-             write auto_instances.npz -- the exact contract load_auto_instances
-             consumes (labels / scores / vert_idx_<k>).
+  prepare      : build one scene's inputs in the layout above (CPU: mesh raycast).
+  gpu-commands : print the exact GPU commands to run (Cropformer + clustering);
+                 it does NOT execute them (run them on a GPU machine yourself).
+  convert      : map MaskClustering's class-agnostic output (masks over the
+                 downsampled scene point cloud) back to mesh-vertex index sets and
+                 write auto_instances.npz -- the exact contract load_auto_instances
+                 consumes (labels / scores / vert_idx_<k>).
 
 Usage:
-  python baseline_maskclustering.py prepare --scene-dir /data/ScanNetpp/data/c50d2d1d42
-  python baseline_maskclustering.py srun    --seq c50d2d1d42
-  python baseline_maskclustering.py convert --seq c50d2d1d42 --out-dir OUT
-  python baseline_maskclustering.py smoke   --scene-dir /data/ScanNetpp/data/c50d2d1d42
+  python -m agents.baselines.maskclustering prepare      --scene-dir /path/to/ScanNetpp/data/<scene>
+  python -m agents.baselines.maskclustering gpu-commands --seq <scene>
+  python -m agents.baselines.maskclustering convert      --seq <scene> --out-dir OUT
+  python -m agents.baselines.maskclustering smoke        --scene-dir /path/to/ScanNetpp/data/<scene>
 """
 from __future__ import annotations
 
@@ -179,9 +179,9 @@ def prepare(scene_dir: Path, seq: str | None = None, stride: int = DEFAULT_STRID
     return meta
 
 
-# ------------------------------------------------------------------ srun --
+# ---------------------------------------------------------- gpu-commands --
 
-def srun_commands(seq: str):
+def gpu_commands(seq: str):
     lines = [
         "# ---- MaskClustering baseline: GPU steps (run from the MaskClustering repo) ----",
         f"cd {MC_ROOT}",
@@ -193,20 +193,18 @@ def srun_commands(seq: str):
         "#   on the GPU node, then point the python below at that env.  Masks land",
         "#   in data/scannetpp/data/<seq>/output/mask/frame_%06d.png (uint16 id map).",
         "#   Fallback: any 2D segmenter (e.g. our SAM3) can write those same PNGs.",
-        f"srun --partition=a6000 --gres=gpu:1 --time=2:00:00 \\",
-        f"  <cropformer_env>/bin/python {CROPFORMER_DEMO} \\",
+        f"<cropformer_env>/bin/python {CROPFORMER_DEMO} \\",
         f"    --config-file {CROPFORMER_CFG} \\",
         f"    --root data/scannetpp/data --image_path_pattern 'iphone/rgb/*.jpg' \\",
         f"    --dataset scannetpp --seq_name_list {seq} \\",
         f"    --opts MODEL.WEIGHTS {CROPFORMER_CKPT}",
         "",
         "# Step 2 - mask-graph clustering -> class-agnostic 3D instances.",
-        f"srun --partition=a6000 --gres=gpu:1 --time=1:00:00 \\",
-        f"  {ROOT}/.venv-mc/bin/python main.py --config {CONFIG_NAME} --seq_name_list {seq}",
+        f"{ROOT}/.venv-mc/bin/python main.py --config {CONFIG_NAME} --seq_name_list {seq}",
         "#   writes data/prediction/%s_class_agnostic/%s.npz" % (CONFIG_NAME, seq),
         "#      and data/scannetpp/data/%s/output/object/%s/object_dict.npy" % (seq, CONFIG_NAME),
         "",
-        "# Step 3 - convert to our format (CPU, login node is fine):",
+        "# Step 3 - convert to our format (CPU):",
         f"cd {ROOT} && .venv-mc/bin/python -m agents.baselines.maskclustering "
         f"convert --seq {seq} --out-dir <SIMANY_OUT>",
     ]
@@ -352,7 +350,7 @@ def main():
     p.add_argument("--max-frames", type=int, default=None)
     p.add_argument("--voxel", type=float, default=DEFAULT_VOXEL)
 
-    s = sub.add_parser("srun")
+    s = sub.add_parser("gpu-commands")
     s.add_argument("--seq", required=True)
 
     c = sub.add_parser("convert")
@@ -366,8 +364,8 @@ def main():
     a = ap.parse_args()
     if a.cmd == "prepare":
         prepare(a.scene_dir, a.seq, a.stride, a.max_frames, a.voxel)
-    elif a.cmd == "srun":
-        srun_commands(a.seq)
+    elif a.cmd == "gpu-commands":
+        gpu_commands(a.seq)
     elif a.cmd == "convert":
         convert(a.seq, a.out_dir, a.radius)
     elif a.cmd == "smoke":

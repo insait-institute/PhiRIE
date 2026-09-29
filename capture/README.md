@@ -1,13 +1,13 @@
 # capture/ — phone-scan capture protocol and pre-reconstruction validation
 
-This is the one page a new operator follows to turn a phone into a usable
+This is the page a new operator follows to turn a phone into a usable
 capture bundle for `run/run_video2sim.sh`, and the tool that checks the
 bundle BEFORE the (expensive) reconstruction pipeline runs. It builds on
-`videos/README.md`'s existing drop-folder contract (same limits: rigid
-objects only, monodepth-scale RGB, floor must be visible) and adds what
-that doc doesn't cover: a repeatable two-pass filming procedure, and a
-validator that scores blur/motion/coverage before you spend GPU-hours
-reconstructing a clip that was never going to register.
+`videos/README.md`'s drop-folder contract (same limits: rigid objects only,
+monodepth-scale RGB, floor must be visible) and adds what that page doesn't
+cover: a repeatable two-pass filming procedure, and a validator that scores
+blur/motion/coverage before you spend GPU-hours reconstructing a clip that
+was never going to register.
 
 ## 1. What to film: the two-pass route
 
@@ -32,7 +32,7 @@ each task-relevant object:
 - if there's a robot base or a printed fiducial marking robot-alignment,
   make sure it's visible in **several frames** of this pass, not just one.
 
-This validator does not (and cannot, from pixels alone) verify you actually
+The validator does not (and cannot, from pixels alone) verify you actually
 did two passes or hit every object twice — that's still on the operator.
 What it CAN check is the coverage proxies that a two-pass scan should
 produce: no long static/frozen segments, no pans too fast to register, a
@@ -57,8 +57,7 @@ logged, never blocking:
 | validation report | `report.json` / `report.txt` | `validate_video.py` |
 
 Plain RGB with none of the optional sidecars is the fully-supported
-baseline — this is what `videos/pilot_a29cccc784.mp4` is, and what
-`run/run_video2sim.sh` already consumes unchanged.
+baseline — it is exactly what `run/run_video2sim.sh` consumes.
 
 ## 3. Running the validator
 
@@ -72,9 +71,13 @@ baseline — this is what `videos/pilot_a29cccc784.mp4` is, and what
     --out outputs/capture_validation/<name> [--redact]
 ```
 
-Exit code is `0` unless a `critical` issue fired (usable as a CI/pipeline
-gate before `run/run_video2sim.sh`). `report.json` is the machine-readable
-form (every scalar metric plus the issue list); `report.txt` is the
+Both commands are also exposed as the `capture` module of the `phiroom` CLI
+(`bash run/phiroom.sh plan capture validate -- --help`), which runs them in
+the CPU control environment.
+
+Exit code is `0` unless a `critical` issue fired (usable as a pipeline gate
+before `run/run_video2sim.sh`). `report.json` is the machine-readable form
+(every scalar metric plus the issue list); `report.txt` is the
 human-readable one (what an operator reads to decide whether to reshoot).
 
 ### What it checks (from pixels + container metadata only)
@@ -101,17 +104,15 @@ score. Example: `"camera was static for 3.2s starting at 00:14 - recapture
 with continuous motion"`, not `motion_score: 0.02`.
 
 It is **strictly video + container-metadata + optional device/pose
-metadata**. There is no parameter and no code path anywhere in
-`validate_video.py` that can accept a task label or a per-object
-annotation — there are none at capture time, by construction (see
-`tests/test_capture_validation.py`'s static checks over the function
-signature and the module's identifiers).
+metadata**. There is no parameter and no code path in `validate_video.py`
+that can accept a task label or a per-object annotation — there are none at
+capture time, by construction.
 
 ### Why px/second, and why ORB matching instead of dense optical flow
 
 Samples are taken at a **fixed rate** (`sampling.samples_per_second`, capped
 in count for long clips via `sampling.max_samples`), not a fixed count —
-a 4-second fixture and a 2-minute capture have to be sampled at the same Hz
+a 4-second clip and a 2-minute capture have to be sampled at the same Hz
 or the same physical camera motion looks like wildly different numbers on
 the two clips. And the motion baseline itself is **median ORB-keypoint-match
 displacement**, not dense optical flow (e.g. Farneback): dense flow's local
@@ -122,70 +123,26 @@ window — a correspondence is a correspondence at any pixel offset — and
 "too few confident matches to say anything" becomes its own honest signal
 (`NO_FRAME_OVERLAP`) instead of a silently wrong number.
 
-## 4. How the fixtures were calibrated
+## 4. Thresholds and interpreting a report
 
-`tests/data/phone/make_fixtures.py` builds four ~4s/960x540/15fps synthetic
-clips, all crop-pans across the same band-limited random-noise canvas (full
-gradient everywhere, no repeating period, no flat regions — chosen
-specifically because `mandelbrot`/checkerboard sources have both, which
-confounds exactly the flow/feature signals below):
+The thresholds in `configs/capture/phone_default.yaml` are expressed in
+resolution-independent units (metrics are computed on frames resized to
+`sampling.work_width` on the long side; motion in px/s of median ORB-match
+displacement; blur as variance-of-Laplacian). `static_flow_px_s_max=5` and
+`fast_pan_flow_px_s_min=220` separate a held phone, a moderate sweep and a
+fast pan; `severe_blur_var_min=40` separates sharp frames from motion blur.
+Copy the file and adjust it for a different phone or scene if needed.
 
-| fixture | what's different | primary code it must trigger |
-|---|---|---|
-| `static_camera.mp4` | zero pan (fixed crop, held) | `STATIC_CAMERA` |
-| `fast_pan.mp4` | 900 canvas-px/s pan | `FAST_PAN` |
-| `severe_blur.mp4` | 180 px/s pan + `gblur=sigma=4` | `SEVERE_BLUR` |
-| `no_marker.mp4` | 180 px/s pan, no ArUco marker composited | `NO_CALIBRATION_MARKER` |
+A typical single continuous handheld sweep (30 s, no marker) comes back as
+`FAIL`: a brief `SEVERE_BLUR` window, a few `EXPOSURE_JUMP` warnings,
+scattered `FAST_PAN` / `NO_FRAME_OVERLAP` findings, `NO_CALIBRATION_MARKER`
+and `SHORT_DURATION` against the 60 s two-pass recommendation. That is the
+intended behaviour: the point of the validator is to say this BEFORE
+reconstruction spends GPU-hours on the clip, and to give the operator
+concrete, timestamped notes rather than one scalar score. Loosening a
+threshold to make a clip pass defeats the purpose.
 
-`static_camera` and `fast_pan` also get a generated ArUco marker composited
-into a fixed corner so their motion issue is the only thing flagged.
-`severe_blur` and `no_marker` both go without a marker — a marker overlay
-on top of a heavily-blurred frame was tried and rejected: variance-of-
-Laplacian is a whole-frame statistic, and one small sharp high-contrast
-patch dominates it enough to make the whole frame register as "sharp" (a
-real severely-blurred phone clip legitimately would not have a crisply
-readable marker either, so `severe_blur` intentionally also trips
-`NO_CALIBRATION_MARKER` as a secondary, documented warning).
-
-Measured against `configs/capture/phone_default.yaml`'s thresholds (px/s
-baseline; blur is variance-of-Laplacian on a 640px-wide resize):
-
-| fixture | baseline px/s (min/mean/max) | blur var (mean) |
-|---|---|---|
-| `static_camera` | 0 / 0 / 0 | 441 |
-| `fast_pan` | 432 / 582 / 648 | 447 |
-| `severe_blur` | 86 / 117 / 130 | 10 |
-| `no_marker` | 86 / 117 / 130 | 102 |
-
-`static_flow_px_s_max=5`, `fast_pan_flow_px_s_min=220` sit cleanly between
-the static/moderate/fast bands above.
-
-## 5. Interpreting a report: the real pilot clip
-
-`videos/pilot_a29cccc784.mp4` (28.2s, 1168x778, 15fps h264 — the only real
-phone clip in the repo right now, per `docs/ICRA_RESEARCH_CONTRACT.md`'s
-`phone_deploy` track, n=1) is **not** force-tuned to pass. Run it and read
-what it actually says:
-
-```bash
-.venv/bin/python -m capture.validate_video videos/pilot_a29cccc784.mp4 \
-    --config configs/capture/phone_default.yaml --out /tmp/capture_validation_pilot
-```
-
-It comes back `FAIL`, honestly: one brief `SEVERE_BLUR` window (~00:24-25),
-three `EXPOSURE_JUMP` warnings, extensive `FAST_PAN` / `NO_FRAME_OVERLAP`
-findings scattered through most of the clip (this is a single continuous
-handheld sweep, not the slower two-pass procedure above — a real
-data point that the "casual scan" framing in the internal phone-capture protocol notes
-is more aspirational than this one clip achieves), no `NO_CALIBRATION_MARKER`
-(it never carried one), and `SHORT_DURATION` (28.2s vs. the 60s two-pass
-recommendation). None of that was reason to loosen a threshold — the point
-of this validator is to say this BEFORE reconstruction spends GPU-hours on
-it, and to give the next capture operator (Task 17, ≥3-room target, still
-open per the research contract) concrete, actionable notes rather than one
-scalar score.
-
-## 6. Redaction (optional, best-effort)
+## 5. Redaction (optional, best-effort)
 
 `capture/extract_metadata.py --redact` runs a Haar-cascade face detector
 (`cv2.data.haarcascades`, bundled with opencv) over the same sampled frames

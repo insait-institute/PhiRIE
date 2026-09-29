@@ -7,8 +7,6 @@ link-frame trajectory back as {fps, frames: [{name: [pos, quat_wxyz]}]}.
 import argparse
 import json
 
-import numpy as np
-
 from agents.core import common as C
 from robo.sim.s7_sim import build_background, link_pose
 

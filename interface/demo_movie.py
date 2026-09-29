@@ -1,4 +1,4 @@
-"""SimAny demo movie segments (storyboard: docs/DEMO_STORYBOARD.md).
+"""SimAny demo movie segments.
 
 Subcommands (env SIMANY_SCENE / SIMANY_OUT select the scene):
   scan            point-cloud -> splat radial reveal        (mini-viewer, GPU)
@@ -997,7 +997,6 @@ def seg_frames(path):
 
 
 def assemble(args):
-    import imageio.v2 as imageio
     from PIL import Image, ImageDraw
 
     r0, _ = seg_frames(args.segments[0])

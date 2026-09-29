@@ -1,4 +1,4 @@
-"""Full-room MuJoCo collision export (plan Task 06).
+"""Full-room MuJoCo collision export.
 
 Replaces the legacy "one PRIVATE static support shim per object" scheme in
 `export_mjcf.py` with real static collision derived from the reconstructed
@@ -31,9 +31,9 @@ Two collision modes, both built from the same room-feature extraction:
 `export_mjcf.py` imports `build_shim_geoms` / room-mode helpers and exposes
 `--collision-mode {room,shim}`. This module also ships a self-contained CLI
 (`python -m robo.sim.room_collision --scene <dir>`) that builds and
-smoke-tests either mode against a synthetic fixture
-(`tests/data/scenes/collision_fixture/`) without touching any real scanned
-scene, which is what `tests/test_room_collision.py` exercises.
+smoke-tests either mode against a synthetic fixture scene (a `scene.json`
+spec, see the "synthetic fixture" section at the bottom of this file)
+without touching any real scanned scene.
 """
 from __future__ import annotations
 
@@ -1371,7 +1371,7 @@ def coacd_decompose(mesh, out_dir, prefix, threshold=COACD_THRESHOLD,
     same order. Mirrors
     `agents/assets/s6_physics.py:coacd_parts`'s exact import order
     (torch BEFORE coacd) -- importing torch after coacd runs segfaults on
-    this cluster's build (bundled libgomp clash), verified independently
+    some builds (bundled libgomp clash), verified independently
     while building this module.
 
     Decomposed PER CONNECTED COMPONENT rather than as one CoACD call over
@@ -2177,7 +2177,7 @@ def benchmark_model(model_xml_path, steps=1000, body_names=None,
 
 
 # ======================================================= synthetic fixture =
-# `tests/data/scenes/collision_fixture/scene.json` describes a floor + table
+# A fixture `scene.json` describes a floor + table
 # + wall + two obstacle boxes (the "room", built into one mesh below exactly
 # like a carved real scan mesh would be) plus three dynamic objects, a mocap
 # robot-end-effector sweep, and two scripted pushes. Everything here is

@@ -6,9 +6,9 @@ an optional held-out-set residual) into a build go/no-go certificate:
   - `build_report` evaluates a fixed set of HARD thresholds (reasonable
     pipeline-wide defaults in DEFAULT_HARD_THRESHOLDS, overridable per
     scene/mode) that gate whether a build is trusted at all, and a
-    separate set of SOFT metrics that are only logged (for the not-yet-
-    built per-task certificate mentioned in plan/04_METRIC_SCALE_ROBOT_
-    ALIGNMENT.md) - never used to reject a build on their own.
+    separate set of SOFT metrics that are only logged (for a possible
+    future per-task certificate) - never used to reject a build on their
+    own.
   - The held-out residual (result.held_out), NOT the fitted/calibration
     residual (result.fit), is what the hard thresholds gate on wherever
     both exist; when no held-out set was supplied the report says so

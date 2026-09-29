@@ -189,9 +189,6 @@ def eval_scene(out):
 
 
 def main():
-    if "--matching-config" in sys.argv[1:]:
-        from agents.eval.automatic_matching_manifest import main as matching_main
-        return matching_main()
     outs = [Path(a) for a in sys.argv[1:]] \
         or sorted((C.ROOT / "outputs").glob("*_auto"))
     pooled20, pooled40, means, fails = [], [], [], []

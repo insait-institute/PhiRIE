@@ -32,8 +32,6 @@ checkpoints remain outside this viewable package.
 The demo assets are separate downloads attached to v2.0.0. The existing v2.0.0 source
 tag and source archives remain unchanged; the newer viewer overlay is on main.
 
-For reproducible presentation updates, see [tools/demo](../../tools/demo/).
-
 ## PhiView shooting video
 
 [Download the shooting MP4](https://github.com/RunyiYang/PhiRoom/releases/download/v2.0.0/PhiView_fb5a96b1a2_Shooting_Demo.mp4)

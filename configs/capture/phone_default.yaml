@@ -11,10 +11,9 @@
 # a large fraction of a second apart -- see validate_video.py's
 # `sample_frames` and `baseline_px` docstrings for why each of those matters.
 #
-# Tuned against: tests/data/phone/*.mp4 (synthetic fast-pan / static /
-# severe-blur / no-marker fixtures, see tests/data/phone/make_fixtures.py)
-# and videos/pilot_a29cccc784.mp4 (the one real phone clip in the repo,
-# 28.2s/1168x778/15fps). Not tuned to force that one clip to PASS -- see
+# Tuned against synthetic fast-pan / static / severe-blur / no-marker clips
+# and one real phone clip (28.2s/1168x778/15fps). Not tuned to force that
+# one clip to PASS -- see
 # capture/README.md's "Interpreting a report" section for what it actually
 # triggers.
 

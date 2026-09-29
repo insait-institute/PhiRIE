@@ -5,7 +5,7 @@ view; ScanNet++ DSLR captures walk the room, so instead we auto-pick the frame
 that sees the most target objects (GT centroids projected + mesh occlusion
 check). GT is used ONLY to choose the frame; perception never sees it.
 
-GT-FREE FALLBACK (BEHAVIOR/oracle/DROID `recon_scenes` layouts have no
+GT-FREE FALLBACK (simulator-exported and DROID `recon_scenes` layouts have no
 `scans/segments.json` + `scans/segments_anno.json`, so `C.load_gt_instances()`
 cannot resolve there; also reachable by an explicit `--no-gt` / SIMANY_NO_GT=1
 override on any scene): frame choice switches to `select_frame_gt_free()`,
@@ -20,7 +20,7 @@ which needs no object-level GT at all --
      how much of the room's overall XY extent this one view's ray hits
      span, as a "widest FOV / most of the room visible" signal. The room's
      own reconstructed geometry is fair game (it is not the hidden
-     interactive/simulator object-level state `oracle/gt_export.py` vaults);
+     interactive/simulator object-level state that stays hidden from it);
      skipped gracefully (feature density alone decides) when no such mesh
      exists, which is the common case for `recon_scenes` scenes that haven't
      run a mesh-derivation stage.
@@ -61,12 +61,11 @@ def no_gt_requested(no_gt_flag: bool = False) -> bool:
 def is_gt_path(p) -> bool:
     """Hard safety gate: True if a path lives under a `gt/` directory or is
     named like an instance-GT annotation file (segments*/*anno*) -- the two
-    shapes of ground truth `load_gt_instances()` (ScanNet++) and
-    `oracle/gt_export.py` (BEHAVIOR) guard. `C.PIPELINE_MESH_PLY` never
-    resolves under `gt/` by construction (see agents/core/common.py), but
-    the GT-free path checks this explicitly anyway before touching it --
-    belt and suspenders, and it is exactly the property
-    tests/test_gt_free_frame_selection.py verifies."""
+    shapes of ground truth `load_gt_instances()` (ScanNet++) and the
+    simulator GT exports guard. `C.PIPELINE_MESH_PLY` never resolves under
+    `gt/` by construction (see agents/core/common.py), but the GT-free path
+    checks this explicitly anyway before touching it -- belt and
+    suspenders."""
     p = Path(p)
     parts = {part.lower() for part in p.parts}
     name = p.name.lower()

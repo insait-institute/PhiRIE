@@ -8,7 +8,7 @@ set -euo pipefail
 : "${SIMANY_OPENPI_ROOT:?Set SIMANY_OPENPI_ROOT to an isolated clean worktree}"
 : "${SIMANY_OPENPI_COMMIT:?Set SIMANY_OPENPI_COMMIT to its exact full commit}"
 : "${SIMANY_POLICY_IDENTITY_FILE:?Set an absolute identity receipt path}"
-: "${SIMANY_CHECKPOINT_CACHE_ROOT:?Set an absolute node-local checkpoint cache root}"
+: "${SIMANY_CHECKPOINT_CACHE_ROOT:?Set an absolute checkpoint cache root}"
 
 if [[ -n "${SIMANY_PI05_CKPT:-}" || -n "${SIMANY_PI05_CONFIG:-}" ]]; then
   echo "[pi05_serve_bound] independent checkpoint/config overrides are forbidden" >&2
@@ -18,8 +18,8 @@ if [[ "${SIMANY_POLICY_IDENTITY_FILE}" != /* ]]; then
   echo "[pi05_serve_bound] SIMANY_POLICY_IDENTITY_FILE must be absolute" >&2
   exit 2
 fi
-if [[ "${SIMANY_CHECKPOINT_CACHE_ROOT}" != /scratch/* ]]; then
-  echo "[pi05_serve_bound] cache root must be a scoped directory beneath /scratch" >&2
+if [[ "${SIMANY_CHECKPOINT_CACHE_ROOT}" != /* ]]; then
+  echo "[pi05_serve_bound] SIMANY_CHECKPOINT_CACHE_ROOT must be an absolute path" >&2
   exit 2
 fi
 
