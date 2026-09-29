@@ -2,14 +2,14 @@
 
 ### From Photorealistic Reconstruction to Interactive Environments
 
-[Project page](https://insait-institute.github.io/PhiRIE/) · [Paper](https://arxiv.org/abs/2609.26795) · [Citation](#citation) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView) · [Release plan](RELEASE_PLAN.md)
+[Project page](https://insait-institute.github.io/PhiRIE/) · [Paper](https://arxiv.org/abs/2609.26795) · [Citation](#citation) · [Demo video](https://youtu.be/3-YdcBh6Tbw) · [PhiView code](https://github.com/RunyiYang/PhysicalView)
 
 **ϕ-RIE turns captured rooms into editable environments.** It connects object
 discovery, 3D asset generation, metric registration, background completion, and
 physics. PhiView lets you explore the result, change object parameters, shoot
 projectiles, and run robot interactions.
 
-![ϕ-RIE teaser: reconstruction, object assets, physical interaction, and harmonization](website/public/media/paper-teaser-arxiv.png)
+![ϕ-RIE teaser: reconstruction, object assets, physical interaction, and harmonization](media/paper-teaser-arxiv.png)
 
 [Runyi Yang](https://runyiyang.github.io/), [Deheng Zhang](https://dehezhang2.github.io/), [Xiaoye Wang](https://adamwang0224.github.io/), [Kanzhi Wu](https://www.kanzhi.tech/about), [Lei Sun](https://ahupujr.github.io/), [Ajad Chhatkuli](https://ajadchhatkuli.github.io/), [Kunyu Peng](https://kpeng9510.github.io/)*, [Luc Van Gool](https://insait.ai/prof-luc-van-gool/), [Danda Paudel](https://insait.ai/dr-danda-paudel/)
 
@@ -23,17 +23,17 @@ Contact: [runyi.yang@insait.ai](mailto:runyi.yang@insait.ai)
 
 | Shooting and physical parameters | Grasp and place |
 |---|---|
-| ![Four mass and friction settings in PhiView](website/public/media/spray-mass-friction-impact.webp) | ![Bottle grasp and placement on a mouse pad](website/public/media/demo-09.webp) |
+| ![Four mass and friction settings in PhiView](media/spray-mass-friction-impact.webp) | ![Bottle grasp and placement on a mouse pad](media/demo-09.webp) |
 | Three colorful shots per setting | Lift the bottle and move it to the target |
 
-![Appearance harmonization in matched views](website/public/media/paper-teaser.webp)
+![Appearance harmonization in matched views](media/paper-teaser.webp)
 
 Watch [the full demo](https://youtu.be/3-YdcBh6Tbw) or explore
 [all nine recordings](https://insait-institute.github.io/PhiRIE/#motion) on the project page.
 
 ## Method overview
 
-![ϕ-RIE main figure: scene observation, coupled construction, and interactive environments](website/public/media/paper-main.png)
+![ϕ-RIE main figure: scene observation, coupled construction, and interactive environments](media/paper-main.png)
 
 The pipeline connects captured Gaussian scenes to complete object assets and
 backgrounds, then keeps rendered appearance aligned with simulated body poses.
@@ -70,34 +70,25 @@ selected model. Prepare the environments, data, and weights with these guides:
 
 ### Watch or download the recordings
 
-Open the [demo gallery](https://insait-institute.github.io/PhiRIE/#motion).
-Each recording can be played in the browser or downloaded as an MP4.
+The recordings are stored in [`media/`](media/); the [demo gallery](https://insait-institute.github.io/PhiRIE/#motion)
+on the project page plays the same files in the browser.
 
 | Demo | Interaction |
 |---|---|
-| [01 — Spray bottle](https://insait-institute.github.io/PhiRIE/media/demo-01.mp4) | Six shots with colorful trails |
-| [02 — Bottle to paper](https://insait-institute.github.io/PhiRIE/media/demo-02.mp4) | Grasp, lift, and place |
-| [03 — LIBERO bottle](https://insait-institute.github.io/PhiRIE/media/demo-03.mp4) | Grasp and move |
-| [04 — Kitchen](https://insait-institute.github.io/PhiRIE/media/demo-04.mp4) / [05 — Kitchen, harmonized](https://insait-institute.github.io/PhiRIE/media/demo-05.mp4) | Matched camera walk, harmonizer off / on |
-| [06 — Office](https://insait-institute.github.io/PhiRIE/media/demo-06.mp4) / [07 — Office, harmonized](https://insait-institute.github.io/PhiRIE/media/demo-07.mp4) | Matched camera walk, harmonizer off / on |
-| [08 — Office bottles](https://insait-institute.github.io/PhiRIE/media/demo-08.mp4) | Eighteen shots across nine bottles, with harmonization |
-| [09 — Bottle to mouse pad](https://insait-institute.github.io/PhiRIE/media/demo-09.mp4) | Grasp, lift, and place |
-| [Mass × friction](https://insait-institute.github.io/PhiRIE/media/spray-mass-friction-2x2.mp4) | Four settings, three shots per setting |
+| [01 — Spray bottle](media/demo-01.mp4) | Six shots with colorful trails |
+| [02 — Bottle to paper](media/demo-02.mp4) | Grasp, lift, and place |
+| [03 — LIBERO bottle](media/demo-03.mp4) | Grasp and move |
+| [04 — Kitchen](media/demo-04.mp4) / [05 — Kitchen, harmonized](media/demo-05.mp4) | Matched camera walk, harmonizer off / on |
+| [06 — Office](media/demo-06.mp4) / [07 — Office, harmonized](media/demo-07.mp4) | Matched camera walk, harmonizer off / on |
+| [08 — Office bottles](media/demo-08.mp4) | Eighteen shots across nine bottles, with harmonization |
+| [09 — Bottle to mouse pad](media/demo-09.mp4) | Grasp, lift, and place |
+| [Mass × friction](media/spray-mass-friction-2x2.mp4) | Four settings, three shots per setting |
 
-### Explore the browser playground
+### Try the browser playground
 
-The [project page](https://insait-institute.github.io/PhiRIE/#playground) includes
-scene editing, a physics sandbox, and a recorded robot replay. To run it locally:
-
-```bash
-cd website
-npm ci
-npm run dev
-# Open http://127.0.0.1:5173/PhiRIE/
-```
-
-Use Node.js 22. The WebGPU playground runs in a compatible browser; recorded
-videos remain available on other browsers.
+The [project page](https://insait-institute.github.io/PhiRIE/#playground) hosts
+scene editing, a physics sandbox, and a recorded robot replay. It runs in a
+WebGPU-capable browser; the recordings above remain available everywhere.
 
 ### Inspect a component before running it
 
@@ -135,7 +126,7 @@ and movement controls. The harmonizer can be enabled separately.
 Build the scene representation from captured views, camera geometry, meshes,
 and 3D Gaussian splats. See [reconstruction](pipelines/reconstruction/).
 
-![Reconstructed kitchen](website/public/media/Q01_27dd4da69e.webp)
+![Reconstructed kitchen](media/Q01_27dd4da69e.webp)
 
 ### Object discovery and generation
 
@@ -143,21 +134,21 @@ Find objects in the captured scene and generate complete asset candidates with
 the available model adapters. See [discovery](pipelines/discovery/) and
 [generation](pipelines/generation/).
 
-![Object selection and generated candidate](website/public/media/component-generation.webp)
+![Object selection and generated candidate](media/component-generation.webp)
 
 ### Metric registration
 
 Align each candidate with its observed object so position, orientation, and
 scale agree with the scene. See [registration](pipelines/registration/).
 
-![Generated bottle registered to the scene](website/public/media/bottle-06.webp)
+![Generated bottle registered to the scene](media/bottle-06.webp)
 
 ### Background completion
 
 Remove the selected object's original appearance and fill its exposed background
 before moving the replacement. See [inpainting](pipelines/inpainting/).
 
-![Background removal and completion](website/public/media/component-background.webp)
+![Background removal and completion](media/component-background.webp)
 
 ### Physics and PhiView
 
@@ -165,7 +156,7 @@ Connect collision geometry, mass, friction, and Gaussian appearance. The example
 below compares masses of 0.15 and 0.75 kg with friction coefficients of 0.05 and
 0.80. See [physics](pipelines/physics/) and [PhiView](https://github.com/RunyiYang/PhysicalView).
 
-[![Mass and friction comparison in PhiView](website/public/media/spray-mass-friction-impact.webp)](https://insait-institute.github.io/PhiRIE/media/spray-mass-friction-2x2.mp4)
+[![Mass and friction comparison in PhiView](media/spray-mass-friction-impact.webp)](media/spray-mass-friction-2x2.mp4)
 
 ### Robot interaction
 
@@ -173,7 +164,7 @@ Render the robot alongside reconstructed objects and use the simulation interfac
 for interaction. The recordings above show scripted grasp-and-place sequences.
 Policy integration and evaluation tools are documented in [robotics](docs/ROBOT.md).
 
-[![Bottle manipulation in PhiView](website/public/media/demo-09.webp)](https://insait-institute.github.io/PhiRIE/media/demo-09.mp4)
+[![Bottle manipulation in PhiView](media/demo-09.webp)](media/demo-09.mp4)
 
 ### Appearance harmonization
 
@@ -181,7 +172,7 @@ Apply optional harmonization to the rendered view while preserving the recorded
 camera path and physical state. See the [harmonizer integration](integrations/harmonizer/)
 and [matched-view comparison](https://insait-institute.github.io/PhiRIE/#motion).
 
-![Matched views with and without harmonization](website/public/media/paper-teaser.webp)
+![Matched views with and without harmonization](media/paper-teaser.webp)
 
 ## 4. Build a scene
 
@@ -215,22 +206,22 @@ separate benchmark and single-image workflows.
 | `integrations/phiview/` | PhiView source; upstream at [PhysicalView](https://github.com/RunyiYang/PhysicalView) |
 | `integrations/harmonizer/` | Optional appearance harmonization |
 | `run/`, `envs/` | Launchers and runtime environments |
-| `website/` | Project page, images, recordings, and browser demos |
+| `media/` | Images and recordings used in this README |
 | `configs/`, `tools/` | Runtime, capture, policy and frozen experiment configurations; release tools |
 | `docs/`, `tests/` | Guides and automated checks |
 
 The Python package and command remain named `phiroom` for compatibility with
 earlier versions. Development uses `main`.
 
-## 6. Release plan
+## 6. Versions
 
 The project has developed from **0.0.0: reconstruction prototype**, through
 **1.0.0: object construction and simulation**, to **2.0.0: modular pipeline and
 PhiView**. The current maintenance version is **2.0.1**.
 
 Next steps are guided installation, downloadable prepared scenes and repeatable
-demos, followed by documented evaluation configurations and results. See
-[RELEASE_PLAN.md](RELEASE_PLAN.md) and [the version tree](https://insait-institute.github.io/PhiRIE/#versions).
+demos, followed by documented evaluation configurations and results. Release
+notes live in [docs/releases/](docs/releases/).
 
 ## License
 

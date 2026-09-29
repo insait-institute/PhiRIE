@@ -88,12 +88,6 @@ def build(ref, out, prefix):
             ):
                 archive.getinfo(prefix + "/" + path)
             files = sum(not i.is_dir() for i in archive.infolist())
-            for item in json.loads(
-                archive.read(prefix + "/website/public/provenance.json")
-            )["assets"]:
-                contents = archive.read(prefix + "/website/public/" + item["file"])
-                if hashlib.sha256(contents).hexdigest() != item["sha256"]:
-                    raise ValueError(f"website asset checksum mismatch: {item['file']}")
         parent_zip.replace(out)
     with out.open("rb") as stream:
         digest = hashlib.file_digest(stream, "sha256").hexdigest()

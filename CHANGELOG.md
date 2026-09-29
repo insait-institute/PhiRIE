@@ -11,6 +11,10 @@
 - Replace cluster-specific absolute paths, user names and Slurm accounts with
   environment variables (`SIMANY_ROOT`, `SIMANY_*_PY`, `OPENPI_DATA_HOME`,
   `HF_HOME`, `SLURM_ACCOUNT`) and portable defaults.
+- Move the README images and recordings to `media/`; remove the project-page
+  source (`website/`) and its deployment workflow, which are maintained separately.
+- Remove `AUTHORS.md`, `AUTHORS.json`, `RELEASE_PLAN.md` and `RELEASE_SOURCE.json`;
+  rename `requirements-harness.txt` to `requirements.txt`.
 
 ## 2.0.1 — 2026-09-21
 
