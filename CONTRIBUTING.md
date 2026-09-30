@@ -43,3 +43,13 @@ every file hash, and its license. `tools/release/verify.py` checks the bundle. S
 For releases, run `tools/release/verify.py`, build the Python distributions, and
 create the full source archive with `tools/release/archive.py`. Tag the exact
 merged `main` commit and publish the checksums with the archives.
+
+## Project page
+
+The page at https://insait-institute.github.io/PhiRIE/ is built from the
+`website/` directory of the `RunyiYang/PhiRIE` repository by the
+`project-page` workflow in this repository (manual dispatch, a
+`website-updated` repository_dispatch event, once a day, or when the workflow
+file changes). Edit the page in that source repository; while it is private,
+the workflow needs a fine-grained token with read access to it stored as the
+Actions secret `WEBSITE_SOURCE_TOKEN`.

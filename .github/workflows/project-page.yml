@@ -1,0 +1,81 @@
+# Builds and deploys the project page (https://insait-institute.github.io/PhiRIE/).
+#
+# The page source lives in the `website/` directory of RunyiYang/PhiRIE (branch
+# main), not in this repository. While that repository is private, add a
+# fine-grained personal access token with read access to its contents as the
+# Actions secret WEBSITE_SOURCE_TOKEN; once it is public the default token works.
+#
+# Runs on manual dispatch, on a `website-updated` repository_dispatch event
+# (for example from a push hook in the source repository), once a day, and
+# whenever this workflow file changes.
+name: project-page
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [website-updated]
+  schedule:
+    - cron: '17 3 * * *'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/project-page.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out the website source (RunyiYang/PhiRIE, website/ only)
+        uses: actions/checkout@v4
+        with:
+          repository: RunyiYang/PhiRIE
+          ref: main
+          token: ${{ secrets.WEBSITE_SOURCE_TOKEN || github.token }}
+          sparse-checkout: website
+          sparse-checkout-cone-mode: true
+          path: source
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: source/website/package-lock.json
+      - name: Install locked website dependencies
+        working-directory: source/website
+        run: npm ci
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: Check and build
+        working-directory: source/website
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+        run: |
+          npm run format:check
+          npm run build
+      - name: Record the source commit
+        working-directory: source
+        run: git rev-parse HEAD > website/dist/SOURCE_COMMIT
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: source/website/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
