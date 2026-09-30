@@ -12,4 +12,3 @@ Index of the PhiRIE documentation.
 | [DATA_AND_WEIGHTS.md](DATA_AND_WEIGHTS.md) | where datasets, weights, third-party checkouts and outputs live, and the variables that override the paths |
 | [ENVIRONMENTS.md](ENVIRONMENTS.md) | why several Python environments are needed, and which stage runs in which |
 | [demos/](demos/) | recorded demo packages |
-| [releases/](releases/) | release notes for 2.0.0 and 2.0.1 |

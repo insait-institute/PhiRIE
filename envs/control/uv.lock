@@ -728,7 +728,7 @@ wheels = [
 
 [[package]]
 name = "phiroom"
-version = "2.0.1"
+version = "2.0.0"
 source = { editable = "../../" }
 dependencies = [
     { name = "pyyaml" },
@@ -739,7 +739,7 @@ requires-dist = [{ name = "pyyaml", specifier = ">=6,<7" }]
 
 [[package]]
 name = "phiroom-control"
-version = "2.0.1"
+version = "2.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "phiroom" },

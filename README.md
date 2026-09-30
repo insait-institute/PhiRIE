@@ -311,15 +311,14 @@ separate benchmark and single-image workflows.
 The Python package and command remain named `phiroom` for compatibility with
 earlier versions. Development uses `main`.
 
-## 7. Versions
+## 7. Release plan
 
-The project has developed from **0.0.0: reconstruction prototype**, through
-**1.0.0: object construction and simulation**, to **2.0.0: modular pipeline and
-PhiView**. The current maintenance version is **2.0.1**.
+| Status | Item |
+|---|---|
+| Released | **Pipeline code, v2.0.0 stable** (this repository, tag `v2.0.0`): reconstruction, object discovery, asset generation, registration, background completion, physics, simulator export, PhiView, and pi0.5 robot evaluation. |
+| Coming soon | **Phone scan walkthrough**: capture a room with a phone, reconstruct it with `run/run_video2sim.sh`, and open it in PhiView, with a recorded example scan. |
 
-Next steps are guided installation, downloadable prepared scenes and repeatable
-demos, followed by documented evaluation configurations and results. Release
-notes live in [docs/releases/](docs/releases/).
+Releases are tagged on `main`; changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

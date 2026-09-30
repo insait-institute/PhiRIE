@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "phiroom"
-version = "2.0.1"
+version = "2.0.0"
 description = "PhiRIE: from photorealistic reconstruction to interactive environments"
 readme = "README.md"
 authors = [

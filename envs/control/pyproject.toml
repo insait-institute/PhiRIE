@@ -1,6 +1,6 @@
 [project]
 name = "phiroom-control"
-version = "2.0.1"
+version = "2.0.0"
 requires-python = ">=3.11,<3.12"
 dependencies = ["phiroom", "PyYAML>=6,<7"]
 

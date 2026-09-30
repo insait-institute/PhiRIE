@@ -23,7 +23,7 @@
 ```bash
 uv run --project envs/control --locked python tools/release/verify.py
 uv run --project envs/control --locked python tools/release/archive.py \
-  --ref v2.0.1 --out outputs/release/PhiRIE-v2.0.1-full-source.zip
+  --ref v2.0.0 --out outputs/release/PhiRIE-v2.0.0-source.zip
 ```
 
 Archives exclude Git metadata and untracked caches by construction. The archive

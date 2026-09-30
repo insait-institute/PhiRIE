@@ -72,6 +72,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ref", default="HEAD")
     parser.add_argument("--out", required=True, type=Path)
-    parser.add_argument("--prefix", default="PhiRIE-v2.0.1")
+    parser.add_argument("--prefix", default="PhiRIE-v2.0.0")
     args = parser.parse_args()
     print(json.dumps(build(args.ref, args.out, args.prefix), indent=2))
