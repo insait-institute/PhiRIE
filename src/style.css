@@ -1917,52 +1917,6 @@ dialog > img {
 .resource-button:hover {
   box-shadow: 0 3px 10px #192c2426;
 }
-.code-notice {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-right: 6px;
-}
-.release-dot {
-  display: grid;
-  place-items: center;
-  position: absolute;
-  right: -3px;
-  top: -7px;
-  border-radius: 50%;
-  border: 2px solid var(--paper);
-  background: #c92b39;
-  color: white;
-  width: 23px;
-  height: 23px;
-  padding: 0;
-  font-size: 13px;
-  font-weight: 750;
-}
-.release-tooltip {
-  position: absolute;
-  top: calc(100% + 12px);
-  right: -100px;
-  width: 320px;
-  background: #fff5f4;
-  color: #8d1925;
-  border: 1px solid #e7b4b8;
-  border-radius: 10px;
-  padding: 16px 18px;
-  box-shadow: 0 8px 28px #192c2426;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.6;
-  z-index: 30;
-}
-.release-tooltip::before {
-  content: "";
-  position: absolute;
-  height: 14px;
-  top: -14px;
-  left: 0;
-  right: 0;
-}
 .hero {
   padding-top: 65px;
 }
@@ -2099,18 +2053,6 @@ dialog > img {
   .brand-mark {
     font-size: 29px;
     margin-right: 0;
-  }
-  .release-dot {
-    width: 20px;
-    height: 20px;
-    font-size: 11px;
-  }
-  .release-tooltip {
-    position: fixed;
-    top: 62px;
-    left: 16px;
-    right: 16px;
-    width: auto;
   }
   .hero {
     padding-top: 40px;
