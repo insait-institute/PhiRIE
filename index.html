@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="author"
+      content="Runyi Yang, Deheng Zhang, Xiaoye Wang, Kanzhi Wu, Lei Sun, Ajad Chhatkuli, Kunyu Peng, Luc Van Gool, Danda Paudel"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta
+      name="description"
+      content="PhiRIE turns captured rooms into editable, interactive environments. Explore paper figures, real reconstruction results, and three interactive WebGPU experiences."
+    />
+    <meta
+      property="og:title"
+      content="ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments"
+    />
+    <meta
+      property="og:description"
+      content="From captured rooms to interactive environments. Watch manipulation, shooting, and harmonization demos, read the paper, and explore the playground."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://insait-institute.github.io/PhiRIE/media/paper-teaser-arxiv.png"
+    />
+    <meta
+      property="og:url"
+      content="https://insait-institute.github.io/PhiRIE/"
+    />
+    <link rel="canonical" href="https://insait-institute.github.io/PhiRIE/" />
+    <title>
+      ϕ-RIE: From Photorealistic Reconstruction to Interactive Environments
+    </title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="ϕ-RIE home"
+        ><span class="brand-mark" aria-hidden="true">ϕ</span> RIE</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#news">News</a><a href="#method">Method</a
+        ><a href="#motion">Demos</a><a href="#playground">Playground</a
+        ><a href="#results">Results</a>
+      </nav>
+      <div class="header-actions" aria-label="Research resources">
+        <div class="code-notice">
+          <a
+            class="resource-button code-button"
+            href="https://github.com/insait-institute/PhiRIE"
+            target="_blank"
+            rel="noreferrer"
+            aria-describedby="code-release-note"
+            >Code <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="release-dot"
+            type="button"
+            aria-label="Code release information"
+            aria-expanded="false"
+            aria-controls="code-release-note"
+          >
+            <span aria-hidden="true">!</span>
+          </button>
+          <p
+            id="code-release-note"
+            class="release-tooltip"
+            role="tooltip"
+            hidden
+          >
+            Code released: the ϕ-RIE pipeline is public on GitHub, tagged v2.0.0
+            (30 September 2026).
+          </p>
+        </div>
+        <a
+          class="resource-button paper-button"
+          href="https://arxiv.org/abs/2609.26795"
+          target="_blank"
+          rel="noreferrer"
+          >Paper <span aria-hidden="true">↗</span></a
+        >
+        <a
+          class="resource-button cite-button"
+          href="#citation"
+          aria-label="Cite this paper"
+          >&lt;cite&gt;</a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero container">
+        <h1 class="paper-title">
+          <span class="title-line"
+            ><em>ϕ-RIE:</em> From Photorealistic Reconstruction</span
+          >
+          <span class="title-line">to Interactive Environments</span>
+        </h1>
+        <div class="paper-authorship" aria-label="Authors and affiliations">
+          <div
+            class="authors-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="All nine authors; scroll horizontally on small screens"
+          >
+            <ul class="authors" aria-label="Authors">
+              <li>
+                <span
+                  ><a
+                    href="https://runyiyang.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Runyi Yang homepage"
+                    >Runyi Yang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=l5PcSqwAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Runyi Yang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://dehezhang2.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Deheng Zhang homepage"
+                    >Deheng Zhang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=7pEFc9wAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Deheng Zhang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://adamwang0224.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Xiaoye Wang homepage"
+                    >Xiaoye Wang</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=KRQ3cJwAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Xiaoye Wang on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://www.kanzhi.tech/about"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Kanzhi Wu homepage"
+                    >Kanzhi Wu</a
+                  ><sup>2</sup></span
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://ahupujr.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Lei Sun homepage"
+                    >Lei Sun</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=VLFyM50AAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Lei Sun on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://ajadchhatkuli.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Ajad Chhatkuli homepage"
+                    >Ajad Chhatkuli</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=3BHMHU4AAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Ajad Chhatkuli on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://kpeng9510.github.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Kunyu Peng homepage"
+                    >Kunyu Peng</a
+                  ><sup>3,∗</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=pA9c0YsAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Kunyu Peng on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://insait.ai/prof-luc-van-gool/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Luc Van Gool homepage"
+                    >Luc Van Gool</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Luc Van Gool on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+              <li>
+                <span
+                  ><a
+                    href="https://insait.ai/dr-danda-paudel/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Danda Paudel homepage"
+                    >Danda Paudel</a
+                  ><sup>1</sup></span
+                ><a
+                  class="author-scholar"
+                  href="https://scholar.google.com/citations?user=W43pvPkAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Danda Paudel on Google Scholar"
+                  >Scholar ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="affiliations">
+            <p><sup>1</sup> INSAIT, Sofia University “St. Kliment Ohridski”.</p>
+            <p><sup>2</sup> vivo Mobile Communication Co., Ltd.</p>
+            <p><sup>3</sup> Karlsruhe Institute of Technology</p>
+            <p class="contact">
+              Contact:
+              <a href="mailto:runyi.yang@insait.ai">runyi.yang@insait.ai</a>
+            </p>
+            <p class="corresponding">∗ Corresponding author</p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#playground" class="button primary"
+            >Enter the playground <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://github.com/RunyiYang/PhysicalView"
+            class="button secondary"
+            target="_blank"
+            rel="noreferrer"
+            >PhiView code <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <aside class="hero-summary" aria-labelledby="summary-title">
+          <span class="summary-label">TL;DR</span>
+          <div>
+            <h2 id="summary-title">
+              From captured rooms to <em>interactive worlds.</em>
+            </h2>
+            <p>
+              Reconstruct the scene. Give objects a physical presence. Explore
+              what happens when the world starts to move.
+            </p>
+          </div>
+        </aside>
+
+        <section class="featured-film" aria-label="PhiRIE overview video">
+          <div class="film-frame">
+            <iframe
+              id="overview-youtube"
+              src="https://www.youtube-nocookie.com/embed/3-YdcBh6Tbw?rel=0&amp;playsinline=1"
+              title="PhiRIE demo video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <video
+              id="overview-local"
+              controls
+              playsinline
+              preload="none"
+              poster="%BASE_URL%media/phirie-demo.webp"
+              aria-label="PhiRIE overview video, direct playback"
+              hidden
+            >
+              <source src="%BASE_URL%media/phirie-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="film-caption">
+            <div>
+              <span class="caption-label">THE FULL DEMO</span>
+              <h3>From reconstruction to interaction.</h3>
+            </div>
+            <div
+              class="film-sources"
+              role="group"
+              aria-label="Video playback source"
+            >
+              <button data-film-source="youtube" aria-pressed="true">
+                YouTube
+              </button>
+              <button data-film-source="local" aria-pressed="false">
+                Direct video
+              </button>
+              <a
+                href="https://youtu.be/3-YdcBh6Tbw"
+                target="_blank"
+                rel="noreferrer"
+                >Watch on YouTube ↗</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="news" id="news" aria-labelledby="news-title">
+          <div class="news-heading">
+            <p class="eyebrow">NEWS</p>
+            <h3 id="news-title">Code and paper are fully released.</h3>
+          </div>
+          <ul class="news-list">
+            <li>
+              <time datetime="2026-09-30">30 Sep 2026</time>
+              <span>
+                <strong>Code released.</strong> The ϕ-RIE pipeline code is
+                public at
+                <a
+                  href="https://github.com/insait-institute/PhiRIE"
+                  target="_blank"
+                  rel="noreferrer"
+                  >insait-institute/PhiRIE ↗</a
+                >, tagged
+                <a
+                  href="https://github.com/insait-institute/PhiRIE/releases/tag/v2.0.0"
+                  target="_blank"
+                  rel="noreferrer"
+                  >v2.0.0 stable ↗</a
+                >
+                with a source archive, Python wheel, and checksums.
+              </span>
+            </li>
+            <li>
+              <time datetime="2026-09">Sep 2026</time>
+              <span>
+                <strong>Paper released.</strong> ϕ-RIE: From Photorealistic
+                Reconstruction to Interactive Environments is on
+                <a
+                  href="https://arxiv.org/abs/2609.26795"
+                  target="_blank"
+                  rel="noreferrer"
+                  >arXiv:2609.26795 ↗</a
+                >.
+              </span>
+            </li>
+          </ul>
+        </section>
+        <div class="hero-foot">
+          <span
+            >REAL SCANS <i>×</i> OBJECT RECONSTRUCTION
+            <i>×</i> INTERACTION</span
+          ><a href="#method"
+            >Scroll to explore <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+
+      <section class="section container" id="motion">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 — PHIVIEW DEMOS</p>
+            <h2>See the interaction<br />from start to finish.</h2>
+          </div>
+          <p>
+            Nine demonstrations of shooting, grasping, placing, and navigating
+            reconstructed rooms. Compare the same scenes with the harmonizer
+            switched off and on.
+          </p>
+        </div>
+        <div class="video-layout">
+          <div class="video-main">
+            <video
+              id="result-video"
+              controls
+              playsinline
+              preload="none"
+              poster="%BASE_URL%media/demo-01.webp"
+              aria-label="Spray bottle shooting in PhiView"
+            >
+              <source src="%BASE_URL%media/demo-01.mp4" type="video/mp4" />
+            </video>
+            <div class="video-caption">
+              <div>
+                <span class="caption-label" id="video-type"
+                  >PHIVIEW · SIX SHOTS · COLORFUL TRAILS</span
+                >
+                <h3 id="video-title">Spray bottle / shooting</h3>
+              </div>
+              <span id="video-counter">01 / 09</span>
+            </div>
+            <p id="video-description">
+              Shoot the spray bottle and watch its physical response.
+            </p>
+            <a
+              id="video-download"
+              class="media-download"
+              href="%BASE_URL%media/demo-01.mp4"
+              download
+              >Download MP4 ↓</a
+            >
+          </div>
+          <div
+            class="video-picker"
+            aria-label="Choose a PhiView demonstration"
+          ></div>
+        </div>
+        <article class="parameter-demo" id="physics-comparison">
+          <div class="parameter-heading">
+            <div>
+              <p class="eyebrow">MASS × FRICTION</p>
+              <h3>Same bottle. Four physical settings.</h3>
+            </div>
+            <p>
+              Three shots in each view. Mass: 0.15 / 0.75 kg. Friction: 0.05 /
+              0.80. The projectile, firing speed, cadence, and camera stay
+              fixed.
+            </p>
+          </div>
+          <video
+            id="parameter-video"
+            controls
+            playsinline
+            preload="none"
+            poster="%BASE_URL%media/spray-mass-friction-impact.webp"
+            aria-label="Two by two comparison of low and high bottle mass and friction"
+          >
+            <source
+              src="%BASE_URL%media/spray-mass-friction-2x2.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="parameter-links">
+            <a href="%BASE_URL%media/spray-mass-friction-2x2.mp4" download
+              >Download comparison ↓</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-impact.png"
+              target="_blank"
+              rel="noreferrer"
+              >Impact screenshot ↗</a
+            ><a
+              href="%BASE_URL%media/spray-mass-friction-final.png"
+              target="_blank"
+              rel="noreferrer"
+              >Final-state screenshot ↗</a
+            ><a
+              href="https://github.com/RunyiYang/PhysicalView"
+              target="_blank"
+              rel="noreferrer"
+              >PhiView code ↗</a
+            >
+          </div>
+        </article>
+      </section>
+
+      <section id="method" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 — THE METHOD</p>
+            <h2>A room is more<br />than its appearance.</h2>
+          </div>
+          <p>
+            A simulator needs objects with metric geometry, contact surfaces,
+            and visual identities that stay connected during motion. PhiRIE
+            builds these pieces through evidence-guided construction.
+          </p>
+        </div>
+        <figure class="publication-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-teaser-arxiv.png"
+            data-title="ϕ-RIE at a glance"
+            aria-label="Enlarge ϕ-RIE at a glance"
+          >
+            <img
+              src="%BASE_URL%media/paper-teaser-arxiv.png"
+              alt="Paper teaser showing spray bottle reconstruction, generated assets, physical properties, harmonization, and robot and shooting interactions"
+              width="2034"
+              height="1002"
+              loading="lazy"
+            />
+          </button>
+          <figcaption>
+            <strong>ϕ-RIE at a glance.</strong> From captured views to editable
+            objects, physical interaction, and harmonized rendering.
+          </figcaption>
+        </figure>
+        <figure class="publication-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-main.png"
+            data-title="Method overview"
+            aria-label="Enlarge Method overview"
+          >
+            <img
+              src="%BASE_URL%media/paper-main.png"
+              alt="Main method figure showing scene observation, coupled object and background construction, and synchronized visual and physical states"
+              width="1600"
+              height="780"
+              loading="lazy"
+            />
+          </button>
+          <figcaption>
+            <strong>Method overview.</strong> Reconstruct the scene, build and
+            register objects, complete the background, and connect appearance to
+            simulation.
+          </figcaption>
+        </figure>
+        <div class="method-grid">
+          <article>
+            <span class="step">01</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/bottle-02.webp"
+              alt="Object selected in a reconstructed office"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
+            <h3>Observe & propose</h3>
+            <p>
+              Start with captured views and metric observations. Specialized
+              generators propose complete object candidates.
+            </p>
+            <span class="method-tag">Images → candidates</span>
+          </article>
+          <article>
+            <span class="step">02</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/bottle-06.webp"
+              alt="Generated bottle aligned to its observed geometry"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
+            <h3>Register & select</h3>
+            <p>
+              Compare proposals in a shared frame. Use alignment evidence to
+              select, retry, or retain a failed attempt.
+            </p>
+            <span class="method-tag">Evidence → decisions</span>
+          </article>
+          <article>
+            <span class="step">03</span
+            ><img
+              class="component-preview"
+              src="%BASE_URL%media/demo-02.webp"
+              alt="Robot grasping a bottle in PhiView"
+              loading="lazy"
+              width="960"
+              height="540"
+            />
+            <h3>Connect & interact</h3>
+            <p>
+              Link geometry, collision, and Gaussian appearance through object
+              identity. Inspect how they behave together.
+            </p>
+            <span class="method-tag">Objects → environments</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="playground" class="playground section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">03 — HANDS ON</p>
+              <h2>Go beyond<br />the still image.</h2>
+            </div>
+            <p>
+              Three interactive experiences, rendered with WebGPU in your
+              browser. Load a demo, orbit the scene, and explore the controls.
+            </p>
+          </div>
+          <div
+            class="lab-tabs"
+            role="tablist"
+            aria-label="Interactive use cases"
+          >
+            <button
+              id="tab-scene"
+              role="tab"
+              aria-selected="true"
+              aria-controls="lab-panel"
+              data-demo="scene"
+            >
+              <span>01</span> Scene editing <small>Explore & rearrange</small>
+            </button>
+            <button
+              id="tab-physics"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lab-panel"
+              tabindex="-1"
+              data-demo="physics"
+            >
+              <span>02</span> Physics sandbox <small>Drop, throw & shoot</small>
+            </button>
+            <button
+              id="tab-robot"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lab-panel"
+              tabindex="-1"
+              data-demo="robot"
+            >
+              <span>03</span> Robot replay <small>Inspect every state</small>
+            </button>
+          </div>
+          <div
+            id="lab-panel"
+            role="tabpanel"
+            aria-labelledby="tab-scene"
+            class="lab-panel"
+          >
+            <div class="viewport-wrap">
+              <div id="viewport">
+                <img
+                  id="demo-poster"
+                  src="/media/bottle-09.webp"
+                  alt="Preview of the captured desk scene"
+                />
+                <div id="demo-overlay">
+                  <span class="viewport-icon" aria-hidden="true">◇</span>
+                  <h3 id="demo-intro">Make the scene your own.</h3>
+                  <p id="demo-intro-copy">
+                    Orbit a captured Gaussian desk and reposition its
+                    reconstructed bottle.
+                  </p>
+                  <button id="launch-demo" class="button primary">
+                    Launch WebGPU demo <span aria-hidden="true">↗</span>
+                  </button>
+                  <p class="download-note" id="download-note">
+                    3D assets load only when you launch.
+                  </p>
+                </div>
+              </div>
+              <div class="viewport-status">
+                <span id="gpu-status" role="status"
+                  ><span class="status-dot"></span> Ready to explore</span
+                ><span>Drag to orbit · scroll to zoom</span>
+              </div>
+            </div>
+            <aside
+              class="lab-controls"
+              id="lab-controls"
+              aria-label="Demo controls"
+            >
+              <p class="eyebrow">SCENE EDITING</p>
+              <h3>One room.<br />Many possibilities.</h3>
+              <p class="controls-intro">
+                Inspect the captured scene, remove the original target, and move
+                its reconstructed replacement.
+              </p>
+              <div id="control-fields"></div>
+              <p class="demo-scope" id="demo-scope">
+                An interactive preview of saved 3D Gaussian assets. Reduced
+                density and SH0 color for the web. GT-assisted registration.
+              </p>
+            </aside>
+          </div>
+          <p class="lab-footnote">
+            WebGPU needs a compatible browser and a secure connection. If it is
+            unavailable, the recorded demos above remain accessible.
+          </p>
+        </div>
+      </section>
+
+      <section class="comparison-section section">
+        <div class="container compare-layout">
+          <div>
+            <p class="eyebrow">04 — APPEARANCE</p>
+            <h2>Same state.<br />A different finish.</h2>
+            <p>
+              Slide to compare saved views before and after appearance
+              harmonization. The camera and scene state stay matched.
+            </p>
+            <label class="select-label" for="compare-object"
+              >Choose a view</label
+            ><select id="compare-object">
+              <option value="cup">Cup workspace</option>
+              <option value="headphone">Headphone office</option>
+              <option value="keyboard">Keyboard office</option>
+              <option value="bowl_overview">Bowl · overview</option>
+              <option value="bowl_dsc01217">Bowl · second view</option>
+            </select>
+            <p class="small-note">
+              Harmonization is image postprocessing. These comparisons show
+              appearance, not a change in physics.
+            </p>
+          </div>
+          <div>
+            <div class="comparison" id="comparison">
+              <img
+                id="compare-after"
+                loading="lazy"
+                src="/media/harmony-cup-with.webp"
+                alt="Cup scene with harmonization"
+              /><img
+                id="compare-before"
+                loading="lazy"
+                src="/media/harmony-cup-without.webp"
+                alt="The same cup scene without harmonization"
+              /><span class="compare-label before">Without</span
+              ><span class="compare-label after">With harmonizer</span>
+              <div class="compare-line"><span>↔</span></div>
+              <input
+                id="compare-slider"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Reveal amount of view without harmonization"
+              />
+            </div>
+            <p class="image-hint">
+              Drag the divider to compare <span aria-hidden="true">↔</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 — VISUAL ATLAS</p>
+            <h2>A closer look<br />at the results.</h2>
+          </div>
+          <p>
+            Explore captured environments, reconstruction candidates, background
+            edits, and recorded interactions. Open any image for its full view
+            and details.
+          </p>
+        </div>
+        <figure class="paper-figure">
+          <button
+            class="image-expand"
+            data-image="media/paper-qualitative.webp"
+            data-title="Qualitative environments · paper figure collection"
+            aria-label="Enlarge qualitative paper figure"
+          >
+            <img
+              loading="lazy"
+              src="/media/paper-qualitative.webp"
+              alt="Six qualitative environments from the paper figure collection: four ScanNet++ rooms and two LIBERO workspaces"
+              width="2092"
+              height="2200"
+            />
+          </button>
+          <figcaption>
+            <span class="caption-label">FROM THE PAPER FIGURE COLLECTION</span
+            ><strong>Different rooms. A shared representation.</strong> Gaussian
+            environments across ScanNet++ and LIBERO. Includes original scene
+            fits, saved background completion, and a recorded robot state.
+          </figcaption>
+        </figure>
+        <div class="gallery-toolbar">
+          <div class="filters" role="group" aria-label="Filter result category">
+            <button data-filter="All" aria-pressed="true">All results</button
+            ><button data-filter="Scenes" aria-pressed="false">Scenes</button
+            ><button data-filter="Construction" aria-pressed="false">
+              Construction</button
+            ><button data-filter="Objects" aria-pressed="false">Objects</button
+            ><button data-filter="Motion" aria-pressed="false">Motion</button
+            ><button data-filter="Appearance" aria-pressed="false">
+              Appearance
+            </button>
+          </div>
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              type="search"
+              id="gallery-search"
+              placeholder="Find a scene or object…"
+              aria-label="Search visualization results"
+          /></label>
+        </div>
+        <div class="gallery-count" id="gallery-count" role="status"></div>
+        <div id="gallery" class="gallery"></div>
+        <div class="load-more">
+          <button class="button secondary" id="load-more">
+            Show more results <span aria-hidden="true">+</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="paper" class="paper-section section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">06 — THE RESEARCH</p>
+              <h2>Making rooms<br />simulatable.</h2>
+            </div>
+            <div>
+              <p>
+                Evidence-driven real-to-sim connects candidate construction with
+                interaction evaluation. The manuscript separates construction
+                quality, coverage, and success under a declared reconstruction
+                scope.
+              </p>
+              <div class="paper-links">
+                <a
+                  class="button secondary"
+                  href="https://arxiv.org/abs/2609.26795"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read the paper ↗</a
+                >
+              </div>
+              <p class="small-note">
+                <a
+                  href="https://arxiv.org/pdf/2609.26795"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Download PDF ↗</a
+                >
+                · arXiv:2609.26795 · September 2026
+              </p>
+            </div>
+          </div>
+          <div class="research-figures">
+            <figure>
+              <button
+                class="image-expand"
+                data-image="media/paper-teaser.webp"
+                data-title="Appearance harmonization · paper figure collection"
+              >
+                <img
+                  loading="lazy"
+                  src="/media/paper-teaser.webp"
+                  alt="Matched appearance harmonization views from the paper figure collection"
+                />
+              </button>
+              <figcaption>
+                <span class="caption-label">PAPER FIGURE COLLECTION</span
+                >Matched harmonization views, preserved from the paper’s figure
+                collection.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section container citation-section"
+        id="citation"
+        aria-labelledby="citation-title"
+      >
+        <div class="citation-heading">
+          <div>
+            <p class="eyebrow">CITATION</p>
+            <h2 id="citation-title">Cite ϕ-RIE.</h2>
+            <p>
+              <a
+                href="https://arxiv.org/abs/2609.26795"
+                target="_blank"
+                rel="noreferrer"
+                >arXiv:2609.26795 ↗</a
+              >
+            </p>
+          </div>
+          <div class="citation-actions">
+            <button class="button primary" id="copy-citation" type="button">
+              Copy BibTeX</button
+            ><a
+              class="button secondary"
+              href="%BASE_URL%media/phirie.bib"
+              download
+              >Download .bib ↓</a
+            >
+          </div>
+        </div>
+        <pre
+          tabindex="0"
+          aria-label="BibTeX citation"
+        ><code id="bibtex">@misc{yang2026phirie,
+  title = {{$\phi$-RIE}: From Photorealistic Reconstruction to Interactive Environments},
+  author = {Runyi Yang and Deheng Zhang and Xiaoye Wang and Kanzhi Wu and Lei Sun and Ajad Chhatkuli and Kunyu Peng and Luc Van Gool and Danda Pani Paudel},
+  year = {2026},
+  eprint = {2609.26795},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2609.26795}
+}</code></pre>
+        <p
+          class="citation-status"
+          id="citation-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+
+      <section class="section container version-section" id="versions">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">07 — DEVELOPMENT</p>
+            <h2>How PhiRIE<br />has grown.</h2>
+          </div>
+          <p>
+            From the first reconstruction prototype to a modular system for
+            building and interacting with reconstructed environments.
+          </p>
+        </div>
+        <ol class="version-tree" aria-label="PhiRIE version history">
+          <li>
+            <div class="version-node">
+              <span class="version-number">0.0.0</span>
+              <div>
+                <h3>Reconstruction prototype</h3>
+                <p>
+                  Captured views, camera geometry, and Gaussian scene
+                  reconstruction formed the foundation.
+                </p>
+              </div>
+            </div>
+            <ol>
+              <li>
+                <div class="version-node">
+                  <span class="version-number">1.0.0</span>
+                  <div>
+                    <h3>Object construction and simulation</h3>
+                    <p>
+                      Object discovery, 3D asset generation, metric
+                      registration, background completion, and physics export
+                      connected reconstructed rooms to simulation.
+                    </p>
+                  </div>
+                </div>
+                <ol>
+                  <li>
+                    <div class="version-node current">
+                      <span class="version-number">2.0.0</span>
+                      <div>
+                        <h3>Public release: modular pipeline and PhiView</h3>
+                        <p>
+                          Independent feature interfaces, composable pipelines,
+                          simulator adapters, and PhiView brought construction
+                          and interaction into one workflow. Released as the
+                          v2.0.0 stable code on 30 September 2026.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <div class="release-plan" id="release-plan">
+          <div>
+            <p class="eyebrow">RELEASE PLAN</p>
+            <h3>What comes next.</h3>
+            <p>
+              The pipeline code is released as v2.0.0 stable. Next comes a
+              phone-scan walkthrough.
+            </p>
+          </div>
+          <ol>
+            <li>
+              <strong>Pipeline code — released</strong
+              ><span
+                >v2.0.0 stable on GitHub: reconstruction, discovery, generation,
+                registration, background completion, physics, simulator export,
+                PhiView, and robot evaluation.</span
+              >
+            </li>
+            <li>
+              <strong>Phone scan walkthrough — coming soon</strong
+              ><span
+                >Capture a room with a phone, reconstruct it with
+                run_video2sim.sh, and open it in PhiView, with a recorded
+                example scan.</span
+              >
+            </li>
+          </ol>
+          <a href="https://github.com/insait-institute/PhiRIE#7-release-plan"
+            >Follow the release plan ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <a class="brand" href="#" aria-label="ϕ-RIE home"
+        ><span class="brand-mark" aria-hidden="true">ϕ</span> RIE</a
+      >
+      <p>From observations to interaction.</p>
+      <div>
+        <a href="https://github.com/insait-institute/PhiRIE">PhiRIE code ↗</a
+        ><a href="https://github.com/RunyiYang/PhysicalView">PhiView code ↗</a
+        ><a href="#">Back to top ↑</a>
+      </div>
+    </footer>
+    <dialog id="lightbox">
+      <button class="lightbox-close" aria-label="Close image">×</button
+      ><img id="lightbox-image" alt="" />
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+      </div>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

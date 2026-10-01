@@ -1,0 +1,83 @@
+[
+  {
+    "id": "01",
+    "title": "Spray bottle / shooting",
+    "subtitle": "Six shots \u00b7 colorful trails",
+    "description": "Shoot the spray bottle and watch its physical response.",
+    "src": "media/demo-01.mp4",
+    "poster": "media/demo-01.webp",
+    "duration": 8.541667
+  },
+  {
+    "id": "02",
+    "title": "Spray bottle / grasp and place",
+    "subtitle": "Grasp \u2192 lift \u2192 paper",
+    "description": "Grasp the spray bottle, lift it, and place it on the paper.",
+    "src": "media/demo-02.mp4",
+    "poster": "media/demo-02.webp",
+    "duration": 19.0
+  },
+  {
+    "id": "03",
+    "title": "LIBERO / bottle manipulation",
+    "subtitle": "Grasp and move",
+    "description": "Pick up and move the bottle in the LIBERO workspace.",
+    "src": "media/demo-03.mp4",
+    "poster": "media/demo-03.webp",
+    "duration": 19.0
+  },
+  {
+    "id": "04",
+    "title": "Kitchen / original appearance",
+    "subtitle": "Harmonizer OFF",
+    "description": "Walk through the reconstructed kitchen with harmonization off.",
+    "src": "media/demo-04.mp4",
+    "poster": "media/demo-04.webp",
+    "duration": 8.0
+  },
+  {
+    "id": "05",
+    "title": "Kitchen / harmonized appearance",
+    "subtitle": "Harmonizer ON",
+    "description": "Follow the same kitchen camera path with harmonization on.",
+    "src": "media/demo-05.mp4",
+    "poster": "media/demo-05.webp",
+    "duration": 8.0
+  },
+  {
+    "id": "06",
+    "title": "Office / original appearance",
+    "subtitle": "Harmonizer OFF",
+    "description": "Explore the office and its reconstructed tabletop objects.",
+    "src": "media/demo-06.mp4",
+    "poster": "media/demo-06.webp",
+    "duration": 8.0
+  },
+  {
+    "id": "07",
+    "title": "Office / harmonized appearance",
+    "subtitle": "Harmonizer ON",
+    "description": "Follow the same office camera path with harmonization on.",
+    "src": "media/demo-07.mp4",
+    "poster": "media/demo-07.webp",
+    "duration": 8.0
+  },
+  {
+    "id": "08",
+    "title": "Office / bottle impacts",
+    "subtitle": "18 shots \u00b7 Harmonizer ON",
+    "description": "Shoot all nine simulatable bottles with colorful projectile trails.",
+    "src": "media/demo-08.mp4",
+    "poster": "media/demo-08.webp",
+    "duration": 9.666667
+  },
+  {
+    "id": "09",
+    "title": "Office / grasp and place",
+    "subtitle": "Grasp \u2192 lift \u2192 mouse pad",
+    "description": "Grasp a bottle and place it on the mouse pad.",
+    "src": "media/demo-09.mp4",
+    "poster": "media/demo-09.webp",
+    "duration": 19.0
+  }
+]

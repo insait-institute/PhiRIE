@@ -1,0 +1,24 @@
+{
+  "name": "phirie-project-page",
+  "version": "2.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node scripts/browser-test.mjs",
+    "format": "prettier --write index.html src scripts/*.mjs vite.config.js package.json",
+    "format:check": "prettier --check index.html src scripts/*.mjs vite.config.js package.json"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "0.19.3",
+    "three": "0.183.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "1.58.2",
+    "prettier": "3.6.2",
+    "vite": "6.4.3"
+  }
+}

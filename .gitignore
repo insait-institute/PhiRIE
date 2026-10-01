@@ -1,0 +1,7 @@
+node_modules/
+dist/
+test-results/
+.env*
+
+# Published research videos are part of the complete website source.
+!public/media/*.mp4

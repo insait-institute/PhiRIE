@@ -1,0 +1,362 @@
+[
+  {
+    "id": "Q01_27dd4da69e",
+    "src": "media/Q01_27dd4da69e.webp",
+    "title": "Kitchen & corridor",
+    "category": "Scenes",
+    "scene": "27dd4da69e",
+    "caption": "Original Gaussian scene from captured ScanNet++ observations."
+  },
+  {
+    "id": "Q02_7831862f02",
+    "src": "media/Q02_7831862f02.webp",
+    "title": "Shared lounge",
+    "category": "Scenes",
+    "scene": "7831862f02",
+    "caption": "Saved 3D Gaussian background completion; training-view diagnostic."
+  },
+  {
+    "id": "Q03_578511c8a9",
+    "src": "media/Q03_578511c8a9.webp",
+    "title": "Laboratory",
+    "category": "Scenes",
+    "scene": "578511c8a9",
+    "caption": "Saved 3D Gaussian background completion; training-view diagnostic."
+  },
+  {
+    "id": "Q04_45b0dac5e3",
+    "src": "media/Q04_45b0dac5e3.webp",
+    "title": "Bathroom & laundry",
+    "category": "Scenes",
+    "scene": "45b0dac5e3",
+    "caption": "Saved 3D Gaussian background completion; training-view diagnostic."
+  },
+  {
+    "id": "Q05_libero_living_room_scene5",
+    "src": "media/Q05_libero_living_room_scene5.webp",
+    "title": "Robot workspace",
+    "category": "Scenes",
+    "scene": "libero_living_room_scene5",
+    "caption": "Gaussian environment and SAM3D cup with a mesh robot at a recorded scripted state."
+  },
+  {
+    "id": "Q06_libero_study_scene1",
+    "src": "media/Q06_libero_study_scene1.webp",
+    "title": "Study workspace",
+    "category": "Scenes",
+    "scene": "libero_study_scene1",
+    "caption": "Gaussian fit of native synthetic LIBERO observations."
+  },
+  {
+    "id": "bottle-01",
+    "src": "media/bottle-01.webp",
+    "title": "Captured scene",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-02",
+    "src": "media/bottle-02.webp",
+    "title": "Selected target",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-03",
+    "src": "media/bottle-03.webp",
+    "title": "Observed surface",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-04",
+    "src": "media/bottle-04.webp",
+    "title": "TRELLIS proposal",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-05",
+    "src": "media/bottle-05.webp",
+    "title": "ReconViaGen proposal",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-06",
+    "src": "media/bottle-06.webp",
+    "title": "Metric registration",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-07",
+    "src": "media/bottle-07.webp",
+    "title": "Target removed",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-08",
+    "src": "media/bottle-08.webp",
+    "title": "Background completed",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-09",
+    "src": "media/bottle-09.webp",
+    "title": "Scene reassembled",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-10",
+    "src": "media/bottle-10.webp",
+    "title": "Surface-only removal",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-11",
+    "src": "media/bottle-11.webp",
+    "title": "Geometry + mask removal",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-12",
+    "src": "media/bottle-12.webp",
+    "title": "Object underside",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-13",
+    "src": "media/bottle-13.webp",
+    "title": "Completed background detail",
+    "category": "Construction",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-14",
+    "src": "media/bottle-14.webp",
+    "title": "Gaussian appearance \u00b7 initial",
+    "category": "Motion",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-15",
+    "src": "media/bottle-15.webp",
+    "title": "Gaussian appearance \u00b7 moving",
+    "category": "Motion",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-16",
+    "src": "media/bottle-16.webp",
+    "title": "Collision geometry \u00b7 initial",
+    "category": "Motion",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "bottle-17",
+    "src": "media/bottle-17.webp",
+    "title": "Collision geometry \u00b7 moving",
+    "category": "Motion",
+    "scene": "c50d2d1d42 / obj_13",
+    "caption": "Paper Figure 2 asset collection. GT-assisted bottle registration; recorded component stages and MuJoCo motion. Residual artifacts retained."
+  },
+  {
+    "id": "headphone-04_object_registered",
+    "src": "media/headphone-04_object_registered.webp",
+    "title": "Headphone \u00b7 Registered reconstruction",
+    "category": "Objects",
+    "scene": "c50d2d1d42",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "headphone-06_shooting_1",
+    "src": "media/headphone-06_shooting_1.webp",
+    "title": "Headphone \u00b7 First impact",
+    "category": "Motion",
+    "scene": "c50d2d1d42",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "headphone-08_shooting_3",
+    "src": "media/headphone-08_shooting_3.webp",
+    "title": "Headphone \u00b7 After interaction",
+    "category": "Motion",
+    "scene": "c50d2d1d42",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "headphone-10_robot_2",
+    "src": "media/headphone-10_robot_2.webp",
+    "title": "Headphone \u00b7 Robot interaction",
+    "category": "Motion",
+    "scene": "c50d2d1d42",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "cup-04_object_registered",
+    "src": "media/cup-04_object_registered.webp",
+    "title": "Cup \u00b7 Registered reconstruction",
+    "category": "Objects",
+    "scene": "libero_living_room_scene5",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "cup-06_shooting_1",
+    "src": "media/cup-06_shooting_1.webp",
+    "title": "Cup \u00b7 First impact",
+    "category": "Motion",
+    "scene": "libero_living_room_scene5",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "cup-08_shooting_3",
+    "src": "media/cup-08_shooting_3.webp",
+    "title": "Cup \u00b7 After interaction",
+    "category": "Motion",
+    "scene": "libero_living_room_scene5",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "cup-10_robot_2",
+    "src": "media/cup-10_robot_2.webp",
+    "title": "Cup \u00b7 Robot interaction",
+    "category": "Motion",
+    "scene": "libero_living_room_scene5",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "keyboard-04_object_registered",
+    "src": "media/keyboard-04_object_registered.webp",
+    "title": "Keyboard \u00b7 Registered reconstruction",
+    "category": "Objects",
+    "scene": "3e8bba0176",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "keyboard-06_shooting_1",
+    "src": "media/keyboard-06_shooting_1.webp",
+    "title": "Keyboard \u00b7 First impact",
+    "category": "Motion",
+    "scene": "3e8bba0176",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "keyboard-08_shooting_3",
+    "src": "media/keyboard-08_shooting_3.webp",
+    "title": "Keyboard \u00b7 After interaction",
+    "category": "Motion",
+    "scene": "3e8bba0176",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "keyboard-10_robot_2",
+    "src": "media/keyboard-10_robot_2.webp",
+    "title": "Keyboard \u00b7 Robot interaction",
+    "category": "Motion",
+    "scene": "3e8bba0176",
+    "caption": "SAM3D appearance in a recorded scripted sequence. Robot views for headphone and keyboard reuse original collision dynamics; task success is not established."
+  },
+  {
+    "id": "harmony-cup-without",
+    "src": "media/harmony-cup-without.webp",
+    "title": "Cup \u00b7 without harmonizer",
+    "category": "Appearance",
+    "scene": "CUP",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-cup-with",
+    "src": "media/harmony-cup-with.webp",
+    "title": "Cup \u00b7 with harmonizer",
+    "category": "Appearance",
+    "scene": "CUP",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-headphone-without",
+    "src": "media/harmony-headphone-without.webp",
+    "title": "Headphone \u00b7 without harmonizer",
+    "category": "Appearance",
+    "scene": "HEADPHONE",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-headphone-with",
+    "src": "media/harmony-headphone-with.webp",
+    "title": "Headphone \u00b7 with harmonizer",
+    "category": "Appearance",
+    "scene": "HEADPHONE",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-keyboard-without",
+    "src": "media/harmony-keyboard-without.webp",
+    "title": "Keyboard \u00b7 without harmonizer",
+    "category": "Appearance",
+    "scene": "KEYBOARD",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-keyboard-with",
+    "src": "media/harmony-keyboard-with.webp",
+    "title": "Keyboard \u00b7 with harmonizer",
+    "category": "Appearance",
+    "scene": "KEYBOARD",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-bowl_overview-without",
+    "src": "media/harmony-bowl_overview-without.webp",
+    "title": "Bowl Overview \u00b7 without harmonizer",
+    "category": "Appearance",
+    "scene": "BOWL_overview",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-bowl_overview-with",
+    "src": "media/harmony-bowl_overview-with.webp",
+    "title": "Bowl Overview \u00b7 with harmonizer",
+    "category": "Appearance",
+    "scene": "BOWL_overview",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-bowl_dsc01217-without",
+    "src": "media/harmony-bowl_dsc01217-without.webp",
+    "title": "Bowl Dsc01217 \u00b7 without harmonizer",
+    "category": "Appearance",
+    "scene": "BOWL_DSC01217",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  },
+  {
+    "id": "harmony-bowl_dsc01217-with",
+    "src": "media/harmony-bowl_dsc01217-with.webp",
+    "title": "Bowl Dsc01217 \u00b7 with harmonizer",
+    "category": "Appearance",
+    "scene": "BOWL_DSC01217",
+    "caption": "Matched saved view. Harmonization is image postprocessing, separate from geometry and physics."
+  }
+]
