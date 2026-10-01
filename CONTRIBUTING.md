@@ -47,9 +47,7 @@ merged `main` commit and publish the checksums with the archives.
 ## Project page
 
 The page at https://insait-institute.github.io/PhiRIE/ is built from the
-`website/` directory of the `RunyiYang/PhiRIE` repository by the
-`project-page` workflow in this repository (manual dispatch, a
-`website-updated` repository_dispatch event, once a day, or when the workflow
-file changes). Edit the page in that source repository; while it is private,
-the workflow needs a fine-grained token with read access to it stored as the
-Actions secret `WEBSITE_SOURCE_TOKEN`.
+`website` branch of this repository (Vite project: `index.html`, `src/`,
+`public/`), so `main` carries only the released code. Every push to `website`
+runs the `project-page` workflow, which builds the page and publishes it with
+GitHub Pages; the workflow can also be dispatched manually.
